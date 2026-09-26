@@ -1,0 +1,448 @@
+{% extends "layout.html" %}
+{% block content %}
+
+    {% if config("cordarium") == "enabled" %}
+        <script>
+            window.cordariumCart = {
+                platform: "Tebex",
+                server_id: "{{ config("cordarium-server-id") }}",
+                username: "{{ basket.ign }}",
+                coupons: {
+                    {% for coupon in basket.coupons %}
+                    {% if coupon.description|lower starts with "gift card" %}
+                    card_number: "{{ coupon.code }}"
+                    {% else %}
+                    coupon_code: "{{ coupon.code }}"
+                    {% endif %}
+                    {% if not loop.last %},{% endif %}
+                    {% endfor %}
+                },
+                basket_packages: [
+                    {% for package in basket.packages %}
+                    {
+                        id: {{ package.id }},
+                        quantity: {{ package.quantity }},
+                        {% if package.options|length > 0 %}
+                        variable_data: {
+                            {% for option in package.options %}
+                            {% if option.value != "" and option.name|lower != "gift username" %}
+                            "{{ option.name|lower == "discord id" ? "discord_id" : option.name|lower == "server" ? "server" : option.name|lower == "giftcard to" ? "giftcard_to" : option.name }}": "{{ option.value }}"
+                            {% if not loop.last %},{% endif %}
+                            {% endif %}
+                            {% endfor %}
+                        }
+                        {% endif %}
+                    }
+                    {% if not loop.last %},{% endif %}
+                    {% endfor %}
+                ]
+            };
+        </script>
+    {% endif %}
+
+    {% set cordariumDisplayPackagesStyle = config("cordarium-display-packages") %}
+    {% set cordariumPackagesRaw = config("cordarium-packages") %}
+    {% set cordariumPackages = cordariumPackagesRaw|split(",") %}
+    {% set displayCordariumButton = true %}
+
+    {% if config("cordarium") == "enabled" and cordariumPackagesRaw | length > 0 %}
+        {% if cordariumPackages|length > 0 %}
+            {% if cordariumDisplayPackagesStyle == "include" %}
+                {% set displayCordariumButton = true %}
+                {% for package in basket.packages %}
+                    {% if package.id not in cordariumPackages %}
+                        {% set displayCordariumButton = false %}
+                    {% endif %}
+                {% endfor %}
+            {% else %}
+                {% set displayCordariumButton = true %}
+                {% for package in basket.packages %}
+                    {% if package.id in cordariumPackages %}
+                        {% set displayCordariumButton = false %}
+                    {% endif %}
+                {% endfor %}
+            {% endif %}
+        {% endif %}
+    {% endif %}
+
+    {% if basket.currency == 'USD' %}
+        {% set currencySymbol = '$' %}
+        {% set currencyAfter = false %}
+    {% elseif basket.currency == 'EUR' %}
+        {% set currencySymbol = '€' %}
+        {% set currencyAfter = true %}
+    {% elseif basket.currency == 'GBP' %}
+        {% set currencySymbol = '£' %}
+        {% set currencyAfter = false %}
+    {% else %}
+        {% set currencySymbol = basket.currency %}
+        {% set currencyAfter = true %}
+    {% endif %}
+
+<style>
+  .checkout__page { display: block !important; max-width: 960px; margin: 0 auto; padding: 40px 20px 80px 20px; }
+  .checkout__page--sidebar { display: none !important; }
+  .checkout__page--body { width: 100% !important; max-width: 100% !important; }
+
+  .tz-checkout-user {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    padding: 32px 0 28px 0;
+    text-align: center;
+  }
+  .tz-checkout-user__avatar {
+    width: 64px;
+    height: 64px;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 2px solid rgba(250,204,21,0.3);
+  }
+  .tz-checkout-user__avatar img { width: 100%; height: 100%; display: block; }
+  .tz-checkout-user__name { font-size: 18px; font-weight: 800; color: #ffffff; margin: 0; }
+  .tz-checkout-user__logout {
+    font-size: 12px;
+    color: rgba(255,255,255,0.35);
+    text-decoration: none;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    padding-bottom: 1px;
+  }
+  .tz-checkout-user__logout:hover { color: rgba(255,255,255,0.6); }
+
+  .tz-section {
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(255,255,255,0.07);
+    border-radius: 12px;
+    margin-bottom: 16px;
+    overflow: hidden;
+  }
+  .tz-section__title {
+    font-size: 12px;
+    font-weight: 700;
+    color: rgba(255,255,255,0.4);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    padding: 16px 22px 12px 22px;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+    margin: 0;
+  }
+
+  .tz-cart-item {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 18px 22px;
+    border-bottom: 1px solid rgba(255,255,255,0.04);
+  }
+  .tz-cart-item:last-child { border-bottom: none; }
+  .tz-cart-item__img {
+    width: 58px;
+    height: 58px;
+    border-radius: 8px;
+    object-fit: cover;
+    flex-shrink: 0;
+    background: rgba(255,255,255,0.05);
+  }
+  .tz-cart-item__info { flex: 1; }
+  .tz-cart-item__name { font-size: 16px; font-weight: 700; color: #ffffff; margin: 0 0 4px 0; }
+  .tz-cart-item__price { font-size: 15px; color: #facc15; font-weight: 700; margin: 0; }
+
+  .tz-cart-item__qty {
+    display: flex;
+    align-items: center;
+    gap: 0;
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  .tz-cart-item__qty a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    color: rgba(255,255,255,0.6);
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.15s, color 0.15s;
+    user-select: none;
+  }
+  .tz-cart-item__qty a:hover { background: rgba(250,204,21,0.15); color: #facc15; }
+  .tz-cart-item__qty span {
+    min-width: 32px;
+    text-align: center;
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 700;
+    border-left: 1px solid rgba(255,255,255,0.08);
+    border-right: 1px solid rgba(255,255,255,0.08);
+    padding: 0 4px;
+    line-height: 38px;
+  }
+
+  .tz-cart-item__remove {
+    color: rgba(255,255,255,0.2);
+    text-decoration: none;
+    font-size: 18px;
+    padding: 6px;
+    transition: color 0.15s;
+    cursor: pointer;
+  }
+  .tz-cart-item__remove:hover { color: #f87171; }
+
+  .tz-total {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 22px;
+    border-top: 1px solid rgba(255,255,255,0.06);
+  }
+  .tz-total__label { font-size: 14px; color: rgba(255,255,255,0.5); }
+  .tz-total__price { font-size: 26px; font-weight: 900; color: #facc15; }
+
+  .tz-coupon {
+    display: flex;
+    gap: 10px;
+    padding: 14px 22px;
+    align-items: center;
+  }
+  .tz-coupon input {
+    flex: 1;
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 8px;
+    padding: 10px 14px;
+    font-size: 14px;
+    color: #ffffff;
+    outline: none;
+  }
+  .tz-coupon input::placeholder { color: rgba(255,255,255,0.25); }
+  .tz-coupon button {
+    background: rgba(255,255,255,0.07);
+    border: 1px solid rgba(255,255,255,0.1);
+    color: rgba(255,255,255,0.6);
+    border-radius: 8px;
+    padding: 10px 18px;
+    font-size: 13px;
+    font-weight: 700;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: background 0.15s;
+  }
+  .tz-coupon button:hover { background: rgba(255,255,255,0.12); color: #ffffff; }
+
+  .tz-agreement { padding: 16px 22px; }
+  .confirmation__checkbox { margin-bottom: 12px; }
+
+  .tz-pay-btn {
+    width: 100%;
+    background: #facc15;
+    color: #111827;
+    border: none;
+    border-radius: 10px;
+    padding: 18px;
+    font-size: 17px;
+    font-weight: 900;
+    cursor: pointer;
+    margin-bottom: 12px;
+    transition: opacity 0.15s;
+  }
+  .tz-pay-btn:disabled { opacity: 0.4; cursor: not-allowed; }
+  .tz-pay-btn:hover:not(:disabled) { opacity: 0.9; }
+
+  .tz-pay-section { padding: 20px 22px; }
+  .tz-pay-section tebex-checkout { display: block; }
+
+  .tz-secure {
+    text-align: center;
+    font-size: 12px;
+    color: rgba(255,255,255,0.3);
+    margin-top: 10px;
+  }
+  .tz-secure i { margin-right: 4px; }
+
+  .cart__review, .cart__items, .checkout__body--separe,
+  .checkout__details--step, .checkout__gateways,
+  .shopping__as { display: none !important; }
+
+  .tz-qty-input-hidden { display: none; }
+</style>
+
+<div class="checkout__page">
+  <div class="checkout__page--body checkout">
+
+    <!-- USUARIO -->
+    <div class="tz-checkout-user">
+      {% if config("serverType") == "Minecraft" %}
+        {% set bedrockPrefix = config("bedrockPrefix") %}
+        {% set ignWithoutPrefix = basket.ign | replace({ (bedrockPrefix) : ''}) %}
+        <div class="tz-checkout-user__avatar">
+          <img src="https://minotar.net/avatar/{{ ignWithoutPrefix }}/64" alt="{{ basket.ign }}">
+        </div>
+      {% endif %}
+      <p class="tz-checkout-user__name">{{ basket.ign }}</p>
+      <a href="/checkout/logout" class="tz-checkout-user__logout">Cerrar sesión</a>
+    </div>
+
+    <!-- CARRITO -->
+    <div class="tz-section">
+      <p class="tz-section__title">Tu pedido ({{ basket.packages|length }} {{ basket.packages|length == 1 ? 'artículo' : 'artículos' }})</p>
+
+      <form method="post" action="/checkout/update" class="quantity-form" id="tz-qty-form">
+        {% for package in basket.packages %}
+        <div class="tz-cart-item">
+          <img class="tz-cart-item__img" src="{{ package.image.url }}" alt="{{ package.name }}">
+          <div class="tz-cart-item__info">
+            <p class="tz-cart-item__name">{{ package.name }}</p>
+            <p class="tz-cart-item__price">
+              {% if not currencyAfter %}{{ currencySymbol }}{% endif %}{{ package.price|money }}{% if currencyAfter %} {{ currencySymbol }}{% endif %}
+            </p>
+          </div>
+          <div class="tz-cart-item__qty">
+            <a class="qty-count {% if package.price == 0.00 or package.disableQuantity %}disabled__btn--qnt{% endif %}"
+               data-action="minus" data-package="quantity[{{ package.id }}]"
+               style="{% if package.price == 0.00 or package.disableQuantity %}opacity:0.3;pointer-events:none;{% endif %}">−</a>
+            <span id="tz-qty-display-{{ package.id }}">{{ package.quantity }}</span>
+            <input type="number" class="qty-count quantity__input tz-qty-input-hidden"
+                   data-action="manual_quantity"
+                   name="quantity[{{ package.id }}]"
+                   id="tz-qty-{{ package.id }}"
+                   value="{{ package.quantity }}" min="1"
+                   {% if package.price == 0.00 or package.disableQuantity %} disabled {% endif %}>
+            <a class="qty-count {% if package.price == 0.00 or package.disableQuantity %}disabled__btn--qnt{% endif %}"
+               data-action="add" data-package="quantity[{{ package.id }}]"
+               style="{% if package.price == 0.00 or package.disableQuantity %}opacity:0.3;pointer-events:none;{% endif %}">+</a>
+          </div>
+          <a href="/checkout/packages/remove/{{ package.id }}" class="tz-cart-item__remove">
+            <i class="mdi mdi-trash-can-outline"></i>
+          </a>
+        </div>
+        {% endfor %}
+      </form>
+
+      <!-- TOTAL: símbolo fuera del span que actualiza el AJAX -->
+      <div class="tz-total">
+        <span class="tz-total__label">Total</span>
+        <span class="tz-total__price">
+          {% if not currencyAfter %}<span class="tz-currency-prefix">{{ currencySymbol }}</span>{% endif %}<span class="cart__ajax--total_price">{{ basket.price|money }}</span>{% if currencyAfter %}<span class="tz-currency-suffix"> {{ currencySymbol }}</span>{% endif %}
+        </span>
+      </div>
+    </div>
+
+    <!-- CUPÓN -->
+    <div class="tz-section">
+      <p class="tz-section__title">¿Tienes un cupón?</p>
+      <form method="post" action="/checkout/coupons/add">
+        <div class="tz-coupon">
+          <input type="text" name="coupon" placeholder="Código de descuento">
+          <button type="submit">Aplicar</button>
+        </div>
+      </form>
+      {% if basket.coupons|length > 0 %}
+        <div style="padding:0 22px 14px 22px;display:flex;flex-wrap:wrap;gap:8px;">
+          {% for coupon in basket.coupons %}
+            <div style="display:flex;align-items:center;gap:6px;background:rgba(250,204,21,0.1);border:1px solid rgba(250,204,21,0.2);border-radius:6px;padding:4px 12px;">
+              <span style="font-size:13px;font-weight:700;color:#facc15;">{{ coupon.code }}</span>
+              <a href="/checkout/coupons/remove/{{ coupon.code }}" style="color:rgba(255,255,255,0.3);text-decoration:none;font-size:16px;">×</a>
+            </div>
+          {% endfor %}
+        </div>
+      {% endif %}
+    </div>
+
+    <!-- ACUERDO -->
+    {% if config("checkoutConfirmation") == "enabled" %}
+    <div class="tz-section">
+      <p class="tz-section__title">Acuerdo de usuario</p>
+      <div class="tz-agreement">
+        <div class="confirm__grid">
+          {% for agreement in theme_configuration.checkoutUserAgreement %}
+            <label class="confirmation__checkbox" for="checkbox-{{ loop.index }}">
+              <input type="checkbox" id="checkbox-{{ loop.index }}"/>
+              <div class="checkbox__checkmark"></div>
+              <div class="checkbox__body">{{ (agreement.content | replace({"%user%": basket.ign })) | raw }}</div>
+            </label>
+          {% endfor %}
+        </div>
+        <p style="font-size:12px;color:rgba(255,255,255,0.3);margin-top:12px;">
+          <i class="mdi mdi-alert-box"></i> {{ lang.youMustTickAllBoxes }}
+        </p>
+      </div>
+    </div>
+    {% endif %}
+
+    <!-- PAGO -->
+    {% if store.useCheckout %}
+    <div class="tz-pay-section">
+      <tebex-checkout ident="{{ basket.ident }}" theme="auto" locale="{{ config('language') }}" id="tebex-checkout">
+        <button type="submit" class="tz-pay-btn purchaseButtons" id="purchase-button"
+                data-loading-text="{{ lang.checkout_loading }}"
+                {% if config("checkoutConfirmation") == "enabled" %} disabled {% endif %}>
+          🔒 Finalizar compra
+        </button>
+      </tebex-checkout>
+
+      {% if config("cryptoWidget") == "enabled" or config("cordarium") == "enabled" and displayCordariumButton %}
+        <button class="tz-pay-btn purchaseButtons cryptoButton"
+                style="background:rgba(255,255,255,0.07);color:rgba(255,255,255,0.7);margin-top:8px;"
+                data-basket="{{ basket.ident }}"
+                data-game-type="{{ config("cordarium-server-platform") }}"
+                id="{{ config("cordarium") == "enabled" ? "pay-with-cordarium" : "" }}"
+                {% if config("cryptoWidget") == "enabled" %}data-modal-toggler="crypto"{% endif %}
+                {% if config("checkoutConfirmation") == "enabled" %} disabled {% endif %}>
+          {{ lang.proceed_to_checkout }}
+        </button>
+      {% endif %}
+
+      <p class="tz-secure"><i class="mdi mdi-shield-check"></i> Pago seguro procesado por Tebex</p>
+    </div>
+    {% endif %}
+
+  </div>
+</div>
+
+<script>
+(function() {
+    // Sincronizar display de cantidad con el input oculto
+    document.querySelectorAll('.tz-cart-item__qty a').forEach(function(btn) {
+        btn.addEventListener('click', function() {
+            var pkg = btn.getAttribute('data-package');
+            if (!pkg) return;
+            var id = pkg.replace('quantity[', '').replace(']', '');
+            var input = document.getElementById('tz-qty-' + id);
+            var display = document.getElementById('tz-qty-display-' + id);
+            if (!input || !display) return;
+            setTimeout(function() {
+                display.textContent = input.value;
+            }, 100);
+        });
+    });
+
+    // Proteger el símbolo de moneda del AJAX
+    var totalEl = document.querySelector('.cart__ajax--total_price');
+    if (totalEl) {
+        var currencyAfter = {{ currencyAfter ? 'true' : 'false' }};
+        var currencySymbol = '{{ currencySymbol }}';
+        var observer = new MutationObserver(function() {
+            var raw = totalEl.textContent.trim();
+            // Limpiar símbolo si el AJAX lo incluyó dentro del span
+            var clean = raw.replace(currencySymbol, '').trim();
+            if (clean !== raw) {
+                totalEl.textContent = clean;
+            }
+        });
+        observer.observe(totalEl, { childList: true, subtree: true, characterData: true });
+    }
+})();
+</script>
+
+<script type="text/javascript">
+    document.getElementById("tebex-checkout").addEventListener("payment:complete", () => {
+        document.location.href="/";
+    });
+</script>
+{% endblock %}

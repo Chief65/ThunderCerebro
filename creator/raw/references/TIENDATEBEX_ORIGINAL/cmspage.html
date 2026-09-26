@@ -1,0 +1,29 @@
+{% extends "layout.html" %}
+{% block content %}
+
+{% include 'layout.topbar.twig' %}
+
+<div class="body--with-sidebar">
+    {% include 'layout.sidebar.twig' %}
+    <main class="triplezone-main-content" {% if page.metaData.content == "" %}data-category-type="no-description"{% endif %}>    
+
+        <div class="category__header">
+            <h3>{{ page.title }}</h3>
+            {% if page.metaData.content != "" %}
+                <div class="category__header__description">
+                    {{ page.metaData.content|raw }}
+                </div>
+            {% endif %}            
+        </div>        
+        
+        {% if theme_configuration.patrons.pageTitle == page.title %}
+            {% include 'layout.patrons.twig' %}
+        {% endif %}
+        
+        {% if theme_configuration.vote.pageTitle == page.title %}
+            {% include 'layout.votepage.twig' %}
+        {% endif %}
+
+    </main>
+</div>
+{% endblock %}

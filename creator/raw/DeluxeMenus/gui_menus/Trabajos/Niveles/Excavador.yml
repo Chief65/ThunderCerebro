@@ -1,0 +1,2465 @@
+size: 54
+menu_title: '&0&l|&r &0Trabajos ▶ &8Niveles'
+
+items:
+  'Jugador':
+    display_name: "&#C68642%player_name% &#FFF000⚡ &#C68642ᴇxᴄᴀᴠᴀᴅᴏʀ"
+    material: head-%player_name%
+    slot: 45
+    lore:
+      - "&8Jugador"
+      - ""
+      - "&8&l| &fNivel actual: &6%jobsr_user_jlevel_Excavador%"
+      - "&8&l| &fXP actual: &#FFF000%jobsr_user_jexp_rounded_Excavador%"
+      - ""
+
+  'Volver':
+    display_name: "&ePágina anterior"
+    material: ARROW
+    slot: 8
+    lore:
+      - "&7▶ Click para volver"
+    left_click_commands:
+      - '[openguimenu] Trabajos'
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  'Rank1-Reclamado':
+    material: LIME_STAINED_GLASS_PANE
+    slot: 36
+    priority: 1
+    display_name: '&#49D96A&l▎ &#49D96ANivel excavador &f#1'
+    lore:
+      - '&8Botón interactivo'
+      - ''
+      - '&7 ¡Buen trabajo!'
+      - '&7 Sigue asi para ganar'
+      - '&7 mejores recompensas'
+      - ''
+    view_requirement:
+      requirements:
+        permiso:
+          type: has permission
+          permission: trabajo.excavador.rank1
+
+  'Rank1-NoDisponible':
+    material: RED_STAINED_GLASS_PANE
+    slot: 36
+    priority: 2
+    display_name: '&#C68649&l▎ &#C68649Nivel excavador &f#1'
+    lore:
+      - '&8Botón interactivo'
+      - ''
+      - '&8¿Cómo lo consigo?'
+      - ' &8| &fNivel req.: &#C686491'
+      - ''
+      - ' &8Recompensas:'
+      - ' &f- &8● &a+&l$&a250'
+      - ' &f- &8● &ax1 Llave Rara'
+      - ' &f- &8● &ax1 Llave Super'
+    left_click_commands:
+      - '[message] &#FFF000&lTHUNDERMC &c✘ Oof, Necesitas un nivel más alto para reclamar esta recompensa.'
+    view_requirement:
+      requirements:
+        nivel:
+          type: string equals
+          input: '%math_0:0_{jobsr_user_jlevel_excavador}>=1%'
+          output: '0'
+
+  'Rank1-Disponible':
+    material: YELLOW_STAINED_GLASS_PANE
+    slot: 36
+    priority: 3
+    display_name: '&#C68649&l▎ &#C68649Nivel excavador &f#1'
+    lore:
+      - '&8Botón interactivo'
+      - ''
+      - '&8¿Cómo lo consigo?'
+      - ' &8| &fNivel req.: &#C686491'
+      - ''
+      - ' &8Recompensas:'
+      - ' &f- &8● &a+&l$&a250'
+      - ' &f- &8● &ax1 Llave Rara'
+      - ' &f- &8● &ax1 Llave Super'
+    left_click_commands:
+      - '[sound] ENTITY_FIREWORK_ROCKET_BLAST'
+      - '[message] &a✔ &fHas reclamado el nivel 1.'
+      - '[console] lp user %player_name% permission set trabajo.excavador.rank1'
+      - '[console] eco give %player_name% 250'
+      - '[console] crate key give %player_name% rara 1'
+      - '[console] crate key give %player_name% vote 1'
+      - '[refresh]'
+    left_click_requirement:
+      requirements:
+        nivel:
+          type: string equals
+          input: '%math_0:0_{jobsr_user_jlevel_excavador}>=1%'
+          output: '1'
+    view_requirement:
+      requirements:
+        nivel:
+          type: string equals
+          input: '%math_0:0_{jobsr_user_jlevel_excavador}>=1%'
+          output: '1'
+
+  'Rank2-Reclamado':
+    material: LIME_STAINED_GLASS_PANE
+    slot: 27
+    amount: 2
+    priority: 1
+    display_name: '&#49D96A&l▎ &#49D96ANivel excavador &f#2'
+    lore:
+      - '&8Botón interactivo'
+      - ''
+      - '&7 ¡Buen trabajo!'
+      - '&7 Sigue asi para ganar'
+      - '&7 mejores recompensas'
+      - ''
+    view_requirement:
+      requirements:
+        permiso:
+          type: has permission
+          permission: trabajo.excavador.rank2
+
+  'Rank2-NoDisponible':
+    material: RED_STAINED_GLASS_PANE
+    slot: 27
+    amount: 2
+    priority: 2
+    display_name: '&#C68649&l▎ &#C68649Nivel excavador &f#2'
+    lore:
+      - '&8Botón interactivo'
+      - ''
+      - '&8¿Cómo lo consigo?'
+      - ' &8| &fNivel req.: &#C686492'
+      - ''
+      - ' &8Recompensas:'
+      - ' &f- &8● &a+&l$&a500'
+      - ' &f- &8● &ax1 Llave Rara'
+      - ' &f- &8● &ax1 Llave Super'
+    left_click_commands:
+      - '[message] &#FFF000&lTHUNDERMC &c✘ Oof, Necesitas un nivel más alto para reclamar esta recompensa.'
+    view_requirement:
+      requirements:
+        nivel:
+          type: string equals
+          input: '%math_0:0_{jobsr_user_jlevel_excavador}>=2%'
+          output: '0'
+
+  'Rank2-Disponible':
+    material: YELLOW_STAINED_GLASS_PANE
+    slot: 27
+    amount: 2
+    priority: 3
+    display_name: '&#C68649&l▎ &#C68649Nivel excavador &f#2'
+    lore:
+      - '&8Botón interactivo'
+      - ''
+      - '&8¿Cómo lo consigo?'
+      - ' &8| &fNivel req.: &#C686492'
+      - ''
+      - ' &8Recompensas:'
+      - ' &f- &8● &a+&l$&a500'
+      - ' &f- &8● &ax1 Llave Rara'
+      - ' &f- &8● &ax1 Llave Super'
+    left_click_commands:
+      - '[sound] ENTITY_FIREWORK_ROCKET_BLAST'
+      - '[message] &a✔ &fHas reclamado el nivel 2.'
+      - '[console] lp user %player_name% permission set trabajo.excavador.rank2'
+      - '[console] eco give %player_name% 500'
+      - '[console] crate key give %player_name% rara 1'
+      - '[console] crate key give %player_name% vote 1'
+      - '[refresh]'
+    left_click_requirement:
+      requirements:
+        nivel:
+          type: string equals
+          input: '%math_0:0_{jobsr_user_jlevel_excavador}>=2%'
+          output: '1'
+    view_requirement:
+      requirements:
+        nivel:
+          type: string equals
+          input: '%math_0:0_{jobsr_user_jlevel_excavador}>=2%'
+          output: '1'
+
+  'Rank3-Reclamado':
+    material: LIME_STAINED_GLASS_PANE
+    slot: 18
+    amount: 3
+    priority: 1
+    display_name: '&#49D96A&l▎ &#49D96ANivel excavador &f#3'
+    lore:
+      - '&8Botón interactivo'
+      - ''
+      - '&7 ¡Buen trabajo!'
+      - '&7 Sigue asi para ganar'
+      - '&7 mejores recompensas'
+      - ''
+    view_requirement:
+      requirements:
+        permiso:
+          type: has permission
+          permission: trabajo.excavador.rank3
+
+  'Rank3-NoDisponible':
+    material: RED_STAINED_GLASS_PANE
+    slot: 18
+    amount: 3
+    priority: 2
+    display_name: '&#C68649&l▎ &#C68649Nivel excavador &f#3'
+    lore:
+      - '&8Botón interactivo'
+      - ''
+      - '&8¿Cómo lo consigo?'
+      - ' &8| &fNivel req.: &#C686493'
+      - ''
+      - ' &8Recompensas:'
+      - ' &f- &8● &a+&l$&a750'
+      - ' &f- &8● &ax1 Llave Rara'
+      - ' &f- &8● &ax1 Llave Super'
+    left_click_commands:
+      - '[message] &#FFF000&lTHUNDERMC &c✘ Oof, Necesitas un nivel más alto para reclamar esta recompensa.'
+    view_requirement:
+      requirements:
+        nivel:
+          type: string equals
+          input: '%math_0:0_{jobsr_user_jlevel_excavador}>=3%'
+          output: '0'
+
+  'Rank3-Disponible':
+    material: YELLOW_STAINED_GLASS_PANE
+    slot: 18
+    amount: 3
+    priority: 3
+    display_name: '&#C68649&l▎ &#C68649Nivel excavador &f#3'
+    lore:
+      - '&8Botón interactivo'
+      - ''
+      - '&8¿Cómo lo consigo?'
+      - ' &8| &fNivel req.: &#C686493'
+      - ''
+      - ' &8Recompensas:'
+      - ' &f- &8● &a+&l$&a750'
+      - ' &f- &8● &ax1 Llave Rara'
+      - ' &f- &8● &ax1 Llave Super'
+    left_click_commands:
+      - '[sound] ENTITY_FIREWORK_ROCKET_BLAST'
+      - '[message] &a✔ &fHas reclamado el nivel 3.'
+      - '[console] lp user %player_name% permission set trabajo.excavador.rank3'
+      - '[console] eco give %player_name% 750'
+      - '[console] crate key give %player_name% rara 1'
+      - '[console] crate key give %player_name% vote 1'
+      - '[refresh]'
+    left_click_requirement:
+      requirements:
+        nivel:
+          type: string equals
+          input: '%math_0:0_{jobsr_user_jlevel_excavador}>=3%'
+          output: '1'
+    view_requirement:
+      requirements:
+        nivel:
+          type: string equals
+          input: '%math_0:0_{jobsr_user_jlevel_excavador}>=3%'
+          output: '1'
+
+  'Rank4-Reclamado':
+    material: LIME_STAINED_GLASS_PANE
+    slot: 9
+    amount: 4
+    priority: 1
+    display_name: '&#49D96A&l▎ &#49D96ANivel excavador &f#4'
+    lore:
+      - '&8Botón interactivo'
+      - ''
+      - '&7 ¡Buen trabajo!'
+      - '&7 Sigue asi para ganar'
+      - '&7 mejores recompensas'
+      - ''
+    view_requirement:
+      requirements:
+        permiso:
+          type: has permission
+          permission: trabajo.excavador.rank4
+
+  'Rank4-NoDisponible':
+    material: RED_STAINED_GLASS_PANE
+    slot: 9
+    amount: 4
+    priority: 2
+    display_name: '&#C68649&l▎ &#C68649Nivel excavador &f#4'
+    lore:
+      - '&8Botón interactivo'
+      - ''
+      - '&8¿Cómo lo consigo?'
+      - ' &8| &fNivel req.: &#C686494'
+      - ''
+      - ' &8Recompensas:'
+      - ' &f- &8● &a+&l$&a1,000'
+      - ' &f- &8● &ax1 Llave Rara'
+      - ' &f- &8● &ax1 Llave Super'
+    left_click_commands:
+      - '[message] &#FFF000&lTHUNDERMC &c✘ Oof, Necesitas un nivel más alto para reclamar esta recompensa.'
+    view_requirement:
+      requirements:
+        nivel:
+          type: string equals
+          input: '%math_0:0_{jobsr_user_jlevel_excavador}>=4%'
+          output: '0'
+
+  'Rank4-Disponible':
+    material: YELLOW_STAINED_GLASS_PANE
+    slot: 9
+    amount: 4
+    priority: 3
+    display_name: '&#C68649&l▎ &#C68649Nivel excavador &f#4'
+    lore:
+      - '&8Botón interactivo'
+      - ''
+      - '&8¿Cómo lo consigo?'
+      - ' &8| &fNivel req.: &#C686494'
+      - ''
+      - ' &8Recompensas:'
+      - ' &f- &8● &a+&l$&a1,000'
+      - ' &f- &8● &ax1 Llave Rara'
+      - ' &f- &8● &ax1 Llave Super'
+    left_click_commands:
+      - '[sound] ENTITY_FIREWORK_ROCKET_BLAST'
+      - '[message] &a✔ &fHas reclamado el nivel 4.'
+      - '[console] lp user %player_name% permission set trabajo.excavador.rank4'
+      - '[console] eco give %player_name% 1000'
+      - '[console] crate key give %player_name% rara 1'
+      - '[console] crate key give %player_name% vote 1'
+      - '[refresh]'
+    left_click_requirement:
+      requirements:
+        nivel:
+          type: string equals
+          input: '%math_0:0_{jobsr_user_jlevel_excavador}>=4%'
+          output: '1'
+    view_requirement:
+      requirements:
+        nivel:
+          type: string equals
+          input: '%math_0:0_{jobsr_user_jlevel_excavador}>=4%'
+          output: '1'
+
+  'Rank5-Reclamado':
+    material: LIME_STAINED_GLASS_PANE
+    slot: 0
+    amount: 5
+    priority: 1
+    display_name: '&#49D96A&l▎ &#49D96ANivel excavador &f#5'
+    lore:
+      - '&8Botón interactivo'
+      - ''
+      - '&7 ¡Buen trabajo!'
+      - '&7 Sigue asi para ganar'
+      - '&7 mejores recompensas'
+      - ''
+    view_requirement:
+      requirements:
+        permiso:
+          type: has permission
+          permission: trabajo.excavador.rank5
+
+  'Rank5-NoDisponible':
+    material: RED_STAINED_GLASS_PANE
+    slot: 0
+    amount: 5
+    priority: 2
+    display_name: '&#C68649&l▎ &#C68649Nivel excavador &f#5'
+    lore:
+      - '&8Botón interactivo'
+      - ''
+      - '&8¿Cómo lo consigo?'
+      - ' &8| &fNivel req.: &#C686495'
+      - ''
+      - ' &8Recompensas:'
+      - ' &f- &8● &a+&l$&a1,500'
+      - ' &f- &8● &ax1 Llave Rara'
+      - ' &f- &8● &ax1 Llave Super'
+    left_click_commands:
+      - '[message] &#FFF000&lTHUNDERMC &c✘ Oof, Necesitas un nivel más alto para reclamar esta recompensa.'
+    view_requirement:
+      requirements:
+        nivel:
+          type: string equals
+          input: '%math_0:0_{jobsr_user_jlevel_excavador}>=5%'
+          output: '0'
+
+  'Rank5-Disponible':
+    material: YELLOW_STAINED_GLASS_PANE
+    slot: 0
+    amount: 5
+    priority: 3
+    display_name: '&#C68649&l▎ &#C68649Nivel excavador &f#5'
+    lore:
+      - '&8Botón interactivo'
+      - ''
+      - '&8¿Cómo lo consigo?'
+      - ' &8| &fNivel req.: &#C686495'
+      - ''
+      - ' &8Recompensas:'
+      - ' &f- &8● &a+&l$&a1,500'
+      - ' &f- &8● &ax1 Llave Rara'
+      - ' &f- &8● &ax1 Llave Super'
+    left_click_commands:
+      - '[sound] ENTITY_FIREWORK_ROCKET_BLAST'
+      - '[message] &a✔ &fHas reclamado el nivel 5.'
+      - '[console] lp user %player_name% permission set trabajo.excavador.rank5'
+      - '[console] eco give %player_name% 1500'
+      - '[console] crate key give %player_name% rara 1'
+      - '[console] crate key give %player_name% vote 1'
+      - '[refresh]'
+    left_click_requirement:
+      requirements:
+        nivel:
+          type: string equals
+          input: '%math_0:0_{jobsr_user_jlevel_excavador}>=5%'
+          output: '1'
+    view_requirement:
+      requirements:
+        nivel:
+          type: string equals
+          input: '%math_0:0_{jobsr_user_jlevel_excavador}>=5%'
+          output: '1'
+
+  'Rank6-Reclamado':
+    material: LIME_STAINED_GLASS_PANE
+    slot: 1
+    amount: 6
+    priority: 1
+    display_name: '&#49D96A&l▎ &#49D96ANivel excavador &f#6'
+    lore:
+      - '&8Botón interactivo'
+      - ''
+      - '&7 ¡Buen trabajo!'
+      - '&7 Sigue asi para ganar'
+      - '&7 mejores recompensas'
+      - ''
+    view_requirement:
+      requirements:
+        permiso:
+          type: has permission
+          permission: trabajo.excavador.rank6
+
+  'Rank6-NoDisponible':
+    material: RED_STAINED_GLASS_PANE
+    slot: 1
+    amount: 6
+    priority: 2
+    display_name: '&#C68649&l▎ &#C68649Nivel excavador &f#6'
+    lore:
+      - '&8Botón interactivo'
+      - ''
+      - '&8¿Cómo lo consigo?'
+      - ' &8| &fNivel req.: &#C686496'
+      - ''
+      - ' &8Recompensas:'
+      - ' &f- &8● &a+&l$&a2,000'
+      - ' &f- &8● &ax1 Llave Rara'
+      - ' &f- &8● &ax1 Llave Super'
+    left_click_commands:
+      - '[message] &#FFF000&lTHUNDERMC &c✘ Oof, Necesitas un nivel más alto para reclamar esta recompensa.'
+    view_requirement:
+      requirements:
+        nivel:
+          type: string equals
+          input: '%math_0:0_{jobsr_user_jlevel_excavador}>=6%'
+          output: '0'
+
+  'Rank6-Disponible':
+    material: YELLOW_STAINED_GLASS_PANE
+    slot: 1
+    amount: 6
+    priority: 3
+    display_name: '&#C68649&l▎ &#C68649Nivel excavador &f#6'
+    lore:
+      - '&8Botón interactivo'
+      - ''
+      - '&8¿Cómo lo consigo?'
+      - ' &8| &fNivel req.: &#C686496'
+      - ''
+      - ' &8Recompensas:'
+      - ' &f- &8● &a+&l$&a2,000'
+      - ' &f- &8● &ax1 Llave Rara'
+      - ' &f- &8● &ax1 Llave Super'
+    left_click_commands:
+      - '[sound] ENTITY_FIREWORK_ROCKET_BLAST'
+      - '[message] &a✔ &fHas reclamado el nivel 6.'
+      - '[console] lp user %player_name% permission set trabajo.excavador.rank6'
+      - '[console] eco give %player_name% 2000'
+      - '[console] crate key give %player_name% rara 1'
+      - '[console] crate key give %player_name% vote 1'
+      - '[refresh]'
+    left_click_requirement:
+      requirements:
+        nivel:
+          type: string equals
+          input: '%math_0:0_{jobsr_user_jlevel_excavador}>=6%'
+          output: '1'
+    view_requirement:
+      requirements:
+        nivel:
+          type: string equals
+          input: '%math_0:0_{jobsr_user_jlevel_excavador}>=6%'
+          output: '1'
+
+  'Rank7-Reclamado':
+    material: LIME_STAINED_GLASS_PANE
+    slot: 2
+    amount: 7
+    priority: 1
+    display_name: '&#49D96A&l▎ &#49D96ANivel excavador &f#7'
+    lore:
+      - '&8Botón interactivo'
+      - ''
+      - '&7 ¡Buen trabajo!'
+      - '&7 Sigue asi para ganar'
+      - '&7 mejores recompensas'
+      - ''
+    view_requirement:
+      requirements:
+        permiso:
+          type: has permission
+          permission: trabajo.excavador.rank7
+
+  'Rank7-NoDisponible':
+    material: RED_STAINED_GLASS_PANE
+    slot: 2
+    amount: 7
+    priority: 2
+    display_name: '&#C68649&l▎ &#C68649Nivel excavador &f#7'
+    lore:
+      - '&8Botón interactivo'
+      - ''
+      - '&8¿Cómo lo consigo?'
+      - ' &8| &fNivel req.: &#C686497'
+      - ''
+      - ' &8Recompensas:'
+      - ' &f- &8● &a+&l$&a2,500'
+      - ' &f- &8● &ax1 Llave Rara'
+      - ' &f- &8● &ax1 Llave Super'
+    left_click_commands:
+      - '[message] &#FFF000&lTHUNDERMC &c✘ Oof, Necesitas un nivel más alto para reclamar esta recompensa.'
+    view_requirement:
+      requirements:
+        nivel:
+          type: string equals
+          input: '%math_0:0_{jobsr_user_jlevel_excavador}>=7%'
+          output: '0'
+
+  'Rank7-Disponible':
+    material: YELLOW_STAINED_GLASS_PANE
+    slot: 2
+    amount: 7
+    priority: 3
+    display_name: '&#C68649&l▎ &#C68649Nivel excavador &f#7'
+    lore:
+      - '&8Botón interactivo'
+      - ''
+      - '&8¿Cómo lo consigo?'
+      - ' &8| &fNivel req.: &#C686497'
+      - ''
+      - ' &8Recompensas:'
+      - ' &f- &8● &a+&l$&a2,500'
+      - ' &f- &8● &ax1 Llave Rara'
+      - ' &f- &8● &ax1 Llave Super'
+    left_click_commands:
+      - '[sound] ENTITY_FIREWORK_ROCKET_BLAST'
+      - '[message] &a✔ &fHas reclamado el nivel 7.'
+      - '[console] lp user %player_name% permission set trabajo.excavador.rank7'
+      - '[console] eco give %player_name% 2500'
+      - '[console] crate key give %player_name% rara 1'
+      - '[console] crate key give %player_name% vote 1'
+      - '[refresh]'
+    left_click_requirement:
+      requirements:
+        nivel:
+          type: string equals
+          input: '%math_0:0_{jobsr_user_jlevel_excavador}>=7%'
+          output: '1'
+    view_requirement:
+      requirements:
+        nivel:
+          type: string equals
+          input: '%math_0:0_{jobsr_user_jlevel_excavador}>=7%'
+          output: '1'
+
+  'Rank8-Reclamado':
+    material: LIME_STAINED_GLASS_PANE
+    slot: 11
+    amount: 8
+    priority: 1
+    display_name: '&#49D96A&l▎ &#49D96ANivel excavador &f#8'
+    lore:
+      - '&8Botón interactivo'
+      - ''
+      - '&7 ¡Buen trabajo!'
+      - '&7 Sigue asi para ganar'
+      - '&7 mejores recompensas'
+      - ''
+    view_requirement:
+      requirements:
+        permiso:
+          type: has permission
+          permission: trabajo.excavador.rank8
+
+  'Rank8-NoDisponible':
+    material: RED_STAINED_GLASS_PANE
+    slot: 11
+    amount: 8
+    priority: 2
+    display_name: '&#C68649&l▎ &#C68649Nivel excavador &f#8'
+    lore:
+      - '&8Botón interactivo'
+      - ''
+      - '&8¿Cómo lo consigo?'
+      - ' &8| &fNivel req.: &#C686498'
+      - ''
+      - ' &8Recompensas:'
+      - ' &f- &8● &a+&l$&a3,000'
+      - ' &f- &8● &ax1 Llave Rara'
+      - ' &f- &8● &ax2 Llave Super'
+    left_click_commands:
+      - '[message] &#FFF000&lTHUNDERMC &c✘ Oof, Necesitas un nivel más alto para reclamar esta recompensa.'
+    view_requirement:
+      requirements:
+        nivel:
+          type: string equals
+          input: '%math_0:0_{jobsr_user_jlevel_excavador}>=8%'
+          output: '0'
+
+  'Rank8-Disponible':
+    material: YELLOW_STAINED_GLASS_PANE
+    slot: 11
+    amount: 8
+    priority: 3
+    display_name: '&#C68649&l▎ &#C68649Nivel excavador &f#8'
+    lore:
+      - '&8Botón interactivo'
+      - ''
+      - '&8¿Cómo lo consigo?'
+      - ' &8| &fNivel req.: &#C686498'
+      - ''
+      - ' &8Recompensas:'
+      - ' &f- &8● &a+&l$&a3,000'
+      - ' &f- &8● &ax1 Llave Rara'
+      - ' &f- &8● &ax2 Llave Super'
+    left_click_commands:
+      - '[sound] ENTITY_FIREWORK_ROCKET_BLAST'
+      - '[message] &a✔ &fHas reclamado el nivel 8.'
+      - '[console] lp user %player_name% permission set trabajo.excavador.rank8'
+      - '[console] eco give %player_name% 3000'
+      - '[console] crate key give %player_name% rara 1'
+      - '[console] crate key give %player_name% vote 2'
+      - '[refresh]'
+    left_click_requirement:
+      requirements:
+        nivel:
+          type: string equals
+          input: '%math_0:0_{jobsr_user_jlevel_excavador}>=8%'
+          output: '1'
+    view_requirement:
+      requirements:
+        nivel:
+          type: string equals
+          input: '%math_0:0_{jobsr_user_jlevel_excavador}>=8%'
+          output: '1'
+
+  'Rank9-Reclamado':
+    material: LIME_STAINED_GLASS_PANE
+    slot: 20
+    amount: 9
+    priority: 1
+    display_name: '&#49D96A&l▎ &#49D96ANivel excavador &f#9'
+    lore:
+      - '&8Botón interactivo'
+      - ''
+      - '&7 ¡Buen trabajo!'
+      - '&7 Sigue asi para ganar'
+      - '&7 mejores recompensas'
+      - ''
+    view_requirement:
+      requirements:
+        permiso:
+          type: has permission
+          permission: trabajo.excavador.rank9
+
+  'Rank9-NoDisponible':
+    material: RED_STAINED_GLASS_PANE
+    slot: 20
+    amount: 9
+    priority: 2
+    display_name: '&#C68649&l▎ &#C68649Nivel excavador &f#9'
+    lore:
+      - '&8Botón interactivo'
+      - ''
+      - '&8¿Cómo lo consigo?'
+      - ' &8| &fNivel req.: &#C686499'
+      - ''
+      - ' &8Recompensas:'
+      - ' &f- &8● &a+&l$&a4,000'
+      - ' &f- &8● &ax1 Llave Rara'
+      - ' &f- &8● &ax2 Llave Super'
+    left_click_commands:
+      - '[message] &#FFF000&lTHUNDERMC &c✘ Oof, Necesitas un nivel más alto para reclamar esta recompensa.'
+    view_requirement:
+      requirements:
+        nivel:
+          type: string equals
+          input: '%math_0:0_{jobsr_user_jlevel_excavador}>=9%'
+          output: '0'
+
+  'Rank9-Disponible':
+    material: YELLOW_STAINED_GLASS_PANE
+    slot: 20
+    amount: 9
+    priority: 3
+    display_name: '&#C68649&l▎ &#C68649Nivel excavador &f#9'
+    lore:
+      - '&8Botón interactivo'
+      - ''
+      - '&8¿Cómo lo consigo?'
+      - ' &8| &fNivel req.: &#C686499'
+      - ''
+      - ' &8Recompensas:'
+      - ' &f- &8● &a+&l$&a4,000'
+      - ' &f- &8● &ax1 Llave Rara'
+      - ' &f- &8● &ax2 Llave Super'
+    left_click_commands:
+      - '[sound] ENTITY_FIREWORK_ROCKET_BLAST'
+      - '[message] &a✔ &fHas reclamado el nivel 9.'
+      - '[console] lp user %player_name% permission set trabajo.excavador.rank9'
+      - '[console] eco give %player_name% 4000'
+      - '[console] crate key give %player_name% rara 1'
+      - '[console] crate key give %player_name% vote 2'
+      - '[refresh]'
+    left_click_requirement:
+      requirements:
+        nivel:
+          type: string equals
+          input: '%math_0:0_{jobsr_user_jlevel_excavador}>=9%'
+          output: '1'
+    view_requirement:
+      requirements:
+        nivel:
+          type: string equals
+          input: '%math_0:0_{jobsr_user_jlevel_excavador}>=9%'
+          output: '1'
+
+  'Rank10-Reclamado':
+    material: LIME_STAINED_GLASS_PANE
+    slot: 29
+    amount: 10
+    priority: 1
+    display_name: '&#49D96A&l▎ &#49D96ANivel excavador &f#10'
+    lore:
+      - '&8Botón interactivo'
+      - ''
+      - '&7 ¡Buen trabajo!'
+      - '&7 Sigue asi para ganar'
+      - '&7 mejores recompensas'
+      - ''
+    view_requirement:
+      requirements:
+        permiso:
+          type: has permission
+          permission: trabajo.excavador.rank10
+
+  'Rank10-NoDisponible':
+    material: RED_STAINED_GLASS_PANE
+    slot: 29
+    amount: 10
+    priority: 2
+    display_name: '&#C68649&l▎ &#C68649Nivel excavador &f#10'
+    lore:
+      - '&8Botón interactivo'
+      - ''
+      - '&8¿Cómo lo consigo?'
+      - ' &8| &fNivel req.: &#C6864910'
+      - ''
+      - ' &8Recompensas:'
+      - ' &f- &8● &a+&l$&a5,000'
+      - ' &f- &8● &ax2 Llave Rara'
+      - ' &f- &8● &ax2 Llave Super'
+    left_click_commands:
+      - '[message] &#FFF000&lTHUNDERMC &c✘ Oof, Necesitas un nivel más alto para reclamar esta recompensa.'
+    view_requirement:
+      requirements:
+        nivel:
+          type: string equals
+          input: '%math_0:0_{jobsr_user_jlevel_excavador}>=10%'
+          output: '0'
+
+  'Rank10-Disponible':
+    material: YELLOW_STAINED_GLASS_PANE
+    slot: 29
+    amount: 10
+    priority: 3
+    display_name: '&#C68649&l▎ &#C68649Nivel excavador &f#10'
+    lore:
+      - '&8Botón interactivo'
+      - ''
+      - '&8¿Cómo lo consigo?'
+      - ' &8| &fNivel req.: &#C6864910'
+      - ''
+      - ' &8Recompensas:'
+      - ' &f- &8● &a+&l$&a5,000'
+      - ' &f- &8● &ax2 Llave Rara'
+      - ' &f- &8● &ax2 Llave Super'
+    left_click_commands:
+      - '[sound] ENTITY_FIREWORK_ROCKET_BLAST'
+      - '[message] &a✔ &fHas reclamado el nivel 10.'
+      - '[console] lp user %player_name% permission set trabajo.excavador.rank10'
+      - '[console] eco give %player_name% 5000'
+      - '[console] crate key give %player_name% rara 2'
+      - '[console] crate key give %player_name% vote 2'
+      - '[refresh]'
+    left_click_requirement:
+      requirements:
+        nivel:
+          type: string equals
+          input: '%math_0:0_{jobsr_user_jlevel_excavador}>=10%'
+          output: '1'
+    view_requirement:
+      requirements:
+        nivel:
+          type: string equals
+          input: '%math_0:0_{jobsr_user_jlevel_excavador}>=10%'
+          output: '1'
+
+  'Rank11-Reclamado':
+    material: LIME_STAINED_GLASS_PANE
+    slot: 38
+    amount: 11
+    priority: 1
+    display_name: '&#49D96A&l▎ &#49D96ANivel excavador &f#11'
+    lore:
+      - '&8Botón interactivo'
+      - ''
+      - '&7 ¡Buen trabajo!'
+      - '&7 Sigue asi para ganar'
+      - '&7 mejores recompensas'
+      - ''
+    view_requirement:
+      requirements:
+        permiso:
+          type: has permission
+          permission: trabajo.excavador.rank11
+
+  'Rank11-NoDisponible':
+    material: RED_STAINED_GLASS_PANE
+    slot: 38
+    amount: 11
+    priority: 2
+    display_name: '&#C68649&l▎ &#C68649Nivel excavador &f#11'
+    lore:
+      - '&8Botón interactivo'
+      - ''
+      - '&8¿Cómo lo consigo?'
+      - ' &8| &fNivel req.: &#C6864911'
+      - ''
+      - ' &8Recompensas:'
+      - ' &f- &8● &a+&l$&a7,500'
+      - ' &f- &8● &ax2 Llave Rara'
+      - ' &f- &8● &ax2 Llave Super'
+    left_click_commands:
+      - '[message] &#FFF000&lTHUNDERMC &c✘ Oof, Necesitas un nivel más alto para reclamar esta recompensa.'
+    view_requirement:
+      requirements:
+        nivel:
+          type: string equals
+          input: '%math_0:0_{jobsr_user_jlevel_excavador}>=11%'
+          output: '0'
+
+  'Rank11-Disponible':
+    material: YELLOW_STAINED_GLASS_PANE
+    slot: 38
+    amount: 11
+    priority: 3
+    display_name: '&#C68649&l▎ &#C68649Nivel excavador &f#11'
+    lore:
+      - '&8Botón interactivo'
+      - ''
+      - '&8¿Cómo lo consigo?'
+      - ' &8| &fNivel req.: &#C6864911'
+      - ''
+      - ' &8Recompensas:'
+      - ' &f- &8● &a+&l$&a7,500'
+      - ' &f- &8● &ax2 Llave Rara'
+      - ' &f- &8● &ax2 Llave Super'
+    left_click_commands:
+      - '[sound] ENTITY_FIREWORK_ROCKET_BLAST'
+      - '[message] &a✔ &fHas reclamado el nivel 11.'
+      - '[console] lp user %player_name% permission set trabajo.excavador.rank11'
+      - '[console] eco give %player_name% 7500'
+      - '[console] crate key give %player_name% rara 2'
+      - '[console] crate key give %player_name% vote 2'
+      - '[refresh]'
+    left_click_requirement:
+      requirements:
+        nivel:
+          type: string equals
+          input: '%math_0:0_{jobsr_user_jlevel_excavador}>=11%'
+          output: '1'
+    view_requirement:
+      requirements:
+        nivel:
+          type: string equals
+          input: '%math_0:0_{jobsr_user_jlevel_excavador}>=11%'
+          output: '1'
+
+  'Rank12-Reclamado':
+    material: LIME_STAINED_GLASS_PANE
+    slot: 39
+    amount: 12
+    priority: 1
+    display_name: '&#49D96A&l▎ &#49D96ANivel excavador &f#12'
+    lore:
+      - '&8Botón interactivo'
+      - ''
+      - '&7 ¡Buen trabajo!'
+      - '&7 Sigue asi para ganar'
+      - '&7 mejores recompensas'
+      - ''
+    view_requirement:
+      requirements:
+        permiso:
+          type: has permission
+          permission: trabajo.excavador.rank12
+
+  'Rank12-NoDisponible':
+    material: RED_STAINED_GLASS_PANE
+    slot: 39
+    amount: 12
+    priority: 2
+    display_name: '&#C68649&l▎ &#C68649Nivel excavador &f#12'
+    lore:
+      - '&8Botón interactivo'
+      - ''
+      - '&8¿Cómo lo consigo?'
+      - ' &8| &fNivel req.: &#C6864912'
+      - ''
+      - ' &8Recompensas:'
+      - ' &f- &8● &a+&l$&a10,000'
+      - ' &f- &8● &ax2 Llave Rara'
+      - ' &f- &8● &ax2 Llave Super'
+    left_click_commands:
+      - '[message] &#FFF000&lTHUNDERMC &c✘ Oof, Necesitas un nivel más alto para reclamar esta recompensa.'
+    view_requirement:
+      requirements:
+        nivel:
+          type: string equals
+          input: '%math_0:0_{jobsr_user_jlevel_excavador}>=12%'
+          output: '0'
+
+  'Rank12-Disponible':
+    material: YELLOW_STAINED_GLASS_PANE
+    slot: 39
+    amount: 12
+    priority: 3
+    display_name: '&#C68649&l▎ &#C68649Nivel excavador &f#12'
+    lore:
+      - '&8Botón interactivo'
+      - ''
+      - '&8¿Cómo lo consigo?'
+      - ' &8| &fNivel req.: &#C6864912'
+      - ''
+      - ' &8Recompensas:'
+      - ' &f- &8● &a+&l$&a10,000'
+      - ' &f- &8● &ax2 Llave Rara'
+      - ' &f- &8● &ax2 Llave Super'
+    left_click_commands:
+      - '[sound] ENTITY_FIREWORK_ROCKET_BLAST'
+      - '[message] &a✔ &fHas reclamado el nivel 12.'
+      - '[console] lp user %player_name% permission set trabajo.excavador.rank12'
+      - '[console] eco give %player_name% 10000'
+      - '[console] crate key give %player_name% rara 2'
+      - '[console] crate key give %player_name% vote 2'
+      - '[refresh]'
+    left_click_requirement:
+      requirements:
+        nivel:
+          type: string equals
+          input: '%math_0:0_{jobsr_user_jlevel_excavador}>=12%'
+          output: '1'
+    view_requirement:
+      requirements:
+        nivel:
+          type: string equals
+          input: '%math_0:0_{jobsr_user_jlevel_excavador}>=12%'
+          output: '1'
+
+  'Rank13-Reclamado':
+    material: LIME_STAINED_GLASS_PANE
+    slot: 40
+    amount: 13
+    priority: 1
+    display_name: '&#49D96A&l▎ &#49D96ANivel excavador &f#13'
+    lore:
+      - '&8Botón interactivo'
+      - ''
+      - '&7 ¡Buen trabajo!'
+      - '&7 Sigue asi para ganar'
+      - '&7 mejores recompensas'
+      - ''
+    view_requirement:
+      requirements:
+        permiso:
+          type: has permission
+          permission: trabajo.excavador.rank13
+
+  'Rank13-NoDisponible':
+    material: RED_STAINED_GLASS_PANE
+    slot: 40
+    amount: 13
+    priority: 2
+    display_name: '&#C68649&l▎ &#C68649Nivel excavador &f#13'
+    lore:
+      - '&8Botón interactivo'
+      - ''
+      - '&8¿Cómo lo consigo?'
+      - ' &8| &fNivel req.: &#C6864913'
+      - ''
+      - ' &8Recompensas:'
+      - ' &f- &8● &a+&l$&a12,500'
+      - ' &f- &8● &ax2 Llave Rara'
+      - ' &f- &8● &ax3 Llave Super'
+    left_click_commands:
+      - '[message] &#FFF000&lTHUNDERMC &c✘ Oof, Necesitas un nivel más alto para reclamar esta recompensa.'
+    view_requirement:
+      requirements:
+        nivel:
+          type: string equals
+          input: '%math_0:0_{jobsr_user_jlevel_excavador}>=13%'
+          output: '0'
+
+  'Rank13-Disponible':
+    material: YELLOW_STAINED_GLASS_PANE
+    slot: 40
+    amount: 13
+    priority: 3
+    display_name: '&#C68649&l▎ &#C68649Nivel excavador &f#13'
+    lore:
+      - '&8Botón interactivo'
+      - ''
+      - '&8¿Cómo lo consigo?'
+      - ' &8| &fNivel req.: &#C6864913'
+      - ''
+      - ' &8Recompensas:'
+      - ' &f- &8● &a+&l$&a12,500'
+      - ' &f- &8● &ax2 Llave Rara'
+      - ' &f- &8● &ax3 Llave Super'
+    left_click_commands:
+      - '[sound] ENTITY_FIREWORK_ROCKET_BLAST'
+      - '[message] &a✔ &fHas reclamado el nivel 13.'
+      - '[console] lp user %player_name% permission set trabajo.excavador.rank13'
+      - '[console] eco give %player_name% 12500'
+      - '[console] crate key give %player_name% rara 2'
+      - '[console] crate key give %player_name% vote 3'
+      - '[refresh]'
+    left_click_requirement:
+      requirements:
+        nivel:
+          type: string equals
+          input: '%math_0:0_{jobsr_user_jlevel_excavador}>=13%'
+          output: '1'
+    view_requirement:
+      requirements:
+        nivel:
+          type: string equals
+          input: '%math_0:0_{jobsr_user_jlevel_excavador}>=13%'
+          output: '1'
+
+  'Rank14-Reclamado':
+    material: LIME_STAINED_GLASS_PANE
+    slot: 31
+    amount: 14
+    priority: 1
+    display_name: '&#49D96A&l▎ &#49D96ANivel excavador &f#14'
+    lore:
+      - '&8Botón interactivo'
+      - ''
+      - '&7 ¡Buen trabajo!'
+      - '&7 Sigue asi para ganar'
+      - '&7 mejores recompensas'
+      - ''
+    view_requirement:
+      requirements:
+        permiso:
+          type: has permission
+          permission: trabajo.excavador.rank14
+
+  'Rank14-NoDisponible':
+    material: RED_STAINED_GLASS_PANE
+    slot: 31
+    amount: 14
+    priority: 2
+    display_name: '&#C68649&l▎ &#C68649Nivel excavador &f#14'
+    lore:
+      - '&8Botón interactivo'
+      - ''
+      - '&8¿Cómo lo consigo?'
+      - ' &8| &fNivel req.: &#C6864914'
+      - ''
+      - ' &8Recompensas:'
+      - ' &f- &8● &a+&l$&a15,000'
+      - ' &f- &8● &ax2 Llave Rara'
+      - ' &f- &8● &ax3 Llave Super'
+    left_click_commands:
+      - '[message] &#FFF000&lTHUNDERMC &c✘ Oof, Necesitas un nivel más alto para reclamar esta recompensa.'
+    view_requirement:
+      requirements:
+        nivel:
+          type: string equals
+          input: '%math_0:0_{jobsr_user_jlevel_excavador}>=14%'
+          output: '0'
+
+  'Rank14-Disponible':
+    material: YELLOW_STAINED_GLASS_PANE
+    slot: 31
+    amount: 14
+    priority: 3
+    display_name: '&#C68649&l▎ &#C68649Nivel excavador &f#14'
+    lore:
+      - '&8Botón interactivo'
+      - ''
+      - '&8¿Cómo lo consigo?'
+      - ' &8| &fNivel req.: &#C6864914'
+      - ''
+      - ' &8Recompensas:'
+      - ' &f- &8● &a+&l$&a15,000'
+      - ' &f- &8● &ax2 Llave Rara'
+      - ' &f- &8● &ax3 Llave Super'
+    left_click_commands:
+      - '[sound] ENTITY_FIREWORK_ROCKET_BLAST'
+      - '[message] &a✔ &fHas reclamado el nivel 14.'
+      - '[console] lp user %player_name% permission set trabajo.excavador.rank14'
+      - '[console] eco give %player_name% 15000'
+      - '[console] crate key give %player_name% rara 2'
+      - '[console] crate key give %player_name% vote 3'
+      - '[refresh]'
+    left_click_requirement:
+      requirements:
+        nivel:
+          type: string equals
+          input: '%math_0:0_{jobsr_user_jlevel_excavador}>=14%'
+          output: '1'
+    view_requirement:
+      requirements:
+        nivel:
+          type: string equals
+          input: '%math_0:0_{jobsr_user_jlevel_excavador}>=14%'
+          output: '1'
+
+  'Rank15-Reclamado':
+    material: LIME_STAINED_GLASS_PANE
+    slot: 22
+    amount: 15
+    priority: 1
+    display_name: '&#49D96A&l▎ &#49D96ANivel excavador &f#15'
+    lore:
+      - '&8Botón interactivo'
+      - ''
+      - '&7 ¡Buen trabajo!'
+      - '&7 Sigue asi para ganar'
+      - '&7 mejores recompensas'
+      - ''
+    view_requirement:
+      requirements:
+        permiso:
+          type: has permission
+          permission: trabajo.excavador.rank15
+
+  'Rank15-NoDisponible':
+    material: RED_STAINED_GLASS_PANE
+    slot: 22
+    amount: 15
+    priority: 2
+    display_name: '&#C68649&l▎ &#C68649Nivel excavador &f#15'
+    lore:
+      - '&8Botón interactivo'
+      - ''
+      - '&8¿Cómo lo consigo?'
+      - ' &8| &fNivel req.: &#C6864915'
+      - ''
+      - ' &8Recompensas:'
+      - ' &f- &8● &a+&l$&a20,000'
+      - ' &f- &8● &ax3 Llave Rara'
+      - ' &f- &8● &ax3 Llave Super'
+    left_click_commands:
+      - '[message] &#FFF000&lTHUNDERMC &c✘ Oof, Necesitas un nivel más alto para reclamar esta recompensa.'
+    view_requirement:
+      requirements:
+        nivel:
+          type: string equals
+          input: '%math_0:0_{jobsr_user_jlevel_excavador}>=15%'
+          output: '0'
+
+  'Rank15-Disponible':
+    material: YELLOW_STAINED_GLASS_PANE
+    slot: 22
+    amount: 15
+    priority: 3
+    display_name: '&#C68649&l▎ &#C68649Nivel excavador &f#15'
+    lore:
+      - '&8Botón interactivo'
+      - ''
+      - '&8¿Cómo lo consigo?'
+      - ' &8| &fNivel req.: &#C6864915'
+      - ''
+      - ' &8Recompensas:'
+      - ' &f- &8● &a+&l$&a20,000'
+      - ' &f- &8● &ax3 Llave Rara'
+      - ' &f- &8● &ax3 Llave Super'
+    left_click_commands:
+      - '[sound] ENTITY_FIREWORK_ROCKET_BLAST'
+      - '[message] &a✔ &fHas reclamado el nivel 15.'
+      - '[console] lp user %player_name% permission set trabajo.excavador.rank15'
+      - '[console] eco give %player_name% 20000'
+      - '[console] crate key give %player_name% rara 3'
+      - '[console] crate key give %player_name% vote 3'
+      - '[refresh]'
+    left_click_requirement:
+      requirements:
+        nivel:
+          type: string equals
+          input: '%math_0:0_{jobsr_user_jlevel_excavador}>=15%'
+          output: '1'
+    view_requirement:
+      requirements:
+        nivel:
+          type: string equals
+          input: '%math_0:0_{jobsr_user_jlevel_excavador}>=15%'
+          output: '1'
+
+  'Rank16-Reclamado':
+    material: LIME_STAINED_GLASS_PANE
+    slot: 13
+    amount: 16
+    priority: 1
+    display_name: '&#49D96A&l▎ &#49D96ANivel excavador &f#16'
+    lore:
+      - '&8Botón interactivo'
+      - ''
+      - '&7 ¡Buen trabajo!'
+      - '&7 Sigue asi para ganar'
+      - '&7 mejores recompensas'
+      - ''
+    view_requirement:
+      requirements:
+        permiso:
+          type: has permission
+          permission: trabajo.excavador.rank16
+
+  'Rank16-NoDisponible':
+    material: RED_STAINED_GLASS_PANE
+    slot: 13
+    amount: 16
+    priority: 2
+    display_name: '&#C68649&l▎ &#C68649Nivel excavador &f#16'
+    lore:
+      - '&8Botón interactivo'
+      - ''
+      - '&8¿Cómo lo consigo?'
+      - ' &8| &fNivel req.: &#C6864916'
+      - ''
+      - ' &8Recompensas:'
+      - ' &f- &8● &a+&l$&a25,000'
+      - ' &f- &8● &ax3 Llave Rara'
+      - ' &f- &8● &ax3 Llave Super'
+    left_click_commands:
+      - '[message] &#FFF000&lTHUNDERMC &c✘ Oof, Necesitas un nivel más alto para reclamar esta recompensa.'
+    view_requirement:
+      requirements:
+        nivel:
+          type: string equals
+          input: '%math_0:0_{jobsr_user_jlevel_excavador}>=16%'
+          output: '0'
+
+  'Rank16-Disponible':
+    material: YELLOW_STAINED_GLASS_PANE
+    slot: 13
+    amount: 16
+    priority: 3
+    display_name: '&#C68649&l▎ &#C68649Nivel excavador &f#16'
+    lore:
+      - '&8Botón interactivo'
+      - ''
+      - '&8¿Cómo lo consigo?'
+      - ' &8| &fNivel req.: &#C6864916'
+      - ''
+      - ' &8Recompensas:'
+      - ' &f- &8● &a+&l$&a25,000'
+      - ' &f- &8● &ax3 Llave Rara'
+      - ' &f- &8● &ax3 Llave Super'
+    left_click_commands:
+      - '[sound] ENTITY_FIREWORK_ROCKET_BLAST'
+      - '[message] &a✔ &fHas reclamado el nivel 16.'
+      - '[console] lp user %player_name% permission set trabajo.excavador.rank16'
+      - '[console] eco give %player_name% 25000'
+      - '[console] crate key give %player_name% rara 3'
+      - '[console] crate key give %player_name% vote 3'
+      - '[refresh]'
+    left_click_requirement:
+      requirements:
+        nivel:
+          type: string equals
+          input: '%math_0:0_{jobsr_user_jlevel_excavador}>=16%'
+          output: '1'
+    view_requirement:
+      requirements:
+        nivel:
+          type: string equals
+          input: '%math_0:0_{jobsr_user_jlevel_excavador}>=16%'
+          output: '1'
+
+  'Rank17-Reclamado':
+    material: LIME_STAINED_GLASS_PANE
+    slot: 4
+    amount: 17
+    priority: 1
+    display_name: '&#49D96A&l▎ &#49D96ANivel excavador &f#17'
+    lore:
+      - '&8Botón interactivo'
+      - ''
+      - '&7 ¡Buen trabajo!'
+      - '&7 Sigue asi para ganar'
+      - '&7 mejores recompensas'
+      - ''
+    view_requirement:
+      requirements:
+        permiso:
+          type: has permission
+          permission: trabajo.excavador.rank17
+
+  'Rank17-NoDisponible':
+    material: RED_STAINED_GLASS_PANE
+    slot: 4
+    amount: 17
+    priority: 2
+    display_name: '&#C68649&l▎ &#C68649Nivel excavador &f#17'
+    lore:
+      - '&8Botón interactivo'
+      - ''
+      - '&8¿Cómo lo consigo?'
+      - ' &8| &fNivel req.: &#C6864917'
+      - ''
+      - ' &8Recompensas:'
+      - ' &f- &8● &a+&l$&a30,000'
+      - ' &f- &8● &ax3 Llave Rara'
+      - ' &f- &8● &ax4 Llave Super'
+    left_click_commands:
+      - '[message] &#FFF000&lTHUNDERMC &c✘ Oof, Necesitas un nivel más alto para reclamar esta recompensa.'
+    view_requirement:
+      requirements:
+        nivel:
+          type: string equals
+          input: '%math_0:0_{jobsr_user_jlevel_excavador}>=17%'
+          output: '0'
+
+  'Rank17-Disponible':
+    material: YELLOW_STAINED_GLASS_PANE
+    slot: 4
+    amount: 17
+    priority: 3
+    display_name: '&#C68649&l▎ &#C68649Nivel excavador &f#17'
+    lore:
+      - '&8Botón interactivo'
+      - ''
+      - '&8¿Cómo lo consigo?'
+      - ' &8| &fNivel req.: &#C6864917'
+      - ''
+      - ' &8Recompensas:'
+      - ' &f- &8● &a+&l$&a30,000'
+      - ' &f- &8● &ax3 Llave Rara'
+      - ' &f- &8● &ax4 Llave Super'
+    left_click_commands:
+      - '[sound] ENTITY_FIREWORK_ROCKET_BLAST'
+      - '[message] &a✔ &fHas reclamado el nivel 17.'
+      - '[console] lp user %player_name% permission set trabajo.excavador.rank17'
+      - '[console] eco give %player_name% 30000'
+      - '[console] crate key give %player_name% rara 3'
+      - '[console] crate key give %player_name% vote 4'
+      - '[refresh]'
+    left_click_requirement:
+      requirements:
+        nivel:
+          type: string equals
+          input: '%math_0:0_{jobsr_user_jlevel_excavador}>=17%'
+          output: '1'
+    view_requirement:
+      requirements:
+        nivel:
+          type: string equals
+          input: '%math_0:0_{jobsr_user_jlevel_excavador}>=17%'
+          output: '1'
+
+  'Rank18-Reclamado':
+    material: LIME_STAINED_GLASS_PANE
+    slot: 5
+    amount: 18
+    priority: 1
+    display_name: '&#49D96A&l▎ &#49D96ANivel excavador &f#18'
+    lore:
+      - '&8Botón interactivo'
+      - ''
+      - '&7 ¡Buen trabajo!'
+      - '&7 Sigue asi para ganar'
+      - '&7 mejores recompensas'
+      - ''
+    view_requirement:
+      requirements:
+        permiso:
+          type: has permission
+          permission: trabajo.excavador.rank18
+
+  'Rank18-NoDisponible':
+    material: RED_STAINED_GLASS_PANE
+    slot: 5
+    amount: 18
+    priority: 2
+    display_name: '&#C68649&l▎ &#C68649Nivel excavador &f#18'
+    lore:
+      - '&8Botón interactivo'
+      - ''
+      - '&8¿Cómo lo consigo?'
+      - ' &8| &fNivel req.: &#C6864918'
+      - ''
+      - ' &8Recompensas:'
+      - ' &f- &8● &a+&l$&a35,000'
+      - ' &f- &8● &ax3 Llave Rara'
+      - ' &f- &8● &ax4 Llave Super'
+    left_click_commands:
+      - '[message] &#FFF000&lTHUNDERMC &c✘ Oof, Necesitas un nivel más alto para reclamar esta recompensa.'
+    view_requirement:
+      requirements:
+        nivel:
+          type: string equals
+          input: '%math_0:0_{jobsr_user_jlevel_excavador}>=18%'
+          output: '0'
+
+  'Rank18-Disponible':
+    material: YELLOW_STAINED_GLASS_PANE
+    slot: 5
+    amount: 18
+    priority: 3
+    display_name: '&#C68649&l▎ &#C68649Nivel excavador &f#18'
+    lore:
+      - '&8Botón interactivo'
+      - ''
+      - '&8¿Cómo lo consigo?'
+      - ' &8| &fNivel req.: &#C6864918'
+      - ''
+      - ' &8Recompensas:'
+      - ' &f- &8● &a+&l$&a35,000'
+      - ' &f- &8● &ax3 Llave Rara'
+      - ' &f- &8● &ax4 Llave Super'
+    left_click_commands:
+      - '[sound] ENTITY_FIREWORK_ROCKET_BLAST'
+      - '[message] &a✔ &fHas reclamado el nivel 18.'
+      - '[console] lp user %player_name% permission set trabajo.excavador.rank18'
+      - '[console] eco give %player_name% 35000'
+      - '[console] crate key give %player_name% rara 3'
+      - '[console] crate key give %player_name% vote 4'
+      - '[refresh]'
+    left_click_requirement:
+      requirements:
+        nivel:
+          type: string equals
+          input: '%math_0:0_{jobsr_user_jlevel_excavador}>=18%'
+          output: '1'
+    view_requirement:
+      requirements:
+        nivel:
+          type: string equals
+          input: '%math_0:0_{jobsr_user_jlevel_excavador}>=18%'
+          output: '1'
+
+  'Rank19-Reclamado':
+    material: LIME_STAINED_GLASS_PANE
+    slot: 6
+    amount: 19
+    priority: 1
+    display_name: '&#49D96A&l▎ &#49D96ANivel excavador &f#19'
+    lore:
+      - '&8Botón interactivo'
+      - ''
+      - '&7 ¡Buen trabajo!'
+      - '&7 Sigue asi para ganar'
+      - '&7 mejores recompensas'
+      - ''
+    view_requirement:
+      requirements:
+        permiso:
+          type: has permission
+          permission: trabajo.excavador.rank19
+
+  'Rank19-NoDisponible':
+    material: RED_STAINED_GLASS_PANE
+    slot: 6
+    amount: 19
+    priority: 2
+    display_name: '&#C68649&l▎ &#C68649Nivel excavador &f#19'
+    lore:
+      - '&8Botón interactivo'
+      - ''
+      - '&8¿Cómo lo consigo?'
+      - ' &8| &fNivel req.: &#C6864919'
+      - ''
+      - ' &8Recompensas:'
+      - ' &f- &8● &a+&l$&a40,000'
+      - ' &f- &8● &ax3 Llave Rara'
+      - ' &f- &8● &ax4 Llave Super'
+    left_click_commands:
+      - '[message] &#FFF000&lTHUNDERMC &c✘ Oof, Necesitas un nivel más alto para reclamar esta recompensa.'
+    view_requirement:
+      requirements:
+        nivel:
+          type: string equals
+          input: '%math_0:0_{jobsr_user_jlevel_excavador}>=19%'
+          output: '0'
+
+  'Rank19-Disponible':
+    material: YELLOW_STAINED_GLASS_PANE
+    slot: 6
+    amount: 19
+    priority: 3
+    display_name: '&#C68649&l▎ &#C68649Nivel excavador &f#19'
+    lore:
+      - '&8Botón interactivo'
+      - ''
+      - '&8¿Cómo lo consigo?'
+      - ' &8| &fNivel req.: &#C6864919'
+      - ''
+      - ' &8Recompensas:'
+      - ' &f- &8● &a+&l$&a40,000'
+      - ' &f- &8● &ax3 Llave Rara'
+      - ' &f- &8● &ax4 Llave Super'
+    left_click_commands:
+      - '[sound] ENTITY_FIREWORK_ROCKET_BLAST'
+      - '[message] &a✔ &fHas reclamado el nivel 19.'
+      - '[console] lp user %player_name% permission set trabajo.excavador.rank19'
+      - '[console] eco give %player_name% 40000'
+      - '[console] crate key give %player_name% rara 3'
+      - '[console] crate key give %player_name% vote 4'
+      - '[refresh]'
+    left_click_requirement:
+      requirements:
+        nivel:
+          type: string equals
+          input: '%math_0:0_{jobsr_user_jlevel_excavador}>=19%'
+          output: '1'
+    view_requirement:
+      requirements:
+        nivel:
+          type: string equals
+          input: '%math_0:0_{jobsr_user_jlevel_excavador}>=19%'
+          output: '1'
+
+  'Rank20-Reclamado':
+    material: LIME_STAINED_GLASS_PANE
+    slot: 15
+    amount: 20
+    priority: 1
+    display_name: '&#49D96A&l▎ &#49D96ANivel excavador &f#20'
+    lore:
+      - '&8Botón interactivo'
+      - ''
+      - '&7 ¡Buen trabajo!'
+      - '&7 Sigue asi para ganar'
+      - '&7 mejores recompensas'
+      - ''
+    view_requirement:
+      requirements:
+        permiso:
+          type: has permission
+          permission: trabajo.excavador.rank20
+
+  'Rank20-NoDisponible':
+    material: RED_STAINED_GLASS_PANE
+    slot: 15
+    amount: 20
+    priority: 2
+    display_name: '&#C68649&l▎ &#C68649Nivel excavador &f#20'
+    lore:
+      - '&8Botón interactivo'
+      - ''
+      - '&8¿Cómo lo consigo?'
+      - ' &8| &fNivel req.: &#C6864920'
+      - ''
+      - ' &8Recompensas:'
+      - ' &f- &8● &a+&l$&a45,000'
+      - ' &f- &8● &ax3 Llave Rara'
+      - ' &f- &8● &ax4 Llave Super'
+    left_click_commands:
+      - '[message] &#FFF000&lTHUNDERMC &c✘ Oof, Necesitas un nivel más alto para reclamar esta recompensa.'
+    view_requirement:
+      requirements:
+        nivel:
+          type: string equals
+          input: '%math_0:0_{jobsr_user_jlevel_excavador}>=20%'
+          output: '0'
+
+  'Rank20-Disponible':
+    material: YELLOW_STAINED_GLASS_PANE
+    slot: 15
+    amount: 20
+    priority: 3
+    display_name: '&#C68649&l▎ &#C68649Nivel excavador &f#20'
+    lore:
+      - '&8Botón interactivo'
+      - ''
+      - '&8¿Cómo lo consigo?'
+      - ' &8| &fNivel req.: &#C6864920'
+      - ''
+      - ' &8Recompensas:'
+      - ' &f- &8● &a+&l$&a45,000'
+      - ' &f- &8● &ax3 Llave Rara'
+      - ' &f- &8● &ax4 Llave Super'
+    left_click_commands:
+      - '[sound] ENTITY_FIREWORK_ROCKET_BLAST'
+      - '[message] &a✔ &fHas reclamado el nivel 20.'
+      - '[console] lp user %player_name% permission set trabajo.excavador.rank20'
+      - '[console] eco give %player_name% 45000'
+      - '[console] crate key give %player_name% rara 3'
+      - '[console] crate key give %player_name% vote 4'
+      - '[refresh]'
+    left_click_requirement:
+      requirements:
+        nivel:
+          type: string equals
+          input: '%math_0:0_{jobsr_user_jlevel_excavador}>=20%'
+          output: '1'
+    view_requirement:
+      requirements:
+        nivel:
+          type: string equals
+          input: '%math_0:0_{jobsr_user_jlevel_excavador}>=20%'
+          output: '1'
+
+  'Rank21-Reclamado':
+    material: LIME_STAINED_GLASS_PANE
+    slot: 24
+    amount: 21
+    priority: 1
+    display_name: '&#49D96A&l▎ &#49D96ANivel excavador &f#21'
+    lore:
+      - '&8Botón interactivo'
+      - ''
+      - '&7 ¡Buen trabajo!'
+      - '&7 Sigue asi para ganar'
+      - '&7 mejores recompensas'
+      - ''
+    view_requirement:
+      requirements:
+        permiso:
+          type: has permission
+          permission: trabajo.excavador.rank21
+
+  'Rank21-NoDisponible':
+    material: RED_STAINED_GLASS_PANE
+    slot: 24
+    amount: 21
+    priority: 2
+    display_name: '&#C68649&l▎ &#C68649Nivel excavador &f#21'
+    lore:
+      - '&8Botón interactivo'
+      - ''
+      - '&8¿Cómo lo consigo?'
+      - ' &8| &fNivel req.: &#C6864921'
+      - ''
+      - ' &8Recompensas:'
+      - ' &f- &8● &a+&l$&a50,000'
+      - ' &f- &8● &ax4 Llave Rara'
+      - ' &f- &8● &ax4 Llave Super'
+    left_click_commands:
+      - '[message] &#FFF000&lTHUNDERMC &c✘ Oof, Necesitas un nivel más alto para reclamar esta recompensa.'
+    view_requirement:
+      requirements:
+        nivel:
+          type: string equals
+          input: '%math_0:0_{jobsr_user_jlevel_excavador}>=21%'
+          output: '0'
+
+  'Rank21-Disponible':
+    material: YELLOW_STAINED_GLASS_PANE
+    slot: 24
+    amount: 21
+    priority: 3
+    display_name: '&#C68649&l▎ &#C68649Nivel excavador &f#21'
+    lore:
+      - '&8Botón interactivo'
+      - ''
+      - '&8¿Cómo lo consigo?'
+      - ' &8| &fNivel req.: &#C6864921'
+      - ''
+      - ' &8Recompensas:'
+      - ' &f- &8● &a+&l$&a50,000'
+      - ' &f- &8● &ax4 Llave Rara'
+      - ' &f- &8● &ax4 Llave Super'
+    left_click_commands:
+      - '[sound] ENTITY_FIREWORK_ROCKET_BLAST'
+      - '[message] &a✔ &fHas reclamado el nivel 21.'
+      - '[console] lp user %player_name% permission set trabajo.excavador.rank21'
+      - '[console] eco give %player_name% 50000'
+      - '[console] crate key give %player_name% rara 4'
+      - '[console] crate key give %player_name% vote 4'
+      - '[refresh]'
+    left_click_requirement:
+      requirements:
+        nivel:
+          type: string equals
+          input: '%math_0:0_{jobsr_user_jlevel_excavador}>=21%'
+          output: '1'
+    view_requirement:
+      requirements:
+        nivel:
+          type: string equals
+          input: '%math_0:0_{jobsr_user_jlevel_excavador}>=21%'
+          output: '1'
+
+  'Rank22-Reclamado':
+    material: LIME_STAINED_GLASS_PANE
+    slot: 33
+    amount: 22
+    priority: 1
+    display_name: '&#49D96A&l▎ &#49D96ANivel excavador &f#22'
+    lore:
+      - '&8Botón interactivo'
+      - ''
+      - '&7 ¡Buen trabajo!'
+      - '&7 Sigue asi para ganar'
+      - '&7 mejores recompensas'
+      - ''
+    view_requirement:
+      requirements:
+        permiso:
+          type: has permission
+          permission: trabajo.excavador.rank22
+
+  'Rank22-NoDisponible':
+    material: RED_STAINED_GLASS_PANE
+    slot: 33
+    amount: 22
+    priority: 2
+    display_name: '&#C68649&l▎ &#C68649Nivel excavador &f#22'
+    lore:
+      - '&8Botón interactivo'
+      - ''
+      - '&8¿Cómo lo consigo?'
+      - ' &8| &fNivel req.: &#C6864922'
+      - ''
+      - ' &8Recompensas:'
+      - ' &f- &8● &a+&l$&a55,000'
+      - ' &f- &8● &ax4 Llave Rara'
+      - ' &f- &8● &ax4 Llave Super'
+    left_click_commands:
+      - '[message] &#FFF000&lTHUNDERMC &c✘ Oof, Necesitas un nivel más alto para reclamar esta recompensa.'
+    view_requirement:
+      requirements:
+        nivel:
+          type: string equals
+          input: '%math_0:0_{jobsr_user_jlevel_excavador}>=22%'
+          output: '0'
+
+  'Rank22-Disponible':
+    material: YELLOW_STAINED_GLASS_PANE
+    slot: 33
+    amount: 22
+    priority: 3
+    display_name: '&#C68649&l▎ &#C68649Nivel excavador &f#22'
+    lore:
+      - '&8Botón interactivo'
+      - ''
+      - '&8¿Cómo lo consigo?'
+      - ' &8| &fNivel req.: &#C6864922'
+      - ''
+      - ' &8Recompensas:'
+      - ' &f- &8● &a+&l$&a55,000'
+      - ' &f- &8● &ax4 Llave Rara'
+      - ' &f- &8● &ax4 Llave Super'
+    left_click_commands:
+      - '[sound] ENTITY_FIREWORK_ROCKET_BLAST'
+      - '[message] &a✔ &fHas reclamado el nivel 22.'
+      - '[console] lp user %player_name% permission set trabajo.excavador.rank22'
+      - '[console] eco give %player_name% 55000'
+      - '[console] crate key give %player_name% rara 4'
+      - '[console] crate key give %player_name% vote 4'
+      - '[refresh]'
+    left_click_requirement:
+      requirements:
+        nivel:
+          type: string equals
+          input: '%math_0:0_{jobsr_user_jlevel_excavador}>=22%'
+          output: '1'
+    view_requirement:
+      requirements:
+        nivel:
+          type: string equals
+          input: '%math_0:0_{jobsr_user_jlevel_excavador}>=22%'
+          output: '1'
+
+  'Rank23-Reclamado':
+    material: LIME_STAINED_GLASS_PANE
+    slot: 42
+    amount: 23
+    priority: 1
+    display_name: '&#49D96A&l▎ &#49D96ANivel excavador &f#23'
+    lore:
+      - '&8Botón interactivo'
+      - ''
+      - '&7 ¡Buen trabajo!'
+      - '&7 Sigue asi para ganar'
+      - '&7 mejores recompensas'
+      - ''
+    view_requirement:
+      requirements:
+        permiso:
+          type: has permission
+          permission: trabajo.excavador.rank23
+
+  'Rank23-NoDisponible':
+    material: RED_STAINED_GLASS_PANE
+    slot: 42
+    amount: 23
+    priority: 2
+    display_name: '&#C68649&l▎ &#C68649Nivel excavador &f#23'
+    lore:
+      - '&8Botón interactivo'
+      - ''
+      - '&8¿Cómo lo consigo?'
+      - ' &8| &fNivel req.: &#C6864923'
+      - ''
+      - ' &8Recompensas:'
+      - ' &f- &8● &a+&l$&a60,000'
+      - ' &f- &8● &ax4 Llave Rara'
+      - ' &f- &8● &ax4 Llave Super'
+    left_click_commands:
+      - '[message] &#FFF000&lTHUNDERMC &c✘ Oof, Necesitas un nivel más alto para reclamar esta recompensa.'
+    view_requirement:
+      requirements:
+        nivel:
+          type: string equals
+          input: '%math_0:0_{jobsr_user_jlevel_excavador}>=23%'
+          output: '0'
+
+  'Rank23-Disponible':
+    material: YELLOW_STAINED_GLASS_PANE
+    slot: 42
+    amount: 23
+    priority: 3
+    display_name: '&#C68649&l▎ &#C68649Nivel excavador &f#23'
+    lore:
+      - '&8Botón interactivo'
+      - ''
+      - '&8¿Cómo lo consigo?'
+      - ' &8| &fNivel req.: &#C6864923'
+      - ''
+      - ' &8Recompensas:'
+      - ' &f- &8● &a+&l$&a60,000'
+      - ' &f- &8● &ax4 Llave Rara'
+      - ' &f- &8● &ax4 Llave Super'
+    left_click_commands:
+      - '[sound] ENTITY_FIREWORK_ROCKET_BLAST'
+      - '[message] &a✔ &fHas reclamado el nivel 23.'
+      - '[console] lp user %player_name% permission set trabajo.excavador.rank23'
+      - '[console] eco give %player_name% 60000'
+      - '[console] crate key give %player_name% rara 4'
+      - '[console] crate key give %player_name% vote 4'
+      - '[refresh]'
+    left_click_requirement:
+      requirements:
+        nivel:
+          type: string equals
+          input: '%math_0:0_{jobsr_user_jlevel_excavador}>=23%'
+          output: '1'
+    view_requirement:
+      requirements:
+        nivel:
+          type: string equals
+          input: '%math_0:0_{jobsr_user_jlevel_excavador}>=23%'
+          output: '1'
+
+  'Rank24-Reclamado':
+    material: LIME_STAINED_GLASS_PANE
+    slot: 51
+    amount: 24
+    priority: 1
+    display_name: '&#49D96A&l▎ &#49D96ANivel excavador &f#24'
+    lore:
+      - '&8Botón interactivo'
+      - ''
+      - '&7 ¡Buen trabajo!'
+      - '&7 Sigue asi para ganar'
+      - '&7 mejores recompensas'
+      - ''
+    view_requirement:
+      requirements:
+        permiso:
+          type: has permission
+          permission: trabajo.excavador.rank24
+
+  'Rank24-NoDisponible':
+    material: RED_STAINED_GLASS_PANE
+    slot: 51
+    amount: 24
+    priority: 2
+    display_name: '&#C68649&l▎ &#C68649Nivel excavador &f#24'
+    lore:
+      - '&8Botón interactivo'
+      - ''
+      - '&8¿Cómo lo consigo?'
+      - ' &8| &fNivel req.: &#C6864924'
+      - ''
+      - ' &8Recompensas:'
+      - ' &f- &8● &a+&l$&a65,000'
+      - ' &f- &8● &ax4 Llave Rara'
+      - ' &f- &8● &ax4 Llave Super'
+    left_click_commands:
+      - '[message] &#FFF000&lTHUNDERMC &c✘ Oof, Necesitas un nivel más alto para reclamar esta recompensa.'
+    view_requirement:
+      requirements:
+        nivel:
+          type: string equals
+          input: '%math_0:0_{jobsr_user_jlevel_excavador}>=24%'
+          output: '0'
+
+  'Rank24-Disponible':
+    material: YELLOW_STAINED_GLASS_PANE
+    slot: 51
+    amount: 24
+    priority: 3
+    display_name: '&#C68649&l▎ &#C68649Nivel excavador &f#24'
+    lore:
+      - '&8Botón interactivo'
+      - ''
+      - '&8¿Cómo lo consigo?'
+      - ' &8| &fNivel req.: &#C6864924'
+      - ''
+      - ' &8Recompensas:'
+      - ' &f- &8● &a+&l$&a65,000'
+      - ' &f- &8● &ax4 Llave Rara'
+      - ' &f- &8● &ax4 Llave Super'
+    left_click_commands:
+      - '[sound] ENTITY_FIREWORK_ROCKET_BLAST'
+      - '[message] &a✔ &fHas reclamado el nivel 24.'
+      - '[console] lp user %player_name% permission set trabajo.excavador.rank24'
+      - '[console] eco give %player_name% 65000'
+      - '[console] crate key give %player_name% rara 4'
+      - '[console] crate key give %player_name% vote 4'
+      - '[refresh]'
+    left_click_requirement:
+      requirements:
+        nivel:
+          type: string equals
+          input: '%math_0:0_{jobsr_user_jlevel_excavador}>=24%'
+          output: '1'
+    view_requirement:
+      requirements:
+        nivel:
+          type: string equals
+          input: '%math_0:0_{jobsr_user_jlevel_excavador}>=24%'
+          output: '1'
+
+  'Rank25-Reclamado':
+    material: LIME_STAINED_GLASS_PANE
+    slot: 52
+    amount: 25
+    priority: 1
+    display_name: '&#49D96A&l▎ &#49D96ANivel excavador &f#25'
+    lore:
+      - '&8Botón interactivo'
+      - ''
+      - '&7 ¡Buen trabajo!'
+      - '&7 Sigue asi para ganar'
+      - '&7 mejores recompensas'
+      - ''
+    view_requirement:
+      requirements:
+        permiso:
+          type: has permission
+          permission: trabajo.excavador.rank25
+
+  'Rank25-NoDisponible':
+    material: RED_STAINED_GLASS_PANE
+    slot: 52
+    amount: 25
+    priority: 2
+    display_name: '&#C68649&l▎ &#C68649Nivel excavador &f#25'
+    lore:
+      - '&8Botón interactivo'
+      - ''
+      - '&8¿Cómo lo consigo?'
+      - ' &8| &fNivel req.: &#C6864925'
+      - ''
+      - ' &8Recompensas:'
+      - ' &f- &8● &a+&l$&a70,000'
+      - ' &f- &8● &ax4 Llave Rara'
+      - ' &f- &8● &ax5 Llave Super'
+    left_click_commands:
+      - '[message] &#FFF000&lTHUNDERMC &c✘ Oof, Necesitas un nivel más alto para reclamar esta recompensa.'
+    view_requirement:
+      requirements:
+        nivel:
+          type: string equals
+          input: '%math_0:0_{jobsr_user_jlevel_excavador}>=25%'
+          output: '0'
+
+  'Rank25-Disponible':
+    material: YELLOW_STAINED_GLASS_PANE
+    slot: 52
+    amount: 25
+    priority: 3
+    display_name: '&#C68649&l▎ &#C68649Nivel excavador &f#25'
+    lore:
+      - '&8Botón interactivo'
+      - ''
+      - '&8¿Cómo lo consigo?'
+      - ' &8| &fNivel req.: &#C6864925'
+      - ''
+      - ' &8Recompensas:'
+      - ' &f- &8● &a+&l$&a70,000'
+      - ' &f- &8● &ax4 Llave Rara'
+      - ' &f- &8● &ax5 Llave Super'
+    left_click_commands:
+      - '[sound] ENTITY_FIREWORK_ROCKET_BLAST'
+      - '[message] &a✔ &fHas reclamado el nivel 25.'
+      - '[console] lp user %player_name% permission set trabajo.excavador.rank25'
+      - '[console] eco give %player_name% 70000'
+      - '[console] crate key give %player_name% rara 4'
+      - '[console] crate key give %player_name% vote 5'
+      - '[refresh]'
+    left_click_requirement:
+      requirements:
+        nivel:
+          type: string equals
+          input: '%math_0:0_{jobsr_user_jlevel_excavador}>=25%'
+          output: '1'
+    view_requirement:
+      requirements:
+        nivel:
+          type: string equals
+          input: '%math_0:0_{jobsr_user_jlevel_excavador}>=25%'
+          output: '1'
+
+  'Rank26-Reclamado':
+    material: LIME_STAINED_GLASS_PANE
+    slot: 53
+    amount: 26
+    priority: 1
+    display_name: '&#49D96A&l▎ &#49D96ANivel excavador &f#26'
+    lore:
+      - '&8Botón interactivo'
+      - ''
+      - '&7 ¡Buen trabajo!'
+      - '&7 Sigue asi para ganar'
+      - '&7 mejores recompensas'
+      - ''
+    view_requirement:
+      requirements:
+        permiso:
+          type: has permission
+          permission: trabajo.excavador.rank26
+
+  'Rank26-NoDisponible':
+    material: RED_STAINED_GLASS_PANE
+    slot: 53
+    amount: 26
+    priority: 2
+    display_name: '&#C68649&l▎ &#C68649Nivel excavador &f#26'
+    lore:
+      - '&8Botón interactivo'
+      - ''
+      - '&8¿Cómo lo consigo?'
+      - ' &8| &fNivel req.: &#C6864926'
+      - ''
+      - ' &8Recompensas:'
+      - ' &f- &8● &a+&l$&a75,000'
+      - ' &f- &8● &ax4 Llave Rara'
+      - ' &f- &8● &ax5 Llave Super'
+    left_click_commands:
+      - '[message] &#FFF000&lTHUNDERMC &c✘ Oof, Necesitas un nivel más alto para reclamar esta recompensa.'
+    view_requirement:
+      requirements:
+        nivel:
+          type: string equals
+          input: '%math_0:0_{jobsr_user_jlevel_excavador}>=26%'
+          output: '0'
+
+  'Rank26-Disponible':
+    material: YELLOW_STAINED_GLASS_PANE
+    slot: 53
+    amount: 26
+    priority: 3
+    display_name: '&#C68649&l▎ &#C68649Nivel excavador &f#26'
+    lore:
+      - '&8Botón interactivo'
+      - ''
+      - '&8¿Cómo lo consigo?'
+      - ' &8| &fNivel req.: &#C6864926'
+      - ''
+      - ' &8Recompensas:'
+      - ' &f- &8● &a+&l$&a75,000'
+      - ' &f- &8● &ax4 Llave Rara'
+      - ' &f- &8● &ax5 Llave Super'
+    left_click_commands:
+      - '[sound] ENTITY_FIREWORK_ROCKET_BLAST'
+      - '[message] &a✔ &fHas reclamado el nivel 26.'
+      - '[console] lp user %player_name% permission set trabajo.excavador.rank26'
+      - '[console] eco give %player_name% 75000'
+      - '[console] crate key give %player_name% rara 4'
+      - '[console] crate key give %player_name% vote 5'
+      - '[refresh]'
+    left_click_requirement:
+      requirements:
+        nivel:
+          type: string equals
+          input: '%math_0:0_{jobsr_user_jlevel_excavador}>=26%'
+          output: '1'
+    view_requirement:
+      requirements:
+        nivel:
+          type: string equals
+          input: '%math_0:0_{jobsr_user_jlevel_excavador}>=26%'
+          output: '1'
+
+  'Rank27-Reclamado':
+    material: LIME_STAINED_GLASS_PANE
+    slot: 44
+    amount: 27
+    priority: 1
+    display_name: '&#49D96A&l▎ &#49D96ANivel excavador &f#27'
+    lore:
+      - '&8Botón interactivo'
+      - ''
+      - '&7 ¡Buen trabajo!'
+      - '&7 Sigue asi para ganar'
+      - '&7 mejores recompensas'
+      - ''
+    view_requirement:
+      requirements:
+        permiso:
+          type: has permission
+          permission: trabajo.excavador.rank27
+
+  'Rank27-NoDisponible':
+    material: RED_STAINED_GLASS_PANE
+    slot: 44
+    amount: 27
+    priority: 2
+    display_name: '&#C68649&l▎ &#C68649Nivel excavador &f#27'
+    lore:
+      - '&8Botón interactivo'
+      - ''
+      - '&8¿Cómo lo consigo?'
+      - ' &8| &fNivel req.: &#C6864927'
+      - ''
+      - ' &8Recompensas:'
+      - ' &f- &8● &a+&l$&a80,000'
+      - ' &f- &8● &ax4 Llave Rara'
+      - ' &f- &8● &ax5 Llave Super'
+    left_click_commands:
+      - '[message] &#FFF000&lTHUNDERMC &c✘ Oof, Necesitas un nivel más alto para reclamar esta recompensa.'
+    view_requirement:
+      requirements:
+        nivel:
+          type: string equals
+          input: '%math_0:0_{jobsr_user_jlevel_excavador}>=27%'
+          output: '0'
+
+  'Rank27-Disponible':
+    material: YELLOW_STAINED_GLASS_PANE
+    slot: 44
+    amount: 27
+    priority: 3
+    display_name: '&#C68649&l▎ &#C68649Nivel excavador &f#27'
+    lore:
+      - '&8Botón interactivo'
+      - ''
+      - '&8¿Cómo lo consigo?'
+      - ' &8| &fNivel req.: &#C6864927'
+      - ''
+      - ' &8Recompensas:'
+      - ' &f- &8● &a+&l$&a80,000'
+      - ' &f- &8● &ax4 Llave Rara'
+      - ' &f- &8● &ax5 Llave Super'
+    left_click_commands:
+      - '[sound] ENTITY_FIREWORK_ROCKET_BLAST'
+      - '[message] &a✔ &fHas reclamado el nivel 27.'
+      - '[console] lp user %player_name% permission set trabajo.excavador.rank27'
+      - '[console] eco give %player_name% 80000'
+      - '[console] crate key give %player_name% rara 4'
+      - '[console] crate key give %player_name% vote 5'
+      - '[refresh]'
+    left_click_requirement:
+      requirements:
+        nivel:
+          type: string equals
+          input: '%math_0:0_{jobsr_user_jlevel_excavador}>=27%'
+          output: '1'
+    view_requirement:
+      requirements:
+        nivel:
+          type: string equals
+          input: '%math_0:0_{jobsr_user_jlevel_excavador}>=27%'
+          output: '1'
+
+  'Rank28-Reclamado':
+    material: LIME_STAINED_GLASS_PANE
+    slot: 35
+    amount: 28
+    priority: 1
+    display_name: '&#49D96A&l▎ &#49D96ANivel excavador &f#28'
+    lore:
+      - '&8Botón interactivo'
+      - ''
+      - '&7 ¡Buen trabajo!'
+      - '&7 Sigue asi para ganar'
+      - '&7 mejores recompensas'
+      - ''
+    view_requirement:
+      requirements:
+        permiso:
+          type: has permission
+          permission: trabajo.excavador.rank28
+
+  'Rank28-NoDisponible':
+    material: RED_STAINED_GLASS_PANE
+    slot: 35
+    amount: 28
+    priority: 2
+    display_name: '&#C68649&l▎ &#C68649Nivel excavador &f#28'
+    lore:
+      - '&8Botón interactivo'
+      - ''
+      - '&8¿Cómo lo consigo?'
+      - ' &8| &fNivel req.: &#C6864928'
+      - ''
+      - ' &8Recompensas:'
+      - ' &f- &8● &a+&l$&a85,000'
+      - ' &f- &8● &ax4 Llave Rara'
+      - ' &f- &8● &ax5 Llave Super'
+    left_click_commands:
+      - '[message] &#FFF000&lTHUNDERMC &c✘ Oof, Necesitas un nivel más alto para reclamar esta recompensa.'
+    view_requirement:
+      requirements:
+        nivel:
+          type: string equals
+          input: '%math_0:0_{jobsr_user_jlevel_excavador}>=28%'
+          output: '0'
+
+  'Rank28-Disponible':
+    material: YELLOW_STAINED_GLASS_PANE
+    slot: 35
+    amount: 28
+    priority: 3
+    display_name: '&#C68649&l▎ &#C68649Nivel excavador &f#28'
+    lore:
+      - '&8Botón interactivo'
+      - ''
+      - '&8¿Cómo lo consigo?'
+      - ' &8| &fNivel req.: &#C6864928'
+      - ''
+      - ' &8Recompensas:'
+      - ' &f- &8● &a+&l$&a85,000'
+      - ' &f- &8● &ax4 Llave Rara'
+      - ' &f- &8● &ax5 Llave Super'
+    left_click_commands:
+      - '[sound] ENTITY_FIREWORK_ROCKET_BLAST'
+      - '[message] &a✔ &fHas reclamado el nivel 28.'
+      - '[console] lp user %player_name% permission set trabajo.excavador.rank28'
+      - '[console] eco give %player_name% 85000'
+      - '[console] crate key give %player_name% rara 4'
+      - '[console] crate key give %player_name% vote 5'
+      - '[refresh]'
+    left_click_requirement:
+      requirements:
+        nivel:
+          type: string equals
+          input: '%math_0:0_{jobsr_user_jlevel_excavador}>=28%'
+          output: '1'
+    view_requirement:
+      requirements:
+        nivel:
+          type: string equals
+          input: '%math_0:0_{jobsr_user_jlevel_excavador}>=28%'
+          output: '1'
+
+  'Rank29-Reclamado':
+    material: LIME_STAINED_GLASS_PANE
+    slot: 26
+    amount: 29
+    priority: 1
+    display_name: '&#49D96A&l▎ &#49D96ANivel excavador &f#29'
+    lore:
+      - '&8Botón interactivo'
+      - ''
+      - '&7 ¡Buen trabajo!'
+      - '&7 Sigue asi para ganar'
+      - '&7 mejores recompensas'
+      - ''
+    view_requirement:
+      requirements:
+        permiso:
+          type: has permission
+          permission: trabajo.excavador.rank29
+
+  'Rank29-NoDisponible':
+    material: RED_STAINED_GLASS_PANE
+    slot: 26
+    amount: 29
+    priority: 2
+    display_name: '&#C68649&l▎ &#C68649Nivel excavador &f#29'
+    lore:
+      - '&8Botón interactivo'
+      - ''
+      - '&8¿Cómo lo consigo?'
+      - ' &8| &fNivel req.: &#C6864929'
+      - ''
+      - ' &8Recompensas:'
+      - ' &f- &8● &a+&l$&a90,000'
+      - ' &f- &8● &ax4 Llave Rara'
+      - ' &f- &8● &ax5 Llave Super'
+    left_click_commands:
+      - '[message] &#FFF000&lTHUNDERMC &c✘ Oof, Necesitas un nivel más alto para reclamar esta recompensa.'
+    view_requirement:
+      requirements:
+        nivel:
+          type: string equals
+          input: '%math_0:0_{jobsr_user_jlevel_excavador}>=29%'
+          output: '0'
+
+  'Rank29-Disponible':
+    material: YELLOW_STAINED_GLASS_PANE
+    slot: 26
+    amount: 29
+    priority: 3
+    display_name: '&#C68649&l▎ &#C68649Nivel excavador &f#29'
+    lore:
+      - '&8Botón interactivo'
+      - ''
+      - '&8¿Cómo lo consigo?'
+      - ' &8| &fNivel req.: &#C6864929'
+      - ''
+      - ' &8Recompensas:'
+      - ' &f- &8● &a+&l$&a90,000'
+      - ' &f- &8● &ax4 Llave Rara'
+      - ' &f- &8● &ax5 Llave Super'
+    left_click_commands:
+      - '[sound] ENTITY_FIREWORK_ROCKET_BLAST'
+      - '[message] &a✔ &fHas reclamado el nivel 29.'
+      - '[console] lp user %player_name% permission set trabajo.excavador.rank29'
+      - '[console] eco give %player_name% 90000'
+      - '[console] crate key give %player_name% rara 4'
+      - '[console] crate key give %player_name% vote 5'
+      - '[refresh]'
+    left_click_requirement:
+      requirements:
+        nivel:
+          type: string equals
+          input: '%math_0:0_{jobsr_user_jlevel_excavador}>=29%'
+          output: '1'
+    view_requirement:
+      requirements:
+        nivel:
+          type: string equals
+          input: '%math_0:0_{jobsr_user_jlevel_excavador}>=29%'
+          output: '1'
+
+  'Rank30-Reclamado':
+    material: LIME_STAINED_GLASS_PANE
+    slot: 17
+    amount: 30
+    priority: 1
+    display_name: '&#49D96A&l▎ &#49D96ANivel excavador &f#30'
+    lore:
+      - '&8Botón interactivo'
+      - ''
+      - '&7 ¡Buen trabajo!'
+      - '&7 Sigue asi para ganar'
+      - '&7 mejores recompensas'
+      - ''
+    view_requirement:
+      requirements:
+        permiso:
+          type: has permission
+          permission: trabajo.excavador.rank30
+
+  'Rank30-NoDisponible':
+    material: RED_STAINED_GLASS_PANE
+    slot: 17
+    amount: 30
+    priority: 2
+    display_name: '&#C68649&l▎ &#C68649Nivel excavador &f#30'
+    lore:
+      - '&8Botón interactivo'
+      - ''
+      - '&8¿Cómo lo consigo?'
+      - ' &8| &fNivel req.: &#C6864930'
+      - ''
+      - ' &8Recompensas:'
+      - ' &f- &8● &a+&l$&a100,000'
+      - ' &f- &8● &ax4 Llave Rara'
+      - ' &f- &8● &ax5 Llave Super'
+    left_click_commands:
+      - '[message] &#FFF000&lTHUNDERMC &c✘ Oof, Necesitas un nivel más alto para reclamar esta recompensa.'
+    view_requirement:
+      requirements:
+        nivel:
+          type: string equals
+          input: '%math_0:0_{jobsr_user_jlevel_excavador}>=30%'
+          output: '0'
+
+  'Rank30-Disponible':
+    material: YELLOW_STAINED_GLASS_PANE
+    slot: 17
+    amount: 30
+    priority: 3
+    display_name: '&#C68649&l▎ &#C68649Nivel excavador &f#30'
+    lore:
+      - '&8Botón interactivo'
+      - ''
+      - '&8¿Cómo lo consigo?'
+      - ' &8| &fNivel req.: &#C6864930'
+      - ''
+      - ' &8Recompensas:'
+      - ' &f- &8● &a+&l$&a100,000'
+      - ' &f- &8● &ax4 Llave Rara'
+      - ' &f- &8● &ax5 Llave Super'
+    left_click_commands:
+      - '[sound] ENTITY_FIREWORK_ROCKET_BLAST'
+      - '[message] &a✔ &fHas reclamado el nivel 30.'
+      - '[console] lp user %player_name% permission set trabajo.excavador.rank30'
+      - '[console] eco give %player_name% 100000'
+      - '[console] crate key give %player_name% rara 4'
+      - '[console] crate key give %player_name% vote 5'
+      - '[refresh]'
+    left_click_requirement:
+      requirements:
+        nivel:
+          type: string equals
+          input: '%math_0:0_{jobsr_user_jlevel_excavador}>=30%'
+          output: '1'
+    view_requirement:
+      requirements:
+        nivel:
+          type: string equals
+          input: '%math_0:0_{jobsr_user_jlevel_excavador}>=30%'
+          output: '1'

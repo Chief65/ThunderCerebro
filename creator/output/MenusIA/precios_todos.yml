@@ -1,0 +1,577 @@
+menu_title: '&0&l|&r &0Venta ▶ &8Todos &7(1/2)'
+open_command:
+  - shopvender
+  - preciosvender
+  - precios_todos
+size: 45
+open_requirement:
+  requirements: {}
+register_command: true
+update: true
+
+items:
+  # ============================================================================
+  # FILTRO SUPERIOR: PANELES GRISES DECORATIVOS (FILA 1)
+  # ============================================================================
+  'Filtro_Top':
+    material: GRAY_STAINED_GLASS_PANE
+    display_name: ' '
+    slots:
+      - 0
+      - 1
+      - 2
+      - 3
+      - 4
+      - 5
+      - 6
+      - 7
+      - 8
+
+  # ============================================================================
+  # CATÁLOGO DE ÍTEMS (FILAS 2, 3, 4: SLOTS 9 A 35)
+  # ============================================================================
+  'item_1':
+    material: BAMBOO
+    slot: 9
+    item_flags:
+      - HIDE_ATTRIBUTES
+    display_name: '&#FFF275Bambú'
+    lore:
+      - '&8ᴘʀᴇᴄɪᴏ ᴅᴇ ᴠᴇɴᴛᴀ'
+      - ''
+      - ' &8| &fUnidad: &#59E91F&l$&r&#59E91F1'
+      - ' &8| &fStack x64: &#59E91F&l$&r&#59E91F64'
+      - ''
+
+
+
+
+
+  'item_2':
+    material: BEETROOT
+    slot: 10
+    item_flags:
+      - HIDE_ATTRIBUTES
+    display_name: '&#FFF275Remolacha'
+    lore:
+      - '&8ᴘʀᴇᴄɪᴏ ᴅᴇ ᴠᴇɴᴛᴀ'
+      - ''
+      - ' &8| &fUnidad: &#59E91F&l$&r&#59E91F20'
+      - ' &8| &fStack x64: &#59E91F&l$&r&#59E91F1280'
+      - ''
+
+
+
+
+
+  'item_3':
+    material: BEETROOT_SEEDS
+    slot: 11
+    item_flags:
+      - HIDE_ATTRIBUTES
+    display_name: '&#FFF275Semillas de Remolacha'
+    lore:
+      - '&8ᴘʀᴇᴄɪᴏ ᴅᴇ ᴠᴇɴᴛᴀ'
+      - ''
+      - ' &8| &fUnidad: &#59E91F&l$&r&#59E91F1'
+      - ' &8| &fStack x64: &#59E91F&l$&r&#59E91F64'
+      - ''
+
+
+
+
+
+  'item_4':
+    material: BROWN_MUSHROOM
+    slot: 12
+    item_flags:
+      - HIDE_ATTRIBUTES
+    display_name: '&#FFF275Champiñón Marrón'
+    lore:
+      - '&8ᴘʀᴇᴄɪᴏ ᴅᴇ ᴠᴇɴᴛᴀ'
+      - ''
+      - ' &8| &fUnidad: &#59E91F&l$&r&#59E91F1'
+      - ' &8| &fStack x64: &#59E91F&l$&r&#59E91F64'
+      - ''
+
+
+
+
+
+  'item_5':
+    material: CACTUS
+    slot: 13
+    item_flags:
+      - HIDE_ATTRIBUTES
+    display_name: '&#FFF275Cactus'
+    lore:
+      - '&8ᴘʀᴇᴄɪᴏ ᴅᴇ ᴠᴇɴᴛᴀ'
+      - ''
+      - ' &8| &fUnidad: &#59E91F&l$&r&#59E91F5'
+      - ' &8| &fStack x64: &#59E91F&l$&r&#59E91F320'
+      - ''
+
+
+
+
+
+  'item_6':
+    material: CARROT
+    slot: 14
+    item_flags:
+      - HIDE_ATTRIBUTES
+    display_name: '&#FFF275Zanahoria'
+    lore:
+      - '&8ᴘʀᴇᴄɪᴏ ᴅᴇ ᴠᴇɴᴛᴀ'
+      - ''
+      - ' &8| &fUnidad: &#59E91F&l$&r&#59E91F15'
+      - ' &8| &fStack x64: &#59E91F&l$&r&#59E91F960'
+      - ''
+
+
+
+
+
+  'item_7':
+    material: CHORUS_FLOWER
+    slot: 15
+    item_flags:
+      - HIDE_ATTRIBUTES
+    display_name: '&#FFF275CHORUS FLOWER'
+    lore:
+      - '&8ᴘʀᴇᴄɪᴏ ᴅᴇ ᴠᴇɴᴛᴀ'
+      - ''
+      - ' &8| &fUnidad: &#59E91F&l$&r&#59E91F1'
+      - ' &8| &fStack x64: &#59E91F&l$&r&#59E91F64'
+      - ''
+
+
+
+
+
+  'item_8':
+    material: CHORUS_FRUIT
+    slot: 16
+    item_flags:
+      - HIDE_ATTRIBUTES
+    display_name: '&#FFF275CHORUS FRUIT'
+    lore:
+      - '&8ᴘʀᴇᴄɪᴏ ᴅᴇ ᴠᴇɴᴛᴀ'
+      - ''
+      - ' &8| &fUnidad: &#59E91F&l$&r&#59E91F1'
+      - ' &8| &fStack x64: &#59E91F&l$&r&#59E91F64'
+      - ''
+
+
+
+
+
+  'item_9':
+    material: COCOA_BEANS
+    slot: 17
+    item_flags:
+      - HIDE_ATTRIBUTES
+    display_name: '&#FFF275Granos de Cacao'
+    lore:
+      - '&8ᴘʀᴇᴄɪᴏ ᴅᴇ ᴠᴇɴᴛᴀ'
+      - ''
+      - ' &8| &fUnidad: &#59E91F&l$&r&#59E91F30'
+      - ' &8| &fStack x64: &#59E91F&l$&r&#59E91F1920'
+      - ''
+
+
+
+
+
+  'item_10':
+    material: KELP
+    slot: 18
+    item_flags:
+      - HIDE_ATTRIBUTES
+    display_name: '&#FFF275Alga'
+    lore:
+      - '&8ᴘʀᴇᴄɪᴏ ᴅᴇ ᴠᴇɴᴛᴀ'
+      - ''
+      - ' &8| &fUnidad: &#59E91F&l$&r&#59E91F2'
+      - ' &8| &fStack x64: &#59E91F&l$&r&#59E91F128'
+      - ''
+
+
+
+
+
+  'item_11':
+    material: MELON
+    slot: 19
+    item_flags:
+      - HIDE_ATTRIBUTES
+    display_name: '&#FFF275Sandía'
+    lore:
+      - '&8ᴘʀᴇᴄɪᴏ ᴅᴇ ᴠᴇɴᴛᴀ'
+      - ''
+      - ' &8| &fUnidad: &#59E91F&l$&r&#59E91F7'
+      - ' &8| &fStack x64: &#59E91F&l$&r&#59E91F448'
+      - ''
+
+
+
+
+
+  'item_12':
+    material: MELON_SLICE
+    slot: 20
+    item_flags:
+      - HIDE_ATTRIBUTES
+    display_name: '&#FFF275Rodaja de Sandía'
+    lore:
+      - '&8ᴘʀᴇᴄɪᴏ ᴅᴇ ᴠᴇɴᴛᴀ'
+      - ''
+      - ' &8| &fUnidad: &#59E91F&l$&r&#59E91F1'
+      - ' &8| &fStack x64: &#59E91F&l$&r&#59E91F64'
+      - ''
+
+
+
+
+
+  'item_13':
+    material: NETHER_WART
+    slot: 21
+    item_flags:
+      - HIDE_ATTRIBUTES
+    display_name: '&#FFF275Verruga del Nether'
+    lore:
+      - '&8ᴘʀᴇᴄɪᴏ ᴅᴇ ᴠᴇɴᴛᴀ'
+      - ''
+      - ' &8| &fUnidad: &#59E91F&l$&r&#59E91F20'
+      - ' &8| &fStack x64: &#59E91F&l$&r&#59E91F1280'
+      - ''
+
+
+
+
+
+  'item_14':
+    material: POTATO
+    slot: 22
+    item_flags:
+      - HIDE_ATTRIBUTES
+    display_name: '&#FFF275Patata'
+    lore:
+      - '&8ᴘʀᴇᴄɪᴏ ᴅᴇ ᴠᴇɴᴛᴀ'
+      - ''
+      - ' &8| &fUnidad: &#59E91F&l$&r&#59E91F15'
+      - ' &8| &fStack x64: &#59E91F&l$&r&#59E91F960'
+      - ''
+
+
+
+
+
+  'item_15':
+    material: PUMPKIN
+    slot: 23
+    item_flags:
+      - HIDE_ATTRIBUTES
+    display_name: '&#FFF275Calabaza'
+    lore:
+      - '&8ᴘʀᴇᴄɪᴏ ᴅᴇ ᴠᴇɴᴛᴀ'
+      - ''
+      - ' &8| &fUnidad: &#59E91F&l$&r&#59E91F7'
+      - ' &8| &fStack x64: &#59E91F&l$&r&#59E91F448'
+      - ''
+
+
+
+
+
+  'item_16':
+    material: PUMPKIN_SEEDS
+    slot: 24
+    item_flags:
+      - HIDE_ATTRIBUTES
+    display_name: '&#FFF275Semillas de Calabaza'
+    lore:
+      - '&8ᴘʀᴇᴄɪᴏ ᴅᴇ ᴠᴇɴᴛᴀ'
+      - ''
+      - ' &8| &fUnidad: &#59E91F&l$&r&#59E91F1'
+      - ' &8| &fStack x64: &#59E91F&l$&r&#59E91F64'
+      - ''
+
+
+
+
+
+  'item_17':
+    material: RED_MUSHROOM
+    slot: 25
+    item_flags:
+      - HIDE_ATTRIBUTES
+    display_name: '&#FFF275Champiñón Rojo'
+    lore:
+      - '&8ᴘʀᴇᴄɪᴏ ᴅᴇ ᴠᴇɴᴛᴀ'
+      - ''
+      - ' &8| &fUnidad: &#59E91F&l$&r&#59E91F1'
+      - ' &8| &fStack x64: &#59E91F&l$&r&#59E91F64'
+      - ''
+
+
+
+
+
+  'item_18':
+    material: SUGAR_CANE
+    slot: 26
+    item_flags:
+      - HIDE_ATTRIBUTES
+    display_name: '&#FFF275Caña de Azúcar'
+    lore:
+      - '&8ᴘʀᴇᴄɪᴏ ᴅᴇ ᴠᴇɴᴛᴀ'
+      - ''
+      - ' &8| &fUnidad: &#59E91F&l$&r&#59E91F3'
+      - ' &8| &fStack x64: &#59E91F&l$&r&#59E91F192'
+      - ''
+
+
+
+
+
+  'item_19':
+    material: WHEAT
+    slot: 27
+    item_flags:
+      - HIDE_ATTRIBUTES
+    display_name: '&#FFF275Trigo'
+    lore:
+      - '&8ᴘʀᴇᴄɪᴏ ᴅᴇ ᴠᴇɴᴛᴀ'
+      - ''
+      - ' &8| &fUnidad: &#59E91F&l$&r&#59E91F20'
+      - ' &8| &fStack x64: &#59E91F&l$&r&#59E91F1280'
+      - ''
+
+
+
+
+
+  'item_20':
+    material: WHEAT_SEEDS
+    slot: 28
+    item_flags:
+      - HIDE_ATTRIBUTES
+    display_name: '&#FFF275Semillas de Trigo'
+    lore:
+      - '&8ᴘʀᴇᴄɪᴏ ᴅᴇ ᴠᴇɴᴛᴀ'
+      - ''
+      - ' &8| &fUnidad: &#59E91F&l$&r&#59E91F1'
+      - ' &8| &fStack x64: &#59E91F&l$&r&#59E91F64'
+      - ''
+
+
+
+
+
+  'item_21':
+    material: SWEET_BERRIES
+    slot: 29
+    item_flags:
+      - HIDE_ATTRIBUTES
+    display_name: '&#FFF275Bayas Dulces'
+    lore:
+      - '&8ᴘʀᴇᴄɪᴏ ᴅᴇ ᴠᴇɴᴛᴀ'
+      - ''
+      - ' &8| &fUnidad: &#59E91F&l$&r&#59E91F7'
+      - ' &8| &fStack x64: &#59E91F&l$&r&#59E91F448'
+      - ''
+
+
+
+
+
+  'item_22':
+    material: ARROW
+    slot: 30
+    item_flags:
+      - HIDE_ATTRIBUTES
+    display_name: '&#FFF275Flecha'
+    lore:
+      - '&8ᴘʀᴇᴄɪᴏ ᴅᴇ ᴠᴇɴᴛᴀ'
+      - ''
+      - ' &8| &fUnidad: &#59E91F&l$&r&#59E91F1'
+      - ' &8| &fStack x64: &#59E91F&l$&r&#59E91F64'
+      - ''
+
+
+
+
+
+  'item_23':
+    material: BLAZE_POWDER
+    slot: 31
+    item_flags:
+      - HIDE_ATTRIBUTES
+    display_name: '&#FFF275Polvo de Blaze'
+    lore:
+      - '&8ᴘʀᴇᴄɪᴏ ᴅᴇ ᴠᴇɴᴛᴀ'
+      - ''
+      - ' &8| &fUnidad: &#59E91F&l$&r&#59E91F1'
+      - ' &8| &fStack x64: &#59E91F&l$&r&#59E91F64'
+      - ''
+
+
+
+
+
+  'item_24':
+    material: BLAZE_ROD
+    slot: 32
+    item_flags:
+      - HIDE_ATTRIBUTES
+    display_name: '&#FFF275Vara de Blaze'
+    lore:
+      - '&8ᴘʀᴇᴄɪᴏ ᴅᴇ ᴠᴇɴᴛᴀ'
+      - ''
+      - ' &8| &fUnidad: &#59E91F&l$&r&#59E91F2'
+      - ' &8| &fStack x64: &#59E91F&l$&r&#59E91F128'
+      - ''
+
+
+
+
+
+  'item_25':
+    material: BREEZE_ROD
+    slot: 33
+    item_flags:
+      - HIDE_ATTRIBUTES
+    display_name: '&#FFF275Vara de Breeze'
+    lore:
+      - '&8ᴘʀᴇᴄɪᴏ ᴅᴇ ᴠᴇɴᴛᴀ'
+      - ''
+      - ' &8| &fUnidad: &#59E91F&l$&r&#59E91F2'
+      - ' &8| &fStack x64: &#59E91F&l$&r&#59E91F128'
+      - ''
+
+
+
+
+
+  'item_26':
+    material: BONE
+    slot: 34
+    item_flags:
+      - HIDE_ATTRIBUTES
+    display_name: '&#FFF275Hueso'
+    lore:
+      - '&8ᴘʀᴇᴄɪᴏ ᴅᴇ ᴠᴇɴᴛᴀ'
+      - ''
+      - ' &8| &fUnidad: &#59E91F&l$&r&#59E91F4'
+      - ' &8| &fStack x64: &#59E91F&l$&r&#59E91F256'
+      - ''
+
+
+
+
+
+  'item_27':
+    material: ENDER_PEARL
+    slot: 35
+    item_flags:
+      - HIDE_ATTRIBUTES
+    display_name: '&#FFF275Perla de Ender'
+    lore:
+      - '&8ᴘʀᴇᴄɪᴏ ᴅᴇ ᴠᴇɴᴛᴀ'
+      - ''
+      - ' &8| &fUnidad: &#59E91F&l$&r&#59E91F5'
+      - ' &8| &fStack x64: &#59E91F&l$&r&#59E91F320'
+      - ''
+
+
+
+
+
+  # ============================================================================
+  # NAVBAR INFERIOR (FILA 5: SLOTS 36 A 44)
+  # ============================================================================
+  'Boton_Filtro':
+    material: COMPARATOR
+    slot: 36
+    item_flags:
+      - HIDE_ATTRIBUTES
+      - HIDE_ENCHANTS
+    enchantments:
+      - DURABILITY;1
+    display_name: '&#FFD700Filtrar Categoría'
+    lore:
+      - '&8ᴇʟɪɢᴇ ᴄᴀᴛᴇɢᴏʀɪᴀ'
+      - ''
+      - ' &#FFD700● Todos'
+      - ' &7● Cultivos'
+      - ' &7● Drops de Mobs'
+      - ' &7● Especiales'
+      - ''
+      - '&7▶ Click para cambiar'
+    left_click_commands:
+      - '[openguimenu] precios_farmeo'
+      - '[sound] UI_BUTTON_CLICK'
+
+  'Boton_Volver':
+    material: DARK_OAK_DOOR
+    slot: 40
+    item_flags:
+      - HIDE_ATTRIBUTES
+    display_name: '&cVolver Atrás'
+    lore:
+      - '&8Regresar al menú principal'
+    left_click_commands:
+      - '[openguimenu] tienda_principal'
+      - '[sound] UI_BUTTON_CLICK'
+
+  'Boton_Pagina_Siguiente':
+    material: ARROW
+    slot: 41
+    item_flags:
+      - HIDE_ATTRIBUTES
+    display_name: '&ePágina Siguiente ▶'
+    left_click_commands:
+      - '[openguimenu] precios_todos_2'
+      - '[sound] UI_BUTTON_CLICK'
+
+  'Boton_SellGUI':
+    material: HOPPER
+    slot: 43
+    item_flags:
+      - HIDE_ATTRIBUTES
+    display_name: '&#59E91FVenta Rápida'
+    lore:
+      - '&8ᴠᴇɴᴛᴀ ᴀᴜᴛᴏᴍᴀᴛɪᴄᴀ'
+      - ''
+      - ' &fVende tu inventario.'
+      - ''
+      - '&7▶ Click para abrir'
+    left_click_commands:
+      - '[close]'
+      - '[player] sellgui'
+      - '[sound] ENTITY_EXPERIENCE_ORB_PICKUP'
+
+  'Info_Balance':
+    material: head-%player_name%
+    slot: 44
+    item_flags:
+      - HIDE_ATTRIBUTES
+    display_name: '&#FFD700Tu Economía'
+    lore:
+      - '&8ᴛᴜ ᴇᴄᴏɴᴏᴍɪᴀ'
+      - ''
+      - ' &8| &fDinero: &#59E91F&l$&r&#59E91F%vault_eco_balance_formatted%'
+      - ' &8| &fAlmas: &#34B0F3%thundercurrencys_almas%🔥'
+      - ' &8| &fZafiros: &#1E6BFF%thundercurrencys_zafiros%💎'
+      - ''
+
+  'Filtro_Bottom':
+    material: GRAY_STAINED_GLASS_PANE
+    display_name: ' '
+    slots:
+      - 37
+      - 38
+      - 39
+      - 42

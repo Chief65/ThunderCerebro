@@ -1,0 +1,285 @@
+title: '&0&l|&r &0Dash ▶ &8Ubicaciones '
+type: inventory
+command: 'warps'
+rows: 6
+layout:
+### RELLENO (borde superior)
+  '0':
+  - relleno
+  '1':
+  - relleno
+  '2':
+  - relleno
+  '3':
+  - relleno
+  '4':
+  - info
+  '5':
+  - relleno
+  '6':
+  - relleno
+  '7':
+  - relleno
+  '8':
+  - relleno
+
+### RELLENO (bordes laterales)
+  '9':
+  - relleno
+  '17':
+  - relleno
+  '18':
+  - relleno
+  '26':
+  - relleno
+  '27':
+  - relleno
+  '35':
+  - relleno
+  '36':
+  - relleno
+  '44':
+  - relleno
+
+### RELLENO (borde inferior)
+  '45':
+  - relleno
+  '46':
+  - relleno
+  '47':
+  - relleno
+  '48':
+  - relleno
+  '49':
+  - volver
+  '50':
+  - relleno
+  '51':
+  - relleno
+  '52':
+  - relleno
+  '53':
+  - relleno
+
+### CONTENIDO - Ubicaciones
+  '20':
+  - crates
+  '21':
+  - minapvp
+  '22':
+  - minainicial
+  '23':
+  - dungeons
+  '29':
+  - zonaafk
+  '30':
+  - pvpsinperdida
+  '31':
+  - rtp
+  '32':
+  - spawn
+
+items:
+### RELLENO
+  relleno:
+    material: GRAY_STAINED_GLASS_PANE
+    name: ' '
+    stack: 1
+
+### INFO
+  info:
+    material: OAK_SIGN
+    name: '&e⚠ &fInformación'
+    lore:
+    - ''
+    - ' &7Haz click en cualquier'
+    - ' &7ubicación para ser'
+    - ' &7teletransportado.'
+    stack: 1
+
+### VOLVER
+  volver:
+    material: BARRIER
+    name: '&c← Volver'
+    lore:
+    - ''
+    - '&8▶ Click para regresar'
+    stack: 1
+    actions:
+      commands:
+        - '[sound] UI.BUTTON.CLICK volume=1 pitch=1'
+        - '[previous]'
+
+### UBICACIONES
+  crates:
+    material: BARREL
+    name: '&a✔ &8| &6Cajas'
+    lore:
+    - '&8Ubicación'
+    - ''
+    - ' &7Dirígete a la zona de'
+    - ' &7crates para abrir tus'
+    - ' &7cajas y obtener premios.'
+    - ''
+    - '&8&m                            '
+    - '&8▶ Click para ir'
+    stack: 1
+    actions:
+      commands:
+        - '[sound] ENTITY.ENDERMAN.TELEPORT volume=1 pitch=1'
+        - '[close]'
+        - '[chat] /warp cajas'
+
+  minapvp:
+    material: GOLDEN_PICKAXE
+    name: '&a✔ &8| &eMina PvP'
+    lore:
+    - '&8Ubicación'
+    - ''
+    - ' &7Una mina donde podrás'
+    - ' &7farmear recursos mientras'
+    - ' &7te enfrentas a otros'
+    - ' &7jugadores.'
+    - ''
+    - ' &8Detalles:'
+    - ' &8▪ &fCombate&8: &a✔'
+    - ' &8▪ &fProtecciones&8: &c✘'
+    - ''
+    - '&8&m                            '
+    - '&8▶ Click para ir'
+    stack: 1
+    actions:
+      commands:
+        - '[sound] ENTITY.ENDERMAN.TELEPORT volume=1 pitch=1'
+        - '[close]'
+        - '[chat] /warp minapvp'
+
+  minainicial:
+    material: STONE_PICKAXE
+    name: '&a✔ &8| &7Mina Inicial'
+    lore:
+    - '&8Ubicación'
+    - ''
+    - ' &7La mina perfecta para'
+    - ' &7comenzar a recolectar'
+    - ' &7tus primeros recursos.'
+    - ''
+    - ' &8Detalles:'
+    - ' &8▪ &fCombate&8: &c✘'
+    - ' &8▪ &fProtecciones&8: &a✔'
+    - ''
+    - '&8&m                            '
+    - '&8▶ Click para ir'
+    stack: 1
+    actions:
+      commands:
+        - '[sound] ENTITY.ENDERMAN.TELEPORT volume=1 pitch=1'
+        - '[close]'
+        - '[chat] /warp minainicial'
+
+  dungeons:
+    material: VAULT
+    name: '&a✔ &8| &5Dungeons'
+    lore:
+    - '&8Ubicación'
+    - ''
+    - ' &7Adéntrate en las'
+    - ' &7dungeons y enfrenta'
+    - ' &7desafíos para obtener'
+    - ' &7recompensas únicas.'
+    - ''
+    - '&8&m                            '
+    - '&8▶ Click para ir'
+    stack: 1
+    actions:
+      commands:
+        - '[sound] ENTITY.ENDERMAN.TELEPORT volume=1 pitch=1'
+        - '[close]'
+        - '[chat] /warp dungeon'
+
+  zonaafk:
+    material: CLOCK
+    name: '&a✔ &8| &bZona AFK'
+    lore:
+    - '&8Ubicación'
+    - ''
+    - ' &7Una zona segura para'
+    - ' &7quedarte inactivo y'
+    - ' &7seguir generando'
+    - ' &7recompensas.'
+    - ''
+    - ' &8Detalles:'
+    - ' &8▪ &fCombate&8: &c✘'
+    - ' &8▪ &fProtecciones&8: &a✔'
+    - ''
+    - '&8&m                            '
+    - '&8▶ Click para ir'
+    stack: 1
+    actions:
+      commands:
+        - '[sound] ENTITY.ENDERMAN.TELEPORT volume=1 pitch=1'
+        - '[close]'
+        - '[chat] /warp afk'
+
+  pvpsinperdida:
+    material: NETHERITE_SWORD
+    name: '&a✔ &8| &cPvP Sin Pérdida'
+    lore:
+    - '&8Ubicación'
+    - ''
+    - ' &7Pelea contra otros'
+    - ' &7jugadores sin perder'
+    - ' &7tu inventario ni'
+    - ' &7objetos al morir.'
+    - ''
+    - ' &8Detalles:'
+    - ' &8▪ &fCombate&8: &a✔'
+    - ' &8▪ &fPérdida de ítems&8: &c✘'
+    - ''
+    - '&8&m                            '
+    - '&8▶ Click para ir'
+    stack: 1
+    actions:
+      commands:
+        - '[sound] ENTITY.ENDERMAN.TELEPORT volume=1 pitch=1'
+        - '[close]'
+        - '[chat] /warp pvpsinperdida'
+
+  rtp:
+    material: ENDER_PEARL
+    name: '&a✔ &8| &dRTP'
+    lore:
+    - '&8Ubicación'
+    - ''
+    - ' &7Viaja a una ubicación'
+    - ' &7aleatoria del mundo'
+    - ' &7para explorar y'
+    - ' &7encontrar recursos.'
+    - ''
+    - '&8&m                            '
+    - '&8▶ Click para ir'
+    stack: 1
+    actions:
+      commands:
+        - '[sound] ENTITY.ENDERMAN.TELEPORT volume=1 pitch=1'
+        - '[close]'
+        - '[chat] /survival'
+
+  spawn:
+    material: COMPASS
+    name: '&a✔ &8| &aSpawn'
+    lore:
+    - '&8Ubicación'
+    - ''
+    - ' &7Regresa al punto de'
+    - ' &7aparición principal'
+    - ' &7del servidor.'
+    - ''
+    - '&8&m                            '
+    - '&8▶ Click para ir'
+    stack: 1
+    actions:
+      commands:
+        - '[sound] ENTITY.ENDERMAN.TELEPORT volume=1 pitch=1'
+        - '[close]'
+        - '[chat] /spawn'

@@ -1,0 +1,233 @@
+spawners_almas:
+  name: "&0&l|&r &0Mercado ▶ &8Spawners &8(#34B0F3🔥&8)"
+  economy: CUSTOM:almas
+  size: 45
+  fillItem:
+    material: AIR
+    name: " "
+  buttons:
+    goBack:
+      slot: -1
+    previousPage:
+      slot: -1
+    nextPage:
+      slot: -1
+  items:
+    1:
+      type: command
+      item:
+        material: SPAWNER
+        name: '#FFF275Spawner de Cerdo'
+        quantity: 1
+      commands:
+        - "silkspawners give %PLAYER% pig 1"
+      buyPrice: 150
+      slot: 10
+    2:
+      type: command
+      item:
+        material: SPAWNER
+        name: '#FFF275Spawner de Vaca'
+        quantity: 1
+      commands:
+        - "silkspawners give %PLAYER% cow 1"
+      buyPrice: 300
+      slot: 11
+    3:
+      type: command
+      item:
+        material: SPAWNER
+        name: '#FFF275Spawner de Zombie'
+        quantity: 1
+      commands:
+        - "silkspawners give %PLAYER% zombie 1"
+      buyPrice: 450
+      slot: 12
+    4:
+      type: command
+      item:
+        material: SPAWNER
+        name: '#FFF275Spawner de Araña'
+        quantity: 1
+      commands:
+        - "silkspawners give %PLAYER% spider 1"
+      buyPrice: 600
+      slot: 13
+    5:
+      type: command
+      item:
+        material: SPAWNER
+        name: '#FFF275Spawner de Esqueleto'
+        quantity: 1
+      commands:
+        - "silkspawners give %PLAYER% SKELETON 1"
+      buyPrice: 750
+      slot: 14
+    6:
+      type: command
+      item:
+        material: SPAWNER
+        name: '#FFF275Spawner de Blaze'
+        quantity: 1
+      commands:
+        - "silkspawners give %PLAYER% blaze 1"
+      buyPrice: 900
+      slot: 15
+    7:
+      type: command
+      item:
+        material: SPAWNER
+        name: '#FFF275Spawner de Piglin Zombificado'
+        quantity: 1
+      commands:
+        - "silkspawners give %PLAYER% ZOMBIFIED_PIGLIN 1"
+      buyPrice: 1250
+      slot: 16
+    8:
+      type: command
+      item:
+        material: SPAWNER
+        name: '#FFF275Spawner de Golem de Hierro'
+        quantity: 1
+      commands:
+        - "silkspawners give %PLAYER% IRON_GOLEM 1"
+      buyPrice: 1350
+      slot: 19
+    9:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 0
+    10:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 1
+    11:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 2
+    12:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 3
+    13:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 4
+    14:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 5
+    15:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 6
+    16:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 7
+    17:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 8
+    18:
+      type: dummy
+      item:
+        material: COMPARATOR
+        quantity: 1
+        glow: true
+        name: "#FFF275Filtrar Categoría"
+        lore:
+          - "&8Elige categoría"
+          - ""
+          - " #FFF275● Spawners"
+          - " &7● Llaves"
+          - " &7● Protecciones"
+          - ""
+          - "&7▶ Click para cambiar"
+      commandsOnClick:
+        - "shop llaves_almas"
+      slot: 36
+    19:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 37
+    20:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 38
+    21:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 39
+    22:
+      type: dummy
+      item:
+        material: DARK_OAK_DOOR
+        quantity: 1
+        name: "&cVolver al Menú"
+        lore:
+          - "&7Regresar a la selección de almas"
+      commandsOnClick:
+        - "dm open mercado_almas"
+      slot: 40
+    23:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 41
+    24:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 42
+    25:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 43
+    26:
+      type: special
+      special: balance
+      slot: 44

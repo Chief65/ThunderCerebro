@@ -1,0 +1,57 @@
+ArañaReina:
+  Type: CAVE_SPIDER
+  Display: '&cLvl 6 &8| &5ᴀʀᴀñᴀ ʀᴇɪɴᴀ &8| <#ED1313><caster.hp{r=0}><&heart>'
+  Health: 2000
+  Damage: 30
+  Options:
+    Scale: 4
+    MovementSpeed: 0.4
+    PreventOtherDrops: true
+    Despawn: false
+    ReturnHome: true
+    LeashRange: 30
+    KnockbackResistance: 0.3
+    FollowRange: 30
+  BossBar:
+    Enabled: true
+    Title: '&8┖&f☠&8┚ &4Aracne &8| &fLa Araña Reina'
+    Range: 40
+    Color: RED
+    Style: SEGMENTED_10
+  AIGoalSelectors:
+    - 0 clear
+    - 1 meleeattack
+    - 2 randomstroll
+    - 3 lookatplayers
+    - 4 float
+  AITargetSelectors:
+    - 0 clear
+    - 1 players
+  Drops:
+    - STRING 1-3 1
+    - SPIDER_EYE 1 0.5
+    - EXPERIENCE_BOTTLE 1-3 0.7
+  Skills:
+    - skill{s=SonidoKill} @trigger ~onDeath
+    - setname{n=<caster.name>;delay=2} @self ~onDamaged
+
+    - actionmessage{m="<#34B0F3>+30 <white>Almas <#34B0F3>🔥 &8| <#59E91F>+<#59E91F>&l$&r<#59E91F>1000"} @trigger ~onDeath 
+    - command{c="points give <trigger.name> 30 -s";sender=console} @self ~onDeath 
+    - command{c="economy give <trigger.name> 1000";sender=console} @self ~onDeath 
+    - particles{particle=SCULK_SOUL;amount=60;speed=0.1;hSpread=0.6;vSpread=0.6} @self ~onDeath 
+
+    - command{c="si give fragmentosuper 1 <trigger.name> -s";sender=console} @self ~onDeath 0.02
+    - command{c="si give fragmentorara 1 <trigger.name> -s";sender=console} @self ~onDeath 0.02
+    - command{c="si give fragmentogadget 1 <trigger.name> -s";sender=console} @self ~onDeath 0.02
+    - command{c="si give fragmentomitica 1 <trigger.name> -s";sender=console} @self ~onDeath 0.003
+    - skill{s=DropFragmentoLimitedGeneral} @self ~onDeath 0.001
+    - skill{s=BoostAlmas} @self ~onDeath
+    - setvariable{var=almas;value=30;scope=CASTER;type=INTEGER} @self ~onSpawn
+
+    - potion{type=POISON;duration=150;level=2} @trigger ~onAttack
+
+    - skill{s=InvocarArañas75} @self ~onTimer:1
+    - skill{s=InvocarArañas50} @self ~onTimer:1
+    - skill{s=InvocarArañas25} @self ~onTimer:1
+
+    - skill{s=Guardian_Beam} @self ~onTimer:150

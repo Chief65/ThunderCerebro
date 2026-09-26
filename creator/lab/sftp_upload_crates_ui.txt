@@ -1,0 +1,7 @@
+lcd raw/thunderia/ExcellentCrates_Survival
+put previews/prueba.yml plugins/ExcellentCrates/previews/prueba.yml
+put previews/limited.yml plugins/ExcellentCrates/previews/limited.yml
+put previews/default.yml plugins/ExcellentCrates/previews/default.yml
+put ui/crate_open_amount.yml plugins/ExcellentCrates/ui/crate_open_amount.yml
+put ui/crate_open_costs.yml plugins/ExcellentCrates/ui/crate_open_costs.yml
+bye

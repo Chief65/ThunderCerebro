@@ -1,0 +1,192 @@
+menu_title: '&0&l|&r &0Night Market ▶ &#FFF275Premios y Pity'
+open_command:
+  - nightmarketpremios
+  - nmpremios
+size: 54
+open_requirement:
+  requirements: {}
+register_command: true
+update: true
+
+items:
+  'Filtro_Top':
+    material: GRAY_STAINED_GLASS_PANE
+    display_name: ' '
+    slots:
+      - 0
+      - 1
+      - 2
+      - 3
+      - 5
+      - 6
+      - 7
+      - 8
+
+  'Header_Premios':
+    material: SPYGLASS
+    slot: 4
+    item_flags:
+      - HIDE_ATTRIBUTES
+      - HIDE_ENCHANTS
+    enchantments:
+      - DURABILITY;1
+    display_name: '&#FFF275Tabla de Rarezas y Pity System'
+    lore:
+      - '&8ᴘʀᴏʙᴀʙɪʟɪᴅᴀᴅᴇꜱ ɴɪɢʜᴛ ᴍᴀʀᴋᴇᴛ'
+      - ''
+      - ' &fCada noche se generan 5 cartas'
+      - ' &fcon una calidad asignada.'
+      - ''
+      - ' &8| &fPity Activo: &eAcumula chance/día'
+      - ' &8| &fGarantía Limited: &aa los 7 días'
+      - ''
+      - '&8Las calidades altas aseguran gran valor.'
+
+  # FILA 2 Y 3: REPRESENTACIÓN DE LAS 6 RAREZAS
+
+  # 1. SÚPER
+  'Rareza_Super':
+    material: LIME_DYE
+    slot: 11
+    item_flags:
+      - HIDE_ATTRIBUTES
+    display_name: '&#59E91FCalidad SÚPER &8(45% Base)'
+    lore:
+      - '&8ᴄᴀʟɪᴅᴀᴅ ʙᴀꜱɪᴄᴀ'
+      - ''
+      - ' &8| &fPociones de Mazmorra'
+      - ' &8| &fElixires de drop rate y daño'
+      - ' &8| &fComida bendita de combate'
+      - ''
+      - ' &8| &fRango: &7500 - 2,000 Almas'
+
+  # 2. RARA
+  'Rareza_Rara':
+    material: LIGHT_BLUE_DYE
+    slot: 13
+    item_flags:
+      - HIDE_ATTRIBUTES
+    display_name: '&#1E6BFFCalidad RARA &8(28% Base)'
+    lore:
+      - '&8ᴄᴀʟɪᴅᴀᴅ ᴄᴏꜱᴍᴇᴛɪᴄᴀ'
+      - ''
+      - ' &8| &fGlows y auras para el cuerpo'
+      - ' &8| &fChatColors exclusivos'
+      - ' &8| &fTags de chat brillantes'
+      - ''
+      - ' &8| &fRango: &78,000 - 20,000 Almas'
+
+  # 3. ÉPICA
+  'Rareza_Epica':
+    material: PURPLE_DYE
+    slot: 15
+    item_flags:
+      - HIDE_ATTRIBUTES
+    display_name: '&#D48BFFCalidad ÉPICA &8(16% Base)'
+    lore:
+      - '&8ᴄᴀʟɪᴅᴀᴅ ᴅᴇ ʟʟᴀᴠᴇꜱ'
+      - ''
+      - ' &8| &fLlaves de cajas de spawn'
+      - ' &8| &fFragmentos de llaves supremas'
+      - ' &8| &fProtecciones extendidas'
+      - ''
+      - ' &8| &fRango: &725,000 - 45,000 Almas'
+
+  # 4. LEGEND
+  'Rareza_Legend':
+    material: ORANGE_DYE
+    slot: 29
+    item_flags:
+      - HIDE_ATTRIBUTES
+    display_name: '&#FFF275Calidad LEGEND &8(8% Base)'
+    lore:
+      - '&8ᴄᴀʟɪᴅᴀᴅ ʀᴘɢ'
+      - ''
+      - ' &8| &fArmas con encantamientos VI'
+      - ' &8| &fHerramientas con pasivas de almas'
+      - ' &8| &fArmaduras reforzadas de mazmorra'
+      - ''
+      - ' &8| &fRango: &750,000 - 100,000 Almas'
+
+  # 5. MÍTICA
+  'Rareza_Mitica':
+    material: MAGENTA_DYE
+    slot: 31
+    item_flags:
+      - HIDE_ATTRIBUTES
+    display_name: '&#D48BFFCalidad MÍTICA &8(5% Base)'
+    lore:
+      - '&8ᴄᴀʟɪᴅᴀᴅ ꜱᴜᴘʀᴇᴍᴀ'
+      - ''
+      - ' &8| &fSpawners de bosses especiales'
+      - ' &8| &fHuevos de criaturas ancestrales'
+      - ' &8| &fLibros de encantamiento custom'
+      - ''
+      - ' &8| &fRango: &7120,000 - 200,000 Almas'
+
+  # 6. LIMITED (JACKPOT CON PITY)
+  'Rareza_Limited':
+    material: RED_DYE
+    slot: 33
+    item_flags:
+      - HIDE_ATTRIBUTES
+      - HIDE_ENCHANTS
+    enchantments:
+      - DURABILITY;1
+    display_name: '&#FF4D4DCalidad LIMITED &8(3% Base + PITY)'
+    lore:
+      - '&8ᴊᴀᴄᴋᴘᴏᴛ ᴜʟᴛʀᴀ ᴇxᴄʟᴜꜱɪᴠᴏ'
+      - ''
+      - ' &8| &fObjetos únicos no comerciables'
+      - ' &8| &fCorazón del Vacío / Artefactos'
+      - ' &8| &fSkins únicas de ItemEdit'
+      - ''
+      - ' &8| &fPity Actual: &e+3.5% por día sin salir'
+      - ' &8| &fDías de sequía actual: &e4 días'
+      - ' &8| &fGarantía Absoluta: &aDía 7 (100%)'
+      - ''
+      - ' &8| &fRango: &7200,000 - 350,000 Almas'
+
+  # FILA 6: NAVBAR
+  'Boton_Volver_NM':
+    material: DARK_OAK_DOOR
+    slot: 45
+    item_flags:
+      - HIDE_ATTRIBUTES
+    display_name: '&cVolver al Night Market'
+    lore:
+      - '&7Regresar a tus ofertas de hoy'
+    left_click_commands:
+      - '[openguimenu] night_market'
+      - '[sound] BLOCK_NOTE_BLOCK_BASS'
+
+  'Filtro_Navbar_Premios':
+    material: GRAY_STAINED_GLASS_PANE
+    display_name: ' '
+    slots:
+      - 46
+      - 47
+      - 48
+      - 49
+      - 50
+      - 51
+      - 52
+
+  'Info_Balance':
+    material: head-%player_name%
+    slot: 53
+    item_flags:
+      - HIDE_ATTRIBUTES
+    display_name: '&#FFF275Tu Economía'
+    lore:
+      - '&8Tu Economía'
+      - ''
+      - ' &8| &fDinero: &#59E91F&l$&r&#59E91F%vault_eco_balance_formatted%'
+      - ' &8| &fAlmas: &#34B0F3%thundercurrencys_almas%🔥'
+      - ' &8| &fZafiros: &#1E6BFF%thundercurrencys_zafiros%💎'
+      - ' &8| &fXP: &#D48BFF%player_level% LVL'
+      - ''
+      - '&7▶ Click para más información'
+    left_click_commands:
+      - '[openguimenu] info_economia'
+      - '[sound] UI_BUTTON_CLICK'

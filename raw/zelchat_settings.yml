@@ -1,0 +1,87 @@
+# ######################## #
+# #                      # #
+# #      ZelChat         # #
+# #                      # #
+# ######################## #
+# Wiki at https://zelchat.zeltuv.com
+#
+# If you use CMI, Essentials remember to disable their commands to avoid conflicts
+#
+#
+Commands:
+  msg:
+    enabled: true
+  reply:
+    enabled: true
+  ignore:
+    enabled: true
+  ignoreall:
+    enabled: true
+  spymsg:
+    enabled: true
+  staffchat:
+    enabled: true
+  chatping:
+    enabled: true
+  chattoggle:
+    enabled: true
+Features:
+  listenerPriority: HIGHEST # Defines the priority of the chat listener (HIGHEST, HIGH, NORMAL, LOW, LOWEST)
+  mentions:
+    # Players can mention each other in chat using @playername
+    enabled: true
+    prefix: <yellow>@%p%</yellow> # This is how a mention will be replaced in chat! Only MiniMessage is supported here!
+    sound:
+      # Play a sound when a player is mentioned
+      enabled: true
+      name: block.note_block.pling # Sound name to play when a player is mentioned
+    title:
+      # Send a title to the mentioned player
+      enabled: false
+      title: '&cYou have been mentioned!' # The title to send to the mentioned player
+      subtitle: '&f%player_name% te ha mencionado!' # The subtitle to send to the mentioned player
+  staffchat:
+    # Staff can send messages to other online staff members with permission zelchat.command.staffchat
+    enabled: true
+    prefix: '#' # The prefix to use to send a message to staff chat
+  spy:
+    format: '&3[SPY] &8(&7%s% ➺ &a%p%&8)&r &f{message}'
+  msg:
+    sound:
+      # Play a sound when a player receive an msg
+      enabled: true
+      name: block.note_block.pling # Sound name to play when a player receive an msg
+  command-replacer:
+    # Replace [/command] commands in chat with a customFormats message, useful to make command clickable!
+    enabled: true
+    replacement: <aqua>[/%command%]</aqua> # This is how a command will be replaced in chat! Only MiniMessage is supported here!
+    hoverMessage: '&cClick to run /%command%' # This is the message that will be displayed when hovering over the command!
+  # The time in seconds to cache items for the render-show features
+  items-cache-seconds: 60
+  inventory-show:
+    # Renders the player's inventory when they send a message containing the prefix
+    enabled: true
+    prefix:
+    - '[inv]'
+    - '[inventory]'
+    parser: <aqua><italic>[%player_name%'s Inventory]</aqua>
+  item-show:
+    # Renders the item in hand when a player sends a message containing the prefix
+    enabled: true
+    disable-gui: false # If true, the item will not be rendered in a GUI
+    prefix:
+    - '[item]'
+    - '[i]'
+    - '[hand]'
+    parser: <gold>[%item%<reset><gold>]</gold>
+  enderchest-show:
+    # Renders the player's enderchest when they send a message containing the prefix
+    enabled: true
+    prefix:
+    - '[enderchest]'
+    - '[ec]'
+    - '[ender]'
+    parser: <yellow><italic>[%player_name%'s Enderchest]</yellow>
+
+# Do no touch
+config-version: 4

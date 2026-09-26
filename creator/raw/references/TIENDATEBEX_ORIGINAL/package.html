@@ -1,0 +1,618 @@
+{% extends "config.twig" %}
+
+{% block layout %}
+
+    {% set redirectToLogin %}
+        {% if not basket.ign %}
+            data-cart-modal-login
+        {% endif %}
+    {% endset %}
+
+    {% if basket.currency == 'USD' %}
+        {% set currencySymbol = '$' %}
+        {% set currencyAfter = false %}
+    {% elseif basket.currency == 'EUR' %}
+        {% set currencySymbol = '€' %}
+        {% set currencyAfter = true %}
+    {% elseif basket.currency == 'GBP' %}
+        {% set currencySymbol = '£' %}
+        {% set currencyAfter = false %}
+    {% else %}
+        {% set currencySymbol = basket.currency %}
+        {% set currencyAfter = true %}
+    {% endif %}
+
+    {% if config('modal_type') == "sidebar" %}
+
+    <style>
+        .package__modal {
+            display: grid !important;
+            grid-template-columns: 1fr 260px !important;
+            height: 100% !important;
+            min-height: 0 !important;
+        }
+
+        /* ── FIX: X button ─────────────────────────────────────────────────────
+           El botón X lo inyecta el tema dentro de .modal__content, fuera de
+           nuestro .package__modal. Lo sacamos del flujo y lo colocamos en la
+           esquina superior-derecha del panel lateral (orden 2).
+           ──────────────────────────────────────────────────────────────────── */
+        /* X button — movido al sidebar via JS, se estiliza con .tz-close-btn */
+        .tz-close-btn {
+            align-self: flex-end !important;
+            width: 30px !important;
+            height: 30px !important;
+            min-width: unset !important;
+            min-height: unset !important;
+            padding: 0 !important;
+            background: rgba(255,255,255,0.06) !important;
+            border: 1px solid rgba(255,255,255,0.12) !important;
+            border-radius: 6px !important;
+            display: flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+            color: rgba(255,255,255,0.45) !important;
+            font-size: 14px !important;
+            cursor: pointer !important;
+            transition: background .2s, color .2s !important;
+            box-shadow: none !important;
+            visibility: visible !important;
+            position: static !important;
+        }
+        .tz-close-btn:hover {
+            background: rgba(255,255,255,0.13) !important;
+            color: #fff !important;
+        }
+        .tz-close-btn i {
+            font-size: 14px !important;
+            line-height: 1 !important;
+        }
+
+        /* IZQUIERDA: descripción */
+        .package__modal__content {
+            order: 1 !important;
+            display: flex !important;
+            flex-direction: column !important;
+            padding: 20px !important;
+            overflow-y: auto !important;
+            background: transparent !important;
+        }
+        .tz-contenido-label {
+            font-size: 11px;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: rgba(255,255,255,0.35);
+            margin: 0 0 10px 0;
+        }
+        .tz-contenido-box {
+            background: rgba(255,255,255,0.04);
+            border: 1px solid rgba(255,255,255,0.08);
+            border-radius: 8px;
+            padding: 16px;
+            flex: 1;
+        }
+
+        /* DERECHA */
+        .package__modal__side {
+            order: 2 !important;
+            border-left: 1px solid rgba(255,255,255,0.07) !important;
+            border-right: none !important;
+            display: flex !important;
+            flex-direction: column !important;
+            padding: 20px !important;
+            gap: 14px !important;
+            overflow-y: auto !important;
+        }
+
+        .package__modal__side__header__content {
+            display: flex !important;
+            flex-direction: column !important;
+            gap: 12px !important;
+            padding: 0 !important;
+        }
+
+        /* Imagen sin fondo */
+        .package__modal__side__header__content__description img {
+            width: 100% !important;
+            height: auto !important;
+            max-height: none !important;
+            object-fit: contain !important;
+            background: transparent !important;
+            border-radius: 8px !important;
+            padding: 0 !important;
+            box-sizing: border-box !important;
+        }
+
+        .package__modal__side__header__content__description h3 {
+            font-size: 15px !important;
+            font-weight: 800 !important;
+            color: #ffffff !important;
+            margin: 4px 0 0 0 !important;
+        }
+
+        /* Precio */
+        .package__modal__side__header__content__description__price p {
+            font-size: 26px !important;
+            font-weight: 900 !important;
+            margin: 0 !important;
+            line-height: 1 !important;
+        }
+        .package__modal__side__header__content__description__price s {
+            font-size: 12px !important;
+            color: rgba(255,255,255,0.35) !important;
+        }
+
+        /* Acciones */
+        .package__modal__side__header__content__actions {
+            display: flex !important;
+            flex-direction: column !important;
+            gap: 8px !important;
+            align-items: stretch !important;
+        }
+
+        /* Botón comprar - verde */
+        .package__modal__side__header__content__actions--cta[data-type-cta="add"] {
+            display: flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+            gap: 7px !important;
+            width: 100% !important;
+            background: #22c55e !important;
+            color: #fff !important;
+            border-radius: 7px !important;
+            padding: 11px 16px !important;
+            font-size: 14px !important;
+            font-weight: 800 !important;
+            text-align: center !important;
+            text-decoration: none !important;
+            border: none !important;
+            cursor: pointer !important;
+            transition: background .2s, transform .15s !important;
+            box-sizing: border-box !important;
+        }
+        .package__modal__side__header__content__actions--cta[data-type-cta="add"]:hover {
+            background: #16a34a !important;
+            transform: translateY(-1px) !important;
+        }
+
+        /* Botón eliminar - rojo */
+        .package__modal__side__header__content__actions--cta[data-type-cta="remove"] {
+            display: flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+            width: 100% !important;
+            background: #ef4444 !important;
+            color: #fff !important;
+            border-radius: 7px !important;
+            padding: 11px 16px !important;
+            font-size: 14px !important;
+            font-weight: 800 !important;
+            text-align: center !important;
+            text-decoration: none !important;
+            border: none !important;
+            cursor: pointer !important;
+            box-sizing: border-box !important;
+        }
+
+        /* Botón regalo - gris, mismas dimensiones */
+        .package__modal__side__header__content__actions--cta[data-type-cta="gift"] {
+            display: flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+            gap: 7px !important;
+            width: 100% !important;
+            background: rgba(255,255,255,0.07) !important;
+            color: rgba(255,255,255,0.6) !important;
+            border: 1px solid rgba(255,255,255,0.1) !important;
+            border-radius: 7px !important;
+            padding: 11px 16px !important;
+            font-size: 14px !important;
+            font-weight: 700 !important;
+            text-decoration: none !important;
+            cursor: pointer !important;
+            transition: background .2s, color .2s !important;
+            box-sizing: border-box !important;
+        }
+        .package__modal__side__header__content__actions--cta[data-type-cta="gift"]:hover {
+            background: rgba(255,255,255,0.12) !important;
+            color: #fff !important;
+        }
+
+        /* Sección seguridad */
+        .tz-security {
+            background: rgba(255,255,255,0.03);
+            border: 1px solid rgba(255,255,255,0.07);
+            border-radius: 8px;
+            padding: 11px;
+            display: flex;
+            flex-direction: column;
+            gap: 7px;
+            margin-top: auto;
+        }
+        .tz-security__row {
+            display: flex;
+            align-items: flex-start;
+            gap: 7px;
+            font-size: 11px;
+            color: rgba(255,255,255,0.45);
+            line-height: 1.4;
+        }
+        .tz-security__row i {
+            font-size: 13px;
+            flex-shrink: 0;
+            margin-top: 1px;
+        }
+        .tz-security__row i.green { color: #22c55e; }
+        .tz-security__row i.yellow { color: #facc15; }
+        .tz-security__divider {
+            border: none;
+            border-top: 1px solid rgba(255,255,255,0.06);
+            margin: 2px 0;
+        }
+        .tz-security__support {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+        .tz-security__support a {
+            font-size: 11px;
+            color: rgba(255,255,255,0.35);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            transition: color .2s;
+        }
+        .tz-security__support a:hover { color: rgba(255,255,255,0.75); }
+
+        /* Fix: color de texto del input gift */
+        .package__modal__side__header__content__actions__gift input {
+            color: #ffffff !important;
+            background: var(--gift-background, rgba(255,255,255,0.08)) !important;
+        }
+
+        /* Fix: el tema pone max-height:0 cuando el form gift está activo — invertir */
+        .modal__content__box .package__modal__side__header__content__actions__gift[data-giftform-active] {
+            max-height: 200px !important;
+            overflow: visible !important;
+            display: grid !important;
+        }
+
+        @media (max-width: 640px) {
+            .package__modal {
+                grid-template-columns: 1fr !important;
+            }
+            .package__modal__side {
+                border-left: none !important;
+                border-top: 1px solid rgba(255,255,255,0.07) !important;
+            }
+        }
+    </style>
+
+        <div class="package__modal">
+
+            <!-- IZQUIERDA: descripción -->
+            <div class="package__modal__content">
+                <div class="package__modal__content__slider"></div>
+                <p class="tz-contenido-label">Contenido</p>
+                <div class="tz-contenido-box">
+                    <div class="package__modal__content__description" data-simplebar data-simplebar-auto-hide="true">
+                        {{ package.description|raw }}
+                    </div>
+                </div>
+            </div>
+
+            <!-- DERECHA: imagen, precio, botones, seguridad -->
+            <div class="package__modal__side">
+                <div class="package__modal__side__header__content">
+                    <div class="package__modal__side__header__content__description">
+
+                        {% set packageHasImage = package.image.url != "/assets/img/empty.png" %}
+                        {% if packageHasImage %}
+                            <img src="{{ package.image.url }}" alt="{{ package.name }}">
+                        {% endif %}
+
+                        <h3>{{ package.name }}</h3>
+
+                        <div class="package__modal__side__header__content__description__price" aria-hidden="true">
+                            {% if package.customPrice == false and package.price > 0 %}
+                                {% if package.discount.applied %}
+                                    <s style="color: var(--price-original); text-decoration: line-through;">{% if not currencyAfter %}{{ currencySymbol }}{% endif %}{{ package.discount.original|money }}{% if currencyAfter %} {{ currencySymbol }}{% endif %}</s>
+                                    <p style="color: var(--price-sale);">{% if not currencyAfter %}{{ currencySymbol }}{% endif %}{{ package.price|money }}{% if currencyAfter %} {{ currencySymbol }}{% endif %}</p>
+                                {% else %}
+                                    <p style="color: var(--price-normal);">{% if not currencyAfter %}{{ currencySymbol }}{% endif %}{{ package.price|money }}{% if currencyAfter %} {{ currencySymbol }}{% endif %}</p>
+                                {% endif %}
+                            {% elseif package.customPrice %}
+                                <p>{{ lang.choosePrice }}</p>
+                            {% else %}
+                                <p>{{ lang.item_is_free }}</p>
+                            {% endif %}
+                        </div>
+
+                        <span class="visually-hidden"></span>
+                    </div>
+
+                    {% if not package.purchasable %}
+                        <div class="package__modal__side__header__content__notallowed">
+                            <p>{{ package.reason }}</p>
+                        </div>
+                    {% endif %}
+
+                    {% set isPackageGiftable = package.disable_gifting == false and package.storeGiftingEnabled %}
+
+                    <div class="package__modal__side__header__content__actions">
+                        {% if package.basket %}
+                            <a href="/checkout/packages/remove/{{ package.id }}"
+                               class="package__modal__side__header__content__actions--cta" data-type-cta="remove">
+                                <i class="mdi mdi-cart-remove"></i> {{ lang.remove_from_cart }}
+                            </a>
+                        {% else %}
+                            {% if package.type != "single" %}
+                                <a href="/checkout/packages/add/{{ package.id }}/subscribe"
+                                   {% if package.purchasable == false %}disabled{% endif %}
+                                   class="package__modal__side__header__content__actions--cta"
+                                   data-type-cta="add" {{ redirectToLogin }}>
+                                    <i class="mdi mdi-cart-check"></i> {{ __("Subscribe") }}
+                                </a>
+                            {% endif %}
+                            {% if package.type != "subscription" %}
+                                <a href="/checkout/packages/add/{{ package.id }}/single"
+                                   class="package__modal__side__header__content__actions--cta"
+                                   {% if package.purchasable == false %}disabled{% endif %}
+                                   data-type-cta="add" {{ redirectToLogin }}>
+                                    <i class="mdi mdi-cart-check"></i> Comprar ahora
+                                </a>
+                            {% endif %}
+                        {% endif %}
+
+                        {% if isPackageGiftable %}
+                            <div class="gift__section">
+                                <button class="package__modal__side__header__content__actions--cta btn-gift" data-type-cta="gift">
+                                    <i class="mdi mdi-gift-outline"></i> {{ lang.giftButton }}
+                                </button>
+                                <form name="gift-form" class="package__modal__side__header__content__actions__gift gift-fields"
+                                      method="get" action="/checkout/packages/add/{{ package.id }}/single/gift">
+                                    <input type="text" name="username" placeholder="{{ lang.giftPackageTo }}"/>
+                                    <button type="submit" aria-label="Gift">
+                                        <i aria-hidden="true" class="mdi mdi-arrow-right-drop-circle"></i>
+                                    </button>
+                                </form>
+                            </div>
+                        {% endif %}
+                    </div>
+
+                    <!-- SEGURIDAD -->
+                    <div class="tz-security">
+                        <div class="tz-security__row">
+                            <i class="mdi mdi-shield-check green"></i>
+                            <span>Pagos gestionados de forma segura por <strong style="color:rgba(255,255,255,0.7);">Tebex</strong></span>
+                        </div>
+                        <div class="tz-security__row">
+                            <i class="mdi mdi-lightning-bolt yellow"></i>
+                            <span>Entrega automática — recibirás tu compra al instante en el juego</span>
+                        </div>
+                        <hr class="tz-security__divider">
+                        <div class="tz-security__support">
+                            <a href="https://discord.gg/Ufmxdy8Dye" target="_blank" rel="noopener">
+                                <i class="mdi mdi-discord"></i> Soporte Discord
+                            </a>
+                            <a href="mailto:soporte@thundermc.es">
+                                <i class="mdi mdi-email-outline"></i> soporte@thundermc.es
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- ── FIX: Login modal re-bind ─────────────────────────────────────────
+             El JS del tema bindea [data-cart-modal-login] al cargarse la página,
+             pero este HTML se inyecta dinámicamente vía fetch, así que los
+             listeners no existen. Disparamos el evento nativo del tema para que
+             vuelva a buscar y bindear todos los elementos con ese atributo.
+        ──────────────────────────────────────────────────────────────────────── -->
+        <script>
+        (function () {
+            // ── FIX: Mover botón X dentro del panel lateral ──────────────────
+            var xBtn = document.querySelector('.modal__content--close');
+            var side = document.querySelector('.package__modal__side');
+            if (xBtn && side) {
+                side.insertBefore(xBtn, side.firstChild);
+                xBtn.style.cssText = '';
+                xBtn.classList.add('tz-close-btn');
+            }
+
+            // ── FIX: Login ────────────────────────────────────────────────────
+            document.querySelectorAll('[data-cart-modal-login]').forEach(function (el) {
+                if (el.dataset.loginBound) return;
+                el.dataset.loginBound = '1';
+                el.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    try { closeModal(); } catch(err) {}
+                    setTimeout(function() {
+                        $('#modal-login').iziModal('open');
+                    }, 300);
+                });
+            });
+
+            // ── FIX: Gift form ────────────────────────────────────────────────
+            var giftBtn = document.querySelector('.btn-gift');
+            var giftForm = document.querySelector('.gift-fields');
+            if (giftBtn && giftForm) {
+                giftBtn.addEventListener('click', function (e) {
+                    e.stopImmediatePropagation();
+                    var active = giftForm.hasAttribute('data-giftform-active');
+                    if (!active) {
+                        giftForm.setAttribute('data-giftform-active', '');
+                        giftBtn.setAttribute('data-gift-active', '');
+                    } else {
+                        giftForm.removeAttribute('data-giftform-active');
+                        giftBtn.removeAttribute('data-gift-active');
+                    }
+                });
+            }
+        })();
+        </script>
+
+    {% else %}
+
+        <style>
+            .package-modal-bottom header {
+                background: var(--third-background);
+                border-radius: 5px 5px 0 0;
+                padding: 20px;
+                display: flex;
+                align-items: center;
+                gap: 20px;
+            }
+            .package-modal-bottom header img {
+                width: 64px;
+                height: 64px;
+                object-fit: contain;
+            }
+            .package-modal-bottom header h3 {
+                font-size: 1.4rem;
+                color: var(--primary-text-color);
+            }
+            @media (min-width: 71.25em) {
+                .modal__content__box { width: 51rem; }
+            }
+            .package-modal-bottom footer {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                background: var(--third-background);
+                border-radius: 0 0 5px 5px;
+                padding: 20px;
+            }
+            .package-modal-bottom-actions {
+                display: flex;
+                align-items: center;
+                gap: 0.5rem;
+                flex-wrap: wrap;
+            }
+            .package-modal-bottom-content { padding: 20px; }
+            .package-modal-bottom-content-description {
+                overflow: auto;
+                max-height: 500px;
+            }
+            .modal__content__box .package__modal__side__header__content__actions--cta {
+                width: max-content;
+                border-radius: 6px;
+                min-height: 42px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-weight: 700;
+                font-size: 1rem;
+                cursor: pointer;
+                outline: 0;
+                border: none;
+                color: var(--primary-text-color);
+                text-decoration: none;
+                transition: .2s ease-in-out;
+                padding: 14px 20px;
+            }
+            .package-modal-bottom-price {
+                gap: 10px;
+                display: flex;
+                font-size: 16px;
+                font-weight: bold;
+                align-items: center;
+            }
+            .package-modal-bottom-price s {
+                color: var(--price-original);
+                font-size: 14px;
+                text-decoration: line-through;
+            }
+            .package-modal-bottom-price p { color: var(--price-normal); }
+            .package-modal-bottom-price p.on-sale { color: var(--price-sale); }
+        </style>
+
+        <div class="package-modal-bottom">
+            <header>
+                {% set packageHasImage = package.image.url != "/assets/img/empty.png" %}
+                {% if packageHasImage %}
+                    <img src="{{ package.image.url }}" alt="Rank">
+                {% endif %}
+                <h3>{{ package.name }}</h3>
+                {% if config('modal_type') == "bottombar" %}
+                    <button class="modal__content--close" aria-label="Close Modal" onclick="closeModal()">
+                        <i aria-hidden="true" class="mdi mdi-window-close"></i>
+                    </button>
+                {% endif %}
+            </header>
+            <div class="package-modal-bottom-content">
+                {% if not package.purchasable %}
+                    <div class="package__modal__side__header__content__notallowed">
+                        <p>{{ package.reason }}</p>
+                    </div>
+                {% endif %}
+                <div class="package__modal__content__slider"></div>
+                <div class="package-modal-bottom-content-description" data-simplebar data-simplebar-auto-hide="true">
+                    {{ package.description|raw }}
+                </div>
+            </div>
+            <footer>
+                <div class="package-modal-bottom-price">
+                    {% if package.customPrice == false and package.price > 0 %}
+                        {% if package.discount.applied %}
+                            <s>{% if not currencyAfter %}{{ currencySymbol }}{% endif %}{{ package.discount.original|money }}{% if currencyAfter %} {{ currencySymbol }}{% endif %}</s>
+                            <p class="on-sale">{% if not currencyAfter %}{{ currencySymbol }}{% endif %}{{ package.price|money }}{% if currencyAfter %} {{ currencySymbol }}{% endif %}</p>
+                        {% else %}
+                            <p>{% if not currencyAfter %}{{ currencySymbol }}{% endif %}{{ package.price|money }}{% if currencyAfter %} {{ currencySymbol }}{% endif %}</p>
+                        {% endif %}
+                    {% elseif package.customPrice %}
+                        <p>{{ lang.choosePrice }}</p>
+                    {% else %}
+                        <p>{{ lang.item_is_free }}</p>
+                    {% endif %}
+                </div>
+                {% set isPackageGiftable = package.disable_gifting == false and package.storeGiftingEnabled %}
+                <div class="package-modal-bottom-actions">
+                    {% if package.basket %}
+                        <a href="/checkout/packages/remove/{{ package.id }}"
+                           class="package__modal__side__header__content__actions--cta" data-type-cta="remove">
+                            {{ lang.remove_from_cart }}
+                        </a>
+                    {% else %}
+                        {% if package.type != "single" %}
+                            <a href="/checkout/packages/add/{{ package.id }}/subscribe"
+                               {% if package.purchasable == false %}disabled{% endif %}
+                               class="package__modal__side__header__content__actions--cta"
+                               data-type-cta="add" {{ redirectToLogin }}>
+                                {{ __("Subscribe") }}
+                            </a>
+                        {% endif %}
+                        {% if package.type != "subscription" %}
+                            <a href="/checkout/packages/add/{{ package.id }}/single"
+                               class="package__modal__side__header__content__actions--cta"
+                               {% if package.purchasable == false %}disabled{% endif %}
+                               data-type-cta="add" {{ redirectToLogin }}>
+                                Comprar ahora
+                            </a>
+                        {% endif %}
+                    {% endif %}
+                    {% if isPackageGiftable %}
+                        <div class="gift__section">
+                            <button class="package__modal__side__header__content__actions--cta" data-type-cta="gift">
+                                <span>{{ lang.giftButton }}</span>
+                                <i class="mdi mdi-gift" aria-hidden="true"></i>
+                            </button>
+                        </div>
+                    {% endif %}
+                </div>
+            </footer>
+            <form name="gift-form" class="package__modal__side__header__content__actions__gift"
+                  method="get" action="/checkout/packages/add/{{ package.id }}/single/gift">
+                <input type="text" name="username" placeholder="{{ lang.giftPackageTo }}"/>
+                <button type="submit" aria-label="Gift">
+                    <i aria-hidden="true" class="mdi mdi-arrow-right-drop-circle"></i>
+                </button>
+            </form>
+        </div>
+    {% endif %}
+
+{% endblock %}

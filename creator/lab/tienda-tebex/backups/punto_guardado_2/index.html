@@ -1,0 +1,1826 @@
+{% extends "layout.html" %}
+{% block content %}
+<style>
+  /* ══════════════════════════════════════════════════════════════════
+     THUNDERMC STOREFRONT — DARK THEME
+     ══════════════════════════════════════════════════════════════════ */
+
+  /* ── VIEWPORT HERO WRAPPER (OCUPA EXACTAMENTE LA PRIMERA PANTALLA) ── */
+  .tz-hero-viewport-section {
+    width: 100vw;
+    margin-left: -50vw;
+    left: 50%;
+    right: 50%;
+    margin-right: -50vw;
+    position: relative;
+    box-sizing: border-box;
+    padding-bottom: 20px;
+    margin-bottom: 30px;
+  }
+
+  /* ── TOP PRODUCTS HERO SLIDER ── */
+  .tz-hero-slider {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    background: #090d16;
+    overflow: hidden;
+    box-sizing: border-box;
+  }
+  .tz-hero-slider::after {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    height: 70px;
+    background: linear-gradient(to bottom, transparent, #090d16);
+    pointer-events: none;
+    z-index: 5;
+  }
+  
+  .tz-slides-track {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+  .tz-slide-item {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(100%);
+    transition: transform 0.65s cubic-bezier(0.25, 1, 0.5, 1), opacity 0.4s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+  }
+  .tz-slide-item.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0);
+    z-index: 3;
+  }
+  .tz-slide-item.prev-slide {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(-100%);
+    z-index: 1;
+  }
+
+  /* INDIVIDUAL SLIDE BACKGROUNDS WITH AMBIENT GRADIENTS */
+  .tz-slide-bg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center 30%;
+    opacity: 0.55;
+    pointer-events: none;
+    z-index: 1;
+  }
+  .tz-slide-radial {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 2;
+  }
+
+  .tz-slide-inner {
+    max-width: 1400px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 30px 48px;
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr;
+    align-items: center;
+    gap: 48px;
+    box-sizing: border-box;
+    position: relative;
+    z-index: 4;
+  }
+  .tz-slide-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 0;
+    background: transparent !important;
+    border: none !important;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 800;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+    margin-bottom: 14px;
+  }
+  .tz-slide-badge i { font-size: 18px; }
+  .tz-slide-title {
+    font-family: 'Plus Jakarta Sans', 'Montserrat', sans-serif;
+    font-size: clamp(38px, 4.8vw, 56px);
+    font-weight: 800;
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: -0.8px;
+    line-height: 1.05;
+    margin: 0 0 16px 0;
+    text-shadow: 0 4px 24px rgba(0,0,0,0.7);
+  }
+  .tz-slide-sub {
+    font-family: 'Be Vietnam Pro', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: #94a3b8;
+    line-height: 1.55;
+    margin: 0 0 28px 0;
+    max-width: 600px;
+  }
+  .tz-slide-cta-row {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+  .tz-slide-cta {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    padding: 15px 32px;
+    border: none;
+    border-radius: 12px;
+    font-family: 'Plus Jakarta Sans', 'Be Vietnam Pro', sans-serif;
+    font-size: 14.5px;
+    font-weight: 800;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+    transition: transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.2s ease;
+    cursor: pointer;
+    overflow: hidden;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.4);
+  }
+  .tz-slide-cta::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -120%;
+    width: 60%;
+    height: 100%;
+    background: linear-gradient(
+      115deg,
+      transparent 0%,
+      rgba(255, 255, 255, 0.12) 30%,
+      rgba(255, 255, 255, 0.45) 50%,
+      rgba(255, 255, 255, 0.12) 70%,
+      transparent 100%
+    );
+    transform: skewX(-22deg);
+    animation: tzButtonShine 3.6s ease-in-out infinite;
+    pointer-events: none;
+  }
+  @keyframes tzButtonShine {
+    0% {
+      left: -120%;
+    }
+    30%, 100% {
+      left: 180%;
+    }
+  }
+  .tz-slide-cta:hover {
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 10px 26px rgba(0, 0, 0, 0.55);
+  }
+  .tz-slide-cta:active { transform: translateY(0) scale(0.99); }
+  .tz-slide-cta i { font-size: 20px; position: relative; z-index: 1; }
+  .tz-slide-cta span, .tz-slide-cta { position: relative; z-index: 1; }
+
+  /* Vivid Rich Green CTA for Slide 1 (Pack Inicial) */
+  .tz-cta-green {
+    background: linear-gradient(135deg, #16a34a 0%, #15803d 100%);
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+  }
+  .tz-cta-green:hover { background: linear-gradient(135deg, #22c55e 0%, #16a34a 100%); }
+
+  /* Royal Red Elegant CTA for Slide 2 (Club Thunder) */
+  .tz-cta-royal-red {
+    background: linear-gradient(135deg, #dc2626 0%, #b91c1c 100%);
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+  }
+  .tz-cta-royal-red:hover { background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%); }
+
+  /* Mystic Purple CTA for Slide 3 (Llaves) */
+  .tz-cta-purple {
+    background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+  }
+  .tz-cta-purple:hover { background: linear-gradient(135deg, #a78bfa 0%, #8b5cf6 100%); }
+
+  .tz-slide-media {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+  .tz-slide-img {
+    max-height: 480px;
+    max-width: 100%;
+    object-fit: contain;
+    filter: drop-shadow(0 24px 50px rgba(0,0,0,0.7));
+    transition: transform 0.4s ease;
+  }
+  .tz-slide-item.active .tz-slide-img {
+    transform: scale(1.03);
+  }
+
+  /* SLIDER CONTROLS (SUBTLE ARROWS & FLAT STRAIGHT BARS) */
+  .tz-slider-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: transparent;
+    border: none;
+    color: #475569;
+    font-size: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 10;
+    padding: 0;
+    transition: color 0.15s ease;
+  }
+  .tz-slider-btn:hover {
+    color: #cbd5e1;
+    background: transparent;
+    transform: translateY(-50%);
+  }
+  .tz-slider-btn.prev { left: 24px; }
+  .tz-slider-btn.next { right: 24px; }
+
+  .tz-slider-dots {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    z-index: 10;
+  }
+  .tz-slider-dot {
+    width: 36px;
+    height: 4px;
+    border-radius: 0;
+    background: #334155;
+    cursor: pointer;
+    transition: background 0.15s ease;
+  }
+  .tz-slider-dot.active {
+    width: 36px;
+    background: #ffffff;
+  }
+
+  @media (max-width: 960px) {
+    .tz-hero-viewport-section { height: auto; min-height: auto; }
+    .tz-hero-slider { height: auto; min-height: 460px; }
+    .tz-slide-inner { grid-template-columns: 1fr; text-align: center; padding: 24px 20px; }
+    .tz-slide-sub { max-width: 100%; }
+    .tz-slide-cta-row { justify-content: center; }
+    .tz-slide-media { margin-top: 16px; }
+    .tz-slide-img { max-height: 280px; }
+    .tz-slider-btn { display: none; }
+  }
+
+  /* ── RECENT PURCHASES (CIERRA EXACTAMENTE LA PARTE INFERIOR DEL VIEWPORT) ── */
+  .tz-recent-purchases-strip {
+    max-width: 1400px;
+    width: 100%;
+    margin: 20px auto 0 auto;
+    padding: 0 32px;
+    box-sizing: border-box;
+  }
+  .tz-recent-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 36px;
+    padding: 14px 0;
+    background: transparent;
+    border: none;
+    box-sizing: border-box;
+  }
+  .tz-recent-left-static {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    flex-shrink: 0;
+    padding-right: 28px;
+    border-right: 1px solid rgba(255, 255, 255, 0.08);
+  }
+  .tz-recent-cart-icon-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+  .tz-recent-cart-icon-wrap i {
+    font-size: 44px;
+    color: #94a3b8;
+    line-height: 1;
+  }
+  .tz-recent-info-text { display: flex; flex-direction: column; gap: 4px; }
+  .tz-recent-headline { font-family: 'Plus Jakarta Sans', 'Be Vietnam Pro', sans-serif; font-size: 15px; font-weight: 800; color: #ffffff; letter-spacing: 0.6px; text-transform: uppercase; }
+  .tz-recent-subheadline { font-family: 'Be Vietnam Pro', sans-serif; font-size: 13px; font-weight: 500; color: #94a3b8; }
+  
+  .tz-recent-ticker {
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+    flex: 1;
+    min-width: 0;
+    mask-image: linear-gradient(to right, transparent 0%, black 3%, black 97%, transparent 100%);
+    -webkit-mask-image: linear-gradient(to right, transparent 0%, black 3%, black 97%, transparent 100%);
+  }
+  .tz-recent-ticker-track {
+    display: inline-flex;
+    align-items: center;
+    gap: 18px;
+    animation: tzRecentScroll 80s linear infinite;
+    will-change: transform;
+    padding: 10px 0;
+  }
+  .tz-recent-ticker-track:hover { animation-play-state: paused; }
+  @keyframes tzRecentScroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+  .tz-purchase-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 16px;
+    padding: 10px 20px 10px 12px;
+    background: rgba(13, 18, 31, 0.9);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 16px;
+    font-family: 'Be Vietnam Pro', 'Poppins', sans-serif;
+    color: #ffffff;
+    white-space: nowrap;
+    box-shadow: 0 4px 18px rgba(0,0,0,0.4);
+    flex-shrink: 0;
+    transition: transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1), border-color 0.2s ease, background 0.2s ease;
+  }
+  .tz-purchase-pill:hover {
+    transform: translateY(-3px) scale(1.02);
+    border-color: rgba(250, 204, 21, 0.35);
+    background: #111827;
+  }
+  .tz-pp-avatar-wrap {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    background: radial-gradient(circle, rgba(250, 204, 21, 0.15) 0%, rgba(15, 23, 42, 0.9) 100%);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    flex-shrink: 0;
+  }
+  .tz-pp-avatar {
+    width: 44px;
+    height: 44px;
+    object-fit: cover;
+    image-rendering: pixelated;
+  }
+  .tz-pp-content {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+  }
+  .tz-pp-name {
+    font-weight: 800;
+    font-size: 14px;
+    color: #ffffff;
+    line-height: 1.2;
+  }
+  .tz-pp-item-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 13px;
+  }
+  .tz-pp-item {
+    color: #94a3b8;
+    font-weight: 600;
+  }
+  .tz-pp-price {
+    color: #facc15;
+    font-weight: 800;
+  }
+  @media (max-width: 860px) {
+    .tz-recent-box { flex-direction: column; align-items: flex-start; gap: 14px; }
+    .tz-recent-left-static { border-right: none; padding-right: 0; }
+    .tz-recent-ticker { width: 100%; }
+  }
+
+  /* ── STORE LAYOUT (RECUADRO UNIFICADO: CATÁLOGO Y TIENDA EN UN MARCO ELEGANTE) ── */
+  .body--with-sidebar {
+    background: transparent !important;
+    min-height: 100vh;
+    padding: 56px 0 80px 0 !important;
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  .tz-store-layout {
+    max-width: 1400px !important;
+    width: 100% !important;
+    margin: 0 auto !important;
+    padding: 36px 40px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 36px !important;
+    background: linear-gradient(180deg, rgba(13, 18, 32, 0.7) 0%, rgba(9, 13, 22, 0.9) 100%) !important;
+    border: 1px solid rgba(255, 255, 255, 0.07) !important;
+    border-radius: 24px !important;
+    box-shadow: 0 16px 48px rgba(0, 0, 0, 0.45) !important;
+    box-sizing: border-box !important;
+  }
+
+  /* ── MAIN CATALOG NAV BAR (UNIFICADO: TÍTULO Y CATEGORÍAS EN UN SOLO BLOQUE) ── */
+  .tz-catalog-unified-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 32px;
+    width: 100%;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    box-sizing: border-box;
+  }
+
+  .tz-catalog-brand-side {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+  }
+  .tz-catalog-brand-icon {
+    font-size: 24px;
+    color: #ffffff;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+  }
+  .tz-catalog-brand-title {
+    font-family: 'Plus Jakarta Sans', 'Montserrat', sans-serif;
+    font-size: 26px;
+    font-weight: 800;
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: -0.3px;
+    margin: 0;
+    line-height: 1;
+  }
+
+  /* ── CATEGORY LINK TABS (SIN SUBRAYADO, AGRANDADAS CON ICONO DE BOLSA) ── */
+  .tz-categories-horizontal-wrap {
+    background: transparent !important;
+    border: none !important;
+    padding: 0 !important;
+    box-sizing: border-box;
+    flex: 1;
+    min-width: 0;
+  }
+
+  .tz-categories-scroll-track {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    gap: 24px;
+    overflow-x: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    box-sizing: border-box;
+  }
+  .tz-categories-scroll-track::-webkit-scrollbar { display: none; }
+
+  .tz-cat-card-item {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+    padding: 8px 0;
+    background: transparent !important;
+    border: none !important;
+    text-decoration: none !important;
+    cursor: pointer;
+    box-sizing: border-box;
+    white-space: nowrap;
+    transition: all 0.2s ease;
+    box-shadow: none !important;
+  }
+  .tz-cat-card-img-icon {
+    width: 26px;
+    height: 26px;
+    object-fit: contain;
+    filter: drop-shadow(0 2px 6px rgba(0,0,0,0.6));
+    transition: transform 0.2s ease;
+  }
+  .tz-cat-card-title {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    color: #94a3b8;
+    letter-spacing: 0.2px;
+    text-transform: uppercase;
+    text-decoration: none !important;
+    transition: color 0.2s ease;
+  }
+
+  /* Hover State */
+  .tz-cat-card-item:hover .tz-cat-card-title {
+    color: #facc15;
+  }
+  .tz-cat-card-item:hover .tz-cat-card-img-icon {
+    transform: translateY(-2px) scale(1.15);
+  }
+  .tz-cat-card-item:active {
+    transform: translateY(1px);
+  }
+
+  @media (max-width: 1180px) {
+    .tz-catalog-unified-bar {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 16px;
+    }
+    .tz-categories-scroll-track {
+      justify-content: flex-start;
+      gap: 18px;
+    }
+  }
+
+  /* ── 2 HORIZONTAL PROMO BANNERS UNDER CATALOG ── */
+  .tz-catalog-promo-banners-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  .tz-promo-banner-card {
+    position: relative;
+    border-radius: 18px;
+    padding: 28px 32px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-decoration: none !important;
+    overflow: hidden;
+    box-sizing: border-box;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.25s ease, box-shadow 0.25s ease;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    min-height: 130px;
+  }
+  .tz-promo-banner-card.banner-invasion {
+    background: linear-gradient(135deg, rgba(239, 68, 68, 0.18) 0%, rgba(15, 23, 42, 0.95) 75%), #0c111e;
+    border-color: rgba(239, 68, 68, 0.25);
+  }
+  .tz-promo-banner-card.banner-packs {
+    background: linear-gradient(135deg, rgba(250, 204, 21, 0.16) 0%, rgba(15, 23, 42, 0.95) 75%), #0c111e;
+    border-color: rgba(250, 204, 21, 0.25);
+  }
+  .tz-promo-banner-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.55);
+  }
+  .tz-promo-banner-card.banner-invasion:hover {
+    border-color: rgba(239, 68, 68, 0.6);
+    box-shadow: 0 16px 40px rgba(239, 68, 68, 0.2);
+  }
+  .tz-promo-banner-card.banner-packs:hover {
+    border-color: rgba(250, 204, 21, 0.6);
+    box-shadow: 0 16px 40px rgba(250, 204, 21, 0.2);
+  }
+  .tz-promo-content {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    z-index: 2;
+  }
+  .tz-promo-tag {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 11.5px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+  }
+  .banner-invasion .tz-promo-tag { color: #f87171; }
+  .banner-packs .tz-promo-tag { color: #facc15; }
+
+  .tz-promo-title {
+    font-family: 'Plus Jakarta Sans', 'Montserrat', sans-serif;
+    font-size: 24px;
+    font-weight: 800;
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: -0.3px;
+    line-height: 1.1;
+    margin: 0;
+  }
+  .tz-promo-sub {
+    font-family: 'Be Vietnam Pro', sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    color: #94a3b8;
+    margin: 4px 0 0 0;
+  }
+  .tz-promo-badge-action {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 10px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 12px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+    transition: gap 0.2s ease;
+  }
+  .banner-invasion .tz-promo-badge-action { color: #fca5a5; }
+  .banner-packs .tz-promo-badge-action { color: #fde047; }
+  .tz-promo-banner-card:hover .tz-promo-badge-action { gap: 10px; }
+
+  .tz-promo-art {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+    flex-shrink: 0;
+  }
+  .tz-promo-art img {
+    height: 90px;
+    object-fit: contain;
+    filter: drop-shadow(0 8px 16px rgba(0,0,0,0.5));
+    transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  }
+  .tz-promo-banner-card:hover .tz-promo-art img {
+    transform: scale(1.1) rotate(-3deg);
+  }
+
+  @media (max-width: 860px) {
+    .tz-catalog-promo-banners-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  /* ── ANIMACIÓN DE APARICIÓN SUAVE EN SCROLL PARA LOS PAQUETES ── */
+  .tz-card {
+    position: relative;
+    background: #0d121f;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 16px;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    text-align: left;
+    overflow: hidden;
+    box-sizing: border-box;
+    width: 100%;
+    min-height: 420px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+    /* Animación de entrada minimalista y limpia */
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.55s cubic-bezier(0.16, 1, 0.3, 1), transform 0.55s cubic-bezier(0.16, 1, 0.3, 1), background 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+    will-change: opacity, transform;
+  }
+  .tz-card.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  .tz-card:hover {
+    transform: translateY(-6px);
+    background: #111827;
+    border-color: rgba(255, 255, 255, 0.15);
+    box-shadow: 0 16px 36px rgba(0, 0, 0, 0.5);
+  }
+
+  /* ── CATALOG ALL SECTIONS VISIBLE VERTICALLY ── */
+  .tz-catalog-content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-width: 0;
+    gap: 60px;
+  }
+  .tz-category-section {
+    display: flex !important;
+    flex-direction: column;
+    width: 100%;
+    scroll-margin-top: 100px;
+  }
+  .tz-section-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 42px;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    width: 100%;
+    box-sizing: border-box;
+  }
+  .tz-section-title-box {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .tz-section-title-box h2 {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-family: 'Bakbak One', 'Be Vietnam Pro', sans-serif;
+    font-size: 22px;
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin: 0;
+    line-height: 1;
+  }
+  .tz-cards-grid {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)) !important;
+    gap: 24px !important;
+    width: 100% !important;
+  }
+
+  /* ── CARDS (ELONGATED & STRUCTURED: IMAGE HEADER + INFO BODY) ── */
+  .tz-card {
+    position: relative;
+    background: #0d121f;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 18px;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    text-align: left;
+    transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), background 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+    overflow: hidden;
+    box-sizing: border-box;
+    width: 100%;
+    min-height: 420px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+  }
+  .tz-card:hover {
+    transform: translateY(-6px);
+    background: #111827;
+    border-color: rgba(250, 204, 21, 0.3);
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.6);
+  }
+
+  /* UPPER IMAGE SECTION */
+  .tz-card-image-wrap {
+    height: 210px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background: radial-gradient(circle at 50% 60%, rgba(250, 204, 21, 0.05) 0%, rgba(9, 13, 22, 0.95) 75%);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    cursor: pointer;
+    overflow: hidden;
+  }
+  .tz-card-image-wrap::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: url('/Assets/mc_bedrock_minimal.svg');
+    background-size: 48px 48px;
+    opacity: 0.12;
+    pointer-events: none;
+  }
+  .tz-card-image-wrap img {
+    max-height: 155px;
+    max-width: 80%;
+    object-fit: contain;
+    transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+    position: relative;
+    z-index: 2;
+    filter: drop-shadow(0 10px 20px rgba(0,0,0,0.55));
+  }
+  .tz-card:hover .tz-card-image-wrap img {
+    transform: scale(1.08) translateY(-4px);
+  }
+
+  /* LOWER INFO SECTION */
+  .tz-card-info-box {
+    padding: 20px 22px 22px 22px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    justify-content: space-between;
+    background: #0d121f;
+  }
+  .tz-card-top-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-bottom: 16px;
+  }
+  .tz-card-title {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 17px;
+    font-weight: 800;
+    color: #ffffff;
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 0.2px;
+    line-height: 1.25;
+  }
+  .tz-card-desc-snippet {
+    font-family: 'Be Vietnam Pro', sans-serif;
+    font-size: 12.5px;
+    color: #94a3b8;
+    margin: 0;
+    line-height: 1.45;
+  }
+
+  .tz-card-bottom-row {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    margin-top: auto;
+  }
+  .tz-card-price-box {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    padding-top: 12px;
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+  }
+  .tz-price-tag-label {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 11px;
+    font-weight: 800;
+    color: #64748b;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+  }
+  .tz-price-values {
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+  }
+  .tz-price-old {
+    font-family: 'Be Vietnam Pro', sans-serif;
+    font-size: 13px;
+    color: #64748b;
+    text-decoration: line-through;
+    font-weight: 600;
+  }
+  .tz-price-current {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 20px;
+    font-weight: 800;
+    color: #facc15;
+    letter-spacing: -0.3px;
+  }
+
+  /* BADGES */
+  .tz-badge-popular {
+    position: absolute;
+    top: 12px; left: 12px;
+    background: #c650a7;
+    color: #ffffff;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 10px; font-weight: 800;
+    padding: 4px 10px;
+    border-radius: 6px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    z-index: 5;
+    box-shadow: 0 2px 8px rgba(198, 80, 167, 0.4);
+  }
+  .tz-badge-best {
+    position: absolute;
+    top: 12px; right: 12px;
+    background: #facc15;
+    color: #0b0f19;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 10px; font-weight: 800;
+    padding: 4px 10px;
+    border-radius: 6px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    z-index: 5;
+    box-shadow: 0 2px 8px rgba(250, 204, 21, 0.3);
+  }
+  .tz-discount-pill {
+    position: absolute;
+    bottom: 12px; left: 12px;
+    background: rgba(34, 197, 94, 0.15);
+    border: 1px solid rgba(34, 197, 94, 0.35);
+    backdrop-filter: blur(8px);
+    color: #4ade80;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 10.5px; font-weight: 800;
+    padding: 3px 8px;
+    border-radius: 6px;
+    z-index: 5;
+  }
+
+  .tz-card-actions { display: flex; align-items: center; width: 100%; }
+  
+  /* Botón de Compra Rápida en Tarjetas */
+  .tz-btn-buy {
+    width: 100%;
+    height: 42px;
+    background: #facc15;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    border: none;
+    border-radius: 10px;
+    color: #0b0f19;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 13.5px;
+    font-weight: 800;
+    letter-spacing: 0.2px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.15s ease;
+    box-shadow: 0 4px 12px rgba(250, 204, 21, 0.2);
+  }
+  .tz-btn-buy i { font-size: 17px; }
+  .tz-btn-buy:hover {
+    background: #fde047;
+    transform: translateY(-1px);
+  }
+  .tz-btn-buy:active {
+    transform: translateY(0);
+    background: #eab308;
+  }
+
+  @media (max-width: 960px) {
+    .tz-store-layout { grid-template-columns: 1fr !important; }
+    .tz-sidebar { position: static; }
+  }
+</style>
+
+<!-- ══════ VIEWPORT HERO SECTION (PRIMERA PANTALLA EXCLUSIVA) ══════ -->
+<section class="tz-hero-viewport-section">
+
+  <!-- ══════ TOP PRODUCTS HERO SLIDER (ESTILO AMAZON CLEAN) ══════ -->
+  <div class="tz-hero-slider" id="tzHeroSlider">
+  
+  <div class="tz-slides-track">
+    <!-- SLIDE 1: PACK INICIAL / AVENTURERO -->
+    <div class="tz-slide-item active" data-slide="0">
+      <div class="tz-slide-bg" style="background-image: url('/Assets/spawn_bg.png'); opacity: 0.45; background-position: center center;"></div>
+      <div class="tz-slide-radial" style="background: linear-gradient(90deg, rgba(9, 13, 22, 0.88) 0%, rgba(9, 13, 22, 0.65) 45%, rgba(9, 13, 22, 0.2) 100%);"></div>
+      <div class="tz-slide-inner">
+        <div>
+          <div class="tz-slide-badge" style="color: #4ade80; border-color: rgba(74, 222, 128, 0.3); background: rgba(22, 163, 74, 0.12);"><i class="mdi mdi-package-variant-closed"></i> Pack de Bienvenida</div>
+          <h1 class="tz-slide-title">Pack Inicial<br>Aventurero</h1>
+          <p class="tz-slide-sub">El kit definitivo para arrancar tu aventura con ventaja: armadura reforzada, herramientas iniciales y bolsa de monedas.</p>
+          <div class="tz-slide-cta-row">
+            <a href="#cat-packs" class="tz-slide-cta tz-cta-green"><i class="mdi mdi-cart-outline"></i> Ver Pack Inicial</a>
+          </div>
+        </div>
+        <div class="tz-slide-media">
+          <img src="/Assets/hero_starter_pack.png" alt="Pack Inicial" class="tz-slide-img" style="max-height: 440px;">
+        </div>
+      </div>
+    </div>
+
+    <!-- SLIDE 2: CLUB THUNDER (VIP) -->
+    <div class="tz-slide-item" data-slide="1">
+      <div class="tz-slide-bg" style="background-image: url('/Assets/slide3_bg.png'); opacity: 0.45; background-position: center center;"></div>
+      <div class="tz-slide-radial" style="background: linear-gradient(90deg, rgba(9, 13, 22, 0.88) 0%, rgba(9, 13, 22, 0.65) 45%, rgba(9, 13, 22, 0.2) 100%);"></div>
+      <div class="tz-slide-inner">
+        <div>
+          <div class="tz-slide-badge" style="color: #f87171; border-color: rgba(248, 113, 113, 0.3); background: rgba(220, 38, 38, 0.12);"><i class="mdi mdi-crown"></i> Membresía Real</div>
+          <h1 class="tz-slide-title">Únete al<br>Club Thunder</h1>
+          <p class="tz-slide-sub">Desbloquea multiplicadores diarios de orbes, pases mensuales y recompensas automáticas en todos los modos con trato preferencial.</p>
+          <div class="tz-slide-cta-row">
+            <a href="#cat-club-vip" class="tz-slide-cta tz-cta-royal-red"><i class="mdi mdi-crown-outline"></i> Ver Club Thunder</a>
+          </div>
+        </div>
+        <div class="tz-slide-media">
+          <img src="/Assets/hero_club_thunder.webp" alt="Club Thunder" class="tz-slide-img" style="max-height: 440px;">
+        </div>
+      </div>
+    </div>
+
+    <!-- SLIDE 3: CATÁLOGO COMPRAR LLAVES -->
+    <div class="tz-slide-item" data-slide="2">
+      <div class="tz-slide-bg" style="background-image: url('/Assets/slide2_bg.png'); opacity: 0.45; background-position: center center;"></div>
+      <div class="tz-slide-radial" style="background: linear-gradient(90deg, rgba(9, 13, 22, 0.88) 0%, rgba(9, 13, 22, 0.65) 45%, rgba(9, 13, 22, 0.2) 100%);"></div>
+      <div class="tz-slide-inner">
+        <div>
+          <div class="tz-slide-badge" style="color: #c084fc; border-color: rgba(192, 132, 252, 0.3); background: rgba(139, 92, 246, 0.12);"><i class="mdi mdi-key-variant"></i> Cofres & Mazmorras</div>
+          <h1 class="tz-slide-title">Catálogo de<br>Llaves Míticas</h1>
+          <p class="tz-slide-sub">Abre cajas de recompensas épicas, llaves divinas y pases de jefe con armamento exclusivo para tu clan.</p>
+          <div class="tz-slide-cta-row">
+            <a href="#cat-llaves-premium" class="tz-slide-cta tz-cta-purple"><i class="mdi mdi-key-plus"></i> Ver Llaves</a>
+          </div>
+        </div>
+        <div class="tz-slide-media">
+          <img src="/Assets/hero_keys.png" alt="Llaves Míticas ThunderMC" class="tz-slide-img" style="max-height: 440px;">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Controles y Paginación -->
+  <button class="tz-slider-btn prev" id="tzSlidePrev" aria-label="Anterior"><i class="mdi mdi-chevron-left"></i></button>
+  <button class="tz-slider-btn next" id="tzSlideNext" aria-label="Siguiente"><i class="mdi mdi-chevron-right"></i></button>
+
+  <div class="tz-slider-dots" id="tzSlideDots">
+    <span class="tz-slider-dot active" data-index="0"></span>
+    <span class="tz-slider-dot" data-index="1"></span>
+    <span class="tz-slider-dot" data-index="2"></span>
+  </div>
+</section>
+
+<script>
+(function() {
+  var slides = document.querySelectorAll('.tz-slide-item');
+  var dots = document.querySelectorAll('.tz-slider-dot');
+  var prevBtn = document.getElementById('tzSlidePrev');
+  var nextBtn = document.getElementById('tzSlideNext');
+  var current = 0;
+  var timer = null;
+  var interval = 6000; // Exactamente 6.0 segundos
+
+  function showSlide(index) {
+    var prevIndex = current;
+    if (index >= slides.length) index = 0;
+    if (index < 0) index = slides.length - 1;
+    current = index;
+
+    slides.forEach(function(s, i) {
+      s.classList.remove('active');
+      s.classList.remove('prev-slide');
+      if (i === current) {
+        s.classList.add('active');
+      } else if (i === prevIndex) {
+        s.classList.add('prev-slide');
+      }
+    });
+    dots.forEach(function(d, i) {
+      d.classList.toggle('active', i === current);
+    });
+  }
+
+  function startTimer() {
+    stopTimer();
+    timer = setInterval(function() {
+      showSlide(current + 1);
+    }, interval);
+  }
+
+  function stopTimer() {
+    if (timer) {
+      clearInterval(timer);
+      timer = null;
+    }
+  }
+
+  if (prevBtn) {
+    prevBtn.addEventListener('click', function() {
+      showSlide(current - 1);
+      startTimer();
+    });
+  }
+
+  if (nextBtn) {
+    nextBtn.addEventListener('click', function() {
+      showSlide(current + 1);
+      startTimer();
+    });
+  }
+
+  dots.forEach(function(dot) {
+    dot.addEventListener('click', function() {
+      var idx = parseInt(this.getAttribute('data-index'), 10);
+      showSlide(idx);
+      startTimer();
+    });
+  });
+
+  var heroSlider = document.getElementById('tzHeroSlider');
+  if (heroSlider) {
+    heroSlider.addEventListener('mouseenter', stopTimer);
+    heroSlider.addEventListener('mouseleave', startTimer);
+  }
+
+  startTimer();
+})();
+</script>
+
+<!-- ══════ COMPRAS RECIENTES (CARRUSEL SUPERIOR) ══════ -->
+<div class="tz-recent-purchases-strip" id="tz-recent-purchases">
+  <div class="tz-recent-box">
+    <div class="tz-recent-left-static">
+      <div class="tz-recent-cart-icon-wrap">
+        <i class="mdi mdi-cart-check"></i>
+      </div>
+      <div class="tz-recent-info-text">
+        <span class="tz-recent-headline">COMPRAS RECIENTES</span>
+        <span class="tz-recent-subheadline">Todos ellos han apoyado nuestro servidor</span>
+      </div>
+    </div>
+    <div class="tz-recent-ticker">
+      <div class="tz-recent-ticker-track" id="tz-recent-track">
+        <!-- Generado dinámicamente -->
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+<script>
+(function() {
+  var purchases = [
+    { nick: 'Xander_MC', item: 'Rango Thunder', price: '25.99€' },
+    { nick: 'LunaStrike', item: '2.500 Zafiros', price: '14.99€' },
+    { nick: 'DragonKing99', item: 'Rango MVP', price: '13.99€' },
+    { nick: 'NightWolf_', item: 'Llave Mítica x10', price: '8.99€' },
+    { nick: 'SkyBreakerX', item: 'Bundle Leyenda', price: '19.99€' },
+    { nick: 'TitanSlayer', item: 'Rango VIP', price: '7.49€' },
+    { nick: 'CrystalMage', item: '6.000 Zafiros', price: '29.99€' },
+    { nick: 'PhantomRun', item: 'Battle Pass Premium', price: '4.99€' },
+    { nick: 'StarForge_', item: 'Rango TITÁN', price: '41.99€' },
+    { nick: 'VoidWalker', item: 'Llave Épica x5', price: '4.99€' },
+  ];
+  var track = document.getElementById('tz-recent-track');
+  if (!track) return;
+  
+  function createPill(p) {
+    var pill = document.createElement('div');
+    pill.className = 'tz-purchase-pill';
+    pill.innerHTML = '<div class="tz-pp-avatar-wrap">'
+      +'<img class="tz-pp-avatar" src="https://minotar.net/bust/'+p.nick+'/48" onerror="this.src=\'https://minotar.net/avatar/'+p.nick+'/32\'" alt="'+p.nick+'">'
+      +'</div>'
+      +'<div class="tz-pp-content">'
+      +'<span class="tz-pp-name">'+p.nick+'</span>'
+      +'<div class="tz-pp-item-row">'
+      +'<span class="tz-pp-item">'+p.item+'</span>'
+      +'<span class="tz-pp-price">'+p.price+'</span>'
+      +'</div>'
+      +'</div>';
+    return pill;
+  }
+
+  // Double render for seamless infinite marquee loop
+  for (var i = 0; i < purchases.length; i++) track.appendChild(createPill(purchases[i]));
+  for (var j = 0; j < purchases.length; j++) track.appendChild(createPill(purchases[j]));
+})();
+</script>
+
+<!-- ══════ CATÁLOGO ══════ -->
+<div class="body--with-sidebar" id="store-catalog-section">
+    <div class="tz-store-layout">
+        
+        <!-- BARRA UNIFICADA DEL CATÁLOGO (TÍTULO A LA IZQUIERDA + CATEGORÍAS A LA DERECHA) -->
+        <div class="tz-catalog-unified-bar">
+            
+            <div class="tz-catalog-brand-side">
+                <i class="mdi mdi-view-grid-outline tz-catalog-brand-icon"></i>
+                <h2 class="tz-catalog-brand-title">Catálogo</h2>
+            </div>
+
+            <nav class="tz-categories-horizontal-wrap" aria-label="Navegación de Categorías">
+                <div class="tz-categories-scroll-track">
+                    
+                    <!-- 1. RANGOS -->
+                    <a href="#cat-rangos" class="tz-cat-card-item" data-target="cat-rangos">
+                        <img src="/Assets/cat_rangos.webp" alt="Rangos" class="tz-cat-card-img-icon">
+                        <span class="tz-cat-card-title">Rangos</span>
+                    </a>
+
+                    <!-- 2. CLUB VIP -->
+                    <a href="#cat-club-vip" class="tz-cat-card-item" data-target="cat-club-vip">
+                        <img src="/Assets/cat_club_vip.webp" alt="Club VIP" class="tz-cat-card-img-icon">
+                        <span class="tz-cat-card-title">Club VIP</span>
+                    </a>
+
+                    <!-- 3. ZAFIROS -->
+                    <a href="#cat-zafiros" class="tz-cat-card-item" data-target="cat-zafiros">
+                        <img src="/Assets/cat_icon_bag.png" alt="Zafiros" class="tz-cat-card-img-icon">
+                        <span class="tz-cat-card-title">Zafiros</span>
+                    </a>
+
+                    <!-- 4. LLAVES PREMIUM -->
+                    <a href="#cat-llaves-premium" class="tz-cat-card-item" data-target="cat-llaves-premium">
+                        <img src="/Assets/cat_llaves.webp" alt="Llaves Premium" class="tz-cat-card-img-icon">
+                        <span class="tz-cat-card-title">Llaves Premium</span>
+                    </a>
+
+                    <!-- 5. LLAVES -->
+                    <a href="#cat-llaves" class="tz-cat-card-item" data-target="cat-llaves">
+                        <img src="/Assets/cat_llaves.webp" alt="Llaves" class="tz-cat-card-img-icon">
+                        <span class="tz-cat-card-title">Llaves</span>
+                    </a>
+
+                    <!-- 6. PACKS -->
+                    <a href="#cat-packs" class="tz-cat-card-item" data-target="cat-packs">
+                        <img src="/Assets/cat_packs.webp" alt="Packs" class="tz-cat-card-img-icon">
+                        <span class="tz-cat-card-title">Packs</span>
+                    </a>
+
+                    <!-- 7. OTROS -->
+                    <a href="#cat-otros" class="tz-cat-card-item" data-target="cat-otros">
+                        <img src="/Assets/cat_otros.webp" alt="Otros" class="tz-cat-card-img-icon">
+                        <span class="tz-cat-card-title">Otros</span>
+                    </a>
+
+                </div>
+            </nav>
+        </div>
+
+        <!-- 2 BANNERS LARGOS HORIZONTALES (TEMPORADA INVASIÓN & PACKS) -->
+        <div class="tz-catalog-promo-banners-grid">
+            
+            <!-- Banner 1: Temporada Invasión -->
+            <a href="#cat-llaves-premium" class="tz-promo-banner-card banner-invasion">
+                <div class="tz-promo-content">
+                    <span class="tz-promo-tag"><i class="mdi mdi-fire"></i> Evento Activo</span>
+                    <h3 class="tz-promo-title">Temporada Invasión</h3>
+                    <p class="tz-promo-sub">Derrota a los jefes de mazmorra y obtén recompensas exclusivas de evento.</p>
+                    <span class="tz-promo-badge-action">Explorar Evento <i class="mdi mdi-arrow-right"></i></span>
+                </div>
+                <div class="tz-promo-art">
+                    <img src="/Assets/cat_llaves.webp" alt="Temporada Invasión">
+                </div>
+            </a>
+
+            <!-- Banner 2: Packs Promocionales -->
+            <a href="#cat-packs" class="tz-promo-banner-card banner-packs">
+                <div class="tz-promo-content">
+                    <span class="tz-promo-tag"><i class="mdi mdi-tag-multiple"></i> Ahorro Especial</span>
+                    <h3 class="tz-promo-title">Packs</h3>
+                    <p class="tz-promo-sub">Kits de inicio, bundles de progreso y ofertas combinadas con hasta 40% de descuento.</p>
+                    <span class="tz-promo-badge-action">Ver Todos los Packs <i class="mdi mdi-arrow-right"></i></span>
+                </div>
+                <div class="tz-promo-art">
+                    <img src="/Assets/cat_packs.webp" alt="Packs Promocionales">
+                </div>
+            </a>
+
+        </div>
+
+        <!-- CATALOG CONTENT (TODAS LAS CATEGORÍAS VISIBLES HACIA ABAJO) -->
+        <main class="tz-catalog-content">
+
+            <!-- 1. RANGOS -->
+            <section class="tz-category-section" id="cat-rangos">
+                <div class="tz-section-header">
+                    <div class="tz-section-title-box">
+                        <h2>👑 Rangos Permanentes</h2>
+                    </div>
+                </div>
+                <div class="tz-cards-grid">
+                    <div class="tz-card" data-title="Rango VIP">
+                        <div class="tz-card-image-wrap triplezone__toogle--modal" data-remote="/package/1">
+                            <span class="tz-discount-pill">-25% OFF</span>
+                            <img src="https://dunb17ur4ymx4.cloudfront.net/packages/images/627911b9d1fc3d05619a58846649d6f231253039.png" alt="Rango VIP">
+                        </div>
+                        <div class="tz-card-info-box">
+                            <div class="tz-card-top-meta">
+                                <h3 class="tz-card-title">Rango VIP</h3>
+                                <p class="tz-card-desc-snippet">Acceso prioritario, kits VIP y comandos exclusivos.</p>
+                            </div>
+                            <div class="tz-card-bottom-row">
+                                <div class="tz-card-price-box">
+                                    <span class="tz-price-tag-label">Precio</span>
+                                    <div class="tz-price-values">
+                                        <span class="tz-price-old">9.99€</span>
+                                        <span class="tz-price-current">7.49€</span>
+                                    </div>
+                                </div>
+                                <div class="tz-card-actions">
+                                    <button class="tz-btn-buy triplezone__toogle--modal" data-remote="/package/1"><i class="mdi mdi-cart-plus"></i> Agregar al Carrito</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tz-card" data-title="Rango MVP">
+                        <div class="tz-card-image-wrap triplezone__toogle--modal" data-remote="/package/2">
+                            <span class="tz-badge-popular">POPULAR</span>
+                            <span class="tz-discount-pill">-30% OFF</span>
+                            <img src="https://dunb17ur4ymx4.cloudfront.net/packages/images/627911b9d1fc3d05619a58846649d6f231253039.png" alt="Rango MVP">
+                        </div>
+                        <div class="tz-card-info-box">
+                            <div class="tz-card-top-meta">
+                                <h3 class="tz-card-title">Rango MVP</h3>
+                                <p class="tz-card-desc-snippet">Mochilas ampliadas, multiplicador x2 de orbes y cosméticos.</p>
+                            </div>
+                            <div class="tz-card-bottom-row">
+                                <div class="tz-card-price-box">
+                                    <span class="tz-price-tag-label">Precio</span>
+                                    <div class="tz-price-values">
+                                        <span class="tz-price-old">19.99€</span>
+                                        <span class="tz-price-current">13.99€</span>
+                                    </div>
+                                </div>
+                                <div class="tz-card-actions">
+                                    <button class="tz-btn-buy triplezone__toogle--modal" data-remote="/package/2"><i class="mdi mdi-cart-plus"></i> Agregar al Carrito</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tz-card" data-title="Rango THUNDER">
+                        <div class="tz-card-image-wrap triplezone__toogle--modal" data-remote="/package/3">
+                            <span class="tz-badge-best">MEJOR VALOR</span>
+                            <span class="tz-discount-pill">-35% OFF</span>
+                            <img src="https://dunb17ur4ymx4.cloudfront.net/packages/images/627911b9d1fc3d05619a58846649d6f231253039.png" alt="Rango THUNDER">
+                        </div>
+                        <div class="tz-card-info-box">
+                            <div class="tz-card-top-meta">
+                                <h3 class="tz-card-title">Rango THUNDER</h3>
+                                <p class="tz-card-desc-snippet">Beneficios globales, /fly en parcelas y prefijo relámpago.</p>
+                            </div>
+                            <div class="tz-card-bottom-row">
+                                <div class="tz-card-price-box">
+                                    <span class="tz-price-tag-label">Precio</span>
+                                    <div class="tz-price-values">
+                                        <span class="tz-price-old">39.99€</span>
+                                        <span class="tz-price-current">25.99€</span>
+                                    </div>
+                                </div>
+                                <div class="tz-card-actions">
+                                    <button class="tz-btn-buy triplezone__toogle--modal" data-remote="/package/3"><i class="mdi mdi-cart-plus"></i> Agregar al Carrito</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tz-card" data-title="Rango TITÁN">
+                        <div class="tz-card-image-wrap triplezone__toogle--modal" data-remote="/package/3">
+                            <span class="tz-badge-popular" style="background: linear-gradient(135deg, #8b5cf6, #6d28d9);">ÉLITE</span>
+                            <span class="tz-discount-pill">-40% OFF</span>
+                            <img src="https://dunb17ur4ymx4.cloudfront.net/packages/images/627911b9d1fc3d05619a58846649d6f231253039.png" alt="Rango TITÁN">
+                        </div>
+                        <div class="tz-card-info-box">
+                            <div class="tz-card-top-meta">
+                                <h3 class="tz-card-title">Rango TITÁN</h3>
+                                <p class="tz-card-desc-snippet">Rango supremo: todas las ventajas desbloqueadas de por vida.</p>
+                            </div>
+                            <div class="tz-card-bottom-row">
+                                <div class="tz-card-price-box">
+                                    <span class="tz-price-tag-label">Precio</span>
+                                    <div class="tz-price-values">
+                                        <span class="tz-price-old">69.99€</span>
+                                        <span class="tz-price-current">41.99€</span>
+                                    </div>
+                                </div>
+                                <div class="tz-card-actions">
+                                    <button class="tz-btn-buy triplezone__toogle--modal" data-remote="/package/3"><i class="mdi mdi-cart-plus"></i> Agregar al Carrito</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 2. CLUB VIP -->
+            <section class="tz-category-section" id="cat-club-vip">
+                <div class="tz-section-header">
+                    <div class="tz-section-title-box">
+                        <h2>⭐ Club VIP &amp; Pases</h2>
+                    </div>
+                </div>
+                <div class="tz-cards-grid">
+                    <div class="tz-card" data-title="Pase Batalla Premium">
+                        <div class="tz-card-image-wrap triplezone__toogle--modal" data-remote="/package/1">
+                            <span class="tz-badge-popular">PASE TEMPORADA</span>
+                            <img src="https://dunb17ur4ymx4.cloudfront.net/packages/images/627911b9d1fc3d05619a58846649d6f231253039.png" alt="Pase Batalla Premium">
+                        </div>
+                        <div class="tz-card-info-box">
+                            <div class="tz-card-top-meta">
+                                <h3 class="tz-card-title">Battle Pass Premium</h3>
+                                <p class="tz-card-desc-snippet">100 niveles de recompensas, skins y llaves exclusivas.</p>
+                            </div>
+                            <div class="tz-card-bottom-row">
+                                <div class="tz-card-price-box">
+                                    <span class="tz-price-tag-label">Precio</span>
+                                    <div class="tz-price-values">
+                                        <span class="tz-price-current">4.99€</span>
+                                    </div>
+                                </div>
+                                <div class="tz-card-actions">
+                                    <button class="tz-btn-buy triplezone__toogle--modal" data-remote="/package/1"><i class="mdi mdi-cart-plus"></i> Agregar al Carrito</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tz-card" data-title="Suscripción Club VIP">
+                        <div class="tz-card-image-wrap triplezone__toogle--modal" data-remote="/package/2">
+                            <span class="tz-badge-best">MENSUAL</span>
+                            <img src="https://dunb17ur4ymx4.cloudfront.net/packages/images/627911b9d1fc3d05619a58846649d6f231253039.png" alt="Suscripción Club VIP">
+                        </div>
+                        <div class="tz-card-info-box">
+                            <div class="tz-card-top-meta">
+                                <h3 class="tz-card-title">Membresía Club VIP</h3>
+                                <p class="tz-card-desc-snippet">Ventajas renovables mes a mes con recompensas VIP.</p>
+                            </div>
+                            <div class="tz-card-bottom-row">
+                                <div class="tz-card-price-box">
+                                    <span class="tz-price-tag-label">Precio</span>
+                                    <div class="tz-price-values">
+                                        <span class="tz-price-current">6.99€ / mes</span>
+                                    </div>
+                                </div>
+                                <div class="tz-card-actions">
+                                    <button class="tz-btn-buy triplezone__toogle--modal" data-remote="/package/2"><i class="mdi mdi-cart-plus"></i> Agregar al Carrito</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 3. ZAFIROS -->
+            <section class="tz-category-section" id="cat-zafiros">
+                <div class="tz-section-header">
+                    <div class="tz-section-title-box">
+                        <h2>💎 Zafiros (Moneda Virtual)</h2>
+                    </div>
+                </div>
+                <div class="tz-cards-grid">
+                    <div class="tz-card" data-title="Pack 500 Zafiros">
+                        <div class="tz-card-image-wrap triplezone__toogle--modal" data-remote="/package/1">
+                            <img src="https://dunb17ur4ymx4.cloudfront.net/packages/images/627911b9d1fc3d05619a58846649d6f231253039.png" alt="500 Zafiros">
+                        </div>
+                        <div class="tz-card-info-box">
+                            <div class="tz-card-top-meta">
+                                <h3 class="tz-card-title">500 Zafiros</h3>
+                                <p class="tz-card-desc-snippet">Moneda virtual para la tienda in-game y cosméticos.</p>
+                            </div>
+                            <div class="tz-card-bottom-row">
+                                <div class="tz-card-price-box">
+                                    <span class="tz-price-tag-label">Precio</span>
+                                    <div class="tz-price-values">
+                                        <span class="tz-price-current">3.49€</span>
+                                    </div>
+                                </div>
+                                <div class="tz-card-actions">
+                                    <button class="tz-btn-buy triplezone__toogle--modal" data-remote="/package/1"><i class="mdi mdi-cart-plus"></i> Agregar al Carrito</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tz-card" data-title="Pack 1.200 Zafiros">
+                        <div class="tz-card-image-wrap triplezone__toogle--modal" data-remote="/package/2">
+                            <span class="tz-discount-pill">+10% BONUS</span>
+                            <img src="https://dunb17ur4ymx4.cloudfront.net/packages/images/627911b9d1fc3d05619a58846649d6f231253039.png" alt="1.200 Zafiros">
+                        </div>
+                        <div class="tz-card-info-box">
+                            <div class="tz-card-top-meta">
+                                <h3 class="tz-card-title">1.200 Zafiros</h3>
+                                <p class="tz-card-desc-snippet">Incluye 10% de zafiros de bonificación gratuita.</p>
+                            </div>
+                            <div class="tz-card-bottom-row">
+                                <div class="tz-card-price-box">
+                                    <span class="tz-price-tag-label">Precio</span>
+                                    <div class="tz-price-values">
+                                        <span class="tz-price-current">7.99€</span>
+                                    </div>
+                                </div>
+                                <div class="tz-card-actions">
+                                    <button class="tz-btn-buy triplezone__toogle--modal" data-remote="/package/2"><i class="mdi mdi-cart-plus"></i> Agregar al Carrito</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tz-card" data-title="Pack 2.500 Zafiros">
+                        <div class="tz-card-image-wrap triplezone__toogle--modal" data-remote="/package/3">
+                            <span class="tz-badge-popular">MÁS VENDIDO</span>
+                            <span class="tz-discount-pill">+25% BONUS</span>
+                            <img src="https://dunb17ur4ymx4.cloudfront.net/packages/images/627911b9d1fc3d05619a58846649d6f231253039.png" alt="2.500 Zafiros">
+                        </div>
+                        <div class="tz-card-info-box">
+                            <div class="tz-card-top-meta">
+                                <h3 class="tz-card-title">2.500 Zafiros</h3>
+                                <p class="tz-card-desc-snippet">El paquete más popular con 25% de bonus extra.</p>
+                            </div>
+                            <div class="tz-card-bottom-row">
+                                <div class="tz-card-price-box">
+                                    <span class="tz-price-tag-label">Precio</span>
+                                    <div class="tz-price-values">
+                                        <span class="tz-price-current">14.99€</span>
+                                    </div>
+                                </div>
+                                <div class="tz-card-actions">
+                                    <button class="tz-btn-buy triplezone__toogle--modal" data-remote="/package/3"><i class="mdi mdi-cart-plus"></i> Agregar al Carrito</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tz-card" data-title="Pack 6.000 Zafiros">
+                        <div class="tz-card-image-wrap triplezone__toogle--modal" data-remote="/package/3">
+                            <span class="tz-badge-best">MEJOR VALOR</span>
+                            <span class="tz-discount-pill">+50% BONUS</span>
+                            <img src="https://dunb17ur4ymx4.cloudfront.net/packages/images/627911b9d1fc3d05619a58846649d6f231253039.png" alt="6.000 Zafiros">
+                        </div>
+                        <div class="tz-card-info-box">
+                            <div class="tz-card-top-meta">
+                                <h3 class="tz-card-title">6.000 Zafiros</h3>
+                                <p class="tz-card-desc-snippet">Máxima bonificación con 50% de Zafiros de regalo.</p>
+                            </div>
+                            <div class="tz-card-bottom-row">
+                                <div class="tz-card-price-box">
+                                    <span class="tz-price-tag-label">Precio</span>
+                                    <div class="tz-price-values">
+                                        <span class="tz-price-current">29.99€</span>
+                                    </div>
+                                </div>
+                                <div class="tz-card-actions">
+                                    <button class="tz-btn-buy triplezone__toogle--modal" data-remote="/package/3"><i class="mdi mdi-cart-plus"></i> Agregar al Carrito</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 4. LLAVES PREMIUM -->
+            <section class="tz-category-section" id="cat-llaves-premium">
+                <div class="tz-section-header">
+                    <div class="tz-section-title-box">
+                        <h2>⭐ Llaves Premium</h2>
+                    </div>
+                </div>
+                <div class="tz-cards-grid">
+                    <div class="tz-card" data-title="Llave Mítica x10">
+                        <div class="tz-card-image-wrap triplezone__toogle--modal" data-remote="/package/2">
+                            <span class="tz-badge-popular">POPULAR</span>
+                            <img src="https://dunb17ur4ymx4.cloudfront.net/packages/images/627911b9d1fc3d05619a58846649d6f231253039.png" alt="Llave Mítica x10">
+                        </div>
+                        <div class="tz-card-info-box">
+                            <div class="tz-card-top-meta">
+                                <h3 class="tz-card-title">Llave Mítica x10</h3>
+                                <p class="tz-card-desc-snippet">Recompensas míticas garantizadas y armas legendarias.</p>
+                            </div>
+                            <div class="tz-card-bottom-row">
+                                <div class="tz-card-price-box">
+                                    <span class="tz-price-tag-label">Precio</span>
+                                    <div class="tz-price-values">
+                                        <span class="tz-price-current">8.99€</span>
+                                    </div>
+                                </div>
+                                <div class="tz-card-actions">
+                                    <button class="tz-btn-buy triplezone__toogle--modal" data-remote="/package/2"><i class="mdi mdi-cart-plus"></i> Agregar al Carrito</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tz-card" data-title="Pase Rey Forja">
+                        <div class="tz-card-image-wrap triplezone__toogle--modal" data-remote="/package/3">
+                            <span class="tz-badge-best">DIVINA</span>
+                            <img src="https://dunb17ur4ymx4.cloudfront.net/packages/images/627911b9d1fc3d05619a58846649d6f231253039.png" alt="Pase Mazmorra 8">
+                        </div>
+                        <div class="tz-card-info-box">
+                            <div class="tz-card-top-meta">
+                                <h3 class="tz-card-title">Pase Rey Forja</h3>
+                                <p class="tz-card-desc-snippet">Entrada ilimitada a la cámara del Rey de la Forja.</p>
+                            </div>
+                            <div class="tz-card-bottom-row">
+                                <div class="tz-card-price-box">
+                                    <span class="tz-price-tag-label">Precio</span>
+                                    <div class="tz-price-values">
+                                        <span class="tz-price-current">12.50€</span>
+                                    </div>
+                                </div>
+                                <div class="tz-card-actions">
+                                    <button class="tz-btn-buy triplezone__toogle--modal" data-remote="/package/3"><i class="mdi mdi-cart-plus"></i> Agregar al Carrito</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 5. LLAVES -->
+            <section class="tz-category-section" id="cat-llaves">
+                <div class="tz-section-header">
+                    <div class="tz-section-title-box">
+                        <h2>🔑 Llaves Comunes &amp; Cajas</h2>
+                    </div>
+                </div>
+                <div class="tz-cards-grid">
+                    <div class="tz-card" data-title="Llave Común x10">
+                        <div class="tz-card-image-wrap triplezone__toogle--modal" data-remote="/package/1">
+                            <img src="https://dunb17ur4ymx4.cloudfront.net/packages/images/627911b9d1fc3d05619a58846649d6f231253039.png" alt="Llave Común x10">
+                        </div>
+                        <div class="tz-card-info-box">
+                            <div class="tz-card-top-meta">
+                                <h3 class="tz-card-title">Llave Común x10</h3>
+                                <p class="tz-card-desc-snippet">Lote de 10 llaves para las cajas de bienvenida.</p>
+                            </div>
+                            <div class="tz-card-bottom-row">
+                                <div class="tz-card-price-box">
+                                    <span class="tz-price-tag-label">Precio</span>
+                                    <div class="tz-price-values">
+                                        <span class="tz-price-current">2.49€</span>
+                                    </div>
+                                </div>
+                                <div class="tz-card-actions">
+                                    <button class="tz-btn-buy triplezone__toogle--modal" data-remote="/package/1"><i class="mdi mdi-cart-plus"></i> Agregar al Carrito</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tz-card" data-title="Llave Épica x5">
+                        <div class="tz-card-image-wrap triplezone__toogle--modal" data-remote="/package/2">
+                            <span class="tz-badge-popular">POPULAR</span>
+                            <img src="https://dunb17ur4ymx4.cloudfront.net/packages/images/627911b9d1fc3d05619a58846649d6f231253039.png" alt="Llave Épica x5">
+                        </div>
+                        <div class="tz-card-info-box">
+                            <div class="tz-card-top-meta">
+                                <h3 class="tz-card-title">Llave Épica x5</h3>
+                                <p class="tz-card-desc-snippet">5 llaves de categoría épica con alta tasa de gemas.</p>
+                            </div>
+                            <div class="tz-card-bottom-row">
+                                <div class="tz-card-price-box">
+                                    <span class="tz-price-tag-label">Precio</span>
+                                    <div class="tz-price-values">
+                                        <span class="tz-price-current">4.99€</span>
+                                    </div>
+                                </div>
+                                <div class="tz-card-actions">
+                                    <button class="tz-btn-buy triplezone__toogle--modal" data-remote="/package/2"><i class="mdi mdi-cart-plus"></i> Agregar al Carrito</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 6. PACKS -->
+            <section class="tz-category-section" id="cat-packs">
+                <div class="tz-section-header">
+                    <div class="tz-section-title-box">
+                        <h2>📦 Packs &amp; Bundles de Inicio</h2>
+                    </div>
+                </div>
+                <div class="tz-cards-grid">
+                    <div class="tz-card" data-title="Pack Aventurero">
+                        <div class="tz-card-image-wrap triplezone__toogle--modal" data-remote="/package/1">
+                            <img src="https://dunb17ur4ymx4.cloudfront.net/packages/images/627911b9d1fc3d05619a58846649d6f231253039.png" alt="Pack Aventurero">
+                        </div>
+                        <div class="tz-card-info-box">
+                            <div class="tz-card-top-meta">
+                                <h3 class="tz-card-title">Pack Aventurero</h3>
+                                <p class="tz-card-desc-snippet">Set inicial de armadura, herramientas y dinero in-game.</p>
+                            </div>
+                            <div class="tz-card-bottom-row">
+                                <div class="tz-card-price-box">
+                                    <span class="tz-price-tag-label">Precio</span>
+                                    <div class="tz-price-values">
+                                        <span class="tz-price-current">5.99€</span>
+                                    </div>
+                                </div>
+                                <div class="tz-card-actions">
+                                    <button class="tz-btn-buy triplezone__toogle--modal" data-remote="/package/1"><i class="mdi mdi-cart-plus"></i> Agregar al Carrito</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tz-card" data-title="Bundle Leyenda">
+                        <div class="tz-card-image-wrap triplezone__toogle--modal" data-remote="/package/3">
+                            <span class="tz-badge-best">DIVINO</span>
+                            <img src="https://dunb17ur4ymx4.cloudfront.net/packages/images/627911b9d1fc3d05619a58846649d6f231253039.png" alt="Bundle Leyenda">
+                        </div>
+                        <div class="tz-card-info-box">
+                            <div class="tz-card-top-meta">
+                                <h3 class="tz-card-title">Bundle Leyenda</h3>
+                                <p class="tz-card-desc-snippet">Armamento divino, llaves míticas y zafiros incluidos.</p>
+                            </div>
+                            <div class="tz-card-bottom-row">
+                                <div class="tz-card-price-box">
+                                    <span class="tz-price-tag-label">Precio</span>
+                                    <div class="tz-price-values">
+                                        <span class="tz-price-current">19.99€</span>
+                                    </div>
+                                </div>
+                                <div class="tz-card-actions">
+                                    <button class="tz-btn-buy triplezone__toogle--modal" data-remote="/package/3"><i class="mdi mdi-cart-plus"></i> Agregar al Carrito</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 7. OTROS -->
+            <section class="tz-category-section" id="cat-otros">
+                <div class="tz-section-header">
+                    <div class="tz-section-title-box">
+                        <h2>⚙️ Servicios &amp; Otros</h2>
+                    </div>
+                </div>
+                <div class="tz-cards-grid">
+                    <div class="tz-card" data-title="Desbaneo de Cuenta">
+                        <div class="tz-card-image-wrap triplezone__toogle--modal" data-remote="/package/1">
+                            <img src="https://dunb17ur4ymx4.cloudfront.net/packages/images/627911b9d1fc3d05619a58846649d6f231253039.png" alt="Unban">
+                        </div>
+                        <div class="tz-card-info-box">
+                            <div class="tz-card-top-meta">
+                                <h3 class="tz-card-title">Desbaneo de Cuenta</h3>
+                                <p class="tz-card-desc-snippet">Servicio de restauración de acceso para tu cuenta.</p>
+                            </div>
+                            <div class="tz-card-bottom-row">
+                                <div class="tz-card-price-box">
+                                    <span class="tz-price-tag-label">Precio</span>
+                                    <div class="tz-price-values">
+                                        <span class="tz-price-current">10.00€</span>
+                                    </div>
+                                </div>
+                                <div class="tz-card-actions">
+                                    <button class="tz-btn-buy triplezone__toogle--modal" data-remote="/package/1"><i class="mdi mdi-cart-plus"></i> Agregar al Carrito</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+    </div>
+</div>
+
+<script>
+(function () {
+    var pillBtns = document.querySelectorAll('.tz-cat-card-item');
+
+    // Click suave a cada categoría con cálculo exacto de posición
+    pillBtns.forEach(function (btn) {
+        btn.addEventListener('click', function (e) {
+            e.preventDefault();
+            var targetId = this.getAttribute('data-target');
+            var targetEl = document.getElementById(targetId);
+            if (targetEl) {
+                var headerOffset = 90;
+                var elementPosition = targetEl.getBoundingClientRect().top;
+                var offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+                window.scrollTo({
+                    top: offsetPosition,
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+
+    // Animación de aparición suave escalonada en scroll para las tarjetas
+    if ('IntersectionObserver' in window) {
+        var cardObserver = new IntersectionObserver(function(entries, obs) {
+            entries.forEach(function(entry) {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-visible');
+                    obs.unobserve(entry.target);
+                }
+            });
+        }, {
+            rootMargin: '0px 0px -50px 0px',
+            threshold: 0.1
+        });
+
+        document.querySelectorAll('.tz-card').forEach(function(card, idx) {
+            // Retardo escalonado sutil para dar elegancia
+            card.style.transitionDelay = ((idx % 4) * 0.08) + 's';
+            cardObserver.observe(card);
+        });
+    } else {
+        document.querySelectorAll('.tz-card').forEach(function(card) {
+            card.classList.add('is-visible');
+        });
+    }
+})();
+</script>
+{% endblock %}

@@ -1,0 +1,345 @@
+menu_title: '&0&l|&r &0Compra ▶ &8Todos &7(18/18)'
+open_command:
+  - compra_todos_18
+size: 45
+open_requirement:
+  requirements: {}
+register_command: true
+update: true
+
+items:
+  # ============================================================================
+  # FILTRO SUPERIOR: PANELES GRISES DECORATIVOS (FILA 1)
+  # ============================================================================
+  'Filtro_Top':
+    material: GRAY_STAINED_GLASS_PANE
+    display_name: ' '
+    slots:
+      - 0
+      - 1
+      - 2
+      - 3
+      - 4
+      - 5
+      - 6
+      - 7
+      - 8
+
+  # ============================================================================
+  # CATÁLOGO DE ÍTEMS DE COMPRA (FILAS 2, 3, 4: SLOTS 9 A 35)
+  # ============================================================================
+  'item_1':
+    material: IRON_GOLEM_SPAWN_EGG
+    slot: 9
+    item_flags:
+      - HIDE_ATTRIBUTES
+      - HIDE_ENCHANTS
+    display_name: '&dSpawner de Golem de Hierro'
+    lore:
+      - '&8ᴘʀᴇᴄɪᴏ ᴅᴇ ᴄᴏᴍᴘʀᴀ'
+      - ''
+      - ' &8| &fUnidad: &#34B0F31350 🔥'
+      - ''
+      - '&7▶ Click para comprar'
+    left_click_commands:
+      - '[close]'
+      - '[player] shop almas'
+      - '[sound] UI_BUTTON_CLICK'
+
+  'item_2':
+    material: TRIPWIRE_HOOK
+    slot: 10
+    item_flags:
+      - HIDE_ATTRIBUTES
+      - HIDE_ENCHANTS
+    display_name: '&ex1 Llave Super'
+    lore:
+      - '&8ᴘʀᴇᴄɪᴏ ᴅᴇ ᴄᴏᴍᴘʀᴀ'
+      - ''
+      - ' &8| &fUnidad: &#34B0F3100 🔥'
+      - ''
+      - '&7▶ Click para comprar'
+    left_click_commands:
+      - '[close]'
+      - '[player] shop almas'
+      - '[sound] UI_BUTTON_CLICK'
+
+  'item_3':
+    material: TRIPWIRE_HOOK
+    slot: 11
+    item_flags:
+      - HIDE_ATTRIBUTES
+      - HIDE_ENCHANTS
+    display_name: '&ex1 Llave Rara'
+    lore:
+      - '&8ᴘʀᴇᴄɪᴏ ᴅᴇ ᴄᴏᴍᴘʀᴀ'
+      - ''
+      - ' &8| &fUnidad: &#34B0F3400 🔥'
+      - ''
+      - '&7▶ Click para comprar'
+    left_click_commands:
+      - '[close]'
+      - '[player] shop almas'
+      - '[sound] UI_BUTTON_CLICK'
+
+  'item_4':
+    material: TRIPWIRE_HOOK
+    slot: 12
+    item_flags:
+      - HIDE_ATTRIBUTES
+      - HIDE_ENCHANTS
+    display_name: '&ex1 Llave Gadgets'
+    lore:
+      - '&8ᴘʀᴇᴄɪᴏ ᴅᴇ ᴄᴏᴍᴘʀᴀ'
+      - ''
+      - ' &8| &fUnidad: &#34B0F3600 🔥'
+      - ''
+      - '&7▶ Click para comprar'
+    left_click_commands:
+      - '[close]'
+      - '[player] shop almas'
+      - '[sound] UI_BUTTON_CLICK'
+
+  'item_5':
+    material: TRIAL_KEY
+    slot: 13
+    item_flags:
+      - HIDE_ATTRIBUTES
+      - HIDE_ENCHANTS
+    display_name: '&ex1 Llave Mitica'
+    lore:
+      - '&8ᴘʀᴇᴄɪᴏ ᴅᴇ ᴄᴏᴍᴘʀᴀ'
+      - ''
+      - ' &8| &fUnidad: &#34B0F33000 🔥'
+      - ''
+      - '&7▶ Click para comprar'
+    left_click_commands:
+      - '[close]'
+      - '[player] shop almas'
+      - '[sound] UI_BUTTON_CLICK'
+
+  'item_6':
+    material: OMINOUS_TRIAL_KEY
+    slot: 14
+    item_flags:
+      - HIDE_ATTRIBUTES
+      - HIDE_ENCHANTS
+    display_name: '&ex1 Llave Limited'
+    lore:
+      - '&8ᴘʀᴇᴄɪᴏ ᴅᴇ ᴄᴏᴍᴘʀᴀ'
+      - ''
+      - ' &8| &fUnidad: &#34B0F310000 🔥'
+      - ''
+      - '&7▶ Click para comprar'
+    left_click_commands:
+      - '[close]'
+      - '[player] shop almas'
+      - '[sound] UI_BUTTON_CLICK'
+
+  'item_7':
+    material: COAL_ORE
+    slot: 15
+    item_flags:
+      - HIDE_ATTRIBUTES
+      - HIDE_ENCHANTS
+    display_name: '&ex1 Prote Carbon 8x8'
+    lore:
+      - '&8ᴘʀᴇᴄɪᴏ ᴅᴇ ᴄᴏᴍᴘʀᴀ'
+      - ''
+      - ' &8| &fUnidad: &#34B0F310 🔥'
+      - ''
+      - '&7▶ Click para comprar'
+    left_click_commands:
+      - '[close]'
+      - '[player] shop almas'
+      - '[sound] UI_BUTTON_CLICK'
+
+  'item_8':
+    material: IRON_ORE
+    slot: 16
+    item_flags:
+      - HIDE_ATTRIBUTES
+      - HIDE_ENCHANTS
+    display_name: '&ex1 Prote Hierro 16x16'
+    lore:
+      - '&8ᴘʀᴇᴄɪᴏ ᴅᴇ ᴄᴏᴍᴘʀᴀ'
+      - ''
+      - ' &8| &fUnidad: &#34B0F3100 🔥'
+      - ''
+      - '&7▶ Click para comprar'
+    left_click_commands:
+      - '[close]'
+      - '[player] shop almas'
+      - '[sound] UI_BUTTON_CLICK'
+
+  'item_9':
+    material: GOLD_ORE
+    slot: 17
+    item_flags:
+      - HIDE_ATTRIBUTES
+      - HIDE_ENCHANTS
+    display_name: '&ex1 Prote Oro 32x32'
+    lore:
+      - '&8ᴘʀᴇᴄɪᴏ ᴅᴇ ᴄᴏᴍᴘʀᴀ'
+      - ''
+      - ' &8| &fUnidad: &#34B0F3200 🔥'
+      - ''
+      - '&7▶ Click para comprar'
+    left_click_commands:
+      - '[close]'
+      - '[player] shop almas'
+      - '[sound] UI_BUTTON_CLICK'
+
+  'item_10':
+    material: EMERALD_ORE
+    slot: 18
+    item_flags:
+      - HIDE_ATTRIBUTES
+      - HIDE_ENCHANTS
+    display_name: '&ex1 Prote Esmeralda 64x64'
+    lore:
+      - '&8ᴘʀᴇᴄɪᴏ ᴅᴇ ᴄᴏᴍᴘʀᴀ'
+      - ''
+      - ' &8| &fUnidad: &#34B0F3500 🔥'
+      - ''
+      - '&7▶ Click para comprar'
+    left_click_commands:
+      - '[close]'
+      - '[player] shop almas'
+      - '[sound] UI_BUTTON_CLICK'
+
+  'item_11':
+    material: DIAMOND_ORE
+    slot: 19
+    item_flags:
+      - HIDE_ATTRIBUTES
+      - HIDE_ENCHANTS
+    display_name: '&ex1 Prote Diamante 128x128'
+    lore:
+      - '&8ᴘʀᴇᴄɪᴏ ᴅᴇ ᴄᴏᴍᴘʀᴀ'
+      - ''
+      - ' &8| &fUnidad: &#34B0F31000 🔥'
+      - ''
+      - '&7▶ Click para comprar'
+    left_click_commands:
+      - '[close]'
+      - '[player] shop almas'
+      - '[sound] UI_BUTTON_CLICK'
+
+  'item_12':
+    material: ANCIENT_DEBRIS
+    slot: 20
+    item_flags:
+      - HIDE_ATTRIBUTES
+      - HIDE_ENCHANTS
+    display_name: '&ex1 Prote Diamante 256x256'
+    lore:
+      - '&8ᴘʀᴇᴄɪᴏ ᴅᴇ ᴄᴏᴍᴘʀᴀ'
+      - ''
+      - ' &8| &fUnidad: &#34B0F315000 🔥'
+      - ''
+      - '&7▶ Click para comprar'
+    left_click_commands:
+      - '[close]'
+      - '[player] shop almas'
+      - '[sound] UI_BUTTON_CLICK'
+
+  # ============================================================================
+  # NAVBAR INFERIOR (FILA 5: SLOTS 36 A 44)
+  # ============================================================================
+  'Boton_Filtro':
+    material: COMPARATOR
+    slot: 36
+    item_flags:
+      - HIDE_ATTRIBUTES
+      - HIDE_ENCHANTS
+    enchantments:
+      - DURABILITY;1
+    display_name: '&#FFD700Filtrar Categoría'
+    lore:
+      - '&8ᴇʟɪɢᴇ ᴄᴀᴛᴇɢᴏʀɪᴀ'
+      - ''
+      - ' &#FFD700● Todos'
+      - ' &7● Bloques'
+      - ' &7● Farmeo'
+      - ' &7● Comida'
+      - ' &7● Mobs'
+      - ' &7● Equipo'
+      - ' &7● Redstone'
+      - ' &7● Misceláneo'
+      - ' &7● Tintes'
+      - ' &7● Trims'
+      - ' &7● Encantamientos'
+      - ' &7● Almas'
+      - ''
+      - '&7▶ Click para cambiar'
+    left_click_commands:
+      - '[openguimenu] compra_bloques'
+      - '[sound] UI_BUTTON_CLICK'
+
+  'Boton_Pagina_Anterior':
+    material: ARROW
+    slot: 39
+    item_flags:
+      - HIDE_ATTRIBUTES
+    display_name: '&e◀ Página Anterior'
+    lore:
+      - '&8ᴘᴀɢɪɴᴀᴄɪᴏɴ'
+      - ''
+      - ' &8| &fPágina: &718&8/&718'
+      - ''
+    left_click_commands:
+      - '[openguimenu] compra_todos_17'
+      - '[sound] UI_BUTTON_CLICK'
+
+  'Boton_Volver':
+    material: DARK_OAK_DOOR
+    slot: 40
+    item_flags:
+      - HIDE_ATTRIBUTES
+    display_name: '&cVolver Atrás'
+    lore:
+      - '&8Regresar al menú principal'
+    left_click_commands:
+      - '[openguimenu] tienda_principal'
+      - '[sound] UI_BUTTON_CLICK'
+
+  'Boton_SellGUI':
+    material: HOPPER
+    slot: 43
+    item_flags:
+      - HIDE_ATTRIBUTES
+    display_name: '&#59E91FVenta Rápida'
+    lore:
+      - '&8ᴠᴇɴᴛᴀ ᴀᴜᴛᴏᴍᴀᴛɪᴄᴀ'
+      - ''
+      - ' &fVende tu inventario.'
+      - ''
+      - '&7▶ Click para abrir'
+    left_click_commands:
+      - '[close]'
+      - '[player] sellgui'
+      - '[sound] ENTITY_EXPERIENCE_ORB_PICKUP'
+
+  'Info_Balance':
+    material: head-%player_name%
+    slot: 44
+    item_flags:
+      - HIDE_ATTRIBUTES
+    display_name: '&#FFD700Tu Economía'
+    lore:
+      - '&8ᴛᴜ ᴇᴄᴏɴᴏᴍɪᴀ'
+      - ''
+      - ' &8| &fDinero: &#59E91F&l$&r&#59E91F%vault_eco_balance_formatted%'
+      - ' &8| &fAlmas: &#34B0F3%thundercurrencys_almas%🔥'
+      - ' &8| &fZafiros: &#1E6BFF%thundercurrencys_zafiros%💎'
+      - ''
+
+  'Filtro_Bottom':
+    material: GRAY_STAINED_GLASS_PANE
+    display_name: ' '
+    slots:
+      - 37
+      - 38
+      - 41
+      - 42

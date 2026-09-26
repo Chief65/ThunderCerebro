@@ -1,0 +1,46 @@
+# ===== ZOMBIE NIVEL 1 =====
+ZombieCripta1:
+  Type: ZOMBIE
+  Display: '&a[Lv.1] &2Zombie de la Cripta'
+  Health: 30
+  Damage: 5
+  Options:
+    MovementSpeed: 0.23
+    PreventOtherDrops: true
+  Equipment:
+    - AIR HEAD
+    - AIR CHEST
+  Drops:
+    - HuesoAntiguo 1 0.25
+    - ROTTEN_FLESH 1-2 1
+
+# ===== ZOMBIE NIVEL 2 =====
+ZombieCripta2:
+  Type: ZOMBIE
+  Display: '&e[Lv.2] &2Zombie Armado'
+  Health: 55
+  Damage: 8
+  Equipment:
+    - LEATHER_HELMET HEAD
+    - IRON_CHESTPLATE CHEST
+  Drops:
+    - HuesoAntiguo 1-2 0.40
+    - FragmentoAlmaPerdida 1 0.10
+    - IRON_INGOT 1 0.15
+
+# ===== ZOMBIE NIVEL 3 =====
+ZombieCripta3:
+  Type: ZOMBIE
+  Display: '&c[Lv.3] &2Zombie Veterano'
+  Health: 90
+  Damage: 12
+  Equipment:
+    - IRON_HELMET HEAD
+    - IRON_CHESTPLATE CHEST
+    - IRON_LEGGINGS LEGS
+    - IRON_BOOTS FEET
+    - IRON_SWORD HAND
+  Drops:
+    - HuesoAntiguo 2-3 0.60
+    - FragmentoAlmaPerdida 1 0.25
+    - IRON_INGOT 1-2 0.30

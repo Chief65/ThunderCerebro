@@ -1,0 +1,41 @@
+{% if config("category_navigation") == "topbar" %}
+{% set searchWithoutLogging %}
+    {% if config("searchOnStore") == "disabled" %}
+        {% if not basket.ign %}
+            data-login-category data-izimodal-open="#modal-login"
+        {% endif %}
+    {% endif %}
+{% endset %}
+<div class="triplezone__second--nav">
+    {% if config("store_theme") == "halloween" %}
+        <div class="halloween--full halloween--web-left"></div>
+        <picture>
+            <source srcset="{{ asset("Crow.png") }}" media="(min-width: 968px)">
+            <img src="{{ asset("CrowRight.png") }}" alt="Halloween Decorations" class="halloween--crow">
+        </picture>
+    {% endif %}    
+    <ul class="second__nav--list">
+        {% for category in store.categories %}
+        {% if category.subcategories|length > 0 %}
+        <li class="triplezone__second--toggle-dropdown list__second--nav {% if category.active %}active-dropdown{% endif %}">
+            <a href="javascript:void(0);" class="dropdown-toggle__second list__second__category--link" data-category-image="{{ category.id }}">{{ category.name }} <i
+                    class="mdi mdi-chevron-down carret"></i></a>
+            <ul class="triplezone__second--dropdown">
+                {% for subcategory in category.subcategories %}
+                <li {{ searchWithoutLogging | raw }}><a href="/#cat-{{ subcategory.id }}">{{ subcategory.name }}</a></li>
+                {% endfor %}
+            </ul>
+            {% else %}
+        <li class="list__second--nav {% if category.active %}active-dropdown{% endif %}" {{ searchWithoutLogging| raw }}>
+            <a href="/#cat-{{ category.id }}" class="list__second__category--link" data-category-image="{{ category.id }}">{{ category.name }}</a>
+        </li>
+        {% endif %}
+        {% endfor %}
+        {% for page in store.pages %}
+        <li class="list__second--nav {% if page.active %}active-dropdown{% endif %}">
+            <a href="/{{ page.slug }}" class="list__second__category--link" data-category-image="{{ page.slug }}"> {{ page.title }}</a>
+        </li>
+        {% endfor %}
+    </ul>
+</div>
+{% endif %}

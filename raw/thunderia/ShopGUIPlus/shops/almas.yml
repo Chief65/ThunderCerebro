@@ -1,0 +1,366 @@
+almas:
+  name: "&0&l|&r &0Tienda ▶ &8Almas "
+  economy: CUSTOM
+  size: 45
+  fillItem:
+    material: AIR
+    name: " "
+  buttons:
+    goBack:
+      slot: -1
+    previousPage:
+      slot: -1
+    nextPage:
+      slot: -1
+  items:
+    1:
+      type: command
+      item:
+        material: SPAWNER
+        name: '#FFF275Spawner de Cerdo'
+        quantity: 1
+      commands:
+        - "silkspawners give %PLAYER% pig 1"
+      buyPrice: 150
+      slot: 9          
+    2:
+      type: command
+      item:
+        material: SPAWNER
+        name: '#FFF275Spawner de Vaca'
+        quantity: 1
+      commands:
+        - "silkspawners give %PLAYER% cow 1"
+      buyPrice: 300
+      slot: 10  
+    3:
+      type: command
+      item:
+        material: SPAWNER
+        name: '#FFF275Spawner de Zombie'
+        quantity: 1
+      commands:
+        - "silkspawners give %PLAYER% zombie 1"
+      buyPrice: 450
+      slot: 11
+    4:
+      type: command
+      item:
+        material: SPAWNER
+        name: '#FFF275Spawner de Araña'
+        quantity: 1
+      commands:
+        - "silkspawners give %PLAYER% spider 1"
+      buyPrice: 600
+      slot: 12
+    5:
+      type: command
+      item:
+        material: SPAWNER
+        name: '#FFF275Spawner de Esqueleto'
+        quantity: 1
+      commands:
+        - "silkspawners give %PLAYER% SKELETON 1"
+      buyPrice: 750
+      slot: 13
+    6:
+      type: command
+      item:
+        material: SPAWNER
+        name: '#FFF275Spawner de Blaze'
+        quantity: 1
+      commands:
+        - "silkspawners give %PLAYER% blaze 1"
+      buyPrice: 900
+      slot: 14
+    7:
+      type: command
+      item:
+        material: SPAWNER
+        name: '#FFF275Spawner de Piglin Zombificado'
+        quantity: 1
+      commands:
+        - "silkspawners give %PLAYER% ZOMBIFIED_PIGLIN 1"
+      buyPrice: 1250
+      slot: 15  
+    8:
+      type: command
+      item:
+        material: SPAWNER
+        name: '#FFF275Spawner de Golem de Hierro'
+        quantity: 1
+      commands:
+        - "silkspawners give %PLAYER% IRON_GOLEM 1"
+      buyPrice: 1350
+      slot: 16  
+      
+    9:
+      type: command
+      item:
+        material: TRIPWIRE_HOOK
+        name: '#FFF275x1 Llave Super'
+        glow: true
+        quantity: 1
+      commands:
+        - "excellentcrates key give %PLAYER% vote 1 -s"
+      buyPrice: 100
+      slot: 18
+      
+    10:
+      type: command
+      item:
+        material: TRIPWIRE_HOOK
+        name: '#FFF275x1 Llave Rara'
+        glow: true
+        quantity: 1
+      commands:
+        - "excellentcrates key give %PLAYER% rara 1 -s"
+      buyPrice: 400
+      slot: 19
+      
+    11:
+      type: command
+      item:
+        material: TRIPWIRE_HOOK
+        name: '#FFF275x1 Llave Gadgets'
+        glow: true
+        quantity: 1
+      commands:
+        - "excellentcrates key give %PLAYER% gadgets 1 -s"
+      buyPrice: 600
+      slot: 20
+
+    12:
+      type: command
+      item:
+        material: TRIAL_KEY
+        name: '#FFF275x1 Llave Mitica'
+        glow: true
+        quantity: 1
+      commands:
+        - "excellentcrates key give %PLAYER% mitica 1 -s"
+      buyPrice: 3000
+      slot: 21
+      
+    13:
+      type: command
+      item:
+        material: OMINOUS_TRIAL_KEY
+        name: '#FFF275x1 Llave Limited'
+        glow: true
+        quantity: 1
+      commands:
+        - "excellentcrates key give %PLAYER% limited 1 -s"
+      buyPrice: 10000
+      slot: 22
+      
+    14:
+      type: command
+      item:
+        material: COAL_ORE
+        name: '#FFF275x1 Prote Carbon 8x8'
+        glow: true
+        quantity: 1
+      commands:
+        - "ps give 8 %PLAYER% 1"
+      buyPrice: 10
+      slot: 27
+      
+    15:
+      type: command
+      item:
+        material: IRON_ORE
+        name: '#FFF275x1 Prote Hierro 16x16'
+        glow: true
+        quantity: 1
+      commands:
+        - "ps give 16 %PLAYER% 1"
+      buyPrice: 100
+      slot: 28
+      
+    16:
+      type: command
+      item:
+        material: GOLD_ORE
+        name: '#FFF275x1 Prote Oro 32x32'
+        glow: true
+        quantity: 1
+      commands:
+        - "ps give 32 %PLAYER%  1"
+      buyPrice: 200
+      slot: 29
+      
+    17:
+      type: command
+      item:
+        material: EMERALD_ORE
+        name: '#FFF275x1 Prote Esmeralda 64x64'
+        glow: true
+        quantity: 1
+      commands:
+        - "ps give 64 %PLAYER%  1"
+      buyPrice: 500
+      slot: 30
+      
+    18:
+      type: command
+      item:
+        material: DIAMOND_ORE
+        name: '#FFF275x1 Prote Diamante 128x128'
+        glow: true
+        quantity: 1
+      commands:
+        - "ps give 128 %PLAYER%  1"
+      buyPrice: 1000
+      slot: 31
+      
+    19:
+      type: command
+      item:
+        material: ANCIENT_DEBRIS
+        name: '#FFF275x1 Prote Diamante 256x256'
+        glow: true
+        quantity: 1
+      commands:
+        - "ps give 256 %PLAYER%  1"
+      buyPrice: 15000
+      slot: 32
+
+    # Navbar inferior (slots 36 a 44, excepto slot 40 que es la puerta de volver)
+    20:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 36
+    21:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 37
+    22:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 38
+    23:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 39
+    24:
+      type: dummy
+      item:
+        material: DARK_OAK_DOOR
+        quantity: 1
+        name: "&cVolver al Menú"
+        lore:
+          - "&7Regresar al menú principal"
+      commandsOnClick:
+        - "dm open tienda_principal"
+      slot: 40
+    25:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 41
+    26:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 42
+    27:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 43
+    28:
+      type: dummy
+      item:
+        material: SOUL_CAMPFIRE
+        quantity: 1
+        name: "#34B0F3Tus Almas"
+        lore:
+          - "&8ᴇᴄᴏɴᴏᴍɪᴀ ᴅᴇ ᴀʟᴍᴀꜱ"
+          - ""
+          - " &8| &fAlmas: #34B0F3%thundercurrencys_almas%🔥"
+          - ""
+      slot: 44
+
+    # Fila superior de adorno (slots 0 a 8)
+    29:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 0
+    30:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 1
+    31:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 2
+    32:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 3
+    33:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 4
+    34:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 5
+    35:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 6
+    36:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 7
+    37:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 8

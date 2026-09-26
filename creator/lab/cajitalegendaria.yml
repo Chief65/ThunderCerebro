@@ -1,0 +1,511 @@
+# The name or display name
+name: '#fab60f★ &fCajita &8▶ #fab60fLegendaria #fab60f★'
+# The lore of the item
+lore:
+- '&8ᴄᴀᴊᴀ ᴅᴇ ʀᴇᴄᴏᴍᴘᴇɴꜱᴀꜱ'
+- ''
+- ' &7Una caja que guarda'
+- ' &7muchos premios'
+- ''
+- ' #fab60fℹ Prob de Mejorar:'
+- ' #63e80c➠ &7&mEspecial (50%)'
+- ' #0ccee8➠ &7&mRara (28%)'
+- ' #ba0ffa➠ &7&mEpica (15%)'
+- ' #BC1013➠ &7&mMitica (5%)'
+- ' #fab60f➠ &7&mLegendaria (2%)'
+- ''
+- ' &#fab60f&l| &f¡Nivel Máximo!'
+- ''
+- '&7ᴄʟɪᴄᴋ ᴅᴇʀ - ᴀʙʀɪʀ'
+- '&7ꜱʜɪꜰᴛ+ᴅᴇʀ - ᴠᴇʀ ᴘʀᴇᴍɪᴏꜱ'
+# The material
+material: ORANGE_SHULKER_BOX
+# Item Glowing effect
+glow: true
+# Disable item stacking ?
+disableStack: true
+# Keep the item on death ?
+keepItemOnDeath: true
+# Can be used only by the owner
+# ⚠ Require Store item info on true
+canBeUsedOnlyByTheOwner: false
+# Cancel event if not owner
+cancelEventIfNotOwner: false
+# BlackListed Activators
+# (can be used by everyone even if
+# the only owner feature is set to true)
+onlyOwnerBlackListedActivators: []
+# Store item info ?
+# Store the item info like the owner
+storeItemInfo: false
+# Item unbreakable ?
+unbreakable: false
+usage: 1
+usageLimit: -1
+# Cancel the event if the player has no permission
+cancelEventIfNoPermission: false
+# The whitelisted worlds features
+whitelistedWorlds: []
+# Keep the default attributes
+# Only for 1.19+
+keepDefaultAttributes: true
+config_5: true
+config_update: true
+# The durability feature
+# will be ignored, and the usage
+# feature will be used as durability
+isDurabilityBasedOnUsage: false
+# For new item LET IT FALSE PLS
+# Otherwise you can let it true
+# if you want to update your old items turn it FALSE
+# But be careful the item tags may change
+# it can impact shopkeeper or custom craft recipe
+# Only for 1.19+
+ignoreKeepDefaultAttributesFeature: true
+# Disable the enchant glide effect
+disableEnchantGlide: false
+# The usage features
+# Increase or Decrease this usage with
+# UsageModification in your activators
+usageFeatures:
+  # The usage of the item
+  # -1 = Infinite
+  # Increase or Decrease this usage with
+  # UsageModification in your activators
+  usage: 1
+  # Is refreshable clean
+  isRefreshableClean: true
+  # The usage limit of the item
+  # Usage can't be increased above this value
+  usageLimit: -1
+# The drop features
+dropFeatures:
+  # Glow drop
+  glowDrop: false
+  # The color of the glow
+  glowDropColor: WHITE
+  # Display custom name above the item
+  displayNameDrop: false
+# The enchantments of the item
+enchantments: {}
+# The hiders features
+# Hiders to hide:
+# Attributes, Enchants, ...
+hiders:
+  # Hide enchantments
+  hideEnchantments: true
+  # Hide unbreakable
+  hideUnbreakable: true
+  # Hide attributes
+  hideAttributes: true
+  # Hide usage
+  hideUsage: true
+  # Hide destroys
+  hideDestroys: false
+  # Hide placed on
+  hidePlacedOn: false
+  # Hide dye
+  hideDye: false
+  # Hide armor trim
+  hideArmorTrim: false
+  # Hide additional tooltip
+  hideAdditionalTooltip: false
+  # Hide tool tip
+  hideToolTip: false
+# The give first join features
+giveFirstJoinFeatures:
+  # Enable the feature
+  giveFirstJoin: false
+  # The amount to give
+  giveFirstJoinAmount: 1
+  # Slot between 0 and 8 includes
+  giveFirstJoinSlot: 0
+# The restrictions features
+restrictions:
+  # Cancel the placement of the item
+  cancel-item-place: true
+  # The item can't be
+  # moved of the inventory
+  locked-in-inventory: false
+# The variables
+# Variables are used to store data like kills / deaths ...
+variables: {}
+# The activators / triggers
+activators:
+  activator0:
+    # The name or display name
+    name: '&eActivator'
+    option: PLAYER_ALL_CLICK
+    typeTarget: NO_TYPE_TARGET
+    # Usage modification
+    usageModification: -1
+    # Cancel the vanilla event
+    cancelEvent: false
+    # If another plugin cancels the event that
+    # triggers the activator and you enabled this feature
+    # the activator will not be activated
+    noActivatorRunIfTheEventIsCancelled: false
+    # Silence the output of the command
+    # (Only in the console)
+    silenceOutput: true
+    # Automatically update the item
+    autoUpdateItem: false
+    # The cooldown
+    cooldownFeatures:
+      # The cooldown
+      cooldown: 0
+      # The placeholders conditions to pause the cooldown
+      pausePlaceholdersConditions: {}
+    # The global cooldown
+    # (For ALL players and entities)
+    globalCooldownFeatures:
+      # The cooldown
+      cooldown: 0
+    # To add cooldown
+    # to another EI
+    otherEICooldowns: {}
+    # The required items
+    requiredItems: {}
+    # The required executable items
+    requiredExecutableItems: {}
+    # The required Magics
+    # (from EcoSkills)
+    requiredMagics: {}
+    # The slots where the
+    # activator will work
+    detailedSlots:
+    - -1
+    playerCommands:
+    - effect give %player% minecraft:blindness 4 1 true
+    - title %player% title "&a&lAbriendo Caja..."
+    - title %player% subtitle "&6★ &fCalidad &8➠ &6Legendaria ★"
+    - execute at %player% run playsound minecraft:entity.zombie.attack_wooden_door
+      neutral %player%
+    - DELAY 1
+    - title %player% title "&a&lAbriendo Caja.."
+    - title %player% subtitle "&6★ &fCalidad &8➠ &6Legendaria ★"
+    - execute at %player% run playsound minecraft:entity.zombie.attack_wooden_door
+      neutral %player%
+    - DELAY 1
+    - title %player% title "&a&lAbriendo Caja."
+    - title %player% subtitle "&6★ &fCalidad &8➠ &6Legendaria ★"
+    - execute at %player% run playsound minecraft:entity.zombie.attack_wooden_door
+      neutral %player%
+    - DELAY 1
+    - 'RANDOM RUN: 1'
+    - 'LOOP START: 50'
+    - 'si give monedacoco 64 %player% +++ xp give %player% %rand:1|5%l +++ eco give
+      %player% %rand:100000|250000% +++ title %player% title "&a&l¡Caja abierta!"
+      +++ title %player% subtitle "&a☺ &fDisfruta de tu premio &a☺" +++ execute at
+      %player% run playsound minecraft:entity.zombie.break_wooden_door neutral %player%
+      +++ SENDMESSAGE &6📢 &6Rea&eCraft &8➠ &fTe ha tocado: &ex4 Monedas Coco'
+    - 'si give monedacoral 64 %player% +++ xp give %player% %rand:1|5%l +++ eco give
+      %player% %rand:100000|250000% +++ title %player% title "&a&l¡Caja abierta!"
+      +++ title %player% subtitle "&a☺ &fDisfruta de tu premio &a☺" +++ execute at
+      %player% run playsound minecraft:entity.zombie.break_wooden_door neutral %player%
+      +++ SENDMESSAGE &6📢 &6Rea&eCraft &8➠ &fTe ha tocado: &ex4 Monedas Coral'
+    - 'si give monedareal 64 %player% +++ xp give %player% %rand:1|5%l +++ eco give
+      %player% %rand:100000|250000% +++ title %player% title "&a&l¡Caja abierta!"
+      +++ title %player% subtitle "&a☺ &fDisfruta de tu premio &a☺" +++ execute at
+      %player% run playsound minecraft:entity.zombie.break_wooden_door neutral %player%
+      +++ SENDMESSAGE &6📢 &6Rea&eCraft &8➠ &fTe ha tocado: &ex4 Monedas Real'
+    - 'si give monedaabisal 64 %player% +++ xp give %player% %rand:1|5%l +++ eco give
+      %player% %rand:100000|250000% +++ title %player% title "&a&l¡Caja abierta!"
+      +++ title %player% subtitle "&a☺ &fDisfruta de tu premio &a☺" +++ execute at
+      %player% run playsound minecraft:entity.zombie.break_wooden_door neutral %player%
+      +++ SENDMESSAGE &6📢 &6Rea&eCraft &8➠ &fTe ha tocado: &ex4 Monedas Abisal'
+    - 'si give monedakraken 64 %player% +++ xp give %player% %rand:1|5%l +++ eco give
+      %player% %rand:100000|250000% +++ title %player% title "&a&l¡Caja abierta!"
+      +++ title %player% subtitle "&a☺ &fDisfruta de tu premio &a☺" +++ execute at
+      %player% run playsound minecraft:entity.zombie.break_wooden_door neutral %player%
+      +++ SENDMESSAGE &6📢 &6Rea&eCraft &8➠ &fTe ha tocado: &ex4 Monedas Kraken'
+    - 'si give chat6mastertemporal7dx1 1 %player% +++ xp give %player% %rand:1|5%l
+      +++ eco give %player% %rand:100000|250000% +++ title %player% title "&a&l¡Caja
+      abierta!" +++ title %player% subtitle "&a☺ &fDisfruta de tu premio &a☺" +++
+      execute at %player% run playsound minecraft:entity.zombie.break_wooden_door
+      neutral %player% +++ SENDMESSAGE &6📢 &6Rea&eCraft &8➠ &fTe ha tocado: &ex1
+      Master Temporal 7d'
+    - 'si give chat6mastertemporal3dx1 1 %player% +++ xp give %player% %rand:1|5%l
+      +++ eco give %player% %rand:100000|250000% +++ title %player% title "&a&l¡Caja
+      abierta!" +++ title %player% subtitle "&a☺ &fDisfruta de tu premio &a☺" +++
+      execute at %player% run playsound minecraft:entity.zombie.break_wooden_door
+      neutral %player% +++ SENDMESSAGE &6📢 &6Rea&eCraft &8➠ &fTe ha tocado: &ex1
+      Master Temporal 3d'
+    - 'si give chat6repair7dx1 1 %player% +++ xp give %player% %rand:1|5%l +++ eco
+      give %player% %rand:100000|250000% +++ title %player% title "&a&l¡Caja abierta!"
+      +++ title %player% subtitle "&a☺ &fDisfruta de tu premio &a☺" +++ execute at
+      %player% run playsound minecraft:entity.zombie.break_wooden_door neutral %player%
+      +++ SENDMESSAGE &6📢 &6Rea&eCraft &8➠ &fTe ha tocado: &ex1 Repair 7d'
+    - 'si give chat6back7dx1 1 %player% +++ xp give %player% %rand:1|5%l +++ eco give
+      %player% %rand:100000|250000% +++ title %player% title "&a&l¡Caja abierta!"
+      +++ title %player% subtitle "&a☺ &fDisfruta de tu premio &a☺" +++ execute at
+      %player% run playsound minecraft:entity.zombie.break_wooden_door neutral %player%
+      +++ SENDMESSAGE &6📢 &6Rea&eCraft &8➠ &fTe ha tocado: &ex1 Back 7d'
+    - 'si give chat6fly7dx1 1 %player% +++ xp give %player% %rand:1|5%l +++ eco give
+      %player% %rand:100000|250000% +++ title %player% title "&a&l¡Caja abierta!"
+      +++ title %player% subtitle "&a☺ &fDisfruta de tu premio &a☺" +++ execute at
+      %player% run playsound minecraft:entity.zombie.break_wooden_door neutral %player%
+      +++ SENDMESSAGE &6📢 &6Rea&eCraft &8➠ &fTe ha tocado: &ex1 Fly 7d'
+    - 'si give chat6picoabisalx1 1 %player% +++ xp give %player% %rand:1|5%l +++ eco
+      give %player% %rand:100000|250000% +++ title %player% title "&a&l¡Caja abierta!"
+      +++ title %player% subtitle "&a☺ &fDisfruta de tu premio &a☺" +++ execute at
+      %player% run playsound minecraft:entity.zombie.break_wooden_door neutral %player%
+      +++ SENDMESSAGE &6📢 &6Rea&eCraft &8➠ &fTe ha tocado: &ex1 Pico Abisal'
+    - 'si give chat6martillox1 1 %player% +++ xp give %player% %rand:1|5%l +++ eco
+      give %player% %rand:100000|250000% +++ title %player% title "&a&l¡Caja abierta!"
+      +++ title %player% subtitle "&a☺ &fDisfruta de tu premio &a☺" +++ execute at
+      %player% run playsound minecraft:entity.zombie.break_wooden_door neutral %player%
+      +++ SENDMESSAGE &6📢 &6Rea&eCraft &8➠ &fTe ha tocado: &ex1 Martillo'
+    - 'si give chat6elitrax1 1 %player% +++ xp give %player% %rand:1|5%l +++ eco give
+      %player% %rand:100000|250000% +++ title %player% title "&a&l¡Caja abierta!"
+      +++ title %player% subtitle "&a☺ &fDisfruta de tu premio &a☺" +++ execute at
+      %player% run playsound minecraft:entity.zombie.break_wooden_door neutral %player%
+      +++ SENDMESSAGE &6📢 &6Rea&eCraft &8➠ &fTe ha tocado: &ex1 Elytra'
+    - 'si give chat6prote200x1 1 %player% +++ xp give %player% %rand:1|5%l +++ eco
+      give %player% %rand:100000|250000% +++ title %player% title "&a&l¡Caja abierta!"
+      +++ title %player% subtitle "&a☺ &fDisfruta de tu premio &a☺" +++ execute at
+      %player% run playsound minecraft:entity.zombie.break_wooden_door neutral %player%
+      +++ SENDMESSAGE &6📢 &6Rea&eCraft &8➠ &fTe ha tocado: &ex200 Protección'
+    - 'si give chat6manzanasdenotchx64 64 %player% +++ xp give %player% %rand:1|5%l
+      +++ eco give %player% %rand:100000|250000% +++ title %player% title "&a&l¡Caja
+      abierta!" +++ title %player% subtitle "&a☺ &fDisfruta de tu premio &a☺" +++
+      execute at %player% run playsound minecraft:entity.zombie.break_wooden_door
+      neutral %player% +++ SENDMESSAGE &6📢 &6Rea&eCraft &8➠ &fTe ha tocado: &ex64
+      Manzanas de Notch'
+    - 'si give chat6cascoabisalx1 1 %player% +++ xp give %player% %rand:1|5%l +++
+      eco give %player% %rand:100000|250000% +++ title %player% title "&a&l¡Caja abierta!"
+      +++ title %player% subtitle "&a☺ &fDisfruta de tu premio &a☺" +++ execute at
+      %player% run playsound minecraft:entity.zombie.break_wooden_door neutral %player%
+      +++ SENDMESSAGE &6📢 &6Rea&eCraft &8➠ &fTe ha tocado: &ex1 Casco Abisal'
+    - 'si give chat6pecheraabisalx1 1 %player% +++ xp give %player% %rand:1|5%l +++
+      eco give %player% %rand:100000|250000% +++ title %player% title "&a&l¡Caja abierta!"
+      +++ title %player% subtitle "&a☺ &fDisfruta de tu premio &a☺" +++ execute at
+      %player% run playsound minecraft:entity.zombie.break_wooden_door neutral %player%
+      +++ SENDMESSAGE &6📢 &6Rea&eCraft &8➠ &fTe ha tocado: &ex1 Pechera Abisal'
+    - 'si give chat6pantalonesabisalx1 1 %player% +++ xp give %player% %rand:1|5%l
+      +++ eco give %player% %rand:100000|250000% +++ title %player% title "&a&l¡Caja
+      abierta!" +++ title %player% subtitle "&a☺ &fDisfruta de tu premio &a☺" +++
+      execute at %player% run playsound minecraft:entity.zombie.break_wooden_door
+      neutral %player% +++ SENDMESSAGE &6📢 &6Rea&eCraft &8➠ &fTe ha tocado: &ex1
+      Pantalones Abisales'
+    - 'si give chat6botasabisalx1 1 %player% +++ xp give %player% %rand:1|5%l +++
+      eco give %player% %rand:100000|250000% +++ title %player% title "&a&l¡Caja abierta!"
+      +++ title %player% subtitle "&a☺ &fDisfruta de tu premio &a☺" +++ execute at
+      %player% run playsound minecraft:entity.zombie.break_wooden_door neutral %player%
+      +++ SENDMESSAGE &6📢 &6Rea&eCraft &8➠ &fTe ha tocado: &ex1 Botas Abisales'
+    - 'si give chat6espadaabisalx1 1 %player% +++ xp give %player% %rand:1|5%l +++
+      eco give %player% %rand:100000|250000% +++ title %player% title "&a&l¡Caja abierta!"
+      +++ title %player% subtitle "&a☺ &fDisfruta de tu premio &a☺" +++ execute at
+      %player% run playsound minecraft:entity.zombie.break_wooden_door neutral %player%
+      +++ SENDMESSAGE &6📢 &6Rea&eCraft &8➠ &fTe ha tocado: &ex1 Espada Abisal'
+    - LOOP END
+    - LOOP END
+    # Add player conditions to determine
+    # when the 
+    playerConditions:
+      ifNotSneaking: true
+      # The message displayed
+      # when the condition is not met
+      ifNotSneakingMsg: ''
+    #
+    worldConditions: {}
+    #
+    itemConditions: {}
+    #
+    customConditions:
+      # The event will be cancelled
+      # when the condition is not met
+      ifNeedPlayerConfirmationCancel: false
+    # The placeholders conditions
+    placeholdersConditions: {}
+    # Part to modifiy your variables
+    variablesModification: {}
+  activator1:
+    # The name or display name
+    name: '&eActivator'
+    option: PLAYER_ALL_CLICK
+    typeTarget: NO_TYPE_TARGET
+    # Usage modification
+    usageModification: 0
+    # Cancel the vanilla event
+    cancelEvent: false
+    # If another plugin cancels the event that
+    # triggers the activator and you enabled this feature
+    # the activator will not be activated
+    noActivatorRunIfTheEventIsCancelled: false
+    # Automatically update the item
+    autoUpdateItem: false
+    # The cooldown
+    cooldownFeatures:
+      # The cooldown
+      cooldown: 0
+      # The placeholders conditions to pause the cooldown
+      pausePlaceholdersConditions: {}
+    # The global cooldown
+    # (For ALL players and entities)
+    globalCooldownFeatures:
+      # The cooldown
+      cooldown: 0
+    # To add cooldown
+    # to another EI
+    otherEICooldowns: {}
+    # The required items
+    requiredItems: {}
+    # The required executable items
+    requiredExecutableItems: {}
+    # The required Magics
+    # (from EcoSkills)
+    requiredMagics: {}
+    # The slots where the
+    # activator will work
+    detailedSlots:
+    - -1
+    playerCommands:
+    - SENDMESSAGE &6📢 &6Rea&eCraft &8➠ &bViendo contenido de la caja...
+    - execute at %player% run playsound minecraft:block.barrel.open neutral %player%
+    - commandpanel cajitalegendaria %player%
+    # Add player conditions to determine
+    # when the 
+    playerConditions:
+      ifSneaking: true
+    #
+    worldConditions: {}
+    #
+    itemConditions: {}
+    #
+    customConditions:
+      # The event will be cancelled
+      # when the condition is not met
+      ifNeedPlayerConfirmationCancel: false
+    # The placeholders conditions
+    placeholdersConditions: {}
+    # Part to modifiy your variables
+    variablesModification: {}
+  activator2:
+    # The name or display name
+    name: '&eActivator'
+    option: PLAYER_ALL_CLICK
+    typeTarget: NO_TYPE_TARGET
+    # Usage modification
+    usageModification: 0
+    # Cancel the vanilla event
+    cancelEvent: false
+    # If another plugin cancels the event that
+    # triggers the activator and you enabled this feature
+    # the activator will not be activated
+    noActivatorRunIfTheEventIsCancelled: false
+    # Automatically update the item
+    autoUpdateItem: false
+    # The cooldown
+    cooldownFeatures:
+      # The cooldown
+      cooldown: 0
+      # The placeholders conditions to pause the cooldown
+      pausePlaceholdersConditions: {}
+    # The global cooldown
+    # (For ALL players and entities)
+    globalCooldownFeatures:
+      # The cooldown
+      cooldown: 0
+    # To add cooldown
+    # to another EI
+    otherEICooldowns: {}
+    # The required items
+    requiredItems: {}
+    # The required executable items
+    requiredExecutableItems: {}
+    # The required Magics
+    # (from EcoSkills)
+    requiredMagics: {}
+    # The slots where the
+    # activator will work
+    detailedSlots:
+    - -1
+    playerCommands: []
+    # Add player conditions to determine
+    # when the 
+    playerConditions: {}
+    #
+    worldConditions: {}
+    #
+    itemConditions: {}
+    #
+    customConditions: {}
+    # The placeholders conditions
+    placeholdersConditions: {}
+    # Part to modifiy your variables
+    variablesModification:
+      varUpdt0: {}
+# Display conditions in the lore
+displayConditions:
+  # Add player conditions to determine
+  # when the 
+  playerConditions: {}
+  #
+  worldConditions: {}
+  #
+  itemConditions: {}
+  # The placeholders conditions
+  placeholdersConditions: {}
+  # Enable or disable this feature
+  enableFeature: false
+# Food features
+foodFeatures:
+  # Is the food meat?
+  isMeat: false
+  # The nutrition of the food
+  nutrition: 1
+  # The saturation of the food
+  saturation: 1
+  # Can the player always eat this food?
+  canAlwaysEat: false
+containerFeatures:
+  # Is the container locked?
+  isLocked: false
+  # The container content
+  containerContent: []
+# Consumable Features
+consumableFeatures:
+  # Enable this features
+  enable: false
+  # The animation
+  animation: EAT
+  # Has consume particles
+  hasConsumeParticles: false
+  # The consume seconds
+  consumeSeconds: 3
+# The rarity of the item
+itemRarity:
+  # Enable or disable the rarity feature
+  enableRarity: false
+  # The rarity of the item
+  rarity: COMMON
+# The glider
+glider: false
+# The repairable features
+repairableFeatures:
+  # Enable this features
+  enable: false
+  # The repair cost
+  repairCost: 2
+# The equippable features
+equippableFeatures:
+  # Enable this features
+  enable: false
+  # The slot
+  slot: BODY
+  # Enable the sound
+  enableSound: false
+  # The sound
+  sound: ITEM.ARMOR.EQUIP_DIAMOND
+  # The item will take damage when the player is hurt
+  damageableOnHurt: false
+  # The item can be dispensed
+  dispensable: true
+  # The item can be swapped
+  swappable: true
+  # The allowed entities
+  allowedEntities:
+  - PLAYER
+# The attributes
+attributes: {}

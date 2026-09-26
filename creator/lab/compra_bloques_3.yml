@@ -1,0 +1,607 @@
+menu_title: '&0&l|&r &0Compra ▶ &8Bloques &7(3/12)'
+open_command:
+  - compra_bloques_3
+size: 45
+open_requirement:
+  requirements: {}
+register_command: true
+update: true
+
+items:
+  'Filtro_Top':
+    material: GRAY_STAINED_GLASS_PANE
+    display_name: ' '
+    slots:
+      - 0
+      - 1
+      - 2
+      - 3
+      - 4
+      - 5
+      - 6
+      - 7
+      - 8
+
+  'item_1':
+    material: MUDDY_MANGROVE_ROOTS
+    slot: 9
+    item_flags:
+      - HIDE_ATTRIBUTES
+      - HIDE_ENCHANTS
+    display_name: '&#FFF275Muddy Mangrove Roots'
+    lore:
+      - '&8ᴘʀᴇᴄɪᴏ ᴅᴇ ᴄᴏᴍᴘʀᴀ'
+      - ''
+      - ' &8| &fUnidad: &#59E91F&l$&r&#59E91F7'
+      - ' &8| &fStack x64: &#59E91F&l$&r&#59E91F448'
+      - ''
+      - '&7▶ Click para comprar'
+    left_click_commands:
+      - '[openguimenu] compra_cantidad'
+      - '[sound] UI_BUTTON_CLICK'
+
+  'item_2':
+    material: NETHERRACK
+    slot: 10
+    item_flags:
+      - HIDE_ATTRIBUTES
+      - HIDE_ENCHANTS
+    display_name: '&#FFF275Netherrack'
+    lore:
+      - '&8ᴘʀᴇᴄɪᴏ ᴅᴇ ᴄᴏᴍᴘʀᴀ'
+      - ''
+      - ' &8| &fUnidad: &#59E91F&l$&r&#59E91F2'
+      - ' &8| &fStack x64: &#59E91F&l$&r&#59E91F128'
+      - ''
+      - '&7▶ Click para comprar'
+    left_click_commands:
+      - '[openguimenu] compra_cantidad'
+      - '[sound] UI_BUTTON_CLICK'
+
+  'item_3':
+    material: NETHER_BRICKS
+    slot: 11
+    item_flags:
+      - HIDE_ATTRIBUTES
+      - HIDE_ENCHANTS
+    display_name: '&#FFF275Nether Bricks'
+    lore:
+      - '&8ᴘʀᴇᴄɪᴏ ᴅᴇ ᴄᴏᴍᴘʀᴀ'
+      - ''
+      - ' &8| &fUnidad: &#59E91F&l$&r&#59E91F7'
+      - ' &8| &fStack x64: &#59E91F&l$&r&#59E91F448'
+      - ''
+      - '&7▶ Click para comprar'
+    left_click_commands:
+      - '[openguimenu] compra_cantidad'
+      - '[sound] UI_BUTTON_CLICK'
+
+  'item_4':
+    material: CRACKED_NETHER_BRICKS
+    slot: 12
+    item_flags:
+      - HIDE_ATTRIBUTES
+      - HIDE_ENCHANTS
+    display_name: '&#FFF275Cracked Nether Bricks'
+    lore:
+      - '&8ᴘʀᴇᴄɪᴏ ᴅᴇ ᴄᴏᴍᴘʀᴀ'
+      - ''
+      - ' &8| &fUnidad: &#59E91F&l$&r&#59E91F5'
+      - ' &8| &fStack x64: &#59E91F&l$&r&#59E91F320'
+      - ''
+      - '&7▶ Click para comprar'
+    left_click_commands:
+      - '[openguimenu] compra_cantidad'
+      - '[sound] UI_BUTTON_CLICK'
+
+  'item_5':
+    material: CHISELED_NETHER_BRICKS
+    slot: 13
+    item_flags:
+      - HIDE_ATTRIBUTES
+      - HIDE_ENCHANTS
+    display_name: '&#FFF275Chiseled Nether Bricks'
+    lore:
+      - '&8ᴘʀᴇᴄɪᴏ ᴅᴇ ᴄᴏᴍᴘʀᴀ'
+      - ''
+      - ' &8| &fUnidad: &#59E91F&l$&r&#59E91F10'
+      - ' &8| &fStack x64: &#59E91F&l$&r&#59E91F640'
+      - ''
+      - '&7▶ Click para comprar'
+    left_click_commands:
+      - '[openguimenu] compra_cantidad'
+      - '[sound] UI_BUTTON_CLICK'
+
+  'item_6':
+    material: BASALT
+    slot: 14
+    item_flags:
+      - HIDE_ATTRIBUTES
+      - HIDE_ENCHANTS
+    display_name: '&#FFF275Basalt'
+    lore:
+      - '&8ᴘʀᴇᴄɪᴏ ᴅᴇ ᴄᴏᴍᴘʀᴀ'
+      - ''
+      - ' &8| &fUnidad: &#59E91F&l$&r&#59E91F5'
+      - ' &8| &fStack x64: &#59E91F&l$&r&#59E91F320'
+      - ''
+      - '&7▶ Click para comprar'
+    left_click_commands:
+      - '[openguimenu] compra_cantidad'
+      - '[sound] UI_BUTTON_CLICK'
+
+  'item_7':
+    material: POLISHED_BASALT
+    slot: 15
+    item_flags:
+      - HIDE_ATTRIBUTES
+      - HIDE_ENCHANTS
+    display_name: '&#FFF275Polished Basalt'
+    lore:
+      - '&8ᴘʀᴇᴄɪᴏ ᴅᴇ ᴄᴏᴍᴘʀᴀ'
+      - ''
+      - ' &8| &fUnidad: &#59E91F&l$&r&#59E91F7'
+      - ' &8| &fStack x64: &#59E91F&l$&r&#59E91F448'
+      - ''
+      - '&7▶ Click para comprar'
+    left_click_commands:
+      - '[openguimenu] compra_cantidad'
+      - '[sound] UI_BUTTON_CLICK'
+
+  'item_8':
+    material: SMOOTH_BASALT
+    slot: 16
+    item_flags:
+      - HIDE_ATTRIBUTES
+      - HIDE_ENCHANTS
+    display_name: '&#FFF275Smooth Basalt'
+    lore:
+      - '&8ᴘʀᴇᴄɪᴏ ᴅᴇ ᴄᴏᴍᴘʀᴀ'
+      - ''
+      - ' &8| &fUnidad: &#59E91F&l$&r&#59E91F7'
+      - ' &8| &fStack x64: &#59E91F&l$&r&#59E91F448'
+      - ''
+      - '&7▶ Click para comprar'
+    left_click_commands:
+      - '[openguimenu] compra_cantidad'
+      - '[sound] UI_BUTTON_CLICK'
+
+  'item_9':
+    material: GILDED_BLACKSTONE
+    slot: 17
+    item_flags:
+      - HIDE_ATTRIBUTES
+      - HIDE_ENCHANTS
+    display_name: '&#FFF275Gilded Blackstone'
+    lore:
+      - '&8ᴘʀᴇᴄɪᴏ ᴅᴇ ᴄᴏᴍᴘʀᴀ'
+      - ''
+      - ' &8| &fUnidad: &#59E91F&l$&r&#59E91F100'
+      - ' &8| &fStack x64: &#59E91F&l$&r&#59E91F6,400'
+      - ''
+      - '&7▶ Click para comprar'
+    left_click_commands:
+      - '[openguimenu] compra_cantidad'
+      - '[sound] UI_BUTTON_CLICK'
+
+  'item_10':
+    material: POLISHED_BLACKSTONE
+    slot: 18
+    item_flags:
+      - HIDE_ATTRIBUTES
+      - HIDE_ENCHANTS
+    display_name: '&#FFF275Polished Blackstone'
+    lore:
+      - '&8ᴘʀᴇᴄɪᴏ ᴅᴇ ᴄᴏᴍᴘʀᴀ'
+      - ''
+      - ' &8| &fUnidad: &#59E91F&l$&r&#59E91F10'
+      - ' &8| &fStack x64: &#59E91F&l$&r&#59E91F640'
+      - ''
+      - '&7▶ Click para comprar'
+    left_click_commands:
+      - '[openguimenu] compra_cantidad'
+      - '[sound] UI_BUTTON_CLICK'
+
+  'item_11':
+    material: POLISHED_BLACKSTONE_BRICKS
+    slot: 19
+    item_flags:
+      - HIDE_ATTRIBUTES
+      - HIDE_ENCHANTS
+    display_name: '&#FFF275Polished Blackstone Bricks'
+    lore:
+      - '&8ᴘʀᴇᴄɪᴏ ᴅᴇ ᴄᴏᴍᴘʀᴀ'
+      - ''
+      - ' &8| &fUnidad: &#59E91F&l$&r&#59E91F12'
+      - ' &8| &fStack x64: &#59E91F&l$&r&#59E91F768'
+      - ''
+      - '&7▶ Click para comprar'
+    left_click_commands:
+      - '[openguimenu] compra_cantidad'
+      - '[sound] UI_BUTTON_CLICK'
+
+  'item_12':
+    material: CRACKED_POLISHED_BLACKSTONE_BRICKS
+    slot: 20
+    item_flags:
+      - HIDE_ATTRIBUTES
+      - HIDE_ENCHANTS
+    display_name: '&#FFF275Cracked Polished Blackstone Bricks'
+    lore:
+      - '&8ᴘʀᴇᴄɪᴏ ᴅᴇ ᴄᴏᴍᴘʀᴀ'
+      - ''
+      - ' &8| &fUnidad: &#59E91F&l$&r&#59E91F10'
+      - ' &8| &fStack x64: &#59E91F&l$&r&#59E91F640'
+      - ''
+      - '&7▶ Click para comprar'
+    left_click_commands:
+      - '[openguimenu] compra_cantidad'
+      - '[sound] UI_BUTTON_CLICK'
+
+  'item_13':
+    material: CHISELED_POLISHED_BLACKSTONE
+    slot: 21
+    item_flags:
+      - HIDE_ATTRIBUTES
+      - HIDE_ENCHANTS
+    display_name: '&#FFF275Chiseled Polished Blackstone'
+    lore:
+      - '&8ᴘʀᴇᴄɪᴏ ᴅᴇ ᴄᴏᴍᴘʀᴀ'
+      - ''
+      - ' &8| &fUnidad: &#59E91F&l$&r&#59E91F15'
+      - ' &8| &fStack x64: &#59E91F&l$&r&#59E91F960'
+      - ''
+      - '&7▶ Click para comprar'
+    left_click_commands:
+      - '[openguimenu] compra_cantidad'
+      - '[sound] UI_BUTTON_CLICK'
+
+  'item_14':
+    material: END_STONE
+    slot: 22
+    item_flags:
+      - HIDE_ATTRIBUTES
+      - HIDE_ENCHANTS
+    display_name: '&#FFF275End Stone'
+    lore:
+      - '&8ᴘʀᴇᴄɪᴏ ᴅᴇ ᴄᴏᴍᴘʀᴀ'
+      - ''
+      - ' &8| &fUnidad: &#59E91F&l$&r&#59E91F25'
+      - ' &8| &fStack x64: &#59E91F&l$&r&#59E91F1,600'
+      - ''
+      - '&7▶ Click para comprar'
+    left_click_commands:
+      - '[openguimenu] compra_cantidad'
+      - '[sound] UI_BUTTON_CLICK'
+
+  'item_15':
+    material: END_STONE_BRICKS
+    slot: 23
+    item_flags:
+      - HIDE_ATTRIBUTES
+      - HIDE_ENCHANTS
+    display_name: '&#FFF275End Stone Bricks'
+    lore:
+      - '&8ᴘʀᴇᴄɪᴏ ᴅᴇ ᴄᴏᴍᴘʀᴀ'
+      - ''
+      - ' &8| &fUnidad: &#59E91F&l$&r&#59E91F30'
+      - ' &8| &fStack x64: &#59E91F&l$&r&#59E91F1,920'
+      - ''
+      - '&7▶ Click para comprar'
+    left_click_commands:
+      - '[openguimenu] compra_cantidad'
+      - '[sound] UI_BUTTON_CLICK'
+
+  'item_16':
+    material: PURPUR_BLOCK
+    slot: 24
+    item_flags:
+      - HIDE_ATTRIBUTES
+      - HIDE_ENCHANTS
+    display_name: '&#FFF275Purpur Block'
+    lore:
+      - '&8ᴘʀᴇᴄɪᴏ ᴅᴇ ᴄᴏᴍᴘʀᴀ'
+      - ''
+      - ' &8| &fUnidad: &#59E91F&l$&r&#59E91F37'
+      - ' &8| &fStack x64: &#59E91F&l$&r&#59E91F2,368'
+      - ''
+      - '&7▶ Click para comprar'
+    left_click_commands:
+      - '[openguimenu] compra_cantidad'
+      - '[sound] UI_BUTTON_CLICK'
+
+  'item_17':
+    material: PURPUR_PILLAR
+    slot: 25
+    item_flags:
+      - HIDE_ATTRIBUTES
+      - HIDE_ENCHANTS
+    display_name: '&#FFF275Purpur Pillar'
+    lore:
+      - '&8ᴘʀᴇᴄɪᴏ ᴅᴇ ᴄᴏᴍᴘʀᴀ'
+      - ''
+      - ' &8| &fUnidad: &#59E91F&l$&r&#59E91F37'
+      - ' &8| &fStack x64: &#59E91F&l$&r&#59E91F2,368'
+      - ''
+      - '&7▶ Click para comprar'
+    left_click_commands:
+      - '[openguimenu] compra_cantidad'
+      - '[sound] UI_BUTTON_CLICK'
+
+  'item_18':
+    material: OBSIDIAN
+    slot: 26
+    item_flags:
+      - HIDE_ATTRIBUTES
+      - HIDE_ENCHANTS
+    display_name: '&#FFF275Obsidian'
+    lore:
+      - '&8ᴘʀᴇᴄɪᴏ ᴅᴇ ᴄᴏᴍᴘʀᴀ'
+      - ''
+      - ' &8| &fUnidad: &#59E91F&l$&r&#59E91F125'
+      - ' &8| &fStack x64: &#59E91F&l$&r&#59E91F8,000'
+      - ''
+      - '&7▶ Click para comprar'
+    left_click_commands:
+      - '[openguimenu] compra_cantidad'
+      - '[sound] UI_BUTTON_CLICK'
+
+  'item_19':
+    material: CRYING_OBSIDIAN
+    slot: 27
+    item_flags:
+      - HIDE_ATTRIBUTES
+      - HIDE_ENCHANTS
+    display_name: '&#FFF275Crying Obsidian'
+    lore:
+      - '&8ᴘʀᴇᴄɪᴏ ᴅᴇ ᴄᴏᴍᴘʀᴀ'
+      - ''
+      - ' &8| &fUnidad: &#59E91F&l$&r&#59E91F150'
+      - ' &8| &fStack x64: &#59E91F&l$&r&#59E91F9,600'
+      - ''
+      - '&7▶ Click para comprar'
+    left_click_commands:
+      - '[openguimenu] compra_cantidad'
+      - '[sound] UI_BUTTON_CLICK'
+
+  'item_20':
+    material: SMOOTH_STONE
+    slot: 28
+    item_flags:
+      - HIDE_ATTRIBUTES
+      - HIDE_ENCHANTS
+    display_name: '&#FFF275Smooth Stone'
+    lore:
+      - '&8ᴘʀᴇᴄɪᴏ ᴅᴇ ᴄᴏᴍᴘʀᴀ'
+      - ''
+      - ' &8| &fUnidad: &#59E91F&l$&r&#59E91F10'
+      - ' &8| &fStack x64: &#59E91F&l$&r&#59E91F640'
+      - ''
+      - '&7▶ Click para comprar'
+    left_click_commands:
+      - '[openguimenu] compra_cantidad'
+      - '[sound] UI_BUTTON_CLICK'
+
+  'item_21':
+    material: STONE_BRICKS
+    slot: 29
+    item_flags:
+      - HIDE_ATTRIBUTES
+      - HIDE_ENCHANTS
+    display_name: '&#FFF275Stone Bricks'
+    lore:
+      - '&8ᴘʀᴇᴄɪᴏ ᴅᴇ ᴄᴏᴍᴘʀᴀ'
+      - ''
+      - ' &8| &fUnidad: &#59E91F&l$&r&#59E91F10'
+      - ' &8| &fStack x64: &#59E91F&l$&r&#59E91F640'
+      - ''
+      - '&7▶ Click para comprar'
+    left_click_commands:
+      - '[openguimenu] compra_cantidad'
+      - '[sound] UI_BUTTON_CLICK'
+
+  'item_22':
+    material: CRACKED_STONE_BRICKS
+    slot: 30
+    item_flags:
+      - HIDE_ATTRIBUTES
+      - HIDE_ENCHANTS
+    display_name: '&#FFF275Cracked Stone Bricks'
+    lore:
+      - '&8ᴘʀᴇᴄɪᴏ ᴅᴇ ᴄᴏᴍᴘʀᴀ'
+      - ''
+      - ' &8| &fUnidad: &#59E91F&l$&r&#59E91F7'
+      - ' &8| &fStack x64: &#59E91F&l$&r&#59E91F448'
+      - ''
+      - '&7▶ Click para comprar'
+    left_click_commands:
+      - '[openguimenu] compra_cantidad'
+      - '[sound] UI_BUTTON_CLICK'
+
+  'item_23':
+    material: CHISELED_STONE_BRICKS
+    slot: 31
+    item_flags:
+      - HIDE_ATTRIBUTES
+      - HIDE_ENCHANTS
+    display_name: '&#FFF275Chiseled Stone Bricks'
+    lore:
+      - '&8ᴘʀᴇᴄɪᴏ ᴅᴇ ᴄᴏᴍᴘʀᴀ'
+      - ''
+      - ' &8| &fUnidad: &#59E91F&l$&r&#59E91F12'
+      - ' &8| &fStack x64: &#59E91F&l$&r&#59E91F768'
+      - ''
+      - '&7▶ Click para comprar'
+    left_click_commands:
+      - '[openguimenu] compra_cantidad'
+      - '[sound] UI_BUTTON_CLICK'
+
+  'item_24':
+    material: POLISHED_ANDESITE
+    slot: 32
+    item_flags:
+      - HIDE_ATTRIBUTES
+      - HIDE_ENCHANTS
+    display_name: '&#FFF275Polished Andesite'
+    lore:
+      - '&8ᴘʀᴇᴄɪᴏ ᴅᴇ ᴄᴏᴍᴘʀᴀ'
+      - ''
+      - ' &8| &fUnidad: &#59E91F&l$&r&#59E91F4'
+      - ' &8| &fStack x64: &#59E91F&l$&r&#59E91F256'
+      - ''
+      - '&7▶ Click para comprar'
+    left_click_commands:
+      - '[openguimenu] compra_cantidad'
+      - '[sound] UI_BUTTON_CLICK'
+
+  'item_25':
+    material: POLISHED_GRANITE
+    slot: 33
+    item_flags:
+      - HIDE_ATTRIBUTES
+      - HIDE_ENCHANTS
+    display_name: '&#FFF275Polished Granite'
+    lore:
+      - '&8ᴘʀᴇᴄɪᴏ ᴅᴇ ᴄᴏᴍᴘʀᴀ'
+      - ''
+      - ' &8| &fUnidad: &#59E91F&l$&r&#59E91F4'
+      - ' &8| &fStack x64: &#59E91F&l$&r&#59E91F256'
+      - ''
+      - '&7▶ Click para comprar'
+    left_click_commands:
+      - '[openguimenu] compra_cantidad'
+      - '[sound] UI_BUTTON_CLICK'
+
+  'item_26':
+    material: POLISHED_DIORITE
+    slot: 34
+    item_flags:
+      - HIDE_ATTRIBUTES
+      - HIDE_ENCHANTS
+    display_name: '&#FFF275Polished Diorite'
+    lore:
+      - '&8ᴘʀᴇᴄɪᴏ ᴅᴇ ᴄᴏᴍᴘʀᴀ'
+      - ''
+      - ' &8| &fUnidad: &#59E91F&l$&r&#59E91F4'
+      - ' &8| &fStack x64: &#59E91F&l$&r&#59E91F256'
+      - ''
+      - '&7▶ Click para comprar'
+    left_click_commands:
+      - '[openguimenu] compra_cantidad'
+      - '[sound] UI_BUTTON_CLICK'
+
+  'item_27':
+    material: POLISHED_DEEPSLATE
+    slot: 35
+    item_flags:
+      - HIDE_ATTRIBUTES
+      - HIDE_ENCHANTS
+    display_name: '&#FFF275Polished Deepslate'
+    lore:
+      - '&8ᴘʀᴇᴄɪᴏ ᴅᴇ ᴄᴏᴍᴘʀᴀ'
+      - ''
+      - ' &8| &fUnidad: &#59E91F&l$&r&#59E91F20'
+      - ' &8| &fStack x64: &#59E91F&l$&r&#59E91F1,280'
+      - ''
+      - '&7▶ Click para comprar'
+    left_click_commands:
+      - '[openguimenu] compra_cantidad'
+      - '[sound] UI_BUTTON_CLICK'
+
+  'Boton_Filtro':
+    material: COMPARATOR
+    slot: 36
+    item_flags:
+      - HIDE_ATTRIBUTES
+      - HIDE_ENCHANTS
+    enchantments:
+      - DURABILITY;1
+    display_name: '&#FFF275Filtrar Categoría'
+    lore:
+      - '&8ᴇʟɪɢᴇ ᴄᴀᴛᴇɢᴏʀɪᴀ'
+      - ''
+      - ' &#FFF275● Bloques'
+      - ' &7● Comida'
+      - ' &7● Equipo'
+      - ' &7● Redstone'
+      - ' &7● Misceláneo'
+      - ' &7● Tintes'
+      - ' &7● Banners'
+      - ''
+      - '&7▶ Click para cambiar'
+    left_click_commands:
+      - '[openguimenu] compra_comida'
+      - '[sound] UI_BUTTON_CLICK'
+
+  'Filtro_Navbar_L':
+    material: GRAY_STAINED_GLASS_PANE
+    display_name: ' '
+    slots:
+      - 37
+      - 38
+
+  'Pagina_Anterior':
+    material: ARROW
+    slot: 39
+    item_flags:
+      - HIDE_ATTRIBUTES
+    display_name: '&#FFF275◀ Página Anterior'
+    lore:
+      - '&8| &fPágina: &73&8/&712'
+      - ''
+      - '&7▶ Click para retroceder'
+    left_click_commands:
+      - '[openguimenu] compra_bloques_2'
+      - '[sound] UI_BUTTON_CLICK'
+
+  'Boton_Volver':
+    material: DARK_OAK_DOOR
+    slot: 40
+    item_flags:
+      - HIDE_ATTRIBUTES
+    display_name: '&cVolver Atrás'
+    lore:
+      - '&7Regresar al menú anterior'
+    left_click_commands:
+      - '[openguimenu] mercado_dinero'
+      - '[sound] UI_BUTTON_CLICK'
+
+  'Pagina_Siguiente':
+    material: ARROW
+    slot: 41
+    item_flags:
+      - HIDE_ATTRIBUTES
+    display_name: '&#FFF275Página Siguiente ▶'
+    lore:
+      - '&8| &fPágina: &73&8/&712'
+      - ''
+      - '&7▶ Click para avanzar'
+    left_click_commands:
+      - '[openguimenu] compra_bloques_4'
+      - '[sound] UI_BUTTON_CLICK'
+
+  'Filtro_Navbar_R':
+    material: GRAY_STAINED_GLASS_PANE
+    display_name: ' '
+    slots:
+      - 42
+      - 43
+
+  'Info_Balance':
+    material: head-%player_name%
+    slot: 44
+    item_flags:
+      - HIDE_ATTRIBUTES
+    display_name: '&#FFF275Tu Economía'
+    lore:
+      - '&8Tu Economía'
+      - ''
+      - ' &8| &fDinero: &#59E91F&l$&r&#59E91F%vault_eco_balance_formatted%'
+      - ' &8| &fAlmas: &#34B0F3%thundercurrencys_almas%🔥'
+      - ' &8| &fZafiros: &#1E6BFF%thundercurrencys_zafiros%💎'
+      - ' &8| &fXP: &#D48BFF%player_level% LVL'
+      - ''
+      - '&7▶ Click para más información'
+    left_click_commands:
+      - '[openguimenu] info_economia'
+      - '[sound] UI_BUTTON_CLICK'

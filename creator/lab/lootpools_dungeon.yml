@@ -1,0 +1,129 @@
+menu_title: '&0&l|&r &0Mazmorras ▶ &#FFF275Calidades'
+open_command:
+  - lootpools
+  - testloot
+  - lootchests
+size: 36
+open_requirement:
+  requirements: {}
+register_command: true
+update: true
+
+items:
+  # ============================================================================
+  # FILA 2: CATEGORÍAS PRINCIPALES (SLOTS 11, 13, 15)
+  # ============================================================================
+  'Boton_Calidad_1':
+    material: CHEST
+    slot: 11
+    item_flags:
+      - HIDE_ATTRIBUTES
+      - HIDE_ENCHANTS
+    enchantments:
+      - UNBREAKING;1
+    display_name: '&#59E91F&lCofre de Mazmorra I &7(Fácil)'
+    lore:
+      - '&8ʟᴏᴏᴛᴘᴏᴏʟ ɪɴɪᴄɪᴀʟ'
+      - ''
+      - ' &8| &fCalidad: &#59E91FCalidad I'
+      - ' &8| &fCooldown: &e5 Minutos'
+      - ' &8| &fRolls: &b1 a 3 recompensas'
+      - ' &8| &fArtículos en pool: &e9'
+      - ' &8| &fEntorno: &7Mazmorras I a V'
+      - ''
+      - '&7▶ Click para ver catálogo'
+    left_click_commands:
+      - '[openguimenu] lootpool_calidad_1'
+      - '[sound] UI_BUTTON_CLICK'
+
+  'Boton_Calidad_2':
+    material: TRAPPED_CHEST
+    slot: 13
+    item_flags:
+      - HIDE_ATTRIBUTES
+      - HIDE_ENCHANTS
+    enchantments:
+      - UNBREAKING;1
+    display_name: '&#34B0F3&lCofre de Mazmorra II &7(Medio)'
+    lore:
+      - '&8ʟᴏᴏᴛᴘᴏᴏʟ ɪɴᴛᴇʀᴍᴇᴅɪᴏ'
+      - ''
+      - ' &8| &fCalidad: &#34B0F3Calidad II'
+      - ' &8| &fCooldown: &e10 Minutos'
+      - ' &8| &fRolls: &b2 a 4 recompensas'
+      - ' &8| &fArtículos en pool: &e9'
+      - ' &8| &fEntorno: &7Mazmorras VI a XV'
+      - ''
+      - '&7▶ Click para ver catálogo'
+    left_click_commands:
+      - '[openguimenu] lootpool_calidad_2'
+      - '[sound] UI_BUTTON_CLICK'
+
+  'Boton_Calidad_3':
+    material: ENDER_CHEST
+    slot: 15
+    item_flags:
+      - HIDE_ATTRIBUTES
+      - HIDE_ENCHANTS
+    enchantments:
+      - UNBREAKING;1
+    display_name: '&#D48BFF&lCofre de Mazmorra III &7(Élite)'
+    lore:
+      - '&8ʟᴏᴏᴛᴘᴏᴏʟ ᴇʟɪᴛᴇ'
+      - ''
+      - ' &8| &fCalidad: &#D48BFFCalidad III'
+      - ' &8| &fCooldown: &e20 Minutos'
+      - ' &8| &fRolls: &b3 a 5 recompensas'
+      - ' &8| &fArtículos en pool: &e9'
+      - ' &8| &fEntorno: &7Mazmorras XVI a XXV'
+      - ''
+      - '&7▶ Click para ver catálogo'
+    left_click_commands:
+      - '[openguimenu] lootpool_calidad_3'
+      - '[sound] UI_BUTTON_CLICK'
+
+  # ============================================================================
+  # NAV BAR INFERIOR (FILA 4 - SLOTS 27 A 35)
+  # ============================================================================
+  'Filtro_Navbar':
+    material: GRAY_STAINED_GLASS_PANE
+    display_name: ' '
+    slots:
+      - 27
+      - 28
+      - 29
+      - 30
+      - 32
+      - 33
+      - 34
+
+  'Volver':
+    material: DARK_OAK_DOOR
+    slot: 31
+    item_flags:
+      - HIDE_ATTRIBUTES
+    display_name: '&cVolver'
+    lore:
+      - '&7▶ Click para regresar'
+    left_click_commands:
+      - '[openguimenu] warps_dungeons'
+      - '[sound] UI_BUTTON_CLICK'
+
+  'Info_Balance':
+    material: head-%player_name%
+    slot: 35
+    item_flags:
+      - HIDE_ATTRIBUTES
+    display_name: '&#FFF275Tu Economia'
+    lore:
+      - '&8Tu Economia'
+      - ''
+      - ' &8| &fDinero: &#59E91F&l$&r&#59E91F%vault_eco_balance_formatted%'
+      - ' &8| &fAlmas: &#34B0F3%thundercurrencys_almas% fuego'
+      - ' &8| &fZafiros: &#1E6BFF%thundercurrencys_zafiros% diamante'
+      - ' &8| &fXP: &#D48BFF%player_level% LVL'
+      - ''
+      - '&7▶ Click para mas informacion'
+    left_click_commands:
+      - '[openguimenu] info_economia'
+      - '[sound] UI_BUTTON_CLICK'

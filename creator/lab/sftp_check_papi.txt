@@ -1,0 +1,2 @@
+ls plugins/PlaceholderAPI/expansions/
+bye

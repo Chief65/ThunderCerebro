@@ -1,0 +1,325 @@
+﻿menu_title: '&0&l|&r &0Mercado ▶ &8Pronóstico y Pity &7⏳ 03h 42m'
+open_command:
+  - lonjaprobabilidades
+  - lonja_probabilidades
+  - lonjapity
+size: 54
+open_requirement:
+  requirements: {}
+register_command: true
+update: true
+
+items:
+  # =========================================================================
+  # FILA 1: MARCO SUPERIOR (CRISTALES GRISES EN SLOTS 0-3 Y 5-8)
+  # =========================================================================
+  'Filtro_Top':
+    material: GRAY_STAINED_GLASS_PANE
+    display_name: ' '
+    slots:
+      - 0
+      - 1
+      - 2
+      - 3
+      - 5
+      - 6
+      - 7
+      - 8
+
+  # CABECERA EXPLICATIVA DEL PITY SYSTEM (SLOT 4)
+  'Header_Pity':
+    material: SPYGLASS
+    slot: 4
+    item_flags:
+      - HIDE_ATTRIBUTES
+      - HIDE_ENCHANTS
+    enchantments:
+      - DURABILITY;1
+    display_name: '&#FFF275Pronostico de Mercado y Pity'
+    lore:
+      - '&8ꜱɪꜱᴛᴇᴍᴀ ᴅᴇ ᴘɪᴛʏ'
+      - ''
+      - ' &fProbabilidades para la proxima'
+      - ' &fjornada de mercado (00:00).'
+      - ''
+      - ' &8| &fFormula: &eBase + (Dias * Chance)'
+      - ' &8| &fGarantia: &a100% a los 7 dias'
+      - ' &8| &fCiclo proximo: &e03h 42m'
+      - ''
+      - '&8Elige que recursos farmear hoy.'
+
+  # =========================================================================
+  # FILA 2: ITEMS EN AUGE Y PROBABLES (SLOTS 11 A 15)
+  # =========================================================================
+
+  # TOP 1: ZANAHORIA (5 días de ausencia - Pity inminente)
+  'Pity_1_Zanahoria':
+    material: CARROT
+    slot: 11
+    item_flags:
+      - HIDE_ATTRIBUTES
+      - HIDE_ENCHANTS
+    enchantments:
+      - DURABILITY;1
+    display_name: '&#FFF275Zanahoria &8[&#59E91F38.5%&8]'
+    lore:
+      - '&8ᴀɢʀɪᴄᴜʟᴛᴜʀᴀ'
+      - ''
+      - ' &8| &fAusencia: &e5 dias'
+      - ' &8| &fProbabilidad: &#59E91F38.5%'
+      - ' &8| &fPity: &eFaltan 2 dias (100%)'
+      - ''
+      - ' &8| &fEstado: &#59E91Fᴍᴜʏ ᴘʀᴏʙᴀʙʟᴇ'
+      - ' &8| &fRango estimado: &7.00-.00'
+
+  # TOP 2: TRIGO (4 días de ausencia)
+  'Pity_2_Trigo':
+    material: WHEAT
+    slot: 12
+    item_flags:
+      - HIDE_ATTRIBUTES
+      - HIDE_ENCHANTS
+    enchantments:
+      - DURABILITY;1
+    display_name: '&#FFF275Trigo &8[&#59E91F32.0%&8]'
+    lore:
+      - '&8ᴀɢʀɪᴄᴜʟᴛᴜʀᴀ'
+      - ''
+      - ' &8| &fAusencia: &e4 dias'
+      - ' &8| &fProbabilidad: &#59E91F32.0%'
+      - ' &8| &fPity: &eFaltan 3 dias'
+      - ''
+      - ' &8| &fEstado: &#59E91Fᴍᴜʏ ᴘʀᴏʙᴀʙʟᴇ'
+      - ' &8| &fRango estimado: &7.00-.00'
+
+  # TOP 3: CUERO (3 días de ausencia)
+  'Pity_3_Cuero':
+    material: LEATHER
+    slot: 13
+    item_flags:
+      - HIDE_ATTRIBUTES
+    display_name: '&#FFF275Cuero &8[&#59E91F26.5%&8]'
+    lore:
+      - '&8ᴅʀᴏᴘꜱ ᴅᴇ ᴍᴏʙꜱ'
+      - ''
+      - ' &8| &fAusencia: &e3 dias'
+      - ' &8| &fProbabilidad: &#59E91F26.5%'
+      - ' &8| &fPity: &eFaltan 4 dias'
+      - ''
+      - ' &8| &fEstado: &#59E91Fᴘʀᴏʙᴀʙʟᴇ'
+      - ' &8| &fRango estimado: &7.00-.00'
+
+  # TOP 4: BAMBÚ (3 días de ausencia)
+  'Pity_4_Bambu':
+    material: BAMBOO
+    slot: 14
+    item_flags:
+      - HIDE_ATTRIBUTES
+    display_name: '&#FFF275Bambu &8[&#FFF27522.0%&8]'
+    lore:
+      - '&8ʀᴇᴄᴜʀꜱᴏꜱ'
+      - ''
+      - ' &8| &fAusencia: &e3 dias'
+      - ' &8| &fProbabilidad: &#FFF27522.0%'
+      - ' &8| &fPity: &eFaltan 4 dias'
+      - ''
+      - ' &8| &fEstado: &#FFF275ᴘʀᴏʙᴀʙʟᴇ'
+      - ' &8| &fRango estimado: &7.50-.00'
+
+  # TOP 5: HUESO (2 días de ausencia)
+  'Pity_5_Hueso':
+    material: BONE
+    slot: 15
+    item_flags:
+      - HIDE_ATTRIBUTES
+    display_name: '&#FFF275Hueso &8[&#FFF27518.5%&8]'
+    lore:
+      - '&8ᴅʀᴏᴘꜱ ᴅᴇ ᴍᴏʙꜱ'
+      - ''
+      - ' &8| &fAusencia: &e2 dias'
+      - ' &8| &fProbabilidad: &#FFF27518.5%'
+      - ' &8| &fPity: &eFaltan 5 dias'
+      - ''
+      - ' &8| &fEstado: &7ᴍᴏᴅᴇʀᴀᴅᴏ'
+      - ' &8| &fRango estimado: &7.00-.00'
+
+  # =========================================================================
+  # FILA 3: SEPARADOR DE SECCIÓN
+  # =========================================================================
+  'Separador_Fila_3':
+    material: GRAY_STAINED_GLASS_PANE
+    display_name: ' '
+    slots:
+      - 18
+      - 19
+      - 20
+      - 21
+      - 22
+      - 23
+      - 24
+      - 25
+      - 26
+
+  # =========================================================================
+  # FILA 4: LOS 5 OBJETOS ACTUALES EN VENTA (SLOTS 29 A 33)
+  # Pity reiniciado a 0 días al estar en la Lonja hoy
+  # =========================================================================
+
+  # SLOT 1 EN LONJA: CACTUS
+  'Activo_1_Cactus':
+    material: CACTUS
+    slot: 29
+    item_flags:
+      - HIDE_ATTRIBUTES
+    display_name: '&#FFF275Cactus &8[&#FF4D4D2.5%&8]'
+    lore:
+      - '&8ᴇɴ ᴠᴇɴᴛᴀ ʜᴏʏ'
+      - ''
+      - ' &8| &fAusencia: &a0 dias'
+      - ' &8| &fProbabilidad: &#FF4D4D2.5%'
+      - ' &8| &fPity: &7Reiniciado hoy'
+      - ''
+      - ' &8| &fEstado: &#FF4D4Dɪᴍᴘʀᴏʙᴀʙʟᴇ'
+      - ' &8| &fPrecio hoy: &#59E91F.50'
+
+  # SLOT 2 EN LONJA: PÓLVORA
+  'Activo_2_Polvora':
+    material: GUNPOWDER
+    slot: 30
+    item_flags:
+      - HIDE_ATTRIBUTES
+    display_name: '&#FFF275Polvora &8[&#FF4D4D2.0%&8]'
+    lore:
+      - '&8ᴇɴ ᴠᴇɴᴛᴀ ʜᴏʏ'
+      - ''
+      - ' &8| &fAusencia: &a0 dias'
+      - ' &8| &fProbabilidad: &#FF4D4D2.0%'
+      - ' &8| &fPity: &7Reiniciado hoy'
+      - ''
+      - ' &8| &fEstado: &#FF4D4Dɪᴍᴘʀᴏʙᴀʙʟᴇ'
+      - ' &8| &fPrecio hoy: &#59E91F.40'
+
+  # SLOT 3 EN LONJA: PATATA
+  'Activo_3_Patata':
+    material: POTATO
+    slot: 31
+    item_flags:
+      - HIDE_ATTRIBUTES
+    display_name: '&#FFF275Patata &8[&#FF4D4D1.5%&8]'
+    lore:
+      - '&8ᴇɴ ᴠᴇɴᴛᴀ ʜᴏʏ'
+      - ''
+      - ' &8| &fAusencia: &a0 dias'
+      - ' &8| &fProbabilidad: &#FF4D4D1.5%'
+      - ' &8| &fPity: &7Reiniciado hoy'
+      - ''
+      - ' &8| &fEstado: &#FF4D4Dɪᴍᴘʀᴏʙᴀʙʟᴇ'
+      - ' &8| &fPrecio hoy: &#59E91F.00'
+
+  # SLOT 4 EN LONJA: CAÑA DE AZÚCAR
+  'Activo_4_Cana':
+    material: SUGAR_CANE
+    slot: 32
+    item_flags:
+      - HIDE_ATTRIBUTES
+    display_name: '&#FFF275Cana de Azucar &8[&#FF4D4D1.0%&8]'
+    lore:
+      - '&8ᴇɴ ᴠᴇɴᴛᴀ ʜᴏʏ'
+      - ''
+      - ' &8| &fAusencia: &a0 dias'
+      - ' &8| &fProbabilidad: &#FF4D4D1.0%'
+      - ' &8| &fPity: &7Reiniciado hoy'
+      - ''
+      - ' &8| &fEstado: &#FF4D4Dɪᴍᴘʀᴏʙᴀʙʟᴇ'
+      - ' &8| &fPrecio hoy: &#59E91F.40'
+
+  # SLOT 5 EN LONJA: VARA DE BLAZE
+  'Activo_5_Blaze':
+    material: BLAZE_ROD
+    slot: 33
+    item_flags:
+      - HIDE_ATTRIBUTES
+    display_name: '&#FFF275Vara de Blaze &8[&#FF4D4D0.8%&8]'
+    lore:
+      - '&8ᴇɴ ᴠᴇɴᴛᴀ ʜᴏʏ'
+      - ''
+      - ' &8| &fAusencia: &a0 dias'
+      - ' &8| &fProbabilidad: &#FF4D4D0.8%'
+      - ' &8| &fPity: &7Reiniciado hoy'
+      - ''
+      - ' &8| &fEstado: &#FF4D4Dɪᴍᴘʀᴏʙᴀʙʟᴇ'
+      - ' &8| &fPrecio hoy: &#59E91F.00'
+
+  # =========================================================================
+  # FILA 5: CRISTALES DE ESTADO INFERIOR (SLOTS 36 A 44)
+  # =========================================================================
+  'Filtro_Fila_5':
+    material: GRAY_STAINED_GLASS_PANE
+    display_name: ' '
+    slots:
+      - 9
+      - 10
+      - 16
+      - 17
+      - 27
+      - 28
+      - 34
+      - 35
+      - 36
+      - 37
+      - 38
+      - 39
+      - 40
+      - 41
+      - 42
+      - 43
+      - 44
+
+  # =========================================================================
+  # FILA 6: NAVBAR INFERIOR (SLOTS 45 A 53)
+  # =========================================================================
+
+  # SLOT 49: VOLVER A LONJA
+  'Boton_Volver':
+    material: DARK_OAK_DOOR
+    slot: 49
+    item_flags:
+      - HIDE_ATTRIBUTES
+    display_name: '&cVolver Atras'
+    lore:
+      - '&7Regresar a las ventas del dia'
+    left_click_commands:
+      - '[openguimenu] lonja_venta'
+      - '[sound] BLOCK_NOTE_BLOCK_BASS'
+
+  'Filtro_Navbar':
+    material: GRAY_STAINED_GLASS_PANE
+    display_name: ' '
+    slots:
+      - 45
+      - 46
+      - 47
+      - 48
+      - 50
+      - 51
+      - 52
+
+  # SLOT 53: BALANCE JUGADOR
+  'Info_Balance':
+    material: head-%player_name%
+    slot: 53
+    item_flags:
+      - HIDE_ATTRIBUTES
+    display_name: '&#FFF275Tu Economía'
+    lore:
+      - '&8Tu Economía'
+      - ''
+      - ' &8| &fDinero: &#59E91F&l$&r&#59E91F%vault_eco_balance_formatted%'
+      - ' &8| &fAlmas: &#34B0F3%thundercurrencys_almas%🔥'
+      - ' &8| &fZafiros: &#1E6BFF%thundercurrencys_zafiros%💎'
+      - ' &8| &fXP: &#D48BFF%player_level% LVL'
+      - ''
+      - '&7▶ Click para más información'
+    left_click_commands:
+      - '[openguimenu] info_economia'
+      - '[sound] UI_BUTTON_CLICK'

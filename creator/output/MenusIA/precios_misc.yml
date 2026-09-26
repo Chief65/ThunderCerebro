@@ -1,0 +1,412 @@
+menu_title: '&0&l|&r &0ThunderMC &0▶ &8Precios ▶ Misceláneo'
+open_command:
+  - precios_misc
+size: 54
+open_requirement:
+  requirements: {}
+register_command: true
+update: true
+
+items:
+  # ============================================================================
+  # NAVBAR SUPERIOR: PESTAÑAS DE CATEGORÍAS (FILA 1)
+  # ============================================================================
+  'Tab_precios_farmeo':
+    material: WHEAT
+    slot: 1
+    hide_attributes: true
+    display_name: '&7Agricultura'
+    lore:
+      - '&8ᴘᴇꜱᴛᴀñᴀ'
+      - ''
+      - ' &fVer catálogo de'
+      - ' &fagricultura.'
+      - ''
+      - '&7▶ Click para cambiar'
+    left_click_commands:
+      - '[openguimenu] precios_farmeo'
+      - '[sound] UI_BUTTON_CLICK'
+
+  'Tab_precios_mobs':
+    material: GUNPOWDER
+    slot: 2
+    hide_attributes: true
+    display_name: '&7Drops de Mobs'
+    lore:
+      - '&8ᴘᴇꜱᴛᴀñᴀ'
+      - ''
+      - ' &fVer catálogo de'
+      - ' &fdrops de mobs.'
+      - ''
+      - '&7▶ Click para cambiar'
+    left_click_commands:
+      - '[openguimenu] precios_mobs'
+      - '[sound] UI_BUTTON_CLICK'
+
+  'Tab_precios_comida':
+    material: COOKED_BEEF
+    slot: 3
+    hide_attributes: true
+    display_name: '&7Comida'
+    lore:
+      - '&8ᴘᴇꜱᴛᴀñᴀ'
+      - ''
+      - ' &fVer catálogo de'
+      - ' &fcomida.'
+      - ''
+      - '&7▶ Click para cambiar'
+    left_click_commands:
+      - '[openguimenu] precios_comida'
+      - '[sound] UI_BUTTON_CLICK'
+
+  'Tab_precios_misc':
+    material: AMETHYST_SHARD
+    slot: 4
+    hide_attributes: true
+    hide_enchantments: true
+    enchantments:
+      - DURABILITY;1
+    display_name: '&#CF27F5Misceláneo &a✔'
+    lore:
+      - '&8ᴘᴇꜱᴛᴀñᴀ ᴀᴄᴛɪᴠᴀ'
+      - ''
+      - ' &aActualmente viendo'
+      - ' &aesta categoría.'
+
+  'Tab_precios_redstone':
+    material: REDSTONE
+    slot: 5
+    hide_attributes: true
+    display_name: '&7Redstone'
+    lore:
+      - '&8ᴘᴇꜱᴛᴀñᴀ'
+      - ''
+      - ' &fVer catálogo de'
+      - ' &fredstone.'
+      - ''
+      - '&7▶ Click para cambiar'
+    left_click_commands:
+      - '[openguimenu] precios_redstone'
+      - '[sound] UI_BUTTON_CLICK'
+
+  'Tab_precios_equipo':
+    material: DIAMOND_SWORD
+    slot: 6
+    hide_attributes: true
+    display_name: '&7Equipo & Minería'
+    lore:
+      - '&8ᴘᴇꜱᴛᴀñᴀ'
+      - ''
+      - ' &fVer catálogo de'
+      - ' &fequipo & minería.'
+      - ''
+      - '&7▶ Click para cambiar'
+    left_click_commands:
+      - '[openguimenu] precios_equipo'
+      - '[sound] UI_BUTTON_CLICK'
+
+  'Tab_precios_bloques':
+    material: GRASS_BLOCK
+    slot: 7
+    hide_attributes: true
+    display_name: '&7Bloques'
+    lore:
+      - '&8ᴘᴇꜱᴛᴀñᴀ'
+      - ''
+      - ' &fVer catálogo de'
+      - ' &fbloques.'
+      - ''
+      - '&7▶ Click para cambiar'
+    left_click_commands:
+      - '[openguimenu] precios_bloques'
+      - '[sound] UI_BUTTON_CLICK'
+
+  'Separador_Top':
+    material: BLACK_STAINED_GLASS_PANE
+    display_name: ' '
+    slots:
+      - 0
+      - 8
+      - 9
+      - 10
+      - 11
+      - 12
+      - 13
+      - 14
+      - 15
+      - 16
+      - 17
+
+  # ============================================================================
+  # CATÁLOGO DE ÍTEMS DE LA CATEGORÍA (FILAS 3 A 5)
+  # ============================================================================
+  'item_1':
+    material: COBWEB
+    slot: 19
+    hide_attributes: true
+    display_name: ' '
+    lore:
+      - '&8ᴘʀᴇᴄɪᴏ ᴅᴇ ᴠᴇɴᴛᴀ'
+      - ''
+      - ' &8▶ &fUnidad: &a$2'
+      - ' &8▶ &fStack x64: &a$128'
+
+  'item_2':
+    material: ENDER_CHEST
+    slot: 20
+    hide_attributes: true
+    display_name: '&#FFF275ENDER CHEST'
+    lore:
+      - '&8ᴘʀᴇᴄɪᴏ ᴅᴇ ᴠᴇɴᴛᴀ'
+      - ''
+      - ' &8▶ &fUnidad: &a$15'
+      - ' &8▶ &fStack x64: &a$960'
+
+  'item_3':
+    material: GLOW_INK_SAC
+    slot: 21
+    hide_attributes: true
+    display_name: '&#FFF275GLOW INK SAC'
+    lore:
+      - '&8ᴘʀᴇᴄɪᴏ ᴅᴇ ᴠᴇɴᴛᴀ'
+      - ''
+      - ' &8▶ &fUnidad: &a$2'
+      - ' &8▶ &fStack x64: &a$128'
+
+  'item_4':
+    material: HONEYCOMB
+    slot: 22
+    hide_attributes: true
+    display_name: '&#FFF275HONEYCOMB'
+    lore:
+      - '&8ᴘʀᴇᴄɪᴏ ᴅᴇ ᴠᴇɴᴛᴀ'
+      - ''
+      - ' &8▶ &fUnidad: &a$1'
+      - ' &8▶ &fStack x64: &a$64'
+
+  'item_5':
+    material: LILY_PAD
+    slot: 23
+    hide_attributes: true
+    display_name: '&#FFF275LILY PAD'
+    lore:
+      - '&8ᴘʀᴇᴄɪᴏ ᴅᴇ ᴠᴇɴᴛᴀ'
+      - ''
+      - ' &8▶ &fUnidad: &a$7'
+      - ' &8▶ &fStack x64: &a$448'
+
+  'item_6':
+    material: NAME_TAG
+    slot: 24
+    hide_attributes: true
+    display_name: '&#FFF275NAME TAG'
+    lore:
+      - '&8ᴘʀᴇᴄɪᴏ ᴅᴇ ᴠᴇɴᴛᴀ'
+      - ''
+      - ' &8▶ &fUnidad: &a$3'
+      - ' &8▶ &fStack x64: &a$192'
+
+  'item_7':
+    material: SCAFFOLDING
+    slot: 25
+    hide_attributes: true
+    display_name: '&#FFF275SCAFFOLDING'
+    lore:
+      - '&8ᴘʀᴇᴄɪᴏ ᴅᴇ ᴠᴇɴᴛᴀ'
+      - ''
+      - ' &8▶ &fUnidad: &a$1'
+      - ' &8▶ &fStack x64: &a$64'
+
+  'item_8':
+    material: SHULKER_BOX
+    slot: 28
+    hide_attributes: true
+    display_name: '&#FFF275SHULKER BOX'
+    lore:
+      - '&8ᴘʀᴇᴄɪᴏ ᴅᴇ ᴠᴇɴᴛᴀ'
+      - ''
+      - ' &8▶ &fUnidad: &a$50'
+      - ' &8▶ &fStack x64: &a$3200'
+
+  'item_9':
+    material: SNOW
+    slot: 29
+    hide_attributes: true
+    display_name: '&#FFF275SNOW'
+    lore:
+      - '&8ᴘʀᴇᴄɪᴏ ᴅᴇ ᴠᴇɴᴛᴀ'
+      - ''
+      - ' &8▶ &fUnidad: &a$1'
+      - ' &8▶ &fStack x64: &a$64'
+
+  'item_10':
+    material: SPONGE
+    slot: 30
+    hide_attributes: true
+    display_name: '&#FFF275SPONGE'
+    lore:
+      - '&8ᴘʀᴇᴄɪᴏ ᴅᴇ ᴠᴇɴᴛᴀ'
+      - ''
+      - ' &8▶ &fUnidad: &a$30'
+      - ' &8▶ &fStack x64: &a$1920'
+
+  'item_11':
+    material: END_ROD
+    slot: 31
+    hide_attributes: true
+    display_name: '&#FFF275END ROD'
+    lore:
+      - '&8ᴘʀᴇᴄɪᴏ ᴅᴇ ᴠᴇɴᴛᴀ'
+      - ''
+      - ' &8▶ &fUnidad: &a$1'
+      - ' &8▶ &fStack x64: &a$64'
+
+  'item_12':
+    material: LANTERN
+    slot: 32
+    hide_attributes: true
+    display_name: '&#FFF275LANTERN'
+    lore:
+      - '&8ᴘʀᴇᴄɪᴏ ᴅᴇ ᴠᴇɴᴛᴀ'
+      - ''
+      - ' &8▶ &fUnidad: &a$2'
+      - ' &8▶ &fStack x64: &a$128'
+
+  'item_13':
+    material: SOUL_LANTERN
+    slot: 33
+    hide_attributes: true
+    display_name: '&#FFF275SOUL LANTERN'
+    lore:
+      - '&8ᴘʀᴇᴄɪᴏ ᴅᴇ ᴠᴇɴᴛᴀ'
+      - ''
+      - ' &8▶ &fUnidad: &a$3'
+      - ' &8▶ &fStack x64: &a$192'
+
+  'item_14':
+    material: CAMPFIRE
+    slot: 34
+    hide_attributes: true
+    display_name: '&#FFF275CAMPFIRE'
+    lore:
+      - '&8ᴘʀᴇᴄɪᴏ ᴅᴇ ᴠᴇɴᴛᴀ'
+      - ''
+      - ' &8▶ &fUnidad: &a$4'
+      - ' &8▶ &fStack x64: &a$256'
+
+  'item_15':
+    material: SOUL_CAMPFIRE
+    slot: 37
+    hide_attributes: true
+    display_name: '&#FFF275SOUL CAMPFIRE'
+    lore:
+      - '&8ᴘʀᴇᴄɪᴏ ᴅᴇ ᴠᴇɴᴛᴀ'
+      - ''
+      - ' &8▶ &fUnidad: &a$5'
+      - ' &8▶ &fStack x64: &a$320'
+
+  'item_16':
+    material: SHULKER_SHELL
+    slot: 38
+    hide_attributes: true
+    display_name: '&#FFF275SHULKER SHELL'
+    lore:
+      - '&8ᴘʀᴇᴄɪᴏ ᴅᴇ ᴠᴇɴᴛᴀ'
+      - ''
+      - ' &8▶ &fUnidad: &a$45'
+      - ' &8▶ &fStack x64: &a$2880'
+
+  'item_17':
+    material: DRAGON_BREATH
+    slot: 39
+    hide_attributes: true
+    display_name: '&#FFF275DRAGON BREATH'
+    lore:
+      - '&8ᴘʀᴇᴄɪᴏ ᴅᴇ ᴠᴇɴᴛᴀ'
+      - ''
+      - ' &8▶ &fUnidad: &a$5'
+      - ' &8▶ &fStack x64: &a$320'
+
+  'item_18':
+    material: INK_SAC
+    slot: 40
+    hide_attributes: true
+    display_name: '&#FFF275INK SAC'
+    lore:
+      - '&8ᴘʀᴇᴄɪᴏ ᴅᴇ ᴠᴇɴᴛᴀ'
+      - ''
+      - ' &8▶ &fUnidad: &a$1'
+      - ' &8▶ &fStack x64: &a$64'
+
+  'item_19':
+    material: PUFFERFISH
+    slot: 41
+    hide_attributes: true
+    display_name: '&#FFF275PUFFERFISH'
+    lore:
+      - '&8ᴘʀᴇᴄɪᴏ ᴅᴇ ᴠᴇɴᴛᴀ'
+      - ''
+      - ' &8▶ &fUnidad: &a$5'
+      - ' &8▶ &fStack x64: &a$320'
+
+  'Bordes_Laterales':
+    material: GRAY_STAINED_GLASS_PANE
+    display_name: ' '
+    slots:
+      - 18
+      - 26
+      - 27
+      - 35
+      - 36
+      - 44
+
+  # ============================================================================
+  # NAVBAR INFERIOR (FILA 6)
+  # ============================================================================
+  'Boton_Volver':
+    material: DARK_OAK_DOOR
+    slot: 49
+    hide_attributes: true
+    display_name: '&cVolver Atrás'
+    lore:
+      - '&8Regresar al menú principal'
+    left_click_commands:
+      - '[openguimenu] tienda_principal'
+      - '[sound] UI_BUTTON_CLICK'
+
+  'Boton_SellGUI':
+    material: HOPPER
+    slot: 52
+    hide_attributes: true
+    display_name: '&#00B7FFVenta Rápida'
+    lore:
+      - '&8ᴠᴇɴᴛᴀ ᴀᴜᴛᴏᴍᴀᴛɪᴄᴀ'
+      - ''
+      - ' &fVende tu inventario.'
+      - ''
+      - '&7▶ Click para abrir'
+    left_click_commands:
+      - '[close]'
+      - '[player] sellgui'
+      - '[sound] ENTITY_EXPERIENCE_ORB_PICKUP'
+
+  'Info_Balance':
+    material: SUNFLOWER
+    slot: 53
+    hide_attributes: true
+    display_name: '&#FFD700Tu Economía'
+    lore:
+      - '&8ʙᴀʟᴀɴᴄᴇ'
+      - ''
+      - ' &8▶ &a$%vault_eco_balance_formatted%'
+
+  'Filtro_Navbar_Bottom':
+    material: GRAY_STAINED_GLASS_PANE
+    display_name: ' '
+    slots:
+      - 45
+      - 46
+      - 47
+      - 48
+      - 50
+      - 51

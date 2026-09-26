@@ -1,0 +1,8 @@
+get plugins/ShopGUIPlus/shops/comida.yml creator/lab/comida.yml
+get plugins/ShopGUIPlus/shops/mobs.yml creator/lab/mobs.yml
+get plugins/ShopGUIPlus/shops/equipo.yml creator/lab/equipo.yml
+get plugins/ShopGUIPlus/shops/redstone.yml creator/lab/redstone.yml
+get plugins/ShopGUIPlus/shops/miscellaneo.yml creator/lab/miscellaneo.yml
+get plugins/ShopGUIPlus/shops/tintes.yml creator/lab/tintes.yml
+get plugins/ShopGUIPlus/shops/trims.yml creator/lab/trims.yml
+bye

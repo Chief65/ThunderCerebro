@@ -1,0 +1,16 @@
+put creator/output/MenusIA/tienda_principal.yml plugins/DeluxeMenus/gui_menus/menusIA/tienda_principal.yml
+put creator/output/MenusIA/mercado_xp.yml plugins/DeluxeMenus/gui_menus/menusIA/mercado_xp.yml
+put creator/lab/deluxemenus_config.yml plugins/DeluxeMenus/config.yml
+put creator/lab/shopgui_config.yml plugins/ShopGUIPlus/config.yml
+put creator/lab/bloques.yml plugins/ShopGUIPlus/shops/bloques.yml
+put creator/lab/farmeo.yml plugins/ShopGUIPlus/shops/farmeo.yml
+put creator/lab/comida.yml plugins/ShopGUIPlus/shops/comida.yml
+put creator/lab/mobs.yml plugins/ShopGUIPlus/shops/mobs.yml
+put creator/lab/equipo.yml plugins/ShopGUIPlus/shops/equipo.yml
+put creator/lab/redstone.yml plugins/ShopGUIPlus/shops/redstone.yml
+put creator/lab/miscellaneo.yml plugins/ShopGUIPlus/shops/miscellaneo.yml
+put creator/lab/tintes.yml plugins/ShopGUIPlus/shops/tintes.yml
+put creator/lab/almas.yml plugins/ShopGUIPlus/shops/almas.yml
+put creator/lab/trims.yml plugins/ShopGUIPlus/shops/trims.yml
+put creator/lab/encantamientos.yml plugins/ShopGUIPlus/shops/encantamientos.yml
+bye

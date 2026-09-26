@@ -1,0 +1,227 @@
+almas:
+  name: "&0&l| &0Tienda ▶ &8Almas "
+  economy: PLAYER_POINTS
+  size: 45
+  fillItem:
+    material: GRAY_STAINED_GLASS_PANE
+    name: " "
+  buttons:
+    goBack:
+      slot: 40
+    previousPage:
+      slot: 39
+    nextPage:
+      slot: 41
+  items:
+    1:
+      type: command
+      item:
+        material: PIG_SPAWN_EGG
+        name: '&dSpawner de Cerdo'
+        quantity: 1
+      commands:
+        - "silkspawners give %PLAYER% pig 1"
+      buyPrice: 150
+      slot: 9          
+    2:
+      type: command
+      item:
+        material: COW_SPAWN_EGG
+        name: '&dSpawner de Vaca'
+        quantity: 1
+      commands:
+        - "silkspawners give %PLAYER% cow 1"
+      buyPrice: 300
+      slot: 10  
+    3:
+      type: command
+      item:
+        material: ZOMBIE_SPAWN_EGG
+        name: '&dSpawner de Zombie'
+        quantity: 1
+      commands:
+        - "silkspawners give %PLAYER% zombie 1"
+      buyPrice: 450
+      slot: 11
+    4:
+      type: command
+      item:
+        material: SPIDER_SPAWN_EGG
+        name: '&dSpawner de Araña'
+        quantity: 1
+      commands:
+        - "silkspawners give %PLAYER% spider 1"
+      buyPrice: 600
+      slot: 12
+    5:
+      type: command
+      item:
+        material: SKELETON_SPAWN_EGG
+        name: '&dSpawner de Esqueleto'
+        quantity: 1
+      commands:
+        - "silkspawners give %PLAYER% SKELETON 1"
+      buyPrice: 750
+      slot: 13
+    6:
+      type: command
+      item:
+        material: BLAZE_SPAWN_EGG
+        name: '&dSpawner de Blaze'
+        quantity: 1
+      commands:
+        - "silkspawners give %PLAYER% blaze 1"
+      buyPrice: 900
+      slot: 14
+    7:
+      type: command
+      item:
+        material: ZOMBIFIED_PIGLIN_SPAWN_EGG
+        name: '&dSpawner de Piglin Zombificado'
+        quantity: 1
+      commands:
+        - "silkspawners give %PLAYER% ZOMBIFIED_PIGLIN 1"
+      buyPrice: 1250
+      slot: 15  
+    8:
+      type: command
+      item:
+        material: IRON_GOLEM_SPAWN_EGG
+        name: '&dSpawner de Golem de Hierro'
+        quantity: 1
+      commands:
+        - "silkspawners give %PLAYER% IRON_GOLEM 1"
+      buyPrice: 1350
+      slot: 16  
+      
+    9:
+      type: command
+      item:
+        material: TRIPWIRE_HOOK
+        name: '&ex1 Llave Super'
+        glow: true
+        quantity: 1
+      commands:
+        - "excellentcrates key give %PLAYER% vote 1 -s"
+      buyPrice: 100
+      slot: 18
+      
+    10:
+      type: command
+      item:
+        material: TRIPWIRE_HOOK
+        name: '&ex1 Llave Rara'
+        glow: true
+        quantity: 1
+      commands:
+        - "excellentcrates key give %PLAYER% rara 1 -s"
+      buyPrice: 400
+      slot: 19
+      
+    11:
+      type: command
+      item:
+        material: TRIPWIRE_HOOK
+        name: '&ex1 Llave Gadgets'
+        glow: true
+        quantity: 1
+      commands:
+        - "excellentcrates key give %PLAYER% gadgets 1 -s"
+      buyPrice: 600
+      slot: 20
+
+    12:
+      type: command
+      item:
+        material: TRIAL_KEY
+        name: '&ex1 Llave Mitica'
+        glow: true
+        quantity: 1
+      commands:
+        - "excellentcrates key give %PLAYER% mitica 1 -s"
+      buyPrice: 3000
+      slot: 21
+      
+    13:
+      type: command
+      item:
+        material: OMINOUS_TRIAL_KEY
+        name: '&ex1 Llave Limited'
+        glow: true
+        quantity: 1
+      commands:
+        - "excellentcrates key give %PLAYER% limited 1 -s"
+      buyPrice: 10000
+      slot: 22
+      
+    14:
+      type: command
+      item:
+        material: COAL_ORE
+        name: '&ex1 Prote Carbon 8x8'
+        glow: true
+        quantity: 1
+      commands:
+        - "ps give 8 %PLAYER% 1"
+      buyPrice: 10
+      slot: 27
+      
+    15:
+      type: command
+      item:
+        material: IRON_ORE
+        name: '&ex1 Prote Hierro 16x16'
+        glow: true
+        quantity: 1
+      commands:
+        - "ps give 16 %PLAYER% 1"
+      buyPrice: 100
+      slot: 28
+      
+    16:
+      type: command
+      item:
+        material: GOLD_ORE
+        name: '&ex1 Prote Oro 32x32'
+        glow: true
+        quantity: 1
+      commands:
+        - "ps give 32 %PLAYER%  1"
+      buyPrice: 200
+      slot: 29
+      
+    17:
+      type: command
+      item:
+        material: EMERALD_ORE
+        name: '&ex1 Prote Esmeralda 64x64'
+        glow: true
+        quantity: 1
+      commands:
+        - "ps give 64 %PLAYER%  1"
+      buyPrice: 500
+      slot: 30
+      
+    18:
+      type: command
+      item:
+        material: DIAMOND_ORE
+        name: '&ex1 Prote Diamante 128x128'
+        glow: true
+        quantity: 1
+      commands:
+        - "ps give 128 %PLAYER%  1"
+      buyPrice: 1000
+      slot: 31
+      
+    19:
+      type: command
+      item:
+        material: ANCIENT_DEBRIS
+        name: '&ex1 Prote Diamante 256x256'
+        glow: true
+        quantity: 1
+      commands:
+        - "ps give 256 %PLAYER%  1"
+      buyPrice: 15000
+      slot: 32

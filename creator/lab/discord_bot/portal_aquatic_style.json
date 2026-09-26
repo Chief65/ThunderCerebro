@@ -1,0 +1,89 @@
+{
+  "flags": 32768,
+  "components": [
+    {
+      "type": 17,
+      "accent_color": 16706304,
+      "components": [
+        {
+          "type": 12,
+          "items": [
+            {
+              "media": {
+                "url": "https://media.discordapp.net/attachments/1110292723049586738/1208883637170114620/banner.png"
+              }
+            }
+          ]
+        },
+        {
+          "type": 10,
+          "content": "# ⚡ Bienvenido a ThunderMC Network\nBienvenido a un espacio donde la progresión, la competitividad y la diversión convergen.\nUn ecosistema donde cada detalle técnico y balance económico está calibrado al milímetro."
+        },
+        {
+          "type": 10,
+          "content": "### ✦ ¿Cómo hacemos posible la experiencia?\n* **Economía Progresiva** — Minas de progresión orgánica, mercado de zafiros y lonja balanceada.\n* **Mazmorras y Jefes RPG** — Encuentros PvE desafiantes con sistema exclusivo de almas y reliquias.\n* **Rendimiento Inmaculado** — Servidor optimizado en 1.21.11 garantizando 20.0 TPS estables.\n* **Comunidad Competitiva** — Clanes, tablas de clasificación, eventos semanales y recompensas."
+        }
+      ]
+    },
+    {
+      "type": 17,
+      "accent_color": 16706304,
+      "components": [
+        {
+          "type": 10,
+          "content": "### 🧩 Información de Acceso y Comunidad\nConéctate directamente a la network desde Java o Bedrock, adquiere rangos en la tienda o consulta los reglamentos comunitarios."
+        },
+        {
+          "type": 1,
+          "components": [
+            {
+              "type": 2,
+              "style": 2,
+              "custom_id": "btn_ip_info",
+              "label": "IP: play.thundermc.es",
+              "emoji": {
+                "name": "🌐"
+              }
+            },
+            {
+              "type": 2,
+              "style": 5,
+              "label": "Tienda Web",
+              "emoji": {
+                "name": "🛒"
+              },
+              "url": "https://tienda.thundermc.es"
+            },
+            {
+              "type": 2,
+              "style": 5,
+              "label": "Ver Reglas",
+              "emoji": {
+                "name": "📜"
+              },
+              "url": "https://thundermc.es/reglas"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": 9,
+      "components": [
+        {
+          "type": 10,
+          "content": "¿Tienes problemas con tus compras, dudas del servidor o necesitas soporte?"
+        }
+      ],
+      "accessory": {
+        "type": 2,
+        "style": 2,
+        "custom_id": "btn_ticket_soporte",
+        "label": "Abrir Ticket",
+        "emoji": {
+          "name": "🎫"
+        }
+      }
+    }
+  ]
+}

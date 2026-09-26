@@ -1,0 +1,55 @@
+PRUEBA1:
+  Type: PIGLIN
+  Display: '&f[Lv.8] &6ɢᴜᴀʀᴅɪáɴ ᴅᴇ ʟᴀ ꜰᴏʀᴊᴀ &8| <#ED1313><caster.hp{r=0}><&heart>'
+  Health: 100
+  Damage: 30
+  Options:
+    Scale: 1.3
+    MovementSpeed: 0.3
+    PreventOtherDrops: true
+    Despawn: false
+    ReturnHome: true
+    LeashRange: 20
+    KnockbackResistance: 0.5
+    PreventSunburn: true
+  Modules:
+    ThreatTable: true
+  Equipment:
+    - NETHERITE_AXE HAND
+    - NETHERITE_HELMET HEAD
+    - NETHERITE_CHESTPLATE CHEST
+    - NETHERITE_LEGGINGS LEGS
+    - NETHERITE_BOOTS FEET
+  AIGoalSelectors:
+    - 0 clear
+    - 1 meleeattack
+    - 2 randomstroll
+    - 3 lookatplayers
+    - 4 float
+  AITargetSelectors:
+    - 0 clear
+    - 1 players
+  Drops:
+    - MAGMA_CREAM 1-2 0.5
+    - GOLD 1-2 1
+    - EXPERIENCE_BOTTLE 1-2 1
+  Skills:
+    - particles{particle=FLAME;amount=20;speed=0.05;hSpread=1.5;vSpread=1.5} @self ~onTimer:10
+    - skill{s=holy_sword_rain} @trigger ~onTimer:200
+
+
+    - skill{s=SonidoKill} @trigger ~onDeath
+    - setname{n=<caster.name>;delay=2} @self ~onDamaged
+    - particles{particle=SCULK_SOUL;amount=60;speed=0.1;hSpread=0.6;vSpread=0.6} @self ~onDeath
+    ####### RECOMPENSAS #######
+    - actionmessage{m="<#34B0F3>+10 <white>Almas <#34B0F3>🔥 &8| <#59E91F>+<#59E91F>&l$&r<#59E91F>100"} @trigger ~onDeath  
+    - command{c="points give <trigger.name> 10 -s";sender=console} @self ~onDeath  
+    - command{c="economy give <trigger.name> 100";sender=console} @self ~onDeath   
+    - command{c="si give fragmentosuper 1 <trigger.name> -s";sender=console} @self ~onDeath 0.02 
+    - command{c="si give fragmentorara 1 <trigger.name> -s";sender=console} @self ~onDeath 0.02 
+    - command{c="si give fragmentogadget 1 <trigger.name> -s";sender=console} @self ~onDeath 0.02 
+    - command{c="si give fragmentomitica 1 <trigger.name> -s";sender=console} @self ~onDeath 0.003 
+    ####### EXTRAS #######
+    - skill{s=DropFragmentoLimitedGeneral} @self ~onDeath 0.001
+    - skill{s=BoostAlmas} @self ~onDeath 
+    - setvariable{var=almas;value=10;scope=CASTER;type=INTEGER} @self ~onSpawn

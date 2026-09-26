@@ -1,0 +1,112 @@
+﻿# ################################ #
+# #                              # #
+# #       Announcements          # #
+# #     you can use both         # #
+# #    legacy and minimessage    # #
+# #                              # #
+# ################################ #
+
+enabled: true
+delay: 180
+randomize: false
+
+announcements:
+  # ============================================================================
+  # ANUNCIO 1: TIENDA OFICIAL
+  # ============================================================================
+  '1':
+    message: |
+      <br><color:#1f1308>███████</color>  <color:#FFB800>✦ Tienda de la Network</color>
+      <color:#1f1308>█</color><color:#c68c53>█████</color><color:#1f1308>█</color>  <white>Rangos VIP, llaves y cosméticos.</white>
+      <color:#1f1308>█</color><color:#c68c53>█████</color><color:#1f1308>█</color>  <white>Apoya el desarrollo del servidor.</white>
+      <color:#1f1308>███</color><white>█</white><color:#1f1308>███</color>  
+      <color:#0d0803>███</color><gray>█</gray><color:#0d0803>███</color>  <gray>Click para abrir enlace</gray>
+      <color:#1f1308>█</color><color:#8f5927>█████</color><color:#1f1308>█</color>  <dark_gray>»</dark_gray> <yellow><u>tienda.thundermc.es</u></yellow>
+      <color:#1f1308>███████</color>  
+    hover-message: |
+      <yellow><bold>→</bold> <white>Haz click para abrir la tienda web</white></yellow>
+    sound: block.note_block.chime
+    action: OPEN_URL:https://tienda.thundermc.es/
+
+  # ============================================================================
+  # ANUNCIO 2: COMUNIDAD DISCORD (Globo de Texto / Bocadillo de Chat en 7x7)
+  # Fila 1: Techo redondeado Blurple (#5865F2)
+  # Fila 2: Cuerpo superior ancho
+  # Fila 3: Línea de texto blanca central (3 puntos de chat ...)
+  # Fila 4: Cuerpo medio sólido
+  # Fila 5: Base del globo
+  # Fila 6: Pico / cola del globo a la izquierda
+  # Fila 7: Punta final del pico
+  # ============================================================================
+  '2':
+    message: |
+      <br><color:#141724>█</color><color:#5865F2>█████</color><color:#141724>█</color>  <color:#5865F2>👥 Comunidad Discord</color>
+      <color:#5865F2>███████</color>  <white>Eventos, noticias y sorteos.</white>
+      <color:#5865F2>█</color><white>█</white><color:#5865F2>█</color><white>█</white><color:#5865F2>█</color><white>█</white><color:#5865F2>█</color>  <white>Soporte técnico y canales de voz.</white>
+      <color:#5865F2>███████</color>  
+      <color:#141724>█</color><color:#5865F2>█████</color><color:#141724>█</color>  <gray>Click para unirte</gray>
+      <color:#5865F2>███</color><color:#141724>████</color>  <dark_gray>»</dark_gray> <yellow><u>discord.gg/thunderverse</u></yellow>
+      <color:#5865F2>█</color><color:#141724>██████</color>  
+    hover-message: |
+      <yellow><bold>→</bold> <white>Haz click para unirte al Discord oficial</white></yellow>
+    sound: block.note_block.chime
+    action: OPEN_URL:https://discord.thundermc.es/
+
+  # ============================================================================
+  # ANUNCIO 3: SISTEMA DE ALMAS (Calavera Trial Omen - Perfeccionada)
+  # ============================================================================
+  '3':
+    message: |
+      <br><color:#001b22>█</color><color:#00e5ff>█████</color><color:#001b22>█</color>  <color:#00e5ff>☠ Sistema de Almas</color>
+      <color:#00e5ff>███████</color>  <white>Elimina mobs en las mazmorras.</white>
+      <color:#00e5ff>█</color><color:#001b22>██</color><color:#00e5ff>█</color><color:#001b22>██</color><color:#00e5ff>█</color>  <white>Gasta tus almas en la tienda especial.</white>
+      <color:#00e5ff>███████</color>  
+      <color:#001b22>█</color><color:#00e5ff>█████</color><color:#001b22>█</color>  <gray>Comandos disponibles</gray>
+      <color:#001b22>█</color><color:#00b0ff>█</color><color:#001b22>█</color><color:#00b0ff>█</color><color:#001b22>█</color><color:#00b0ff>█</color><color:#001b22>█</color>  <dark_gray>»</dark_gray> <yellow>/warp dungeons</yellow> <dark_gray>•</dark_gray> <yellow>/almas</yellow>
+      <color:#001b22>███████</color>  
+    hover-message: |
+      <yellow><bold>→</bold> <white>Haz click para abrir la tienda de almas</white></yellow>
+    sound: block.note_block.chime
+    action: RUN_COMMAND:/almas
+
+  # ============================================================================
+  # ANUNCIO 4: SECTOR MINERO (Cueva / Túnel Minero con Soporte y Diamante)
+  # ============================================================================
+  '4':
+    message: |
+      <br><color:#4a525a>███████</color>  <color:#FFAA00>⛏ Sector Minero</color>
+      <color:#4a525a>█</color><color:#8f5927>█████</color><color:#4a525a>█</color>  <white>Gana dinero extrayendo minerales.</white>
+      <color:#8f5927>█</color><color:#0a0c0e>█████</color><color:#8f5927>█</color>  <white>Mina segura o zona de riesgo PvP.</white>
+      <color:#8f5927>█</color><color:#0a0c0e>█████</color><color:#8f5927>█</color>  
+      <color:#8f5927>█</color><color:#0a0c0e>█</color><color:#00e5ff>██</color><color:#0a0c0e>██</color><color:#8f5927>█</color>  <gray>Zonas de minería</gray>
+      <color:#4a525a>██</color><color:#FFD700>███</color><color:#4a525a>██</color>  <dark_gray>»</dark_gray> <yellow>/warp minainicial</yellow> <dark_gray>•</dark_gray> <yellow>/warp minapvp</yellow>
+      <color:#2d3238>███████</color>  
+    hover-message: |
+      <yellow><bold>→</bold> <white>Haz click para ir a la mina inicial</white></yellow>
+    sound: block.note_block.chime
+    action: RUN_COMMAND:/warp minainicial
+
+  # ============================================================================
+  # ANUNCIO 5: SISTEMA DE RANGOS (Corona Imperial de 3 Puntas)
+  # ============================================================================
+  '5':
+    message: |
+      <br><color:#FFD700>█</color><color:#18191c>██</color><color:#FFD700>█</color><color:#18191c>██</color><color:#FFD700>█</color>  <color:#FFD700>👑 Rangos Gratuitos</color>
+      <color:#FFD700>██</color><color:#18191c>█</color><color:#FFD700>█</color><color:#18191c>█</color><color:#FFD700>██</color>  <white>Consigue rangos jugando en el servidor.</white>
+      <color:#FFD700>███</color><color:#FF3355>█</color><color:#FFD700>███</color>  <white>Desbloquea ventajas y nuevos comandos.</white>
+      <color:#FFD700>█</color><color:#FF3355>█</color><color:#FFD700>███</color><color:#FF3355>█</color><color:#FFD700>█</color>  
+      <color:#FFAA00>███████</color>  <gray>Progreso de rangos</gray>
+      <color:#B27B00>███████</color>  <dark_gray>»</dark_gray> <yellow>/ranks</yellow>
+      <color:#18191c>███████</color>  
+    hover-message: |
+      <yellow><bold>→</bold> <white>Haz click para ver los rangos</white></yellow>
+    sound: block.note_block.chime
+    action: RUN_COMMAND:/ranks
+
+replacements:
+  discord:
+    message: '<color:#5865F2>Discord</color>'
+    hover-message: '<color:#5865F2><bold>→</bold> Haz click para unirte</color>'
+    action: OPEN_URL:https://discord.thundermc.es/
+
+config-version: 3

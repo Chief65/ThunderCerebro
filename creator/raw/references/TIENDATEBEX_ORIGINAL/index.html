@@ -1,0 +1,431 @@
+{% extends "layout.html" %}
+{% block content %}
+<style>
+  .triplezone-main-content {
+    padding-top: 0 !important;
+    margin-top: 0 !important;
+  }
+  .triplezone-body-description {
+    padding-top: 0 !important;
+    margin-top: 0 !important;
+  }
+  .triplezone__modules {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+  }
+
+  .tz-pkg-hover {
+    transition: transform 0.2s ease, box-shadow 0.2s ease !important;
+    will-change: transform;
+  }
+  .tz-pkg-hover:hover {
+    transform: translateY(-4px) scale(1.025) !important;
+    box-shadow: 0 12px 32px rgba(0,0,0,0.5) !important;
+    position: relative;
+    z-index: 2;
+  }
+
+  /* ── VIP BANNER ──────────────────────────────────────────────────────────── */
+  #tz-vip-banner {
+    position: relative;
+    width: 100%;
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex;
+    align-items: stretch;
+    flex-direction: row;
+    min-height: 320px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+    border: 1px solid hsl(220, 16%, 20%);
+    background: hsl(220, 16%, 14%);
+  }
+  #tz-vip-banner:hover {
+    transform: translateY(-3px);
+  }
+
+  /* Lado izquierdo */
+  #tz-vip-banner__text {
+    flex: 1;
+    padding: 48px 52px;
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 6px;
+    background: hsl(220, 16%, 14%);
+    clip-path: polygon(0 0, calc(100% - 60px) 0, 100% 100%, 0 100%);
+    margin-right: -1px;
+  }
+
+  #tz-vip-banner__eyebrow {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.35);
+    margin: 0 0 4px 0;
+  }
+
+  #tz-vip-banner__title {
+    font-size: 72px;
+    font-weight: 900;
+    margin: 0 0 24px 0;
+    line-height: 1;
+    letter-spacing: 8px;
+    background: linear-gradient(90deg,
+      #b8860b 0%,
+      #ffd700 20%,
+      #fffbe6 40%,
+      #ffd700 60%,
+      #f5a623 80%,
+      #b8860b 100%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    background-size: 200% auto;
+    animation: tz-vip-shine 3s linear infinite;
+  }
+  @keyframes tz-vip-shine {
+    0%   { background-position: 0% center; }
+    100% { background-position: 200% center; }
+  }
+
+  #tz-vip-banner__perks {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 32px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  #tz-vip-banner__perks li {
+    font-size: 14px;
+    font-weight: 600;
+    color: #f1f5f9;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  #tz-vip-banner__perks li::before {
+    content: '⚡';
+    font-size: 13px;
+    flex-shrink: 0;
+  }
+
+  #tz-vip-banner__cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: #facc15;
+    color: #0f172a;
+    font-size: 13px;
+    font-weight: 900;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 13px 30px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.15s;
+    width: fit-content;
+  }
+  #tz-vip-banner__cta:hover {
+    background: #fde68a;
+    transform: scale(1.04);
+  }
+
+  /* Lado derecho — fondo oscuro con destellos */
+  #tz-vip-banner__img-wrap {
+    flex-shrink: 0;
+    width: 340px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 16px 0 40px;
+    position: relative;
+    z-index: 1;
+    background: hsl(220, 20%, 9%);
+    overflow: visible;
+  }
+
+  #tz-vip-banner__img-wrap img {
+    width: 100%;
+    max-width: 280px;
+    height: 300px;
+    object-fit: contain;
+    object-position: center;
+    transition: transform 0.3s ease;
+    position: relative;
+    z-index: 2;
+    filter: drop-shadow(0 8px 24px rgba(250,204,21,0.25));
+  }
+  #tz-vip-banner:hover #tz-vip-banner__img-wrap img {
+    transform: translateY(-8px) scale(1.05);
+  }
+
+  /* Destellos SVG */
+  .tz-vip-sparkle {
+    position: absolute;
+    z-index: 3;
+    pointer-events: none;
+    animation: tz-sparkle-pulse 2s ease-in-out infinite;
+  }
+  .tz-vip-sparkle:nth-child(1) { top: 24px; left: 60px; animation-delay: 0s; }
+  .tz-vip-sparkle:nth-child(2) { top: 60px; right: 30px; animation-delay: 0.5s; width: 14px; height: 14px; }
+  .tz-vip-sparkle:nth-child(3) { bottom: 60px; left: 30px; animation-delay: 1s; width: 10px; height: 10px; }
+  .tz-vip-sparkle:nth-child(4) { top: 40%;  right: 50px; animation-delay: 1.5s; width: 18px; height: 18px; }
+
+  @keyframes tz-sparkle-pulse {
+    0%, 100% { opacity: 0.2; transform: scale(0.8); }
+    50%       { opacity: 1;   transform: scale(1.2); }
+  }
+
+  @media (max-width: 640px) {
+    #tz-vip-banner { flex-direction: column; min-height: unset; }
+    #tz-vip-banner__text {
+      clip-path: polygon(0 0, 100% 0, 100% calc(100% - 30px), 0 100%);
+      margin-right: 0;
+      margin-bottom: -1px;
+      padding: 28px 24px;
+    }
+    #tz-vip-banner__img-wrap { width: 100%; height: 220px; padding: 0; }
+    #tz-vip-banner__img-wrap img { height: 200px; }
+    #tz-vip-banner__title { font-size: 48px; }
+  }
+</style>
+<div class="body--with-sidebar">
+    
+    {% include 'layout.sidebar.twig' %}
+    
+    <main class="triplezone-main-content">
+        
+        <div class="featured__packages" style="display: none">
+            <p class="featured__packages--title">
+                {{ lang.featured_packages_title }}
+            </p>
+            <div class="featured__packages--flex"></div>
+        </div>
+        
+        <div class="triplezone-body-description" style="padding-top:0;margin-top:0;">
+
+            <div style="display:block;width:100%;height:60px;"></div>
+
+            <div id="ajax-categories" style="max-width:1100px;margin:0 auto;padding:0 16px;">
+
+                <div id="cat-rangos" class="ajax-category-section" style="margin-bottom:60px;scroll-margin-top:100px;">
+                    <div id="tz-vip-banner">
+                        <div id="tz-vip-banner__text">
+                            <p id="tz-vip-banner__eyebrow">Suscripción exclusiva</p>
+                            <h2 id="tz-vip-banner__title">VIP</h2>
+                            <ul id="tz-vip-banner__perks">
+                                <li>Acceso a zonas exclusivas del servidor</li>
+                                <li>Kit VIP mensual con objetos únicos</li>
+                                <li>Prefijo dorado en el chat</li>
+                                <li>Prioridad en la cola de entrada</li>
+                                <li>Soporte prioritario</li>
+                            </ul>
+                            <button id="tz-vip-banner__cta">
+                                ¡Hazte VIP! <i class="mdi mdi-arrow-right"></i>
+                            </button>
+                        </div>
+                        <div id="tz-vip-banner__img-wrap">
+                            <!-- Destellos -->
+                            <svg class="tz-vip-sparkle" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                <path d="M10 0L11.5 8.5L20 10L11.5 11.5L10 20L8.5 11.5L0 10L8.5 8.5Z" fill="#facc15"/>
+                            </svg>
+                            <svg class="tz-vip-sparkle" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                <path d="M10 0L11.5 8.5L20 10L11.5 11.5L10 20L8.5 11.5L0 10L8.5 8.5Z" fill="#facc15"/>
+                            </svg>
+                            <svg class="tz-vip-sparkle" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                <path d="M10 0L11.5 8.5L20 10L11.5 11.5L10 20L8.5 11.5L0 10L8.5 8.5Z" fill="#facc15"/>
+                            </svg>
+                            <svg class="tz-vip-sparkle" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                <path d="M10 0L11.5 8.5L20 10L11.5 11.5L10 20L8.5 11.5L0 10L8.5 8.5Z" fill="#facc15"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="ajax-category-grid" style="display:none;"></div>
+                </div>
+
+                <div id="cat-ofertas" class="ajax-category-section" style="scroll-margin-top:100px;">
+                    <h2 style="text-align:center;font-size:26px;font-weight:800;color:#ffffff;margin-bottom:48px;">¡Packs!</h2>
+                    <div class="ajax-category-grid" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,340px));gap:20px;justify-content:center;">
+                        <p style="color:rgba(255,255,255,0.3);text-align:center;grid-column:1/-1;">Cargando...</p>
+                    </div>
+                </div>
+
+                <div id="cat-llaves-boxpvp" class="ajax-category-section" style="margin:60px 0;scroll-margin-top:100px;">
+                    <h2 style="text-align:center;font-size:26px;font-weight:800;color:#ffffff;margin-bottom:28px;">Llaves Premium</h2>
+                    <div class="ajax-category-grid" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,340px));gap:20px;justify-content:center;">
+                        <p style="color:rgba(255,255,255,0.3);text-align:center;grid-column:1/-1;">Cargando...</p>
+                    </div>
+                </div>
+
+                <div id="cat-llaves-normales" class="ajax-category-section" style="margin:60px 0;scroll-margin-top:100px;">
+                    <h2 style="text-align:center;font-size:26px;font-weight:800;color:#ffffff;margin-bottom:28px;">Llaves Normales</h2>
+                    <div class="ajax-category-grid" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,340px));gap:20px;justify-content:center;">
+                        <p style="color:rgba(255,255,255,0.3);text-align:center;grid-column:1/-1;">Cargando...</p>
+                    </div>
+                </div>
+
+                <div id="cat-extras" class="ajax-category-section" style="margin:60px 0;scroll-margin-top:100px;">
+                    <h2 style="text-align:center;font-size:26px;font-weight:800;color:#ffffff;margin-bottom:28px;">Extras</h2>
+                    <div class="ajax-category-grid" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,340px));gap:20px;justify-content:center;">
+                        <p style="color:rgba(255,255,255,0.3);text-align:center;grid-column:1/-1;">Cargando...</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <script>
+            (function() {
+                function applyHover(targetGrid) {
+                    Array.from(targetGrid.children).forEach(function(el) {
+                        el.classList.add('tz-pkg-hover');
+                    });
+                }
+
+                const categories = [
+                    { id: 'ofertas', url: '/category/ofertas' },
+                    { id: 'rangos', url: '/category/rangos' },
+                    { id: 'llaves-boxpvp', url: '/category/llaves-boxpvp' },
+                    { id: 'llaves-normales', url: '/category/llaves-normales' },
+                    { id: 'extras', url: '/category/3424007' }
+                ];
+
+                categories.forEach(cat => {
+                    fetch(cat.url)
+                        .then(res => res.text())
+                        .then(html => {
+                            const parser = new DOMParser();
+                            const doc = parser.parseFromString(html, 'text/html');
+
+                            const sourceGrid = doc.querySelector('.category__list--with--images')
+                                              || doc.querySelector('.category__list');
+
+                            const targetSection = document.getElementById('cat-' + cat.id);
+                            const targetGrid = targetSection.querySelector('.ajax-category-grid');
+
+                            if (sourceGrid && sourceGrid.children.length > 0) {
+                                if (cat.id === 'rangos') {
+                                    const firstItem = sourceGrid.querySelector('.category__list--item');
+                                    if (firstItem) {
+                                        const img = firstItem.querySelector('img');
+                                        const modal = img ? img.getAttribute('data-remote') : null;
+                                        const imgWrap = document.getElementById('tz-vip-banner__img-wrap');
+                                        if (img && imgWrap) {
+                                            const newImg = document.createElement('img');
+                                            newImg.src = img.src;
+                                            newImg.alt = 'VIP';
+                                            imgWrap.appendChild(newImg);
+                                        }
+                                        const banner = document.getElementById('tz-vip-banner');
+                                        if (banner && modal) {
+                                            banner.setAttribute('data-remote', modal);
+                                            banner.querySelector('#tz-vip-banner__cta').addEventListener('click', function(e) {
+                                                e.stopPropagation();
+                                                banner.dispatchEvent(new MouseEvent('click', {bubbles: true}));
+                                            });
+                                        }
+                                        targetGrid.innerHTML = '';
+                                        Array.from(sourceGrid.children).forEach(child => {
+                                            targetGrid.appendChild(child.cloneNode(true));
+                                        });
+                                    }
+                                    return;
+                                }
+
+                                targetGrid.innerHTML = '';
+                                Array.from(sourceGrid.children).forEach(child => {
+                                    targetGrid.appendChild(child.cloneNode(true));
+                                });
+                                applyHover(targetGrid);
+                            } else {
+                                if (cat.id !== 'rangos') {
+                                    targetGrid.innerHTML = '<p style="color:rgba(255,255,255,0.3);text-align:center;grid-column:1/-1;">Sin paquetes disponibles.</p>';
+                                }
+                            }
+                        })
+                        .catch(err => {
+                            if (cat.id !== 'rangos') {
+                                const targetSection = document.getElementById('cat-' + cat.id);
+                                const targetGrid = targetSection.querySelector('.ajax-category-grid');
+                                targetGrid.innerHTML = '<p style="color:#f87171;text-align:center;grid-column:1/-1;">Error al cargar.</p>';
+                            }
+                            console.error('Error cargando categoría', cat.id, err);
+                        });
+                });
+
+                document.getElementById('ajax-categories').addEventListener('click', function(e) {
+                    const banner = e.target.closest('#tz-vip-banner');
+                    if (banner) {
+                        const remote = banner.getAttribute('data-remote');
+                        if (!remote) return;
+                        e.preventDefault();
+                        openPackageModal(remote);
+                        return;
+                    }
+
+                    const trigger = e.target.closest('.triplezone__toogle--modal');
+                    if (!trigger) return;
+                    const remote = trigger.getAttribute('data-remote');
+                    if (!remote) return;
+                    e.preventDefault();
+                    openPackageModal(remote);
+                });
+
+                function openPackageModal(remote) {
+                    const dialog = document.querySelector('dialog[data-modal-type="package"]');
+                    const box = dialog.querySelector('.modal__content__box');
+                    const loader = dialog.querySelector('.modal__loading');
+                    const closeBtn = dialog.querySelector('.modal__content--close');
+
+                    box.innerHTML = '';
+                    if (closeBtn) closeBtn.style.visibility = 'hidden';
+                    if (loader) {
+                        loader.style.display = 'flex';
+                        loader.style.position = 'absolute';
+                        loader.style.top = '50%';
+                        loader.style.left = '50%';
+                        loader.style.transform = 'translate(-50%, -50%)';
+                        loader.style.zIndex = '10';
+                        const svg = loader.querySelector('svg');
+                        if (svg) svg.style.animation = 'tz-spin 1s linear infinite';
+                        if (!document.getElementById('tz-spin-keyframes')) {
+                            const style = document.createElement('style');
+                            style.id = 'tz-spin-keyframes';
+                            style.textContent = '@keyframes tz-spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }';
+                            document.head.appendChild(style);
+                        }
+                    }
+                    dialog.removeAttribute('data-loading-modal');
+                    dialog.showModal();
+
+                    fetch(remote)
+                        .then(res => res.text())
+                        .then(html => {
+                            box.innerHTML = html;
+                            if (loader) loader.style.display = 'none';
+                            if (closeBtn) closeBtn.style.visibility = 'visible';
+                            box.querySelectorAll('script').forEach(oldScript => {
+                                const newScript = document.createElement('script');
+                                newScript.textContent = oldScript.textContent;
+                                oldScript.replaceWith(newScript);
+                            });
+                        })
+                        .catch(err => console.error('Error abriendo modal', err));
+                }
+            })();
+            </script>
+
+            <div class="triplezone__modules" style="margin-left: calc(-1 * var(--sidebar-width, 0px)); width: 100vw; position: relative; left: 50%; transform: translateX(-50%); margin-top: 40px;">
+                {{ modules|raw }}
+            </div>
+
+        </div>
+    </main>
+</div>
+{% endblock %}

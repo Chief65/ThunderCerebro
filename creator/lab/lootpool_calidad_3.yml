@@ -1,0 +1,219 @@
+menu_title: '&0&l|&r &0Mazmorras ▶ &#D48BFFLootpool Calidad III'
+open_command:
+  - lootpool3
+size: 36
+open_requirement:
+  requirements: {}
+register_command: true
+update: true
+
+items:
+  # ============================================================================
+  # FILA 2: CONTENIDO EXPANDIDO CALIDAD III (SLOTS 9 A 17)
+  # ============================================================================
+  'Item_WindCharge':
+    material: WIND_CHARGE
+    slot: 9
+    item_flags:
+      - HIDE_ATTRIBUTES
+    display_name: '&#D48BFFCarga de Viento Élite'
+    lore:
+      - '&8ᴜᴛɪʟɪᴅᴀᴅ 1.21'
+      - ''
+      - ' &8| &fCantidad: &e6 - 12'
+      - ' &8| &fProbabilidad: &a35%'
+      - ' &8| &fTier: &7Común'
+      - ''
+      - '&7Dominio aéreo en salas complejas.'
+
+  'Item_Flechas':
+    material: TIPPED_ARROW
+    slot: 10
+    item_flags:
+      - HIDE_ATTRIBUTES
+      - HIDE_POTION_EFFECTS
+    potion_effects:
+      - HARM;1;1
+    display_name: '&#D48BFFFlechas de Daño II'
+    lore:
+      - '&8ᴍᴜɴɪᴄɪᴏɴ ʟᴇᴛᴀʟ'
+      - ''
+      - ' &8| &fCantidad: &e4 - 8'
+      - ' &8| &fProbabilidad: &e25%'
+      - ' &8| &fEfecto: &fDaño Instantáneo II'
+      - ' &8| &fTier: &7Poco Común'
+      - ''
+      - '&7Efecto desgarrador contra entidades no no-muertas.'
+
+  'Item_Netherite':
+    material: NETHERITE_SCRAP
+    slot: 11
+    item_flags:
+      - HIDE_ATTRIBUTES
+    display_name: '&#D48BFFFragmento de Netherite'
+    lore:
+      - '&8ᴍᴀᴛᴇʀɪᴀʟ ᴇʟɪᴛᴇ'
+      - ''
+      - ' &8| &fCantidad: &e1 - 2'
+      - ' &8| &fProbabilidad: &e18%'
+      - ' &8| &fTier: &7Raro'
+      - ''
+      - '&7Componente para forjar lingotes de inframundo.'
+
+  'Item_Zafiros':
+    material: DIAMOND
+    slot: 12
+    item_flags:
+      - HIDE_ATTRIBUTES
+      - HIDE_ENCHANTS
+    enchantments:
+      - UNBREAKING;1
+    display_name: '&#1E6BFFGema de Zafiros'
+    lore:
+      - '&8ᴅɪᴠɪꜱᴀ ᴘʀᴇᴍɪᴜᴍ'
+      - ''
+      - ' &8| &fRecompensa: &#1E6BFF5 - 15 Zafiros'
+      - ' &8| &fProbabilidad: &e12%'
+      - ' &8| &fTier: &7Raro'
+      - ''
+      - '&7Divisa para ventajas y cosméticos de red.'
+
+  'Item_Libro':
+    material: ENCHANTED_BOOK
+    slot: 13
+    item_flags:
+      - HIDE_ATTRIBUTES
+      - HIDE_ENCHANTS
+    enchantments:
+      - MENDING;1
+    display_name: '&#D48BFFLibro Encantado: Reparación'
+    lore:
+      - '&8ᴇɴᴄᴀɴᴛᴀᴍɪᴇɴᴛᴏ ᴄᴏᴅɪᴄɪᴀᴅᴏ'
+      - ''
+      - ' &8| &fCantidad: &e1'
+      - ' &8| &fProbabilidad: &c8%'
+      - ' &8| &fEnchant: &fMending / Reparación'
+      - ' &8| &fTier: &bÉlite'
+      - ''
+      - '&7Repara herramientas usando experiencia obtenida.'
+
+  'Item_Pocion':
+    material: POTION
+    slot: 14
+    item_flags:
+      - HIDE_ATTRIBUTES
+      - HIDE_POTION_EFFECTS
+    potion_effects:
+      - REGENERATION;450;1
+    display_name: '&#D48BFFPoción de Regeneración II &7(0:22)'
+    lore:
+      - '&8ᴄᴏɴꜱᴜᴍɪʙʟᴇ'
+      - ''
+      - ' &8| &fCantidad: &e1'
+      - ' &8| &fProbabilidad: &c10%'
+      - ' &8| &fEfecto: &fRegeneración II'
+      - ' &8| &fTier: &bÉlite'
+      - ''
+      - '&7Recuperación fulgurante de vida en combate de jefes.'
+
+  'Item_ManzanaNotch':
+    material: ENCHANTED_GOLDEN_APPLE
+    slot: 15
+    item_flags:
+      - HIDE_ATTRIBUTES
+      - HIDE_ENCHANTS
+    enchantments:
+      - UNBREAKING;1
+    display_name: '&#D48BFFManzana de Notch'
+    lore:
+      - '&8ʀᴇʟɪQᴜɪᴀ ᴅᴇ ꜱᴜᴘᴇʀᴠɪᴠᴇɴᴄɪᴀ'
+      - ''
+      - ' &8| &fCantidad: &e1'
+      - ' &8| &fProbabilidad: &c4%'
+      - ' &8| &fTier: &5Mítico'
+      - ''
+      - '&7Inmunidad temporal y resistencia legendaria.'
+
+  'Item_Totem':
+    material: TOTEM_OF_UNDYING
+    slot: 16
+    item_flags:
+      - HIDE_ATTRIBUTES
+      - HIDE_ENCHANTS
+    enchantments:
+      - UNBREAKING;1
+    display_name: '&#D48BFFTótem de Inmortalidad'
+    lore:
+      - '&8ꜱᴀʟᴠᴀᴠɪᴅᴀꜱ ᴅᴇꜰɪɴɪᴛɪᴠᴏ'
+      - ''
+      - ' &8| &fCantidad: &e1'
+      - ' &8| &fProbabilidad: &c3%'
+      - ' &8| &fTier: &5Mítico'
+      - ''
+      - '&7Evita la muerte inmediata ante ataques letales.'
+
+  'Item_Fragmento':
+    material: ECHO_SHARD
+    slot: 17
+    item_flags:
+      - HIDE_ATTRIBUTES
+      - HIDE_ENCHANTS
+    enchantments:
+      - UNBREAKING;1
+    display_name: '&#D48BFFFragmento de Llave Mítica'
+    lore:
+      - '&8ᴍᴀᴛᴇʀɪᴀʟ ᴅᴇ ꜰᴏʀᴊᴀ'
+      - ''
+      - ' &8| &fCantidad: &e1'
+      - ' &8| &fProbabilidad: &c5%'
+      - ' &8| &fRequisito: &fJunta 4 para craftear'
+      - ' &8| &fResultado: &#D48BFFLlave Mítica / Limited'
+      - ' &8| &fTier: &5Mítico'
+      - ''
+      - '&7Acceso a la caja más exclusiva de la network.'
+
+  # ============================================================================
+  # NAV BAR INFERIOR (FILA 4 - SLOTS 27 A 35)
+  # ============================================================================
+  'Filtro_Navbar':
+    material: GRAY_STAINED_GLASS_PANE
+    display_name: ' '
+    slots:
+      - 27
+      - 28
+      - 29
+      - 30
+      - 32
+      - 33
+      - 34
+
+  'Volver':
+    material: DARK_OAK_DOOR
+    slot: 31
+    item_flags:
+      - HIDE_ATTRIBUTES
+    display_name: '&cVolver'
+    lore:
+      - '&7▶ Click para regresar a calidades'
+    left_click_commands:
+      - '[openguimenu] lootpools_dungeon'
+      - '[sound] UI_BUTTON_CLICK'
+
+  'Info_Balance':
+    material: head-%player_name%
+    slot: 35
+    item_flags:
+      - HIDE_ATTRIBUTES
+    display_name: '&#FFF275Tu Economia'
+    lore:
+      - '&8Tu Economia'
+      - ''
+      - ' &8| &fDinero: &#59E91F&l$&r&#59E91F%vault_eco_balance_formatted%'
+      - ' &8| &fAlmas: &#34B0F3%thundercurrencys_almas% fuego'
+      - ' &8| &fZafiros: &#1E6BFF%thundercurrencys_zafiros% diamante'
+      - ' &8| &fXP: &#D48BFF%player_level% LVL'
+      - ''
+      - '&7▶ Click para mas informacion'
+    left_click_commands:
+      - '[openguimenu] info_economia'
+      - '[sound] UI_BUTTON_CLICK'

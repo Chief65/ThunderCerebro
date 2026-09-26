@@ -1,0 +1,197 @@
+venta:
+  name: "&0&l|&r &0Tienda ▶ &8Venta"
+  size: 45
+  fillItem:
+    material: AIR
+    name: " "
+  buttons:
+    goBack:
+      slot: 40
+    previousPage:
+      slot: 39
+    nextPage:
+      slot: 41
+  items:
+    1:
+      type: item
+      item:
+        material: AMETHYST_CLUSTER
+        quantity: 1
+        name: "&0&l|&r &0Tienda ▶ &8Venta"
+        lore:
+        - '&8Objeto Vendible'
+        - ''
+        - ' &fCristal cosmico'
+        - ' &fmuy valioso'
+        - ''
+        - ' &x&5&9&E&9&1&F| &fPrecio: &x&5&9&E&9&1&F&l$&x&5&9&E&9&1&F10'
+        - ''
+        - '&7▲ Vendelo: /sellgui &f'
+        enchantments:
+          - UNBREAKING:1
+      buyPrice: -1
+      sellPrice: 10
+      slot: 9
+      
+    2:
+      type: item
+      item:
+        material: AMETHYST_CLUSTER
+        quantity: 1
+        name: "&0&l|&r &0Tienda ▶ &8Venta"
+        lore:
+        - '&8Objeto Vendible'
+        - ''
+        - ' &fᴄʀɪꜱᴛᴀʟ ᴄᴏꜱᴍɪᴄᴏ'
+        - ' &fᴜᴛɪʟ ᴘᴀʀᴀ ᴠᴇɴᴅᴇʀ'
+        - ''
+        - ' &x&5&9&E&9&1&F| &fPrecio: &x&5&9&E&9&1&F&l$&x&5&9&E&9&1&F10'
+        - ''
+        - '&7 &8⁂ #4BFD00&lS#47F504&lU#44EC08&lP#40E40C&lE#3CDB10&lR &e⭐&7⭐⭐⭐⭐'
+        - ''
+        - '&7▲ Vendelo: /sellgui &f'
+        enchantments:
+          - UNBREAKING:1
+      buyPrice: -1
+      sellPrice: 10
+      slot: 10
+
+    3:
+      type: dummy
+      item:
+        material: COMPARATOR
+        quantity: 1
+        glow: true
+        name: "#FFD700Filtrar Categoría"
+        lore:
+        - "&8ᴇʟɪɢᴇ ᴄᴀᴛᴇɢᴏʀɪᴀ"
+        - ""
+        - " &7● Bloques"
+        - " &7● Farmeo"
+        - " &7● Comida"
+        - " &7● Mobs"
+        - " &7● Equipo"
+        - " &7● Redstone"
+        - " &7● Misceláneo"
+        - " &7● Tintes"
+        - " &7● Trims"
+        - " &7● Encantamientos"
+        - " &7● Almas"
+        - ""
+        - "&7▶ Click para cambiar"
+      commandsOnClick:
+        - "shop bloques"
+      slot: 36
+    4:
+      type: dummy
+      item:
+        material: HOPPER
+        quantity: 1
+        name: "#59E91FVenta Rápida"
+        lore:
+          - "&8ᴠᴇɴᴛᴀ ᴀᴜᴛᴏᴍᴀᴛɪᴄᴀ"
+          - ""
+          - " &fVende tu inventario."
+          - ""
+          - "&7▶ Click para abrir"
+      commandsOnClick:
+        - "sellgui"
+      slot: 43
+    5:
+      type: dummy
+      item:
+        material: PLAYER_HEAD
+        quantity: 1
+        name: "#FFD700Tu Economía"
+        lore:
+          - "&8ᴛᴜ ᴇᴄᴏɴᴏᴍɪᴀ"
+          - ""
+          - " &8| &fDinero: #59E91F&l$&r#59E91F%vault_eco_balance_formatted%"
+          - " &8| &fAlmas: #34B0F3%thundercurrencys_almas%🔥"
+          - " &8| &fZafiros: #1E6BFF%thundercurrencys_zafiros%💎"
+          - ""
+      slot: 44
+    6:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 37
+    7:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 38
+    8:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 42
+    9:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 0
+    10:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 1
+    11:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 2
+    12:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 3
+    13:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 4
+    14:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 5
+    15:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 6
+    16:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 7
+    17:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 8

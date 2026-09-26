@@ -1,0 +1,3 @@
+put creator/lab/trims_remote.yml plugins/ShopGUIPlus/shops/trims.yml
+put creator/lab/encantamientos_remote.yml plugins/ShopGUIPlus/shops/encantamientos.yml
+bye

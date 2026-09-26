@@ -1,0 +1,355 @@
+farmeo:
+  name: "&0&l|&r &0Mercado ▶ &#59E91FFarmeo"
+  size: 45
+  fillItem:
+    material: AIR
+    name: " "
+  buttons:
+    goBack:
+      slot: 40
+    previousPage:
+      slot: 39
+    nextPage:
+      slot: 41
+  items:
+    1:
+      type: item
+      item:
+        material: BAMBOO
+        name: "#FFF275Bamboo"
+        quantity: 1
+      buyPrice: 4
+      sellPrice: 1
+      slot: 9
+    2:
+      type: item
+      item:
+        material: BEETROOT
+        name: "#FFF275Beetroot"
+        quantity: 1
+      buyPrice: 80
+      sellPrice: 20
+      slot: 10
+    3:
+      type: item
+      item:
+        material: BEETROOT_SEEDS
+        name: "#FFF275Beetroot Seeds"
+        quantity: 1
+      buyPrice: 5
+      sellPrice: 1
+      slot: 11
+    4:
+      type: item
+      item:
+        material: BROWN_MUSHROOM
+        name: "#FFF275Brown Mushroom"
+        quantity: 1
+      buyPrice: 20
+      sellPrice: 1
+      slot: 12
+    5:
+      type: item
+      item:
+        material: CACTUS
+        name: "#FFF275Cactus"
+        quantity: 1
+      buyPrice: 20
+      sellPrice: 5
+      slot: 13
+    6:
+      type: item
+      item:
+        material: CARROT
+        name: "#FFF275Carrot"
+        quantity: 1
+      buyPrice: 60
+      sellPrice: 15
+      slot: 14
+    7:
+      type: item
+      item:
+        material: CHORUS_FLOWER
+        name: "#FFF275Chorus Flower"
+        quantity: 1
+      buyPrice: 30
+      sellPrice: 1
+      slot: 15
+    8:
+      type: item
+      item:
+        material: CHORUS_FRUIT
+        name: "#FFF275Chorus Fruit"
+        quantity: 1
+      buyPrice: 5
+      sellPrice: 1
+      slot: 16
+    9:
+      type: item
+      item:
+        material: COCOA_BEANS
+        name: "#FFF275Cocoa Beans"
+        quantity: 1
+      buyPrice: 120
+      sellPrice: 30
+      slot: 17
+    10:
+      type: item
+      item:
+        material: KELP
+        name: "#FFF275Kelp"
+        quantity: 1
+      buyPrice: 6
+      sellPrice: 2
+      slot: 18
+    11:
+      type: item
+      item:
+        material: MELON
+        name: "#FFF275Melon"
+        quantity: 1
+      buyPrice: 45
+      sellPrice: 7
+      slot: 19
+    12:
+      type: item
+      item:
+        material: MELON_SEEDS
+        name: "#FFF275Melon Seeds"
+        quantity: 1
+      buyPrice: 5
+      sellPrice: -1
+      slot: 20
+    13:
+      type: item
+      item:
+        material: MELON_SLICE
+        name: "#FFF275Melon Slice"
+        quantity: 1
+      buyPrice: 5
+      sellPrice: 1
+      slot: 21
+    14:
+      type: item
+      item:
+        material: NETHER_WART
+        name: "#FFF275Nether Wart"
+        quantity: 1
+      buyPrice: 80
+      sellPrice: 20
+      slot: 22
+    15:
+      type: item
+      item:
+        material: POTATO
+        name: "#FFF275Potato"
+        quantity: 1
+      buyPrice: 60
+      sellPrice: 15
+      slot: 23
+    16:
+      type: item
+      item:
+        material: PUMPKIN
+        name: "#FFF275Pumpkin"
+        quantity: 1
+      buyPrice: 28
+      sellPrice: 7
+      slot: 24
+    17:
+      type: item
+      item:
+        material: PUMPKIN_SEEDS
+        name: "#FFF275Pumpkin Seeds"
+        quantity: 1
+      buyPrice: 5
+      sellPrice: 1
+      slot: 25
+    18:
+      type: item
+      item:
+        material: RED_MUSHROOM
+        name: "#FFF275Red Mushroom"
+        quantity: 1
+      buyPrice: 5
+      sellPrice: 1
+      slot: 26
+    19:
+      type: item
+      item:
+        material: SUGAR_CANE
+        name: "#FFF275Sugar Cane"
+        quantity: 1
+      buyPrice: 12
+      sellPrice: 3
+      slot: 27
+    20:
+      type: item
+      item:
+        material: WHEAT
+        name: "#FFF275Wheat"
+        quantity: 1
+      buyPrice: 80
+      sellPrice: 20
+      slot: 28
+    21:
+      type: item
+      item:
+        material: WHEAT_SEEDS
+        name: "#FFF275Wheat Seeds"
+        quantity: 1
+      buyPrice: 5
+      sellPrice: 1
+      slot: 29
+    22:
+      type: item
+      item:
+        material: SWEET_BERRIES
+        name: "#FFF275Sweet Berries"
+        quantity: 1
+      buyPrice: 28
+      sellPrice: 7
+      slot: 30
+    23:
+      type: item
+      item:
+        material: SEA_PICKLE
+        name: "#FFF275Sea Pickle"
+        quantity: 1
+      buyPrice: 5
+      sellPrice: -1
+      slot: 31
+    24:
+      type: dummy
+      item:
+        material: COMPARATOR
+        quantity: 1
+        glow: true
+        name: "#FFF275Filtrar Categoría"
+        lore:
+        - "&8Elige categoría"
+        - ""
+        - " &7● Bloques"
+        - " #FFF275● Farmeo"
+        - " &7● Comida"
+        - " &7● Mobs"
+        - " &7● Equipo"
+        - " &7● Redstone"
+        - " &7● Misceláneo"
+        - " &7● Tintes"
+        - " &7● Trims"
+        - " &7● Encantamientos"
+        - ""
+        - "&7▶ Click para cambiar"
+      commandsOnClick:
+        - "shop comida"
+      slot: 36
+    25:
+      type: special
+      special: balance
+      slot: 44
+    26:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 37
+    27:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 38
+    28:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 39
+    29:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 41
+    30:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 42
+    31:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 43
+    32:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 0
+    33:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 1
+    34:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 2
+    35:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 3
+    36:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 4
+    37:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 5
+    38:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 6
+    39:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 7
+    40:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 8

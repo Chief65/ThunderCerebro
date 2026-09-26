@@ -1,0 +1,686 @@
+size: 36
+menu_title: '&0&l|&r &0Trabajos ▶ &8Menu'
+
+items:
+  'Filtro':
+    display_name: " "
+    material: GRAY_STAINED_GLASS_PANE
+    slots: [27-29,32-35]
+    
+  'Cerrar':
+    material: DARK_OAK_DOOR
+    slot: 31
+    display_name: "&cSalir"
+    left_click_commands:
+      - '[close]'
+
+  'Volver':
+    material: ARROW
+    slot: 30
+    display_name: "&ePágina anterior"
+    lore:
+      - "&7▶ Click para volver"
+    left_click_commands:
+      - '[openguimenu] SelectorTrabajos'
+
+  'Sintrabajo':
+    material: BARRIER
+    slot: 13
+    priority: 100
+    display_name: "&#FF0000¡No tienes trabajos!"
+    lore:
+      - "&8▶ &7Elije uno en &e/trabajos"
+    view_requirement:
+      requirements:
+        trabajo:
+          type: string equals
+          input: '%jobsr_user_joinedjobcount%'
+          output: '0'
+
+#
+# TRABAJO 1
+#
+
+  'Trabajo1-Hechizero':
+    material: BREWING_STAND
+    slot: 12
+    priority: 1
+    enchantment_glint_override: true
+    display_name: "&8&l| &8Niveles - &#E23AE4Hechizero"
+    lore:
+      - "&7▶ Click para ver"
+    view_requirement:
+      requirements:
+        trabajo:
+          type: string equals
+          input: '%jobsr_user_job_1%'
+          output: 'Brewer'
+    left_click_commands:
+      - '[openguimenu] Hechizero'
+
+  'Trabajo1-Constructor':
+    material: BRICKS
+    slot: 12
+    priority: 2
+    enchantment_glint_override: true
+    display_name: "&8&l| &8Niveles - &#E43A3AConstructor"
+    lore:
+      - "&7▶ Click para ver"
+    view_requirement:
+      requirements:
+        trabajo:
+          type: string equals
+          input: '%jobsr_user_job_1%'
+          output: 'Builder'
+    left_click_commands:
+      - '[openguimenu] Constructor'
+
+  'Trabajo1-Craftero':
+    material: CRAFTING_TABLE
+    slot: 12
+    priority: 3
+    enchantment_glint_override: true
+    display_name: "&8&l| &8Niveles - &#F4C542Craftero"
+    lore:
+      - "&7▶ Click para ver"
+    view_requirement:
+      requirements:
+        trabajo:
+          type: string equals
+          input: '%jobsr_user_job_1%'
+          output: 'Crafter'
+    left_click_commands:
+      - '[openguimenu] Craftero'
+
+  'Trabajo1-Excavador':
+    material: IRON_SHOVEL
+    slot: 12
+    priority: 4
+    enchantment_glint_override: true
+    item_flags:
+      - HIDE_ATTRIBUTES
+    display_name: "&8&l| &8Niveles - &#C68642Excavador"
+    lore:
+      - "&7▶ Click para ver"
+    view_requirement:
+      requirements:
+        trabajo:
+          type: string equals
+          input: '%jobsr_user_job_1%'
+          output: 'Digger'
+    left_click_commands:
+      - '[openguimenu] Excavador'
+
+  'Trabajo1-Encantador':
+    material: ENCHANTING_TABLE
+    slot: 12
+    priority: 5
+    enchantment_glint_override: true
+    display_name: "&8&l| &8Niveles - &#9B59FFEncantador"
+    lore:
+      - "&7▶ Click para ver"
+    view_requirement:
+      requirements:
+        trabajo:
+          type: string equals
+          input: '%jobsr_user_job_1%'
+          output: 'Enchanter'
+    left_click_commands:
+      - '[openguimenu] Encantador'
+
+  'Trabajo1-Granjero':
+    material: WHEAT
+    slot: 12
+    priority: 6
+    enchantment_glint_override: true
+    display_name: "&8&l| &8Niveles - &#7CCF4DGranjero"
+    lore:
+      - "&7▶ Click para ver"
+    view_requirement:
+      requirements:
+        trabajo:
+          type: string equals
+          input: '%jobsr_user_job_1%'
+          output: 'Farmer'
+    left_click_commands:
+      - '[openguimenu] Granjero'
+
+  'Trabajo1-Pescador':
+    material: FISHING_ROD
+    slot: 12
+    priority: 7
+    enchantment_glint_override: true
+    item_flags:
+      - HIDE_ATTRIBUTES
+    display_name: "&8&l| &8Niveles - &#3AA8FFPescador"
+    lore:
+      - "&7▶ Click para ver"
+    view_requirement:
+      requirements:
+        trabajo:
+          type: string equals
+          input: '%jobsr_user_job_1%'
+          output: 'Fisherman'
+    left_click_commands:
+      - '[openguimenu] Pescador'
+
+  'Trabajo1-Cazador':
+    material: BOW
+    slot: 12
+    priority: 8
+    enchantment_glint_override: true
+    display_name: "&8&l| &8Niveles - &#D94A4ACazador"
+    lore:
+      - "&7▶ Click para ver"
+    view_requirement:
+      requirements:
+        trabajo:
+          type: string equals
+          input: '%jobsr_user_job_1%'
+          output: 'Hunter'
+    left_click_commands:
+      - '[openguimenu] Cazador'
+
+  'Trabajo1-Herrero':
+    material: ANVIL
+    slot: 12
+    priority: 9
+    enchantment_glint_override: true
+    display_name: "&8&l| &8Niveles - &#8E8E8EHerrero"
+    lore:
+      - "&7▶ Click para ver"
+    view_requirement:
+      requirements:
+        trabajo:
+          type: string equals
+          input: '%jobsr_user_job_1%'
+          output: 'Weaponsmith'
+    left_click_commands:
+      - '[openguimenu] Herrero'
+
+  'Trabajo1-Leñador':
+    material: IRON_AXE
+    slot: 12
+    priority: 10
+    enchantment_glint_override: true
+    item_flags:
+      - HIDE_ATTRIBUTES
+    display_name: "&8&l| &8Niveles - &#8B5A2BLeñador"
+    lore:
+      - "&7▶ Click para ver"
+    view_requirement:
+      requirements:
+        trabajo:
+          type: string equals
+          input: '%jobsr_user_job_1%'
+          output: 'Woodcutter'
+    left_click_commands:
+      - '[openguimenu] Leñador'
+
+  'Trabajo1-Minero':
+    material: DIAMOND_PICKAXE
+    slot: 12
+    priority: 11
+    enchantment_glint_override: true
+    item_flags:
+      - HIDE_ATTRIBUTES
+    display_name: "&8&l| &8Niveles - &#5FC9C9Minero"
+    lore:
+      - "&7▶ Click para ver"
+    view_requirement:
+      requirements:
+        trabajo:
+          type: string equals
+          input: '%jobsr_user_job_1%'
+          output: 'Miner'
+    left_click_commands:
+      - '[openguimenu] Minero'
+
+  'Trabajo1-Explorador':
+    material: COMPASS
+    slot: 12
+    priority: 12
+    enchantment_glint_override: true
+    display_name: "&8&l| &8Niveles - &#4DB8FFExplorador"
+    lore:
+      - "&7▶ Click para ver"
+    view_requirement:
+      requirements:
+        trabajo:
+          type: string equals
+          input: '%jobsr_user_job_1%'
+          output: 'Explorer'
+    left_click_commands:
+      - '[openguimenu] Explorador'
+
+#
+# TRABAJO 2
+#
+
+  'Trabajo2-Hechizero':
+    material: BREWING_STAND
+    slot: 13
+    priority: 1
+    enchantment_glint_override: true
+    display_name: "&8&l| &8Niveles - &#E23AE4Hechizero"
+    lore:
+      - "&7▶ Click para ver"
+    view_requirement:
+      requirements:
+        trabajo:
+          type: string equals
+          input: '%jobsr_user_job_2%'
+          output: 'Brewer'
+    left_click_commands:
+      - '[openguimenu] Hechizero'
+
+  'Trabajo2-Constructor':
+    material: BRICKS
+    slot: 13
+    priority: 2
+    enchantment_glint_override: true
+    display_name: "&8&l| &8Niveles - &#E43A3AConstructor"
+    lore:
+      - "&7▶ Click para ver"
+    view_requirement:
+      requirements:
+        trabajo:
+          type: string equals
+          input: '%jobsr_user_job_2%'
+          output: 'Builder'
+    left_click_commands:
+      - '[openguimenu] Constructor'
+
+  'Trabajo2-Craftero':
+    material: CRAFTING_TABLE
+    slot: 13
+    priority: 3
+    enchantment_glint_override: true
+    display_name: "&8&l| &8Niveles - &#F4C542Craftero"
+    lore:
+      - "&7▶ Click para ver"
+    view_requirement:
+      requirements:
+        trabajo:
+          type: string equals
+          input: '%jobsr_user_job_2%'
+          output: 'Crafter'
+    left_click_commands:
+      - '[openguimenu] Craftero'
+
+  'Trabajo2-Excavador':
+    material: IRON_SHOVEL
+    slot: 13
+    priority: 4
+    enchantment_glint_override: true
+    item_flags:
+      - HIDE_ATTRIBUTES
+    display_name: "&8&l| &8Niveles - &#C68642Excavador"
+    lore:
+      - "&7▶ Click para ver"
+    view_requirement:
+      requirements:
+        trabajo:
+          type: string equals
+          input: '%jobsr_user_job_2%'
+          output: 'Digger'
+    left_click_commands:
+      - '[openguimenu] Excavador'
+
+  'Trabajo2-Encantador':
+    material: ENCHANTING_TABLE
+    slot: 13
+    priority: 5
+    enchantment_glint_override: true
+    display_name: "&8&l| &8Niveles - &#9B59FFEncantador"
+    lore:
+      - "&7▶ Click para ver"
+    view_requirement:
+      requirements:
+        trabajo:
+          type: string equals
+          input: '%jobsr_user_job_2%'
+          output: 'Enchanter'
+    left_click_commands:
+      - '[openguimenu] Encantador'
+
+  'Trabajo2-Granjero':
+    material: WHEAT
+    slot: 13
+    priority: 6
+    enchantment_glint_override: true
+    display_name: "&8&l| &8Niveles - &#7CCF4DGranjero"
+    lore:
+      - "&7▶ Click para ver"
+    view_requirement:
+      requirements:
+        trabajo:
+          type: string equals
+          input: '%jobsr_user_job_2%'
+          output: 'Farmer'
+    left_click_commands:
+      - '[openguimenu] Granjero'
+
+  'Trabajo2-Pescador':
+    material: FISHING_ROD
+    slot: 13
+    priority: 7
+    enchantment_glint_override: true
+    item_flags:
+      - HIDE_ATTRIBUTES
+    display_name: "&8&l| &8Niveles - &#3AA8FFPescador"
+    lore:
+      - "&7▶ Click para ver"
+    view_requirement:
+      requirements:
+        trabajo:
+          type: string equals
+          input: '%jobsr_user_job_2%'
+          output: 'Fisherman'
+    left_click_commands:
+      - '[openguimenu] Pescador'
+
+  'Trabajo2-Cazador':
+    material: BOW
+    slot: 13
+    priority: 8
+    enchantment_glint_override: true
+    display_name: "&8&l| &8Niveles - &#D94A4ACazador"
+    lore:
+      - "&7▶ Click para ver"
+    view_requirement:
+      requirements:
+        trabajo:
+          type: string equals
+          input: '%jobsr_user_job_2%'
+          output: 'Hunter'
+    left_click_commands:
+      - '[openguimenu] Cazador'
+
+  'Trabajo2-Herrero':
+    material: ANVIL
+    slot: 13
+    priority: 9
+    enchantment_glint_override: true
+    display_name: "&8&l| &8Niveles - &#8E8E8EHerrero"
+    lore:
+      - "&7▶ Click para ver"
+    view_requirement:
+      requirements:
+        trabajo:
+          type: string equals
+          input: '%jobsr_user_job_2%'
+          output: 'Weaponsmith'
+    left_click_commands:
+      - '[openguimenu] Herrero'
+
+  'Trabajo2-Leñador':
+    material: IRON_AXE
+    slot: 13
+    priority: 10
+    enchantment_glint_override: true
+    item_flags:
+      - HIDE_ATTRIBUTES
+    display_name: "&8&l| &8Niveles - &#8B5A2BLeñador"
+    lore:
+      - "&7▶ Click para ver"
+    view_requirement:
+      requirements:
+        trabajo:
+          type: string equals
+          input: '%jobsr_user_job_2%'
+          output: 'Woodcutter'
+    left_click_commands:
+      - '[openguimenu] Leñador'
+
+  'Trabajo2-Minero':
+    material: DIAMOND_PICKAXE
+    slot: 13
+    priority: 11
+    enchantment_glint_override: true
+    item_flags:
+      - HIDE_ATTRIBUTES
+    display_name: "&8&l| &8Niveles - &#5FC9C9Minero"
+    lore:
+      - "&7▶ Click para ver"
+    view_requirement:
+      requirements:
+        trabajo:
+          type: string equals
+          input: '%jobsr_user_job_2%'
+          output: 'Miner'
+    left_click_commands:
+      - '[openguimenu] Minero'
+
+  'Trabajo2-Explorador':
+    material: COMPASS
+    slot: 13
+    priority: 12
+    enchantment_glint_override: true
+    display_name: "&8&l| &8Niveles - &#4DB8FFExplorador"
+    lore:
+      - "&7▶ Click para ver"
+    view_requirement:
+      requirements:
+        trabajo:
+          type: string equals
+          input: '%jobsr_user_job_2%'
+          output: 'Explorer'
+    left_click_commands:
+      - '[openguimenu] Explorador'
+
+#
+# TRABAJO 3
+#
+
+  'Trabajo3-Hechizero':
+    material: BREWING_STAND
+    slot: 14
+    priority: 1
+    enchantment_glint_override: true
+    display_name: "&8&l| &8Niveles - &#E23AE4Hechizero"
+    lore:
+      - "&7▶ Click para ver"
+    view_requirement:
+      requirements:
+        trabajo:
+          type: string equals
+          input: '%jobsr_user_job_3%'
+          output: 'Brewer'
+    left_click_commands:
+      - '[openguimenu] Hechizero'
+
+  'Trabajo3-Constructor':
+    material: BRICKS
+    slot: 14
+    priority: 2
+    enchantment_glint_override: true
+    display_name: "&8&l| &8Niveles - &#E43A3AConstructor"
+    lore:
+      - "&7▶ Click para ver"
+    view_requirement:
+      requirements:
+        trabajo:
+          type: string equals
+          input: '%jobsr_user_job_3%'
+          output: 'Builder'
+    left_click_commands:
+      - '[openguimenu] Constructor'
+
+  'Trabajo3-Craftero':
+    material: CRAFTING_TABLE
+    slot: 14
+    priority: 3
+    enchantment_glint_override: true
+    display_name: "&8&l| &8Niveles - &#F4C542Craftero"
+    lore:
+      - "&7▶ Click para ver"
+    view_requirement:
+      requirements:
+        trabajo:
+          type: string equals
+          input: '%jobsr_user_job_3%'
+          output: 'Crafter'
+    left_click_commands:
+      - '[openguimenu] Craftero'
+
+  'Trabajo3-Excavador':
+    material: IRON_SHOVEL
+    slot: 14
+    priority: 4
+    enchantment_glint_override: true
+    item_flags:
+      - HIDE_ATTRIBUTES
+    display_name: "&8&l| &8Niveles - &#C68642Excavador"
+    lore:
+      - "&7▶ Click para ver"
+    view_requirement:
+      requirements:
+        trabajo:
+          type: string equals
+          input: '%jobsr_user_job_3%'
+          output: 'Digger'
+    left_click_commands:
+      - '[openguimenu] Excavador'
+
+  'Trabajo3-Encantador':
+    material: ENCHANTING_TABLE
+    slot: 14
+    priority: 5
+    enchantment_glint_override: true
+    display_name: "&8&l| &8Niveles - &#9B59FFEncantador"
+    lore:
+      - "&7▶ Click para ver"
+    view_requirement:
+      requirements:
+        trabajo:
+          type: string equals
+          input: '%jobsr_user_job_3%'
+          output: 'Enchanter'
+    left_click_commands:
+      - '[openguimenu] Encantador'
+
+  'Trabajo3-Granjero':
+    material: WHEAT
+    slot: 14
+    priority: 6
+    enchantment_glint_override: true
+    display_name: "&8&l| &8Niveles - &#7CCF4DGranjero"
+    lore:
+      - "&7▶ Click para ver"
+    view_requirement:
+      requirements:
+        trabajo:
+          type: string equals
+          input: '%jobsr_user_job_3%'
+          output: 'Farmer'
+    left_click_commands:
+      - '[openguimenu] Granjero'
+
+  'Trabajo3-Pescador':
+    material: FISHING_ROD
+    slot: 14
+    priority: 7
+    enchantment_glint_override: true
+    item_flags:
+      - HIDE_ATTRIBUTES
+    display_name: "&8&l| &8Niveles - &#3AA8FFPescador"
+    lore:
+      - "&7▶ Click para ver"
+    view_requirement:
+      requirements:
+        trabajo:
+          type: string equals
+          input: '%jobsr_user_job_3%'
+          output: 'Fisherman'
+    left_click_commands:
+      - '[openguimenu] Pescador'
+
+  'Trabajo3-Cazador':
+    material: BOW
+    slot: 14
+    priority: 8
+    enchantment_glint_override: true
+    display_name: "&8&l| &8Niveles - &#D94A4ACazador"
+    lore:
+      - "&7▶ Click para ver"
+    view_requirement:
+      requirements:
+        trabajo:
+          type: string equals
+          input: '%jobsr_user_job_3%'
+          output: 'Hunter'
+    left_click_commands:
+      - '[openguimenu] Cazador'
+
+  'Trabajo3-Herrero':
+    material: ANVIL
+    slot: 14
+    priority: 9
+    enchantment_glint_override: true
+    display_name: "&8&l| &8Niveles - &#8E8E8EHerrero"
+    lore:
+      - "&7▶ Click para ver"
+    view_requirement:
+      requirements:
+        trabajo:
+          type: string equals
+          input: '%jobsr_user_job_3%'
+          output: 'Weaponsmith'
+    left_click_commands:
+      - '[openguimenu] Herrero'
+
+  'Trabajo3-Leñador':
+    material: IRON_AXE
+    slot: 14
+    priority: 10
+    enchantment_glint_override: true
+    item_flags:
+      - HIDE_ATTRIBUTES
+    display_name: "&8&l| &8Niveles - &#8B5A2BLeñador"
+    lore:
+      - "&7▶ Click para ver"
+    view_requirement:
+      requirements:
+        trabajo:
+          type: string equals
+          input: '%jobsr_user_job_3%'
+          output: 'Woodcutter'
+    left_click_commands:
+      - '[openguimenu] Leñador'
+
+  'Trabajo3-Minero':
+    material: DIAMOND_PICKAXE
+    slot: 14
+    priority: 11
+    enchantment_glint_override: true
+    item_flags:
+      - HIDE_ATTRIBUTES
+    display_name: "&8&l| &8Niveles - &#5FC9C9Minero"
+    lore:
+      - "&7▶ Click para ver"
+    view_requirement:
+      requirements:
+        trabajo:
+          type: string equals
+          input: '%jobsr_user_job_3%'
+          output: 'Miner'
+    left_click_commands:
+      - '[openguimenu] Minero'
+
+  'Trabajo3-Explorador':
+    material: COMPASS
+    slot: 14
+    priority: 12
+    enchantment_glint_override: true
+    display_name: "&8&l| &8Niveles - &#4DB8FFExplorador"
+    lore:
+      - "&7▶ Click para ver"
+    view_requirement:
+      requirements:
+        trabajo:
+          type: string equals
+          input: '%jobsr_user_job_3%'
+          output: 'Explorer'
+    left_click_commands:
+      - '[openguimenu] Explorador'

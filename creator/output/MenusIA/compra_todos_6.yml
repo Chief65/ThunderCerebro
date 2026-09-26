@@ -1,0 +1,645 @@
+menu_title: '&0&l|&r &0Compra ▶ &8Todos &7(6/17)'
+open_command:
+  - compra_todos_6
+size: 45
+open_requirement:
+  requirements: {}
+register_command: true
+update: true
+
+items:
+  # ============================================================================
+  # FILTRO SUPERIOR: PANELES GRISES DECORATIVOS (FILA 1)
+  # ============================================================================
+  'Filtro_Top':
+    material: GRAY_STAINED_GLASS_PANE
+    display_name: ' '
+    slots:
+      - 0
+      - 1
+      - 2
+      - 3
+      - 4
+      - 5
+      - 6
+      - 7
+      - 8
+
+  # ============================================================================
+  # CATÁLOGO DE ÍTEMS DE COMPRA (FILAS 2, 3, 4: SLOTS 9 A 35)
+  # ============================================================================
+  'item_1':
+    material: LIME_CONCRETE
+    slot: 9
+    item_flags:
+      - HIDE_ATTRIBUTES
+      - HIDE_ENCHANTS
+    display_name: '&#00FF88Lime Concrete'
+    lore:
+      - '&8ᴘʀᴇᴄɪᴏ ᴅᴇ ᴄᴏᴍᴘʀᴀ'
+      - ''
+      - ' &8| &fUnidad: &#59E91F&l$&r&#59E91F10'
+      - ' &8| &fStack x64: &#59E91F&l$&r&#59E91F640'
+      - ''
+      - '&7▶ Click para comprar'
+    left_click_commands:
+      - '[close]'
+      - '[player] shop bloques'
+      - '[sound] UI_BUTTON_CLICK'
+
+  'item_2':
+    material: PINK_CONCRETE
+    slot: 10
+    item_flags:
+      - HIDE_ATTRIBUTES
+      - HIDE_ENCHANTS
+    display_name: '&#00FF88Pink Concrete'
+    lore:
+      - '&8ᴘʀᴇᴄɪᴏ ᴅᴇ ᴄᴏᴍᴘʀᴀ'
+      - ''
+      - ' &8| &fUnidad: &#59E91F&l$&r&#59E91F10'
+      - ' &8| &fStack x64: &#59E91F&l$&r&#59E91F640'
+      - ''
+      - '&7▶ Click para comprar'
+    left_click_commands:
+      - '[close]'
+      - '[player] shop bloques'
+      - '[sound] UI_BUTTON_CLICK'
+
+  'item_3':
+    material: GRAY_CONCRETE
+    slot: 11
+    item_flags:
+      - HIDE_ATTRIBUTES
+      - HIDE_ENCHANTS
+    display_name: '&#00FF88Gray Concrete'
+    lore:
+      - '&8ᴘʀᴇᴄɪᴏ ᴅᴇ ᴄᴏᴍᴘʀᴀ'
+      - ''
+      - ' &8| &fUnidad: &#59E91F&l$&r&#59E91F10'
+      - ' &8| &fStack x64: &#59E91F&l$&r&#59E91F640'
+      - ''
+      - '&7▶ Click para comprar'
+    left_click_commands:
+      - '[close]'
+      - '[player] shop bloques'
+      - '[sound] UI_BUTTON_CLICK'
+
+  'item_4':
+    material: LIGHT_GRAY_CONCRETE
+    slot: 12
+    item_flags:
+      - HIDE_ATTRIBUTES
+      - HIDE_ENCHANTS
+    display_name: '&#00FF88Light Gray Concrete'
+    lore:
+      - '&8ᴘʀᴇᴄɪᴏ ᴅᴇ ᴄᴏᴍᴘʀᴀ'
+      - ''
+      - ' &8| &fUnidad: &#59E91F&l$&r&#59E91F10'
+      - ' &8| &fStack x64: &#59E91F&l$&r&#59E91F640'
+      - ''
+      - '&7▶ Click para comprar'
+    left_click_commands:
+      - '[close]'
+      - '[player] shop bloques'
+      - '[sound] UI_BUTTON_CLICK'
+
+  'item_5':
+    material: CYAN_CONCRETE
+    slot: 13
+    item_flags:
+      - HIDE_ATTRIBUTES
+      - HIDE_ENCHANTS
+    display_name: '&#00FF88Cyan Concrete'
+    lore:
+      - '&8ᴘʀᴇᴄɪᴏ ᴅᴇ ᴄᴏᴍᴘʀᴀ'
+      - ''
+      - ' &8| &fUnidad: &#59E91F&l$&r&#59E91F10'
+      - ' &8| &fStack x64: &#59E91F&l$&r&#59E91F640'
+      - ''
+      - '&7▶ Click para comprar'
+    left_click_commands:
+      - '[close]'
+      - '[player] shop bloques'
+      - '[sound] UI_BUTTON_CLICK'
+
+  'item_6':
+    material: PURPLE_CONCRETE
+    slot: 14
+    item_flags:
+      - HIDE_ATTRIBUTES
+      - HIDE_ENCHANTS
+    display_name: '&#00FF88Purple Concrete'
+    lore:
+      - '&8ᴘʀᴇᴄɪᴏ ᴅᴇ ᴄᴏᴍᴘʀᴀ'
+      - ''
+      - ' &8| &fUnidad: &#59E91F&l$&r&#59E91F10'
+      - ' &8| &fStack x64: &#59E91F&l$&r&#59E91F640'
+      - ''
+      - '&7▶ Click para comprar'
+    left_click_commands:
+      - '[close]'
+      - '[player] shop bloques'
+      - '[sound] UI_BUTTON_CLICK'
+
+  'item_7':
+    material: BLUE_CONCRETE
+    slot: 15
+    item_flags:
+      - HIDE_ATTRIBUTES
+      - HIDE_ENCHANTS
+    display_name: '&#00FF88Blue Concrete'
+    lore:
+      - '&8ᴘʀᴇᴄɪᴏ ᴅᴇ ᴄᴏᴍᴘʀᴀ'
+      - ''
+      - ' &8| &fUnidad: &#59E91F&l$&r&#59E91F10'
+      - ' &8| &fStack x64: &#59E91F&l$&r&#59E91F640'
+      - ''
+      - '&7▶ Click para comprar'
+    left_click_commands:
+      - '[close]'
+      - '[player] shop bloques'
+      - '[sound] UI_BUTTON_CLICK'
+
+  'item_8':
+    material: BROWN_CONCRETE
+    slot: 16
+    item_flags:
+      - HIDE_ATTRIBUTES
+      - HIDE_ENCHANTS
+    display_name: '&#00FF88Brown Concrete'
+    lore:
+      - '&8ᴘʀᴇᴄɪᴏ ᴅᴇ ᴄᴏᴍᴘʀᴀ'
+      - ''
+      - ' &8| &fUnidad: &#59E91F&l$&r&#59E91F10'
+      - ' &8| &fStack x64: &#59E91F&l$&r&#59E91F640'
+      - ''
+      - '&7▶ Click para comprar'
+    left_click_commands:
+      - '[close]'
+      - '[player] shop bloques'
+      - '[sound] UI_BUTTON_CLICK'
+
+  'item_9':
+    material: GREEN_CONCRETE
+    slot: 17
+    item_flags:
+      - HIDE_ATTRIBUTES
+      - HIDE_ENCHANTS
+    display_name: '&#00FF88Green Concrete'
+    lore:
+      - '&8ᴘʀᴇᴄɪᴏ ᴅᴇ ᴄᴏᴍᴘʀᴀ'
+      - ''
+      - ' &8| &fUnidad: &#59E91F&l$&r&#59E91F10'
+      - ' &8| &fStack x64: &#59E91F&l$&r&#59E91F640'
+      - ''
+      - '&7▶ Click para comprar'
+    left_click_commands:
+      - '[close]'
+      - '[player] shop bloques'
+      - '[sound] UI_BUTTON_CLICK'
+
+  'item_10':
+    material: RED_CONCRETE
+    slot: 18
+    item_flags:
+      - HIDE_ATTRIBUTES
+      - HIDE_ENCHANTS
+    display_name: '&#00FF88Red Concrete'
+    lore:
+      - '&8ᴘʀᴇᴄɪᴏ ᴅᴇ ᴄᴏᴍᴘʀᴀ'
+      - ''
+      - ' &8| &fUnidad: &#59E91F&l$&r&#59E91F10'
+      - ' &8| &fStack x64: &#59E91F&l$&r&#59E91F640'
+      - ''
+      - '&7▶ Click para comprar'
+    left_click_commands:
+      - '[close]'
+      - '[player] shop bloques'
+      - '[sound] UI_BUTTON_CLICK'
+
+  'item_11':
+    material: BLACK_CONCRETE
+    slot: 19
+    item_flags:
+      - HIDE_ATTRIBUTES
+      - HIDE_ENCHANTS
+    display_name: '&#00FF88Black Concrete'
+    lore:
+      - '&8ᴘʀᴇᴄɪᴏ ᴅᴇ ᴄᴏᴍᴘʀᴀ'
+      - ''
+      - ' &8| &fUnidad: &#59E91F&l$&r&#59E91F10'
+      - ' &8| &fStack x64: &#59E91F&l$&r&#59E91F640'
+      - ''
+      - '&7▶ Click para comprar'
+    left_click_commands:
+      - '[close]'
+      - '[player] shop bloques'
+      - '[sound] UI_BUTTON_CLICK'
+
+  'item_12':
+    material: WHITE_TERRACOTTA
+    slot: 20
+    item_flags:
+      - HIDE_ATTRIBUTES
+      - HIDE_ENCHANTS
+    display_name: '&#00FF88White Terracotta'
+    lore:
+      - '&8ᴘʀᴇᴄɪᴏ ᴅᴇ ᴄᴏᴍᴘʀᴀ'
+      - ''
+      - ' &8| &fUnidad: &#59E91F&l$&r&#59E91F7'
+      - ' &8| &fStack x64: &#59E91F&l$&r&#59E91F448'
+      - ''
+      - '&7▶ Click para comprar'
+    left_click_commands:
+      - '[close]'
+      - '[player] shop bloques'
+      - '[sound] UI_BUTTON_CLICK'
+
+  'item_13':
+    material: ORANGE_TERRACOTTA
+    slot: 21
+    item_flags:
+      - HIDE_ATTRIBUTES
+      - HIDE_ENCHANTS
+    display_name: '&#00FF88Orange Terracotta'
+    lore:
+      - '&8ᴘʀᴇᴄɪᴏ ᴅᴇ ᴄᴏᴍᴘʀᴀ'
+      - ''
+      - ' &8| &fUnidad: &#59E91F&l$&r&#59E91F7'
+      - ' &8| &fStack x64: &#59E91F&l$&r&#59E91F448'
+      - ''
+      - '&7▶ Click para comprar'
+    left_click_commands:
+      - '[close]'
+      - '[player] shop bloques'
+      - '[sound] UI_BUTTON_CLICK'
+
+  'item_14':
+    material: MAGENTA_TERRACOTTA
+    slot: 22
+    item_flags:
+      - HIDE_ATTRIBUTES
+      - HIDE_ENCHANTS
+    display_name: '&#00FF88Magenta Terracotta'
+    lore:
+      - '&8ᴘʀᴇᴄɪᴏ ᴅᴇ ᴄᴏᴍᴘʀᴀ'
+      - ''
+      - ' &8| &fUnidad: &#59E91F&l$&r&#59E91F7'
+      - ' &8| &fStack x64: &#59E91F&l$&r&#59E91F448'
+      - ''
+      - '&7▶ Click para comprar'
+    left_click_commands:
+      - '[close]'
+      - '[player] shop bloques'
+      - '[sound] UI_BUTTON_CLICK'
+
+  'item_15':
+    material: LIGHT_BLUE_TERRACOTTA
+    slot: 23
+    item_flags:
+      - HIDE_ATTRIBUTES
+      - HIDE_ENCHANTS
+    display_name: '&#00FF88Light Blue Terracotta'
+    lore:
+      - '&8ᴘʀᴇᴄɪᴏ ᴅᴇ ᴄᴏᴍᴘʀᴀ'
+      - ''
+      - ' &8| &fUnidad: &#59E91F&l$&r&#59E91F7'
+      - ' &8| &fStack x64: &#59E91F&l$&r&#59E91F448'
+      - ''
+      - '&7▶ Click para comprar'
+    left_click_commands:
+      - '[close]'
+      - '[player] shop bloques'
+      - '[sound] UI_BUTTON_CLICK'
+
+  'item_16':
+    material: YELLOW_TERRACOTTA
+    slot: 24
+    item_flags:
+      - HIDE_ATTRIBUTES
+      - HIDE_ENCHANTS
+    display_name: '&#00FF88Yellow Terracotta'
+    lore:
+      - '&8ᴘʀᴇᴄɪᴏ ᴅᴇ ᴄᴏᴍᴘʀᴀ'
+      - ''
+      - ' &8| &fUnidad: &#59E91F&l$&r&#59E91F7'
+      - ' &8| &fStack x64: &#59E91F&l$&r&#59E91F448'
+      - ''
+      - '&7▶ Click para comprar'
+    left_click_commands:
+      - '[close]'
+      - '[player] shop bloques'
+      - '[sound] UI_BUTTON_CLICK'
+
+  'item_17':
+    material: LIME_TERRACOTTA
+    slot: 25
+    item_flags:
+      - HIDE_ATTRIBUTES
+      - HIDE_ENCHANTS
+    display_name: '&#00FF88Lime Terracotta'
+    lore:
+      - '&8ᴘʀᴇᴄɪᴏ ᴅᴇ ᴄᴏᴍᴘʀᴀ'
+      - ''
+      - ' &8| &fUnidad: &#59E91F&l$&r&#59E91F7'
+      - ' &8| &fStack x64: &#59E91F&l$&r&#59E91F448'
+      - ''
+      - '&7▶ Click para comprar'
+    left_click_commands:
+      - '[close]'
+      - '[player] shop bloques'
+      - '[sound] UI_BUTTON_CLICK'
+
+  'item_18':
+    material: PINK_TERRACOTTA
+    slot: 26
+    item_flags:
+      - HIDE_ATTRIBUTES
+      - HIDE_ENCHANTS
+    display_name: '&#00FF88Pink Terracotta'
+    lore:
+      - '&8ᴘʀᴇᴄɪᴏ ᴅᴇ ᴄᴏᴍᴘʀᴀ'
+      - ''
+      - ' &8| &fUnidad: &#59E91F&l$&r&#59E91F7'
+      - ' &8| &fStack x64: &#59E91F&l$&r&#59E91F448'
+      - ''
+      - '&7▶ Click para comprar'
+    left_click_commands:
+      - '[close]'
+      - '[player] shop bloques'
+      - '[sound] UI_BUTTON_CLICK'
+
+  'item_19':
+    material: GRAY_TERRACOTTA
+    slot: 27
+    item_flags:
+      - HIDE_ATTRIBUTES
+      - HIDE_ENCHANTS
+    display_name: '&#00FF88Gray Terracotta'
+    lore:
+      - '&8ᴘʀᴇᴄɪᴏ ᴅᴇ ᴄᴏᴍᴘʀᴀ'
+      - ''
+      - ' &8| &fUnidad: &#59E91F&l$&r&#59E91F7'
+      - ' &8| &fStack x64: &#59E91F&l$&r&#59E91F448'
+      - ''
+      - '&7▶ Click para comprar'
+    left_click_commands:
+      - '[close]'
+      - '[player] shop bloques'
+      - '[sound] UI_BUTTON_CLICK'
+
+  'item_20':
+    material: LIGHT_GRAY_TERRACOTTA
+    slot: 28
+    item_flags:
+      - HIDE_ATTRIBUTES
+      - HIDE_ENCHANTS
+    display_name: '&#00FF88Light Gray Terracotta'
+    lore:
+      - '&8ᴘʀᴇᴄɪᴏ ᴅᴇ ᴄᴏᴍᴘʀᴀ'
+      - ''
+      - ' &8| &fUnidad: &#59E91F&l$&r&#59E91F7'
+      - ' &8| &fStack x64: &#59E91F&l$&r&#59E91F448'
+      - ''
+      - '&7▶ Click para comprar'
+    left_click_commands:
+      - '[close]'
+      - '[player] shop bloques'
+      - '[sound] UI_BUTTON_CLICK'
+
+  'item_21':
+    material: CYAN_TERRACOTTA
+    slot: 29
+    item_flags:
+      - HIDE_ATTRIBUTES
+      - HIDE_ENCHANTS
+    display_name: '&#00FF88Cyan Terracotta'
+    lore:
+      - '&8ᴘʀᴇᴄɪᴏ ᴅᴇ ᴄᴏᴍᴘʀᴀ'
+      - ''
+      - ' &8| &fUnidad: &#59E91F&l$&r&#59E91F7'
+      - ' &8| &fStack x64: &#59E91F&l$&r&#59E91F448'
+      - ''
+      - '&7▶ Click para comprar'
+    left_click_commands:
+      - '[close]'
+      - '[player] shop bloques'
+      - '[sound] UI_BUTTON_CLICK'
+
+  'item_22':
+    material: PURPLE_TERRACOTTA
+    slot: 30
+    item_flags:
+      - HIDE_ATTRIBUTES
+      - HIDE_ENCHANTS
+    display_name: '&#00FF88Purple Terracotta'
+    lore:
+      - '&8ᴘʀᴇᴄɪᴏ ᴅᴇ ᴄᴏᴍᴘʀᴀ'
+      - ''
+      - ' &8| &fUnidad: &#59E91F&l$&r&#59E91F7'
+      - ' &8| &fStack x64: &#59E91F&l$&r&#59E91F448'
+      - ''
+      - '&7▶ Click para comprar'
+    left_click_commands:
+      - '[close]'
+      - '[player] shop bloques'
+      - '[sound] UI_BUTTON_CLICK'
+
+  'item_23':
+    material: BLUE_TERRACOTTA
+    slot: 31
+    item_flags:
+      - HIDE_ATTRIBUTES
+      - HIDE_ENCHANTS
+    display_name: '&#00FF88Blue Terracotta'
+    lore:
+      - '&8ᴘʀᴇᴄɪᴏ ᴅᴇ ᴄᴏᴍᴘʀᴀ'
+      - ''
+      - ' &8| &fUnidad: &#59E91F&l$&r&#59E91F7'
+      - ' &8| &fStack x64: &#59E91F&l$&r&#59E91F448'
+      - ''
+      - '&7▶ Click para comprar'
+    left_click_commands:
+      - '[close]'
+      - '[player] shop bloques'
+      - '[sound] UI_BUTTON_CLICK'
+
+  'item_24':
+    material: BROWN_TERRACOTTA
+    slot: 32
+    item_flags:
+      - HIDE_ATTRIBUTES
+      - HIDE_ENCHANTS
+    display_name: '&#00FF88Brown Terracotta'
+    lore:
+      - '&8ᴘʀᴇᴄɪᴏ ᴅᴇ ᴄᴏᴍᴘʀᴀ'
+      - ''
+      - ' &8| &fUnidad: &#59E91F&l$&r&#59E91F7'
+      - ' &8| &fStack x64: &#59E91F&l$&r&#59E91F448'
+      - ''
+      - '&7▶ Click para comprar'
+    left_click_commands:
+      - '[close]'
+      - '[player] shop bloques'
+      - '[sound] UI_BUTTON_CLICK'
+
+  'item_25':
+    material: GREEN_TERRACOTTA
+    slot: 33
+    item_flags:
+      - HIDE_ATTRIBUTES
+      - HIDE_ENCHANTS
+    display_name: '&#00FF88Green Terracotta'
+    lore:
+      - '&8ᴘʀᴇᴄɪᴏ ᴅᴇ ᴄᴏᴍᴘʀᴀ'
+      - ''
+      - ' &8| &fUnidad: &#59E91F&l$&r&#59E91F7'
+      - ' &8| &fStack x64: &#59E91F&l$&r&#59E91F448'
+      - ''
+      - '&7▶ Click para comprar'
+    left_click_commands:
+      - '[close]'
+      - '[player] shop bloques'
+      - '[sound] UI_BUTTON_CLICK'
+
+  'item_26':
+    material: RED_TERRACOTTA
+    slot: 34
+    item_flags:
+      - HIDE_ATTRIBUTES
+      - HIDE_ENCHANTS
+    display_name: '&#00FF88Red Terracotta'
+    lore:
+      - '&8ᴘʀᴇᴄɪᴏ ᴅᴇ ᴄᴏᴍᴘʀᴀ'
+      - ''
+      - ' &8| &fUnidad: &#59E91F&l$&r&#59E91F7'
+      - ' &8| &fStack x64: &#59E91F&l$&r&#59E91F448'
+      - ''
+      - '&7▶ Click para comprar'
+    left_click_commands:
+      - '[close]'
+      - '[player] shop bloques'
+      - '[sound] UI_BUTTON_CLICK'
+
+  'item_27':
+    material: BLACK_TERRACOTTA
+    slot: 35
+    item_flags:
+      - HIDE_ATTRIBUTES
+      - HIDE_ENCHANTS
+    display_name: '&#00FF88Black Terracotta'
+    lore:
+      - '&8ᴘʀᴇᴄɪᴏ ᴅᴇ ᴄᴏᴍᴘʀᴀ'
+      - ''
+      - ' &8| &fUnidad: &#59E91F&l$&r&#59E91F7'
+      - ' &8| &fStack x64: &#59E91F&l$&r&#59E91F448'
+      - ''
+      - '&7▶ Click para comprar'
+    left_click_commands:
+      - '[close]'
+      - '[player] shop bloques'
+      - '[sound] UI_BUTTON_CLICK'
+
+  # ============================================================================
+  # FILTRO Y NAVBAR INFERIOR (FILA 5: SLOTS 36 A 44)
+  # ============================================================================
+  'Boton_Filtro':
+    material: COMPARATOR
+    slot: 36
+    item_flags:
+      - HIDE_ATTRIBUTES
+      - HIDE_ENCHANTS
+    enchantments:
+      - DURABILITY;1
+    display_name: '&#FFD700Filtrar Categoría'
+    lore:
+      - '&8ᴇʟɪɂᴇ ᴄᴀᴛᴇɂᴏʀɪᴀ'
+      - ''
+      - ' &#FFD700● Todos'
+      - ' &7● Bloques'
+      - ' &7● Farmeo'
+      - ' &7● Comida'
+      - ' &7● Mobs'
+      - ' &7● Equipo'
+      - ' &7● Redstone'
+      - ' &7● Misceláneo'
+      - ' &7● Tintes'
+      - ' &7● Trims'
+      - ' &7● Encantamientos'
+      - ''
+      - '&7▶ Click para cambiar'
+    left_click_commands:
+      - '[openguimenu] compra_bloques'
+      - '[sound] UI_BUTTON_CLICK'
+
+  'Pagina_Anterior':
+    material: ARROW
+    slot: 39
+    item_flags:
+      - HIDE_ATTRIBUTES
+    display_name: '&#FFD700◀ Página Anterior'
+    lore:
+      - '&8| &fPágina: &76&8/&717'
+      - ''
+    left_click_commands:
+      - '[openguimenu] compra_todos_5'
+      - '[sound] ITEM_BOOK_PAGE_TURN'
+
+  'Boton_Volver':
+    material: DARK_OAK_DOOR
+    slot: 40
+    item_flags:
+      - HIDE_ATTRIBUTES
+    display_name: '&cVolver al Menú'
+    lore:
+      - '&8| &fRegresar a la selección principal'
+      - ''
+    left_click_commands:
+      - '[openguimenu] tienda_principal'
+      - '[sound] UI_BUTTON_CLICK'
+
+  'Pagina_Siguiente':
+    material: ARROW
+    slot: 41
+    item_flags:
+      - HIDE_ATTRIBUTES
+    display_name: '&#FFD700Página Siguiente ▶'
+    lore:
+      - '&8| &fPágina: &76&8/&717'
+      - ''
+    left_click_commands:
+      - '[openguimenu] compra_todos_7'
+      - '[sound] ITEM_BOOK_PAGE_TURN'
+
+  'Boton_SellGUI':
+    material: HOPPER
+    slot: 43
+    item_flags:
+      - HIDE_ATTRIBUTES
+    display_name: '&#59E91FVenta Rápida'
+    lore:
+      - '&8ᴠᴇɴᴛᴀ ᴀᴗᴛᴏᴍᴀᴛɪᴄᴀ'
+      - ''
+      - ' &fVende ítems en masa'
+      - ' &fde forma instantánea.'
+      - ''
+      - '&7▶ Click para abrir'
+    left_click_commands:
+      - '[close]'
+      - '[player] sellgui'
+      - '[sound] ENTITY_EXPERIENCE_ORB_PICKUP'
+
+  'Info_Balance':
+    material: head-%player_name%
+    slot: 44
+    item_flags:
+      - HIDE_ATTRIBUTES
+    display_name: '&#FFD700Tu Economía'
+    lore:
+      - '&8ᴛᴗ ᴇᴄᴏɴᴏᴍɪᴀ'
+      - ''
+      - ' &8| &fDinero: &#59E91F&l$&r&#59E91F%vault_eco_balance_formatted%'
+      - ' &8| &fAlmas: &#34B0F3%thundercurrencys_almas%🔥'
+      - ' &8| &fZafiros: &#1E6BFF%thundercurrencys_zafiros%💎'
+      - ''

@@ -1,0 +1,73 @@
+BoostAlmas:
+  TriggerConditions:
+    - haspermission{p=boost.almasx2} true
+  Skills:
+    - command{c="points give <trigger.name> <caster.var.almas> -s";sender=console} @trigger
+    - message{m="<#34B0F3>+<caster.var.almas> <white>Almas extra <#34B0F3>🔥"} @trigger
+
+DropFragmentoLimitedGeneral:
+  Skills:
+    - command{c="si give fragmentolimited 1 <trigger.name> -s";sender=console} @trigger
+    - command{c="broadcast &c&l<trigger.name> &fha conseguido un fragmento de llave &#FF4B4B&l¡&#FF8B2D&lL&#FFD031&lI&#DCFF39&lM&#A5FF3F&lI&#6DFF45&lT&#3BFFC7&lE&#58D0FF&lD&#5489FF&l! &fmatando un monstruo de la &eDungeon&f!";sender=console} @trigger
+
+DropLlaveMiticaGeneral:
+  Skills:
+    - command{c="crate key give <trigger.name> mitica 1 -s";sender=console} @trigger
+    - command{c="broadcast &c&l<trigger.name> &fha conseguido una llave &#B01111&lM&#B61515&lI&#BD1919&lT&#C31E1E&lI&#CA2222&lC&#D02626&lA &fmatando un monstruo de la dungeon!";sender=console} @trigger
+
+DropLlaveLimitedGeneral:
+  Skills:
+    - command{c="crate key give <trigger.name> mitica 1 -s";sender=console} @trigger
+    - command{c="broadcast &c&l<trigger.name> &fha conseguido una llave &#FF4B4B&l¡&#FF8B2D&lL&#FFD031&lI&#DCFF39&lM&#A5FF3F&lI&#6DFF45&lT&#3BFFC7&lE&#58D0FF&lD&#5489FF&l! &fmatando un monstruo de la dungeon!";sender=console} @trigger
+
+
+DropFragmentoLimitedPiñata:
+  Skills:
+    - command{c="si give fragmentolimited 1 <trigger.name> -s";sender=console} @trigger
+    - command{c="broadcast &c&l<trigger.name> &fha conseguido un fragmento de llave &#FF4B4B&l¡&#FF8B2D&lL&#FFD031&lI&#DCFF39&lM&#A5FF3F&lI&#6DFF45&lT&#3BFFC7&lE&#58D0FF&lD&#5489FF&l! &fde la &ePiñata!";sender=console} @trigger
+
+DropLlaveMiticaPiñata:
+  Skills:
+    - command{c="crate key give <trigger.name> mitica 1 -s";sender=console} @trigger
+    - command{c="broadcast &c&l<trigger.name> &fha conseguido una llave &#B01111&lM&#B61515&lI&#BD1919&lT&#C31E1E&lI&#CA2222&lC&#D02626&lA &fde la &ePiñata!";sender=console} @trigger
+
+DropFragmentoLimitedConejo:
+  Skills:
+    - command{c="si give fragmentolimited 1 <trigger.name> -s";sender=console} @trigger
+    - command{c="broadcast &c&l<trigger.name> &fha matado un &eConejo Evasivo &fy ha conseguido un fragmento de llave &#FF4B4B&l¡&#FF8B2D&lL&#FFD031&lI&#DCFF39&lM&#A5FF3F&lI&#6DFF45&lT&#3BFFC7&lE&#58D0FF&lD&#5489FF&l!";sender=console} @trigger
+
+DropLlaveMiticaConejo:
+  Skills:
+    - command{c="crate key give <trigger.name> mitica 1 -s";sender=console} @trigger
+    - command{c="broadcast &c&l<trigger.name> &fha matado un &eConejo Evasivo &fy ha conseguido una llave &#B01111&lM&#B61515&lI&#BD1919&lT&#C31E1E&lI&#CA2222&lC&#D02626&lA";sender=console} @trigger
+
+DropFragmentoLimitedAbeja:
+  Skills:
+    - command{c="si give fragmentolimited 1 <trigger.name> -s";sender=console} @trigger
+    - command{c="broadcast &c&l<trigger.name> &fha matado una &eAbeja Obrera &fy ha conseguido un fragmento de llave &#FF4B4B&l¡&#FF8B2D&lL&#FFD031&lI&#DCFF39&lM&#A5FF3F&lI&#6DFF45&lT&#3BFFC7&lE&#58D0FF&lD&#5489FF&l!";sender=console} @trigger
+
+DropLlaveMiticaAbeja:
+  Skills:
+    - command{c="crate key give <trigger.name> mitica 1 -s";sender=console} @trigger
+    - command{c="broadcast &c&l<trigger.name> &fha matado una &eAbeja Obrera &fy ha conseguido una llave &#B01111&lM&#B61515&lI&#BD1919&lT&#C31E1E&lI&#CA2222&lC&#D02626&lA";sender=console} @trigger
+    - command{c="execute at <trigger.name> run playsound minecraft:entity.player.levelup master <trigger.name> ~ ~ ~ 1 1";sender=console} @trigger
+    - message{m="&f[&6!&f] &eHas conseguido una llave &cMítica"} @trigger
+
+DropLlaveSuper:
+  Skills:
+    - command{c="crate key give <trigger.name> vote 1 -s";sender=console} @trigger
+    - command{c="execute at <trigger.name> run playsound minecraft:entity.player.levelup master <trigger.name> ~ ~ ~ 1 1";sender=console} @trigger
+    - message{m="&f[&6!&f] &eHas conseguido una llave &cSuper"} @trigger
+
+DropLlaveRara:
+  Skills:
+    - command{c="crate key give <trigger.name> rara 1 -s";sender=console} @trigger
+    - command{c="execute at <trigger.name> run playsound minecraft:entity.player.levelup master <trigger.name> ~ ~ ~ 1 1";sender=console} @trigger
+    - message{m="&f[&6!&f] &eHas conseguido una llave &cSuper"} @trigger
+
+DropLlaveGadgets:
+  Skills:
+    - command{c="crate key give <trigger.name> gadgets 1 -s";sender=console} @trigger
+    - command{c="execute at <trigger.name> run playsound minecraft:entity.player.levelup master <trigger.name> ~ ~ ~ 1 1";sender=console} @trigger
+    - message{m="&f[&6!&f] &eHas conseguido una llave &cGadgets"} @trigger
+

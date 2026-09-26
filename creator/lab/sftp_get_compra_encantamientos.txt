@@ -1,0 +1,2 @@
+get plugins/DeluxeMenus/gui_menus/menusIA/compra_encantamientos.yml creator/lab/compra_encantamientos.yml
+bye

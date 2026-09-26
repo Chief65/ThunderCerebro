@@ -1,0 +1,198 @@
+farmeo:
+  name: "&0&l| &0Tienda ▶ &8Farmeo"
+  size: 45
+  fillItem:
+    material: GRAY_STAINED_GLASS_PANE
+    name: " "
+  buttons:
+    goBack:
+      slot: 40
+    previousPage:
+      slot: 39
+    nextPage:
+      slot: 41
+  items:
+    1:
+      type: item
+      item:
+        material: BAMBOO
+        quantity: 1
+      buyPrice: 4
+      sellPrice: 1
+      slot: 9
+    2:
+      type: item
+      item:
+        material: BEETROOT
+        quantity: 1
+      buyPrice: 80
+      sellPrice: 20
+      slot: 10
+    3:
+      type: item
+      item:
+        material: BEETROOT_SEEDS
+        quantity: 1
+      buyPrice: 5
+      sellPrice: 1
+      slot: 11
+    4:
+      type: item
+      item:
+        material: BROWN_MUSHROOM
+        quantity: 1
+      buyPrice: 20
+      sellPrice: 1
+      slot: 12
+    5:
+      type: item
+      item:
+        material: CACTUS
+        quantity: 1
+      buyPrice: 20
+      sellPrice: 5
+      slot: 13
+    6:
+      type: item
+      item:
+        material: CARROT
+        quantity: 1
+      buyPrice: 60
+      sellPrice: 15
+      slot: 14
+    7:
+      type: item
+      item:
+        material: CHORUS_FLOWER
+        quantity: 1
+      buyPrice: 30
+      sellPrice: 1
+      slot: 15
+    8:
+      type: item
+      item:
+        material: CHORUS_FRUIT
+        quantity: 1
+      buyPrice: 5
+      sellPrice: 1
+      slot: 16
+    9:
+      type: item
+      item:
+        material: COCOA_BEANS
+        quantity: 1
+      buyPrice: 120
+      sellPrice: 30
+      slot: 17
+    10:
+      type: item
+      item:
+        material: KELP
+        quantity: 1
+      buyPrice: 6
+      sellPrice: 2
+      slot: 18
+    11:
+      type: item
+      item:
+        material: MELON
+        quantity: 1
+      buyPrice: 45
+      sellPrice: 7
+      slot: 19
+    12:
+      type: item
+      item:
+        material: MELON_SEEDS
+        quantity: 1
+      buyPrice: 5
+      sellPrice: -1
+      slot: 20
+    13:
+      type: item
+      item:
+        material: MELON_SLICE
+        quantity: 1
+      buyPrice: 5
+      sellPrice: 1
+      slot: 21
+    14:
+      type: item
+      item:
+        material: NETHER_WART
+        quantity: 1
+      buyPrice: 80
+      sellPrice: 20
+      slot: 22
+    15:
+      type: item
+      item:
+        material: POTATO
+        quantity: 1
+      buyPrice: 60
+      sellPrice: 15
+      slot: 23
+    16:
+      type: item
+      item:
+        material: PUMPKIN
+        quantity: 1
+      buyPrice: 28
+      sellPrice: 7
+      slot: 24
+    17:
+      type: item
+      item:
+        material: PUMPKIN_SEEDS
+        quantity: 1
+      buyPrice: 5
+      sellPrice: 1
+      slot: 25
+    18:
+      type: item
+      item:
+        material: RED_MUSHROOM
+        quantity: 1
+      buyPrice: 5
+      sellPrice: 1
+      slot: 26
+    19:
+      type: item
+      item:
+        material: SUGAR_CANE
+        quantity: 1
+      buyPrice: 12
+      sellPrice: 3
+      slot: 27
+    20:
+      type: item
+      item:
+        material: WHEAT
+        quantity: 1
+      buyPrice: 80
+      sellPrice: 20
+      slot: 28
+    21:
+      type: item
+      item:
+        material: WHEAT_SEEDS
+        quantity: 1
+      buyPrice: 5
+      sellPrice: 1
+      slot: 29
+    22:
+      type: item
+      item:
+        material: SWEET_BERRIES
+        quantity: 1
+      buyPrice: 28
+      sellPrice: 7
+      slot: 30
+    23:
+      type: item
+      item:
+        material: SEA_PICKLE
+        quantity: 1
+      buyPrice: 5
+      sellPrice: -1
+      slot: 31

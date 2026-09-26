@@ -1,0 +1,132 @@
+# ===== CAPATAZ DE LA MINA NIVEL 3 =====
+CapatazMina:
+  Type: IRON_GOLEM
+  Display: '&6Lvl 3 &8| &fᴄᴀᴘᴀᴛᴀᴢ ᴅᴇ ʟᴀ ᴍɪɴᴀ &8| <#ED1313><caster.hp{r=0}><&heart>'
+  Health: 28
+  Damage: 15
+  Options:
+    Scale: 1.2
+    MovementSpeed: 0.20
+    PreventOtherDrops: true
+    LeashRange: 15
+    FollowRange: 10
+    Despawn: false
+    ReturnHome: true
+  AIGoalSelectors:
+    - 0 clear
+    - 1 meleeattack
+    - 2 randomstroll
+    - 3 lookatplayers
+  AITargetSelectors:
+    - 0 clear
+    - 1 players
+  Drops:
+    - IRON_INGOT 1-5 1
+    - ROTTEN_FLESH 1 1
+  Skills:
+    ####### VISUAL #######
+    - skill{s=SonidoKill} @trigger ~onDeath
+    - setname{n=<caster.name>;delay=2} @self ~onDamaged
+    - particles{particle=SCULK_SOUL;amount=70;speed=0.1;hSpread=0.7;vSpread=0.7} @self ~onDeath
+    ####### RECOMPENSAS #######
+    - actionmessage{m="<#34B0F3>+4 <white>Almas <#34B0F3>🔥 &8| <#59E91F>+<#59E91F>&l$&r<#59E91F>40"} @trigger ~onDeath 
+    - command{c="points give <trigger.name> 4 -s";sender=console} @self ~onDeath 
+    - command{c="economy give <trigger.name> 40 -s";sender=console} @self ~onDeath  
+    - command{c="si give fragmentosuper 1 <trigger.name> -s";sender=console} @self ~onDeath 0.02 
+    - command{c="si give fragmentorara 1 <trigger.name> -s";sender=console} @self ~onDeath 0.02 
+    - command{c="si give fragmentogadget 1 <trigger.name> -s";sender=console} @self ~onDeath 0.02 
+    ####### EXTRAS #######
+    - potion{type=SPEED;duration=80;level=1} @self ~onDamaged ?health{h=<50}
+    - skill{s=BoostAlmas} @self ~onDeath 
+    - setvariable{var=almas;value=4;scope=CASTER;type=INTEGER} @self ~onSpawn
+    
+# ===== EXPLORADOR DE GALERIAS NIVEL 2 =====
+ExploradorGalerias:
+  Type: ZOMBIE
+  Display: '&eLvl 2 &8| &fᴇxᴘʟᴏʀᴀᴅᴏʀ &8| <#ED1313><caster.hp{r=0}><&heart>'
+  Health: 14
+  Damage: 9
+  Equipment:
+    - LEATHER_HELMET HEAD
+    - LEATHER_BOOTS FEET
+  Options:
+    MovementSpeed: 0.33
+    PreventOtherDrops: true
+    LeashRange: 12
+    FollowRange: 10
+    Despawn: false
+    ReturnHome: true
+  AIGoalSelectors:
+    - 0 clear
+    - 1 meleeattack
+    - 2 randomstroll
+    - 3 lookatplayers
+    - 4 float
+  AITargetSelectors:
+    - 0 clear
+    - 1 players
+  Drops:
+    - COAL 1 0.3
+    - ROTTEN_FLESH 1 1
+  Skills:
+    ####### VISUAL #######
+    - skill{s=SonidoKill} @trigger ~onDeath
+    - setname{n=<caster.name>;delay=2} @self ~onDamaged
+    - particles{particle=SCULK_SOUL;amount=40;speed=0.1;hSpread=0.5;vSpread=0.5} @self ~onDeath
+    ####### RECOMPENSAS #######
+    - actionmessage{m="<#34B0F3>+2 <white>Almas <#34B0F3>🔥 &8| <#59E91F>+<#59E91F>&l$&r<#59E91F>18"} @trigger ~onDeath 
+    - command{c="points give <trigger.name> 2 -s";sender=console} @self ~onDeath 
+    - command{c="economy give <trigger.name> 18";sender=console} @self ~onDeath 
+    - command{c="si give fragmentosuper 1 <trigger.name> -s";sender=console} @self ~onDeath 0.02 
+    - command{c="si give fragmentorara 1 <trigger.name> -s";sender=console} @self ~onDeath 0.02 
+    - command{c="si give fragmentogadget 1 <trigger.name> -s";sender=console} @self ~onDeath 0.02 
+    ####### EXTRAS #######
+    - leap{velocity=1.1} @target ~onTimer:120
+    - skill{s=BoostAlmas} @self ~onDeath 
+    - setvariable{var=almas;value=2;scope=CASTER;type=INTEGER} @self ~onSpawn
+    
+# ===== MINERO CORRUPTO NIVEL 2 =====
+MineroCorrupto:
+  Type: HUSK
+  Display: '&eLvl 2 &8| &fᴍɪɴᴇʀᴏ ᴄᴏʀʀᴜᴘᴛᴏ &8| <#ED1313><caster.hp{r=0}><&heart>'
+  Health: 16
+  Damage: 11
+  Equipment:
+    - IRON_PICKAXE HAND
+    - IRON_HELMET HEAD
+  Options:
+    Scale: 1.2
+    MovementSpeed: 0.24
+    PreventOtherDrops: true
+    LeashRange: 12
+    FollowRange: 10
+    Despawn: false
+    ReturnHome: true
+    Silent: false
+  AIGoalSelectors:
+    - 0 clear
+    - 1 meleeattack
+    - 2 randomstroll
+    - 3 lookatplayers
+    - 4 float
+  AITargetSelectors:
+    - 0 clear
+    - 1 players
+  Drops:
+    - COAL 1-2 1
+    - IRON_INGOT 1 0.3
+  Skills:
+    ####### VISUAL #######
+    - particles{particle=SCULK_SOUL;amount=40;speed=0.1;hSpread=0.5;vSpread=0.5} @self ~onDeath
+    - skill{s=SonidoKill} @trigger ~onDeath
+    - setname{n=<caster.name>;delay=2} @self ~onDamaged
+    ####### RECOMPENSAS #######
+    - command{c="si give fragmentosuper 1 <trigger.name> -s";sender=console} @self ~onDeath 0.02 
+    - command{c="si give fragmentorara 1 <trigger.name> -s";sender=console} @self ~onDeath 0.02 
+    - command{c="si give fragmentogadget 1 <trigger.name> -s";sender=console} @self ~onDeath 0.02 
+    - actionmessage{m="<#34B0F3>+2 <white>Almas <#34B0F3>🔥 &8| <#59E91F>+<#59E91F>&l$&r<#59E91F>22"} @trigger ~onDeath  
+    - command{c="points give <trigger.name> 2 -s";sender=console} @self ~onDeath  
+    - command{c="economy give <trigger.name> 22";sender=console} @self ~onDeath  
+    ####### EXTRAS #######
+    - skill{s=BoostAlmas} @self ~onDeath 
+    - setvariable{var=almas;value=2;scope=CASTER;type=INTEGER} @self ~onSpawn

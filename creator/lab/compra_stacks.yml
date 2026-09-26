@@ -1,0 +1,194 @@
+﻿menu_title: '&0&l|&r &0Compra ▶ &8Comprar Stacks'
+open_command:
+  - comprastacks
+  - maquetastacks
+size: 36
+open_requirement:
+  requirements: {}
+register_command: true
+update: true
+
+items:
+  # ============================================================================
+  # FILA 2: SELECCIÓN DE STACKS DEL 1 AL 9 (SLOTS 9 A 17)
+  # ============================================================================
+  'Stack_1':
+    material: CHEST
+    slot: 9
+    amount: 1
+    item_flags:
+      - HIDE_ATTRIBUTES
+    display_name: '&#FFF2751 Stack &8(x64)'
+    lore:
+      - '&8Compra por Lotes'
+      - ''
+      - ' &8| &fCantidad: &e64 unidades'
+      - ' &#59E91F▲ &fPrecio: &#59E91F&l$&r&#59E91F3,200'
+      - ''
+      - '&7▶ Click para comprar'
+    left_click_commands:
+      - '[sound] ENTITY_EXPERIENCE_ORB_PICKUP'
+
+  'Stack_2':
+    material: CHEST
+    slot: 10
+    amount: 2
+    item_flags:
+      - HIDE_ATTRIBUTES
+    display_name: '&#FFF2752 Stacks &8(x128)'
+    lore:
+      - '&8Compra por Lotes'
+      - ''
+      - ' &8| &fCantidad: &e128 unidades'
+      - ' &#59E91F▲ &fPrecio: &#59E91F&l$&r&#59E91F6,400'
+      - ''
+      - '&7▶ Click para comprar'
+    left_click_commands:
+      - '[sound] ENTITY_EXPERIENCE_ORB_PICKUP'
+
+  'Stack_3':
+    material: CHEST
+    slot: 11
+    amount: 3
+    item_flags:
+      - HIDE_ATTRIBUTES
+    display_name: '&#FFF2753 Stacks &8(x192)'
+    lore:
+      - '&8Compra por Lotes'
+      - ''
+      - ' &8| &fCantidad: &e192 unidades'
+      - ' &#59E91F▲ &fPrecio: &#59E91F&l$&r&#59E91F9,600'
+      - ''
+      - '&7▶ Click para comprar'
+    left_click_commands:
+      - '[sound] ENTITY_EXPERIENCE_ORB_PICKUP'
+
+  'Stack_4':
+    material: CHEST
+    slot: 12
+    amount: 4
+    item_flags:
+      - HIDE_ATTRIBUTES
+    display_name: '&#FFF2754 Stacks &8(x256)'
+    lore:
+      - '&8Compra por Lotes'
+      - ''
+      - ' &8| &fCantidad: &e256 unidades'
+      - ' &#59E91F▲ &fPrecio: &#59E91F&l$&r&#59E91F12,800'
+      - ''
+      - '&7▶ Click para comprar'
+    left_click_commands:
+      - '[sound] ENTITY_EXPERIENCE_ORB_PICKUP'
+
+  'Stack_5':
+    material: CHEST
+    slot: 13
+    amount: 5
+    item_flags:
+      - HIDE_ATTRIBUTES
+    display_name: '&#FFF2755 Stacks &8(x320)'
+    lore:
+      - '&8Compra por Lotes'
+      - ''
+      - ' &8| &fCantidad: &e320 unidades'
+      - ' &#59E91F▲ &fPrecio: &#59E91F&l$&r&#59E91F16,000'
+      - ''
+      - '&7▶ Click para comprar'
+    left_click_commands:
+      - '[sound] ENTITY_EXPERIENCE_ORB_PICKUP'
+
+  'Stack_6':
+    material: CHEST
+    slot: 14
+    amount: 6
+    item_flags:
+      - HIDE_ATTRIBUTES
+    display_name: '&#FFF2756 Stacks &8(x384)'
+    lore:
+      - '&8Compra por Lotes'
+      - ''
+      - ' &8| &fCantidad: &e384 unidades'
+      - ' &#59E91F▲ &fPrecio: &#59E91F&l$&r&#59E91F19,200'
+      - ''
+      - '&7▶ Click para comprar'
+    left_click_commands:
+      - '[sound] ENTITY_EXPERIENCE_ORB_PICKUP'
+
+  'Stack_7':
+    material: CHEST
+    slot: 15
+    amount: 7
+    item_flags:
+      - HIDE_ATTRIBUTES
+    display_name: '&#FFF2757 Stacks &8(x448)'
+    lore:
+      - '&8Compra por Lotes'
+      - ''
+      - ' &8| &fCantidad: &e448 unidades'
+      - ' &#59E91F▲ &fPrecio: &#59E91F&l$&r&#59E91F22,400'
+      - ''
+      - '&7▶ Click para comprar'
+    left_click_commands:
+      - '[sound] ENTITY_EXPERIENCE_ORB_PICKUP'
+
+  'Stack_8':
+    material: CHEST
+    slot: 16
+    amount: 8
+    item_flags:
+      - HIDE_ATTRIBUTES
+    display_name: '&#FFF2758 Stacks &8(x512)'
+    lore:
+      - '&8Compra por Lotes'
+      - ''
+      - ' &8| &fCantidad: &e512 unidades'
+      - ' &#59E91F▲ &fPrecio: &#59E91F&l$&r&#59E91F25,600'
+      - ''
+      - '&7▶ Click para comprar'
+    left_click_commands:
+      - '[sound] ENTITY_EXPERIENCE_ORB_PICKUP'
+
+  'Stack_9':
+    material: CHEST
+    slot: 17
+    amount: 9
+    item_flags:
+      - HIDE_ATTRIBUTES
+    display_name: '&#FFF2759 Stacks &8(x576)'
+    lore:
+      - '&8Compra por Lotes'
+      - ''
+      - ' &8| &fCantidad: &e576 unidades'
+      - ' &#59E91F▲ &fPrecio: &#59E91F&l$&r&#59E91F28,800'
+      - ''
+      - '&7▶ Click para comprar'
+    left_click_commands:
+      - '[sound] ENTITY_EXPERIENCE_ORB_PICKUP'
+
+  # ============================================================================
+  # FILA 4: NAVBAR (SLOTS 27 A 35) CON PANELES GRISES
+  # ============================================================================
+  'Boton_Volver':
+    material: DARK_OAK_DOOR
+    slot: 31
+    item_flags:
+      - HIDE_ATTRIBUTES
+    display_name: '&cVolver Atrás'
+    lore:
+      - '&7Regresar al selector de cantidad'
+    left_click_commands:
+      - '[openguimenu] compra_cantidad'
+      - '[sound] BLOCK_NOTE_BLOCK_BASS'
+
+  'Filtro_Navbar':
+    material: GRAY_STAINED_GLASS_PANE
+    display_name: ' '
+    slots:
+      - 27
+      - 28
+      - 29
+      - 30
+      - 32
+      - 33
+      - 34
+      - 35

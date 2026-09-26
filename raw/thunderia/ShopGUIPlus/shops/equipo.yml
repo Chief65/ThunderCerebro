@@ -1,0 +1,323 @@
+equipo:
+  name: "&0&l|&r &0Tienda ▶ &8Equipo"
+  size: 45
+  fillItem:
+    material: AIR
+    name: " "
+  buttons:
+    goBack:
+      slot: 40
+    previousPage:
+      slot: 39
+    nextPage:
+      slot: 41
+  items:
+    1:
+      type: item
+      item:
+        material: EXPERIENCE_BOTTLE
+        name: "#FFF275Experience Bottle"
+        quantity: 1
+      buyPrice: 100
+      sellPrice: -1
+      slot: 9
+    2:
+      type: item
+      item:
+        material: GOLDEN_APPLE
+        name: "#FFF275Golden Apple"
+        quantity: 1
+      buyPrice: 350
+      sellPrice: -1
+      slot: 10
+    3:
+      type: item
+      item:
+        material: WIND_CHARGE
+        name: "#FFF275Wind Charge"
+        quantity: 1
+      buyPrice: 10
+      sellPrice: -1
+      slot: 11
+    4:
+      type: item
+      item:
+        material: ENDER_PEARL
+        name: "#FFF275Ender Pearl"
+        quantity: 1
+      buyPrice: 50
+      sellPrice: -1
+      slot: 12
+    5:
+      type: item
+      item:
+        material: TIPPED_ARROW
+        potion:
+          type: SLOW_FALLING
+        name: "#FFF275Flecha de Caída Lenta"
+        quantity: 1
+      buyPrice: 100
+      sellPrice: -1
+      slot: 13
+    6:
+      type: item
+      item:
+        material: ARROW
+        name: "#FFF275Arrow"
+        quantity: 1
+      buyPrice: 5
+      sellPrice: -1
+      slot: 14
+    7:
+      type: item
+      item:
+        material: SPECTRAL_ARROW
+        name: "#FFF275Spectral Arrow"
+        quantity: 1
+      buyPrice: 100
+      sellPrice: -1
+      slot: 15
+    8:
+      type: item
+      item:
+        material: NETHERITE_UPGRADE_SMITHING_TEMPLATE
+        name: "#FFF275Netherite Upgrade Smithing Template"
+        quantity: 1
+      buyPrice: 25000
+      sellPrice: -1
+      slot: 16
+    9:
+      type: item
+      item:
+        material: TOTEM_OF_UNDYING
+        name: "#FFF275Totem Of Undying"
+        quantity: 1
+      buyPrice: 2500
+      sellPrice: -1
+      slot: 17
+    10:
+      type: item
+      item:
+        material: MILK_BUCKET
+        name: "#FFF275Milk Bucket"
+        quantity: 1
+      buyPrice: 5000
+      sellPrice: -1
+      slot: 18
+    11:
+      type: item
+      item:
+        material: SPLASH_POTION
+        potion:
+          type: STRONG_HEALING
+        name: "#FFF275Poción Arrojadiza de Curación II"
+        quantity: 1
+      buyPrice: 420
+      sellPrice: -1
+      slot: 19
+    12:
+      type: item
+      item:
+        material: SPLASH_POTION
+        potion:
+          type: LONG_FIRE_RESISTANCE
+        name: "#FFF275Poción Arrojadiza de Resistencia al Fuego"
+        quantity: 1
+      buyPrice: 500
+      sellPrice: -1
+      slot: 20
+    13:
+      type: item
+      item:
+        material: SPLASH_POTION
+        potion:
+          type: LONG_SWIFTNESS
+        name: "#FFF275Poción Arrojadiza de Velocidad"
+        quantity: 1
+      buyPrice: 500
+      sellPrice: -1
+      slot: 21
+    14:
+      type: item
+      item:
+        material: SPLASH_POTION
+        potion:
+          type: STRONG_SWIFTNESS
+        name: "#FFF275Poción Arrojadiza de Velocidad II"
+        quantity: 1
+      buyPrice: 500
+      sellPrice: -1
+      slot: 22
+    15:
+      type: item
+      item:
+        material: SPLASH_POTION
+        potion:
+          type: LONG_STRENGTH
+        name: "#FFF275Poción Arrojadiza de Fuerza"
+        quantity: 1
+      buyPrice: 500
+      sellPrice: -1
+      slot: 23
+    16:
+      type: item
+      item:
+        material: SPLASH_POTION
+        potion:
+          type: STRONG_STRENGTH
+        name: "#FFF275Poción Arrojadiza de Fuerza II"
+        quantity: 1
+      buyPrice: 500
+      sellPrice: -1
+      slot: 24
+    17:
+      type: command
+      item:
+        material: HONEY_BOTTLE
+        name: "#FFF275Prisa Minera"
+        lore:
+          - "&8Poción Útil"
+          - ""
+          - " &7Prisa Minera II"
+          - " &710 Minutos"
+          - ""
+        quantity: 1
+      commands:
+        - "si give prisaminera 1 %PLAYER%"
+      buyPrice: 500
+      sellPrice: -1
+      slot: 25
+    18:
+      type: dummy
+      item:
+        material: COMPARATOR
+        quantity: 1
+        glow: true
+        name: "#FFF275Filtrar Categoría"
+        lore:
+        - "&8Elige categoría"
+        - ""
+        - " &7● Bloques"
+        - " &7● Farmeo"
+        - " &7● Comida"
+        - " &7● Mobs"
+        - " #FFF275● Equipo"
+        - " &7● Redstone"
+        - " &7● Misceláneo"
+        - " &7● Tintes"
+        - " &7● Trims"
+        - " &7● Encantamientos"
+        - ""
+        - "&7▶ Click para cambiar"
+      commandsOnClick:
+        - "shop redstone"
+      slot: 36
+    19:
+      type: special
+      special: balance
+      slot: 44
+    20:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 37
+    21:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 38
+    22:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 39
+    23:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 41
+    24:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 42
+    25:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 43
+    26:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 0
+    27:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 1
+    28:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 2
+    29:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 3
+    30:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 4
+    31:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 5
+    32:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 6
+    33:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 7
+    34:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 8

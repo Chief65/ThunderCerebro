@@ -1,0 +1,171 @@
+﻿menu_title: '&0&l|&r &0Mercado ▶ &8Dinero &8(&#59E91F$&8)'
+open_command:
+  - mercadodinero
+  - dinerocategorias
+size: 36
+open_requirement:
+  requirements: {}
+register_command: true
+update: true
+
+items:
+  # ==========================================
+  # FILA 2: CATEGORÍAS EXCLUSIVAS DE COMPRA (SLOTS 10 - 16)
+  # ==========================================
+  'Cat_Bloques':
+    material: GRASS_BLOCK
+    slot: 10
+    item_flags:
+      - HIDE_ATTRIBUTES
+    display_name: '&#FFF275Bloques'
+    lore:
+      - '&8Tienda de Construcción'
+      - ''
+      - ' &8| &fArtículos: &e307'
+      - ''
+      - '&7▶ Click para ver catálogo'
+    left_click_commands:
+      - '[openguimenu] compra_bloques'
+      - '[sound] UI_BUTTON_CLICK'
+
+  'Cat_Comida':
+    material: COOKED_BEEF
+    slot: 11
+    item_flags:
+      - HIDE_ATTRIBUTES
+    display_name: '&#FFF275Comida'
+    lore:
+      - '&8Alimentos y Nutrición'
+      - ''
+      - ' &8| &fArtículos: &e17'
+      - ''
+      - '&7▶ Click para ver catálogo'
+    left_click_commands:
+      - '[openguimenu] compra_comida'
+      - '[sound] UI_BUTTON_CLICK'
+
+  'Cat_Equipo':
+    material: TOTEM_OF_UNDYING
+    slot: 12
+    item_flags:
+      - HIDE_ATTRIBUTES
+    display_name: '&#FFF275Equipo'
+    lore:
+      - '&8Armas y Armaduras'
+      - ''
+      - ' &8| &fArtículos: &e17'
+      - ''
+      - '&7▶ Click para ver catálogo'
+    left_click_commands:
+      - '[openguimenu] compra_equipo'
+      - '[sound] UI_BUTTON_CLICK'
+
+  'Cat_Redstone':
+    material: REDSTONE
+    slot: 13
+    item_flags:
+      - HIDE_ATTRIBUTES
+    display_name: '&#FFF275Redstone'
+    lore:
+      - '&8Circuitos y Mecanismos'
+      - ''
+      - ' &8| &fArtículos: &e10'
+      - ''
+      - '&7▶ Click para ver catálogo'
+    left_click_commands:
+      - '[openguimenu] compra_redstone'
+      - '[sound] UI_BUTTON_CLICK'
+
+  'Cat_Miscelaneo':
+    material: SADDLE
+    slot: 14
+    item_flags:
+      - HIDE_ATTRIBUTES
+    display_name: '&#FFF275Misceláneo'
+    lore:
+      - '&8Objetos Especiales'
+      - ''
+      - ' &8| &fArtículos: &e20'
+      - ''
+      - '&7▶ Click para ver catálogo'
+    left_click_commands:
+      - '[openguimenu] compra_misc'
+      - '[sound] UI_BUTTON_CLICK'
+
+  'Cat_Tintes':
+    material: RED_DYE
+    slot: 15
+    item_flags:
+      - HIDE_ATTRIBUTES
+    display_name: '&#FFF275Tintes'
+    lore:
+      - '&8Tintes y Pigmentos'
+      - ''
+      - ' &8| &fArtículos: &e16'
+      - ''
+      - '&7▶ Click para ver catálogo'
+    left_click_commands:
+      - '[openguimenu] compra_tintes'
+      - '[sound] UI_BUTTON_CLICK'
+
+  'Cat_Banners':
+    material: CYAN_BANNER
+    slot: 16
+    item_flags:
+      - HIDE_ATTRIBUTES
+    display_name: '&#FFF275Banners'
+    lore:
+      - '&8Estandartes y Patrones'
+      - ''
+      - ' &8| &fArtículos: &e108'
+      - ''
+      - '&7▶ Click para ver catálogo'
+    left_click_commands:
+      - '[openguimenu] compra_banners'
+      - '[sound] UI_BUTTON_CLICK'
+
+  # ==========================================
+  # FILA 4: BARRA DE NAVEGACIÓN (SLOTS 27 - 35)
+  # ==========================================
+  'Boton_Volver':
+    material: DARK_OAK_DOOR
+    slot: 31
+    item_flags:
+      - HIDE_ATTRIBUTES
+    display_name: '&cVolver Atrás'
+    lore:
+      - '&7Regresar al menú anterior'
+    left_click_commands:
+      - '[openguimenu] mercado_comercio'
+      - '[sound] UI_BUTTON_CLICK'
+
+  'Info_Balance':
+    material: head-%player_name%
+    slot: 35
+    item_flags:
+      - HIDE_ATTRIBUTES
+    display_name: '&#FFF275Tu Economía'
+    lore:
+      - '&8Tu Economía'
+      - ''
+      - ' &8| &fDinero: &#59E91F&l$&r&#59E91F%vault_eco_balance_formatted%'
+      - ' &8| &fAlmas: &#34B0F3%thundercurrencys_almas%🔥'
+      - ' &8| &fZafiros: &#1E6BFF%thundercurrencys_zafiros%💎'
+      - ' &8| &fXP: &#D48BFF%player_level% LVL'
+      - ''
+      - '&7▶ Click para más información'
+    left_click_commands:
+      - '[openguimenu] info_economia'
+      - '[sound] UI_BUTTON_CLICK'
+
+  'Filtro_Navbar':
+    material: GRAY_STAINED_GLASS_PANE
+    display_name: ' '
+    slots:
+      - 27
+      - 28
+      - 29
+      - 30
+      - 32
+      - 33
+      - 34

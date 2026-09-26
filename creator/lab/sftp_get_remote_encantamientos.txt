@@ -1,0 +1,2 @@
+get plugins/ShopGUIPlus/shops/encantamientos.yml creator/lab/remote_encantamientos.yml
+bye

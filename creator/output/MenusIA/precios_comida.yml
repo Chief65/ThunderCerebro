@@ -1,0 +1,390 @@
+menu_title: '&0&l|&r &0ThunderMC &0▶ &8Precios ▶ Comida'
+open_command:
+  - precios_comida
+size: 54
+open_requirement:
+  requirements: {}
+register_command: true
+update: true
+
+items:
+  # ============================================================================
+  # NAVBAR SUPERIOR: PESTAÑAS DE CATEGORÍAS (FILA 1)
+  # ============================================================================
+  'Tab_precios_farmeo':
+    material: WHEAT
+    slot: 1
+    hide_attributes: true
+    display_name: '&7Agricultura'
+    lore:
+      - '&8ᴘᴇꜱᴛᴀñᴀ'
+      - ''
+      - ' &fVer catálogo de'
+      - ' &fagricultura.'
+      - ''
+      - '&7▶ Click para cambiar'
+    left_click_commands:
+      - '[openguimenu] precios_farmeo'
+      - '[sound] UI_BUTTON_CLICK'
+
+  'Tab_precios_mobs':
+    material: GUNPOWDER
+    slot: 2
+    hide_attributes: true
+    display_name: '&7Drops de Mobs'
+    lore:
+      - '&8ᴘᴇꜱᴛᴀñᴀ'
+      - ''
+      - ' &fVer catálogo de'
+      - ' &fdrops de mobs.'
+      - ''
+      - '&7▶ Click para cambiar'
+    left_click_commands:
+      - '[openguimenu] precios_mobs'
+      - '[sound] UI_BUTTON_CLICK'
+
+  'Tab_precios_comida':
+    material: COOKED_BEEF
+    slot: 3
+    hide_attributes: true
+    hide_enchantments: true
+    enchantments:
+      - DURABILITY;1
+    display_name: '&#FF5555Comida &a✔'
+    lore:
+      - '&8ᴘᴇꜱᴛᴀñᴀ ᴀᴄᴛɪᴠᴀ'
+      - ''
+      - ' &aActualmente viendo'
+      - ' &aesta categoría.'
+
+  'Tab_precios_misc':
+    material: AMETHYST_SHARD
+    slot: 4
+    hide_attributes: true
+    display_name: '&7Misceláneo'
+    lore:
+      - '&8ᴘᴇꜱᴛᴀñᴀ'
+      - ''
+      - ' &fVer catálogo de'
+      - ' &fmisceláneo.'
+      - ''
+      - '&7▶ Click para cambiar'
+    left_click_commands:
+      - '[openguimenu] precios_misc'
+      - '[sound] UI_BUTTON_CLICK'
+
+  'Tab_precios_redstone':
+    material: REDSTONE
+    slot: 5
+    hide_attributes: true
+    display_name: '&7Redstone'
+    lore:
+      - '&8ᴘᴇꜱᴛᴀñᴀ'
+      - ''
+      - ' &fVer catálogo de'
+      - ' &fredstone.'
+      - ''
+      - '&7▶ Click para cambiar'
+    left_click_commands:
+      - '[openguimenu] precios_redstone'
+      - '[sound] UI_BUTTON_CLICK'
+
+  'Tab_precios_equipo':
+    material: DIAMOND_SWORD
+    slot: 6
+    hide_attributes: true
+    display_name: '&7Equipo & Minería'
+    lore:
+      - '&8ᴘᴇꜱᴛᴀñᴀ'
+      - ''
+      - ' &fVer catálogo de'
+      - ' &fequipo & minería.'
+      - ''
+      - '&7▶ Click para cambiar'
+    left_click_commands:
+      - '[openguimenu] precios_equipo'
+      - '[sound] UI_BUTTON_CLICK'
+
+  'Tab_precios_bloques':
+    material: GRASS_BLOCK
+    slot: 7
+    hide_attributes: true
+    display_name: '&7Bloques'
+    lore:
+      - '&8ᴘᴇꜱᴛᴀñᴀ'
+      - ''
+      - ' &fVer catálogo de'
+      - ' &fbloques.'
+      - ''
+      - '&7▶ Click para cambiar'
+    left_click_commands:
+      - '[openguimenu] precios_bloques'
+      - '[sound] UI_BUTTON_CLICK'
+
+  'Separador_Top':
+    material: BLACK_STAINED_GLASS_PANE
+    display_name: ' '
+    slots:
+      - 0
+      - 8
+      - 9
+      - 10
+      - 11
+      - 12
+      - 13
+      - 14
+      - 15
+      - 16
+      - 17
+
+  # ============================================================================
+  # CATÁLOGO DE ÍTEMS DE LA CATEGORÍA (FILAS 3 A 5)
+  # ============================================================================
+  'item_1':
+    material: APPLE
+    slot: 19
+    hide_attributes: true
+    display_name: ' '
+    lore:
+      - '&8ᴘʀᴇᴄɪᴏ ᴅᴇ ᴠᴇɴᴛᴀ'
+      - ''
+      - ' &8▶ &fUnidad: &a$2'
+      - ' &8▶ &fStack x64: &a$128'
+
+  'item_2':
+    material: CAKE
+    slot: 20
+    hide_attributes: true
+    display_name: '&#FFF275CAKE'
+    lore:
+      - '&8ᴘʀᴇᴄɪᴏ ᴅᴇ ᴠᴇɴᴛᴀ'
+      - ''
+      - ' &8▶ &fUnidad: &a$8'
+      - ' &8▶ &fStack x64: &a$512'
+
+  'item_3':
+    material: COOKIE
+    slot: 21
+    hide_attributes: true
+    display_name: '&#FFF275COOKIE'
+    lore:
+      - '&8ᴘʀᴇᴄɪᴏ ᴅᴇ ᴠᴇɴᴛᴀ'
+      - ''
+      - ' &8▶ &fUnidad: &a$1'
+      - ' &8▶ &fStack x64: &a$64'
+
+  'item_4':
+    material: GOLDEN_CARROT
+    slot: 22
+    hide_attributes: true
+    display_name: '&#FFF275GOLDEN CARROT'
+    lore:
+      - '&8ᴘʀᴇᴄɪᴏ ᴅᴇ ᴠᴇɴᴛᴀ'
+      - ''
+      - ' &8▶ &fUnidad: &a$3'
+      - ' &8▶ &fStack x64: &a$192'
+
+  'item_5':
+    material: COOKED_BEEF
+    slot: 23
+    hide_attributes: true
+    display_name: '&#FFF275COOKED BEEF'
+    lore:
+      - '&8ᴘʀᴇᴄɪᴏ ᴅᴇ ᴠᴇɴᴛᴀ'
+      - ''
+      - ' &8▶ &fUnidad: &a$2'
+      - ' &8▶ &fStack x64: &a$128'
+
+  'item_6':
+    material: COOKED_CHICKEN
+    slot: 24
+    hide_attributes: true
+    display_name: '&#FFF275COOKED CHICKEN'
+    lore:
+      - '&8ᴘʀᴇᴄɪᴏ ᴅᴇ ᴠᴇɴᴛᴀ'
+      - ''
+      - ' &8▶ &fUnidad: &a$2'
+      - ' &8▶ &fStack x64: &a$128'
+
+  'item_7':
+    material: COOKED_MUTTON
+    slot: 25
+    hide_attributes: true
+    display_name: '&#FFF275COOKED MUTTON'
+    lore:
+      - '&8ᴘʀᴇᴄɪᴏ ᴅᴇ ᴠᴇɴᴛᴀ'
+      - ''
+      - ' &8▶ &fUnidad: &a$2'
+      - ' &8▶ &fStack x64: &a$128'
+
+  'item_8':
+    material: COOKED_PORKCHOP
+    slot: 28
+    hide_attributes: true
+    display_name: '&#FFF275COOKED PORKCHOP'
+    lore:
+      - '&8ᴘʀᴇᴄɪᴏ ᴅᴇ ᴠᴇɴᴛᴀ'
+      - ''
+      - ' &8▶ &fUnidad: &a$2'
+      - ' &8▶ &fStack x64: &a$128'
+
+  'item_9':
+    material: COOKED_RABBIT
+    slot: 29
+    hide_attributes: true
+    display_name: '&#FFF275COOKED RABBIT'
+    lore:
+      - '&8ᴘʀᴇᴄɪᴏ ᴅᴇ ᴠᴇɴᴛᴀ'
+      - ''
+      - ' &8▶ &fUnidad: &a$2'
+      - ' &8▶ &fStack x64: &a$128'
+
+  'item_10':
+    material: BAKED_POTATO
+    slot: 30
+    hide_attributes: true
+    display_name: '&#FFF275BAKED POTATO'
+    lore:
+      - '&8ᴘʀᴇᴄɪᴏ ᴅᴇ ᴠᴇɴᴛᴀ'
+      - ''
+      - ' &8▶ &fUnidad: &a$3'
+      - ' &8▶ &fStack x64: &a$192'
+
+  'item_11':
+    material: MELON_SLICE
+    slot: 31
+    hide_attributes: true
+    display_name: '&#FFF275MELON SLICE'
+    lore:
+      - '&8ᴘʀᴇᴄɪᴏ ᴅᴇ ᴠᴇɴᴛᴀ'
+      - ''
+      - ' &8▶ &fUnidad: &a$1'
+      - ' &8▶ &fStack x64: &a$64'
+
+  'item_12':
+    material: PUMPKIN_PIE
+    slot: 32
+    hide_attributes: true
+    display_name: '&#FFF275PUMPKIN PIE'
+    lore:
+      - '&8ᴘʀᴇᴄɪᴏ ᴅᴇ ᴠᴇɴᴛᴀ'
+      - ''
+      - ' &8▶ &fUnidad: &a$3'
+      - ' &8▶ &fStack x64: &a$192'
+
+  'item_13':
+    material: BREAD
+    slot: 33
+    hide_attributes: true
+    display_name: '&#FFF275BREAD'
+    lore:
+      - '&8ᴘʀᴇᴄɪᴏ ᴅᴇ ᴠᴇɴᴛᴀ'
+      - ''
+      - ' &8▶ &fUnidad: &a$2'
+      - ' &8▶ &fStack x64: &a$128'
+
+  'item_14':
+    material: COOKED_COD
+    slot: 34
+    hide_attributes: true
+    display_name: '&#FFF275COOKED COD'
+    lore:
+      - '&8ᴘʀᴇᴄɪᴏ ᴅᴇ ᴠᴇɴᴛᴀ'
+      - ''
+      - ' &8▶ &fUnidad: &a$5'
+      - ' &8▶ &fStack x64: &a$320'
+
+  'item_15':
+    material: COOKED_SALMON
+    slot: 37
+    hide_attributes: true
+    display_name: '&#FFF275COOKED SALMON'
+    lore:
+      - '&8ᴘʀᴇᴄɪᴏ ᴅᴇ ᴠᴇɴᴛᴀ'
+      - ''
+      - ' &8▶ &fUnidad: &a$5'
+      - ' &8▶ &fStack x64: &a$320'
+
+  'item_16':
+    material: GOLDEN_APPLE
+    slot: 38
+    hide_attributes: true
+    display_name: '&#FFF275GOLDEN APPLE'
+    lore:
+      - '&8ᴘʀᴇᴄɪᴏ ᴅᴇ ᴠᴇɴᴛᴀ'
+      - ''
+      - ' &8▶ &fUnidad: &a$20'
+      - ' &8▶ &fStack x64: &a$1280'
+
+  'item_17':
+    material: MILK_BUCKET
+    slot: 39
+    hide_attributes: true
+    display_name: '&#FFF275MILK BUCKET'
+    lore:
+      - '&8ᴘʀᴇᴄɪᴏ ᴅᴇ ᴠᴇɴᴛᴀ'
+      - ''
+      - ' &8▶ &fUnidad: &a$25'
+      - ' &8▶ &fStack x64: &a$1600'
+
+  'Bordes_Laterales':
+    material: GRAY_STAINED_GLASS_PANE
+    display_name: ' '
+    slots:
+      - 18
+      - 26
+      - 27
+      - 35
+      - 36
+      - 44
+
+  # ============================================================================
+  # NAVBAR INFERIOR (FILA 6)
+  # ============================================================================
+  'Boton_Volver':
+    material: DARK_OAK_DOOR
+    slot: 49
+    hide_attributes: true
+    display_name: '&cVolver Atrás'
+    lore:
+      - '&8Regresar al menú principal'
+    left_click_commands:
+      - '[openguimenu] tienda_principal'
+      - '[sound] UI_BUTTON_CLICK'
+
+  'Boton_SellGUI':
+    material: HOPPER
+    slot: 52
+    hide_attributes: true
+    display_name: '&#00B7FFVenta Rápida'
+    lore:
+      - '&8ᴠᴇɴᴛᴀ ᴀᴜᴛᴏᴍᴀᴛɪᴄᴀ'
+      - ''
+      - ' &fVende tu inventario.'
+      - ''
+      - '&7▶ Click para abrir'
+    left_click_commands:
+      - '[close]'
+      - '[player] sellgui'
+      - '[sound] ENTITY_EXPERIENCE_ORB_PICKUP'
+
+  'Info_Balance':
+    material: SUNFLOWER
+    slot: 53
+    hide_attributes: true
+    display_name: '&#FFD700Tu Economía'
+    lore:
+      - '&8ʙᴀʟᴀɴᴄᴇ'
+      - ''
+      - ' &8▶ &a$%vault_eco_balance_formatted%'
+
+  'Filtro_Navbar_Bottom':
+    material: GRAY_STAINED_GLASS_PANE
+    display_name: ' '
+    slots:
+      - 45
+      - 46
+      - 47
+      - 48
+      - 50
+      - 51

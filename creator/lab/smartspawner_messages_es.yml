@@ -1,0 +1,196 @@
+# Configuration version – do not modify this value
+language_version: 1.6.6
+
+# SmartSpawner – messages.yml (ThunderMC Semantic Color Standard)
+# - Exito / Afirmativo: &8[&eSpawners&8] &#59E91F✔ &f{Variable} &#59E91Fᴛᴇxᴛᴏ ᴇɴ ꜱᴍᴀʟʟ ᴄᴀᴘꜱ
+# - Error / Bloqueo:    &8[&eSpawners&8] &#FF4D4D✘ &f{Variable} &#FF4D4Dᴛᴇxᴛᴏ ᴇɴ ꜱᴍᴀʟʟ ᴄᴀᴘꜱ
+# - Neutro / Info:      &8[&eSpawners&8] &7⚙ &f{Variable} &7ᴛᴇxᴛᴏ ᴇɴ ꜱᴍᴀʟʟ ᴄᴀᴘꜱ
+# - Action Bar:         &#59E91F✔ / &#FF4D4D✘ / &7⚙ minimalista con texto coloreado
+
+prefix: ''
+
+# ──────────────────────────────────────────────────────
+#             Spawner - Player Interaction
+# ──────────────────────────────────────────────────────
+spawner_activated:
+  message: '&8[&eSpawners&8] &#59E91F✔ &fGenerador &#59E91Fᴀᴄᴛɪᴠᴀᴅᴏ ᴄᴏʀʀᴇᴄᴛᴀᴍᴇɴᴛᴇ'
+  sound: block.beacon.activate
+
+spawner_protected:
+  action_bar: '&#FF4D4D✘ &#FF4D4Dᴇꜱᴛᴇ ɢᴇɴᴇʀᴀᴅᴏʀ ᴇꜱᴛᴀ &fᴘʀᴏᴛᴇɢɪᴅᴏ'
+  sound: block.note_block.pling
+
+# ──────────────────────────────────────────────────────
+#             Spawner - Main GUI Interactions
+# ──────────────────────────────────────────────────────
+no_exp:
+  action_bar: '&#FF4D4D✘ &#FF4D4Dɴᴏ ʜᴀʏ &fᴇxᴘᴇʀɪᴇɴᴄɪᴀ &#FF4D4Dᴅɪꜱᴘᴏɴɪʙʟᴇ'
+  sound: block.note_block.pling
+
+exp_collected:
+  action_bar: '&#59E91F✔ &f+{exp} &#59E91Fxᴘ ʀᴇᴄᴏɢɪᴅᴀ'
+  sound: entity.experience_orb.pickup
+
+exp_collected_with_mending:
+  action_bar: '&#59E91F✔ &f+{exp} &#59E91Fxᴘ &8| &f-{exp_mending} &#59E91Fᴇɴ ʀᴇᴘᴀʀᴀᴄɪᴏɴ'
+  sound: entity.experience_orb.pickup
+
+# ──────────────────────────────────────────────────────
+#            Spawner - Storage GUI Interactions
+# ──────────────────────────────────────────────────────
+click_too_fast:
+  action_bar: '&#FF4D4D✘ &#FF4D4Dᴄʟɪᴄ ᴅᴇᴍᴀꜱɪᴀᴅᴏ &fʀᴀᴘɪᴅᴏ'
+  sound: block.note_block.bass
+
+inventory_full:
+  action_bar: '&#FF4D4D✘ &#FF4D4Dɪɴᴠᴇɴᴛᴀʀɪᴏ &fʟʟᴇɴᴏ'
+  sound: block.note_block.pling
+
+no_items_to_take:
+  action_bar: '&#FF4D4D✘ &#FF4D4Dɴᴏ ʜᴀʏ íᴛᴇᴍꜱ ᴘᴀʀᴀ &fʀᴇᴄᴏɢᴇʀ'
+  sound: block.note_block.pling
+
+take_all_items:
+  action_bar: '&#59E91F✔ &f+{amount} &#59E91Fíᴛᴇᴍꜱ ʀᴇᴄᴏɢɪᴅᴏꜱ'
+  sound: entity.item.pickup
+
+no_items_to_drop:
+  action_bar: '&#FF4D4D✘ &#FF4D4Dɴᴏ ʜᴀʏ íᴛᴇᴍꜱ ᴘᴀʀᴀ &fꜱᴏʟᴛᴀʀ'
+  sound: block.note_block.pling
+
+items_not_available:
+  action_bar: '&#FF4D4D✘ &#FF4D4Díᴛᴇᴍꜱ ɴᴏ &fᴅɪꜱᴘᴏɴɪʙʟᴇꜱ'
+  sound: block.note_block.pling
+
+drop_failed:
+  action_bar: '&#FF4D4D✘ &#FF4D4Dᴇʀʀᴏʀ ᴀʟ &fꜱᴏʟᴛᴀʀ &#FF4D4Díᴛᴇᴍꜱ'
+  sound: block.note_block.pling
+
+# ──────────────────────────────────────────────────────
+#         Spawner - Stacker GUI Interaction
+# ──────────────────────────────────────────────────────
+spawner_stacker_minimum_reached:
+  action_bar: '&#FF4D4D✘ &#FF4D4Dʟɪᴍɪᴛᴇ ᴅᴇ ᴘɪʟᴀ ᴀʟᴄᴀɴᴢᴀᴅᴏ &8(&f+{amount}&8)'
+  sound: block.note_block.pling
+
+spawner_cannot_remove_last:
+  action_bar: '&#FF4D4D✘ &#FF4D4Dɴᴏ ᴘᴜᴇᴅᴇꜱ ʀᴇᴛɪʀᴀʀ ᴇʟ &fᴜʟᴛɪᴍᴏ &#FF4D4Dꜱᴘᴀᴡɴᴇʀ'
+  sound: block.note_block.pling
+
+spawner_insufficient_quantity:
+  action_bar: '&#FF4D4D✘ &#FF4D4Dꜱᴘᴀᴡɴᴇʀꜱ ɪɴꜱᴜꜰɪᴄɪᴇɴᴛᴇꜱ &8(&f{amountAvailable}&7/&f{amountChange}&8)'
+  sound: block.note_block.pling
+
+inventory_full_items_dropped:
+  message: '&8[&eSpawners&8] &#FF4D4D✘ &fInventario Lleno &#FF4D4Díᴛᴇᴍꜱ ᴅᴇᴊᴀᴅᴏꜱ ᴇɴ ᴇʟ ꜱᴜᴇʟᴏ'
+  sound: block.note_block.pling
+
+# ──────────────────────────────────────────────────────
+#             Spawner - Stack Interaction
+# ──────────────────────────────────────────────────────
+spawner_invalid:
+  action_bar: '&#FF4D4D✘ &#FF4D4Dᴛɪᴘᴏ ᴅᴇ ꜱᴘᴀᴡɴᴇʀ &fɪɴᴠᴀʟɪᴅᴏ'
+  sound: block.note_block.pling
+
+spawner_different:
+  action_bar: '&#FF4D4D✘ &#FF4D4Dʟᴏꜱ ꜱᴘᴀᴡɴᴇʀꜱ ᴅᴇʙᴇɴ ꜱᴇʀ ᴅᴇʟ &fᴍɪꜱᴍᴏ ᴛɪᴘᴏ'
+  sound: block.note_block.pling
+
+spawner_stack_full:
+  message: '&8[&eSpawners&8] &#FF4D4D✘ &f{max} &#FF4D4Dʟɪᴍɪᴛᴇ ᴍᴀxɪᴍᴏ ᴅᴇ ᴀᴘɪʟᴀᴅᴏ ᴀʟᴄᴀɴᴢᴀᴅᴏ'
+  action_bar: '&#FF4D4D✘ &#FF4D4Dʟɪᴍɪᴛᴇ ᴍᴀxɪᴍᴏ ᴅᴇ ᴀᴘɪʟᴀᴅᴏ: &f{max}'
+  sound: block.note_block.pling
+
+spawner_stack_success:
+  message: '&8[&eSpawners&8] &#59E91F✔ &f{amount}x &#59E91Fꜱᴘᴀᴡɴᴇʀꜱ ᴀᴘɪʟᴀᴅᴏꜱ ᴄᴏʀʀᴇᴄᴛᴀᴍᴇɴᴛᴇ'
+  action_bar: '&#59E91F✔ &f+{amount} &#59E91Fꜱᴘᴀᴡɴᴇʀꜱ ᴀᴘɪʟᴀᴅᴏꜱ'
+  sound: entity.player.levelup
+
+# ──────────────────────────────────────────────────────
+#             Spawner - List GUI Interaction
+# ──────────────────────────────────────────────────────
+teleported_to_spawner:
+  message: '&8[&eSpawners&8] &7⚙ &fTeletransporte &7ᴛᴇʟᴇᴛʀᴀɴꜱᴘᴏʀᴛᴀᴅᴏ ᴀʟ ꜱᴘᴀᴡɴᴇʀ'
+  sound: entity.enderman.teleport
+
+spawner_not_found:
+  message: '&8[&eSpawners&8] &#FF4D4D✘ &fError &#FF4D4Dꜱᴘᴀᴡɴᴇʀ ɴᴏ ᴇɴᴄᴏɴᴛʀᴀᴅᴏ'
+  sound: entity.enderman.teleport
+
+# ──────────────────────────────────────────────────────
+#             Spawner - Egg Interaction
+# ──────────────────────────────────────────────────────
+invalid_egg:
+  action_bar: '&#FF4D4D✘ &#FF4D4Dʜᴜᴇᴠᴏ ᴅᴇ ɢᴇɴᴇʀᴀᴄɪᴏɴ &fɪɴᴠᴀʟɪᴅᴏ'
+  sound: entity.enderman.teleport
+
+entity_changed:
+  message: '&8[&eSpawners&8] &#59E91F✔ &f{entity} &#59E91Fᴛɪᴘᴏ ᴅᴇ ᴇɴᴛɪᴅᴀᴅ ᴄᴀᴍʙɪᴀᴅᴀ'
+  action_bar: '&#59E91F✔ &#59E91Fᴛɪᴘᴏ ᴄᴀᴍʙɪᴀᴅᴏ ᴀ &f{entity}'
+  sound: entity.player.levelup
+
+# ──────────────────────────────────────────────────────
+#             Spawner - Break Interaction
+# ──────────────────────────────────────────────────────
+spawner_break_no_permission:
+  message: '&8[&eSpawners&8] &#FF4D4D✘ &fPermisos &#FF4D4Dɴᴏ ᴛɪᴇɴᴇꜱ ᴘᴇʀᴍɪꜱᴏ ᴘᴀʀᴀ ᴘɪᴄᴀʀ ꜱᴘᴀᴡɴᴇʀꜱ'
+  action_bar: '&#FF4D4D✘ &#FF4D4Dꜱɪɴ ᴘᴇʀᴍɪꜱᴏꜱ ᴘᴀʀᴀ &fᴘɪᴄᴀʀ ꜱᴘᴀᴡɴᴇʀ'
+  sound: entity.villager.no
+
+spawner_break_silk_touch_required:
+  message: '&8[&eSpawners&8] &#FF4D4D✘ &fToque de Seda &#FF4D4Dʀᴇǫᴜᴇʀɪᴅᴏ ᴘᴀʀᴀ ʀᴇᴄᴏɢᴇʀ ᴇʟ ꜱᴘᴀᴡɴᴇʀ'
+  action_bar: '&#FF4D4D✘ &#FF4D4Dꜱᴇ ʀᴇǫᴜɪᴇʀᴇ &fᴛᴏǫᴜᴇ ᴅᴇ ꜱᴇᴅᴀ'
+  sound: item.shield.block
+
+spawner_break_required_tools:
+  message: '&8[&eSpawners&8] &#FF4D4D✘ &fHerramienta &#FF4D4Dʜᴇʀʀᴀᴍɪᴇɴᴛᴀ ɪɴᴄᴏʀʀᴇᴄᴛᴀ ᴘᴀʀᴀ ᴇꜱᴛᴇ ꜱᴘᴀᴡɴᴇʀ'
+  action_bar: '&#FF4D4D✘ &#FF4D4Dʜᴇʀʀᴀᴍɪᴇɴᴛᴀ &fɪɴᴄᴏʀʀᴇᴄᴛᴀ'
+  sound: item.shield.block
+
+spawner_break_warning:
+  enabled: false
+  title: '&#FF4D4D⚠ &f¡ADVERTENCIA!'
+  subtitle: '&#FF4D4Dʟᴏꜱ íᴛᴇᴍꜱ ᴅᴇʟ ꜱᴘᴀᴡɴᴇʀ ꜱᴇ ᴘᴇʀᴅᴇʀᴀɴ'
+  sound: block.note_block.bass
+
+natural_spawner_break_blocked:
+  message: '&8[&eSpawners&8] &#FF4D4D✘ &fProtegido &#FF4D4Dʟᴏꜱ ꜱᴘᴀᴡɴᴇʀꜱ ɴᴀᴛᴜʀᴀʟᴇꜱ ɴᴏ ꜱᴇ ᴘᴜᴇᴅᴇɴ ʀᴏᴍᴘᴇʀ'
+  action_bar: '&#FF4D4D✘ &#FF4D4Dꜱᴘᴀᴡɴᴇʀ ɴᴀᴛᴜʀᴀʟ &fᴘʀᴏᴛᴇɢɪᴅᴏ'
+  sound: block.note_block.pling
+
+# ──────────────────────────────────────────────────────
+#              Sell Integration Messages
+# ──────────────────────────────────────────────────────
+sell_failed:
+  message: '&8[&eSpawners&8] &#FF4D4D✘ &fVenta &#FF4D4Dᴇʀʀᴏʀ ᴀʟ ᴠᴇɴᴅᴇʀ ʟᴏꜱ íᴛᴇᴍꜱ'
+  action_bar: '&#FF4D4D✘ &#FF4D4Dᴇʀʀᴏʀ ᴀʟ &fᴠᴇɴᴅᴇʀ'
+  sound: block.note_block.pling
+
+no_items:
+  action_bar: '&#FF4D4D✘ &#FF4D4Dɴᴏ ʜᴀʏ íᴛᴇᴍꜱ ᴘᴀʀᴀ &fᴠᴇɴᴅᴇʀ'
+  sound: block.note_block.pling
+
+no_sellable_items:
+  action_bar: '&#FF4D4D✘ &#FF4D4Dɴᴏ ʜᴀʏ íᴛᴇᴍꜱ &fᴠᴇɴᴅɪʙʟᴇꜱ'
+  sound: block.note_block.pling
+
+sell_success:
+  message: '&8[&eSpawners&8] &#59E91F✔ &f{amount}x &#59E91Fíᴛᴇᴍꜱ ᴠᴇɴᴅɪᴅᴏꜱ ᴘᴏʀ &f+${price}'
+  action_bar: '&#59E91F✔ &f{amount} &#59E91Fíᴛᴇᴍꜱ ᴠᴇɴᴅɪᴅᴏꜱ: &f+${price}'
+  sound: block.note_block.bell
+
+action_in_progress:
+  action_bar: '&#FF4D4D✘ &#FF4D4Dᴏᴘᴇʀᴀᴄɪᴏɴ ᴇɴ &fᴄᴜʀꜱᴏ... &#FF4D4Dᴇꜱᴘᴇʀᴀ'
+  sound: block.note_block.pling
+
+spawner_selling:
+  action_bar: '&7⚙ &7ᴠᴇɴᴅɪᴇɴᴅᴏ íᴛᴇᴍꜱ... &fᴇꜱᴘᴇʀᴀ'
+  sound: block.note_block.pling
+
+action_failed:
+  action_bar: '&#FF4D4D✘ &#FF4D4Dᴏᴘᴇʀᴀᴄɪᴏɴ &fꜰᴀʟʟɪᴅᴀ'
+  sound: block.note_block.pling
+
+please_wait:
+  action_bar: '&7⚙ &7ᴘʀᴏᴄᴇꜱᴀɴᴅᴏ... &fᴇꜱᴘᴇʀᴀ'
+  sound: block.note_block.harp

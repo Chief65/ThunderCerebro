@@ -1,0 +1,318 @@
+# El nombre o nombre mostrado
+name: '&#59E91FBolsa de Dinero &8[&#59E91FIV&8]'
+# La descripción del objeto
+lore:
+- '&8ʀᴇᴄᴏᴍᴘᴇɴꜱᴀ'
+- ''
+- ' &7Saco acaudalado '
+- ' &7para tu economia.'
+- ''
+- ' &#59E91F• &fPremio: &#59E91F$40K-$100K '
+- ''
+- ' &8⁂ &#B01111&lM&#B61515&lI&#BD1919&lT&#C31E1E&lI&#CA2222&lC&#D02626&lA &e⭐⭐⭐⭐&7⭐'
+- ''
+- '&7▶ ᴄʟɪᴄᴋ ᴅᴇʀ - ᴀʙʀɪʀ'
+# El material
+material: PLAYER_HEAD
+# Efecto de brillo del objeto
+glow: true
+# ¿Desactivar el apilado de objetos?
+disableStack: true
+# ¿Mantener el objeto al morir?
+keepItemOnDeath: false
+# Solo puede ser usado por el propietario
+# ⚠ Requiere Almacenar información del objeto en true
+canBeUsedOnlyByTheOwner: false
+# ¿Almacenar información del objeto?
+# Almacenar la información del objeto como el propietario
+storeItemInfo: false
+# ¿Objeto irrompible?
+unbreakable: false
+usage: 0
+usageLimit: -1
+cancelEventIfNoPerm: false
+# Cancelar evento si no es propietario
+cancelEventIfNotOwner: false
+disabledWorlds: []
+config_5: true
+# Desactivar el efecto de brillo de encantamiento
+disableEnchantGlide: false
+# Activadores en Lista Negra
+# (pueden ser usados por todos incluso si
+# la característica de solo propietario está activada)
+onlyOwnerBlackListedActivators: []
+# La característica de durabilidad
+# será ignorada, y el uso
+# será usado como durabilidad
+isDurabilityBasedOnUsage: false
+# Cancelar el evento si el jugador no tiene permiso
+cancelEventIfNoPermission: false
+# Las características de mundos en lista blanca
+whitelistedWorlds: []
+# El planeador
+glider: false
+# Mantener los atributos predeterminados
+# Solo para 1.19+
+keepDefaultAttributes: false
+# Para nuevo objeto DÉJALO FALSO POR FAVOR
+# De lo contrario puedes dejarlo verdadero
+# si quieres actualizar tus objetos antiguos ponlo en FALSO
+# Pero ten cuidado, las etiquetas del objeto pueden cambiar
+# puede afectar a shopkeeper o recetas de crafteo personalizadas
+# Solo para 1.19+
+ignoreKeepDefaultAttributesFeature: true
+config_update: true
+headValue: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMWMzYjRkMWVjMjk4NDc3NDQwYjJjMDA1N2QzYTUzOTNiOWQzZjBiODBkZGE4MTg0YmU1MTQ2M2E5OWFiOWMyZSJ9fX0=
+# Las características de uso
+# Incrementar o Disminuir este uso con
+# UsageModification en tus activadores
+usageFeatures:
+  # El uso del objeto
+  # -1 = Infinito
+  # Incrementar o Disminuir este uso con
+  # UsageModification en tus activadores
+  usage: 1
+  # Es limpieza actualizable
+  isRefreshableClean: true
+  # El límite de uso del objeto
+  # El uso no puede incrementarse por encima de este valor
+  usageLimit: -1
+# Las características de drop
+dropFeatures:
+  # Brillo al soltar
+  glowDrop: false
+  # El color del brillo
+  glowDropColor: WHITE
+  # Mostrar nombre personalizado sobre el objeto
+  displayNameDrop: false
+# Los encantamientos del objeto
+enchantments: {}
+# Las características de ocultación
+# Ocultadores para ocultar:
+# Atributos, Encantamientos, ...
+hiders:
+  # Ocultar encantamientos
+  hideEnchantments: true
+  # Ocultar irrompible
+  hideUnbreakable: true
+  # Ocultar atributos
+  hideAttributes: true
+  # Ocultar uso
+  hideUsage: true
+  # Ocultar destruye
+  hideDestroys: false
+  # Ocultar colocado en
+  hidePlacedOn: false
+  # Ocultar tinte
+  hideDye: false
+  # Ocultar decoración de armadura
+  hideArmorTrim: false
+  # Ocultar información adicional
+  hideAdditionalTooltip: false
+  # Ocultar información emergente
+  hideToolTip: false
+# Las características de dar al primer ingreso
+giveFirstJoinFeatures:
+  # Activar la característica
+  giveFirstJoin: false
+  # La cantidad a dar
+  giveFirstJoinAmount: 1
+  # Ranura entre 0 y 8 inclusive
+  giveFirstJoinSlot: 0
+# Las características de restricciones
+restrictions:
+  # Cancelar la colocación del objeto
+  cancel-item-place: true
+  # El objeto no puede ser usado
+  # para craftear ningún objeto
+  # (Incluso objetos personalizados)
+  cancel-item-craft: true
+  # El objeto no puede ser
+  # colocado en un yunque
+  cancel-anvil: true
+  # El objeto no puede ser
+  # movido del inventario
+  locked-in-inventory: false
+# Las variables
+# Las variables se usan para almacenar datos como muertes/asesinatos...
+variables: {}
+# Los activadores / disparadores
+activators:
+  activator1:
+    # El nombre o nombre mostrado
+    name: '&eActivator'
+    option: PLAYER_RIGHT_CLICK
+    typeTarget: NO_TYPE_TARGET
+    # Modificación de uso
+    usageModification: -1
+    # Cancelar el evento vanilla
+    cancelEvent: false
+    # Si otro plugin cancela el evento que
+    # activa el activador y has activado esta característica
+    # el activador no será activado
+    noActivatorRunIfTheEventIsCancelled: false
+    # Actualizar automáticamente el objeto
+    autoUpdateItem: false
+    # El enfriamiento
+    cooldownFeatures:
+      # El tiempo de reutilización
+      cooldown: 2
+      # El mensaje de enfriamiento
+      cooldownMsg: '&cEspera &f%time_S%s &cpara abrir otra bolsa.'
+      # ¿Cancelar el evento si el jugador está en enfriamiento?
+      cancelEventIfInCooldown: true
+      # Las condiciones de placeholders para pausar el enfriamiento
+      pausePlaceholdersConditions: {}
+    # El enfriamiento global
+    # (Para TODOS los jugadores y entidades)
+    globalCooldownFeatures:
+      # El tiempo de reutilización
+      cooldown: 0
+      # Mostrar el mensaje de enfriamiento
+      displayCooldownMessage: false
+    # Para añadir enfriamiento
+    # a otro EI
+    otherEICooldowns: {}
+    # Los objetos requeridos
+    requiredItems: {}
+    # Los ExecutableItems requeridos
+    requiredExecutableItems: {}
+    # Las magias requeridas
+    # (de EcoSkills)
+    requiredMagics: {}
+    # Las ranuras donde el
+    # activador funcionará
+    detailedSlots:
+    - -1
+    - 40
+    playerCommands:
+    - title %player% times 0 8 2
+    - title %player% subtitle "&2&oᴅᴇꜱᴄɪꜰʀᴀɴᴅᴏ..."
+    - title %player% title "&a$&a&k||||"
+    - execute at %player% run playsound minecraft:block.amethyst_block.hit master %player% ~ ~ ~ 0.8 1.0
+    - DELAY_TICK 3
+    - title %player% title "&a$&2&k||||||"
+    - execute at %player% run playsound minecraft:block.amethyst_block.hit master %player% ~ ~ ~ 0.8 1.2
+    - DELAY_TICK 3
+    - title %player% subtitle "&a&oᴅᴇꜱᴄɪꜰʀᴀɴᴅᴏ..."
+    - title %player% title "&a$&a&k||||&2&k||"
+    - execute at %player% run playsound minecraft:block.amethyst_block.hit master %player% ~ ~ ~ 0.8 1.4
+    - DELAY_TICK 4
+    - title %player% title "&a$&a&l&k||||||"
+    - execute at %player% run playsound minecraft:block.amethyst_block.hit master %player% ~ ~ ~ 0.8 1.7
+    - DELAY_TICK 4
+    - title %player% subtitle "&f&o¡ᴅᴇꜱᴄɪꜰʀᴀᴅᴏ!"
+    - title %player% title "&2$&a&l&k||||"
+    - execute at %player% run playsound minecraft:block.note_block.pling master %player% ~ ~ ~ 0.8 2.0
+    - DELAY_TICK 5
+    - title %player% times 2 35 10
+    - 'RANDOM RUN: 1'
+    - 'eco give %player% 40000 +++ title %player% title "&a+$40.000" +++ title %player% subtitle "&f¡ʀᴇᴄᴏᴍᴘᴇɴꜱᴀ ᴏʙᴛᴇɴɪᴅᴀ!" +++ execute at %player% run playsound minecraft:entity.player.levelup master %player% ~ ~ ~ 1 1.5 +++ execute at %player% run playsound minecraft:entity.horse.saddle master %player% ~ ~ ~ 0.9 1.1 +++ PARTICLE VILLAGER_HAPPY 25 0.3 0.3 +++ SEND_MESSAGE &#59E91F&l$ &8| &fHas conseguido &#59E91F$40.000 &fen tu bolsa de dinero.'
+    - 'eco give %player% 40000 +++ title %player% title "&a+$40.000" +++ title %player% subtitle "&f¡ʀᴇᴄᴏᴍᴘᴇɴꜱᴀ ᴏʙᴛᴇɴɪᴅᴀ!" +++ execute at %player% run playsound minecraft:entity.player.levelup master %player% ~ ~ ~ 1 1.5 +++ execute at %player% run playsound minecraft:entity.horse.saddle master %player% ~ ~ ~ 0.9 1.1 +++ PARTICLE VILLAGER_HAPPY 25 0.3 0.3 +++ SEND_MESSAGE &#59E91F&l$ &8| &fHas conseguido &#59E91F$40.000 &fen tu bolsa de dinero.'
+    - 'eco give %player% 50000 +++ title %player% title "&a+$50.000" +++ title %player% subtitle "&f¡ʀᴇᴄᴏᴍᴘᴇɴꜱᴀ ᴏʙᴛᴇɴɪᴅᴀ!" +++ execute at %player% run playsound minecraft:entity.player.levelup master %player% ~ ~ ~ 1 1.5 +++ execute at %player% run playsound minecraft:entity.horse.saddle master %player% ~ ~ ~ 0.9 1.1 +++ PARTICLE VILLAGER_HAPPY 25 0.3 0.3 +++ SEND_MESSAGE &#59E91F&l$ &8| &fHas conseguido &#59E91F$50.000 &fen tu bolsa de dinero.'
+    - 'eco give %player% 50000 +++ title %player% title "&a+$50.000" +++ title %player% subtitle "&f¡ʀᴇᴄᴏᴍᴘᴇɴꜱᴀ ᴏʙᴛᴇɴɪᴅᴀ!" +++ execute at %player% run playsound minecraft:entity.player.levelup master %player% ~ ~ ~ 1 1.5 +++ execute at %player% run playsound minecraft:entity.horse.saddle master %player% ~ ~ ~ 0.9 1.1 +++ PARTICLE VILLAGER_HAPPY 25 0.3 0.3 +++ SEND_MESSAGE &#59E91F&l$ &8| &fHas conseguido &#59E91F$50.000 &fen tu bolsa de dinero.'
+    - 'eco give %player% 60000 +++ title %player% title "&a+$60.000" +++ title %player% subtitle "&f¡ʀᴇᴄᴏᴍᴘᴇɴꜱᴀ ᴏʙᴛᴇɴɪᴅᴀ!" +++ execute at %player% run playsound minecraft:entity.player.levelup master %player% ~ ~ ~ 1 1.5 +++ execute at %player% run playsound minecraft:entity.horse.saddle master %player% ~ ~ ~ 0.9 1.1 +++ PARTICLE VILLAGER_HAPPY 25 0.3 0.3 +++ SEND_MESSAGE &#59E91F&l$ &8| &fHas conseguido &#59E91F$60.000 &fen tu bolsa de dinero.'
+    - 'eco give %player% 70000 +++ title %player% title "&a+$70.000" +++ title %player% subtitle "&f¡ʀᴇᴄᴏᴍᴘᴇɴꜱᴀ ᴏʙᴛᴇɴɪᴅᴀ!" +++ execute at %player% run playsound minecraft:entity.player.levelup master %player% ~ ~ ~ 1 1.5 +++ execute at %player% run playsound minecraft:entity.horse.saddle master %player% ~ ~ ~ 0.9 1.1 +++ PARTICLE VILLAGER_HAPPY 25 0.3 0.3 +++ SEND_MESSAGE &#59E91F&l$ &8| &fHas conseguido &#59E91F$70.000 &fen tu bolsa de dinero.'
+    - 'eco give %player% 80000 +++ title %player% title "&a+$80.000" +++ title %player% subtitle "&f¡ʀᴇᴄᴏᴍᴘᴇɴꜱᴀ ᴏʙᴛᴇɴɪᴅᴀ!" +++ execute at %player% run playsound minecraft:entity.player.levelup master %player% ~ ~ ~ 1 1.5 +++ execute at %player% run playsound minecraft:entity.horse.saddle master %player% ~ ~ ~ 0.9 1.1 +++ PARTICLE VILLAGER_HAPPY 25 0.3 0.3 +++ SEND_MESSAGE &#59E91F&l$ &8| &fHas conseguido &#59E91F$80.000 &fen tu bolsa de dinero.'
+    - 'eco give %player% 90000 +++ title %player% title "&a+$90.000" +++ title %player% subtitle "&f¡ʀᴇᴄᴏᴍᴘᴇɴꜱᴀ ᴏʙᴛᴇɴɪᴅᴀ!" +++ execute at %player% run playsound minecraft:entity.player.levelup master %player% ~ ~ ~ 1 1.5 +++ execute at %player% run playsound minecraft:entity.horse.saddle master %player% ~ ~ ~ 0.9 1.1 +++ PARTICLE VILLAGER_HAPPY 25 0.3 0.3 +++ SEND_MESSAGE &#59E91F&l$ &8| &fHas conseguido &#59E91F$90.000 &fen tu bolsa de dinero.'
+    - 'eco give %player% 100000 +++ title %player% title "&2★ &a+$100.000 &2★" +++ title %player% subtitle "&f¡ᴘʀᴇᴍɪᴏ ᴍᴀxɪᴍᴏ!" +++ execute at %player% run playsound minecraft:ui.toast.challenge_complete master %player% ~ ~ ~ 1 1.2 +++ execute at %player% run playsound minecraft:entity.horse.saddle master %player% ~ ~ ~ 0.9 1.1 +++ PARTICLE TOTEM 40 0.5 0.5 +++ SEND_MESSAGE &#59E91F&l★ &8| &f¡Premio maximo de &#59E91F$100.000 &fen tu bolsa de dinero!'
+    - RANDOM END
+
+    #
+    playerConditions: {}
+    #
+    worldConditions: {}
+    #
+    itemConditions: {}
+    #
+    customConditions: {}
+    # Las condiciones de placeholders
+    placeholdersConditions: {}
+    # Parte para modificar tus variables
+    variablesModification: {}
+# Mostrar condiciones en la descripción
+displayConditions:
+  #
+  playerConditions: {}
+  #
+  worldConditions: {}
+  #
+  itemConditions: {}
+  # Las condiciones de placeholders
+  placeholdersConditions: {}
+  # Activar o desactivar esta característica
+  enableFeature: false
+# Características de comida
+foodFeatures:
+  # ¿Es el alimento carne?
+  isMeat: false
+  # La nutrición del alimento
+  nutrition: 1
+  # La saturación del alimento
+  saturation: 1
+  # ¿Puede el jugador comer siempre este alimento?
+  canAlwaysEat: false
+# Características Consumibles
+consumableFeatures:
+  # Enable this features
+  enable: false
+  # La animación
+  animation: EAT
+  # Tiene partículas de consumo
+  hasConsumeParticles: false
+  # Los segundos de consumo
+  consumeSeconds: 3
+# Las características del arma
+weaponFeatures:
+  # Enable this features
+  enable: false
+  # El tiempo para desactivar el bloqueo
+  # en ticks
+  disableBlockingTime: 0
+  # El daño por ataque
+  damagePerAttack: 5
+# The block attacks features
+blockAttacksFeatures:
+  # Enable this features
+  enable: false
+  # The block delay in seconds
+  blockDelay: 0
+  disableCooldownScale: 1.0
+  # The damage reductions
+  damageReductions: {}
+# Las características de reparación
+repairableFeatures:
+  # Enable this features
+  enable: false
+  # El costo de reparación
+  repairCost: 2
+  # Ítems que pueden reparar este ítem en un yunque
+  # (Solo Paper 1.21.4+)
+  repairableItems: []
+# La rareza del objeto
+itemRarity:
+  # Activar o desactivar la característica de rareza
+  enableRarity: false
+  # La rareza del objeto
+  rarity: COMMON
+# Las características equipables
+equippableFeatures:
+  # Enable this features
+  enable: false
+  # La ranura
+  slot: BODY
+  # Activar el sonido
+  enableSound: false
+  # El sonido
+  sound: ITEM.ARMOR.EQUIP_DIAMOND
+  # El objeto tomará daño cuando el jugador sea herido
+  damageableOnHurt: false
+  # El objeto puede ser dispensado
+  dispensable: true
+  # El objeto puede ser intercambiado
+  swappable: true
+  # Las entidades permitidas
+  allowedEntities:
+  - PLAYER
+# Los atributos
+attributes: {}

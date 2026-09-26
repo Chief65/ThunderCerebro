@@ -1,0 +1,343 @@
+{% if config("store_theme") == "christmas" %}
+<div class="snowflakes" aria-hidden="true">
+    <div class="snowflake">❅</div><div class="snowflake">❅</div><div class="snowflake">❆</div><div class="snowflake">❄</div><div class="snowflake">❅</div><div class="snowflake">❆</div><div class="snowflake">❄</div><div class="snowflake">❅</div><div class="snowflake">❆</div><div class="snowflake">❄</div>
+</div>
+{% endif %}
+
+<style>
+  .triplezone-header {
+    position: relative;
+    min-height: 280px; /* ← altura del bloque con la imagen degradada */
+  }
+
+  .triplezone-header::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: var(--header-img, none);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    opacity: 1;
+    -webkit-mask-image: linear-gradient(to bottom, black 0%, black 60%, transparent 100%);
+    mask-image: linear-gradient(to bottom, black 0%, black 60%, transparent 100%);
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .tz-sticky-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 1000;
+    transform: translateY(0);
+    transition: transform 0.3s ease;
+    will-change: transform;
+  }
+
+  .tz-sticky-bar.tz-hidden {
+    transform: translateY(-100%);
+  }
+
+  #tz-sticky-placeholder {
+    margin: 0;
+    padding: 0;
+    display: block;
+  }
+
+  .tz-navbar {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    background: hsl(220 20% 7%);
+    border-bottom: 1px solid rgba(255,255,255,0.07);
+    padding: 6px 24px;
+    gap: 16px;
+  }
+
+  .tz-navbar__social {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    flex-wrap: wrap;
+  }
+
+  .tz-navbar__social a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 8px;
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.08);
+    color: rgba(255,255,255,0.5);
+    font-size: 15px;
+    text-decoration: none;
+    transition: color 0.15s, background 0.15s, border-color 0.15s;
+  }
+  .tz-navbar__social a:hover {
+    color: #facc15;
+    background: rgba(250,204,21,0.06);
+    border-color: rgba(250,204,21,0.25);
+  }
+
+  .tz-ip-btn {
+    position: relative;
+    display: flex;
+    align-items: center;
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    margin-left: 4px;
+    cursor: default;
+  }
+  .tz-ip-btn__icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    font-size: 15px;
+    border-right: 1px solid rgba(255,255,255,0.08);
+    flex-shrink: 0;
+  }
+  .tz-ip-btn__info {
+    display: flex;
+    flex-direction: column;
+    padding: 0 8px;
+    line-height: 1.25;
+  }
+  .tz-ip-btn__java {
+    font-size: 11px;
+    font-weight: 700;
+    color: #ffffff;
+    white-space: nowrap;
+  }
+  .tz-ip-btn__bedrock {
+    font-size: 9.5px;
+    font-weight: 600;
+    color: rgba(255,255,255,0.38);
+    white-space: nowrap;
+  }
+  .tz-ip-btn__copy {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 30px;
+    background: none;
+    border: none;
+    border-left: 1px solid rgba(255,255,255,0.08);
+    color: rgba(255,255,255,0.35);
+    font-size: 13px;
+    cursor: pointer;
+    transition: color 0.15s, background 0.15s;
+    flex-shrink: 0;
+  }
+  .tz-ip-btn__copy:hover { color: #facc15; background: rgba(250,204,21,0.07); }
+  .tz-ip-btn__copy.copied { color: #4ade80; }
+  .tz-ip-btn__tooltip {
+    position: absolute;
+    bottom: calc(100% + 6px);
+    left: 50%;
+    transform: translateX(-50%);
+    background: #1e1e2e;
+    border: 1px solid rgba(255,255,255,0.12);
+    color: #4ade80;
+    font-size: 10px;
+    font-weight: 700;
+    padding: 4px 8px;
+    border-radius: 6px;
+    white-space: nowrap;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.15s;
+    z-index: 100;
+  }
+  .tz-ip-btn__tooltip.show { opacity: 1; }
+
+  .tz-navbar__logo { display: flex; justify-content: center; align-items: center; }
+  .tz-navbar__logo img { height: 38px; display: block; }
+
+  .tz-navbar__right { display: flex; align-items: center; justify-content: flex-end; gap: 10px; }
+  .tz-navbar__profile {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 10px;
+    padding: 8px 16px 8px 10px;
+    cursor: pointer;
+    transition: background 0.15s, border-color 0.15s;
+  }
+  .tz-navbar__profile:hover { background: rgba(255,255,255,0.08); border-color: rgba(250,204,21,0.3); }
+  .tz-navbar__profile img { width: 30px; height: 30px; border-radius: 6px; display: block; }
+  .tz-navbar__profile-info { display: flex; flex-direction: column; line-height: 1.2; }
+  .tz-navbar__profile-name { font-size: 13px; font-weight: 800; color: #ffffff; white-space: nowrap; }
+  .tz-navbar__profile-cart { font-size: 11px; font-weight: 600; color: rgba(255,255,255,0.4); white-space: nowrap; }
+  .tz-navbar__profile-cart .tz-cart-icon,
+  .tz-navbar__profile-cart .tz-cart-count,
+  .tz-navbar__profile-cart .tz-price { color: #facc15; font-weight: 800; }
+
+  @media (max-width: 700px) {
+    .tz-navbar { grid-template-columns: auto 1fr auto; padding: 7px 12px; }
+    .tz-navbar__social a { width: 26px; height: 26px; font-size: 13px; }
+    .tz-ip-btn__info { display: none; }
+    .tz-navbar__profile-info { display: none; }
+    .tz-navbar__logo img { height: 30px; }
+    .triplezone-header { min-height: 200px; }
+  }
+
+.triplezone-header {
+    padding-top: 0 !important;
+}
+</style>
+
+<header class="triplezone-header">
+
+  <div class="tz-sticky-bar" id="tz-sticky-bar">
+
+    <div class="tz-navbar" id="tz-navbar">
+        <div class="tz-navbar__social">
+            <a href="{{ config("discord_invite") }}" target="_blank" aria-label="Discord">
+                <i class="mdi mdi-discord"></i>
+            </a>
+            <a href="https://www.youtube.com/@somosthundermc/featured" target="_blank" aria-label="YouTube">
+                <i class="mdi mdi-youtube"></i>
+            </a>
+            <a href="https://www.tiktok.com/@somosthundermc_" target="_blank" aria-label="TikTok">
+                <i class="mdi mdi-music-note"></i>
+            </a>
+            <div class="tz-ip-btn" id="tz-ip-widget">
+                <div class="tz-ip-btn__icon">🎮</div>
+                <div class="tz-ip-btn__info">
+                    <span class="tz-ip-btn__java">thundermc.es</span>
+                    <span class="tz-ip-btn__bedrock">Bedrock · Puerto 19132</span>
+                </div>
+                <button class="tz-ip-btn__copy" id="tz-copy-ip" aria-label="Copiar IP" title="Copiar IP">
+                    <i class="mdi mdi-content-copy"></i>
+                </button>
+                <div class="tz-ip-btn__tooltip" id="tz-copy-tooltip">¡Copiado!</div>
+            </div>
+        </div>
+
+        <div class="tz-navbar__logo">
+            <a href="/"><img src="{{ store.logo }}" alt="{{ store.name }}"></a>
+        </div>
+
+        <div class="tz-navbar__right">
+            <div class="tz-navbar__profile" data-izimodal-open="{% if basket.ign %}#modal{% else %}#modal-login{% endif %}">
+                {% if config("serverType") == "Minecraft" %}
+                    {% set bedrockPrefix = config("bedrockPrefix") %}
+                    {% set ignWithoutPrefix = basket.ign | replace({ (bedrockPrefix) : ''}) %}
+                    {% set minecraftSkinHead = "https://minotar.net/avatar/#{ignWithoutPrefix}/32" %}
+                    {% if basket.ign %}
+                        <img src="{{ minecraftSkinHead }}" alt="{{ basket.ign }}">
+                    {% else %}
+                        <img src="https://minotar.net/avatar/MHF_Question/32" alt="Guest">
+                    {% endif %}
+                {% else %}
+                    {% if basket.ign %}
+                        <img src="{{ asset("steam_icon.webp") }}" alt="{{ basket.ign }}">
+                    {% endif %}
+                {% endif %}
+                <div class="tz-navbar__profile-info">
+                    <span class="tz-navbar__profile-name">{% if basket.ign %}{{ basket.ign }}{% else %}{{ lang.guest }}{% endif %}</span>
+                    <span class="tz-navbar__profile-cart">
+                        {% if basket.ign %}
+                            {% if basket.packages|length >= 1 %}
+                                <i class="mdi mdi-cart tz-cart-icon" aria-hidden="true"></i>
+                                <span class="tz-cart-count">{{ basket.packages|length }}</span> ·
+                                <span class="tz-price">
+                                    {% if basket.currency == 'USD' %}${{ basket.price|money }}
+                                    {% elseif basket.currency == 'EUR' %}{{ basket.price|money }}€
+                                    {% elseif basket.currency == 'GBP' %}£{{ basket.price|money }}
+                                    {% else %}{{ basket.price|money }} {{ basket.currency }}
+                                    {% endif %}
+                                </span>
+                            {% else %}
+                                {{ lang.empty_cart }}
+                            {% endif %}
+                        {% else %}
+                            {{ lang.click_to_login }}
+                        {% endif %}
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {% if config("announcement") == "enabled" %}
+        <div class="tz-announcement-wrapper">
+            {% include 'layout.announcement.twig' %}
+        </div>
+    {% endif %}
+
+  </div>
+
+  <div id="tz-sticky-placeholder"></div>
+
+</header>
+
+<script>
+(function () {
+  var stickyBar    = document.getElementById('tz-sticky-bar');
+  var placeholder  = document.getElementById('tz-sticky-placeholder');
+  var lastY        = window.scrollY;
+
+  function syncPlaceholderHeight() {
+    placeholder.style.height = stickyBar.offsetHeight + 'px';
+  }
+
+  function onScroll() {
+    var y = window.scrollY;
+    if (y <= 0) {
+      stickyBar.classList.remove('tz-hidden');
+    } else if (y < lastY) {
+      stickyBar.classList.remove('tz-hidden');
+    } else {
+      stickyBar.classList.add('tz-hidden');
+    }
+    lastY = y;
+  }
+
+  syncPlaceholderHeight();
+  window.addEventListener('load', syncPlaceholderHeight);
+  window.addEventListener('resize', syncPlaceholderHeight);
+  window.addEventListener('scroll', onScroll, { passive: true });
+
+  if (typeof ResizeObserver !== 'undefined') {
+    new ResizeObserver(syncPlaceholderHeight).observe(stickyBar);
+  }
+
+  var copyBtn  = document.getElementById('tz-copy-ip');
+  var tooltip  = document.getElementById('tz-copy-tooltip');
+  var ipToCopy = 'thundermc.es';
+
+  if (copyBtn) {
+    copyBtn.addEventListener('click', function () {
+      navigator.clipboard.writeText(ipToCopy).then(function () {
+        copyBtn.classList.add('copied');
+        tooltip.classList.add('show');
+        setTimeout(function () { copyBtn.classList.remove('copied'); tooltip.classList.remove('show'); }, 1800);
+      }).catch(function () {
+        var el = document.createElement('textarea');
+        el.value = ipToCopy;
+        document.body.appendChild(el);
+        el.select();
+        document.execCommand('copy');
+        document.body.removeChild(el);
+        tooltip.classList.add('show');
+        setTimeout(function () { tooltip.classList.remove('show'); }, 1800);
+      });
+    });
+  }
+})();
+</script>

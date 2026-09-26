@@ -1,0 +1,203 @@
+title: '     Tienda y Redes Sociales'
+type: inventory
+open:
+  commands:
+  - '[sound] item.flintandsteel.use volume=1 pitch=1.6'
+rows: 3
+layout:
+  '0':
+  - item_gray_stained_glass_pane_0
+  '1':
+  - item_gray_stained_glass_pane_1
+  '2':
+  - item_gray_stained_glass_pane_2
+  '3':
+  - item_gray_stained_glass_pane_3
+  '4':
+  - item_gray_stained_glass_pane_4
+  '5':
+  - item_gray_stained_glass_pane_5
+  '6':
+  - item_gray_stained_glass_pane_6
+  '7':
+  - item_gray_stained_glass_pane_7
+  '8':
+  - item_gray_stained_glass_pane_8
+  '9':
+  - item_gray_stained_glass_pane_9
+  '10':
+  - tienda
+  '11':
+  - discord
+  '12':
+  - youtube
+  '13':
+  - tiktok
+  '14':
+  - instagram
+  '15':
+  - item_gray_stained_glass_pane_15
+  '16':
+  - todoslosenlaces
+  '17':
+  - item_gray_stained_glass_pane_17
+  '18':
+  - item_gray_stained_glass_pane_18
+  '19':
+  - item_gray_stained_glass_pane_19
+  '20':
+  - item_gray_stained_glass_pane_20
+  '21':
+  - item_gray_stained_glass_pane_21
+  '22':
+  - item_gray_stained_glass_pane_22
+  '23':
+  - item_gray_stained_glass_pane_23
+  '24':
+  - item_gray_stained_glass_pane_24
+  '25':
+  - item_gray_stained_glass_pane_25
+  '26':
+  - item_gray_stained_glass_pane_26
+items:
+  item_gray_stained_glass_pane_0:
+    material: GRAY_STAINED_GLASS_PANE
+    stack: 1
+  item_gray_stained_glass_pane_1:
+    material: GRAY_STAINED_GLASS_PANE
+    stack: 1
+  item_gray_stained_glass_pane_2:
+    material: GRAY_STAINED_GLASS_PANE
+    stack: 1
+  item_gray_stained_glass_pane_3:
+    material: GRAY_STAINED_GLASS_PANE
+    stack: 1
+  item_gray_stained_glass_pane_4:
+    material: GRAY_STAINED_GLASS_PANE
+    stack: 1
+  item_gray_stained_glass_pane_5:
+    material: GRAY_STAINED_GLASS_PANE
+    stack: 1
+  item_gray_stained_glass_pane_6:
+    material: GRAY_STAINED_GLASS_PANE
+    stack: 1
+  item_gray_stained_glass_pane_7:
+    material: GRAY_STAINED_GLASS_PANE
+    stack: 1
+  item_gray_stained_glass_pane_8:
+    material: GRAY_STAINED_GLASS_PANE
+    stack: 1
+  item_gray_stained_glass_pane_9:
+    material: GRAY_STAINED_GLASS_PANE
+    stack: 1
+  discord:
+    material: '[head] eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNTY2ZmRhODFhYTMwY2RkMjA3OWRiN2NjOTBkYWU2ZWUzNDZjZTRhYWJmOWU2YTg3ZjFmNTFhZWIxYTQ0MGQifX19'
+    stack: 1
+    name: '&fDiscord'
+    lore:
+      - '&8Botón Interactivo'
+      - ''
+      - "&7⏵ Click para ver"
+    actions:
+      commands:
+        - '[chat] /discord'
+        - '[close]'
+  tiktok:
+    material: '[head] eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYmNmMjEwNWJiNzM3NjM4ODMzMDMzZGQ4MjQ0MDcxZTc1ODcwZTJlMTFjMjYxN2U1NDJlODkyNGZiMmI5MDE4MCJ9fX0='
+    stack: 1
+    name: '&fTikTok'
+    lore:
+      - '&8Botón Interactivo'
+      - ''
+      - "&7⏵ Click para ver"
+    actions:
+      commands:
+        - '[chat] /tiktok'
+        - '[close]'
+  item_gray_stained_glass_pane_12:
+    material: GRAY_STAINED_GLASS_PANE
+    stack: 1
+  tienda:
+    material: '[head] eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOTVmZDY3ZDU2ZmZjNTNmYjM2MGExNzg3OWQ5YjUzMzhkNzMzMmQ4ZjEyOTQ5MWE1ZTE3ZThkNmU4YWVhNmMzYSJ9fX0='
+    stack: 1
+    name: '&fTienda'
+    lore:
+      - '&8Botón Interactivo'
+      - ''
+      - "&7⏵ Click para ver"
+    actions:
+      commands:
+        - '[chat] /tienda'
+        - '[close]'
+  item_gray_stained_glass_pane_14:
+    material: GRAY_STAINED_GLASS_PANE
+    stack: 1
+  youtube:
+    material: '[head] eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMzQ4ODU0NWQ1N2M5ZWVkNTJjM2U1NDdlOTZjNDVkYWJiYjdjZjVmOThkNGM4ZmU2MWRjNmY2OWFiYTBhZWY5NiJ9fX0='
+    stack: 1
+    name: '&fYoutube'
+    lore:
+      - '&8Botón Interactivo'
+      - ''
+      - "&7⏵ Click para ver"
+    actions:
+      commands:
+        - '[chat] /youtube'
+        - '[close]'
+  item_gray_stained_glass_pane_15:
+    material: GRAY_STAINED_GLASS_PANE
+    stack: 1
+  instagram:
+    material: '[head] eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYWM4OGQ2MTYzZmFiZTdjNWU2MjQ1MGViMzdhMDc0ZTJlMmM4ODYxMWM5OTg1MzZkYmQ4NDI5ZmFhMDgxOTQ1MyJ9fX0='
+    stack: 1
+    name: '&fInstagram'
+    lore:
+      - '&8Botón Interactivo'
+      - ''
+      - "&7⏵ Click para ver"
+    actions:
+      commands:
+        - '[chat] /instagram'
+        - '[close]'
+  todoslosenlaces:
+    material: PAPER
+    stack: 1
+    name: '&fTodos los Enlaces'
+    lore:
+      - '&8Botón Interactivo'
+      - ''
+      - "&7⏵ Click para ver"
+    actions:
+      commands:
+        - '[chat] /enlaces'
+        - '[close]'
+  item_gray_stained_glass_pane_17:
+    material: GRAY_STAINED_GLASS_PANE
+    stack: 1
+  item_gray_stained_glass_pane_18:
+    material: GRAY_STAINED_GLASS_PANE
+    stack: 1
+  item_gray_stained_glass_pane_19:
+    material: GRAY_STAINED_GLASS_PANE
+    stack: 1
+  item_gray_stained_glass_pane_20:
+    material: GRAY_STAINED_GLASS_PANE
+    stack: 1
+  item_gray_stained_glass_pane_21:
+    material: GRAY_STAINED_GLASS_PANE
+    stack: 1
+  item_gray_stained_glass_pane_22:
+    material: GRAY_STAINED_GLASS_PANE
+    stack: 1
+  item_gray_stained_glass_pane_23:
+    material: GRAY_STAINED_GLASS_PANE
+    stack: 1
+  item_gray_stained_glass_pane_24:
+    material: GRAY_STAINED_GLASS_PANE
+    stack: 1
+  item_gray_stained_glass_pane_25:
+    material: GRAY_STAINED_GLASS_PANE
+    stack: 1
+  item_gray_stained_glass_pane_26:
+    material: GRAY_STAINED_GLASS_PANE
+    stack: 1

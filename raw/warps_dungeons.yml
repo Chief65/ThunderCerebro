@@ -1,0 +1,706 @@
+﻿menu_title: '&0&l|&r &0ThunderMC &0▶ &8Mazmorras'
+open_command:
+  - dungeons
+  - dungeonsgui
+size: 54
+open_requirement:
+  requirements: {}
+register_command: true
+update: true
+
+items:
+  # ============================================================================
+  # COLUMNA 0: INDICADORES DE DIFICULTAD (CRISTALES)
+  # ============================================================================
+  'Dif_Facil':
+    material: LIME_STAINED_GLASS_PANE
+    slot: 0
+    item_flags:
+      - HIDE_ATTRIBUTES
+    display_name: '&#59E91FDificultad: Fácil'
+    lore:
+      - '&8ɪɴᴅɪᴄᴀᴅᴏʀ'
+      - ''
+      - ' &a☠&8☠☠☠☠'
+      - ''
+      - ' &fMazmorras diseñadas'
+      - ' &fpara principiantes.'
+      - ''
+
+  'Dif_Normal':
+    material: YELLOW_STAINED_GLASS_PANE
+    slot: 9
+    item_flags:
+      - HIDE_ATTRIBUTES
+    display_name: '&#FEEB00Dificultad: Normal'
+    lore:
+      - '&8ɪɴᴅɪᴄᴀᴅᴏʀ'
+      - ''
+      - ' &#FEEB00☠☠&8☠☠☠'
+      - ''
+      - ' &fRequiere equipamiento'
+      - ' &fintermedio de combate.'
+      - ''
+
+  'Dif_Dificil':
+    material: ORANGE_STAINED_GLASS_PANE
+    slot: 18
+    item_flags:
+      - HIDE_ATTRIBUTES
+    display_name: '&#FFAA00Dificultad: Difícil'
+    lore:
+      - '&8ɪɴᴅɪᴄᴀᴅᴏʀ'
+      - ''
+      - ' &#FFAA00☠☠☠&8☠☠'
+      - ''
+      - ' &fEnemigos con daño'
+      - ' &felevado y habilidades.'
+      - ''
+
+  'Dif_MuyDificil':
+    material: RED_STAINED_GLASS_PANE
+    slot: 27
+    item_flags:
+      - HIDE_ATTRIBUTES
+    display_name: '&#EB1717Dificultad: Muy Difícil'
+    lore:
+      - '&8ɪɴᴅɪᴄᴀᴅᴏʀ'
+      - ''
+      - ' &#EB1717☠☠☠☠&8☠'
+      - ''
+      - ' &fPeligro mortal con'
+      - ' &fel Guardián Warden.'
+      - ''
+
+  'Dif_Extremo':
+    material: PURPLE_STAINED_GLASS_PANE
+    slot: 36
+    item_flags:
+      - HIDE_ATTRIBUTES
+    display_name: '&#800080Dificultad: Extremo'
+    lore:
+      - '&8ɪɴᴅɪᴄᴀᴅᴏʀ'
+      - ''
+      - ' &#800080☠☠☠☠☠'
+      - ''
+      - ' &fEl desafío definitivo'
+      - ' &fde la network.'
+      - ''
+
+  # ============================================================================
+  # FILA 1 (FÁCIL - SLOTS 1 A 5): MAZMORRAS I A V
+  # ============================================================================
+  'Dungeon_1_VIP':
+    material: PIG_SPAWN_EGG
+    slot: 1
+    priority: 1
+    item_flags:
+      - HIDE_ATTRIBUTES
+    view_requirement:
+      requirements:
+        perm:
+          type: has permission
+          permission: tab.sort.vip
+    display_name: '&#59E91FMazmorra I'
+    lore:
+      - '&8ꜰᴀꜱᴇ ɪ'
+      - ''
+      - ' &a☠&8☠☠☠☠ &7(Fácil)'
+      - ''
+      - ' &8▶ &fJabalí Salvaje'
+      - ' &8▶ &fOveja Dash'
+      - ' &8▶ &fVaca Bruta'
+      - ' &8▶ &fZombie Inicial'
+      - ''
+      - ' &8Jefe: &#59E91FCerbero'
+      - ''
+      - ' &a✔ Pase VIP Activo'
+      - ''
+      - '&7▶ Click para ir'
+    left_click_commands:
+      - '[close]'
+      - '[player] warp dungeon1'
+      - '[sound] ENTITY_ENDERMAN_TELEPORT'
+
+  'Dungeon_1_NoVIP':
+    material: BARRIER
+    slot: 1
+    priority: 2
+    item_flags:
+      - HIDE_ATTRIBUTES
+    display_name: '&cMazmorra I &8(&cVIP&8)'
+    lore:
+      - '&8ꜰᴀꜱᴇ ɪ'
+      - ''
+      - ' &a☠&8☠☠☠☠ &7(Fácil)'
+      - ''
+      - ' &8▶ &fJabalí Salvaje'
+      - ' &8▶ &fOveja Dash'
+      - ' &8▶ &fVaca Bruta'
+      - ' &8▶ &fZombie Inicial'
+      - ''
+      - ' &8Jefe: &#59E91FCerbero'
+      - ''
+      - ' &c✘ Requiere VIP'
+      - ''
+      - '&7▶ Bloqueado'
+    left_click_commands:
+      - '[sound] BLOCK_NOTE_BLOCK_BASS'
+
+  'Dungeon_2_VIP':
+    material: SKELETON_SPAWN_EGG
+    slot: 2
+    priority: 1
+    item_flags:
+      - HIDE_ATTRIBUTES
+    view_requirement:
+      requirements:
+        perm:
+          type: has permission
+          permission: tab.sort.vip
+    display_name: '&#59E91FMazmorra II'
+    lore:
+      - '&8ꜰᴀꜱᴇ ɪɪ'
+      - ''
+      - ' &a☠&8☠☠☠☠ &7(Fácil)'
+      - ''
+      - ' &8▶ &fMinero Corrupto'
+      - ' &8▶ &fExplorador Minas'
+      - ' &8▶ &fCapataz Olvidado'
+      - ''
+      - ' &8Jefe: &#59E91FCerbero'
+      - ''
+      - ' &a✔ Pase VIP Activo'
+      - ''
+      - '&7▶ Click para ir'
+    left_click_commands:
+      - '[close]'
+      - '[player] warp dungeon2'
+      - '[sound] ENTITY_ENDERMAN_TELEPORT'
+
+  'Dungeon_2_NoVIP':
+    material: BARRIER
+    slot: 2
+    priority: 2
+    item_flags:
+      - HIDE_ATTRIBUTES
+    display_name: '&cMazmorra II &8(&cVIP&8)'
+    lore:
+      - '&8ꜰᴀꜱᴇ ɪɪ'
+      - ''
+      - ' &a☠&8☠☠☠☠ &7(Fácil)'
+      - ''
+      - ' &8▶ &fMinero Corrupto'
+      - ' &8▶ &fExplorador Minas'
+      - ' &8▶ &fCapataz Olvidado'
+      - ''
+      - ' &8Jefe: &#59E91FCerbero'
+      - ''
+      - ' &c✘ Requiere VIP'
+      - ''
+      - '&7▶ Bloqueado'
+    left_click_commands:
+      - '[sound] BLOCK_NOTE_BLOCK_BASS'
+
+  'Dungeon_3_VIP':
+    material: SPIDER_SPAWN_EGG
+    slot: 3
+    priority: 1
+    item_flags:
+      - HIDE_ATTRIBUTES
+    view_requirement:
+      requirements:
+        perm:
+          type: has permission
+          permission: tab.sort.vip
+    display_name: '&#59E91FMazmorra III'
+    lore:
+      - '&8ꜰᴀꜱᴇ ɪɪɪ'
+      - ''
+      - ' &a☠&8☠☠☠☠ &7(Fácil)'
+      - ''
+      - ' &8▶ &fSoldado Ruinas'
+      - ' &8▶ &fExplorador Ígneo'
+      - ' &8▶ &fGuardián Forja'
+      - ''
+      - ' &8Jefe: &#59E91FCerbero'
+      - ''
+      - ' &a✔ Pase VIP Activo'
+      - ''
+      - '&7▶ Click para ir'
+    left_click_commands:
+      - '[close]'
+      - '[player] warp dungeon3'
+      - '[sound] ENTITY_ENDERMAN_TELEPORT'
+
+  'Dungeon_3_NoVIP':
+    material: BARRIER
+    slot: 3
+    priority: 2
+    item_flags:
+      - HIDE_ATTRIBUTES
+    display_name: '&cMazmorra III &8(&cVIP&8)'
+    lore:
+      - '&8ꜰᴀꜱᴇ ɪɪɪ'
+      - ''
+      - ' &a☠&8☠☠☠☠ &7(Fácil)'
+      - ''
+      - ' &8▶ &fSoldado Ruinas'
+      - ' &8▶ &fExplorador Ígneo'
+      - ' &8▶ &fGuardián Forja'
+      - ''
+      - ' &8Jefe: &#59E91FCerbero'
+      - ''
+      - ' &c✘ Requiere VIP'
+      - ''
+      - '&7▶ Bloqueado'
+    left_click_commands:
+      - '[sound] BLOCK_NOTE_BLOCK_BASS'
+
+  'Dungeon_4_VIP':
+    material: PIGLIN_SPAWN_EGG
+    slot: 4
+    priority: 1
+    item_flags:
+      - HIDE_ATTRIBUTES
+    view_requirement:
+      requirements:
+        perm:
+          type: has permission
+          permission: tab.sort.vip
+    display_name: '&#59E91FMazmorra IV'
+    lore:
+      - '&8ꜰᴀꜱᴇ ɪᴠ'
+      - ''
+      - ' &a☠&8☠☠☠☠ &7(Fácil)'
+      - ''
+      - ' &8▶ &fAcólito Santuario'
+      - ' &8▶ &fBestia Piglin'
+      - ' &8▶ &fCentinela Eterno'
+      - ''
+      - ' &8Jefe: &#59E91FCerbero'
+      - ''
+      - ' &a✔ Pase VIP Activo'
+      - ''
+      - '&7▶ Click para ir'
+    left_click_commands:
+      - '[close]'
+      - '[player] warp dungeon4'
+      - '[sound] ENTITY_ENDERMAN_TELEPORT'
+
+  'Dungeon_4_NoVIP':
+    material: BARRIER
+    slot: 4
+    priority: 2
+    item_flags:
+      - HIDE_ATTRIBUTES
+    display_name: '&cMazmorra IV &8(&cVIP&8)'
+    lore:
+      - '&8ꜰᴀꜱᴇ ɪᴠ'
+      - ''
+      - ' &a☠&8☠☠☠☠ &7(Fácil)'
+      - ''
+      - ' &8▶ &fAcólito Santuario'
+      - ' &8▶ &fBestia Piglin'
+      - ' &8▶ &fCentinela Eterno'
+      - ''
+      - ' &8Jefe: &#59E91FCerbero'
+      - ''
+      - ' &c✘ Requiere VIP'
+      - ''
+      - '&7▶ Bloqueado'
+    left_click_commands:
+      - '[sound] BLOCK_NOTE_BLOCK_BASS'
+
+  'Dungeon_5_VIP':
+    material: BLAZE_SPAWN_EGG
+    slot: 5
+    priority: 1
+    item_flags:
+      - HIDE_ATTRIBUTES
+    view_requirement:
+      requirements:
+        perm:
+          type: has permission
+          permission: tab.sort.vip
+    display_name: '&#59E91FMazmorra V'
+    lore:
+      - '&8ꜰᴀꜱᴇ ᴠ'
+      - ''
+      - ' &a☠&8☠☠☠☠ &7(Fácil)'
+      - ''
+      - ' &8▶ &fBlazes Ominosos'
+      - ' &8▶ &fEspíritus Fuego'
+      - ' &8▶ &fGuerreros Ceniza'
+      - ''
+      - ' &8Jefe: &#59E91FCerbero'
+      - ''
+      - ' &a✔ Pase VIP Activo'
+      - ''
+      - '&7▶ Click para ir'
+    left_click_commands:
+      - '[close]'
+      - '[player] warp dungeon5'
+      - '[sound] ENTITY_ENDERMAN_TELEPORT'
+
+  'Dungeon_5_NoVIP':
+    material: BARRIER
+    slot: 5
+    priority: 2
+    item_flags:
+      - HIDE_ATTRIBUTES
+    display_name: '&cMazmorra V &8(&cVIP&8)'
+    lore:
+      - '&8ꜰᴀꜱᴇ ᴠ'
+      - ''
+      - ' &a☠&8☠☠☠☠ &7(Fácil)'
+      - ''
+      - ' &8▶ &fBlazes Ominosos'
+      - ' &8▶ &fEspíritus Fuego'
+      - ' &8▶ &fGuerreros Ceniza'
+      - ''
+      - ' &8Jefe: &#59E91FCerbero'
+      - ''
+      - ' &c✘ Requiere VIP'
+      - ''
+      - '&7▶ Bloqueado'
+    left_click_commands:
+      - '[sound] BLOCK_NOTE_BLOCK_BASS'
+
+  # ============================================================================
+  # FILA 2 (NORMAL - SLOT 10): MAZMORRA VI
+  # ============================================================================
+  'Dungeon_6_VIP':
+    material: CAVE_SPIDER_SPAWN_EGG
+    slot: 10
+    priority: 1
+    item_flags:
+      - HIDE_ATTRIBUTES
+    view_requirement:
+      requirements:
+        perm:
+          type: has permission
+          permission: tab.sort.vip
+    display_name: '&#FEEB00Mazmorra VI'
+    lore:
+      - '&8ꜰᴀꜱᴇ ᴠɪ'
+      - ''
+      - ' &#FEEB00☠☠&8☠☠☠ &7(Normal)'
+      - ''
+      - ' &8▶ &fEsqueleto Guardián'
+      - ' &8▶ &fAraña Venenosa'
+      - ' &8▶ &fAraña Acechadora'
+      - ''
+      - ' &8Jefe: &#FEEB00Araña Reina'
+      - ''
+      - ' &a✔ Pase VIP Activo'
+      - ''
+      - '&7▶ Click para ir'
+    left_click_commands:
+      - '[close]'
+      - '[player] warp dungeon6'
+      - '[sound] ENTITY_ENDERMAN_TELEPORT'
+
+  'Dungeon_6_NoVIP':
+    material: BARRIER
+    slot: 10
+    priority: 2
+    item_flags:
+      - HIDE_ATTRIBUTES
+    display_name: '&cMazmorra VI &8(&cVIP&8)'
+    lore:
+      - '&8ꜰᴀꜱᴇ ᴠɪ'
+      - ''
+      - ' &#FEEB00☠☠&8☠☠☠ &7(Normal)'
+      - ''
+      - ' &8▶ &fEsqueleto Guardián'
+      - ' &8▶ &fAraña Venenosa'
+      - ' &8▶ &fAraña Acechadora'
+      - ''
+      - ' &8Jefe: &#FEEB00Araña Reina'
+      - ''
+      - ' &c✘ Requiere VIP'
+      - ''
+      - '&7▶ Bloqueado'
+    left_click_commands:
+      - '[sound] BLOCK_NOTE_BLOCK_BASS'
+
+  # ============================================================================
+  # FILA 3 (DIFÍCIL - SLOTS 19 Y 20): MAZMORRA VII Y VIII
+  # ============================================================================
+  'Dungeon_7_VIP':
+    material: STRAY_SPAWN_EGG
+    slot: 19
+    priority: 1
+    item_flags:
+      - HIDE_ATTRIBUTES
+    view_requirement:
+      requirements:
+        perm:
+          type: has permission
+          permission: tab.sort.vip
+    display_name: '&#FFAA00Mazmorra VII'
+    lore:
+      - '&8ꜰᴀꜱᴇ ᴠɪɪ'
+      - ''
+      - ' &#FFAA00☠☠☠&8☠☠ &7(Difícil)'
+      - ''
+      - ' &8▶ &fCarcelero Gélido'
+      - ' &8▶ &fGuardián Helado'
+      - ' &8▶ &fCucaracha Helada'
+      - ' &8▶ &fEsqueleto Gélido'
+      - ''
+      - ' &8Jefe: &#FFAA00Jinete Helado'
+      - ''
+      - ' &a✔ Pase VIP Activo'
+      - ''
+      - '&7▶ Click para ir'
+    left_click_commands:
+      - '[close]'
+      - '[player] warp dungeon7'
+      - '[sound] ENTITY_ENDERMAN_TELEPORT'
+
+  'Dungeon_7_NoVIP':
+    material: BARRIER
+    slot: 19
+    priority: 2
+    item_flags:
+      - HIDE_ATTRIBUTES
+    display_name: '&cMazmorra VII &8(&cVIP&8)'
+    lore:
+      - '&8ꜰᴀꜱᴇ ᴠɪɪ'
+      - ''
+      - ' &#FFAA00☠☠☠&8☠☠ &7(Difícil)'
+      - ''
+      - ' &8▶ &fCarcelero Gélido'
+      - ' &8▶ &fGuardián Helado'
+      - ' &8▶ &fCucaracha Helada'
+      - ' &8▶ &fEsqueleto Gélido'
+      - ''
+      - ' &8Jefe: &#FFAA00Jinete Helado'
+      - ''
+      - ' &c✘ Requiere VIP'
+      - ''
+      - '&7▶ Bloqueado'
+    left_click_commands:
+      - '[sound] BLOCK_NOTE_BLOCK_BASS'
+
+  'Dungeon_8_VIP':
+    material: MAGMA_CUBE_SPAWN_EGG
+    slot: 20
+    priority: 1
+    item_flags:
+      - HIDE_ATTRIBUTES
+    view_requirement:
+      requirements:
+        perm:
+          type: has permission
+          permission: tab.sort.vip
+    display_name: '&#FFAA00Mazmorra VIII'
+    lore:
+      - '&8ꜰᴀꜱᴇ ᴠɪɪɪ'
+      - ''
+      - ' &#FFAA00☠☠☠&8☠☠ &7(Difícil)'
+      - ''
+      - ' &8▶ &fMinero Forja'
+      - ' &8▶ &fGuardia Forja'
+      - ' &8▶ &fEsqueleto Calcinado'
+      - ' &8▶ &fEspíritu Fuego'
+      - ''
+      - ' &8Jefe: &#FFAA00Rey Forja'
+      - ''
+      - ' &a✔ Pase VIP Activo'
+      - ''
+      - '&7▶ Click para ir'
+    left_click_commands:
+      - '[close]'
+      - '[player] warp dungeon8'
+      - '[sound] ENTITY_ENDERMAN_TELEPORT'
+
+  'Dungeon_8_NoVIP':
+    material: BARRIER
+    slot: 20
+    priority: 2
+    item_flags:
+      - HIDE_ATTRIBUTES
+    display_name: '&cMazmorra VIII &8(&cVIP&8)'
+    lore:
+      - '&8ꜰᴀꜱᴇ ᴠɪɪɪ'
+      - ''
+      - ' &#FFAA00☠☠☠&8☠☠ &7(Difícil)'
+      - ''
+      - ' &8▶ &fMinero Forja'
+      - ' &8▶ &fGuardia Forja'
+      - ' &8▶ &fEsqueleto Calcinado'
+      - ' &8▶ &fEspíritu Fuego'
+      - ''
+      - ' &8Jefe: &#FFAA00Rey Forja'
+      - ''
+      - ' &c✘ Requiere VIP'
+      - ''
+      - '&7▶ Bloqueado'
+    left_click_commands:
+      - '[sound] BLOCK_NOTE_BLOCK_BASS'
+
+  # ============================================================================
+  # FILA 4 (MUY DIFÍCIL - SLOT 28): MAZMORRA IX (WARDEN)
+  # ============================================================================
+  'Dungeon_9_VIP':
+    material: WARDEN_SPAWN_EGG
+    slot: 28
+    priority: 1
+    item_flags:
+      - HIDE_ATTRIBUTES
+    view_requirement:
+      requirements:
+        perm:
+          type: has permission
+          permission: tab.sort.vip
+    display_name: '&#EB1717Mazmorra IX'
+    lore:
+      - '&8ꜰᴀꜱᴇ ɪx'
+      - ''
+      - ' &#EB1717☠☠☠☠&8☠ &7(Muy Difícil)'
+      - ''
+      - ' &8▶ &fAventurero Calcinado'
+      - ' &8▶ &fAventurero Esqueleto'
+      - ' &8▶ &fBibliotecario Zombi'
+      - ''
+      - ' &8Jefe: &#EB1717Jefe Warden'
+      - ''
+      - ' &a✔ Pase VIP Activo'
+      - ''
+      - '&7▶ Click para ir'
+    left_click_commands:
+      - '[close]'
+      - '[player] warp dungeon9'
+      - '[sound] ENTITY_ENDERMAN_TELEPORT'
+
+  'Dungeon_9_NoVIP':
+    material: BARRIER
+    slot: 28
+    priority: 2
+    item_flags:
+      - HIDE_ATTRIBUTES
+    display_name: '&cMazmorra IX &8(&cVIP&8)'
+    lore:
+      - '&8ꜰᴀꜱᴇ ɪx'
+      - ''
+      - ' &#EB1717☠☠☠☠&8☠ &7(Muy Difícil)'
+      - ''
+      - ' &8▶ &fAventurero Calcinado'
+      - ' &8▶ &fAventurero Esqueleto'
+      - ' &8▶ &fBibliotecario Zombi'
+      - ''
+      - ' &8Jefe: &#EB1717Jefe Warden'
+      - ''
+      - ' &c✘ Requiere VIP'
+      - ''
+      - '&7▶ Bloqueado'
+    left_click_commands:
+      - '[sound] BLOCK_NOTE_BLOCK_BASS'
+
+  # ============================================================================
+  # FILA 5 (EXTREMO - SLOT 37): MAZMORRA X (EN PROGRESO / BARRIER)
+  # ============================================================================
+  'Dungeon_10_Progreso':
+    material: BARRIER
+    slot: 37
+    item_flags:
+      - HIDE_ATTRIBUTES
+    display_name: '&#800080Mazmorra X'
+    lore:
+      - '&8ꜰᴀꜱᴇ x'
+      - ''
+      - ' &#800080☠☠☠☠☠ &7(Extremo)'
+      - ''
+      - ' &8▶ &fMonstruos Primordiales'
+      - ' &8▶ &fEntidades del Vacío'
+      - ''
+      - ' &8Jefe: &#800080Rey Titán Oscuro'
+      - ''
+      - ' &c✘ En Progreso'
+      - ''
+      - '&7▶ Próximamente'
+    left_click_commands:
+      - '[sound] BLOCK_NOTE_BLOCK_BASS'
+
+  # ============================================================================
+  # NAV BAR INFERIOR (FILA 6 - SLOTS 45 A 53)
+  # ============================================================================
+  'Filtro_Navbar':
+    display_name: ' '
+    material: GRAY_STAINED_GLASS_PANE
+    slots:
+      - 45
+      - 46
+      - 47
+      - 48
+      - 50
+      - 51
+      - 52
+
+  'Volver':
+    material: DARK_OAK_DOOR
+    slot: 49
+    item_flags:
+      - HIDE_ATTRIBUTES
+    display_name: '&cVolver'
+    lore:
+      - '&7▶ Click para regresar'
+    left_click_commands:
+      - '[openguimenu] warps'
+      - '[sound] UI_BUTTON_CLICK'
+
+  # TIENDA VIP: CUANDO NO TIENE VIP (FIREWORK_STAR ENCANTADO)
+  'Nav_Tienda_NoVIP':
+    material: FIREWORK_STAR
+    slot: 53
+    priority: 2
+    item_flags:
+      - HIDE_ATTRIBUTES
+      - HIDE_ENCHANTS
+    enchantments:
+      - UNBREAKING;1
+    display_name: '&#FEEB00Tienda VIP'
+    lore:
+      - '&8ᴘᴀꜱᴇ ᴍᴀᴢᴍᴏʀʀᴀꜱ'
+      - ''
+      - ' &fPara poder hacerte tp'
+      - ' &fa cualquier fase'
+      - ' &frápidamente adquiere VIP.'
+      - ''
+      - ' &8Web: &e&ntienda.thundermc.es'
+      - ''
+      - '&7▶ Click para abrir tienda'
+    left_click_commands:
+      - '[close]'
+      - '[player] tienda'
+      - '[sound] ENTITY_EXPERIENCE_ORB_PICKUP'
+
+  # TIENDA VIP: CUANDO YA TIENE VIP (FIRE_CHARGE)
+  'Nav_Tienda_TieneVIP':
+    material: FIRE_CHARGE
+    slot: 53
+    priority: 1
+    item_flags:
+      - HIDE_ATTRIBUTES
+    view_requirement:
+      requirements:
+        perm:
+          type: has permission
+          permission: tab.sort.vip
+    display_name: '&#59E91FPase VIP Activo'
+    lore:
+      - '&8ʙᴇɴᴇꜰɪᴄɪᴏ ᴠɪᴘ'
+      - ''
+      - ' &fYa tienes el rango VIP.'
+      - ' &fPuedes teletransportarte'
+      - ' &frápidamente a cualquier'
+      - ' &ffase de mazmorras.'
+      - ''
+      - ' &8Web: &e&ntienda.thundermc.es'
+      - ''
+      - '&a✔ Teletransporte Desbloqueado'
+    left_click_commands:
+      - '[sound] UI_BUTTON_CLICK'

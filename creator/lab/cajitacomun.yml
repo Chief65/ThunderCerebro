@@ -1,0 +1,330 @@
+name: '#CECECE★ &fCajita &8▶ #CECECEComún #CECECE★'
+lore:
+- '&8ᴄᴀᴊᴀ ᴅᴇ ʀᴇᴄᴏᴍᴘᴇɴꜱᴀꜱ'
+- ''
+- ' &7Una caja que guarda'
+- ' &7muchos premios'
+- ''
+- ' #CECECEℹ Prob de Mejorar:'
+- ' #63e80c➠ &fEspecial &8(&750%&8)'
+- ' #0ccee8➠ &fRara &8(&728%&8)'
+- ' #ba0ffa➠ &fEpica &8(&715%&8)'
+- ' #BC1013➠ &fMitica &8(&75%&8)'
+- ' #fab60f➠ &fLegendaria &8(&72%&8)'
+- ''
+- '&7ᴄʟɪᴄᴋ ᴅᴇʀ - ᴀʙʀɪʀ'
+- '&7ꜱʜɪꜰᴛ+ᴅᴇʀ - ᴠᴇʀ ᴘʀᴇᴍɪᴏꜱ'
+material: LIGHT_GRAY_SHULKER_BOX
+glow: true
+disableStack: false
+keepItemOnDeath: true
+canBeUsedOnlyByTheOwner: false
+cancelEventIfNotOwner: false
+onlyOwnerBlackListedActivators: []
+storeItemInfo: false
+unbreakable: false
+usage: 1
+usageLimit: -1
+cancelEventIfNoPermission: false
+whitelistedWorlds: []
+recognitions: []
+keepDefaultAttributes: true
+config_5: true
+config_update: true
+isDurabilityBasedOnUsage: false
+ignoreKeepDefaultAttributesFeature: true
+dropFeatures:
+  glowDrop: false
+  glowDropColor: WHITE
+  displayNameDrop: false
+hiders:
+  hideEnchantments: true
+  hideUnbreakable: true
+  hideAttributes: true
+  hidePotionEffects: false
+  hideUsage: true
+  hideDestroys: false
+  hidePlacedOn: false
+  hideDye: false
+  hideArmorTrim: false
+enchantments: {}
+giveFirstJoinFeatures:
+  giveFirstJoin: false
+  giveFirstJoinAmount: 1
+  giveFirstJoinSlot: 0
+restrictions:
+  cancel-item-place: true
+variables: {}
+displayConditions:
+  playerConditions: {}
+  worldConditions: {}
+  itemConditions: {}
+  placeholdersConditions: {}
+  enableFeature: false
+foodFeatures:
+  nutrition: 1
+  saturation: 1
+  isMeat: false
+  canAlwaysEat: false
+  eatSeconds: 1
+attributes: {}
+activators:
+  activator0:
+    name: '&eActivator'
+    option: PLAYER_ALL_CLICK
+    typeTarget: NO_TYPE_TARGET
+    usageModification: -1
+    cancelEvent: false
+    noActivatorRunIfTheEventIsCancelled: false
+    silenceOutput: true
+    autoUpdateItem: false
+    updateName: true
+    updateLore: true
+    updateDurability: false
+    updateAttributes: false
+    updateEnchants: false
+    updateCustomModelData: false
+    updateArmorSettings: false
+    cooldownFeatures:
+      cooldown: 0
+      isCooldownInTicks: false
+      cooldownMsg: '&cYou are in cooldown ! &7(&e%time_H%&6H &e%time_M%&6M &e%time_S%&6S&7)'
+      displayCooldownMessage: true
+      cancelEventIfInCooldown: false
+      pauseWhenOffline: false
+      pausePlaceholdersConditions: {}
+    globalCooldownFeatures:
+      cooldown: 0
+      isCooldownInTicks: false
+      cooldownMsg: '&cYou are in cooldown ! &7(&e%time_H%&6H &e%time_M%&6M &e%time_S%&6S&7)'
+      displayCooldownMessage: true
+      cancelEventIfInCooldown: false
+      pauseWhenOffline: false
+      pausePlaceholdersConditions: {}
+    otherEICooldowns: {}
+    requiredItems: {}
+    requiredExecutableItems: {}
+    requiredMagics: {}
+    detailedSlots:
+    - -1
+    playerCommands:
+    - effect give %player% minecraft:blindness 4 1 true
+    - title %player% title "&a&lAbriendo Caja..."
+    - title %player% subtitle "&7★ &fCalidad &8➠ &7Común ★"
+    - execute at %player% run playsound minecraft:entity.zombie.attack_wooden_door
+      neutral %player%
+    - DELAY 1
+    - title %player% title "&a&lAbriendo Caja.."
+    - title %player% subtitle "&7★ &fCalidad &8➠ &7Común ★"
+    - execute at %player% run playsound minecraft:entity.zombie.attack_wooden_door
+      neutral %player%
+    - DELAY 1
+    - title %player% title "&a&lAbriendo Caja."
+    - title %player% subtitle "&7★ &fCalidad &8➠ &7Común ★"
+    - execute at %player% run playsound minecraft:entity.zombie.attack_wooden_door
+      neutral %player%
+    - DELAY 1
+    - 'RANDOM RUN: 1'
+    - 'LOOP START: 50'
+    - 'si give monedacoco 4 %player% +++ xp give %player% %rand:1|5%l +++ eco give
+      %player% %rand:1000|10000% +++ title %player% title "&a&l¡Caja abierta!"
+      +++ title %player% subtitle "&a☺ &fDisfruta de tu premio &a☺" +++ execute at
+      %player% run playsound minecraft:entity.zombie.break_wooden_door neutral %player%
+      +++ SENDMESSAGE &6📢 &6Rea&eCraft &8➠ &fTe ha tocado: &ex4 Monedas Coco'
+    - 'si give monedacoral 4 %player% +++ xp give %player% %rand:1|5%l +++ eco give
+      %player% %rand:1000|10000% +++ title %player% title "&a&l¡Caja abierta!"
+      +++ title %player% subtitle "&a☺ &fDisfruta de tu premio &a☺" +++ execute at
+      %player% run playsound minecraft:entity.zombie.break_wooden_door neutral %player%
+      +++ SENDMESSAGE &6📢 &6Rea&eCraft &8➠ &fTe ha tocado: &ex4 Monedas Coral'
+    - 'si give monedareal 4 %player% +++ xp give %player% %rand:1|5%l +++ eco give
+      %player% %rand:1000|10000% +++ title %player% title "&a&l¡Caja abierta!"
+      +++ title %player% subtitle "&a☺ &fDisfruta de tu premio &a☺" +++ execute at
+      %player% run playsound minecraft:entity.zombie.break_wooden_door neutral %player%
+      +++ SENDMESSAGE &6📢 &6Rea&eCraft &8➠ &fTe ha tocado: &ex4 Monedas Real'
+    - 'si give monedaabisal 4 %player% +++ xp give %player% %rand:1|5%l +++ eco give
+      %player% %rand:1000|10000% +++ title %player% title "&a&l¡Caja abierta!"
+      +++ title %player% subtitle "&a☺ &fDisfruta de tu premio &a☺" +++ execute at
+      %player% run playsound minecraft:entity.zombie.break_wooden_door neutral %player%
+      +++ SENDMESSAGE &6📢 &6Rea&eCraft &8➠ &fTe ha tocado: &ex4 Monedas Abisal'
+    - 'si give monedakraken 4 %player% +++ xp give %player% %rand:1|5%l +++ eco give
+      %player% %rand:1000|10000% +++ title %player% title "&a&l¡Caja abierta!"
+      +++ title %player% subtitle "&a☺ &fDisfruta de tu premio &a☺" +++ execute at
+      %player% run playsound minecraft:entity.zombie.break_wooden_door neutral %player%
+      +++ SENDMESSAGE &6📢 &6Rea&eCraft &8➠ &fTe ha tocado: &ex4 Monedas Kraken'
+    - 'si give chat1diostemporal1d 1 %player% +++ xp give %player% %rand:1|5%l +++
+      eco give %player% %rand:1000|10000% +++ title %player% title "&a&l¡Caja abierta!"
+      +++ title %player% subtitle "&a☺ &fDisfruta de tu premio &a☺" +++ execute at
+      %player% run playsound minecraft:entity.zombie.break_wooden_door neutral %player%
+      +++ SENDMESSAGE &6📢 &6Rea&eCraft &8➠ &fTe ha tocado: &eDiostemporal1D'
+    - 'si give chat1litetemporal1d 1 %player% +++ xp give %player% %rand:1|5%l +++
+      eco give %player% %rand:1000|10000% +++ title %player% title "&a&l¡Caja abierta!"
+      +++ title %player% subtitle "&a☺ &fDisfruta de tu premio &a☺" +++ execute at
+      %player% run playsound minecraft:entity.zombie.break_wooden_door neutral %player%
+      +++ SENDMESSAGE &6📢 &6Rea&eCraft &8➠ &fTe ha tocado: &eLitetemporal1D'
+    - 'si give chat1repair1h 1 %player% +++ xp give %player% %rand:1|5%l +++ eco give
+      %player% %rand:1000|10000% +++ title %player% title "&a&l¡Caja abierta!"
+      +++ title %player% subtitle "&a☺ &fDisfruta de tu premio &a☺" +++ execute at
+      %player% run playsound minecraft:entity.zombie.break_wooden_door neutral %player%
+      +++ SENDMESSAGE &6📢 &6Rea&eCraft &8➠ &fTe ha tocado: &eRepair1H'
+    - 'si give chat1fly1h 1 %player% +++ xp give %player% %rand:1|5%l +++ eco give
+      %player% %rand:1000|10000% +++ title %player% title "&a&l¡Caja abierta!"
+      +++ title %player% subtitle "&a☺ &fDisfruta de tu premio &a☺" +++ execute at
+      %player% run playsound minecraft:entity.zombie.break_wooden_door neutral %player%
+      +++ SENDMESSAGE &6📢 &6Rea&eCraft &8➠ &fTe ha tocado: &eFly1H'
+    - 'si give chat1back1h 1 %player% +++ xp give %player% %rand:1|5%l +++ eco give
+      %player% %rand:1000|10000% +++ title %player% title "&a&l¡Caja abierta!"
+      +++ title %player% subtitle "&a☺ &fDisfruta de tu premio &a☺" +++ execute at
+      %player% run playsound minecraft:entity.zombie.break_wooden_door neutral %player%
+      +++ SENDMESSAGE &6📢 &6Rea&eCraft &8➠ &fTe ha tocado: &eBack1H'
+    - 'si give chat1enderpearl4 4 %player% +++ xp give %player% %rand:1|5%l +++ eco
+      give %player% %rand:1000|10000% +++ title %player% title "&a&l¡Caja abierta!"
+      +++ title %player% subtitle "&a☺ &fDisfruta de tu premio &a☺" +++ execute at
+      %player% run playsound minecraft:entity.zombie.break_wooden_door neutral %player%
+      +++ SENDMESSAGE &6📢 &6Rea&eCraft &8➠ &fTe ha tocado: &eEnderpearl4'
+    - 'si give chat1cohetes16 16 %player% +++ xp give %player% %rand:1|5%l +++ eco
+      give %player% %rand:1000|10000% +++ title %player% title "&a&l¡Caja abierta!"
+      +++ title %player% subtitle "&a☺ &fDisfruta de tu premio &a☺" +++ execute at
+      %player% run playsound minecraft:entity.zombie.break_wooden_door neutral %player%
+      +++ SENDMESSAGE &6📢 &6Rea&eCraft &8➠ &fTe ha tocado: &eCohetes16'
+    - 'si give chat1spyglass 1 %player% +++ xp give %player% %rand:1|5%l +++ eco give
+      %player% %rand:1000|10000% +++ title %player% title "&a&l¡Caja abierta!"
+      +++ title %player% subtitle "&a☺ &fDisfruta de tu premio &a☺" +++ execute at
+      %player% run playsound minecraft:entity.zombie.break_wooden_door neutral %player%
+      +++ SENDMESSAGE &6📢 &6Rea&eCraft &8➠ &fTe ha tocado: &eSpyglass'
+    - 'si give chat1manzanasdeoro3 3 %player% +++ xp give %player% %rand:1|5%l +++
+      eco give %player% %rand:1000|10000% +++ title %player% title "&a&l¡Caja abierta!"
+      +++ title %player% subtitle "&a☺ &fDisfruta de tu premio &a☺" +++ execute at
+      %player% run playsound minecraft:entity.zombie.break_wooden_door neutral %player%
+      +++ SENDMESSAGE &6📢 &6Rea&eCraft &8➠ &fTe ha tocado: &eManzanas Oro3'
+    - 'si give chat1manzanasdenotch1 1 %player% +++ xp give %player% %rand:1|5%l +++
+      eco give %player% %rand:1000|10000% +++ title %player% title "&a&l¡Caja abierta!"
+      +++ title %player% subtitle "&a☺ &fDisfruta de tu premio &a☺" +++ execute at
+      %player% run playsound minecraft:entity.zombie.break_wooden_door neutral %player%
+      +++ SENDMESSAGE &6📢 &6Rea&eCraft &8➠ &fTe ha tocado: &eManzanas Notch1'
+    - 'si give chat1prote8 1 %player% +++ xp give %player% %rand:1|5%l +++ eco give
+      %player% %rand:1000|10000% +++ title %player% title "&a&l¡Caja abierta!"
+      +++ title %player% subtitle "&a☺ &fDisfruta de tu premio &a☺" +++ execute at
+      %player% run playsound minecraft:entity.zombie.break_wooden_door neutral %player%
+      +++ SENDMESSAGE &6📢 &6Rea&eCraft &8➠ &fTe ha tocado: &eProte8'
+    - 'si give chat1lapislazuli32 32 %player% +++ xp give %player% %rand:1|5%l +++
+      eco give %player% %rand:1000|10000% +++ title %player% title "&a&l¡Caja abierta!"
+      +++ title %player% subtitle "&a☺ &fDisfruta de tu premio &a☺" +++ execute at
+      %player% run playsound minecraft:entity.zombie.break_wooden_door neutral %player%
+      +++ SENDMESSAGE &6📢 &6Rea&eCraft &8➠ &fTe ha tocado: &eLapislazulix32'
+    - 'si give chat1bloquehierro16 16 %player% +++ xp give %player% %rand:1|5%l +++
+      eco give %player% %rand:1000|10000% +++ title %player% title "&a&l¡Caja abierta!"
+      +++ title %player% subtitle "&a☺ &fDisfruta de tu premio &a☺" +++ execute at
+      %player% run playsound minecraft:entity.zombie.break_wooden_door neutral %player%
+      +++ SENDMESSAGE &6📢 &6Rea&eCraft &8➠ &fTe ha tocado: &eBloquehierro16'
+    - 'si give chat1bloquedecarbon64 64 %player% +++ xp give %player% %rand:1|5%l
+      +++ eco give %player% %rand:1000|10000% +++ title %player% title "&a&l¡Caja
+      abierta!" +++ title %player% subtitle "&a☺ &fDisfruta de tu premio &a☺" +++
+      execute at %player% run playsound minecraft:entity.zombie.break_wooden_door
+      neutral %player% +++ SENDMESSAGE &6📢 &6Rea&eCraft &8➠ &fTe ha tocado: &eBloque
+      Carbon64'
+    - 'si give chat1bloquedecarbon32 32 %player% +++ xp give %player% %rand:1|5%l
+      +++ eco give %player% %rand:1000|10000% +++ title %player% title "&a&l¡Caja
+      abierta!" +++ title %player% subtitle "&a☺ &fDisfruta de tu premio &a☺" +++
+      execute at %player% run playsound minecraft:entity.zombie.break_wooden_door
+      neutral %player% +++ SENDMESSAGE &6📢 &6Rea&eCraft &8➠ &fTe ha tocado: &eBloque
+      Carbonx32'
+    - LOOP END
+    - LOOP END
+    - 'RANDOM RUN: 1'
+    - 'LOOP START: 50'
+    - ei give %player% cajitaespecial 1 +++ title %player% title "&a⬆ &a&l¡Caja Mejorada!
+      &a⬆" +++ title %player% subtitle "&a★ &fAhora es calidad &8➠ &aEspecial ★" +++
+      execute at %player% run playsound minecraft:block.grass.break master %player%
+      +++ SENDMESSAGE &6📢 &6Rea&eCraft &8➠ &a¡Felicidades! &fTu cajita ha mejorado
+      a &aCajita Especial
+    - LOOP END
+    - 'LOOP START: 28'
+    - ei give %player% cajitarara 1 +++ title %player% title "&b⬆ &b&l¡Caja Mejorada!
+      &b⬆" +++ title %player% subtitle "&b★ &fAhora es calidad &8➠ &bRara ★" +++ execute
+      at %player% run playsound minecraft:block.enchantment_table.use master %player%
+      +++ SENDMESSAGE &6📢 &6Rea&eCraft &8➠ &a¡Felicidades! &fTu cajita ha mejorado
+      a &bCajita Rara
+    - LOOP END
+    - 'LOOP START: 15'
+    - ei give %player% cajitaepica 1 +++ title %player% title "&d⬆ &d&l¡Caja Mejorada!
+      &d⬆" +++ title %player% subtitle "&d★ &fAhora es calidad &8➠ &dÉpica ★" +++
+      execute at %player% run playsound minecraft:item.trident.thunder master %player%
+      +++ SENDMESSAGE &6📢 &6Rea&eCraft &8➠ &a¡Felicidades! &fTu cajita ha mejorado
+      a &dCajita Epica
+    - LOOP END
+    - 'LOOP START: 5'
+    - ei give %player% cajitamitica 1 +++ title %player% title "&c⬆ &c&l¡Caja Mejorada!
+      &c⬆" +++ title %player% subtitle "&c★ &fAhora es calidad &8➠ &cMítica ★" +++
+      execute at %player% run playsound minecraft:entity.wither.death master %player%
+      +++ SENDMESSAGE &6📢 &6Rea&eCraft &8➠ &a¡Felicidades! &fTu cajita ha mejorado
+      a &cCajita Mitica
+    - LOOP END
+    - 'LOOP START: 2'
+    - ei give %player% cajitalegendaria 1 +++ title %player% title "&6⬆ &6&l¡Caja
+      Mejorada! &6⬆" +++ title %player% subtitle "&6★ &fAhora es calidad &8➠ &6Legendaria
+      ★" +++ execute at %player% run playsound minecraft:entity.ender_dragon.growl
+      master %player% +++ SENDMESSAGE &6📢 &6Rea&eCraft &8➠ &a¡Felicidades! &fTu cajita
+      ha mejorado a &6Cajita Legendaria
+    - LOOP END
+    - RANDOM END
+    - RANDOM END
+    playerConditions:
+      ifNotSneaking: true
+      ifNotSneakingMsg: ''
+    worldConditions: {}
+    itemConditions: {}
+    customConditions:
+      ifNeedPlayerConfirmationCancel: false
+    placeholdersConditions: {}
+    variablesModification: {}
+  activator1:
+    name: '&eActivator'
+    option: PLAYER_ALL_CLICK
+    typeTarget: NO_TYPE_TARGET
+    usageModification: 0
+    cancelEvent: false
+    noActivatorRunIfTheEventIsCancelled: false
+    silenceOutput: false
+    autoUpdateItem: false
+    updateName: true
+    updateLore: true
+    updateDurability: false
+    updateAttributes: false
+    updateEnchants: false
+    updateCustomModelData: false
+    updateArmorSettings: false
+    cooldownFeatures:
+      cooldown: 0
+      isCooldownInTicks: false
+      cooldownMsg: '&cYou are in cooldown ! &7(&e%time_H%&6H &e%time_M%&6M &e%time_S%&6S&7)'
+      displayCooldownMessage: true
+      cancelEventIfInCooldown: false
+      pauseWhenOffline: false
+      pausePlaceholdersConditions: {}
+    globalCooldownFeatures:
+      cooldown: 0
+      isCooldownInTicks: false
+      cooldownMsg: '&cYou are in cooldown ! &7(&e%time_H%&6H &e%time_M%&6M &e%time_S%&6S&7)'
+      displayCooldownMessage: true
+      cancelEventIfInCooldown: false
+      pauseWhenOffline: false
+      pausePlaceholdersConditions: {}
+    otherEICooldowns: {}
+    requiredItems: {}
+    requiredExecutableItems: {}
+    requiredMagics: {}
+    detailedSlots:
+    - -1
+    playerCommands:
+    - SENDMESSAGE &6📢 &6Rea&eCraft &8➠ &bViendo contenido de la caja...
+    - execute at %player% run playsound minecraft:block.barrel.open neutral %player%
+    - commandpanel cajitacomun %player%
+    playerConditions:
+      ifSneaking: true
+      ifSneakingMsg: ''
+    worldConditions: {}
+    itemConditions: {}
+    customConditions:
+      ifNeedPlayerConfirmationCancel: false
+    placeholdersConditions: {}
+    variablesModification: {}

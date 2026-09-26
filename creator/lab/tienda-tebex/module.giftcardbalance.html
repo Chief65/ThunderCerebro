@@ -1,0 +1,49 @@
+{% extends "config.twig" %}
+
+{% block layout %}
+<div class="triplezone__modules__module" data-module-type="giftcard">
+    <div class="triplezone__modules__module__header">
+        <i class="mdi mdi-gift"></i>
+        <p>{{ module.header }}</p>
+    </div>
+    <div class="giftcard__module--body" id="giftcard__response--stage1">
+        <form id="giftcardForm" method="post" action="/#giftcardbalance">
+            {% if search %}
+            <div id="rezultatGiftCard">
+                {% if giftcard == false or giftcard.card_number == false %}
+                <p class='alert alert-danger'>{{ lang.giftcard_not_found }} </p>
+                {% elseif giftcard.void == 1 %}
+                <p class='alert alert-warning'>{{ lang.giftcard_void }} </p>
+                {% else %}
+                <p>{{ lang.giftcard_balance }} {{ giftcard.remaining_balance }} {{ store.currency }}
+                </p>
+                {% endif %}
+            </div>
+            {% endif %}
+            <div class="giftcard__buttons">
+                <input required type="text" name="card_number"
+                    placeholder="{{ lang.giftcard_input }}" id="giftcode">
+                <button type="submit" data-giftcard-state="idle">
+                    <span data-giftcard-element="cta">{{ lang.giftcard_check }}</span>
+                    <span data-giftcard-element="loader">
+                        <svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"
+                            fill="currentColor">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M13.917 7A6.002 6.002 0 0 0 2.083 7H1.071a7.002 7.002 0 0 1 13.858 0h-1.012z"></path>
+                        </svg>
+                    </span>
+                </button>
+            </div>
+        </form>
+    </div>
+    <div class="giftcard__module--body" id="giftcard__response--stage2">
+        <div class="giftcard__buttons">
+            <div class="giftcard__response">
+                <p id="status-giftcard">Balance</p>
+            </div>
+            <button class="giftcard__back--btn"><span><i class="mdi mdi-reply"></i></span> {{
+                lang.giftcard_back }}</button>
+        </div>
+    </div>
+</div>
+{% endblock %}

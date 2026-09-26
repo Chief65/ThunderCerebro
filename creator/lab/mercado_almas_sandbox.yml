@@ -1,0 +1,129 @@
+menu_title: '&0&l|&r &0Mercado ▶ &8Almas &8(&#34B0F3🔥&8)'
+open_command:
+  - shop almas
+  - mercado almas
+size: 36
+open_requirement:
+  requirements: {}
+register_command: true
+update: true
+
+items:
+  'Categoria_Spawners':
+    material: SPAWNER
+    slot: 11
+    hide_attributes: true
+    hide_enchantments: true
+    hide_all_flags: true
+    item_flags:
+      - HIDE_ATTRIBUTES
+      - HIDE_ITEM_SPECIFICS
+      - HIDE_ADDITIONAL_TOOLTIP
+      - HIDE_ENCHANTS
+    display_name: '&#FFF275Spawners'
+    lore:
+      - '&8Generadores de Criaturas'
+      - ''
+      - ' &8| &fArtículos: &e8'
+      - ' &8| &fMoneda: &#34B0F3Almas (🔥)'
+      - ''
+      - '&7▶ Click para ver catálogo'
+    left_click_commands:
+      - '[close]'
+      - '[player] shop spawners_almas'
+      - '[sound] UI_BUTTON_CLICK'
+
+  'Categoria_Llaves':
+    material: TRIPWIRE_HOOK
+    slot: 13
+    hide_attributes: true
+    hide_enchantments: true
+    hide_all_flags: true
+    item_flags:
+      - HIDE_ATTRIBUTES
+      - HIDE_ITEM_SPECIFICS
+      - HIDE_ADDITIONAL_TOOLTIP
+      - HIDE_ENCHANTS
+    enchantments:
+      - DURABILITY;1
+    display_name: '&#FFF275Llaves'
+    lore:
+      - '&8Llaves de Cajas y Recompensas'
+      - ''
+      - ' &8| &fArtículos: &e5'
+      - ' &8| &fMoneda: &#34B0F3Almas (🔥)'
+      - ''
+      - '&7▶ Click para ver catálogo'
+    left_click_commands:
+      - '[close]'
+      - '[player] shop llaves_almas'
+      - '[sound] UI_BUTTON_CLICK'
+
+  'Categoria_Protecciones':
+    material: DIAMOND_ORE
+    slot: 15
+    hide_attributes: true
+    hide_enchantments: true
+    hide_all_flags: true
+    item_flags:
+      - HIDE_ATTRIBUTES
+      - HIDE_ITEM_SPECIFICS
+      - HIDE_ADDITIONAL_TOOLTIP
+      - HIDE_ENCHANTS
+    enchantments:
+      - DURABILITY;1
+    display_name: '&#FFF275Protecciones'
+    lore:
+      - '&8Bloques de Protección PS'
+      - ''
+      - ' &8| &fArtículos: &e6'
+      - ' &8| &fMoneda: &#34B0F3Almas (🔥)'
+      - ''
+      - '&7▶ Click para ver catálogo'
+    left_click_commands:
+      - '[close]'
+      - '[player] shop protecciones_almas'
+      - '[sound] UI_BUTTON_CLICK'
+
+  'Boton_Volver':
+    material: DARK_OAK_DOOR
+    slot: 31
+    item_flags:
+      - HIDE_ATTRIBUTES
+    display_name: '&cVolver Atrás'
+    lore:
+      - '&7Regresar al menú principal'
+    left_click_commands:
+      - '[openguimenu] tienda_principal'
+      - '[sound] BLOCK_NOTE_BLOCK_BASS'
+
+  'Info_Balance':
+    material: head-%player_name%
+    slot: 35
+    item_flags:
+      - HIDE_ATTRIBUTES
+    display_name: '&#FFF275Tu Economía'
+    lore:
+      - '&8Tu Economía'
+      - ''
+      - ' &8| &fDinero: &#59E91F&l$&r&#59E91F%vault_eco_balance_formatted%'
+      - ' &8| &fAlmas: &#34B0F3%thundercurrencys_almas%🔥'
+      - ' &8| &fZafiros: &#1E6BFF%thundercurrencys_zafiros%💎'
+      - ' &8| &fXP: &#D48BFF%player_level% LVL'
+      - ''
+      - '&7▶ Click para más información'
+    left_click_commands:
+      - '[openguimenu] info_economia'
+      - '[sound] UI_BUTTON_CLICK'
+
+  'Filtro_Navbar':
+    material: GRAY_STAINED_GLASS_PANE
+    display_name: ' '
+    slots:
+      - 27
+      - 28
+      - 29
+      - 30
+      - 32
+      - 33
+      - 34

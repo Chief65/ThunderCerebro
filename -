@@ -1,0 +1,178 @@
+# DeluxeMenus 1.14.1-Release main configuration file
+#
+# A full wiki on how to use this plugin can be found at:
+# https://wiki.helpch.at/helpchat-plugins/deluxemenus
+
+check_updates: true
+debug: LOW
+use_admin_commands_in_menus_list: false
+menus_list_page_size: 10
+metas_list_page_size: 15
+gui_menus:
+  # ############
+  # Trabajos #
+  # ############
+  SelectorTrabajos:
+    file: Trabajos/SelectorTrabajos.yml
+  Trabajos:
+    file: Trabajos/Trabajos.yml
+  NivelesTrabajos:
+    file: Trabajos/NivelesTrabajos.yml
+  # ###########
+  # Niveles #
+  # ###########
+  Hechizero:
+    file: Trabajos/Niveles/Hechizero.yml
+  Constructor:
+    file: Trabajos/Niveles/Constructor.yml
+  Craftero:
+    file: Trabajos/Niveles/Craftero.yml
+  Excavador:
+    file: Trabajos/Niveles/Excavador.yml
+  Encantador:
+    file: Trabajos/Niveles/Encantador.yml
+  Granjero:
+    file: Trabajos/Niveles/Granjero.yml
+  Pescador:
+    file: Trabajos/Niveles/Pescador.yml
+  Cazador:
+    file: Trabajos/Niveles/Cazador.yml
+  Herrero:
+    file: Trabajos/Niveles/Herrero.yml
+  LeÃƒÆ’Ã‚Â±ador:
+    file: Trabajos/Niveles/LeÃƒÆ’Ã‚Â±ador.yml
+  Explorador:
+    file: Trabajos/Niveles/Explorador.yml
+  Minero:
+    file: Trabajos/Niveles/Minero.yml
+  
+  # #######
+  # Home #
+  # #######
+  Casas:
+    file: Casas/Homes.yml
+  # #########
+  # Homes #
+  # #########
+  Home1:
+    file: Casas/Homes/Home1.yml
+  Home2:
+    file: Casas/Homes/Home2.yml
+  Home3:
+    file: Casas/Homes/Home3.yml
+  Home4:
+    file: Casas/Homes/Home4.yml
+  Home5:
+    file: Casas/Homes/Home5.yml
+  Home6:
+    file: Casas/Homes/Home6.yml
+  Home7:
+    file: Casas/Homes/Home7.yml
+  Home8:
+    file: Casas/Homes/Home8.yml
+  Home9:
+    file: Casas/Homes/Home9.yml
+  warps:
+    file: menusIA/warps.yml
+  warps_minas:
+    file: menusIA/warps_minas.yml
+  warps_dungeons:
+    file: menusIA/warps_dungeons.yml
+  warps_rtp:
+    file: menusIA/warps_rtp.yml
+  secretos:
+    file: menusIA/secretos.yml
+  tienda_principal:
+    file: menusIA/tienda_principal.yml
+  mercado_xp:
+    file: menusIA/mercado_xp.yml
+  tienda_vender:
+    file: menusIA/precios_todos.yml
+  precios_todos:
+    file: menusIA/precios_todos.yml
+  precios_todos_2:
+    file: menusIA/precios_todos_2.yml
+  precios_farmeo:
+    file: menusIA/precios_farmeo.yml
+  precios_mobs:
+    file: menusIA/precios_mobs.yml
+  precios_especiales:
+    file: menusIA/precios_especiales.yml
+  compra_todos:
+    file: menusIA/compra_todos.yml
+  compra_todos_2:
+    file: menusIA/compra_todos_2.yml
+  compra_todos_3:
+    file: menusIA/compra_todos_3.yml
+  compra_todos_4:
+    file: menusIA/compra_todos_4.yml
+  compra_todos_5:
+    file: menusIA/compra_todos_5.yml
+  compra_todos_6:
+    file: menusIA/compra_todos_6.yml
+  compra_todos_7:
+    file: menusIA/compra_todos_7.yml
+  compra_todos_8:
+    file: menusIA/compra_todos_8.yml
+  compra_todos_9:
+    file: menusIA/compra_todos_9.yml
+  compra_todos_10:
+    file: menusIA/compra_todos_10.yml
+  compra_todos_11:
+    file: menusIA/compra_todos_11.yml
+  compra_todos_12:
+    file: menusIA/compra_todos_12.yml
+  compra_todos_13:
+    file: menusIA/compra_todos_13.yml
+  compra_todos_14:
+    file: menusIA/compra_todos_14.yml
+  compra_todos_15:
+    file: menusIA/compra_todos_15.yml
+  compra_todos_16:
+    file: menusIA/compra_todos_16.yml
+  compra_todos_17:
+    file: menusIA/compra_todos_17.yml
+  compra_bloques:
+    file: menusIA/compra_bloques.yml
+  compra_bloques_2:
+    file: menusIA/compra_bloques_2.yml
+  compra_bloques_3:
+    file: menusIA/compra_bloques_3.yml
+  compra_bloques_4:
+    file: menusIA/compra_bloques_4.yml
+  compra_bloques_5:
+    file: menusIA/compra_bloques_5.yml
+  compra_bloques_6:
+    file: menusIA/compra_bloques_6.yml
+  compra_bloques_7:
+    file: menusIA/compra_bloques_7.yml
+  compra_bloques_8:
+    file: menusIA/compra_bloques_8.yml
+  compra_bloques_9:
+    file: menusIA/compra_bloques_9.yml
+  compra_bloques_10:
+    file: menusIA/compra_bloques_10.yml
+  compra_bloques_11:
+    file: menusIA/compra_bloques_11.yml
+  compra_bloques_12:
+    file: menusIA/compra_bloques_12.yml
+  compra_farmeo:
+    file: menusIA/compra_farmeo.yml
+  compra_comida:
+    file: menusIA/compra_comida.yml
+  compra_mobs:
+    file: menusIA/compra_mobs.yml
+  compra_equipo:
+    file: menusIA/compra_equipo.yml
+  compra_redstone:
+    file: menusIA/compra_redstone.yml
+  compra_misc:
+    file: menusIA/compra_misc.yml
+  compra_tintes:
+    file: menusIA/compra_tintes.yml
+  compra_trims:
+    file: menusIA/compra_trims.yml
+  compra_encantamientos:
+    file: menusIA/compra_encantamientos.yml
+  compra_almas:
+    file: menusIA/compra_almas.yml

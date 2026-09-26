@@ -1,0 +1,403 @@
+[00:05:12] [Server thread/INFO]: [Essentials] CONSOLE issued server command: /bc &f
+[00:05:12] [Server thread/INFO]: [Essentials] CONSOLE issued server command: /bc &#FEEB00&lTHUNDERMC &8▶ &e¡⚡ Reinicio Diario! &fEl servidor se reiniciara en &e60s &8| &8(&7Salir de PVP para evitar perder vuestros objetos.&8)
+[00:05:12] [Server thread/INFO]: [Essentials] CONSOLE issued server command: /bc &f
+[00:05:42] [Server thread/INFO]: [Essentials] CONSOLE issued server command: /bc &f
+[00:05:42] [Server thread/INFO]: [Essentials] CONSOLE issued server command: /bc &#FEEB00&lTHUNDERMC &8▶ &e¡⚡ Reinicio Diario! &fEl servidor se reiniciara en &e30s &8| &8(&7Salir de PVP para evitar perder vuestros objetos.&8)
+[00:05:42] [Server thread/INFO]: [Essentials] CONSOLE issued server command: /bc &f
+[00:06:02] [Server thread/INFO]: [Essentials] CONSOLE issued server command: /bc &f
+[00:06:02] [Server thread/INFO]: [Essentials] CONSOLE issued server command: /bc &#FEEB00&lTHUNDERMC &8▶ &e¡⚡ Reinicio Diario! &fEl servidor se reiniciara en &e10s &8| &8(&7Salir de PVP para evitar perder vuestros objetos.&8)
+[00:06:02] [Server thread/INFO]: [Essentials] CONSOLE issued server command: /bc &f
+[00:06:10] [Server thread/INFO]: [Essentials] CONSOLE issued server command: /bc &f
+[00:06:10] [Server thread/INFO]: [Essentials] CONSOLE issued server command: /bc &#FEEB00&lTHUNDERMC &8▶ &e¡⚡ Reinicio Diario! &fEl servidor se reiniciara en &e3s &8| &8(&7Salir de PVP para evitar perder vuestros objetos.&8)
+[00:06:10] [Server thread/INFO]: [Essentials] CONSOLE issued server command: /bc &f
+[00:06:11] [Server thread/INFO]: [Essentials] CONSOLE issued server command: /bc &f
+[00:06:11] [Server thread/INFO]: [Essentials] CONSOLE issued server command: /bc &#FEEB00&lTHUNDERMC &8▶ &e¡⚡ Reinicio Diario! &fEl servidor se reiniciara en &e2s &8| &8(&7Salir de PVP para evitar perder vuestros objetos.&8)
+[00:06:11] [Server thread/INFO]: [Essentials] CONSOLE issued server command: /bc &f
+[00:06:12] [Server thread/INFO]: [Essentials] CONSOLE issued server command: /bc &f
+[00:06:12] [Server thread/INFO]: [Essentials] CONSOLE issued server command: /bc &#FEEB00&lTHUNDERMC &8▶ &e¡⚡ Reinicio Diario! &fEl servidor se reiniciara en &e1s &8| &8(&7Salir de PVP para evitar perder vuestros objetos.&8)
+[00:06:12] [Server thread/INFO]: [Essentials] CONSOLE issued server command: /bc &f
+[00:06:13] [Server thread/INFO]: [Essentials] CONSOLE issued server command: /bc &f
+[00:06:13] [Server thread/INFO]: [Essentials] CONSOLE issued server command: /bc &#FEEB00&lTHUNDERMC &8▶ &e¡⚡ Reinicio Diario! &fEl servidor se esta reiniciando... &8| &8(&7Salir de PVP para evitar perder vuestros objetos.&8)
+[00:06:13] [Server thread/INFO]: [Essentials] CONSOLE issued server command: /bc &f
+[01:44:18] [Craft Scheduler Thread - 840 - Vault/INFO]: [Vault] Checking for Updates ... 
+[01:44:18] [Craft Scheduler Thread - 840 - Vault/INFO]: [Vault] No new version available
+[02:01:30] [PvPManager Worker Thread - 1/INFO]: PvP ➤ Update available: 4.1.71 Current version: 4.1.68
+[02:01:30] [PvPManager Worker Thread - 1/INFO]: PvP ➤ Follow the link to download: https://www.spigotmc.org/resources/pvpmanager.10610
+[07:01:30] [PvPManager Worker Thread - 3/INFO]: PvP ➤ Update available: 4.1.71 Current version: 4.1.68
+[07:01:30] [PvPManager Worker Thread - 3/INFO]: PvP ➤ Follow the link to download: https://www.spigotmc.org/resources/pvpmanager.10610
+[07:44:41] [Craft Scheduler Thread - 992 - Vault/INFO]: [Vault] Checking for Updates ... 
+[07:44:41] [Craft Scheduler Thread - 992 - Vault/INFO]: [Vault] No new version available
+[12:01:30] [PvPManager Worker Thread - 0/INFO]: PvP ➤ Update available: 4.1.71 Current version: 4.1.68
+[12:01:30] [PvPManager Worker Thread - 0/INFO]: PvP ➤ Follow the link to download: https://www.spigotmc.org/resources/pvpmanager.10610
+[13:45:02] [Craft Scheduler Thread - 1134 - Vault/INFO]: [Vault] Checking for Updates ... 
+[13:45:02] [Craft Scheduler Thread - 1134 - Vault/INFO]: [Vault] No new version available
+[13:45:18] [User Authenticator #7/INFO]: UUID of player Dragonmil65 is cabb6f6f-4441-4fce-9641-5be36950ef7f
+[13:45:19] [Server thread/INFO]: Dragonmil65 joined the game
+[13:45:19] [Server thread/INFO]: Dragonmil65[/87.221.56.83:33504] logged in with entity id 256 at ([world]147.65485647945087, 116.0, 97.43248622985223)
+[13:45:23] [Server thread/INFO]: Dragonmil65 issued server command: /shop
+[13:45:26] [Server thread/INFO]: Dragonmil65 issued server command: /shopgui
+[13:48:31] [Server thread/INFO]: Dragonmil65 issued server command: /shopgui
+[13:49:14] [Server thread/INFO]: Dragonmil65 issued server command: /shop almas
+[13:49:15] [Server thread/INFO]: Dragonmil65 issued server command: /shop almas
+[13:50:07] [Server thread/INFO]: Dragonmil65 issued server command: /dm reload
+[13:50:07] [Server thread/INFO]: [DeluxeMenus] Successfully unregistered command: dungeons
+[13:50:07] [Server thread/INFO]: [DeluxeMenus] Successfully unregistered command: warps
+[13:50:07] [Server thread/INFO]: [DeluxeMenus] Successfully unregistered command: rtpmenu
+[13:50:07] [Server thread/INFO]: [DeluxeMenus] Successfully unregistered command: shopvender
+[13:50:07] [Server thread/INFO]: [DeluxeMenus] Successfully unregistered command: precios_mobs
+[13:50:07] [Server thread/INFO]: [DeluxeMenus] Successfully unregistered command: minas
+[13:50:07] [Server thread/INFO]: [DeluxeMenus] Successfully unregistered command: precios_especiales
+[13:50:07] [Server thread/INFO]: [DeluxeMenus] Successfully unregistered command: secretos
+[13:50:07] [Server thread/INFO]: [DeluxeMenus] Successfully unregistered command: shop
+[13:50:07] [Server thread/INFO]: [DeluxeMenus] Registered command: warps for menu: warps
+[13:50:07] [Server thread/INFO]: [DeluxeMenus] Registered command: minas for menu: warps_minas
+[13:50:07] [Server thread/INFO]: [DeluxeMenus] Registered command: dungeons for menu: warps_dungeons
+[13:50:07] [Server thread/INFO]: [DeluxeMenus] Registered command: rtpmenu for menu: warps_rtp
+[13:50:07] [Server thread/INFO]: [DeluxeMenus] Registered command: secretos for menu: secretos
+[13:50:07] [Server thread/INFO]: [DeluxeMenus] Registered command: shop for menu: tienda_principal
+[13:50:07] [Server thread/INFO]: [DeluxeMenus] Registered command: shopvender for menu: tienda_vender
+[13:50:07] [Server thread/WARN]: [DeluxeMenus] command: shopvender specified for menu: precios_farmeo already exists for another menu!
+Skipping command: shopvender in menu: precios_farmeo
+[13:50:07] [Server thread/WARN]: [DeluxeMenus] command: preciosvender specified for menu: precios_farmeo already exists for another menu!
+Skipping command: preciosvender in menu: precios_farmeo
+[13:50:07] [Server thread/WARN]: [DeluxeMenus] command: precios_farmeo specified for menu: precios_farmeo already exists for another menu!
+Skipping command: precios_farmeo in menu: precios_farmeo
+[13:50:07] [Server thread/INFO]: [DeluxeMenus] Registered command: precios_mobs for menu: precios_mobs
+[13:50:07] [Server thread/INFO]: [DeluxeMenus] Registered command: precios_especiales for menu: precios_especiales
+[13:50:08] [Server thread/INFO]: Dragonmil65 issued server command: /shop
+[13:54:42] [Server thread/INFO]: [Essentials] CONSOLE issued server command: /list 
+[13:54:42] [Server thread/INFO]: THUNDERMC
+★ 1/20 jugadores.
+[13:54:42] [Server thread/INFO]: default: Dragonmil65
+[13:55:48] [Server thread/INFO]: Dragonmil65 issued server command: /dm reload
+[13:55:48] [Server thread/INFO]: [DeluxeMenus] Successfully unregistered command: dungeons
+[13:55:48] [Server thread/INFO]: [DeluxeMenus] Successfully unregistered command: warps
+[13:55:48] [Server thread/INFO]: [DeluxeMenus] Successfully unregistered command: rtpmenu
+[13:55:48] [Server thread/INFO]: [DeluxeMenus] Successfully unregistered command: shopvender
+[13:55:48] [Server thread/INFO]: [DeluxeMenus] Successfully unregistered command: precios_mobs
+[13:55:48] [Server thread/INFO]: [DeluxeMenus] Successfully unregistered command: minas
+[13:55:48] [Server thread/INFO]: [DeluxeMenus] Successfully unregistered command: precios_especiales
+[13:55:48] [Server thread/INFO]: [DeluxeMenus] Successfully unregistered command: secretos
+[13:55:48] [Server thread/INFO]: [DeluxeMenus] Successfully unregistered command: shop
+[13:55:48] [Server thread/INFO]: [DeluxeMenus] Registered command: warps for menu: warps
+[13:55:48] [Server thread/INFO]: [DeluxeMenus] Registered command: minas for menu: warps_minas
+[13:55:48] [Server thread/INFO]: [DeluxeMenus] Registered command: dungeons for menu: warps_dungeons
+[13:55:48] [Server thread/INFO]: [DeluxeMenus] Registered command: rtpmenu for menu: warps_rtp
+[13:55:48] [Server thread/INFO]: [DeluxeMenus] Registered command: secretos for menu: secretos
+[13:55:48] [Server thread/INFO]: [DeluxeMenus] Registered command: shop for menu: tienda_principal
+[13:55:48] [Server thread/INFO]: [DeluxeMenus] Registered command: shopvender for menu: tienda_vender
+[13:55:48] [Server thread/WARN]: [DeluxeMenus] command: shopvender specified for menu: precios_todos already exists for another menu!
+Skipping command: shopvender in menu: precios_todos
+[13:55:48] [Server thread/WARN]: [DeluxeMenus] command: preciosvender specified for menu: precios_todos already exists for another menu!
+Skipping command: preciosvender in menu: precios_todos
+[13:55:48] [Server thread/WARN]: [DeluxeMenus] command: precios_todos specified for menu: precios_todos already exists for another menu!
+Skipping command: precios_todos in menu: precios_todos
+[13:55:48] [Server thread/INFO]: [DeluxeMenus] Registered command: precios_todos_2 for menu: precios_todos_2
+[13:55:48] [Server thread/INFO]: [DeluxeMenus] Registered command: precios_farmeo for menu: precios_farmeo
+[13:55:48] [Server thread/INFO]: [DeluxeMenus] Registered command: precios_mobs for menu: precios_mobs
+[13:55:48] [Server thread/INFO]: [DeluxeMenus] Registered command: precios_especiales for menu: precios_especiales
+[13:55:52] [Server thread/INFO]: Dragonmil65 issued server command: /shop
+[13:57:00] [Server thread/INFO]: Dragonmil65 issued server command: /shopgui
+[13:57:25] [Server thread/INFO]: Dragonmil65 issued server command: /dm reload
+[13:57:25] [Server thread/INFO]: [DeluxeMenus] Successfully unregistered command: dungeons
+[13:57:25] [Server thread/INFO]: [DeluxeMenus] Successfully unregistered command: precios_todos_2
+[13:57:25] [Server thread/INFO]: [DeluxeMenus] Successfully unregistered command: warps
+[13:57:25] [Server thread/INFO]: [DeluxeMenus] Successfully unregistered command: rtpmenu
+[13:57:25] [Server thread/INFO]: [DeluxeMenus] Successfully unregistered command: shopvender
+[13:57:25] [Server thread/INFO]: [DeluxeMenus] Successfully unregistered command: precios_farmeo
+[13:57:25] [Server thread/INFO]: [DeluxeMenus] Successfully unregistered command: precios_mobs
+[13:57:25] [Server thread/INFO]: [DeluxeMenus] Successfully unregistered command: minas
+[13:57:25] [Server thread/INFO]: [DeluxeMenus] Successfully unregistered command: precios_especiales
+[13:57:25] [Server thread/INFO]: [DeluxeMenus] Successfully unregistered command: secretos
+[13:57:25] [Server thread/INFO]: [DeluxeMenus] Successfully unregistered command: shop
+[13:57:25] [Server thread/INFO]: [DeluxeMenus] Registered command: warps for menu: warps
+[13:57:25] [Server thread/INFO]: [DeluxeMenus] Registered command: minas for menu: warps_minas
+[13:57:25] [Server thread/INFO]: [DeluxeMenus] Registered command: dungeons for menu: warps_dungeons
+[13:57:25] [Server thread/INFO]: [DeluxeMenus] Registered command: rtpmenu for menu: warps_rtp
+[13:57:25] [Server thread/INFO]: [DeluxeMenus] Registered command: secretos for menu: secretos
+[13:57:25] [Server thread/INFO]: [DeluxeMenus] Registered command: shop for menu: tienda_principal
+[13:57:25] [Server thread/INFO]: [DeluxeMenus] Registered command: shopvender for menu: tienda_vender
+[13:57:25] [Server thread/WARN]: [DeluxeMenus] command: shopvender specified for menu: precios_todos already exists for another menu!
+Skipping command: shopvender in menu: precios_todos
+[13:57:25] [Server thread/WARN]: [DeluxeMenus] command: preciosvender specified for menu: precios_todos already exists for another menu!
+Skipping command: preciosvender in menu: precios_todos
+[13:57:25] [Server thread/WARN]: [DeluxeMenus] command: precios_todos specified for menu: precios_todos already exists for another menu!
+Skipping command: precios_todos in menu: precios_todos
+[13:57:25] [Server thread/INFO]: [DeluxeMenus] Registered command: precios_todos_2 for menu: precios_todos_2
+[13:57:25] [Server thread/INFO]: [DeluxeMenus] Registered command: precios_farmeo for menu: precios_farmeo
+[13:57:25] [Server thread/INFO]: [DeluxeMenus] Registered command: precios_mobs for menu: precios_mobs
+[13:57:25] [Server thread/INFO]: [DeluxeMenus] Registered command: precios_especiales for menu: precios_especiales
+[13:57:31] [Server thread/INFO]: Dragonmil65 issued server command: /shop
+[14:02:39] [Server thread/INFO]: Dragonmil65 issued server command: /dm reload
+[14:02:39] [Server thread/INFO]: [DeluxeMenus] Successfully unregistered command: dungeons
+[14:02:39] [Server thread/INFO]: [DeluxeMenus] Successfully unregistered command: precios_todos_2
+[14:02:39] [Server thread/INFO]: [DeluxeMenus] Successfully unregistered command: warps
+[14:02:39] [Server thread/INFO]: [DeluxeMenus] Successfully unregistered command: rtpmenu
+[14:02:39] [Server thread/INFO]: [DeluxeMenus] Successfully unregistered command: shopvender
+[14:02:39] [Server thread/INFO]: [DeluxeMenus] Successfully unregistered command: precios_farmeo
+[14:02:39] [Server thread/INFO]: [DeluxeMenus] Successfully unregistered command: precios_mobs
+[14:02:39] [Server thread/INFO]: [DeluxeMenus] Successfully unregistered command: minas
+[14:02:39] [Server thread/INFO]: [DeluxeMenus] Successfully unregistered command: precios_especiales
+[14:02:39] [Server thread/INFO]: [DeluxeMenus] Successfully unregistered command: secretos
+[14:02:39] [Server thread/INFO]: [DeluxeMenus] Successfully unregistered command: shop
+[14:02:39] [Server thread/INFO]: [DeluxeMenus] Registered command: warps for menu: warps
+[14:02:39] [Server thread/INFO]: [DeluxeMenus] Registered command: minas for menu: warps_minas
+[14:02:39] [Server thread/INFO]: [DeluxeMenus] Registered command: dungeons for menu: warps_dungeons
+[14:02:39] [Server thread/INFO]: [DeluxeMenus] Registered command: rtpmenu for menu: warps_rtp
+[14:02:39] [Server thread/INFO]: [DeluxeMenus] Registered command: secretos for menu: secretos
+[14:02:39] [Server thread/INFO]: [DeluxeMenus] Registered command: shop for menu: tienda_principal
+[14:02:39] [Server thread/INFO]: [DeluxeMenus] Registered command: shopvender for menu: tienda_vender
+[14:02:39] [Server thread/WARN]: [DeluxeMenus] command: shopvender specified for menu: precios_todos already exists for another menu!
+Skipping command: shopvender in menu: precios_todos
+[14:02:39] [Server thread/WARN]: [DeluxeMenus] command: preciosvender specified for menu: precios_todos already exists for another menu!
+Skipping command: preciosvender in menu: precios_todos
+[14:02:39] [Server thread/WARN]: [DeluxeMenus] command: precios_todos specified for menu: precios_todos already exists for another menu!
+Skipping command: precios_todos in menu: precios_todos
+[14:02:39] [Server thread/INFO]: [DeluxeMenus] Registered command: precios_todos_2 for menu: precios_todos_2
+[14:02:39] [Server thread/INFO]: [DeluxeMenus] Registered command: precios_farmeo for menu: precios_farmeo
+[14:02:39] [Server thread/INFO]: [DeluxeMenus] Registered command: precios_mobs for menu: precios_mobs
+[14:02:39] [Server thread/INFO]: [DeluxeMenus] Registered command: precios_especiales for menu: precios_especiales
+[14:02:41] [Server thread/INFO]: Dragonmil65 issued server command: /shop
+[14:05:02] [Server thread/INFO]: Dragonmil65 issued server command: /shop almas
+[14:06:19] [Server thread/INFO]: Dragonmil65 issued server command: /shopgui
+[14:07:31] [Server thread/INFO]: Dragonmil65 issued server command: /shop
+[14:07:36] [Server thread/INFO]: Dragonmil65 issued server command: /sellgui
+[14:09:11] [Server thread/INFO]: Dragonmil65 issued server command: /dm reload
+[14:09:11] [Server thread/INFO]: [DeluxeMenus] Successfully unregistered command: dungeons
+[14:09:11] [Server thread/INFO]: [DeluxeMenus] Successfully unregistered command: precios_todos_2
+[14:09:11] [Server thread/INFO]: [DeluxeMenus] Successfully unregistered command: warps
+[14:09:11] [Server thread/INFO]: [DeluxeMenus] Successfully unregistered command: rtpmenu
+[14:09:11] [Server thread/INFO]: [DeluxeMenus] Successfully unregistered command: shopvender
+[14:09:11] [Server thread/INFO]: [DeluxeMenus] Successfully unregistered command: precios_farmeo
+[14:09:11] [Server thread/INFO]: [DeluxeMenus] Successfully unregistered command: precios_mobs
+[14:09:11] [Server thread/INFO]: [DeluxeMenus] Successfully unregistered command: minas
+[14:09:11] [Server thread/INFO]: [DeluxeMenus] Successfully unregistered command: precios_especiales
+[14:09:11] [Server thread/INFO]: [DeluxeMenus] Successfully unregistered command: secretos
+[14:09:11] [Server thread/INFO]: [DeluxeMenus] Successfully unregistered command: shop
+[14:09:11] [Server thread/INFO]: [DeluxeMenus] Registered command: warps for menu: warps
+[14:09:11] [Server thread/INFO]: [DeluxeMenus] Registered command: minas for menu: warps_minas
+[14:09:11] [Server thread/INFO]: [DeluxeMenus] Registered command: dungeons for menu: warps_dungeons
+[14:09:11] [Server thread/INFO]: [DeluxeMenus] Registered command: rtpmenu for menu: warps_rtp
+[14:09:11] [Server thread/INFO]: [DeluxeMenus] Registered command: secretos for menu: secretos
+[14:09:11] [Server thread/INFO]: [DeluxeMenus] Registered command: shop for menu: tienda_principal
+[14:09:11] [Server thread/INFO]: [DeluxeMenus] Registered command: shopvender for menu: tienda_vender
+[14:09:11] [Server thread/WARN]: [DeluxeMenus] command: shopvender specified for menu: precios_todos already exists for another menu!
+Skipping command: shopvender in menu: precios_todos
+[14:09:11] [Server thread/WARN]: [DeluxeMenus] command: preciosvender specified for menu: precios_todos already exists for another menu!
+Skipping command: preciosvender in menu: precios_todos
+[14:09:11] [Server thread/WARN]: [DeluxeMenus] command: precios_todos specified for menu: precios_todos already exists for another menu!
+Skipping command: precios_todos in menu: precios_todos
+[14:09:11] [Server thread/INFO]: [DeluxeMenus] Registered command: precios_todos_2 for menu: precios_todos_2
+[14:09:11] [Server thread/INFO]: [DeluxeMenus] Registered command: precios_farmeo for menu: precios_farmeo
+[14:09:11] [Server thread/INFO]: [DeluxeMenus] Registered command: precios_mobs for menu: precios_mobs
+[14:09:11] [Server thread/INFO]: [DeluxeMenus] Registered command: precios_especiales for menu: precios_especiales
+[14:09:14] [Server thread/INFO]: Dragonmil65 issued server command: /shop
+[14:09:18] [Server thread/INFO]: Dragonmil65 issued server command: /shop almas
+[14:09:19] [Server thread/INFO]: Dragonmil65 issued server command: /shop almas
+[14:09:23] [Server thread/INFO]: Dragonmil65 issued server command: /shop almas
+[14:10:40] [Server thread/INFO]: Dragonmil65 issued server command: /shopgui
+[14:11:25] [Server thread/INFO]: Dragonmil65 issued server command: /shopgui
+[14:11:39] [Server thread/INFO]: Dragonmil65 issued server command: /shop reload
+[14:11:42] [Server thread/INFO]: Dragonmil65 issued server command: /shopgui reload
+[14:11:42] [Server thread/INFO]: [ShopGUIPlus] Registered custom economy provider 'Almas'.
+[14:11:42] [Server thread/INFO]: [ThunderCurrencys] [ShopGUI+] Economía 'almas' registrada correctamente.
+[14:11:42] [Server thread/INFO]: [ShopGUIPlus] ================================[ ShopGUI+ 1.113.0 ]================================
+[14:11:42] [Server thread/INFO]: [ShopGUIPlus]  
+[14:11:42] [Server thread/INFO]: [ShopGUIPlus] Need help using ShopGUI+? Check out our Wiki or Join our Discord Support server!
+[14:11:42] [Server thread/INFO]: [ShopGUIPlus] https://docs.brcdev.net/ & https://discord.brcdev.net/
+[14:11:42] [Server thread/INFO]: [ShopGUIPlus]  
+[14:11:42] [Server thread/WARN]: [ShopGUIPlus] Failed to register PLAYER_POINTS economy.
+[14:11:42] [Server thread/INFO]: [ShopGUIPlus] Vault economy enabled.
+[14:11:42] [Server thread/INFO]: [ShopGUIPlus] Exp Levels economy enabled.
+[14:11:42] [Server thread/INFO]: [ShopGUIPlus] Using Vault as default economy provider.
+[14:11:42] [Server thread/INFO]: [ShopGUIPlus] Permissions support enabled.
+[14:11:42] [Server thread/INFO]: [ShopGUIPlus] Enabled item provider for MythicMobs.
+[14:11:42] [Server thread/INFO]: [ShopGUIPlus] Enabled item provider for ServerItem.
+[14:11:42] [Server thread/INFO]: [ShopGUIPlus] No external spawner plugins registered, using built-in spawners support.
+[14:11:42] [Server thread/INFO]: [ShopGUIPlus] Loaded 29 main menu items.
+[14:11:42] [Server thread/INFO]: [ShopGUIPlus] Loaded shop 'mobs' with 36 items.
+[14:11:42] [Server thread/INFO]: [ShopGUIPlus] Loaded shop 'farmeo' with 40 items.
+[14:11:42] [Server thread/INFO]: [ShopGUIPlus] Loaded shop 'venta' with 19 items.
+[14:11:42] [Server thread/INFO]: [ShopGUIPlus] Loaded shop 'tintes' with 33 items.
+[14:11:42] [Server thread/INFO]: [ShopGUIPlus] Loaded shop 'equipo' with 34 items.
+[14:11:42] [Server thread/INFO]: [ShopGUIPlus] Loaded shop 'trims' with 35 items.
+[14:11:42] [Server thread/INFO]: [ShopGUIPlus] Loaded shop 'bloques' with 489 items.
+[14:11:42] [Server thread/INFO]: [ShopGUIPlus] Loaded shop 'redstone' with 27 items.
+[14:11:42] [Server thread/INFO]: [ShopGUIPlus] Loaded shop 'almas' with 19 items.
+[14:11:42] [Server thread/INFO]: [ShopGUIPlus] Loaded shop 'comida' with 34 items.
+[14:11:42] [Server thread/INFO]: [ShopGUIPlus] Loaded shop 'encantamientos' with 26 items.
+[14:11:42] [Server thread/INFO]: [ShopGUIPlus] Loaded shop 'miscellaneo' with 37 items.
+[14:11:42] [Server thread/INFO]: [ShopGUIPlus] Loaded 12 shops with total of 829 items.
+[14:11:42] [Server thread/INFO]: [ShopGUIPlus] Loaded 0 permission-based price modifiers.
+[14:11:42] [Server thread/INFO]: [ShopGUIPlus] Loaded 10 sounds.
+[14:11:42] [Server thread/INFO]: [ShopGUIPlus]  
+[14:11:42] [Server thread/INFO]: [ShopGUIPlus] ====================================================================================
+[14:11:43] [Server thread/INFO]: Dragonmil65 issued server command: /dm reload
+[14:11:43] [Server thread/INFO]: [DeluxeMenus] Successfully unregistered command: dungeons
+[14:11:43] [Server thread/INFO]: [DeluxeMenus] Successfully unregistered command: precios_todos_2
+[14:11:43] [Server thread/INFO]: [DeluxeMenus] Successfully unregistered command: warps
+[14:11:43] [Server thread/INFO]: [DeluxeMenus] Successfully unregistered command: rtpmenu
+[14:11:43] [Server thread/INFO]: [DeluxeMenus] Successfully unregistered command: shopvender
+[14:11:43] [Server thread/INFO]: [DeluxeMenus] Successfully unregistered command: precios_farmeo
+[14:11:43] [Server thread/INFO]: [DeluxeMenus] Successfully unregistered command: precios_mobs
+[14:11:43] [Server thread/INFO]: [DeluxeMenus] Successfully unregistered command: minas
+[14:11:43] [Server thread/INFO]: [DeluxeMenus] Successfully unregistered command: precios_especiales
+[14:11:43] [Server thread/INFO]: [DeluxeMenus] Successfully unregistered command: secretos
+[14:11:43] [Server thread/INFO]: [DeluxeMenus] Successfully unregistered command: shop
+[14:11:43] [Server thread/INFO]: [DeluxeMenus] Registered command: warps for menu: warps
+[14:11:43] [Server thread/INFO]: [DeluxeMenus] Registered command: minas for menu: warps_minas
+[14:11:43] [Server thread/INFO]: [DeluxeMenus] Registered command: dungeons for menu: warps_dungeons
+[14:11:43] [Server thread/INFO]: [DeluxeMenus] Registered command: rtpmenu for menu: warps_rtp
+[14:11:43] [Server thread/INFO]: [DeluxeMenus] Registered command: secretos for menu: secretos
+[14:11:43] [Server thread/INFO]: [DeluxeMenus] Registered command: shop for menu: tienda_principal
+[14:11:43] [Server thread/INFO]: [DeluxeMenus] Registered command: shopvender for menu: tienda_vender
+[14:11:43] [Server thread/WARN]: [DeluxeMenus] command: shopvender specified for menu: precios_todos already exists for another menu!
+Skipping command: shopvender in menu: precios_todos
+[14:11:43] [Server thread/WARN]: [DeluxeMenus] command: preciosvender specified for menu: precios_todos already exists for another menu!
+Skipping command: preciosvender in menu: precios_todos
+[14:11:43] [Server thread/WARN]: [DeluxeMenus] command: precios_todos specified for menu: precios_todos already exists for another menu!
+Skipping command: precios_todos in menu: precios_todos
+[14:11:43] [Server thread/INFO]: [DeluxeMenus] Registered command: precios_todos_2 for menu: precios_todos_2
+[14:11:43] [Server thread/INFO]: [DeluxeMenus] Registered command: precios_farmeo for menu: precios_farmeo
+[14:11:43] [Server thread/INFO]: [DeluxeMenus] Registered command: precios_mobs for menu: precios_mobs
+[14:11:43] [Server thread/INFO]: [DeluxeMenus] Registered command: precios_especiales for menu: precios_especiales
+[14:11:44] [Server thread/INFO]: Dragonmil65 issued server command: /shop
+[14:11:51] [Server thread/INFO]: Dragonmil65 issued server command: /shop almas
+[14:11:52] [Server thread/INFO]: Dragonmil65 issued server command: /shop almas
+[14:11:53] [Server thread/INFO]: Dragonmil65 issued server command: /shop almas
+[14:11:59] [Server thread/INFO]: Dragonmil65 issued server command: /shop almas
+[14:13:08] [Server thread/INFO]: Dragonmil65 issued server command: /shop
+[14:13:09] [Server thread/INFO]: Dragonmil65 issued server command: /shopgui
+[14:17:48] [Server thread/INFO]: Dragonmil65 issued server command: /shopgui reload
+[14:17:48] [Server thread/INFO]: [ShopGUIPlus] Registered custom economy provider 'Almas'.
+[14:17:48] [Server thread/INFO]: [ThunderCurrencys] [ShopGUI+] Economía 'almas' registrada correctamente.
+[14:17:48] [Server thread/INFO]: [ShopGUIPlus] ================================[ ShopGUI+ 1.113.0 ]================================
+[14:17:48] [Server thread/INFO]: [ShopGUIPlus]  
+[14:17:48] [Server thread/INFO]: [ShopGUIPlus] Need help using ShopGUI+? Check out our Wiki or Join our Discord Support server!
+[14:17:48] [Server thread/INFO]: [ShopGUIPlus] https://docs.brcdev.net/ & https://discord.brcdev.net/
+[14:17:48] [Server thread/INFO]: [ShopGUIPlus]  
+[14:17:48] [Server thread/WARN]: [ShopGUIPlus] Failed to register PLAYER_POINTS economy.
+[14:17:48] [Server thread/INFO]: [ShopGUIPlus] Vault economy enabled.
+[14:17:48] [Server thread/INFO]: [ShopGUIPlus] Exp Levels economy enabled.
+[14:17:48] [Server thread/INFO]: [ShopGUIPlus] Using Vault as default economy provider.
+[14:17:48] [Server thread/INFO]: [ShopGUIPlus] Permissions support enabled.
+[14:17:48] [Server thread/INFO]: [ShopGUIPlus] Enabled item provider for MythicMobs.
+[14:17:48] [Server thread/INFO]: [ShopGUIPlus] Enabled item provider for ServerItem.
+[14:17:48] [Server thread/INFO]: [ShopGUIPlus] No external spawner plugins registered, using built-in spawners support.
+[14:17:48] [Server thread/INFO]: [ShopGUIPlus] Loaded 29 main menu items.
+[14:17:48] [Server thread/INFO]: [ShopGUIPlus] Loaded shop 'mobs' with 34 items.
+[14:17:48] [Server thread/INFO]: [ShopGUIPlus] Loaded shop 'farmeo' with 38 items.
+[14:17:48] [Server thread/INFO]: [ShopGUIPlus] Loaded shop 'venta' with 17 items.
+[14:17:48] [Server thread/INFO]: [ShopGUIPlus] Loaded shop 'tintes' with 31 items.
+[14:17:48] [Server thread/INFO]: [ShopGUIPlus] Loaded shop 'equipo' with 32 items.
+[14:17:48] [Server thread/INFO]: [ShopGUIPlus] Loaded shop 'trims' with 33 items.
+[14:17:48] [Server thread/INFO]: [ShopGUIPlus] Loaded shop 'bloques' with 322 items.
+[14:17:48] [Server thread/INFO]: [ShopGUIPlus] Loaded shop 'redstone' with 25 items.
+[14:17:48] [Server thread/INFO]: [ShopGUIPlus] Loaded shop 'almas' with 34 items.
+[14:17:49] [Server thread/INFO]: [ShopGUIPlus] Loaded shop 'comida' with 32 items.
+[14:17:49] [Server thread/INFO]: [ShopGUIPlus] Loaded shop 'encantamientos' with 24 items.
+[14:17:49] [Server thread/INFO]: [ShopGUIPlus] Loaded shop 'miscellaneo' with 35 items.
+[14:17:49] [Server thread/INFO]: [ShopGUIPlus] Loaded 12 shops with total of 657 items.
+[14:17:49] [Server thread/INFO]: [ShopGUIPlus] Loaded 0 permission-based price modifiers.
+[14:17:49] [Server thread/INFO]: [ShopGUIPlus] Loaded 10 sounds.
+[14:17:49] [Server thread/INFO]: [ShopGUIPlus]  
+[14:17:49] [Server thread/INFO]: [ShopGUIPlus] ====================================================================================
+[14:17:49] [Server thread/INFO]: Dragonmil65 issued server command: /dm reload
+[14:17:49] [Server thread/INFO]: [DeluxeMenus] Successfully unregistered command: dungeons
+[14:17:49] [Server thread/INFO]: [DeluxeMenus] Successfully unregistered command: precios_todos_2
+[14:17:49] [Server thread/INFO]: [DeluxeMenus] Successfully unregistered command: warps
+[14:17:49] [Server thread/INFO]: [DeluxeMenus] Successfully unregistered command: rtpmenu
+[14:17:49] [Server thread/INFO]: [DeluxeMenus] Successfully unregistered command: shopvender
+[14:17:49] [Server thread/INFO]: [DeluxeMenus] Successfully unregistered command: precios_farmeo
+[14:17:49] [Server thread/INFO]: [DeluxeMenus] Successfully unregistered command: precios_mobs
+[14:17:49] [Server thread/INFO]: [DeluxeMenus] Successfully unregistered command: minas
+[14:17:49] [Server thread/INFO]: [DeluxeMenus] Successfully unregistered command: precios_especiales
+[14:17:49] [Server thread/INFO]: [DeluxeMenus] Successfully unregistered command: secretos
+[14:17:49] [Server thread/INFO]: [DeluxeMenus] Successfully unregistered command: shop
+[14:17:49] [Server thread/INFO]: [DeluxeMenus] Registered command: warps for menu: warps
+[14:17:49] [Server thread/INFO]: [DeluxeMenus] Registered command: minas for menu: warps_minas
+[14:17:49] [Server thread/INFO]: [DeluxeMenus] Registered command: dungeons for menu: warps_dungeons
+[14:17:49] [Server thread/INFO]: [DeluxeMenus] Registered command: rtpmenu for menu: warps_rtp
+[14:17:49] [Server thread/INFO]: [DeluxeMenus] Registered command: secretos for menu: secretos
+[14:17:49] [Server thread/INFO]: [DeluxeMenus] Registered command: shopvender for menu: tienda_vender
+[14:17:49] [Server thread/WARN]: [DeluxeMenus] command: shopvender specified for menu: precios_todos already exists for another menu!
+Skipping command: shopvender in menu: precios_todos
+[14:17:49] [Server thread/WARN]: [DeluxeMenus] command: preciosvender specified for menu: precios_todos already exists for another menu!
+Skipping command: preciosvender in menu: precios_todos
+[14:17:49] [Server thread/WARN]: [DeluxeMenus] command: precios_todos specified for menu: precios_todos already exists for another menu!
+Skipping command: precios_todos in menu: precios_todos
+[14:17:49] [Server thread/INFO]: [DeluxeMenus] Registered command: precios_todos_2 for menu: precios_todos_2
+[14:17:49] [Server thread/INFO]: [DeluxeMenus] Registered command: precios_farmeo for menu: precios_farmeo
+[14:17:49] [Server thread/INFO]: [DeluxeMenus] Registered command: precios_mobs for menu: precios_mobs
+[14:17:49] [Server thread/INFO]: [DeluxeMenus] Registered command: precios_especiales for menu: precios_especiales
+[14:17:52] [Server thread/INFO]: Dragonmil65 issued server command: /shop
+[14:17:56] [Server thread/INFO]: Dragonmil65 issued server command: /mercado
+[14:17:58] [Server thread/INFO]: Dragonmil65 issued server command: /mercado
+[14:18:00] [Server thread/INFO]: Dragonmil65 issued server command: /dm
+[14:18:02] [Server thread/INFO]: Dragonmil65 issued server command: /dm open
+[14:18:12] [Server thread/INFO]: Dragonmil65 issued server command: /dm open tienda_principal
+[14:18:17] [Server thread/INFO]: Dragonmil65 issued server command: /shopgui
+[14:18:25] [Server thread/INFO]: Dragonmil65 issued server command: /shopgui reload
+[14:18:25] [Server thread/INFO]: [ShopGUIPlus] Registered custom economy provider 'Almas'.
+[14:18:25] [Server thread/INFO]: [ThunderCurrencys] [ShopGUI+] Economía 'almas' registrada correctamente.
+[14:18:25] [Server thread/INFO]: [ShopGUIPlus] ================================[ ShopGUI+ 1.113.0 ]================================
+[14:18:25] [Server thread/INFO]: [ShopGUIPlus]  
+[14:18:25] [Server thread/INFO]: [ShopGUIPlus] Need help using ShopGUI+? Check out our Wiki or Join our Discord Support server!
+[14:18:25] [Server thread/INFO]: [ShopGUIPlus] https://docs.brcdev.net/ & https://discord.brcdev.net/
+[14:18:25] [Server thread/INFO]: [ShopGUIPlus]  
+[14:18:25] [Server thread/WARN]: [ShopGUIPlus] Failed to register PLAYER_POINTS economy.
+[14:18:25] [Server thread/INFO]: [ShopGUIPlus] Vault economy enabled.
+[14:18:25] [Server thread/INFO]: [ShopGUIPlus] Exp Levels economy enabled.
+[14:18:25] [Server thread/INFO]: [ShopGUIPlus] Using Vault as default economy provider.
+[14:18:25] [Server thread/INFO]: [ShopGUIPlus] Permissions support enabled.
+[14:18:25] [Server thread/INFO]: [ShopGUIPlus] Enabled item provider for MythicMobs.
+[14:18:25] [Server thread/INFO]: [ShopGUIPlus] Enabled item provider for ServerItem.
+[14:18:25] [Server thread/INFO]: [ShopGUIPlus] No external spawner plugins registered, using built-in spawners support.
+[14:18:25] [Server thread/INFO]: [ShopGUIPlus] Loaded 29 main menu items.
+[14:18:25] [Server thread/INFO]: [ShopGUIPlus] Loaded shop 'mobs' with 34 items.
+[14:18:25] [Server thread/INFO]: [ShopGUIPlus] Loaded shop 'farmeo' with 38 items.
+[14:18:25] [Server thread/INFO]: [ShopGUIPlus] Loaded shop 'venta' with 17 items.
+[14:18:25] [Server thread/INFO]: [ShopGUIPlus] Loaded shop 'tintes' with 31 items.
+[14:18:25] [Server thread/INFO]: [ShopGUIPlus] Loaded shop 'equipo' with 32 items.
+[14:18:25] [Server thread/INFO]: [ShopGUIPlus] Loaded shop 'trims' with 33 items.
+[14:18:25] [Server thread/INFO]: [ShopGUIPlus] Loaded shop 'bloques' with 322 items.
+[14:18:25] [Server thread/INFO]: [ShopGUIPlus] Loaded shop 'redstone' with 25 items.
+[14:18:25] [Server thread/INFO]: [ShopGUIPlus] Loaded shop 'almas' with 34 items.
+[14:18:25] [Server thread/INFO]: [ShopGUIPlus] Loaded shop 'comida' with 32 items.
+[14:18:25] [Server thread/INFO]: [ShopGUIPlus] Loaded shop 'encantamientos' with 24 items.
+[14:18:25] [Server thread/INFO]: [ShopGUIPlus] Loaded shop 'miscellaneo' with 35 items.
+[14:18:25] [Server thread/INFO]: [ShopGUIPlus] Loaded 12 shops with total of 657 items.
+[14:18:25] [Server thread/INFO]: [ShopGUIPlus] Loaded 0 permission-based price modifiers.
+[14:18:25] [Server thread/INFO]: [ShopGUIPlus] Loaded 10 sounds.
+[14:18:25] [Server thread/INFO]: [ShopGUIPlus]  
+[14:18:25] [Server thread/INFO]: [ShopGUIPlus] ====================================================================================
+[14:18:26] [Server thread/INFO]: Dragonmil65 issued server command: /dm reload
+[14:18:26] [Server thread/INFO]: [DeluxeMenus] Successfully unregistered command: dungeons
+[14:18:26] [Server thread/INFO]: [DeluxeMenus] Successfully unregistered command: precios_todos_2
+[14:18:26] [Server thread/INFO]: [DeluxeMenus] Successfully unregistered command: warps
+[14:18:26] [Server thread/INFO]: [DeluxeMenus] Successfully unregistered command: rtpmenu
+[14:18:26] [Server thread/INFO]: [DeluxeMenus] Successfully unregistered command: shopvender
+[14:18:26] [Server thread/INFO]: [DeluxeMenus] Successfully unregistered command: precios_farmeo
+[14:18:26] [Server thread/INFO]: [DeluxeMenus] Successfully unregistered command: precios_mobs
+[14:18:26] [Server thread/INFO]: [DeluxeMenus] Successfully unregistered command: minas
+[14:18:26] [Server thread/INFO]: [DeluxeMenus] Successfully unregistered command: precios_especiales
+[14:18:26] [Server thread/INFO]: [DeluxeMenus] Successfully unregistered command: secretos
+[14:18:26] [Server thread/INFO]: [DeluxeMenus] Registered command: warps for menu: warps
+[14:18:26] [Server thread/INFO]: [DeluxeMenus] Registered command: minas for menu: warps_minas
+[14:18:26] [Server thread/INFO]: [DeluxeMenus] Registered command: dungeons for menu: warps_dungeons
+[14:18:26] [Server thread/INFO]: [DeluxeMenus] Registered command: rtpmenu for menu: warps_rtp
+[14:18:26] [Server thread/INFO]: [DeluxeMenus] Registered command: secretos for menu: secretos
+[14:18:26] [Server thread/INFO]: [DeluxeMenus] Registered command: shopvender for menu: tienda_vender
+[14:18:26] [Server thread/WARN]: [DeluxeMenus] command: shopvender specified for menu: precios_todos already exists for another menu!
+Skipping command: shopvender in menu: precios_todos
+[14:18:26] [Server thread/WARN]: [DeluxeMenus] command: preciosvender specified for menu: precios_todos already exists for another menu!
+Skipping command: preciosvender in menu: precios_todos
+[14:18:26] [Server thread/WARN]: [DeluxeMenus] command: precios_todos specified for menu: precios_todos already exists for another menu!
+Skipping command: precios_todos in menu: precios_todos
+[14:18:26] [Server thread/INFO]: [DeluxeMenus] Registered command: precios_todos_2 for menu: precios_todos_2
+[14:18:26] [Server thread/INFO]: [DeluxeMenus] Registered command: precios_farmeo for menu: precios_farmeo
+[14:18:26] [Server thread/INFO]: [DeluxeMenus] Registered command: precios_mobs for menu: precios_mobs
+[14:18:26] [Server thread/INFO]: [DeluxeMenus] Registered command: precios_especiales for menu: precios_especiales
+[14:18:34] [Server thread/INFO]: Dragonmil65 issued server command: /dm open tienda_principal
+[14:18:35] [Server thread/INFO]: Dragonmil65 issued server command: /shopgui
+[14:20:05] [Server thread/INFO]: Dragonmil65 issued server command: /shopgui

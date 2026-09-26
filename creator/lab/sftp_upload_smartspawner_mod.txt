@@ -1,0 +1,5 @@
+put creator/lab/smartspawner_config.yml plugins/SmartSpawner/config.yml
+put creator/lab/smartspawner_main_gui.yml plugins/SmartSpawner/gui_layouts/default/main_gui.yml
+put creator/lab/smartspawner_storage_gui.yml plugins/SmartSpawner/gui_layouts/default/storage_gui.yml
+put creator/lab/smartspawner_gui.yml plugins/SmartSpawner/language/en_US/gui.yml
+bye

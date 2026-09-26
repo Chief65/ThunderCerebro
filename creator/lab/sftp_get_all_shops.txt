@@ -1,0 +1,3 @@
+get plugins/ShopGUIPlus/shops/bloques.yml creator/lab/bloques.yml
+get plugins/ShopGUIPlus/shops/farmeo.yml creator/lab/farmeo.yml
+bye

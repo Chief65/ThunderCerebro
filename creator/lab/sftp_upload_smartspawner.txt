@@ -1,0 +1,2 @@
+put creator/lab/smartspawner_config.yml plugins/SmartSpawner/config.yml
+bye

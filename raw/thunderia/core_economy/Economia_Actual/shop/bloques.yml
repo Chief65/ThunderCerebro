@@ -1,0 +1,3042 @@
+bloques:
+  name: "&0&l| &0Tienda ▶ &8Bloques "
+  size: 45
+  fillItem:
+    material: GRAY_STAINED_GLASS_PANE
+    name: " "
+  buttons:
+    goBack:
+      slot: 40
+    previousPage:
+      slot: 39
+    nextPage:
+      slot: 41
+  items:
+    1:
+      type: item
+      item:
+        material: GRASS_BLOCK
+        quantity: 1
+      buyPrice: 12
+      sellPrice: 3
+      slot: 9
+    2:
+      type: item
+      item:
+        material: DIRT
+        quantity: 1
+      buyPrice: 2
+      sellPrice: 1
+      slot: 10
+    3:
+      type: item
+      item:
+        material: MYCELIUM
+        quantity: 1
+      buyPrice: 75
+      sellPrice: 4
+      slot: 11
+    4:
+      type: item
+      item:
+        material: PODZOL
+        quantity: 1
+      buyPrice: 75
+      sellPrice: 4
+      slot: 12
+    5:
+      type: item
+      item:
+        material: CRIMSON_NYLIUM
+        quantity: 1
+      buyPrice: 5
+      sellPrice: 2
+      slot: 13
+    6:
+      type: item
+      item:
+        material: WARPED_NYLIUM
+        quantity: 1
+      buyPrice: 75
+      sellPrice: 4
+      slot: 14
+    7:
+      type: item
+      item:
+        material: GRAVEL
+        quantity: 1
+      buyPrice: 50
+      sellPrice: 7
+      slot: 15
+    8:
+      type: item
+      item:
+        material: SAND
+        quantity: 1
+      buyPrice: 5
+      sellPrice: 2
+      slot: 16
+    9:
+      type: item
+      item:
+        material: RED_SAND
+        quantity: 1
+      buyPrice: 37
+      sellPrice: 4
+      slot: 17
+    10:
+      type: item
+      item:
+        material: COBBLESTONE
+        quantity: 1
+      buyPrice: 5
+      sellPrice: 1
+      slot: 18
+    11:
+      type: item
+      item:
+        material: STONE
+        quantity: 1
+      buyPrice: 7
+      sellPrice: 2
+      slot: 19
+    12:
+      type: item
+      item:
+        material: ANDESITE
+        quantity: 1
+      buyPrice: 2
+      sellPrice: 1
+      slot: 20
+    13:
+      type: item
+      item:
+        material: GRANITE
+        quantity: 1
+      buyPrice: 2
+      sellPrice: 1
+      slot: 21
+    14:
+      type: item
+      item:
+        material: DIORITE
+        quantity: 1
+      buyPrice: 2
+      sellPrice: 1
+      slot: 22
+    15:
+      type: item
+      item:
+        material: DEEPSLATE
+        quantity: 1
+      buyPrice: 15
+      sellPrice: 3
+      slot: 23
+    16:
+      type: item
+      item:
+        material: PRISMARINE
+        quantity: 1
+      buyPrice: 37
+      sellPrice: 5
+      slot: 24
+    17:
+      type: item
+      item:
+        material: PRISMARINE_BRICKS
+        quantity: 1
+      buyPrice: 37
+      sellPrice: 5
+      slot: 25
+    18:
+      type: item
+      item:
+        material: DARK_PRISMARINE
+        quantity: 1
+      buyPrice: 50
+      sellPrice: 8
+      slot: 26
+    19:
+      type: item
+      item:
+        material: OAK_LOG
+        quantity: 1
+      buyPrice: 12
+      sellPrice: 1
+      slot: 27
+    20:
+      type: item
+      item:
+        material: SPRUCE_LOG
+        quantity: 1
+      buyPrice: 12
+      sellPrice: 1
+      slot: 28
+    21:
+      type: item
+      item:
+        material: BIRCH_LOG
+        quantity: 1
+      buyPrice: 12
+      sellPrice: 1
+      slot: 29
+    22:
+      type: item
+      item:
+        material: JUNGLE_LOG
+        quantity: 1
+      buyPrice: 12
+      sellPrice: 1
+      slot: 30
+    23:
+      type: item
+      item:
+        material: ACACIA_LOG
+        quantity: 1
+      buyPrice: 12
+      sellPrice: 1
+      slot: 31
+    24:
+      type: item
+      item:
+        material: DARK_OAK_LOG
+        quantity: 1
+      buyPrice: 12
+      sellPrice: 1
+      slot: 32
+    25:
+      type: item
+      item:
+        material: MANGROVE_LOG
+        quantity: 1
+      buyPrice: 12
+      sellPrice: 1
+      slot: 33
+    26:
+      type: item
+      item:
+        material: CHERRY_LOG
+        quantity: 1
+      buyPrice: 12
+      sellPrice: 1
+      slot: 34
+    27:
+      type: item
+      item:
+        material: PALE_OAK_LOG
+        quantity: 1
+      buyPrice: 12
+      sellPrice: 1
+      slot: 35
+####################################################### PAG 2
+    28:
+      type: item
+      item:
+        material: MOSSY_COBBLESTONE
+        quantity: 1
+      buyPrice: 5
+      sellPrice: 2
+      slot: 9
+      pages:
+        - 2
+    29:
+      type: item
+      item:
+        material: MOSSY_STONE_BRICKS
+        quantity: 1
+      buyPrice: 7
+      sellPrice: 3
+      slot: 10
+      pages:
+        - 2
+    30:
+      type: item
+      item:
+        material: CALCITE
+        quantity: 1
+      buyPrice: 2
+      sellPrice: 1
+      slot: 11
+      pages:
+        - 2
+    31:
+      type: item
+      item:
+        material: BLACKSTONE
+        quantity: 1
+      buyPrice: 7
+      sellPrice: 1
+      slot: 12
+      pages:
+        - 2
+    32:
+      type: item
+      item:
+        material: TUFF
+        quantity: 1
+      buyPrice: 4
+      sellPrice: 2
+      slot: 13
+      pages:
+        - 2
+    33:
+      type: item
+      item:
+        material: TERRACOTTA
+        quantity: 1
+      buyPrice: 5
+      sellPrice: 2
+      slot: 14
+      pages:
+        - 2
+    34:
+      type: item
+      item:
+        material: BRICKS
+        quantity: 1
+      buyPrice: 7
+      sellPrice: 3
+      slot: 15
+      pages:
+        - 2
+    35:
+      type: item
+      item:
+        material: MUD_BRICKS
+        quantity: 1
+      buyPrice: 5
+      sellPrice: 2
+      slot: 16
+      pages:
+        - 2
+    36:
+      type: item
+      item:
+        material: RED_NETHER_BRICKS
+        quantity: 1
+      buyPrice: 7
+      sellPrice: 2
+      slot: 17
+      pages:
+        - 2
+    37:
+      type: item
+      item:
+        material: GLASS
+        quantity: 1
+      buyPrice: 25
+      sellPrice: 3
+      slot: 18
+      pages:
+        - 2
+    38:
+      type: item
+      item:
+        material: TINTED_GLASS
+        quantity: 1
+      buyPrice: 10
+      sellPrice: 2
+      slot: 19
+      pages:
+        - 2
+    39:
+      type: item
+      item:
+        material: BOOKSHELF
+        quantity: 1
+      buyPrice: 375
+      sellPrice: 25
+      slot: 20
+      pages:
+        - 2
+    40:
+      type: item
+      item:
+        material: HONEY_BLOCK
+        quantity: 1
+      buyPrice: 17
+      sellPrice: 3
+      slot: 21
+      pages:
+        - 2
+    41:
+      type: item
+      item:
+        material: MAGMA_BLOCK
+        quantity: 1
+      buyPrice: 17
+      sellPrice: 2
+      slot: 22
+      pages:
+        - 2
+    42:
+      type: item
+      item:
+        material: SOUL_SAND
+        quantity: 1
+      buyPrice: 7
+      sellPrice: 2
+      slot: 23
+      pages:
+        - 2
+    43:
+      type: item
+      item:
+        material: CLAY
+        quantity: 1
+      buyPrice: 7
+      sellPrice: 3
+      slot: 24
+      pages:
+        - 2
+    44:
+      type: item
+      item:
+        material: MUD
+        quantity: 1
+      buyPrice: 2
+      sellPrice: 1
+      slot: 25
+      pages:
+        - 2
+    45:
+      type: item
+      item:
+        material: PACKED_MUD
+        quantity: 1
+      buyPrice: 5
+      sellPrice: 3
+      slot: 26
+      pages:
+        - 2
+    46:
+      type: item
+      item:
+        material: SEA_LANTERN
+        quantity: 1
+      buyPrice: 35
+      sellPrice: 5
+      slot: 27
+      pages:
+        - 2
+    47:
+      type: item
+      item:
+        material: SHROOMLIGHT
+        quantity: 1
+      buyPrice: 50
+      sellPrice: 5
+      slot: 28
+      pages:
+        - 2
+    48:
+      type: item
+      item:
+        material: OCHRE_FROGLIGHT
+        quantity: 1
+      buyPrice: 50
+      sellPrice: 5
+      slot: 29
+      pages:
+        - 2
+    49:
+      type: item
+      item:
+        material: PEARLESCENT_FROGLIGHT
+        quantity: 1
+      buyPrice: 50
+      sellPrice: 5
+      slot: 30
+      pages:
+        - 2
+    50:
+      type: item
+      item:
+        material: VERDANT_FROGLIGHT
+        quantity: 1
+      buyPrice: 50
+      sellPrice: 5
+      slot: 31
+      pages:
+        - 2
+    51:
+      type: item
+      item:
+        material: AZALEA_LEAVES
+        quantity: 1
+      buyPrice: 15
+      sellPrice: 3
+      slot: 32
+      pages:
+        - 2
+    52:
+      type: item
+      item:
+        material: FLOWERING_AZALEA_LEAVES
+        quantity: 1
+      buyPrice: 15
+      sellPrice: 3
+      slot: 33
+      pages:
+        - 2
+    53:
+      type: item
+      item:
+        material: MANGROVE_LEAVES
+        quantity: 1
+      buyPrice: 15
+      sellPrice: 3
+      slot: 34
+      pages:
+        - 2
+    54:
+      type: item
+      item:
+        material: MANGROVE_ROOTS
+        quantity: 1
+      sellPrice: 3
+      buyPrice: 15
+      slot: 35
+      pages:
+        - 2
+
+####################################################### PAG 3
+    55:
+      type: item
+      item:
+        material: MUDDY_MANGROVE_ROOTS
+        quantity: 1
+      buyPrice: 7
+      sellPrice: 2
+      slot: 9
+      pages:
+        - 3
+    56:
+      type: item
+      item:
+        material: NETHERRACK
+        quantity: 1
+      buyPrice: 2
+      sellPrice: 1
+      slot: 10
+      pages:
+        - 3
+    57:
+      type: item
+      item:
+        material: NETHER_BRICKS
+        quantity: 1
+      buyPrice: 7
+      sellPrice: 2
+      slot: 11
+      pages:
+        - 3
+    58:
+      type: item
+      item:
+        material: CRACKED_NETHER_BRICKS
+        quantity: 1
+      buyPrice: 5
+      sellPrice: 1
+      slot: 12
+      pages:
+        - 3
+    59:
+      type: item
+      item:
+        material: CHISELED_NETHER_BRICKS
+        quantity: 1
+      buyPrice: 10
+      sellPrice: 3
+      slot: 13
+      pages:
+        - 3
+    60:
+      type: item
+      item:
+        material: BASALT
+        quantity: 1
+      buyPrice: 5
+      sellPrice: 1
+      slot: 14
+      pages:
+        - 3
+    61:
+      type: item
+      item:
+        material: POLISHED_BASALT
+        quantity: 1
+      buyPrice: 7
+      sellPrice: 2
+      slot: 15
+      pages:
+        - 3
+    62:
+      type: item
+      item:
+        material: SMOOTH_BASALT
+        quantity: 1
+      buyPrice: 7
+      sellPrice: 2
+      slot: 16
+      pages:
+        - 3
+    63:
+      type: item
+      item:
+        material: GILDED_BLACKSTONE
+        quantity: 1
+      buyPrice: 100
+      sellPrice: 15
+      slot: 17
+      pages:
+        - 3
+    64:
+      type: item
+      item:
+        material: POLISHED_BLACKSTONE
+        quantity: 1
+      buyPrice: 10
+      sellPrice: 2
+      slot: 18
+      pages:
+        - 3
+    65:
+      type: item
+      item:
+        material: POLISHED_BLACKSTONE_BRICKS
+        quantity: 1
+      buyPrice: 12
+      sellPrice: 3
+      slot: 19
+      pages:
+        - 3
+    66:
+      type: item
+      item:
+        material: CRACKED_POLISHED_BLACKSTONE_BRICKS
+        quantity: 1
+      buyPrice: 10
+      sellPrice: 2
+      slot: 20
+      pages:
+        - 3
+    67:
+      type: item
+      item:
+        material: CHISELED_POLISHED_BLACKSTONE
+        quantity: 1
+      buyPrice: 15
+      sellPrice: 4
+      slot: 21
+      pages:
+        - 3
+    68:
+      type: item
+      item:
+        material: END_STONE
+        quantity: 1
+      buyPrice: 25
+      sellPrice: 5
+      slot: 22
+      pages:
+        - 3
+    69:
+      type: item
+      item:
+        material: END_STONE_BRICKS
+        quantity: 1
+      buyPrice: 30
+      sellPrice: 6
+      slot: 23
+      pages:
+        - 3
+    70:
+      type: item
+      item:
+        material: PURPUR_BLOCK
+        quantity: 1
+      buyPrice: 37
+      sellPrice: 8
+      slot: 24
+      pages:
+        - 3
+    71:
+      type: item
+      item:
+        material: PURPUR_PILLAR
+        quantity: 1
+      buyPrice: 37
+      sellPrice: 8
+      slot: 25
+      pages:
+        - 3
+    72:
+      type: item
+      item:
+        material: OBSIDIAN
+        quantity: 1
+      buyPrice: 125
+      sellPrice: 20
+      slot: 26
+      pages:
+        - 3
+    73:
+      type: item
+      item:
+        material: CRYING_OBSIDIAN
+        quantity: 1
+      buyPrice: 150
+      sellPrice: 25
+      slot: 27
+      pages:
+        - 3
+    74:
+      type: item
+      item:
+        material: SMOOTH_STONE
+        quantity: 1
+      buyPrice: 10
+      sellPrice: 2
+      slot: 28
+      pages:
+        - 3
+    75:
+      type: item
+      item:
+        material: STONE_BRICKS
+        quantity: 1
+      buyPrice: 10
+      sellPrice: 3
+      slot: 29
+      pages:
+        - 3
+    76:
+      type: item
+      item:
+        material: CRACKED_STONE_BRICKS
+        quantity: 1
+      buyPrice: 7
+      sellPrice: 2
+      slot: 30
+      pages:
+        - 3
+    77:
+      type: item
+      item:
+        material: CHISELED_STONE_BRICKS
+        quantity: 1
+      buyPrice: 12
+      sellPrice: 4
+      slot: 31
+      pages:
+        - 3
+    78:
+      type: item
+      item:
+        material: POLISHED_ANDESITE
+        quantity: 1
+      buyPrice: 4
+      sellPrice: 1
+      slot: 32
+      pages:
+        - 3
+    79:
+      type: item
+      item:
+        material: POLISHED_GRANITE
+        quantity: 1
+      buyPrice: 4
+      sellPrice: 1
+      slot: 33
+      pages:
+        - 3
+    80:
+      type: item
+      item:
+        material: POLISHED_DIORITE
+        quantity: 1
+      buyPrice: 4
+      sellPrice: 1
+      slot: 34
+      pages:
+        - 3
+    81:
+      type: item
+      item:
+        material: POLISHED_DEEPSLATE
+        quantity: 1
+      buyPrice: 20
+      sellPrice: 4
+      slot: 35
+      pages:
+        - 3
+####################################################### PAG 4
+    82:
+      type: item
+      item:
+        material: DEEPSLATE_BRICKS
+        quantity: 1
+      buyPrice: 22
+      sellPrice: 5
+      slot: 9
+      pages:
+        - 4
+    83:
+      type: item
+      item:
+        material: CRACKED_DEEPSLATE_BRICKS
+        quantity: 1
+      buyPrice: 17
+      sellPrice: 4
+      slot: 10
+      pages:
+        - 4
+    84:
+      type: item
+      item:
+        material: DEEPSLATE_TILES
+        quantity: 1
+      buyPrice: 25
+      sellPrice: 5
+      slot: 11
+      pages:
+        - 4
+    85:
+      type: item
+      item:
+        material: CRACKED_DEEPSLATE_TILES
+        quantity: 1
+      buyPrice: 20
+      sellPrice: 4
+      slot: 12
+      pages:
+        - 4
+    86:
+      type: item
+      item:
+        material: CHISELED_DEEPSLATE
+        quantity: 1
+      buyPrice: 25
+      sellPrice: 6
+      slot: 13
+      pages:
+        - 4
+    87:
+      type: item
+      item:
+        material: COBBLED_DEEPSLATE
+        quantity: 1
+      buyPrice: 15
+      sellPrice: 3
+      slot: 14
+      pages:
+        - 4
+    88:
+      type: item
+      item:
+        material: TUFF_BRICKS
+        quantity: 1
+      buyPrice: 4
+      sellPrice: 2
+      slot: 15
+      pages:
+        - 4
+    89:
+      type: item
+      item:
+        material: CHISELED_TUFF
+        quantity: 1
+      buyPrice: 5
+      sellPrice: 2
+      slot: 16
+      pages:
+        - 4
+    90:
+      type: item
+      item:
+        material: POLISHED_TUFF
+        quantity: 1
+      buyPrice: 4
+      sellPrice: 2
+      slot: 17
+      pages:
+        - 4
+    91:
+      type: item
+      item:
+        material: CHISELED_TUFF_BRICKS
+        quantity: 1
+      buyPrice: 6
+      sellPrice: 2
+      slot: 18
+      pages:
+        - 4
+    92:
+      type: item
+      item:
+        material: SANDSTONE
+        quantity: 1
+      buyPrice: 7
+      sellPrice: 2
+      slot: 19
+      pages:
+        - 4
+    93:
+      type: item
+      item:
+        material: SMOOTH_SANDSTONE
+        quantity: 1
+      buyPrice: 10
+      sellPrice: 3
+      slot: 20
+      pages:
+        - 4
+    94:
+      type: item
+      item:
+        material: CHISELED_SANDSTONE
+        quantity: 1
+      buyPrice: 12
+      sellPrice: 3
+      slot: 21
+      pages:
+        - 4
+    95:
+      type: item
+      item:
+        material: CUT_SANDSTONE
+        quantity: 1
+      buyPrice: 10
+      sellPrice: 2
+      slot: 22
+      pages:
+        - 4
+    96:
+      type: item
+      item:
+        material: RED_SANDSTONE
+        quantity: 1
+      buyPrice: 10
+      sellPrice: 3
+      slot: 23
+      pages:
+        - 4
+    97:
+      type: item
+      item:
+        material: SMOOTH_RED_SANDSTONE
+        quantity: 1
+      buyPrice: 12
+      sellPrice: 3
+      slot: 24
+      pages:
+        - 4
+    98:
+      type: item
+      item:
+        material: CHISELED_RED_SANDSTONE
+        quantity: 1
+      buyPrice: 15
+      sellPrice: 4
+      slot: 25
+      pages:
+        - 4
+    99:
+      type: item
+      item:
+        material: CUT_RED_SANDSTONE
+        quantity: 1
+      buyPrice: 12
+      sellPrice: 3
+      slot: 26
+      pages:
+        - 4
+    100:
+      type: item
+      item:
+        material: QUARTZ_BLOCK
+        quantity: 1
+      buyPrice: 50
+      sellPrice: 8
+      slot: 27
+      pages:
+        - 4
+    101:
+      type: item
+      item:
+        material: SMOOTH_QUARTZ
+        quantity: 1
+      buyPrice: 55
+      sellPrice: 9
+      slot: 28
+      pages:
+        - 4
+    102:
+      type: item
+      item:
+        material: QUARTZ_PILLAR
+        quantity: 1
+      buyPrice: 55
+      sellPrice: 9
+      slot: 29
+      pages:
+        - 4
+    103:
+      type: item
+      item:
+        material: CHISELED_QUARTZ_BLOCK
+        quantity: 1
+      buyPrice: 60
+      sellPrice: 10
+      slot: 30
+      pages:
+        - 4
+    104:
+      type: item
+      item:
+        material: QUARTZ_BRICKS
+        quantity: 1
+      buyPrice: 55
+      sellPrice: 9
+      slot: 31
+      pages:
+        - 4
+    105:
+      type: item
+      item:
+        material: NETHER_QUARTZ_ORE
+        quantity: 1
+      buyPrice: 40
+      sellPrice: 6
+      slot: 32
+      pages:
+        - 4
+    106:
+      type: item
+      item:
+        material: COPPER_BLOCK
+        quantity: 1
+      buyPrice: 100
+      sellPrice: 15
+      slot: 33
+      pages:
+        - 4
+    107:
+      type: item
+      item:
+        material: EXPOSED_COPPER
+        quantity: 1
+      buyPrice: 75
+      sellPrice: 12
+      slot: 34
+      pages:
+        - 4
+    108:
+      type: item
+      item:
+        material: WEATHERED_COPPER
+        quantity: 1
+      buyPrice: 75
+      sellPrice: 12
+      slot: 35
+      pages:
+        - 4
+####################################################### PAG 5
+    109:
+      type: item
+      item:
+        material: OXIDIZED_COPPER
+        quantity: 1
+      buyPrice: 75
+      sellPrice: 12
+      slot: 9
+      pages:
+        - 5
+    110:
+      type: item
+      item:
+        material: WAXED_COPPER_BLOCK
+        quantity: 1
+      buyPrice: 125
+      sellPrice: 20
+      slot: 10
+      pages:
+        - 5
+    111:
+      type: item
+      item:
+        material: CUT_COPPER
+        quantity: 1
+      buyPrice: 110
+      sellPrice: 18
+      slot: 11
+      pages:
+        - 5
+    112:
+      type: item
+      item:
+        material: WAXED_CUT_COPPER
+        quantity: 1
+      buyPrice: 135
+      sellPrice: 22
+      slot: 12
+      pages:
+        - 5
+    113:
+      type: item
+      item:
+        material: CHISELED_COPPER
+        quantity: 1
+      buyPrice: 115
+      sellPrice: 18
+      slot: 13
+      pages:
+        - 5
+    114:
+      type: item
+      item:
+        material: COPPER_GRATE
+        quantity: 1
+      buyPrice: 110
+      sellPrice: 17
+      slot: 14
+      pages:
+        - 5
+    115:
+      type: item
+      item:
+        material: IRON_BLOCK
+        quantity: 1
+      buyPrice: 250
+      sellPrice: 40
+      slot: 15
+      pages:
+        - 5
+    116:
+      type: item
+      item:
+        material: GOLD_BLOCK
+        quantity: 1
+      buyPrice: 1000
+      sellPrice: 150
+      slot: 16
+      pages:
+        - 5
+    117:
+      type: item
+      item:
+        material: DIAMOND_BLOCK
+        quantity: 1
+      buyPrice: 4000
+      sellPrice: 600
+      slot: 17
+      pages:
+        - 5
+    118:
+      type: item
+      item:
+        material: EMERALD_BLOCK
+        quantity: 1
+      buyPrice: 2500
+      sellPrice: 400
+      slot: 18
+      pages:
+        - 5
+    119:
+      type: item
+      item:
+        material: LAPIS_BLOCK
+        quantity: 1
+      buyPrice: 750
+      sellPrice: 100
+      slot: 19
+      pages:
+        - 5
+    120:
+      type: item
+      item:
+        material: NETHERITE_BLOCK
+        quantity: 1
+      buyPrice: 25000
+      sellPrice: 4000
+      slot: 20
+      pages:
+        - 5
+    121:
+      type: item
+      item:
+        material: AMETHYST_BLOCK
+        quantity: 1
+      buyPrice: 150
+      sellPrice: -1
+      slot: 21
+      pages:
+        - 5
+    122:
+      type: item
+      item:
+        material: BUDDING_AMETHYST
+        quantity: 1
+      buyPrice: 250
+      sellPrice: -1
+      slot: 22
+      pages:
+        - 5
+    123:
+      type: item
+      item:
+        material: DRIPSTONE_BLOCK
+        quantity: 1
+      buyPrice: 10
+      sellPrice: 2
+      slot: 23
+      pages:
+        - 5
+    124:
+      type: item
+      item:
+        material: MOSS_BLOCK
+        quantity: 1
+      buyPrice: 12
+      sellPrice: 3
+      slot: 24
+      pages:
+        - 5
+    125:
+      type: item
+      item:
+        material: SCULK
+        quantity: 1
+      buyPrice: 15
+      sellPrice: 3
+      slot: 25
+      pages:
+        - 5
+    126:
+      type: item
+      item:
+        material: SCULK_VEIN
+        quantity: 1
+      buyPrice: 7
+      sellPrice: 2
+      slot: 26
+      pages:
+        - 5
+    127:
+      type: item
+      item:
+        material: SCULK_CATALYST
+        quantity: 1
+      buyPrice: 250
+      sellPrice: 40
+      slot: 27
+      pages:
+        - 5
+    128:
+      type: item
+      item:
+        material: PACKED_ICE
+        quantity: 1
+      buyPrice: 37
+      sellPrice: 5
+      slot: 28
+      pages:
+        - 5
+    129:
+      type: item
+      item:
+        material: BLUE_ICE
+        quantity: 1
+      buyPrice: 100
+      sellPrice: 15
+      slot: 29
+      pages:
+        - 5
+    130:
+      type: item
+      item:
+        material: SNOW_BLOCK
+        quantity: 1
+      buyPrice: 10
+      sellPrice: 2
+      slot: 30
+      pages:
+        - 5
+    131:
+      type: item
+      item:
+        material: WHITE_CONCRETE
+        quantity: 1
+      buyPrice: 10
+      sellPrice: 2
+      slot: 31
+      pages:
+        - 5
+    132:
+      type: item
+      item:
+        material: ORANGE_CONCRETE
+        quantity: 1
+      buyPrice: 10
+      sellPrice: 2
+      slot: 32
+      pages:
+        - 5
+    133:
+      type: item
+      item:
+        material: MAGENTA_CONCRETE
+        quantity: 1
+      buyPrice: 10
+      sellPrice: 2
+      slot: 33
+      pages:
+        - 5
+    134:
+      type: item
+      item:
+        material: LIGHT_BLUE_CONCRETE
+        quantity: 1
+      buyPrice: 10
+      sellPrice: 2
+      slot: 34
+      pages:
+        - 5
+    135:
+      type: item
+      item:
+        material: YELLOW_CONCRETE
+        quantity: 1
+      buyPrice: 10
+      sellPrice: 2
+      slot: 35
+      pages:
+        - 5
+####################################################### PAG 6
+    136:
+      type: item
+      item:
+        material: LIME_CONCRETE
+        quantity: 1
+      buyPrice: 10
+      sellPrice: 2
+      slot: 9
+      pages:
+        - 6
+    137:
+      type: item
+      item:
+        material: PINK_CONCRETE
+        quantity: 1
+      buyPrice: 10
+      sellPrice: 2
+      slot: 10
+      pages:
+        - 6
+    138:
+      type: item
+      item:
+        material: GRAY_CONCRETE
+        quantity: 1
+      buyPrice: 10
+      sellPrice: 2
+      slot: 11
+      pages:
+        - 6
+    139:
+      type: item
+      item:
+        material: LIGHT_GRAY_CONCRETE
+        quantity: 1
+      buyPrice: 10
+      sellPrice: 2
+      slot: 12
+      pages:
+        - 6
+    140:
+      type: item
+      item:
+        material: CYAN_CONCRETE
+        quantity: 1
+      buyPrice: 10
+      sellPrice: 2
+      slot: 13
+      pages:
+        - 6
+    141:
+      type: item
+      item:
+        material: PURPLE_CONCRETE
+        quantity: 1
+      buyPrice: 10
+      sellPrice: 2
+      slot: 14
+      pages:
+        - 6
+    142:
+      type: item
+      item:
+        material: BLUE_CONCRETE
+        quantity: 1
+      buyPrice: 10
+      sellPrice: 2
+      slot: 15
+      pages:
+        - 6
+    143:
+      type: item
+      item:
+        material: BROWN_CONCRETE
+        quantity: 1
+      buyPrice: 10
+      sellPrice: 2
+      slot: 16
+      pages:
+        - 6
+    144:
+      type: item
+      item:
+        material: GREEN_CONCRETE
+        quantity: 1
+      buyPrice: 10
+      sellPrice: 2
+      slot: 17
+      pages:
+        - 6
+    145:
+      type: item
+      item:
+        material: RED_CONCRETE
+        quantity: 1
+      buyPrice: 10
+      sellPrice: 2
+      slot: 18
+      pages:
+        - 6
+    146:
+      type: item
+      item:
+        material: BLACK_CONCRETE
+        quantity: 1
+      buyPrice: 10
+      sellPrice: 2
+      slot: 19
+      pages:
+        - 6
+    147:
+      type: item
+      item:
+        material: WHITE_TERRACOTTA
+        quantity: 1
+      buyPrice: 7
+      sellPrice: 2
+      slot: 20
+      pages:
+        - 6
+    148:
+      type: item
+      item:
+        material: ORANGE_TERRACOTTA
+        quantity: 1
+      buyPrice: 7
+      sellPrice: 2
+      slot: 21
+      pages:
+        - 6
+    149:
+      type: item
+      item:
+        material: MAGENTA_TERRACOTTA
+        quantity: 1
+      buyPrice: 7
+      sellPrice: 2
+      slot: 22
+      pages:
+        - 6
+    150:
+      type: item
+      item:
+        material: LIGHT_BLUE_TERRACOTTA
+        quantity: 1
+      buyPrice: 7
+      sellPrice: 2
+      slot: 23
+      pages:
+        - 6
+    151:
+      type: item
+      item:
+        material: YELLOW_TERRACOTTA
+        quantity: 1
+      buyPrice: 7
+      sellPrice: 2
+      slot: 24
+      pages:
+        - 6
+    152:
+      type: item
+      item:
+        material: LIME_TERRACOTTA
+        quantity: 1
+      buyPrice: 7
+      sellPrice: 2
+      slot: 25
+      pages:
+        - 6
+    153:
+      type: item
+      item:
+        material: PINK_TERRACOTTA
+        quantity: 1
+      buyPrice: 7
+      sellPrice: 2
+      slot: 26
+      pages:
+        - 6
+    154:
+      type: item
+      item:
+        material: GRAY_TERRACOTTA
+        quantity: 1
+      buyPrice: 7
+      sellPrice: 2
+      slot: 27
+      pages:
+        - 6
+    155:
+      type: item
+      item:
+        material: LIGHT_GRAY_TERRACOTTA
+        quantity: 1
+      buyPrice: 7
+      sellPrice: 2
+      slot: 28
+      pages:
+        - 6
+    156:
+      type: item
+      item:
+        material: CYAN_TERRACOTTA
+        quantity: 1
+      buyPrice: 7
+      sellPrice: 2
+      slot: 29
+      pages:
+        - 6
+    157:
+      type: item
+      item:
+        material: PURPLE_TERRACOTTA
+        quantity: 1
+      buyPrice: 7
+      sellPrice: 2
+      slot: 30
+      pages:
+        - 6
+    158:
+      type: item
+      item:
+        material: BLUE_TERRACOTTA
+        quantity: 1
+      buyPrice: 7
+      sellPrice: 2
+      slot: 31
+      pages:
+        - 6
+    159:
+      type: item
+      item:
+        material: BROWN_TERRACOTTA
+        quantity: 1
+      buyPrice: 7
+      sellPrice: 2
+      slot: 32
+      pages:
+        - 6
+    160:
+      type: item
+      item:
+        material: GREEN_TERRACOTTA
+        quantity: 1
+      buyPrice: 7
+      sellPrice: 2
+      slot: 33
+      pages:
+        - 6
+    161:
+      type: item
+      item:
+        material: RED_TERRACOTTA
+        quantity: 1
+      buyPrice: 7
+      sellPrice: 2
+      slot: 34
+      pages:
+        - 6
+    162:
+      type: item
+      item:
+        material: BLACK_TERRACOTTA
+        quantity: 1
+      buyPrice: 7
+      sellPrice: 2
+      slot: 35
+      pages:
+        - 6
+####################################################### PAG 7
+    163:
+      type: item
+      item:
+        material: WHITE_GLAZED_TERRACOTTA
+        quantity: 1
+      buyPrice: 12
+      sellPrice: 3
+      slot: 9
+      pages:
+        - 7
+    164:
+      type: item
+      item:
+        material: ORANGE_GLAZED_TERRACOTTA
+        quantity: 1
+      buyPrice: 12
+      sellPrice: 3
+      slot: 10
+      pages:
+        - 7
+    165:
+      type: item
+      item:
+        material: MAGENTA_GLAZED_TERRACOTTA
+        quantity: 1
+      buyPrice: 12
+      sellPrice: 3
+      slot: 11
+      pages:
+        - 7
+    166:
+      type: item
+      item:
+        material: LIGHT_BLUE_GLAZED_TERRACOTTA
+        quantity: 1
+      buyPrice: 12
+      sellPrice: 3
+      slot: 12
+      pages:
+        - 7
+    167:
+      type: item
+      item:
+        material: YELLOW_GLAZED_TERRACOTTA
+        quantity: 1
+      buyPrice: 12
+      sellPrice: 3
+      slot: 13
+      pages:
+        - 7
+    168:
+      type: item
+      item:
+        material: LIME_GLAZED_TERRACOTTA
+        quantity: 1
+      buyPrice: 12
+      sellPrice: 3
+      slot: 14
+      pages:
+        - 7
+    169:
+      type: item
+      item:
+        material: PINK_GLAZED_TERRACOTTA
+        quantity: 1
+      buyPrice: 12
+      sellPrice: 3
+      slot: 15
+      pages:
+        - 7
+    170:
+      type: item
+      item:
+        material: GRAY_GLAZED_TERRACOTTA
+        quantity: 1
+      buyPrice: 12
+      sellPrice: 3
+      slot: 16
+      pages:
+        - 7
+    171:
+      type: item
+      item:
+        material: LIGHT_GRAY_GLAZED_TERRACOTTA
+        quantity: 1
+      buyPrice: 12
+      sellPrice: 3
+      slot: 17
+      pages:
+        - 7
+    172:
+      type: item
+      item:
+        material: CYAN_GLAZED_TERRACOTTA
+        quantity: 1
+      buyPrice: 12
+      sellPrice: 3
+      slot: 18
+      pages:
+        - 7
+    173:
+      type: item
+      item:
+        material: PURPLE_GLAZED_TERRACOTTA
+        quantity: 1
+      buyPrice: 12
+      sellPrice: 3
+      slot: 19
+      pages:
+        - 7
+    174:
+      type: item
+      item:
+        material: BLUE_GLAZED_TERRACOTTA
+        quantity: 1
+      buyPrice: 12
+      sellPrice: 3
+      slot: 20
+      pages:
+        - 7
+    175:
+      type: item
+      item:
+        material: BROWN_GLAZED_TERRACOTTA
+        quantity: 1
+      buyPrice: 12
+      sellPrice: 3
+      slot: 21
+      pages:
+        - 7
+    176:
+      type: item
+      item:
+        material: GREEN_GLAZED_TERRACOTTA
+        quantity: 1
+      buyPrice: 12
+      sellPrice: 3
+      slot: 22
+      pages:
+        - 7
+    177:
+      type: item
+      item:
+        material: RED_GLAZED_TERRACOTTA
+        quantity: 1
+      buyPrice: 12
+      sellPrice: 3
+      slot: 23
+      pages:
+        - 7
+    178:
+      type: item
+      item:
+        material: BLACK_GLAZED_TERRACOTTA
+        quantity: 1
+      buyPrice: 12
+      sellPrice: 3
+      slot: 24
+      pages:
+        - 7
+    179:
+      type: item
+      item:
+        material: WHITE_WOOL
+        quantity: 1
+      buyPrice: 10
+      sellPrice: 2
+      slot: 25
+      pages:
+        - 7
+    180:
+      type: item
+      item:
+        material: ORANGE_WOOL
+        quantity: 1
+      buyPrice: 10
+      sellPrice: 2
+      slot: 26
+      pages:
+        - 7
+    181:
+      type: item
+      item:
+        material: MAGENTA_WOOL
+        quantity: 1
+      buyPrice: 10
+      sellPrice: 2
+      slot: 27
+      pages:
+        - 7
+    182:
+      type: item
+      item:
+        material: LIGHT_BLUE_WOOL
+        quantity: 1
+      buyPrice: 10
+      sellPrice: 2
+      slot: 28
+      pages:
+        - 7
+    183:
+      type: item
+      item:
+        material: YELLOW_WOOL
+        quantity: 1
+      buyPrice: 10
+      sellPrice: 2
+      slot: 29
+      pages:
+        - 7
+    184:
+      type: item
+      item:
+        material: LIME_WOOL
+        quantity: 1
+      buyPrice: 10
+      sellPrice: 2
+      slot: 30
+      pages:
+        - 7
+    185:
+      type: item
+      item:
+        material: PINK_WOOL
+        quantity: 1
+      buyPrice: 10
+      sellPrice: 2
+      slot: 31
+      pages:
+        - 7
+    186:
+      type: item
+      item:
+        material: GRAY_WOOL
+        quantity: 1
+      buyPrice: 10
+      sellPrice: 2
+      slot: 32
+      pages:
+        - 7
+    187:
+      type: item
+      item:
+        material: LIGHT_GRAY_WOOL
+        quantity: 1
+      buyPrice: 10
+      sellPrice: 2
+      slot: 33
+      pages:
+        - 7
+    188:
+      type: item
+      item:
+        material: CYAN_WOOL
+        quantity: 1
+      buyPrice: 10
+      sellPrice: 2
+      slot: 34
+      pages:
+        - 7
+    189:
+      type: item
+      item:
+        material: PURPLE_WOOL
+        quantity: 1
+      buyPrice: 10
+      sellPrice: 2
+      slot: 35
+      pages:
+        - 7
+####################################################### PAG 8
+    190:
+      type: item
+      item:
+        material: BLUE_WOOL
+        quantity: 1
+      buyPrice: 10
+      sellPrice: 2
+      slot: 9
+      pages:
+        - 8
+    191:
+      type: item
+      item:
+        material: BROWN_WOOL
+        quantity: 1
+      buyPrice: 10
+      sellPrice: 2
+      slot: 10
+      pages:
+        - 8
+    192:
+      type: item
+      item:
+        material: GREEN_WOOL
+        quantity: 1
+      buyPrice: 10
+      sellPrice: 2
+      slot: 11
+      pages:
+        - 8
+    193:
+      type: item
+      item:
+        material: RED_WOOL
+        quantity: 1
+      buyPrice: 10
+      sellPrice: 2
+      slot: 12
+      pages:
+        - 8
+    194:
+      type: item
+      item:
+        material: BLACK_WOOL
+        quantity: 1
+      buyPrice: 10
+      sellPrice: 2
+      slot: 13
+      pages:
+        - 8
+    195:
+      type: item
+      item:
+        material: SPONGE
+        quantity: 1
+      buyPrice: 250
+      sellPrice: 30
+      slot: 14
+      pages:
+        - 8
+    196:
+      type: item
+      item:
+        material: WET_SPONGE
+        quantity: 1
+      buyPrice: 250
+      sellPrice: 30
+      slot: 15
+      pages:
+        - 8
+    197:
+      type: item
+      item:
+        material: HAY_BLOCK
+        quantity: 1
+      buyPrice: 200
+      sellPrice: 3
+      slot: 16
+      pages:
+        - 8
+    198:
+      type: item
+      item:
+        material: SLIME_BLOCK
+        quantity: 1
+      buyPrice: 200
+      sellPrice: 15
+      slot: 17
+      pages:
+        - 8
+    199:
+      type: item
+      item:
+        material: BONE_BLOCK
+        quantity: 1
+      buyPrice: 25
+      sellPrice: 4
+      slot: 18
+      pages:
+        - 8
+    200:
+      type: item
+      item:
+        material: DRIED_KELP_BLOCK
+        quantity: 1
+      buyPrice: 10
+      sellPrice: 2
+      slot: 19
+      pages:
+        - 8
+    201:
+      type: item
+      item:
+        material: COAL_BLOCK
+        quantity: 1
+      buyPrice: 50
+      sellPrice: 8
+      slot: 20
+      pages:
+        - 8
+    202:
+      type: item
+      item:
+        material: REDSTONE_BLOCK
+        quantity: 1
+      buyPrice: 200
+      sellPrice: 30
+      slot: 21
+      pages:
+        - 8
+    203:
+      type: item
+      item:
+        material: GLOWSTONE
+        quantity: 1
+      buyPrice: 75
+      sellPrice: 10
+      slot: 22
+      pages:
+        - 8
+    204:
+      type: item
+      item:
+        material: NETHER_WART_BLOCK
+        quantity: 1
+      buyPrice: 15
+      sellPrice: 3
+      slot: 23
+      pages:
+        - 8
+    205:
+      type: item
+      item:
+        material: WARPED_WART_BLOCK
+        quantity: 1
+      buyPrice: 15
+      sellPrice: 3
+      slot: 24
+      pages:
+        - 8
+    206:
+      type: item
+      item:
+        material: CRIMSON_STEM
+        quantity: 1
+      buyPrice: 12
+      sellPrice: 2
+      slot: 25
+      pages:
+        - 8
+    207:
+      type: item
+      item:
+        material: WARPED_STEM
+        quantity: 1
+      buyPrice: 12
+      sellPrice: 2
+      slot: 26
+      pages:
+        - 8
+    208:
+      type: item
+      item:
+        material: STRIPPED_CRIMSON_STEM
+        quantity: 1
+      buyPrice: 12
+      sellPrice: 2
+      slot: 27
+      pages:
+        - 8
+    209:
+      type: item
+      item:
+        material: STRIPPED_WARPED_STEM
+        quantity: 1
+      buyPrice: 12
+      sellPrice: 2
+      slot: 28
+      pages:
+        - 8
+    210:
+      type: item
+      item:
+        material: CRIMSON_HYPHAE
+        quantity: 1
+      buyPrice: 10
+      sellPrice: 2
+      slot: 29
+      pages:
+        - 8
+    211:
+      type: item
+      item:
+        material: WARPED_HYPHAE
+        quantity: 1
+      buyPrice: 10
+      sellPrice: 2
+      slot: 30
+      pages:
+        - 8
+    212:
+      type: item
+      item:
+        material: STRIPPED_OAK_LOG
+        quantity: 1
+      buyPrice: 12
+      sellPrice: 1
+      slot: 31
+      pages:
+        - 8
+    213:
+      type: item
+      item:
+        material: STRIPPED_SPRUCE_LOG
+        quantity: 1
+      buyPrice: 12
+      sellPrice: 1
+      slot: 32
+      pages:
+        - 8
+    214:
+      type: item
+      item:
+        material: STRIPPED_BIRCH_LOG
+        quantity: 1
+      buyPrice: 12
+      sellPrice: 1
+      slot: 33
+      pages:
+        - 8
+    215:
+      type: item
+      item:
+        material: STRIPPED_JUNGLE_LOG
+        quantity: 1
+      buyPrice: 12
+      sellPrice: 1
+      slot: 34
+      pages:
+        - 8
+    216:
+      type: item
+      item:
+        material: STRIPPED_ACACIA_LOG
+        quantity: 1
+      buyPrice: 12
+      sellPrice: 1
+      slot: 35
+      pages:
+        - 8
+####################################################### PAG 9
+    217:
+      type: item
+      item:
+        material: STRIPPED_DARK_OAK_LOG
+        quantity: 1
+      buyPrice: 12
+      sellPrice: 1
+      slot: 9
+      pages:
+        - 9
+    218:
+      type: item
+      item:
+        material: STRIPPED_MANGROVE_LOG
+        quantity: 1
+      buyPrice: 12
+      sellPrice: 1
+      slot: 10
+      pages:
+        - 9
+    219:
+      type: item
+      item:
+        material: STRIPPED_CHERRY_LOG
+        quantity: 1
+      buyPrice: 12
+      sellPrice: 1
+      slot: 11
+      pages:
+        - 9
+    220:
+      type: item
+      item:
+        material: STRIPPED_PALE_OAK_LOG
+        quantity: 1
+      buyPrice: 12
+      sellPrice: 1
+      slot: 12
+      pages:
+        - 9
+    221:
+      type: item
+      item:
+        material: OAK_WOOD
+        quantity: 1
+      buyPrice: 10
+      sellPrice: 1
+      slot: 13
+      pages:
+        - 9
+    222:
+      type: item
+      item:
+        material: SPRUCE_WOOD
+        quantity: 1
+      buyPrice: 10
+      sellPrice: 1
+      slot: 14
+      pages:
+        - 9
+    223:
+      type: item
+      item:
+        material: BIRCH_WOOD
+        quantity: 1
+      buyPrice: 10
+      sellPrice: 1
+      slot: 15
+      pages:
+        - 9
+    224:
+      type: item
+      item:
+        material: JUNGLE_WOOD
+        quantity: 1
+      buyPrice: 10
+      sellPrice: 1
+      slot: 16
+      pages:
+        - 9
+    225:
+      type: item
+      item:
+        material: ACACIA_WOOD
+        quantity: 1
+      buyPrice: 10
+      sellPrice: 1
+      slot: 17
+      pages:
+        - 9
+    226:
+      type: item
+      item:
+        material: DARK_OAK_WOOD
+        quantity: 1
+      buyPrice: 10
+      sellPrice: 1
+      slot: 18
+      pages:
+        - 9
+    227:
+      type: item
+      item:
+        material: MANGROVE_WOOD
+        quantity: 1
+      buyPrice: 10
+      sellPrice: 1
+      slot: 19
+      pages:
+        - 9
+    228:
+      type: item
+      item:
+        material: CHERRY_WOOD
+        quantity: 1
+      buyPrice: 10
+      sellPrice: 1
+      slot: 20
+      pages:
+        - 9
+    229:
+      type: item
+      item:
+        material: PALE_OAK_WOOD
+        quantity: 1
+      buyPrice: 10
+      sellPrice: 1
+      slot: 21
+      pages:
+        - 9
+    230:
+      type: item
+      item:
+        material: NETHER_BRICK
+        quantity: 1
+      buyPrice: 2
+      sellPrice: 1
+      slot: 22
+      pages:
+        - 9
+    231:
+      type: item
+      item:
+        material: SOUL_SOIL
+        quantity: 1
+      buyPrice: 7
+      sellPrice: 2
+      slot: 23
+      pages:
+        - 9
+    232:
+      type: item
+      item:
+        material: ANCIENT_DEBRIS
+        quantity: 1
+      buyPrice: 5000
+      sellPrice: 800
+      slot: 24
+      pages:
+        - 9
+    233:
+      type: item
+      item:
+        material: RAW_IRON_BLOCK
+        quantity: 1
+      buyPrice: 200
+      sellPrice: 30
+      slot: 25
+      pages:
+        - 9
+    234:
+      type: item
+      item:
+        material: RAW_GOLD_BLOCK
+        quantity: 1
+      buyPrice: 750
+      sellPrice: 100
+      slot: 26
+      pages:
+        - 9
+    235:
+      type: item
+      item:
+        material: RAW_COPPER_BLOCK
+        quantity: 1
+      buyPrice: 75
+      sellPrice: 12
+      slot: 27
+      pages:
+        - 9
+    236:
+      type: item
+      item:
+        material: RESIN_BLOCK
+        quantity: 1
+      buyPrice: 40
+      sellPrice: 6
+      slot: 28
+      pages:
+        - 9
+    237:
+      type: item
+      item:
+        material: RESIN_BRICKS
+        quantity: 1
+      buyPrice: 45
+      sellPrice: 7
+      slot: 29
+      pages:
+        - 9
+    238:
+      type: item
+      item:
+        material: CHISELED_RESIN_BRICKS
+        quantity: 1
+      buyPrice: 50
+      sellPrice: 8
+      slot: 30
+      pages:
+        - 9
+####################################################### PAG 10 - Tablones y hojas
+    239:
+      type: item
+      item:
+        material: OAK_PLANKS
+        quantity: 1
+      buyPrice: 5
+      sellPrice: 1
+      slot: 9
+      pages:
+        - 10
+    240:
+      type: item
+      item:
+        material: SPRUCE_PLANKS
+        quantity: 1
+      buyPrice: 5
+      sellPrice: 1
+      slot: 10
+      pages:
+        - 10
+    241:
+      type: item
+      item:
+        material: BIRCH_PLANKS
+        quantity: 1
+      buyPrice: 5
+      sellPrice: 1
+      slot: 11
+      pages:
+        - 10
+    242:
+      type: item
+      item:
+        material: JUNGLE_PLANKS
+        quantity: 1
+      buyPrice: 5
+      sellPrice: 1
+      slot: 12
+      pages:
+        - 10
+    243:
+      type: item
+      item:
+        material: ACACIA_PLANKS
+        quantity: 1
+      buyPrice: 5
+      sellPrice: 1
+      slot: 13
+      pages:
+        - 10
+    244:
+      type: item
+      item:
+        material: DARK_OAK_PLANKS
+        quantity: 1
+      buyPrice: 5
+      sellPrice: 1
+      slot: 14
+      pages:
+        - 10
+    245:
+      type: item
+      item:
+        material: MANGROVE_PLANKS
+        quantity: 1
+      buyPrice: 5
+      sellPrice: 1
+      slot: 15
+      pages:
+        - 10
+    246:
+      type: item
+      item:
+        material: CHERRY_PLANKS
+        quantity: 1
+      buyPrice: 5
+      sellPrice: 1
+      slot: 16
+      pages:
+        - 10
+    247:
+      type: item
+      item:
+        material: BAMBOO_PLANKS
+        quantity: 1
+      buyPrice: 5
+      sellPrice: 1
+      slot: 17
+      pages:
+        - 10
+    248:
+      type: item
+      item:
+        material: BAMBOO_MOSAIC
+        quantity: 1
+      buyPrice: 10
+      sellPrice: 2
+      slot: 18
+      pages:
+        - 10
+    249:
+      type: item
+      item:
+        material: CRIMSON_PLANKS
+        quantity: 1
+      buyPrice: 5
+      sellPrice: 1
+      slot: 19
+      pages:
+        - 10
+    250:
+      type: item
+      item:
+        material: WARPED_PLANKS
+        quantity: 1
+      buyPrice: 5
+      sellPrice: 1
+      slot: 20
+      pages:
+        - 10
+    251:
+      type: item
+      item:
+        material: BAMBOO_BLOCK
+        quantity: 1
+      buyPrice: 7
+      sellPrice: 1
+      slot: 21
+      pages:
+        - 10
+    252:
+      type: item
+      item:
+        material: STRIPPED_BAMBOO_BLOCK
+        quantity: 1
+      buyPrice: 7
+      sellPrice: 1
+      slot: 22
+      pages:
+        - 10
+    253:
+      type: item
+      item:
+        material: OAK_LEAVES
+        quantity: 1
+      buyPrice: 2
+      sellPrice: 1
+      slot: 23
+      pages:
+        - 10
+    254:
+      type: item
+      item:
+        material: SPRUCE_LEAVES
+        quantity: 1
+      buyPrice: 2
+      sellPrice: 1
+      slot: 24
+      pages:
+        - 10
+    255:
+      type: item
+      item:
+        material: BIRCH_LEAVES
+        quantity: 1
+      buyPrice: 2
+      sellPrice: 1
+      slot: 25
+      pages:
+        - 10
+    256:
+      type: item
+      item:
+        material: JUNGLE_LEAVES
+        quantity: 1
+      buyPrice: 2
+      sellPrice: 1
+      slot: 26
+      pages:
+        - 10
+    257:
+      type: item
+      item:
+        material: ACACIA_LEAVES
+        quantity: 1
+      buyPrice: 2
+      sellPrice: 1
+      slot: 27
+      pages:
+        - 10
+    258:
+      type: item
+      item:
+        material: DARK_OAK_LEAVES
+        quantity: 1
+      buyPrice: 2
+      sellPrice: 1
+      slot: 28
+      pages:
+        - 10
+    259:
+      type: item
+      item:
+        material: CHERRY_LEAVES
+        quantity: 1
+      buyPrice: 5
+      sellPrice: 1
+      slot: 29
+      pages:
+        - 10
+    260:
+      type: item
+      item:
+        material: STRIPPED_OAK_WOOD
+        quantity: 1
+      buyPrice: 10
+      sellPrice: 1
+      slot: 30
+      pages:
+        - 10
+    261:
+      type: item
+      item:
+        material: STRIPPED_SPRUCE_WOOD
+        quantity: 1
+      buyPrice: 10
+      sellPrice: 1
+      slot: 31
+      pages:
+        - 10
+    262:
+      type: item
+      item:
+        material: STRIPPED_BIRCH_WOOD
+        quantity: 1
+      buyPrice: 10
+      sellPrice: 1
+      slot: 32
+      pages:
+        - 10
+    263:
+      type: item
+      item:
+        material: STRIPPED_JUNGLE_WOOD
+        quantity: 1
+      buyPrice: 10
+      sellPrice: 1
+      slot: 33
+      pages:
+        - 10
+    264:
+      type: item
+      item:
+        material: STRIPPED_ACACIA_WOOD
+        quantity: 1
+      buyPrice: 10
+      sellPrice: 1
+      slot: 34
+      pages:
+        - 10
+    265:
+      type: item
+      item:
+        material: STRIPPED_DARK_OAK_WOOD
+        quantity: 1
+      buyPrice: 10
+      sellPrice: 1
+      slot: 35
+      pages:
+        - 10
+####################################################### PAG 11 - Stripped wood restantes + varios
+    266:
+      type: item
+      item:
+        material: STRIPPED_MANGROVE_WOOD
+        quantity: 1
+      buyPrice: 10
+      sellPrice: 1
+      slot: 9
+      pages:
+        - 11
+    267:
+      type: item
+      item:
+        material: STRIPPED_CHERRY_WOOD
+        quantity: 1
+      buyPrice: 10
+      sellPrice: 1
+      slot: 10
+      pages:
+        - 11
+    268:
+      type: item
+      item:
+        material: STRIPPED_CRIMSON_HYPHAE
+        quantity: 1
+      buyPrice: 10
+      sellPrice: 2
+      slot: 11
+      pages:
+        - 11
+    269:
+      type: item
+      item:
+        material: STRIPPED_WARPED_HYPHAE
+        quantity: 1
+      buyPrice: 10
+      sellPrice: 2
+      slot: 12
+      pages:
+        - 11
+    270:
+      type: item
+      item:
+        material: CHISELED_BOOKSHELF
+        quantity: 1
+      buyPrice: 250
+      sellPrice: 20
+      slot: 13
+      pages:
+        - 11
+    271:
+      type: item
+      item:
+        material: DECORATED_POT
+        quantity: 1
+      buyPrice: 50
+      sellPrice: 5
+      slot: 14
+      pages:
+        - 11
+    272:
+      type: item
+      item:
+        material: PITCHER_PLANT
+        quantity: 1
+      buyPrice: 25
+      sellPrice: 4
+      slot: 15
+      pages:
+        - 11
+    273:
+      type: item
+      item:
+        material: TORCHFLOWER
+        quantity: 1
+      buyPrice: 20
+      sellPrice: 3
+      slot: 16
+      pages:
+        - 11
+    274:
+      type: item
+      item:
+        material: PINK_PETALS
+        quantity: 1
+      buyPrice: 10
+      sellPrice: 2
+      slot: 17
+      pages:
+        - 11
+    275:
+      type: item
+      item:
+        material: SUSPICIOUS_SAND
+        quantity: 1
+      buyPrice: 25
+      sellPrice: 5
+      slot: 18
+      pages:
+        - 11
+    276:
+      type: item
+      item:
+        material: SUSPICIOUS_GRAVEL
+        quantity: 1
+      buyPrice: 25
+      sellPrice: 5
+      slot: 19
+      pages:
+        - 11
+    277:
+      type: item
+      item:
+        material: CHISELED_COPPER
+        quantity: 1
+      buyPrice: 115
+      sellPrice: 18
+      slot: 20
+      pages:
+        - 11
+    278:
+      type: item
+      item:
+        material: EXPOSED_CHISELED_COPPER
+        quantity: 1
+      buyPrice: 90
+      sellPrice: 14
+      slot: 21
+      pages:
+        - 11
+    279:
+      type: item
+      item:
+        material: WEATHERED_CHISELED_COPPER
+        quantity: 1
+      buyPrice: 90
+      sellPrice: 14
+      slot: 22
+      pages:
+        - 11
+    280:
+      type: item
+      item:
+        material: OXIDIZED_CHISELED_COPPER
+        quantity: 1
+      buyPrice: 90
+      sellPrice: 14
+      slot: 23
+      pages:
+        - 11
+    281:
+      type: item
+      item:
+        material: WAXED_CHISELED_COPPER
+        quantity: 1
+      buyPrice: 140
+      sellPrice: 22
+      slot: 24
+      pages:
+        - 11
+    282:
+      type: item
+      item:
+        material: WAXED_EXPOSED_CHISELED_COPPER
+        quantity: 1
+      buyPrice: 115
+      sellPrice: 18
+      slot: 25
+      pages:
+        - 11
+    283:
+      type: item
+      item:
+        material: WAXED_WEATHERED_CHISELED_COPPER
+        quantity: 1
+      buyPrice: 115
+      sellPrice: 18
+      slot: 26
+      pages:
+        - 11
+    284:
+      type: item
+      item:
+        material: WAXED_OXIDIZED_CHISELED_COPPER
+        quantity: 1
+      buyPrice: 115
+      sellPrice: 18
+      slot: 27
+      pages:
+        - 11
+    285:
+      type: item
+      item:
+        material: EXPOSED_CUT_COPPER
+        quantity: 1
+      buyPrice: 85
+      sellPrice: 14
+      slot: 28
+      pages:
+        - 11
+    286:
+      type: item
+      item:
+        material: WEATHERED_CUT_COPPER
+        quantity: 1
+      buyPrice: 85
+      sellPrice: 14
+      slot: 29
+      pages:
+        - 11
+    287:
+      type: item
+      item:
+        material: OXIDIZED_CUT_COPPER
+        quantity: 1
+      buyPrice: 85
+      sellPrice: 14
+      slot: 30
+      pages:
+        - 11
+    288:
+      type: item
+      item:
+        material: WAXED_EXPOSED_CUT_COPPER
+        quantity: 1
+      buyPrice: 110
+      sellPrice: 18
+      slot: 31
+      pages:
+        - 11
+    289:
+      type: item
+      item:
+        material: WAXED_WEATHERED_CUT_COPPER
+        quantity: 1
+      buyPrice: 110
+      sellPrice: 18
+      slot: 32
+      pages:
+        - 11
+    290:
+      type: item
+      item:
+        material: WAXED_OXIDIZED_CUT_COPPER
+        quantity: 1
+      buyPrice: 110
+      sellPrice: 18
+      slot: 33
+      pages:
+        - 11
+    291:
+      type: item
+      item:
+        material: EXPOSED_COPPER_GRATE
+        quantity: 1
+      buyPrice: 85
+      sellPrice: 14
+      slot: 34
+      pages:
+        - 11
+    292:
+      type: item
+      item:
+        material: WEATHERED_COPPER_GRATE
+        quantity: 1
+      buyPrice: 85
+      sellPrice: 14
+      slot: 35
+      pages:
+        - 11
+####################################################### PAG 12 - Copper grates restantes + bloques finales
+    293:
+      type: item
+      item:
+        material: OXIDIZED_COPPER_GRATE
+        quantity: 1
+      buyPrice: 85
+      sellPrice: 14
+      slot: 9
+      pages:
+        - 12
+    294:
+      type: item
+      item:
+        material: WAXED_COPPER_GRATE
+        quantity: 1
+      buyPrice: 135
+      sellPrice: 22
+      slot: 10
+      pages:
+        - 12
+    295:
+      type: item
+      item:
+        material: WAXED_EXPOSED_COPPER_GRATE
+        quantity: 1
+      buyPrice: 110
+      sellPrice: 18
+      slot: 11
+      pages:
+        - 12
+    296:
+      type: item
+      item:
+        material: WAXED_WEATHERED_COPPER_GRATE
+        quantity: 1
+      buyPrice: 110
+      sellPrice: 18
+      slot: 12
+      pages:
+        - 12
+    297:
+      type: item
+      item:
+        material: WAXED_OXIDIZED_COPPER_GRATE
+        quantity: 1
+      buyPrice: 110
+      sellPrice: 18
+      slot: 13
+      pages:
+        - 12
+    298:
+      type: item
+      item:
+        material: EXPOSED_COPPER_BULB
+        quantity: 1
+      buyPrice: 85
+      sellPrice: 14
+      slot: 14
+      pages:
+        - 12
+    299:
+      type: item
+      item:
+        material: WEATHERED_COPPER_BULB
+        quantity: 1
+      buyPrice: 85
+      sellPrice: 14
+      slot: 15
+      pages:
+        - 12
+    300:
+      type: item
+      item:
+        material: OXIDIZED_COPPER_BULB
+        quantity: 1
+      buyPrice: 85
+      sellPrice: 14
+      slot: 16
+      pages:
+        - 12
+    301:
+      type: item
+      item:
+        material: COPPER_BULB
+        quantity: 1
+      buyPrice: 110
+      sellPrice: 18
+      slot: 17
+      pages:
+        - 12
+    302:
+      type: item
+      item:
+        material: WAXED_COPPER_BULB
+        quantity: 1
+      buyPrice: 135
+      sellPrice: 22
+      slot: 18
+      pages:
+        - 12
+    303:
+      type: item
+      item:
+        material: WAXED_EXPOSED_COPPER_BULB
+        quantity: 1
+      buyPrice: 110
+      sellPrice: 18
+      slot: 19
+      pages:
+        - 12
+    304:
+      type: item
+      item:
+        material: WAXED_WEATHERED_COPPER_BULB
+        quantity: 1
+      buyPrice: 110
+      sellPrice: 18
+      slot: 20
+      pages:
+        - 12
+    305:
+      type: item
+      item:
+        material: WAXED_OXIDIZED_COPPER_BULB
+        quantity: 1
+      buyPrice: 110
+      sellPrice: 18
+      slot: 21
+      pages:
+        - 12
+    306:
+      type: item
+      item:
+        material: CRAFTER
+        quantity: 1
+      buyPrice: 750
+      sellPrice: 100
+      slot: 22
+      pages:
+        - 12
+    307:
+      type: item
+      item:
+        material: COBBLED_DEEPSLATE
+        quantity: 1
+      buyPrice: 10
+      sellPrice: 1
+      slot: 23
+      pages:
+        - 12

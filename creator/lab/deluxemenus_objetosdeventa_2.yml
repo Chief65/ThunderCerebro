@@ -1,0 +1,293 @@
+menu_title: '&0&l|&r &0Mercado ▶ &8Mob Drops &7[2/2]'
+open_command:
+  - objetosdeventa_2
+  - objetosventa_2
+size: 54
+open_requirement:
+  requirements: {}
+register_command: true
+update: true
+
+items:
+  'Marco_Top':
+    material: GRAY_STAINED_GLASS_PANE
+    display_name: ' '
+    slots:
+      - 0
+      - 1
+      - 2
+      - 3
+      - 5
+      - 6
+      - 7
+      - 8
+
+  'Cabecera_Info':
+    material: SPAWNER
+    slot: 4
+    item_flags:
+      - HIDE_ATTRIBUTES
+      - HIDE_ENCHANTS
+    enchantments:
+      - DURABILITY;1
+    display_name: '&#FFAA00Spawners: Renta Pasiva'
+    lore:
+      - '&8ᴅʀᴏᴘꜱ ᴅᴇ ᴍᴏʙꜱ'
+      - ''
+      - ' &8| &fPágina: &e2/2'
+      - ' &8| &fTotal: &76 ítems oficiales'
+      - ' &8| &fPrecios: &7100% unificados'
+      - ''
+      - '&7ThunderMC 1.21.11 SMP'
+
+  'item_1':
+    material: BREEZE_ROD
+    slot: 20
+    item_flags:
+      - HIDE_ATTRIBUTES
+      - HIDE_ENCHANTS
+    enchantments:
+      - DURABILITY;1
+    display_name: '&#FFF275Vara de Breeze'
+    lore:
+      - '&8ᴛɪᴇʀ ʟɪᴍɪᴛᴇᴅ'
+      - ''
+      - ' &8| &fUnidad: &#59E91F&l$&r&#59E91F45.00'
+      - ' &8| &fStack: &#59E91F&l$&r&#59E91F2,880.00'
+      - ''
+      - '&7▶ Clic para vender'
+    left_click_commands:
+      - '[sound] ENTITY_EXPERIENCE_ORB_PICKUP'
+
+  'cristal_tendencia_1':
+    material: LIME_STAINED_GLASS_PANE
+    slot: 29
+    item_flags:
+      - HIDE_ATTRIBUTES
+    display_name: '&#59E91F▲ En Auge (+18%)'
+    lore:
+      - '&8ɪɴᴅɪᴄᴀᴅᴏʀ ᴅᴇ ᴍᴇʀᴄᴀᴅᴏ'
+      - ''
+      - ' &8| &fEstado: &#59E91F▲ En Auge (+18%)'
+      - ' &8| &fÍtem: &#FFF275Vara de Breeze'
+
+  'item_2':
+    material: MAGMA_CREAM
+    slot: 21
+    item_flags:
+      - HIDE_ATTRIBUTES
+      - HIDE_ENCHANTS
+    enchantments:
+      - DURABILITY;1
+    display_name: '&#FFF275Crema de Magma'
+    lore:
+      - '&8ᴛɪᴇʀ ᴍɪᴛɪᴄᴏ'
+      - ''
+      - ' &8| &fUnidad: &#59E91F&l$&r&#59E91F32.00'
+      - ' &8| &fStack: &#59E91F&l$&r&#59E91F2,048.00'
+      - ''
+      - '&7▶ Clic para vender'
+    left_click_commands:
+      - '[sound] ENTITY_EXPERIENCE_ORB_PICKUP'
+
+  'cristal_tendencia_2':
+    material: LIME_STAINED_GLASS_PANE
+    slot: 30
+    item_flags:
+      - HIDE_ATTRIBUTES
+    display_name: '&#59E91F▲ En Auge (+14%)'
+    lore:
+      - '&8ɪɴᴅɪᴄᴀᴅᴏʀ ᴅᴇ ᴍᴇʀᴄᴀᴅᴏ'
+      - ''
+      - ' &8| &fEstado: &#59E91F▲ En Auge (+14%)'
+      - ' &8| &fÍtem: &#FFF275Crema de Magma'
+
+  'item_3':
+    material: BLAZE_ROD
+    slot: 22
+    item_flags:
+      - HIDE_ATTRIBUTES
+    display_name: '&#FFF275Vara de Blaze'
+    lore:
+      - '&8ᴛɪᴇʀ ʟᴇɢᴇɴᴅ'
+      - ''
+      - ' &8| &fUnidad: &#59E91F&l$&r&#59E91F22.00'
+      - ' &8| &fStack: &#59E91F&l$&r&#59E91F1,408.00'
+      - ''
+      - '&7▶ Clic para vender'
+    left_click_commands:
+      - '[sound] ENTITY_EXPERIENCE_ORB_PICKUP'
+
+  'cristal_tendencia_3':
+    material: LIME_STAINED_GLASS_PANE
+    slot: 31
+    item_flags:
+      - HIDE_ATTRIBUTES
+    display_name: '&#59E91F▲ En Auge (+10%)'
+    lore:
+      - '&8ɪɴᴅɪᴄᴀᴅᴏʀ ᴅᴇ ᴍᴇʀᴄᴀᴅᴏ'
+      - ''
+      - ' &8| &fEstado: &#59E91F▲ En Auge (+10%)'
+      - ' &8| &fÍtem: &#FFF275Vara de Blaze'
+
+  'item_4':
+    material: ENDER_PEARL
+    slot: 23
+    item_flags:
+      - HIDE_ATTRIBUTES
+    display_name: '&#FFF275Perla de Ender'
+    lore:
+      - '&8ᴛɪᴇʀ ᴇᴘɪᴄᴏ'
+      - ''
+      - ' &8| &fUnidad: &#59E91F&l$&r&#59E91F14.00'
+      - ' &8| &fStack: &#59E91F&l$&r&#59E91F224.00'
+      - ''
+      - '&7▶ Clic para vender'
+    left_click_commands:
+      - '[sound] ENTITY_EXPERIENCE_ORB_PICKUP'
+
+  'cristal_tendencia_4':
+    material: YELLOW_STAINED_GLASS_PANE
+    slot: 32
+    item_flags:
+      - HIDE_ATTRIBUTES
+    display_name: '&#FFF275= Estable (+5%)'
+    lore:
+      - '&8ɪɴᴅɪᴄᴀᴅᴏʀ ᴅᴇ ᴍᴇʀᴄᴀᴅᴏ'
+      - ''
+      - ' &8| &fEstado: &#FFF275= Estable (+5%)'
+      - ' &8| &fÍtem: &#FFF275Perla de Ender'
+
+  'item_5':
+    material: SLIME_BALL
+    slot: 24
+    item_flags:
+      - HIDE_ATTRIBUTES
+    display_name: '&#FFF275Bola de Slime'
+    lore:
+      - '&8ᴛɪᴇʀ ʀᴀʀᴏ'
+      - ''
+      - ' &8| &fUnidad: &#59E91F&l$&r&#59E91F6.50'
+      - ' &8| &fStack: &#59E91F&l$&r&#59E91F416.00'
+      - ''
+      - '&7▶ Clic para vender'
+    left_click_commands:
+      - '[sound] ENTITY_EXPERIENCE_ORB_PICKUP'
+
+  'cristal_tendencia_5':
+    material: GRAY_STAINED_GLASS_PANE
+    slot: 33
+    item_flags:
+      - HIDE_ATTRIBUTES
+    display_name: '&7= Regular (0%)'
+    lore:
+      - '&8ɪɴᴅɪᴄᴀᴅᴏʀ ᴅᴇ ᴍᴇʀᴄᴀᴅᴏ'
+      - ''
+      - ' &8| &fEstado: &7= Regular (0%)'
+      - ' &8| &fÍtem: &#FFF275Bola de Slime'
+
+  'item_6':
+    material: ROTTEN_FLESH
+    slot: 25
+    item_flags:
+      - HIDE_ATTRIBUTES
+    display_name: '&#FFF275Carne Podrida'
+    lore:
+      - '&8ᴛɪᴇʀ ꜱᴜᴘᴇʀ'
+      - ''
+      - ' &8| &fUnidad: &#59E91F&l$&r&#59E91F1.50'
+      - ' &8| &fStack: &#59E91F&l$&r&#59E91F96.00'
+      - ''
+      - '&7▶ Clic para vender'
+    left_click_commands:
+      - '[sound] ENTITY_EXPERIENCE_ORB_PICKUP'
+
+  'cristal_tendencia_6':
+    material: RED_STAINED_GLASS_PANE
+    slot: 34
+    item_flags:
+      - HIDE_ATTRIBUTES
+    display_name: '&#FF4D4D▼ A la Baja (-8%)'
+    lore:
+      - '&8ɪɴᴅɪᴄᴀᴅᴏʀ ᴅᴇ ᴍᴇʀᴄᴀᴅᴏ'
+      - ''
+      - ' &8| &fEstado: &#FF4D4D▼ A la Baja (-8%)'
+      - ' &8| &fÍtem: &#FFF275Carne Podrida'
+
+  'Boton_Alternar':
+    material: WHEAT
+    slot: 45
+    item_flags:
+      - HIDE_ATTRIBUTES
+      - HIDE_ENCHANTS
+    enchantments:
+      - DURABILITY;1
+    display_name: '&#59E91FVer Cultivos y Cosechas'
+    lore:
+      - '&8ᴄᴀᴍʙɪᴀʀ ᴄᴀᴛᴇɢᴏʀɪᴀ'
+      - ''
+      - ' &8| &fDestino: &#59E91FPágina 1 (Cultivos)'
+      - ''
+      - '&7▶ Clic para alternar menú'
+    left_click_commands:
+      - '[openguimenu] objetosdeventa'
+      - '[sound] UI_BUTTON_CLICK'
+
+  'Boton_Volver':
+    material: DARK_OAK_DOOR
+    slot: 49
+    item_flags:
+      - HIDE_ATTRIBUTES
+    display_name: '&cVolver Atrás'
+    lore:
+      - '&7Regresar al mercado'
+    left_click_commands:
+      - '[openguimenu] mercado_comercio'
+      - '[sound] UI_BUTTON_CLICK'
+
+  'Boton_SellGUI':
+    material: HOPPER
+    slot: 52
+    item_flags:
+      - HIDE_ATTRIBUTES
+    display_name: '&#59E91FVenta Rápida'
+    lore:
+      - '&8ᴠᴇɴᴛᴀ ᴀᴜᴛᴏᴍᴀᴛɪᴄᴀ'
+      - ''
+      - ' &fVende todo tu inventario'
+      - ' &fde forma instantánea.'
+      - ''
+      - '&7▶ Clic para abrir'
+    left_click_commands:
+      - '[close]'
+      - '[player] sellgui'
+      - '[sound] ENTITY_EXPERIENCE_ORB_PICKUP'
+
+  'Info_Balance':
+    material: head-%player_name%
+    slot: 53
+    item_flags:
+      - HIDE_ATTRIBUTES
+    display_name: '&#FFF275Tu Economía'
+    lore:
+      - '&8Tu Economía'
+      - ''
+      - ' &8| &fDinero: &#59E91F&l$&r&#59E91F%vault_eco_balance_formatted%'
+      - ' &8| &fAlmas: &#34B0F3%thundercurrencys_almas%🔥'
+      - ' &8| &fZafiros: &#1E6BFF%thundercurrencys_zafiros%💎'
+      - ' &8| &fXP: &#D48BFF%player_level% LVL'
+      - ''
+      - '&7▶ Clic para más información'
+    left_click_commands:
+      - '[openguimenu] info_economia'
+      - '[sound] UI_BUTTON_CLICK'
+
+  'Marco_Bottom':
+    material: GRAY_STAINED_GLASS_PANE
+    display_name: ' '
+    slots:
+      - 46
+      - 47
+      - 48
+      - 50
+      - 51

@@ -1,0 +1,231 @@
+title: '&0&l|&r &0Rangos ▶ &8Inicio'
+type: inventory
+rows: 5
+layout:
+  '10':
+  - item_dead_tube_coral_block_10
+  '12':
+  - item_tube_coral_block_12
+  '13':
+  - item_bubble_coral_block_13
+  '14':
+  - item_horn_coral_block_14
+  '15':
+  - item_resin_block_15
+  '16':
+  - item_fire_coral_block_16
+  '19':
+  - item_lime_stained_glass_pane_19
+  '21':
+  - item_yellow_stained_glass_pane_21
+  '22':
+  - item_red_stained_glass_pane_22
+  '23':
+  - item_red_stained_glass_pane_23
+  '24':
+  - item_red_stained_glass_pane_24
+  '25':
+  - item_red_stained_glass_pane_25
+  '36':
+  - item_gray_stained_glass_pane_36
+  '37':
+  - item_gray_stained_glass_pane_37
+  '38':
+  - item_gray_stained_glass_pane_38
+  '39':
+  - item_gray_stained_glass_pane_39
+  '40':
+  - item_dark_oak_door_40
+  '41':
+  - item_gray_stained_glass_pane_41
+  '42':
+  - item_gray_stained_glass_pane_42
+  '43':
+  - item_gray_stained_glass_pane_43
+  '44':
+  - item_gray_stained_glass_pane_44
+items:
+  item_dead_tube_coral_block_10:
+    material: DEAD_TUBE_CORAL_BLOCK ## DEFAULT
+    name: '&fRango &8[&7Usuario&8]'
+    lore:
+    - '&8Objeto informativo'
+    - ''
+    - ' &8ʙᴇɴᴇꜰɪᴄɪᴏꜱ:'
+    - ' &8● &e/kit inicial'
+    - ' &8● &e/home'
+    - ' &8● &e/back'
+    - ' &8● &e/team'
+    - ' &8● &ex1 Item Subasta'
+    - ' &8● &ex1 Protección'
+    - ' &8● &ex1 Pwarp'
+    - ' &8● &eAcceso Dungeons'
+    - ''
+    - '&a✔ Ya tienes este rango'
+    stack: 1
+  item_tube_coral_block_12:
+    material: TUBE_CORAL_BLOCK  ## KNIGHT
+    name: '&fRango &8[&#128CD2K&#0E95DBn&#0B9DE4i&#07A6EDg&#04AEF6h&#00B7FFt&8]'
+    lore:
+    - '&8Objeto informativo'
+    - ''
+    - ' &8ʙᴇɴᴇꜰɪᴄɪᴏꜱ:'
+    - ' &8● &e/kit knight'
+    - ' &8● &e/craft'
+    - ' &8● &ex2 Item Subasta'
+    - ' &8● &ex2 Homes'
+    - ' &8● &e[i] en el chat'
+    - ' &7(Objeto de la mano)'
+    - ''
+    - ' &8ᴘʀᴇᴍɪᴏꜱ ᴅᴇ ᴀꜱᴄᴇɴꜱᴏ:'
+    - ' &8● &ax5 Llaves Super'
+    - ' &8● &ex3 Llaves Gadgets'
+    - ' &8● &bx3 Llaves Raras'
+    - ' &8● &cx1 Llave Mitica'
+    - ''
+    - '&7▶ Click para ver'
+    actions:
+      commands:
+        - '[sound] BLOCK.END_PORTAL_FRAME.FILL volume=1 pitch=0.8'
+        - '[open] knight'
+    stack: 1
+    enchantments:
+    - unbreaking 1
+  item_bubble_coral_block_13:
+    material: BUBBLE_CORAL_BLOCK ## HEROE
+    name: '&fRango &8[&#D212BDH&#DD0EBFe&#E909C1r&#F405C2o&#FF00C4e&8]'
+    lore:
+    - '&8Objeto informativo'
+    - ''
+    - ' &8ʙᴇɴᴇꜰɪᴄɪᴏꜱ:'
+    - ' &8● &e/kit heroe'
+    - ' &8● &e/enderchest'
+    - ' &8● &ex3 Item Subasta'
+    - ' &8● &ex3 Homes'
+    - ' &8● &e[inv] en el chat'
+    - ' &7(Tu inventario)'
+    - ''
+    - ' &8ᴘʀᴇᴍɪᴏꜱ ᴅᴇ ᴀꜱᴄᴇɴꜱᴏ:'
+    - ' &8● &ax5 Llaves Super'
+    - ' &8● &ex5 Llaves Gadgets'
+    - ' &8● &bx5 Llaves Raras'
+    - ' &8● &cx2 Llaves Mitica'
+    - ' &8● &4x1 Llave Limited'
+    - ''
+    stack: 1
+  item_horn_coral_block_14:
+    material: HORN_CORAL_BLOCK ## LEGEND
+    name: '&fRango &8[&#F5A614L&#F7B210e&#F9BE0Cg&#FBCB08e&#FDD704n&#FFE300d&8]'
+    lore:
+    - '&8Objeto informativo'
+    - ''
+    - ' &8ʙᴇɴᴇꜰɪᴄɪᴏꜱ:'
+    - ' &8● &e/kit legend'
+    - ' &8● &e/feed (10m CD)'
+    - ' &8● &ex4 Item Subasta'
+    - ' &8● &ex4 Homes'
+    - ' &8● &e[ender] en el chat'
+    - ' &7(Tu Enderchest)'
+    - ''
+    - ' &8ᴘʀᴇᴍɪᴏꜱ ᴅᴇ ᴀꜱᴄᴇɴꜱᴏ:'
+    - ' &8● &ax5 Llaves Super'
+    - ' &8● &ex5 Llaves Gadgets'
+    - ' &8● &bx5 Llaves Raras'
+    - ' &8● &cx3 Llaves Mitica'
+    - ' &8● &4x2 Llaves Limited'
+    - ''
+    stack: 1
+  item_resin_block_15:
+    material: RESIN_BLOCK ## MYTHIC
+    name: '&fRango &8[&#F55414M&#F76010y&#F96C0Ct&#FB7908h&#FD8504i&#FF9100c&8]'
+    lore:
+    - '&8Objeto informativo'
+    - ''
+    - ' &8ʙᴇɴᴇꜰɪᴄɪᴏꜱ:'
+    - ' &8● &e/kit mythic'
+    - ' &8● &e/repair (10m CD)'
+    - ' &8● &ex5 Item Subasta'
+    - ' &8● &ex5 Homes'
+    - ''
+    - ' &8ᴘʀᴇᴍɪᴏꜱ ᴅᴇ ᴀꜱᴄᴇɴꜱᴏ:'
+    - ' &8● &ax5 Llaves Super'
+    - ' &8● &ex5 Llaves Gadgets'
+    - ' &8● &bx5 Llaves Raras'
+    - ' &8● &cx5 Llaves Mitica'
+    - ' &8● &4x3 Llaves Limited'
+    - ''
+    stack: 1
+  item_fire_coral_block_16:
+    material: FIRE_CORAL_BLOCK ## TITAN
+    name: '&fRango &8[&#CB0A0AT&#D80A08i&#E50A05t&#F20A03a&#FF0A00n&8]'
+    lore:
+    - '&8Objeto informativo'
+    - ''
+    - ' &8ʙᴇɴᴇꜰɪᴄɪᴏꜱ:'
+    - ' &8● &e/kit titan'
+    - ' &8● &e/invsee'
+    - ' &8● &e2 Protes Limite'
+    - ' &8● &ex6 Item Subasta'
+    - ' &8● &ex6 Homes'
+    - ''
+    - ' &8ᴘʀᴇᴍɪᴏꜱ ᴅᴇ ᴀꜱᴄᴇɴꜱᴏ:'
+    - ' &8● &ax5 Llaves Super'
+    - ' &8● &ex5 Llaves Gadgets'
+    - ' &8● &bx5 Llaves Raras'
+    - ' &8● &cx5 Llaves Mitica'
+    - ' &8● &4x5 Llaves Limited'
+    - ''
+    stack: 1
+  item_lime_stained_glass_pane_19:
+    material: LIME_STAINED_GLASS_PANE
+    name: '&a✔ Completado'
+    stack: 1
+  item_yellow_stained_glass_pane_21:
+    material: YELLOW_STAINED_GLASS_PANE
+    name: '&eEn progreso...'
+    stack: 1
+    enchantments:
+    - unbreaking 1
+  item_red_stained_glass_pane_22:
+    material: RED_STAINED_GLASS_PANE
+    name: '&cProximamente'
+    stack: 1
+  item_red_stained_glass_pane_23:
+    material: RED_STAINED_GLASS_PANE
+    name: '&cProximamente'
+    stack: 1
+  item_red_stained_glass_pane_24:
+    material: RED_STAINED_GLASS_PANE
+    name: '&cProximamente'
+    stack: 1
+  item_red_stained_glass_pane_25:
+    material: RED_STAINED_GLASS_PANE
+    name: '&cProximamente'
+    stack: 1
+  item_gray_stained_glass_pane_36:
+    material: GRAY_STAINED_GLASS_PANE
+    stack: 1
+  item_gray_stained_glass_pane_37:
+    material: GRAY_STAINED_GLASS_PANE
+    stack: 1
+  item_gray_stained_glass_pane_38:
+    material: GRAY_STAINED_GLASS_PANE
+    stack: 1
+  item_gray_stained_glass_pane_39:
+    material: GRAY_STAINED_GLASS_PANE
+    stack: 1
+  item_dark_oak_door_40:
+    material: DARK_OAK_DOOR
+    stack: 1
+  item_gray_stained_glass_pane_41:
+    material: GRAY_STAINED_GLASS_PANE
+    stack: 1
+  item_gray_stained_glass_pane_42:
+    material: GRAY_STAINED_GLASS_PANE
+    stack: 1
+  item_gray_stained_glass_pane_43:
+    material: GRAY_STAINED_GLASS_PANE
+    stack: 1
+  item_gray_stained_glass_pane_44:
+    material: GRAY_STAINED_GLASS_PANE
+    stack: 1

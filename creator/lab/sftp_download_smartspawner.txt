@@ -1,0 +1,6 @@
+lcd raw/thunderia/SmartSpawner
+get plugins/SmartSpawner/config.yml config.yml
+get plugins/SmartSpawner/spawners_settings.yml spawners_settings.yml
+get plugins/SmartSpawner/item_spawners_settings.yml item_spawners_settings.yml
+get plugins/SmartSpawner/item_prices.yml item_prices.yml
+bye

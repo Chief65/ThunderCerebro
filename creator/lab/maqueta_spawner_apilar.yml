@@ -1,0 +1,131 @@
+menu_title: '&0&l|&r &0Spawner ▶ &8Gestionar Pila'
+open_command:
+  - maqueta_spawner_apilar
+size: 27
+open_requirement:
+  requirements: {}
+register_command: true
+update: true
+
+items:
+  'Filtro_Bordes':
+    material: GRAY_STAINED_GLASS_PANE
+    display_name: ' '
+    slots:
+      - 0
+      - 1
+      - 2
+      - 3
+      - 4
+      - 5
+      - 6
+      - 7
+      - 8
+      - 9
+      - 17
+      - 18
+      - 19
+      - 20
+      - 21
+      - 23
+      - 24
+      - 25
+      - 26
+
+  # SLOT 11: RETIRAR 1 SPAWNER DE LA PILA
+  'Btn_Quitar_Uno':
+    material: RED_CONCRETE
+    slot: 11
+    item_flags:
+      - HIDE_ATTRIBUTES
+    display_name: '&#FF4D4D-1 Spawner'
+    lore:
+      - '&8ᴅᴇꜱᴀᴘɪʟᴀʀ'
+      - ''
+      - ' &fRetira 1 spawner del bloque'
+      - ' &fy lo devuelve a tu inventario.'
+      - ''
+      - '&7▶ Click para retirar uno'
+    left_click_commands:
+      - '[sound] UI_BUTTON_CLICK'
+
+  # SLOT 12: RETIRAR TODOS LOS SPAWNERS
+  'Btn_Quitar_Todos':
+    material: RED_WOOL
+    slot: 12
+    item_flags:
+      - HIDE_ATTRIBUTES
+    display_name: '&#FF4D4DDesapilar Todo'
+    lore:
+      - '&8ᴅᴇꜱᴀᴘɪʟᴀʀ ᴛᴏᴅᴏ'
+      - ''
+      - ' &fDesmantela la pila completa'
+      - ' &fde spawners acumulados.'
+      - ''
+      - '&7▶ Click para desapilar todo'
+    left_click_commands:
+      - '[sound] UI_BUTTON_CLICK'
+
+  # SLOT 13: ESTADO ACTUAL DE LA PILA
+  'Btn_Info_Pila':
+    material: ZOMBIE_HEAD
+    slot: 13
+    item_flags:
+      - HIDE_ATTRIBUTES
+    display_name: '&#FFF275Pila Actual: &e4 &8/ &716'
+    lore:
+      - '&8ᴇꜱᴛᴀᴅᴏ ᴅᴇ ʟᴀ ᴘɪʟᴀ'
+      - ''
+      - ' &8| &fSpawners: &#FFF2754 unidades'
+      - ' &8| &fLímite máximo: &716 spawners'
+      - ' &8| &fEspacio libre: &#59E91F12 huecos'
+      - ''
+      - ' &fColoca spawners de Zombie en tu mano'
+      - ' &fo agrégalos con los botones laterales.'
+
+  # SLOT 14: AÑADIR TODOS LOS SPAWNERS DEL INVENTARIO
+  'Btn_Anadir_Todos':
+    material: LIME_WOOL
+    slot: 14
+    item_flags:
+      - HIDE_ATTRIBUTES
+    display_name: '&#59E91FAgregar Todos'
+    lore:
+      - '&8ᴀᴘɪʟᴀʀ ᴛᴏᴅᴏ'
+      - ''
+      - ' &fAgrega todos los spawners de'
+      - ' &fZombie que tengas en inventario.'
+      - ''
+      - '&7▶ Click para apilar todos'
+    left_click_commands:
+      - '[sound] UI_BUTTON_CLICK'
+
+  # SLOT 15: AÑADIR 1 SPAWNER
+  'Btn_Anadir_Uno':
+    material: LIME_CONCRETE
+    slot: 15
+    item_flags:
+      - HIDE_ATTRIBUTES
+    display_name: '&#59E91F+1 Spawner'
+    lore:
+      - '&8ᴀᴘɪʟᴀʀ'
+      - ''
+      - ' &fAgrega 1 spawner de Zombie'
+      - ' &fdesde tu inventario a la pila.'
+      - ''
+      - '&7▶ Click para agregar uno'
+    left_click_commands:
+      - '[sound] UI_BUTTON_CLICK'
+
+  # SLOT 22: VOLVER ATRÁS
+  'Boton_Volver':
+    material: DARK_OAK_DOOR
+    slot: 22
+    item_flags:
+      - HIDE_ATTRIBUTES
+    display_name: '&cVolver Atrás'
+    lore:
+      - '&7Regresar al panel del spawner'
+    left_click_commands:
+      - '[openguimenu] maqueta_spawner'
+      - '[sound] BLOCK_NOTE_BLOCK_BASS'

@@ -1,0 +1,2823 @@
+[
+  {
+    "category": "bloques",
+    "material": "GRASS_BLOCK",
+    "name": "\" \"",
+    "buy": 12,
+    "sell": 3
+  },
+  {
+    "category": "bloques",
+    "material": "DIRT",
+    "name": "",
+    "buy": 2,
+    "sell": 1
+  },
+  {
+    "category": "bloques",
+    "material": "MYCELIUM",
+    "name": "",
+    "buy": 75,
+    "sell": 4
+  },
+  {
+    "category": "bloques",
+    "material": "PODZOL",
+    "name": "",
+    "buy": 75,
+    "sell": 4
+  },
+  {
+    "category": "bloques",
+    "material": "CRIMSON_NYLIUM",
+    "name": "",
+    "buy": 5,
+    "sell": 2
+  },
+  {
+    "category": "bloques",
+    "material": "WARPED_NYLIUM",
+    "name": "",
+    "buy": 75,
+    "sell": 4
+  },
+  {
+    "category": "bloques",
+    "material": "GRAVEL",
+    "name": "",
+    "buy": 50,
+    "sell": 7
+  },
+  {
+    "category": "bloques",
+    "material": "SAND",
+    "name": "",
+    "buy": 5,
+    "sell": 2
+  },
+  {
+    "category": "bloques",
+    "material": "RED_SAND",
+    "name": "",
+    "buy": 37,
+    "sell": 4
+  },
+  {
+    "category": "bloques",
+    "material": "COBBLESTONE",
+    "name": "",
+    "buy": 5,
+    "sell": 1
+  },
+  {
+    "category": "bloques",
+    "material": "STONE",
+    "name": "",
+    "buy": 7,
+    "sell": 2
+  },
+  {
+    "category": "bloques",
+    "material": "ANDESITE",
+    "name": "",
+    "buy": 2,
+    "sell": 1
+  },
+  {
+    "category": "bloques",
+    "material": "GRANITE",
+    "name": "",
+    "buy": 2,
+    "sell": 1
+  },
+  {
+    "category": "bloques",
+    "material": "DIORITE",
+    "name": "",
+    "buy": 2,
+    "sell": 1
+  },
+  {
+    "category": "bloques",
+    "material": "DEEPSLATE",
+    "name": "",
+    "buy": 15,
+    "sell": 3
+  },
+  {
+    "category": "bloques",
+    "material": "PRISMARINE",
+    "name": "",
+    "buy": 37,
+    "sell": 5
+  },
+  {
+    "category": "bloques",
+    "material": "PRISMARINE_BRICKS",
+    "name": "",
+    "buy": 37,
+    "sell": 5
+  },
+  {
+    "category": "bloques",
+    "material": "DARK_PRISMARINE",
+    "name": "",
+    "buy": 50,
+    "sell": 8
+  },
+  {
+    "category": "bloques",
+    "material": "OAK_LOG",
+    "name": "",
+    "buy": 12,
+    "sell": 1
+  },
+  {
+    "category": "bloques",
+    "material": "SPRUCE_LOG",
+    "name": "",
+    "buy": 12,
+    "sell": 1
+  },
+  {
+    "category": "bloques",
+    "material": "BIRCH_LOG",
+    "name": "",
+    "buy": 12,
+    "sell": 1
+  },
+  {
+    "category": "bloques",
+    "material": "JUNGLE_LOG",
+    "name": "",
+    "buy": 12,
+    "sell": 1
+  },
+  {
+    "category": "bloques",
+    "material": "ACACIA_LOG",
+    "name": "",
+    "buy": 12,
+    "sell": 1
+  },
+  {
+    "category": "bloques",
+    "material": "DARK_OAK_LOG",
+    "name": "",
+    "buy": 12,
+    "sell": 1
+  },
+  {
+    "category": "bloques",
+    "material": "MANGROVE_LOG",
+    "name": "",
+    "buy": 12,
+    "sell": 1
+  },
+  {
+    "category": "bloques",
+    "material": "CHERRY_LOG",
+    "name": "",
+    "buy": 12,
+    "sell": 1
+  },
+  {
+    "category": "bloques",
+    "material": "PALE_OAK_LOG",
+    "name": "",
+    "buy": 12,
+    "sell": 1
+  },
+  {
+    "category": "bloques",
+    "material": "MOSSY_COBBLESTONE",
+    "name": "",
+    "buy": 5,
+    "sell": 2
+  },
+  {
+    "category": "bloques",
+    "material": "MOSSY_STONE_BRICKS",
+    "name": "",
+    "buy": 7,
+    "sell": 3
+  },
+  {
+    "category": "bloques",
+    "material": "CALCITE",
+    "name": "",
+    "buy": 2,
+    "sell": 1
+  },
+  {
+    "category": "bloques",
+    "material": "BLACKSTONE",
+    "name": "",
+    "buy": 7,
+    "sell": 1
+  },
+  {
+    "category": "bloques",
+    "material": "TUFF",
+    "name": "",
+    "buy": 4,
+    "sell": 2
+  },
+  {
+    "category": "bloques",
+    "material": "TERRACOTTA",
+    "name": "",
+    "buy": 5,
+    "sell": 2
+  },
+  {
+    "category": "bloques",
+    "material": "BRICKS",
+    "name": "",
+    "buy": 7,
+    "sell": 3
+  },
+  {
+    "category": "bloques",
+    "material": "MUD_BRICKS",
+    "name": "",
+    "buy": 5,
+    "sell": 2
+  },
+  {
+    "category": "bloques",
+    "material": "RED_NETHER_BRICKS",
+    "name": "",
+    "buy": 7,
+    "sell": 2
+  },
+  {
+    "category": "bloques",
+    "material": "GLASS",
+    "name": "",
+    "buy": 25,
+    "sell": 3
+  },
+  {
+    "category": "bloques",
+    "material": "TINTED_GLASS",
+    "name": "",
+    "buy": 10,
+    "sell": 2
+  },
+  {
+    "category": "bloques",
+    "material": "BOOKSHELF",
+    "name": "",
+    "buy": 375,
+    "sell": 25
+  },
+  {
+    "category": "bloques",
+    "material": "HONEY_BLOCK",
+    "name": "",
+    "buy": 17,
+    "sell": 3
+  },
+  {
+    "category": "bloques",
+    "material": "MAGMA_BLOCK",
+    "name": "",
+    "buy": 17,
+    "sell": 2
+  },
+  {
+    "category": "bloques",
+    "material": "SOUL_SAND",
+    "name": "",
+    "buy": 7,
+    "sell": 2
+  },
+  {
+    "category": "bloques",
+    "material": "CLAY",
+    "name": "",
+    "buy": 7,
+    "sell": 3
+  },
+  {
+    "category": "bloques",
+    "material": "MUD",
+    "name": "",
+    "buy": 2,
+    "sell": 1
+  },
+  {
+    "category": "bloques",
+    "material": "PACKED_MUD",
+    "name": "",
+    "buy": 5,
+    "sell": 3
+  },
+  {
+    "category": "bloques",
+    "material": "SEA_LANTERN",
+    "name": "",
+    "buy": 35,
+    "sell": 5
+  },
+  {
+    "category": "bloques",
+    "material": "SHROOMLIGHT",
+    "name": "",
+    "buy": 50,
+    "sell": 5
+  },
+  {
+    "category": "bloques",
+    "material": "OCHRE_FROGLIGHT",
+    "name": "",
+    "buy": 50,
+    "sell": 5
+  },
+  {
+    "category": "bloques",
+    "material": "PEARLESCENT_FROGLIGHT",
+    "name": "",
+    "buy": 50,
+    "sell": 5
+  },
+  {
+    "category": "bloques",
+    "material": "VERDANT_FROGLIGHT",
+    "name": "",
+    "buy": 50,
+    "sell": 5
+  },
+  {
+    "category": "bloques",
+    "material": "AZALEA_LEAVES",
+    "name": "",
+    "buy": 15,
+    "sell": 3
+  },
+  {
+    "category": "bloques",
+    "material": "FLOWERING_AZALEA_LEAVES",
+    "name": "",
+    "buy": 15,
+    "sell": 3
+  },
+  {
+    "category": "bloques",
+    "material": "MANGROVE_LEAVES",
+    "name": "",
+    "buy": 15,
+    "sell": 3
+  },
+  {
+    "category": "bloques",
+    "material": "MANGROVE_ROOTS",
+    "name": "",
+    "buy": -1,
+    "sell": 3
+  },
+  {
+    "category": "bloques",
+    "material": "MUDDY_MANGROVE_ROOTS",
+    "name": "",
+    "buy": 7,
+    "sell": 2
+  },
+  {
+    "category": "bloques",
+    "material": "NETHERRACK",
+    "name": "",
+    "buy": 2,
+    "sell": 1
+  },
+  {
+    "category": "bloques",
+    "material": "NETHER_BRICKS",
+    "name": "",
+    "buy": 7,
+    "sell": 2
+  },
+  {
+    "category": "bloques",
+    "material": "CRACKED_NETHER_BRICKS",
+    "name": "",
+    "buy": 5,
+    "sell": 1
+  },
+  {
+    "category": "bloques",
+    "material": "CHISELED_NETHER_BRICKS",
+    "name": "",
+    "buy": 10,
+    "sell": 3
+  },
+  {
+    "category": "bloques",
+    "material": "BASALT",
+    "name": "",
+    "buy": 5,
+    "sell": 1
+  },
+  {
+    "category": "bloques",
+    "material": "POLISHED_BASALT",
+    "name": "",
+    "buy": 7,
+    "sell": 2
+  },
+  {
+    "category": "bloques",
+    "material": "SMOOTH_BASALT",
+    "name": "",
+    "buy": 7,
+    "sell": 2
+  },
+  {
+    "category": "bloques",
+    "material": "GILDED_BLACKSTONE",
+    "name": "",
+    "buy": 100,
+    "sell": 15
+  },
+  {
+    "category": "bloques",
+    "material": "POLISHED_BLACKSTONE",
+    "name": "",
+    "buy": 10,
+    "sell": 2
+  },
+  {
+    "category": "bloques",
+    "material": "POLISHED_BLACKSTONE_BRICKS",
+    "name": "",
+    "buy": 12,
+    "sell": 3
+  },
+  {
+    "category": "bloques",
+    "material": "CRACKED_POLISHED_BLACKSTONE_BRICKS",
+    "name": "",
+    "buy": 10,
+    "sell": 2
+  },
+  {
+    "category": "bloques",
+    "material": "CHISELED_POLISHED_BLACKSTONE",
+    "name": "",
+    "buy": 15,
+    "sell": 4
+  },
+  {
+    "category": "bloques",
+    "material": "END_STONE",
+    "name": "",
+    "buy": 25,
+    "sell": 5
+  },
+  {
+    "category": "bloques",
+    "material": "END_STONE_BRICKS",
+    "name": "",
+    "buy": 30,
+    "sell": 6
+  },
+  {
+    "category": "bloques",
+    "material": "PURPUR_BLOCK",
+    "name": "",
+    "buy": 37,
+    "sell": 8
+  },
+  {
+    "category": "bloques",
+    "material": "PURPUR_PILLAR",
+    "name": "",
+    "buy": 37,
+    "sell": 8
+  },
+  {
+    "category": "bloques",
+    "material": "OBSIDIAN",
+    "name": "",
+    "buy": 125,
+    "sell": 20
+  },
+  {
+    "category": "bloques",
+    "material": "CRYING_OBSIDIAN",
+    "name": "",
+    "buy": 150,
+    "sell": 25
+  },
+  {
+    "category": "bloques",
+    "material": "SMOOTH_STONE",
+    "name": "",
+    "buy": 10,
+    "sell": 2
+  },
+  {
+    "category": "bloques",
+    "material": "STONE_BRICKS",
+    "name": "",
+    "buy": 10,
+    "sell": 3
+  },
+  {
+    "category": "bloques",
+    "material": "CRACKED_STONE_BRICKS",
+    "name": "",
+    "buy": 7,
+    "sell": 2
+  },
+  {
+    "category": "bloques",
+    "material": "CHISELED_STONE_BRICKS",
+    "name": "",
+    "buy": 12,
+    "sell": 4
+  },
+  {
+    "category": "bloques",
+    "material": "POLISHED_ANDESITE",
+    "name": "",
+    "buy": 4,
+    "sell": 1
+  },
+  {
+    "category": "bloques",
+    "material": "POLISHED_GRANITE",
+    "name": "",
+    "buy": 4,
+    "sell": 1
+  },
+  {
+    "category": "bloques",
+    "material": "POLISHED_DIORITE",
+    "name": "",
+    "buy": 4,
+    "sell": 1
+  },
+  {
+    "category": "bloques",
+    "material": "POLISHED_DEEPSLATE",
+    "name": "",
+    "buy": 20,
+    "sell": 4
+  },
+  {
+    "category": "bloques",
+    "material": "DEEPSLATE_BRICKS",
+    "name": "",
+    "buy": 22,
+    "sell": 5
+  },
+  {
+    "category": "bloques",
+    "material": "CRACKED_DEEPSLATE_BRICKS",
+    "name": "",
+    "buy": 17,
+    "sell": 4
+  },
+  {
+    "category": "bloques",
+    "material": "DEEPSLATE_TILES",
+    "name": "",
+    "buy": 25,
+    "sell": 5
+  },
+  {
+    "category": "bloques",
+    "material": "CRACKED_DEEPSLATE_TILES",
+    "name": "",
+    "buy": 20,
+    "sell": 4
+  },
+  {
+    "category": "bloques",
+    "material": "CHISELED_DEEPSLATE",
+    "name": "",
+    "buy": 25,
+    "sell": 6
+  },
+  {
+    "category": "bloques",
+    "material": "COBBLED_DEEPSLATE",
+    "name": "",
+    "buy": 15,
+    "sell": 3
+  },
+  {
+    "category": "bloques",
+    "material": "TUFF_BRICKS",
+    "name": "",
+    "buy": 4,
+    "sell": 2
+  },
+  {
+    "category": "bloques",
+    "material": "CHISELED_TUFF",
+    "name": "",
+    "buy": 5,
+    "sell": 2
+  },
+  {
+    "category": "bloques",
+    "material": "POLISHED_TUFF",
+    "name": "",
+    "buy": 4,
+    "sell": 2
+  },
+  {
+    "category": "bloques",
+    "material": "CHISELED_TUFF_BRICKS",
+    "name": "",
+    "buy": 6,
+    "sell": 2
+  },
+  {
+    "category": "bloques",
+    "material": "SANDSTONE",
+    "name": "",
+    "buy": 7,
+    "sell": 2
+  },
+  {
+    "category": "bloques",
+    "material": "SMOOTH_SANDSTONE",
+    "name": "",
+    "buy": 10,
+    "sell": 3
+  },
+  {
+    "category": "bloques",
+    "material": "CHISELED_SANDSTONE",
+    "name": "",
+    "buy": 12,
+    "sell": 3
+  },
+  {
+    "category": "bloques",
+    "material": "CUT_SANDSTONE",
+    "name": "",
+    "buy": 10,
+    "sell": 2
+  },
+  {
+    "category": "bloques",
+    "material": "RED_SANDSTONE",
+    "name": "",
+    "buy": 10,
+    "sell": 3
+  },
+  {
+    "category": "bloques",
+    "material": "SMOOTH_RED_SANDSTONE",
+    "name": "",
+    "buy": 12,
+    "sell": 3
+  },
+  {
+    "category": "bloques",
+    "material": "CHISELED_RED_SANDSTONE",
+    "name": "",
+    "buy": 15,
+    "sell": 4
+  },
+  {
+    "category": "bloques",
+    "material": "CUT_RED_SANDSTONE",
+    "name": "",
+    "buy": 12,
+    "sell": 3
+  },
+  {
+    "category": "bloques",
+    "material": "QUARTZ_BLOCK",
+    "name": "",
+    "buy": 50,
+    "sell": 8
+  },
+  {
+    "category": "bloques",
+    "material": "SMOOTH_QUARTZ",
+    "name": "",
+    "buy": 55,
+    "sell": 9
+  },
+  {
+    "category": "bloques",
+    "material": "QUARTZ_PILLAR",
+    "name": "",
+    "buy": 55,
+    "sell": 9
+  },
+  {
+    "category": "bloques",
+    "material": "CHISELED_QUARTZ_BLOCK",
+    "name": "",
+    "buy": 60,
+    "sell": 10
+  },
+  {
+    "category": "bloques",
+    "material": "QUARTZ_BRICKS",
+    "name": "",
+    "buy": 55,
+    "sell": 9
+  },
+  {
+    "category": "bloques",
+    "material": "NETHER_QUARTZ_ORE",
+    "name": "",
+    "buy": 40,
+    "sell": 6
+  },
+  {
+    "category": "bloques",
+    "material": "COPPER_BLOCK",
+    "name": "",
+    "buy": 100,
+    "sell": 15
+  },
+  {
+    "category": "bloques",
+    "material": "EXPOSED_COPPER",
+    "name": "",
+    "buy": 75,
+    "sell": 12
+  },
+  {
+    "category": "bloques",
+    "material": "WEATHERED_COPPER",
+    "name": "",
+    "buy": 75,
+    "sell": 12
+  },
+  {
+    "category": "bloques",
+    "material": "OXIDIZED_COPPER",
+    "name": "",
+    "buy": 75,
+    "sell": 12
+  },
+  {
+    "category": "bloques",
+    "material": "WAXED_COPPER_BLOCK",
+    "name": "",
+    "buy": 125,
+    "sell": 20
+  },
+  {
+    "category": "bloques",
+    "material": "CUT_COPPER",
+    "name": "",
+    "buy": 110,
+    "sell": 18
+  },
+  {
+    "category": "bloques",
+    "material": "WAXED_CUT_COPPER",
+    "name": "",
+    "buy": 135,
+    "sell": 22
+  },
+  {
+    "category": "bloques",
+    "material": "CHISELED_COPPER",
+    "name": "",
+    "buy": 115,
+    "sell": 18
+  },
+  {
+    "category": "bloques",
+    "material": "COPPER_GRATE",
+    "name": "",
+    "buy": 110,
+    "sell": 17
+  },
+  {
+    "category": "bloques",
+    "material": "IRON_BLOCK",
+    "name": "",
+    "buy": 250,
+    "sell": 40
+  },
+  {
+    "category": "bloques",
+    "material": "GOLD_BLOCK",
+    "name": "",
+    "buy": 1000,
+    "sell": 150
+  },
+  {
+    "category": "bloques",
+    "material": "DIAMOND_BLOCK",
+    "name": "",
+    "buy": 4000,
+    "sell": 600
+  },
+  {
+    "category": "bloques",
+    "material": "EMERALD_BLOCK",
+    "name": "",
+    "buy": 2500,
+    "sell": 400
+  },
+  {
+    "category": "bloques",
+    "material": "LAPIS_BLOCK",
+    "name": "",
+    "buy": 750,
+    "sell": 100
+  },
+  {
+    "category": "bloques",
+    "material": "NETHERITE_BLOCK",
+    "name": "",
+    "buy": 25000,
+    "sell": 4000
+  },
+  {
+    "category": "bloques",
+    "material": "DRIPSTONE_BLOCK",
+    "name": "",
+    "buy": 10,
+    "sell": 2
+  },
+  {
+    "category": "bloques",
+    "material": "MOSS_BLOCK",
+    "name": "",
+    "buy": 12,
+    "sell": 3
+  },
+  {
+    "category": "bloques",
+    "material": "SCULK",
+    "name": "",
+    "buy": 15,
+    "sell": 3
+  },
+  {
+    "category": "bloques",
+    "material": "SCULK_VEIN",
+    "name": "",
+    "buy": 7,
+    "sell": 2
+  },
+  {
+    "category": "bloques",
+    "material": "SCULK_CATALYST",
+    "name": "",
+    "buy": 250,
+    "sell": 40
+  },
+  {
+    "category": "bloques",
+    "material": "PACKED_ICE",
+    "name": "",
+    "buy": 37,
+    "sell": 5
+  },
+  {
+    "category": "bloques",
+    "material": "BLUE_ICE",
+    "name": "",
+    "buy": 100,
+    "sell": 15
+  },
+  {
+    "category": "bloques",
+    "material": "SNOW_BLOCK",
+    "name": "",
+    "buy": 10,
+    "sell": 2
+  },
+  {
+    "category": "bloques",
+    "material": "WHITE_CONCRETE",
+    "name": "",
+    "buy": 10,
+    "sell": 2
+  },
+  {
+    "category": "bloques",
+    "material": "ORANGE_CONCRETE",
+    "name": "",
+    "buy": 10,
+    "sell": 2
+  },
+  {
+    "category": "bloques",
+    "material": "MAGENTA_CONCRETE",
+    "name": "",
+    "buy": 10,
+    "sell": 2
+  },
+  {
+    "category": "bloques",
+    "material": "LIGHT_BLUE_CONCRETE",
+    "name": "",
+    "buy": 10,
+    "sell": 2
+  },
+  {
+    "category": "bloques",
+    "material": "YELLOW_CONCRETE",
+    "name": "",
+    "buy": 10,
+    "sell": 2
+  },
+  {
+    "category": "bloques",
+    "material": "LIME_CONCRETE",
+    "name": "",
+    "buy": 10,
+    "sell": 2
+  },
+  {
+    "category": "bloques",
+    "material": "PINK_CONCRETE",
+    "name": "",
+    "buy": 10,
+    "sell": 2
+  },
+  {
+    "category": "bloques",
+    "material": "GRAY_CONCRETE",
+    "name": "",
+    "buy": 10,
+    "sell": 2
+  },
+  {
+    "category": "bloques",
+    "material": "LIGHT_GRAY_CONCRETE",
+    "name": "",
+    "buy": 10,
+    "sell": 2
+  },
+  {
+    "category": "bloques",
+    "material": "CYAN_CONCRETE",
+    "name": "",
+    "buy": 10,
+    "sell": 2
+  },
+  {
+    "category": "bloques",
+    "material": "PURPLE_CONCRETE",
+    "name": "",
+    "buy": 10,
+    "sell": 2
+  },
+  {
+    "category": "bloques",
+    "material": "BLUE_CONCRETE",
+    "name": "",
+    "buy": 10,
+    "sell": 2
+  },
+  {
+    "category": "bloques",
+    "material": "BROWN_CONCRETE",
+    "name": "",
+    "buy": 10,
+    "sell": 2
+  },
+  {
+    "category": "bloques",
+    "material": "GREEN_CONCRETE",
+    "name": "",
+    "buy": 10,
+    "sell": 2
+  },
+  {
+    "category": "bloques",
+    "material": "RED_CONCRETE",
+    "name": "",
+    "buy": 10,
+    "sell": 2
+  },
+  {
+    "category": "bloques",
+    "material": "BLACK_CONCRETE",
+    "name": "",
+    "buy": 10,
+    "sell": 2
+  },
+  {
+    "category": "bloques",
+    "material": "WHITE_TERRACOTTA",
+    "name": "",
+    "buy": 7,
+    "sell": 2
+  },
+  {
+    "category": "bloques",
+    "material": "ORANGE_TERRACOTTA",
+    "name": "",
+    "buy": 7,
+    "sell": 2
+  },
+  {
+    "category": "bloques",
+    "material": "MAGENTA_TERRACOTTA",
+    "name": "",
+    "buy": 7,
+    "sell": 2
+  },
+  {
+    "category": "bloques",
+    "material": "LIGHT_BLUE_TERRACOTTA",
+    "name": "",
+    "buy": 7,
+    "sell": 2
+  },
+  {
+    "category": "bloques",
+    "material": "YELLOW_TERRACOTTA",
+    "name": "",
+    "buy": 7,
+    "sell": 2
+  },
+  {
+    "category": "bloques",
+    "material": "LIME_TERRACOTTA",
+    "name": "",
+    "buy": 7,
+    "sell": 2
+  },
+  {
+    "category": "bloques",
+    "material": "PINK_TERRACOTTA",
+    "name": "",
+    "buy": 7,
+    "sell": 2
+  },
+  {
+    "category": "bloques",
+    "material": "GRAY_TERRACOTTA",
+    "name": "",
+    "buy": 7,
+    "sell": 2
+  },
+  {
+    "category": "bloques",
+    "material": "LIGHT_GRAY_TERRACOTTA",
+    "name": "",
+    "buy": 7,
+    "sell": 2
+  },
+  {
+    "category": "bloques",
+    "material": "CYAN_TERRACOTTA",
+    "name": "",
+    "buy": 7,
+    "sell": 2
+  },
+  {
+    "category": "bloques",
+    "material": "PURPLE_TERRACOTTA",
+    "name": "",
+    "buy": 7,
+    "sell": 2
+  },
+  {
+    "category": "bloques",
+    "material": "BLUE_TERRACOTTA",
+    "name": "",
+    "buy": 7,
+    "sell": 2
+  },
+  {
+    "category": "bloques",
+    "material": "BROWN_TERRACOTTA",
+    "name": "",
+    "buy": 7,
+    "sell": 2
+  },
+  {
+    "category": "bloques",
+    "material": "GREEN_TERRACOTTA",
+    "name": "",
+    "buy": 7,
+    "sell": 2
+  },
+  {
+    "category": "bloques",
+    "material": "RED_TERRACOTTA",
+    "name": "",
+    "buy": 7,
+    "sell": 2
+  },
+  {
+    "category": "bloques",
+    "material": "BLACK_TERRACOTTA",
+    "name": "",
+    "buy": 7,
+    "sell": 2
+  },
+  {
+    "category": "bloques",
+    "material": "WHITE_GLAZED_TERRACOTTA",
+    "name": "",
+    "buy": 12,
+    "sell": 3
+  },
+  {
+    "category": "bloques",
+    "material": "ORANGE_GLAZED_TERRACOTTA",
+    "name": "",
+    "buy": 12,
+    "sell": 3
+  },
+  {
+    "category": "bloques",
+    "material": "MAGENTA_GLAZED_TERRACOTTA",
+    "name": "",
+    "buy": 12,
+    "sell": 3
+  },
+  {
+    "category": "bloques",
+    "material": "LIGHT_BLUE_GLAZED_TERRACOTTA",
+    "name": "",
+    "buy": 12,
+    "sell": 3
+  },
+  {
+    "category": "bloques",
+    "material": "YELLOW_GLAZED_TERRACOTTA",
+    "name": "",
+    "buy": 12,
+    "sell": 3
+  },
+  {
+    "category": "bloques",
+    "material": "LIME_GLAZED_TERRACOTTA",
+    "name": "",
+    "buy": 12,
+    "sell": 3
+  },
+  {
+    "category": "bloques",
+    "material": "PINK_GLAZED_TERRACOTTA",
+    "name": "",
+    "buy": 12,
+    "sell": 3
+  },
+  {
+    "category": "bloques",
+    "material": "GRAY_GLAZED_TERRACOTTA",
+    "name": "",
+    "buy": 12,
+    "sell": 3
+  },
+  {
+    "category": "bloques",
+    "material": "LIGHT_GRAY_GLAZED_TERRACOTTA",
+    "name": "",
+    "buy": 12,
+    "sell": 3
+  },
+  {
+    "category": "bloques",
+    "material": "CYAN_GLAZED_TERRACOTTA",
+    "name": "",
+    "buy": 12,
+    "sell": 3
+  },
+  {
+    "category": "bloques",
+    "material": "PURPLE_GLAZED_TERRACOTTA",
+    "name": "",
+    "buy": 12,
+    "sell": 3
+  },
+  {
+    "category": "bloques",
+    "material": "BLUE_GLAZED_TERRACOTTA",
+    "name": "",
+    "buy": 12,
+    "sell": 3
+  },
+  {
+    "category": "bloques",
+    "material": "BROWN_GLAZED_TERRACOTTA",
+    "name": "",
+    "buy": 12,
+    "sell": 3
+  },
+  {
+    "category": "bloques",
+    "material": "GREEN_GLAZED_TERRACOTTA",
+    "name": "",
+    "buy": 12,
+    "sell": 3
+  },
+  {
+    "category": "bloques",
+    "material": "RED_GLAZED_TERRACOTTA",
+    "name": "",
+    "buy": 12,
+    "sell": 3
+  },
+  {
+    "category": "bloques",
+    "material": "BLACK_GLAZED_TERRACOTTA",
+    "name": "",
+    "buy": 12,
+    "sell": 3
+  },
+  {
+    "category": "bloques",
+    "material": "WHITE_WOOL",
+    "name": "",
+    "buy": 10,
+    "sell": 2
+  },
+  {
+    "category": "bloques",
+    "material": "ORANGE_WOOL",
+    "name": "",
+    "buy": 10,
+    "sell": 2
+  },
+  {
+    "category": "bloques",
+    "material": "MAGENTA_WOOL",
+    "name": "",
+    "buy": 10,
+    "sell": 2
+  },
+  {
+    "category": "bloques",
+    "material": "LIGHT_BLUE_WOOL",
+    "name": "",
+    "buy": 10,
+    "sell": 2
+  },
+  {
+    "category": "bloques",
+    "material": "YELLOW_WOOL",
+    "name": "",
+    "buy": 10,
+    "sell": 2
+  },
+  {
+    "category": "bloques",
+    "material": "LIME_WOOL",
+    "name": "",
+    "buy": 10,
+    "sell": 2
+  },
+  {
+    "category": "bloques",
+    "material": "PINK_WOOL",
+    "name": "",
+    "buy": 10,
+    "sell": 2
+  },
+  {
+    "category": "bloques",
+    "material": "GRAY_WOOL",
+    "name": "",
+    "buy": 10,
+    "sell": 2
+  },
+  {
+    "category": "bloques",
+    "material": "LIGHT_GRAY_WOOL",
+    "name": "",
+    "buy": 10,
+    "sell": 2
+  },
+  {
+    "category": "bloques",
+    "material": "CYAN_WOOL",
+    "name": "",
+    "buy": 10,
+    "sell": 2
+  },
+  {
+    "category": "bloques",
+    "material": "PURPLE_WOOL",
+    "name": "",
+    "buy": 10,
+    "sell": 2
+  },
+  {
+    "category": "bloques",
+    "material": "BLUE_WOOL",
+    "name": "",
+    "buy": 10,
+    "sell": 2
+  },
+  {
+    "category": "bloques",
+    "material": "BROWN_WOOL",
+    "name": "",
+    "buy": 10,
+    "sell": 2
+  },
+  {
+    "category": "bloques",
+    "material": "GREEN_WOOL",
+    "name": "",
+    "buy": 10,
+    "sell": 2
+  },
+  {
+    "category": "bloques",
+    "material": "RED_WOOL",
+    "name": "",
+    "buy": 10,
+    "sell": 2
+  },
+  {
+    "category": "bloques",
+    "material": "BLACK_WOOL",
+    "name": "",
+    "buy": 10,
+    "sell": 2
+  },
+  {
+    "category": "bloques",
+    "material": "SPONGE",
+    "name": "",
+    "buy": 250,
+    "sell": 30
+  },
+  {
+    "category": "bloques",
+    "material": "WET_SPONGE",
+    "name": "",
+    "buy": 250,
+    "sell": 30
+  },
+  {
+    "category": "bloques",
+    "material": "HAY_BLOCK",
+    "name": "",
+    "buy": 200,
+    "sell": 3
+  },
+  {
+    "category": "bloques",
+    "material": "SLIME_BLOCK",
+    "name": "",
+    "buy": 200,
+    "sell": 15
+  },
+  {
+    "category": "bloques",
+    "material": "BONE_BLOCK",
+    "name": "",
+    "buy": 25,
+    "sell": 4
+  },
+  {
+    "category": "bloques",
+    "material": "DRIED_KELP_BLOCK",
+    "name": "",
+    "buy": 10,
+    "sell": 2
+  },
+  {
+    "category": "bloques",
+    "material": "COAL_BLOCK",
+    "name": "",
+    "buy": 50,
+    "sell": 8
+  },
+  {
+    "category": "bloques",
+    "material": "REDSTONE_BLOCK",
+    "name": "",
+    "buy": 200,
+    "sell": 30
+  },
+  {
+    "category": "bloques",
+    "material": "GLOWSTONE",
+    "name": "",
+    "buy": 75,
+    "sell": 10
+  },
+  {
+    "category": "bloques",
+    "material": "NETHER_WART_BLOCK",
+    "name": "",
+    "buy": 15,
+    "sell": 3
+  },
+  {
+    "category": "bloques",
+    "material": "WARPED_WART_BLOCK",
+    "name": "",
+    "buy": 15,
+    "sell": 3
+  },
+  {
+    "category": "bloques",
+    "material": "CRIMSON_STEM",
+    "name": "",
+    "buy": 12,
+    "sell": 2
+  },
+  {
+    "category": "bloques",
+    "material": "WARPED_STEM",
+    "name": "",
+    "buy": 12,
+    "sell": 2
+  },
+  {
+    "category": "bloques",
+    "material": "STRIPPED_CRIMSON_STEM",
+    "name": "",
+    "buy": 12,
+    "sell": 2
+  },
+  {
+    "category": "bloques",
+    "material": "STRIPPED_WARPED_STEM",
+    "name": "",
+    "buy": 12,
+    "sell": 2
+  },
+  {
+    "category": "bloques",
+    "material": "CRIMSON_HYPHAE",
+    "name": "",
+    "buy": 10,
+    "sell": 2
+  },
+  {
+    "category": "bloques",
+    "material": "WARPED_HYPHAE",
+    "name": "",
+    "buy": 10,
+    "sell": 2
+  },
+  {
+    "category": "bloques",
+    "material": "STRIPPED_OAK_LOG",
+    "name": "",
+    "buy": 12,
+    "sell": 1
+  },
+  {
+    "category": "bloques",
+    "material": "STRIPPED_SPRUCE_LOG",
+    "name": "",
+    "buy": 12,
+    "sell": 1
+  },
+  {
+    "category": "bloques",
+    "material": "STRIPPED_BIRCH_LOG",
+    "name": "",
+    "buy": 12,
+    "sell": 1
+  },
+  {
+    "category": "bloques",
+    "material": "STRIPPED_JUNGLE_LOG",
+    "name": "",
+    "buy": 12,
+    "sell": 1
+  },
+  {
+    "category": "bloques",
+    "material": "STRIPPED_ACACIA_LOG",
+    "name": "",
+    "buy": 12,
+    "sell": 1
+  },
+  {
+    "category": "bloques",
+    "material": "STRIPPED_DARK_OAK_LOG",
+    "name": "",
+    "buy": 12,
+    "sell": 1
+  },
+  {
+    "category": "bloques",
+    "material": "STRIPPED_MANGROVE_LOG",
+    "name": "",
+    "buy": 12,
+    "sell": 1
+  },
+  {
+    "category": "bloques",
+    "material": "STRIPPED_CHERRY_LOG",
+    "name": "",
+    "buy": 12,
+    "sell": 1
+  },
+  {
+    "category": "bloques",
+    "material": "STRIPPED_PALE_OAK_LOG",
+    "name": "",
+    "buy": 12,
+    "sell": 1
+  },
+  {
+    "category": "bloques",
+    "material": "OAK_WOOD",
+    "name": "",
+    "buy": 10,
+    "sell": 1
+  },
+  {
+    "category": "bloques",
+    "material": "SPRUCE_WOOD",
+    "name": "",
+    "buy": 10,
+    "sell": 1
+  },
+  {
+    "category": "bloques",
+    "material": "BIRCH_WOOD",
+    "name": "",
+    "buy": 10,
+    "sell": 1
+  },
+  {
+    "category": "bloques",
+    "material": "JUNGLE_WOOD",
+    "name": "",
+    "buy": 10,
+    "sell": 1
+  },
+  {
+    "category": "bloques",
+    "material": "ACACIA_WOOD",
+    "name": "",
+    "buy": 10,
+    "sell": 1
+  },
+  {
+    "category": "bloques",
+    "material": "DARK_OAK_WOOD",
+    "name": "",
+    "buy": 10,
+    "sell": 1
+  },
+  {
+    "category": "bloques",
+    "material": "MANGROVE_WOOD",
+    "name": "",
+    "buy": 10,
+    "sell": 1
+  },
+  {
+    "category": "bloques",
+    "material": "CHERRY_WOOD",
+    "name": "",
+    "buy": 10,
+    "sell": 1
+  },
+  {
+    "category": "bloques",
+    "material": "PALE_OAK_WOOD",
+    "name": "",
+    "buy": 10,
+    "sell": 1
+  },
+  {
+    "category": "bloques",
+    "material": "NETHER_BRICK",
+    "name": "",
+    "buy": 2,
+    "sell": 1
+  },
+  {
+    "category": "bloques",
+    "material": "SOUL_SOIL",
+    "name": "",
+    "buy": 7,
+    "sell": 2
+  },
+  {
+    "category": "bloques",
+    "material": "ANCIENT_DEBRIS",
+    "name": "",
+    "buy": 5000,
+    "sell": 800
+  },
+  {
+    "category": "bloques",
+    "material": "RAW_IRON_BLOCK",
+    "name": "",
+    "buy": 200,
+    "sell": 30
+  },
+  {
+    "category": "bloques",
+    "material": "RAW_GOLD_BLOCK",
+    "name": "",
+    "buy": 750,
+    "sell": 100
+  },
+  {
+    "category": "bloques",
+    "material": "RAW_COPPER_BLOCK",
+    "name": "",
+    "buy": 75,
+    "sell": 12
+  },
+  {
+    "category": "bloques",
+    "material": "RESIN_BLOCK",
+    "name": "",
+    "buy": 40,
+    "sell": 6
+  },
+  {
+    "category": "bloques",
+    "material": "RESIN_BRICKS",
+    "name": "",
+    "buy": 45,
+    "sell": 7
+  },
+  {
+    "category": "bloques",
+    "material": "CHISELED_RESIN_BRICKS",
+    "name": "",
+    "buy": 50,
+    "sell": 8
+  },
+  {
+    "category": "bloques",
+    "material": "OAK_PLANKS",
+    "name": "",
+    "buy": 5,
+    "sell": 1
+  },
+  {
+    "category": "bloques",
+    "material": "SPRUCE_PLANKS",
+    "name": "",
+    "buy": 5,
+    "sell": 1
+  },
+  {
+    "category": "bloques",
+    "material": "BIRCH_PLANKS",
+    "name": "",
+    "buy": 5,
+    "sell": 1
+  },
+  {
+    "category": "bloques",
+    "material": "JUNGLE_PLANKS",
+    "name": "",
+    "buy": 5,
+    "sell": 1
+  },
+  {
+    "category": "bloques",
+    "material": "ACACIA_PLANKS",
+    "name": "",
+    "buy": 5,
+    "sell": 1
+  },
+  {
+    "category": "bloques",
+    "material": "DARK_OAK_PLANKS",
+    "name": "",
+    "buy": 5,
+    "sell": 1
+  },
+  {
+    "category": "bloques",
+    "material": "MANGROVE_PLANKS",
+    "name": "",
+    "buy": 5,
+    "sell": 1
+  },
+  {
+    "category": "bloques",
+    "material": "CHERRY_PLANKS",
+    "name": "",
+    "buy": 5,
+    "sell": 1
+  },
+  {
+    "category": "bloques",
+    "material": "BAMBOO_PLANKS",
+    "name": "",
+    "buy": 5,
+    "sell": 1
+  },
+  {
+    "category": "bloques",
+    "material": "BAMBOO_MOSAIC",
+    "name": "",
+    "buy": 10,
+    "sell": 2
+  },
+  {
+    "category": "bloques",
+    "material": "CRIMSON_PLANKS",
+    "name": "",
+    "buy": 5,
+    "sell": 1
+  },
+  {
+    "category": "bloques",
+    "material": "WARPED_PLANKS",
+    "name": "",
+    "buy": 5,
+    "sell": 1
+  },
+  {
+    "category": "bloques",
+    "material": "BAMBOO_BLOCK",
+    "name": "",
+    "buy": 7,
+    "sell": 1
+  },
+  {
+    "category": "bloques",
+    "material": "STRIPPED_BAMBOO_BLOCK",
+    "name": "",
+    "buy": 7,
+    "sell": 1
+  },
+  {
+    "category": "bloques",
+    "material": "OAK_LEAVES",
+    "name": "",
+    "buy": 2,
+    "sell": 1
+  },
+  {
+    "category": "bloques",
+    "material": "SPRUCE_LEAVES",
+    "name": "",
+    "buy": 2,
+    "sell": 1
+  },
+  {
+    "category": "bloques",
+    "material": "BIRCH_LEAVES",
+    "name": "",
+    "buy": 2,
+    "sell": 1
+  },
+  {
+    "category": "bloques",
+    "material": "JUNGLE_LEAVES",
+    "name": "",
+    "buy": 2,
+    "sell": 1
+  },
+  {
+    "category": "bloques",
+    "material": "ACACIA_LEAVES",
+    "name": "",
+    "buy": 2,
+    "sell": 1
+  },
+  {
+    "category": "bloques",
+    "material": "DARK_OAK_LEAVES",
+    "name": "",
+    "buy": 2,
+    "sell": 1
+  },
+  {
+    "category": "bloques",
+    "material": "CHERRY_LEAVES",
+    "name": "",
+    "buy": 5,
+    "sell": 1
+  },
+  {
+    "category": "bloques",
+    "material": "STRIPPED_OAK_WOOD",
+    "name": "",
+    "buy": 10,
+    "sell": 1
+  },
+  {
+    "category": "bloques",
+    "material": "STRIPPED_SPRUCE_WOOD",
+    "name": "",
+    "buy": 10,
+    "sell": 1
+  },
+  {
+    "category": "bloques",
+    "material": "STRIPPED_BIRCH_WOOD",
+    "name": "",
+    "buy": 10,
+    "sell": 1
+  },
+  {
+    "category": "bloques",
+    "material": "STRIPPED_JUNGLE_WOOD",
+    "name": "",
+    "buy": 10,
+    "sell": 1
+  },
+  {
+    "category": "bloques",
+    "material": "STRIPPED_ACACIA_WOOD",
+    "name": "",
+    "buy": 10,
+    "sell": 1
+  },
+  {
+    "category": "bloques",
+    "material": "STRIPPED_DARK_OAK_WOOD",
+    "name": "",
+    "buy": 10,
+    "sell": 1
+  },
+  {
+    "category": "bloques",
+    "material": "STRIPPED_MANGROVE_WOOD",
+    "name": "",
+    "buy": 10,
+    "sell": 1
+  },
+  {
+    "category": "bloques",
+    "material": "STRIPPED_CHERRY_WOOD",
+    "name": "",
+    "buy": 10,
+    "sell": 1
+  },
+  {
+    "category": "bloques",
+    "material": "STRIPPED_CRIMSON_HYPHAE",
+    "name": "",
+    "buy": 10,
+    "sell": 2
+  },
+  {
+    "category": "bloques",
+    "material": "STRIPPED_WARPED_HYPHAE",
+    "name": "",
+    "buy": 10,
+    "sell": 2
+  },
+  {
+    "category": "bloques",
+    "material": "CHISELED_BOOKSHELF",
+    "name": "",
+    "buy": 250,
+    "sell": 20
+  },
+  {
+    "category": "bloques",
+    "material": "DECORATED_POT",
+    "name": "",
+    "buy": 50,
+    "sell": 5
+  },
+  {
+    "category": "bloques",
+    "material": "PITCHER_PLANT",
+    "name": "",
+    "buy": 25,
+    "sell": 4
+  },
+  {
+    "category": "bloques",
+    "material": "TORCHFLOWER",
+    "name": "",
+    "buy": 20,
+    "sell": 3
+  },
+  {
+    "category": "bloques",
+    "material": "PINK_PETALS",
+    "name": "",
+    "buy": 10,
+    "sell": 2
+  },
+  {
+    "category": "bloques",
+    "material": "SUSPICIOUS_SAND",
+    "name": "",
+    "buy": 25,
+    "sell": 5
+  },
+  {
+    "category": "bloques",
+    "material": "SUSPICIOUS_GRAVEL",
+    "name": "",
+    "buy": 25,
+    "sell": 5
+  },
+  {
+    "category": "bloques",
+    "material": "CHISELED_COPPER",
+    "name": "",
+    "buy": 115,
+    "sell": 18
+  },
+  {
+    "category": "bloques",
+    "material": "EXPOSED_CHISELED_COPPER",
+    "name": "",
+    "buy": 90,
+    "sell": 14
+  },
+  {
+    "category": "bloques",
+    "material": "WEATHERED_CHISELED_COPPER",
+    "name": "",
+    "buy": 90,
+    "sell": 14
+  },
+  {
+    "category": "bloques",
+    "material": "OXIDIZED_CHISELED_COPPER",
+    "name": "",
+    "buy": 90,
+    "sell": 14
+  },
+  {
+    "category": "bloques",
+    "material": "WAXED_CHISELED_COPPER",
+    "name": "",
+    "buy": 140,
+    "sell": 22
+  },
+  {
+    "category": "bloques",
+    "material": "WAXED_EXPOSED_CHISELED_COPPER",
+    "name": "",
+    "buy": 115,
+    "sell": 18
+  },
+  {
+    "category": "bloques",
+    "material": "WAXED_WEATHERED_CHISELED_COPPER",
+    "name": "",
+    "buy": 115,
+    "sell": 18
+  },
+  {
+    "category": "bloques",
+    "material": "WAXED_OXIDIZED_CHISELED_COPPER",
+    "name": "",
+    "buy": 115,
+    "sell": 18
+  },
+  {
+    "category": "bloques",
+    "material": "EXPOSED_CUT_COPPER",
+    "name": "",
+    "buy": 85,
+    "sell": 14
+  },
+  {
+    "category": "bloques",
+    "material": "WEATHERED_CUT_COPPER",
+    "name": "",
+    "buy": 85,
+    "sell": 14
+  },
+  {
+    "category": "bloques",
+    "material": "OXIDIZED_CUT_COPPER",
+    "name": "",
+    "buy": 85,
+    "sell": 14
+  },
+  {
+    "category": "bloques",
+    "material": "WAXED_EXPOSED_CUT_COPPER",
+    "name": "",
+    "buy": 110,
+    "sell": 18
+  },
+  {
+    "category": "bloques",
+    "material": "WAXED_WEATHERED_CUT_COPPER",
+    "name": "",
+    "buy": 110,
+    "sell": 18
+  },
+  {
+    "category": "bloques",
+    "material": "WAXED_OXIDIZED_CUT_COPPER",
+    "name": "",
+    "buy": 110,
+    "sell": 18
+  },
+  {
+    "category": "bloques",
+    "material": "EXPOSED_COPPER_GRATE",
+    "name": "",
+    "buy": 85,
+    "sell": 14
+  },
+  {
+    "category": "bloques",
+    "material": "WEATHERED_COPPER_GRATE",
+    "name": "",
+    "buy": 85,
+    "sell": 14
+  },
+  {
+    "category": "bloques",
+    "material": "OXIDIZED_COPPER_GRATE",
+    "name": "",
+    "buy": 85,
+    "sell": 14
+  },
+  {
+    "category": "bloques",
+    "material": "WAXED_COPPER_GRATE",
+    "name": "",
+    "buy": 135,
+    "sell": 22
+  },
+  {
+    "category": "bloques",
+    "material": "WAXED_EXPOSED_COPPER_GRATE",
+    "name": "",
+    "buy": 110,
+    "sell": 18
+  },
+  {
+    "category": "bloques",
+    "material": "WAXED_WEATHERED_COPPER_GRATE",
+    "name": "",
+    "buy": 110,
+    "sell": 18
+  },
+  {
+    "category": "bloques",
+    "material": "WAXED_OXIDIZED_COPPER_GRATE",
+    "name": "",
+    "buy": 110,
+    "sell": 18
+  },
+  {
+    "category": "bloques",
+    "material": "EXPOSED_COPPER_BULB",
+    "name": "",
+    "buy": 85,
+    "sell": 14
+  },
+  {
+    "category": "bloques",
+    "material": "WEATHERED_COPPER_BULB",
+    "name": "",
+    "buy": 85,
+    "sell": 14
+  },
+  {
+    "category": "bloques",
+    "material": "OXIDIZED_COPPER_BULB",
+    "name": "",
+    "buy": 85,
+    "sell": 14
+  },
+  {
+    "category": "bloques",
+    "material": "COPPER_BULB",
+    "name": "",
+    "buy": 110,
+    "sell": 18
+  },
+  {
+    "category": "bloques",
+    "material": "WAXED_COPPER_BULB",
+    "name": "",
+    "buy": 135,
+    "sell": 22
+  },
+  {
+    "category": "bloques",
+    "material": "WAXED_EXPOSED_COPPER_BULB",
+    "name": "",
+    "buy": 110,
+    "sell": 18
+  },
+  {
+    "category": "bloques",
+    "material": "WAXED_WEATHERED_COPPER_BULB",
+    "name": "",
+    "buy": 110,
+    "sell": 18
+  },
+  {
+    "category": "bloques",
+    "material": "WAXED_OXIDIZED_COPPER_BULB",
+    "name": "",
+    "buy": 110,
+    "sell": 18
+  },
+  {
+    "category": "bloques",
+    "material": "CRAFTER",
+    "name": "",
+    "buy": 750,
+    "sell": 100
+  },
+  {
+    "category": "bloques",
+    "material": "COBBLED_DEEPSLATE",
+    "name": "",
+    "buy": 10,
+    "sell": 1
+  },
+  {
+    "category": "comida",
+    "material": "APPLE",
+    "name": "\" \"",
+    "buy": 15,
+    "sell": 2
+  },
+  {
+    "category": "comida",
+    "material": "CAKE",
+    "name": "",
+    "buy": 100,
+    "sell": 8
+  },
+  {
+    "category": "comida",
+    "material": "COOKIE",
+    "name": "",
+    "buy": 5,
+    "sell": 1
+  },
+  {
+    "category": "comida",
+    "material": "GOLDEN_CARROT",
+    "name": "",
+    "buy": 50,
+    "sell": 3
+  },
+  {
+    "category": "comida",
+    "material": "COOKED_BEEF",
+    "name": "",
+    "buy": 15,
+    "sell": 2
+  },
+  {
+    "category": "comida",
+    "material": "COOKED_CHICKEN",
+    "name": "",
+    "buy": 15,
+    "sell": 2
+  },
+  {
+    "category": "comida",
+    "material": "COOKED_MUTTON",
+    "name": "",
+    "buy": 15,
+    "sell": 2
+  },
+  {
+    "category": "comida",
+    "material": "COOKED_PORKCHOP",
+    "name": "",
+    "buy": 15,
+    "sell": 2
+  },
+  {
+    "category": "comida",
+    "material": "COOKED_RABBIT",
+    "name": "",
+    "buy": 15,
+    "sell": 2
+  },
+  {
+    "category": "comida",
+    "material": "BAKED_POTATO",
+    "name": "",
+    "buy": 15,
+    "sell": 3
+  },
+  {
+    "category": "comida",
+    "material": "MELON_SLICE",
+    "name": "",
+    "buy": 5,
+    "sell": 1
+  },
+  {
+    "category": "comida",
+    "material": "PUMPKIN_PIE",
+    "name": "",
+    "buy": 10,
+    "sell": 3
+  },
+  {
+    "category": "comida",
+    "material": "BREAD",
+    "name": "",
+    "buy": 10,
+    "sell": 2
+  },
+  {
+    "category": "comida",
+    "material": "COOKED_COD",
+    "name": "",
+    "buy": 10,
+    "sell": 5
+  },
+  {
+    "category": "comida",
+    "material": "COOKED_SALMON",
+    "name": "",
+    "buy": 10,
+    "sell": 5
+  },
+  {
+    "category": "comida",
+    "material": "GOLDEN_APPLE",
+    "name": "",
+    "buy": 350,
+    "sell": 20
+  },
+  {
+    "category": "comida",
+    "material": "MILK_BUCKET",
+    "name": "",
+    "buy": 500,
+    "sell": 25
+  },
+  {
+    "category": "equipo",
+    "material": "EXPERIENCE_BOTTLE",
+    "name": "\" \"",
+    "buy": 100,
+    "sell": 3
+  },
+  {
+    "category": "equipo",
+    "material": "GOLDEN_APPLE",
+    "name": "",
+    "buy": 350,
+    "sell": 20
+  },
+  {
+    "category": "equipo",
+    "material": "WIND_CHARGE",
+    "name": "",
+    "buy": 10,
+    "sell": 1
+  },
+  {
+    "category": "equipo",
+    "material": "ENDER_PEARL",
+    "name": "",
+    "buy": 50,
+    "sell": 5
+  },
+  {
+    "category": "equipo",
+    "material": "TIPPED_ARROW",
+    "name": "",
+    "buy": 100,
+    "sell": 5
+  },
+  {
+    "category": "equipo",
+    "material": "ARROW",
+    "name": "",
+    "buy": 5,
+    "sell": 1
+  },
+  {
+    "category": "equipo",
+    "material": "SPECTRAL_ARROW",
+    "name": "",
+    "buy": 100,
+    "sell": 5
+  },
+  {
+    "category": "equipo",
+    "material": "NETHERITE_UPGRADE_SMITHING_TEMPLATE",
+    "name": "",
+    "buy": 25000,
+    "sell": 50
+  },
+  {
+    "category": "equipo",
+    "material": "MILK_BUCKET",
+    "name": "",
+    "buy": 5000,
+    "sell": 10
+  },
+  {
+    "category": "equipo",
+    "material": "SPLASH_POTION",
+    "name": "",
+    "buy": 420,
+    "sell": 15
+  },
+  {
+    "category": "farmeo",
+    "material": "BAMBOO",
+    "name": "\" \"",
+    "buy": 4,
+    "sell": 1
+  },
+  {
+    "category": "farmeo",
+    "material": "BEETROOT",
+    "name": "",
+    "buy": 80,
+    "sell": 20
+  },
+  {
+    "category": "farmeo",
+    "material": "BEETROOT_SEEDS",
+    "name": "",
+    "buy": 5,
+    "sell": 1
+  },
+  {
+    "category": "farmeo",
+    "material": "BROWN_MUSHROOM",
+    "name": "",
+    "buy": 20,
+    "sell": 1
+  },
+  {
+    "category": "farmeo",
+    "material": "CACTUS",
+    "name": "",
+    "buy": 20,
+    "sell": 5
+  },
+  {
+    "category": "farmeo",
+    "material": "CARROT",
+    "name": "",
+    "buy": 60,
+    "sell": 15
+  },
+  {
+    "category": "farmeo",
+    "material": "CHORUS_FLOWER",
+    "name": "",
+    "buy": 30,
+    "sell": 1
+  },
+  {
+    "category": "farmeo",
+    "material": "CHORUS_FRUIT",
+    "name": "",
+    "buy": 5,
+    "sell": 1
+  },
+  {
+    "category": "farmeo",
+    "material": "COCOA_BEANS",
+    "name": "",
+    "buy": 120,
+    "sell": 30
+  },
+  {
+    "category": "farmeo",
+    "material": "KELP",
+    "name": "",
+    "buy": 6,
+    "sell": 2
+  },
+  {
+    "category": "farmeo",
+    "material": "MELON",
+    "name": "",
+    "buy": 45,
+    "sell": 7
+  },
+  {
+    "category": "farmeo",
+    "material": "MELON_SLICE",
+    "name": "",
+    "buy": 5,
+    "sell": 1
+  },
+  {
+    "category": "farmeo",
+    "material": "NETHER_WART",
+    "name": "",
+    "buy": 80,
+    "sell": 20
+  },
+  {
+    "category": "farmeo",
+    "material": "POTATO",
+    "name": "",
+    "buy": 60,
+    "sell": 15
+  },
+  {
+    "category": "farmeo",
+    "material": "PUMPKIN",
+    "name": "",
+    "buy": 28,
+    "sell": 7
+  },
+  {
+    "category": "farmeo",
+    "material": "PUMPKIN_SEEDS",
+    "name": "",
+    "buy": 5,
+    "sell": 1
+  },
+  {
+    "category": "farmeo",
+    "material": "RED_MUSHROOM",
+    "name": "",
+    "buy": 5,
+    "sell": 1
+  },
+  {
+    "category": "farmeo",
+    "material": "SUGAR_CANE",
+    "name": "",
+    "buy": 12,
+    "sell": 3
+  },
+  {
+    "category": "farmeo",
+    "material": "WHEAT",
+    "name": "",
+    "buy": 80,
+    "sell": 20
+  },
+  {
+    "category": "farmeo",
+    "material": "WHEAT_SEEDS",
+    "name": "",
+    "buy": 5,
+    "sell": 1
+  },
+  {
+    "category": "farmeo",
+    "material": "SWEET_BERRIES",
+    "name": "",
+    "buy": 28,
+    "sell": 7
+  },
+  {
+    "category": "miscellaneo",
+    "material": "COBWEB",
+    "name": "\" \"",
+    "buy": 40,
+    "sell": 2
+  },
+  {
+    "category": "miscellaneo",
+    "material": "ENDER_CHEST",
+    "name": "",
+    "buy": 800,
+    "sell": 15
+  },
+  {
+    "category": "miscellaneo",
+    "material": "GLOW_INK_SAC",
+    "name": "",
+    "buy": 10,
+    "sell": 2
+  },
+  {
+    "category": "miscellaneo",
+    "material": "HONEYCOMB",
+    "name": "",
+    "buy": 3,
+    "sell": 1
+  },
+  {
+    "category": "miscellaneo",
+    "material": "LILY_PAD",
+    "name": "",
+    "buy": 28,
+    "sell": 7
+  },
+  {
+    "category": "miscellaneo",
+    "material": "NAME_TAG",
+    "name": "",
+    "buy": 100000,
+    "sell": 3
+  },
+  {
+    "category": "miscellaneo",
+    "material": "SCAFFOLDING",
+    "name": "",
+    "buy": 5,
+    "sell": 1
+  },
+  {
+    "category": "miscellaneo",
+    "material": "SHULKER_BOX",
+    "name": "",
+    "buy": 1000,
+    "sell": 50
+  },
+  {
+    "category": "miscellaneo",
+    "material": "SNOW",
+    "name": "",
+    "buy": 7,
+    "sell": 1
+  },
+  {
+    "category": "miscellaneo",
+    "material": "SPONGE",
+    "name": "",
+    "buy": 250,
+    "sell": 30
+  },
+  {
+    "category": "miscellaneo",
+    "material": "END_ROD",
+    "name": "",
+    "buy": 10,
+    "sell": 1
+  },
+  {
+    "category": "miscellaneo",
+    "material": "LANTERN",
+    "name": "",
+    "buy": 15,
+    "sell": 2
+  },
+  {
+    "category": "miscellaneo",
+    "material": "SOUL_LANTERN",
+    "name": "",
+    "buy": 20,
+    "sell": 3
+  },
+  {
+    "category": "miscellaneo",
+    "material": "CAMPFIRE",
+    "name": "",
+    "buy": 20,
+    "sell": 4
+  },
+  {
+    "category": "miscellaneo",
+    "material": "SOUL_CAMPFIRE",
+    "name": "",
+    "buy": 25,
+    "sell": 5
+  },
+  {
+    "category": "miscellaneo",
+    "material": "SHULKER_SHELL",
+    "name": "",
+    "buy": 500,
+    "sell": 45
+  },
+  {
+    "category": "miscellaneo",
+    "material": "DRAGON_BREATH",
+    "name": "",
+    "buy": 800,
+    "sell": 5
+  },
+  {
+    "category": "miscellaneo",
+    "material": "INK_SAC",
+    "name": "",
+    "buy": 20,
+    "sell": 1
+  },
+  {
+    "category": "miscellaneo",
+    "material": "PUFFERFISH",
+    "name": "",
+    "buy": 50,
+    "sell": 5
+  },
+  {
+    "category": "mobs",
+    "material": "ARROW",
+    "name": "\" \"",
+    "buy": 5,
+    "sell": 1
+  },
+  {
+    "category": "mobs",
+    "material": "BLAZE_POWDER",
+    "name": "",
+    "buy": 5,
+    "sell": 1
+  },
+  {
+    "category": "mobs",
+    "material": "BLAZE_ROD",
+    "name": "",
+    "buy": 10,
+    "sell": 2
+  },
+  {
+    "category": "mobs",
+    "material": "BREEZE_ROD",
+    "name": "",
+    "buy": 20,
+    "sell": 2
+  },
+  {
+    "category": "mobs",
+    "material": "BONE",
+    "name": "",
+    "buy": -1,
+    "sell": 4
+  },
+  {
+    "category": "mobs",
+    "material": "ENDER_PEARL",
+    "name": "",
+    "buy": 50,
+    "sell": 5
+  },
+  {
+    "category": "mobs",
+    "material": "FEATHER",
+    "name": "",
+    "buy": 6,
+    "sell": 1
+  },
+  {
+    "category": "mobs",
+    "material": "GUNPOWDER",
+    "name": "",
+    "buy": -1,
+    "sell": 4
+  },
+  {
+    "category": "mobs",
+    "material": "MAGMA_CREAM",
+    "name": "",
+    "buy": 200,
+    "sell": 20
+  },
+  {
+    "category": "mobs",
+    "material": "PHANTOM_MEMBRANE",
+    "name": "",
+    "buy": 10,
+    "sell": 3
+  },
+  {
+    "category": "mobs",
+    "material": "RABBIT_FOOT",
+    "name": "",
+    "buy": 5,
+    "sell": 1
+  },
+  {
+    "category": "mobs",
+    "material": "RABBIT_HIDE",
+    "name": "",
+    "buy": -1,
+    "sell": 2
+  },
+  {
+    "category": "mobs",
+    "material": "ROTTEN_FLESH",
+    "name": "",
+    "buy": 6,
+    "sell": 2
+  },
+  {
+    "category": "mobs",
+    "material": "SLIME_BALL",
+    "name": "",
+    "buy": 25,
+    "sell": 7
+  },
+  {
+    "category": "mobs",
+    "material": "SPIDER_EYE",
+    "name": "",
+    "buy": 7,
+    "sell": 1
+  },
+  {
+    "category": "mobs",
+    "material": "STRING",
+    "name": "",
+    "buy": 35,
+    "sell": 15
+  },
+  {
+    "category": "mobs",
+    "material": "PRISMARINE_SHARD",
+    "name": "",
+    "buy": 100,
+    "sell": 5
+  },
+  {
+    "category": "mobs",
+    "material": "LEATHER",
+    "name": "",
+    "buy": -1,
+    "sell": 3
+  },
+  {
+    "category": "mobs",
+    "material": "HONEYCOMB",
+    "name": "",
+    "buy": 50,
+    "sell": 3
+  },
+  {
+    "category": "redstone",
+    "material": "CRAFTER",
+    "name": "\" \"",
+    "buy": 500,
+    "sell": 13
+  },
+  {
+    "category": "redstone",
+    "material": "DISPENSER",
+    "name": "",
+    "buy": 300,
+    "sell": 8
+  },
+  {
+    "category": "redstone",
+    "material": "DROPPER",
+    "name": "",
+    "buy": 250,
+    "sell": 2
+  },
+  {
+    "category": "redstone",
+    "material": "OBSERVER",
+    "name": "",
+    "buy": 1500,
+    "sell": 5
+  },
+  {
+    "category": "redstone",
+    "material": "COMPARATOR",
+    "name": "",
+    "buy": 750,
+    "sell": 5
+  },
+  {
+    "category": "redstone",
+    "material": "REPEATER",
+    "name": "",
+    "buy": 1250,
+    "sell": 6
+  },
+  {
+    "category": "redstone",
+    "material": "PISTON",
+    "name": "",
+    "buy": 1200,
+    "sell": 4
+  },
+  {
+    "category": "redstone",
+    "material": "STICKY_PISTON",
+    "name": "",
+    "buy": 1800,
+    "sell": 5
+  },
+  {
+    "category": "redstone",
+    "material": "SLIME_BLOCK",
+    "name": "",
+    "buy": 2500,
+    "sell": 65
+  },
+  {
+    "category": "redstone",
+    "material": "HOPPER",
+    "name": "",
+    "buy": 400,
+    "sell": 10
+  },
+  {
+    "category": "venta",
+    "material": "AMETHYST_CLUSTER",
+    "name": "\"&x&E&7&2&7&F&5⭐ Cristal Estelar ⭐\"",
+    "buy": -1,
+    "sell": 10
+  },
+  {
+    "category": "venta",
+    "material": "AMETHYST_CLUSTER",
+    "name": "\"&x&E&7&2&7&F&5⭐ Cristal Estelar ⭐\"",
+    "buy": -1,
+    "sell": 10
+  }
+]

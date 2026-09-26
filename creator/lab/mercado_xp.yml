@@ -1,0 +1,105 @@
+﻿menu_title: '&0&l|&r &0Mercado ▶ &8Experiencia &8(&#D48BFF✦&8)'
+open_command:
+  - shop xp
+  - mercado xp
+  - mercadoxp
+size: 36
+open_requirement:
+  requirements: {}
+register_command: true
+update: true
+
+items:
+  # FILA 2: ELECCION PRINCIPAL (SLOT 12: TIENDA DE XP, SLOT 14: ENCANTAMIENTOS CUSTOM)
+  'Opcion_Tienda_XP':
+    material: EXPERIENCE_BOTTLE
+    slot: 12
+    item_flags:
+      - HIDE_ATTRIBUTES
+      - HIDE_ENCHANTS
+    enchantments:
+      - DURABILITY;1
+    display_name: '&#D48BFFTienda de XP'
+    lore:
+      - '&8Catálogo Tradicional'
+      - ''
+      - ' &fAdquiere plantillas de herrería'
+      - ' &f(Trims) y libros de encantamiento'
+      - ' &fcambiándolos por niveles de XP.'
+      - ''
+      - ' &8| &fCatálogo: &eTrims, Encantamientos'
+      - ' &8| &fMoneda: &#D48BFFXP (Lvl)'
+      - ''
+      - '&7▶ Click para ver categorías'
+    left_click_commands:
+      - '[openguimenu] tienda_xp_fija'
+      - '[sound] UI_BUTTON_CLICK'
+
+  'Opcion_Custom_Enchants':
+    material: ENCHANTED_BOOK
+    slot: 14
+    item_flags:
+      - HIDE_ATTRIBUTES
+      - HIDE_ENCHANTS
+    enchantments:
+      - DURABILITY;1
+    display_name: '&#FFF275Encantamientos Custom'
+    lore:
+      - '&8Poderes Arcanos y Rúnicos'
+      - ''
+      - ' &fDesbloquea habilidades elementales,'
+      - ' &fencantamientos avanzados y efectos'
+      - ' &flegendarios para tu armamento.'
+      - ''
+      - ' &8| &fSistema: &#D48BFFExcellentEnchants'
+      - ' &8| &fMoneda: &#D48BFFXP / Almas'
+      - ''
+      - '&7▶ Click para abrir'
+    left_click_commands:
+      - '[close]'
+      - '[player] enchants'
+      - '[sound] UI_BUTTON_CLICK'
+
+  # FILA 4: NAVBAR (SLOTS 27 A 35)
+  'Boton_Volver':
+    material: DARK_OAK_DOOR
+    slot: 31
+    item_flags:
+      - HIDE_ATTRIBUTES
+    display_name: '&cVolver Atrás'
+    lore:
+      - '&7Regresar al menú principal'
+    left_click_commands:
+      - '[openguimenu] tienda_principal'
+      - '[sound] BLOCK_NOTE_BLOCK_BASS'
+
+  'Info_Balance':
+    material: head-%player_name%
+    slot: 35
+    item_flags:
+      - HIDE_ATTRIBUTES
+    display_name: '&#FFF275Tu Economía'
+    lore:
+      - '&8Tu Economía'
+      - ''
+      - ' &8| &fDinero: &#59E91F&l$&r&#59E91F%vault_eco_balance_formatted%'
+      - ' &8| &fAlmas: &#34B0F3%thundercurrencys_almas%🔥'
+      - ' &8| &fZafiros: &#1E6BFF%thundercurrencys_zafiros%💎'
+      - ' &8| &fXP: &#D48BFF%player_level% LVL'
+      - ''
+      - '&7▶ Click para más información'
+    left_click_commands:
+      - '[openguimenu] info_economia'
+      - '[sound] UI_BUTTON_CLICK'
+
+  'Filtro_Navbar':
+    material: GRAY_STAINED_GLASS_PANE
+    display_name: ' '
+    slots:
+      - 27
+      - 28
+      - 29
+      - 30
+      - 32
+      - 33
+      - 34

@@ -1,0 +1,45 @@
+size: 27
+menu_title: '&0&l|&r &0Casas ▶ &8Eliminar hogar'
+update: true
+
+items:
+  'Aceptar':
+    display_name: "&#00FC00ᴀᴄᴇᴘᴛᴀʀ"
+    material: LIME_STAINED_GLASS_PANE
+    slot: 15
+    lore:
+      - '&7▶ Click para eliminar'
+    left_click_commands:
+      - '[openguimenu] Casas'
+      - '[player] delhome %essentials_home_has_6%'
+      - '[sound] UI_BUTTON_CLICK'
+    
+  'Cancelar':
+    material: RED_STAINED_GLASS_PANE
+    slot: 11
+    display_name: "&#FF0000ᴄᴀɴᴄᴇʟᴀʀ"
+    lore:
+      - '&7▶ Click para cancelar'
+    left_click_commands:
+      - '[openguimenu] Casas'
+      - '[sound] UI_BUTTON_CLICK'
+
+
+  'Home':
+    material: LIME_BED
+    slot: 13
+    priority: 1
+    display_name: '&c⌂ Hogar &8▶ &f%essentials_home_has_6%'
+    lore:
+      - '&8ᴇꜱᴛᴀʙʟᴇᴄɪᴅᴏ'
+      - ''
+      - '&8 ᴜʙɪᴄᴀᴄɪᴏɴ'
+      - '&8 ● &fMundo: &7%essentials_home_6_w%'
+      - '&8 ● &fX: &7%math_0:0_{essentials_home_6_x}%'
+      - '&8 ● &fY: &7%math_0:0_{essentials_home_6_y}%'
+      - '&8 ● &fZ: &7%math_0:0_{essentials_home_6_z}%'
+      - ''
+    left_click_commands:
+      - '[sound] BLOCK_SLIME_BLOCK_BREAK'
+    right_click_commands:
+      - '[sound] BLOCK_SLIME_BLOCK_BREAK'

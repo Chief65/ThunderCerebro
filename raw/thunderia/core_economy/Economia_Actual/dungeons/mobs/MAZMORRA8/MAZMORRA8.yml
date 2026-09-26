@@ -1,0 +1,259 @@
+MineroForja:
+  Type: ZOMBIFIED_PIGLIN
+  Display: '&f[Lv.8] &6ᴍɪɴᴇʀᴏ ᴅᴇ ʟᴀ ꜰᴏʀᴊᴀ &8| <#ED1313><caster.hp{r=0}><&heart>'
+  Health: 45
+  Damage: 30
+  Options:
+    Scale: 1
+    MovementSpeed: 0.3
+    PreventOtherDrops: true
+    Despawn: false
+    ReturnHome: true
+    LeashRange: 20
+    KnockbackResistance: 0.5
+    PreventSunburn: true
+  Modules:
+    ThreatTable: true
+  Equipment:
+    - GOLDEN_PICKAXE HAND
+    - GOLDEN_HELMET HEAD
+    - GOLDEN_BOOTS FEET
+  AIGoalSelectors:
+    - 0 clear
+    - 1 meleeattack
+    - 2 randomstroll
+    - 3 lookatplayers
+    - 4 float
+  AITargetSelectors:
+    - 0 clear
+    - 1 players
+  Drops:
+    - MAGMA_CREAM 1-2 0.5
+    - GOLD 1-2 1
+    - EXPERIENCE_BOTTLE 1-2 1
+  Skills:
+    - particles{particle=FLAME;amount=20;speed=0.05;hSpread=1.5;vSpread=1.5} @self ~onTimer:10
+
+
+    - skill{s=SonidoKill} @trigger ~onDeath
+    - setname{n=<caster.name>;delay=2} @self ~onDamaged
+    - particles{particle=SCULK_SOUL;amount=60;speed=0.1;hSpread=0.6;vSpread=0.6} @self ~onDeath
+    ####### RECOMPENSAS #######
+    - actionmessage{m="<#34B0F3>+5 <white>Almas <#34B0F3>🔥 &8| <#59E91F>+<#59E91F>&l$&r<#59E91F>50"} @trigger ~onDeath  
+    - command{c="points give <trigger.name> 5 -s";sender=console} @self ~onDeath  
+    - command{c="economy give <trigger.name> 50";sender=console} @self ~onDeath   
+    - command{c="si give fragmentosuper 1 <trigger.name> -s";sender=console} @self ~onDeath 0.02 
+    - command{c="si give fragmentorara 1 <trigger.name> -s";sender=console} @self ~onDeath 0.02 
+    - command{c="si give fragmentogadget 1 <trigger.name> -s";sender=console} @self ~onDeath 0.02 
+    - command{c="si give fragmentomitica 1 <trigger.name> -s";sender=console} @self ~onDeath 0.003 
+    ####### EXTRAS #######
+    - skill{s=DropFragmentoLimitedGeneral} @self ~onDeath 0.001
+    - skill{s=BoostAlmas} @self ~onDeath 
+    - setvariable{var=almas;value=5;scope=CASTER;type=INTEGER} @self ~onSpawn
+
+EspirituFuego:
+  Type: BLAZE
+  Display: '&f[Lv.8] &6ᴇꜱᴘíʀɪᴛᴜ ᴅᴇ ꜰᴜᴇɢᴏ &8| <#ED1313><caster.hp{r=0}><&heart>'
+  Health: 45
+  Damage: 30
+  Options:
+    Scale: 1
+    MovementSpeed: 0.3
+    PreventOtherDrops: true
+    Despawn: false
+    ReturnHome: true
+    LeashRange: 20
+    KnockbackResistance: 0.5
+    PreventSunburn: true
+  Modules:
+    ThreatTable: true
+  AITargetSelectors:
+    - 0 clear
+    - 1 players
+  Drops:
+    - MAGMA_CREAM 1-2 0.5
+    - GOLD 1-2 1
+    - EXPERIENCE_BOTTLE 1-2 1
+    - BLAZE_ROD 1 1
+  Skills:
+    - particles{particle=FLAME;amount=20;speed=0.05;hSpread=1.5;vSpread=1.5} @self ~onTimer:10
+    - skill{s=AuraFuego} @self ~onTimer:10
+
+    - skill{s=SonidoKill} @trigger ~onDeath
+    - setname{n=<caster.name>;delay=2} @self ~onDamaged
+    - particles{particle=SCULK_SOUL;amount=60;speed=0.1;hSpread=0.6;vSpread=0.6} @self ~onDeath
+    ####### RECOMPENSAS #######
+    - actionmessage{m="<#34B0F3>+5 <white>Almas <#34B0F3>🔥 &8| <#59E91F>+<#59E91F>&l$&r<#59E91F>50"} @trigger ~onDeath  
+    - command{c="points give <trigger.name> 5 -s";sender=console} @self ~onDeath  
+    - command{c="economy give <trigger.name> 50";sender=console} @self ~onDeath   
+    - command{c="si give fragmentosuper 1 <trigger.name> -s";sender=console} @self ~onDeath 0.02 
+    - command{c="si give fragmentorara 1 <trigger.name> -s";sender=console} @self ~onDeath 0.02 
+    - command{c="si give fragmentogadget 1 <trigger.name> -s";sender=console} @self ~onDeath 0.02 
+    - command{c="si give fragmentomitica 1 <trigger.name> -s";sender=console} @self ~onDeath 0.003 
+    ####### EXTRAS #######
+    - skill{s=DropFragmentoLimitedGeneral} @self ~onDeath 0.001
+    - skill{s=BoostAlmas} @self ~onDeath 
+    - setvariable{var=almas;value=5;scope=CASTER;type=INTEGER} @self ~onSpawn
+
+GuardiaForja:
+  Type: PIGLIN
+  Display: '&f[Lv.8] &6ɢᴜᴀʀᴅɪáɴ ᴅᴇ ʟᴀ ꜰᴏʀᴊᴀ &8| <#ED1313><caster.hp{r=0}><&heart>'
+  Health: 45
+  Damage: 30
+  Options:
+    Scale: 1
+    MovementSpeed: 0.3
+    PreventOtherDrops: true
+    Despawn: false
+    ReturnHome: true
+    LeashRange: 20
+    KnockbackResistance: 0.5
+    PreventSunburn: true
+  Modules:
+    ThreatTable: true
+  Equipment:
+    - GOLDEN_AXE HAND
+    - GOLDEN_HELMET HEAD
+    - GOLDEN_CHESTPLATE CHEST
+    - GOLDEN_LEGGINGS LEGS
+    - GOLDEN_BOOTS FEET
+    - SHIELD OFFHAND
+
+  AIGoalSelectors:
+    - 0 clear
+    - 1 meleeattack
+    - 2 randomstroll
+    - 3 lookatplayers
+    - 4 float
+  AITargetSelectors:
+    - 0 clear
+    - 1 players
+  Drops:
+    - MAGMA_CREAM 1-2 0.5
+    - GOLD 1-2 1
+    - EXPERIENCE_BOTTLE 1-2 1
+  Skills:
+    - particles{particle=FLAME;amount=20;speed=0.05;hSpread=1.5;vSpread=1.5} @self ~onTimer:10
+
+
+    - skill{s=SonidoKill} @trigger ~onDeath
+    - setname{n=<caster.name>;delay=2} @self ~onDamaged
+    - particles{particle=SCULK_SOUL;amount=60;speed=0.1;hSpread=0.6;vSpread=0.6} @self ~onDeath
+    ####### RECOMPENSAS #######
+    - actionmessage{m="<#34B0F3>+5 <white>Almas <#34B0F3>🔥 &8| <#59E91F>+<#59E91F>&l$&r<#59E91F>50"} @trigger ~onDeath  
+    - command{c="points give <trigger.name> 5 -s";sender=console} @self ~onDeath  
+    - command{c="economy give <trigger.name> 50";sender=console} @self ~onDeath   
+    - command{c="si give fragmentosuper 1 <trigger.name> -s";sender=console} @self ~onDeath 0.02 
+    - command{c="si give fragmentorara 1 <trigger.name> -s";sender=console} @self ~onDeath 0.02 
+    - command{c="si give fragmentogadget 1 <trigger.name> -s";sender=console} @self ~onDeath 0.02 
+    - command{c="si give fragmentomitica 1 <trigger.name> -s";sender=console} @self ~onDeath 0.003 
+    ####### EXTRAS #######
+    - skill{s=DropFragmentoLimitedGeneral} @self ~onDeath 0.001
+    - skill{s=BoostAlmas} @self ~onDeath 
+    - setvariable{var=almas;value=5;scope=CASTER;type=INTEGER} @self ~onSpawn
+
+EsqueletoCalcinado:
+  Type: WITHER_SKELETON
+  Display: '&f[Lv.8] &6ᴇꜱqᴜᴇʟᴇᴛᴏ ᴄᴀʟᴄɪɴᴀᴅᴏ &8| <#ED1313><caster.hp{r=0}><&heart>'
+  Health: 45
+  Damage: 30
+  Options:
+    Scale: 1
+    MovementSpeed: 0.3
+    PreventOtherDrops: true
+    Despawn: false
+    ReturnHome: true
+    LeashRange: 20
+    KnockbackResistance: 0.5
+    PreventSunburn: true
+  Modules:
+    ThreatTable: true
+  Equipment:
+    - GOLDEN_SWORD HAND
+  AIGoalSelectors:
+    - 0 clear
+    - 1 meleeattack
+    - 2 randomstroll
+    - 3 lookatplayers
+    - 4 float
+  AITargetSelectors:
+    - 0 clear
+    - 1 players
+  Drops:
+    - MAGMA_CREAM 1-2 0.5
+    - GOLD 1-2 1
+    - EXPERIENCE_BOTTLE 1-2 1
+  Skills:
+    - particles{particle=FLAME;amount=20;speed=0.05;hSpread=1.5;vSpread=1.5} @self ~onTimer:10
+
+
+    - skill{s=SonidoKill} @trigger ~onDeath
+    - setname{n=<caster.name>;delay=2} @self ~onDamaged
+    - particles{particle=SCULK_SOUL;amount=60;speed=0.1;hSpread=0.6;vSpread=0.6} @self ~onDeath
+    ####### RECOMPENSAS #######
+    - actionmessage{m="<#34B0F3>+5 <white>Almas <#34B0F3>🔥 &8| <#59E91F>+<#59E91F>&l$&r<#59E91F>50"} @trigger ~onDeath  
+    - command{c="points give <trigger.name> 5 -s";sender=console} @self ~onDeath  
+    - command{c="economy give <trigger.name> 50";sender=console} @self ~onDeath   
+    - command{c="si give fragmentosuper 1 <trigger.name> -s";sender=console} @self ~onDeath 0.02 
+    - command{c="si give fragmentorara 1 <trigger.name> -s";sender=console} @self ~onDeath 0.02 
+    - command{c="si give fragmentogadget 1 <trigger.name> -s";sender=console} @self ~onDeath 0.02 
+    - command{c="si give fragmentomitica 1 <trigger.name> -s";sender=console} @self ~onDeath 0.003 
+    ####### EXTRAS #######
+    - skill{s=DropFragmentoLimitedGeneral} @self ~onDeath 0.001
+    - skill{s=BoostAlmas} @self ~onDeath 
+    - setvariable{var=almas;value=5;scope=CASTER;type=INTEGER} @self ~onSpawn
+
+PorteroForja:
+  Type: PIGLIN
+  Display: '&f[Lv.8] &6ɢᴜᴀʀᴅɪáɴ ᴅᴇ ʟᴀ ꜰᴏʀᴊᴀ &8| <#ED1313><caster.hp{r=0}><&heart>'
+  Health: 100
+  Damage: 30
+  Options:
+    Scale: 1.3
+    MovementSpeed: 0.3
+    PreventOtherDrops: true
+    Despawn: false
+    ReturnHome: true
+    LeashRange: 20
+    KnockbackResistance: 0.5
+    PreventSunburn: true
+  Modules:
+    ThreatTable: true
+  Equipment:
+    - NETHERITE_AXE HAND
+    - NETHERITE_HELMET HEAD
+    - NETHERITE_CHESTPLATE CHEST
+    - NETHERITE_LEGGINGS LEGS
+    - NETHERITE_BOOTS FEET
+  AIGoalSelectors:
+    - 0 clear
+    - 1 meleeattack
+    - 2 randomstroll
+    - 3 lookatplayers
+    - 4 float
+  AITargetSelectors:
+    - 0 clear
+    - 1 players
+  Drops:
+    - MAGMA_CREAM 1-2 0.5
+    - GOLD 1-2 1
+    - EXPERIENCE_BOTTLE 1-2 1
+  Skills:
+    - particles{particle=FLAME;amount=20;speed=0.05;hSpread=1.5;vSpread=1.5} @self ~onTimer:10
+
+
+    - skill{s=SonidoKill} @trigger ~onDeath
+    - setname{n=<caster.name>;delay=2} @self ~onDamaged
+    - particles{particle=SCULK_SOUL;amount=60;speed=0.1;hSpread=0.6;vSpread=0.6} @self ~onDeath
+    ####### RECOMPENSAS #######
+    - actionmessage{m="<#34B0F3>+10 <white>Almas <#34B0F3>🔥 &8| <#59E91F>+<#59E91F>&l$&r<#59E91F>100"} @trigger ~onDeath  
+    - command{c="points give <trigger.name> 10 -s";sender=console} @self ~onDeath  
+    - command{c="economy give <trigger.name> 100";sender=console} @self ~onDeath   
+    - command{c="si give fragmentosuper 1 <trigger.name> -s";sender=console} @self ~onDeath 0.02 
+    - command{c="si give fragmentorara 1 <trigger.name> -s";sender=console} @self ~onDeath 0.02 
+    - command{c="si give fragmentogadget 1 <trigger.name> -s";sender=console} @self ~onDeath 0.02 
+    - command{c="si give fragmentomitica 1 <trigger.name> -s";sender=console} @self ~onDeath 0.003 
+    ####### EXTRAS #######
+    - skill{s=DropFragmentoLimitedGeneral} @self ~onDeath 0.001
+    - skill{s=BoostAlmas} @self ~onDeath 
+    - setvariable{var=almas;value=10;scope=CASTER;type=INTEGER} @self ~onSpawn

@@ -1,0 +1,161 @@
+title: '&0&l|&r &0Dash ▶ &8Mejoras '
+type: inventory
+rows: 6
+layout:
+### RELLENO
+  '1':
+  - relleno1
+  '10':
+  - relleno10
+  '19':
+  - relleno19
+  '28':
+  - relleno28
+  '37':
+  - relleno37
+  '46':
+  - relleno46
+  
+### BOTONES
+  '0':
+  - rachas
+  '9':
+  - ubicaciones
+  '18':
+  - temporada
+  '27':
+  - trabajos
+  '36':
+  - recetas
+  '45':
+  - jugador
+
+### EJEMPLO
+  '23':
+  - super
+  
+  '32':
+  - super_cristal
+  
+  
+items:
+### RELLENO
+  relleno1:
+    material: GRAY_STAINED_GLASS_PANE
+    stack: 1
+  relleno10:
+    material: GRAY_STAINED_GLASS_PANE
+    stack: 1
+  relleno19:
+    material: GRAY_STAINED_GLASS_PANE
+    stack: 1
+  relleno28:
+    material: GRAY_STAINED_GLASS_PANE
+    stack: 1
+  relleno37:
+    material: BLACK_STAINED_GLASS_PANE
+    stack: 1
+  relleno46:
+    material: GRAY_STAINED_GLASS_PANE
+    stack: 1
+ 
+### BOTONES 
+  jugador:
+    material: DARK_OAK_DOOR
+    stack: 1
+    name: '&7Inicio'
+    lore:
+    - ''
+    - '&8Click para ver'
+    actions:
+      commands:
+        - '[sound] BLOCK.END_PORTAL_FRAME.FILL volume=1 pitch=0.8'
+        - '[open] inicio'
+    
+  ubicaciones:
+    material: SPYGLASS
+    stack: 1
+    name: '&7Ubicaciones'
+    lore:
+    - ''
+    - '&8Click para ver'
+    actions:
+      commands:
+        - '[sound] BLOCK.END_PORTAL_FRAME.FILL volume=1 pitch=0.8'
+        - '[open] ubicaciones'
+        
+  rachas:
+    material: CAMPFIRE
+    stack: 1
+    name: '&7Rachas'
+    lore:
+    - ''
+    - '&8Click para ver'
+    actions:
+      commands:
+        - '[sound] BLOCK.END_PORTAL_FRAME.FILL volume=1 pitch=0.8'
+        - '[open] rachas'
+        
+  trabajos:
+    material: AMETHYST_SHARD
+    stack: 1
+    name: '&7Fragmentos'
+    lore:
+    - ''
+    - '&8Click para ver'
+    actions:
+      commands:
+        - '[sound] BLOCK.END_PORTAL_FRAME.FILL volume=1 pitch=0.8'
+        - '[open] trabajos'
+        
+  recetas:
+    material: NETHERITE_UPGRADE_SMITHING_TEMPLATE
+    stack: 1
+    enchantments:
+    - unbreaking 1
+    name: '&a⮕ Mejoras'
+    lore:
+    - ''
+        
+  temporada:
+    material: EXPERIENCE_BOTTLE
+    stack: 1
+    name: '&7Niveles'
+    lore:
+    - ''
+    - '&8Click para ver'
+    actions:
+      commands:
+        - '[sound] BLOCK.END_PORTAL_FRAME.FILL volume=1 pitch=0.8'
+        - '[open] niveles'
+
+### EJEMPLO
+  super:
+    material: FIREWORK_STAR
+    stack: 1
+    enchantments:
+    - aqua_affinity 1
+    attributes: false
+    name: '&b⬆ Mejora BETA &b⬆'
+    lore:
+    - '&8Objeto Util'
+    - ''
+    - '&8&m                                 '
+    - ''
+    - ' &8Necesario:'
+    - ' &8[&c✘&8] &7Purpurina Gema 0/16'
+    - ' &8[&a✔&8] &7&mZombie (Carne) 16/16'
+    - ' &8[&c✘&8] &7Dinero &7&l$&r&7100k'
+    - ''
+    - '&8&m                                 '
+    - ''
+    - '&c▶ Materiales Insuficientes'
+    
+    
+    
+    
+  super_cristal:
+    material: CYAN_STAINED_GLASS_PANE
+    stack: 1
+    name: '&bMejora &lBETA'
+    lore:

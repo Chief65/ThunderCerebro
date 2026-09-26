@@ -1,0 +1,8 @@
+lcd raw/thunderia/SmartSpawner
+get plugins/SmartSpawner/gui_layouts/default/main_gui.yml gui_layouts/default/main_gui.yml
+get plugins/SmartSpawner/gui_layouts/default/storage_gui.yml gui_layouts/default/storage_gui.yml
+get plugins/SmartSpawner/gui_layouts/default/sell_confirm_gui.yml gui_layouts/default/sell_confirm_gui.yml
+get plugins/SmartSpawner/language/en_US/gui.yml language/en_US/gui.yml
+get plugins/SmartSpawner/language/en_US/messages.yml language/en_US/messages.yml
+get plugins/SmartSpawner/language/en_US/items.yml language/en_US/items.yml
+bye

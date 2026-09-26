@@ -1,0 +1,56 @@
+{% extends "config.twig" %}
+
+{% block layout %}
+<div class="triplezone__modules__module" data-module-type="topDonor">
+    <div class="triplezone__modules__module__header">
+        <i class="mdi mdi-trophy"></i>
+        <p>{{ module.header }}</p>
+    </div>
+    <div class="top__payments--body">
+        {% if module.donor %}
+              <div class="top-donator">
+                  <div class="avatar">
+                    {% if config("serverType") == "Minecraft" %}
+                        
+                        {% set bedrockPrefix = config("bedrockPrefix") %}
+                        {% set ignWithoutPrefix = module.ign | replace({ (bedrockPrefix) : ''}) %}
+                        {% set minecraftSkin = "https://minotar.net/avatar/#{ignWithoutPrefix}/38" %}
+
+                        <img src="{{ minecraftSkin }}" alt="" style="width: 38px;border-radius: 5px;margin-right: 15px;">
+
+                        {% else %}
+                        <img src="{{ module.skin }}" alt="" style="width: 38px;border-radius: 5px;margin-right: 15px;">
+
+                    {% endif %}
+                  </div>
+                  <div class="info">
+                    <div class="ign">{{ module.ign }}</div>
+                    <div class="amount">
+
+                        {% if module.displayAmount %}
+                            {{ lang.topDonor_donated }} {{ module.total|money }} <small>{{ store.currency }}</small>
+                        {% else %}
+                            {{ lang.topDonor_donatedMost }}
+                        {% endif %}
+                        
+                        {% if module.period == "hourly" %}
+                            {{ lang.topDonor_hourly }}
+                        {% elseif module.period == "daily" %}
+                            {{ lang.topDonor_today }}
+                        {% elseif module.period == "monthly" %}
+                            {{ lang.topDonor_month }}
+                        {% elseif module.period == "yearly" %}
+                           {{ lang.topDonor_year }}
+                        {% else %}
+                            {{ lang.topDonor_week }}
+                        {% endif %}
+                        
+                    </div>
+                  </div>
+              </div>    
+        {% else %}
+        {{ lang.topDonor_noDonor }}
+        {% endif %}
+    </div>
+</div>
+{% endblock %}

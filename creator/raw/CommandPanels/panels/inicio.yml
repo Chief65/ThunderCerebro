@@ -1,0 +1,233 @@
+title: '&0&l|&r &0Dash ▶ &8Inicio '
+type: inventory
+rows: 6
+layout:
+### RELLENO
+  '1':
+  - relleno1
+  '10':
+  - relleno10
+  '19':
+  - relleno19
+  '28':
+  - relleno28
+  '37':
+  - relleno37
+  '46':
+  - relleno46
+  
+### BOTONES
+  '0':
+  - rachas
+  '9':
+  - ubicaciones
+  '18':
+  - temporada
+  '27':
+  - trabajos
+  '36':
+  - recetas
+  '45':
+  - jugador
+  
+#### EJEMPLOS
+  '2':
+  - rellenoazul2
+  '3':
+  - rellenoazul3
+  '4':
+  - rellenoazul4
+  '6':
+  - rellenoazul6
+  '7':
+  - rellenoazul7
+  '8':
+  - rellenoazul8
+  '5':
+  - discord
+  '21':
+  - anuncio1
+  '22':
+  - anuncio2
+  '23':
+  - anuncio3
+  '24':
+  - anuncio4
+  '25':
+  - anuncio5
+  '48':
+  - ajustes
+  '50':
+  - perfil
+  '52':
+  - tienda
+  
+  
+items:
+### RELLENO
+  relleno1:
+    material: GRAY_STAINED_GLASS_PANE
+    stack: 1
+  relleno10:
+    material: GRAY_STAINED_GLASS_PANE
+    stack: 1
+  relleno19:
+    material: GRAY_STAINED_GLASS_PANE
+    stack: 1
+  relleno28:
+    material: GRAY_STAINED_GLASS_PANE
+    stack: 1
+  relleno37:
+    material: GRAY_STAINED_GLASS_PANE
+    stack: 1
+  relleno46:
+    material: BLACK_STAINED_GLASS_PANE
+    stack: 1
+  rellenoazul2:
+    material: BLUE_STAINED_GLASS_PANE
+    stack: 1
+  rellenoazul3:
+    material: BLUE_STAINED_GLASS_PANE
+    stack: 1
+  rellenoazul4:
+    material: BLUE_STAINED_GLASS_PANE
+    stack: 1
+  rellenoazul6:
+    material: BLUE_STAINED_GLASS_PANE
+    stack: 1
+  rellenoazul7:
+    material: BLUE_STAINED_GLASS_PANE
+    stack: 1
+  rellenoazul8:
+    material: BLUE_STAINED_GLASS_PANE
+    stack: 1
+ 
+### BOTONES 
+  jugador:
+    material: DARK_OAK_DOOR
+    stack: 1
+    enchantments:
+    - unbreaking 1
+    name: '&a⮕ Inicio'
+    
+  ubicaciones:
+    material: SPYGLASS
+    stack: 1
+    name: '&7Ubicaciones'
+    lore:
+    - ''
+    - '&8Click para ver'
+    actions:
+      commands:
+        - '[sound] BLOCK.END_PORTAL_FRAME.FILL volume=1 pitch=0.8'
+        - '[open] ubicaciones'
+        
+  rachas:
+    material: CAMPFIRE
+    stack: 1
+    name: '&7Rachas'
+    lore:
+    - ''
+    - '&8Click para ver'
+    actions:
+      commands:
+        - '[sound] BLOCK.END_PORTAL_FRAME.FILL volume=1 pitch=0.8'
+        - '[open] rachas'
+        
+  trabajos:
+    material: AMETHYST_SHARD
+    stack: 1
+    name: '&7Fragmentos'
+    lore:
+    - ''
+    - '&8Click para ver'
+    actions:
+      commands:
+        - '[sound] BLOCK.END_PORTAL_FRAME.FILL volume=1 pitch=0.8'
+        - '[open] trabajos'
+        
+  recetas:
+    material: NETHERITE_UPGRADE_SMITHING_TEMPLATE
+    stack: 1
+    name: '&7Mejoras'
+    lore:
+    - ''
+    - '&8Click para ver'
+    actions:
+      commands:
+        - '[sound] BLOCK.END_PORTAL_FRAME.FILL volume=1 pitch=0.8'
+        - '[open] recetas'
+        
+  temporada:
+    material: EXPERIENCE_BOTTLE
+    stack: 1
+    name: '&7Niveles'
+    lore:
+    - ''
+    - '&8Click para ver'
+    actions:
+      commands:
+        - '[sound] BLOCK.END_PORTAL_FRAME.FILL volume=1 pitch=0.8'
+        - '[open] niveles'
+        
+
+### EJEMPLOS
+    
+  discord:
+    material: '[head] eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYTNiMTgzYjE0OGI5YjRlMmIxNTgzMzRhZmYzYjViYjZjMmMyZGJiYzRkNjdmNzZhN2JlODU2Njg3YTJiNjIzIn19fQ=='
+    stack: 1
+    name: '&7Niveles'
+    lore:
+    - ''
+    - '&8Click para ver'
+    
+  anuncio1:
+    material: OAK_HANGING_SIGN
+    stack: 1
+    enchantments:
+    - unbreaking 1
+    name: '&7'
+    lore:
+    - ''
+  anuncio2:
+    material: OAK_HANGING_SIGN
+    stack: 1
+    name: '&7'
+    lore:
+    - ''
+  anuncio3:
+    material: BARRIER
+    stack: 1
+    name: '&7'
+    lore:
+    - ''
+  anuncio4:
+    material: BARRIER
+    stack: 1
+    name: '&7'
+    lore:
+    - ''
+  anuncio5:
+    material: BARRIER
+    stack: 1
+    name: '&7'
+    lore:
+    - ''
+  ajustes:
+    material: COMPARATOR
+    stack: 1
+    name: '&7'
+    lore:
+    - ''
+  perfil:
+    material: '[head] %player_name%'
+    stack: 1
+    name: '&7'
+    lore:
+    - ''
+  tienda:
+    material: EMERALD
+    stack: 1
+    name: '&7'
+    lore:
+    - ''

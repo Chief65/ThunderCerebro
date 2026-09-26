@@ -1,0 +1,253 @@
+title: '&0&l|&r &0Dash ▶ &8Ubicaciones '
+type: inventory
+rows: 6
+layout:
+### RELLENO
+  '1':
+  - relleno1
+  '10':
+  - relleno10
+  '19':
+  - relleno19
+  '28':
+  - relleno28
+  '37':
+  - relleno37
+  '46':
+  - relleno46
+  '31':
+  - rellenoevento1
+  '33':
+  - rellenoevento2
+  
+### BOTONES
+  '0':
+  - rachas
+  '9':
+  - ubicaciones
+  '18':
+  - temporada
+  '27':
+  - trabajos
+  '36':
+  - recetas
+  '45':
+  - jugador
+  
+### EJEMPLO
+  '13':
+  - survival
+  '14':
+  - nether
+  '15':
+  - end
+  '21':
+  - minas
+  '22':
+  - dungeons
+  '23':
+  - crates
+  '24':
+  - enchants
+  '25':
+  - forja
+  '48':
+  - homes
+  '52':
+  - pwarps
+  '50':
+  - spawn
+  '32':
+  - evento
+  
+  
+items:
+### EJEMPLO
+  survival:
+    material: GRASS_BLOCK
+    name: '&a✔ &8| &aMundos Survival'
+    lore:
+    - '&8Ubicación'
+    - ''
+    - ' &7El mundo clasico para'
+    - ' &7que construyas tu base '
+    - ' &7u obtengas recursos.'
+    - ''
+    - ' &8Disponibles:'
+    - ' &8▪ &fMundo Protecciones'
+    - ' &8▪ &fMundo Recursos'
+    - ''
+    - '&8&m                            '
+    - '&8▶ Click para ir'
+    stack: 1
+  nether:
+    material: NETHERRACK
+    name: '&a✔ &8| &cEl Nether'
+    lore:
+    - '&8Ubicación'
+    - ''
+    - ' &7El Nether clasico '
+    - ' &7donde puedes farmear '
+    - ' &7sus recursos.'
+    - ''
+    - ' &8Detalles:'
+    - ' &8▪ &fProtecciones&8: &c✘'
+    - ' &8▪ &fKeepInventory&8: &c✘'
+    - ' &8▪ &fCombate&8: &a✔'
+    - ' &8▪ &fTamaño&8: &e1.000x1.000 '
+    - ''
+    - ' &8Reset:'
+    - ' &8&l|&r &7⌛ 1d 12h 13m 40s'
+    - ''
+    - '&8&m                            '
+    - '&8▶ Click para ir'
+    stack: 1
+  end:
+    material: END_STONE
+    name: '&a✔ &8| &dEl End '
+    lore:
+    - '&8Ubicación'
+    - ''
+    - ' &7El End clasico '
+    - ' &7para farmear '
+    - ' &7sus recursos.'
+    - ''
+    - ' &8Detalles:'
+    - ' &8▪ &fProtecciones&8: &c✘'
+    - ' &8▪ &fKeepInventory&8: &c✘'
+    - ' &8▪ &fCombate&8: &a✔'
+    - ' &8▪ &fTamaño&8: &e1.000x1.000 '
+    - ''
+    - ' &8Reset:'
+    - ' &8&l|&r &7⌛ 1d 12h 13m 40s'
+    - ''
+    - '&8&m                            '
+    - '&8▶ Click para ir'
+    stack: 1
+  minas:
+    material: GOLD_ORE
+    stack: 1
+  dungeons:
+    material: VAULT
+    stack: 1
+  crates:
+    material: BARREL
+    stack: 1
+  enchants:
+    material: BOOKSHELF
+    stack: 1
+  forja:
+    material: BLAST_FURNACE
+    stack: 1
+  homes:
+    material: RED_BED
+    stack: 1
+  pwarps:
+    material: SPYGLASS
+    stack: 1
+  spawn:
+    material: COMPASS
+    stack: 1
+  evento:
+    material: BUBBLE_CORAL
+    stack: 1
+    enchantments:
+    - unbreaking 1
+    
+
+### RELLENO
+  relleno1:
+    material: GRAY_STAINED_GLASS_PANE
+    stack: 1
+  relleno10:
+    material: BLACK_STAINED_GLASS_PANE
+    stack: 1
+  relleno19:
+    material: GRAY_STAINED_GLASS_PANE
+    stack: 1
+  relleno28:
+    material: GRAY_STAINED_GLASS_PANE
+    stack: 1
+  relleno37:
+    material: GRAY_STAINED_GLASS_PANE
+    stack: 1
+  relleno46:
+    material: GRAY_STAINED_GLASS_PANE
+    stack: 1
+  rellenoevento1:
+    material: MAGENTA_STAINED_GLASS_PANE
+    stack: 1
+  rellenoevento2:
+    material: MAGENTA_STAINED_GLASS_PANE
+    stack: 1
+ 
+### BOTONES 
+  jugador:
+    material: DARK_OAK_DOOR
+    stack: 1
+    name: '&7Inicio'
+    lore:
+    - ''
+    - '&8Click para ver'
+    actions:
+      commands:
+        - '[sound] BLOCK.END_PORTAL_FRAME.FILL volume=1 pitch=0.8'
+        - '[open] inicio'
+    
+  ubicaciones:
+    material: SPYGLASS
+    stack: 1
+    enchantments:
+    - unbreaking 1
+    name: '&a⮕ Ubicaciones'
+    lore:
+    - ''
+        
+  rachas:
+    material: CAMPFIRE
+    stack: 1
+    name: '&7Rachas'
+    lore:
+    - ''
+    - '&8Click para ver'
+    actions:
+      commands:
+        - '[sound] BLOCK.END_PORTAL_FRAME.FILL volume=1 pitch=0.8'
+        - '[open] rachas'
+        
+  trabajos:
+    material: AMETHYST_SHARD
+    stack: 1
+    name: '&7Fragmentos'
+    lore:
+    - ''
+    - '&8Click para ver'
+    actions:
+      commands:
+        - '[sound] BLOCK.END_PORTAL_FRAME.FILL volume=1 pitch=0.8'
+        - '[open] trabajos'
+        
+  recetas:
+    material: NETHERITE_UPGRADE_SMITHING_TEMPLATE
+    stack: 1
+    name: '&7Mejoras'
+    lore:
+    - ''
+    - '&8Click para ver'
+    actions:
+      commands:
+        - '[sound] BLOCK.END_PORTAL_FRAME.FILL volume=1 pitch=0.8'
+        - '[open] recetas'
+        
+  temporada:
+    material: EXPERIENCE_BOTTLE
+    stack: 1
+    name: '&7Niveles'
+    lore:
+    - ''
+    - '&8Click para ver'
+    actions:
+      commands:
+        - '[sound] BLOCK.END_PORTAL_FRAME.FILL volume=1 pitch=0.8'
+        - '[open] niveles'
+    

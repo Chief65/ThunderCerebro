@@ -1,0 +1,378 @@
+﻿{% extends "config.twig" %}
+
+{% block layout %}
+
+    {% set redirectToLogin %}
+        {% if not basket.ign %}
+            data-cart-modal-login
+        {% endif %}
+    {% endset %}
+
+    {% if basket.currency == 'USD' %}
+        {% set currencySymbol = '$' %}
+        {% set currencyAfter = false %}
+    {% elseif basket.currency == 'EUR' %}
+        {% set currencySymbol = '€' %}
+        {% set currencyAfter = true %}
+    {% elseif basket.currency == 'GBP' %}
+        {% set currencySymbol = '£' %}
+        {% set currencyAfter = false %}
+    {% else %}
+        {% set currencySymbol = basket.currency %}
+        {% set currencyAfter = true %}
+    {% endif %}
+
+    <style>
+        /* ══════════════════════════════════════════════════════════════════
+           THUNDERMC CLEAN MODAL (ZERO GLOWS - PURE MINIMAL DARK)
+           ══════════════════════════════════════════════════════════════════ */
+        .package__modal {
+            display: grid !important;
+            grid-template-columns: 1.35fr 310px !important;
+            height: 100% !important;
+            min-height: 0 !important;
+            background: #0f1523 !important;
+            border-radius: 16px !important;
+            overflow: hidden !important;
+            border: 1px solid rgba(255, 255, 255, 0.1) !important;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.7) !important;
+        }
+
+        .tz-close-btn {
+            align-self: flex-end !important;
+            width: 32px !important;
+            height: 32px !important;
+            background: rgba(255, 255, 255, 0.05) !important;
+            border: 1px solid rgba(255, 255, 255, 0.1) !important;
+            border-radius: 8px !important;
+            display: flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+            color: #94a3b8 !important;
+            font-size: 15px !important;
+            cursor: pointer !important;
+            transition: all .15s ease !important;
+        }
+        .tz-close-btn:hover {
+            background: #ef4444 !important;
+            color: #ffffff !important;
+            border-color: #ef4444 !important;
+        }
+
+        /* ── IZQUIERDA: DESCRIPCIÓN & BENEFICIOS ─────────────────────────── */
+        .package__modal__content {
+            order: 1 !important;
+            display: flex !important;
+            flex-direction: column !important;
+            padding: 24px !important;
+            overflow-y: auto !important;
+            background: #090d16 !important;
+            border-right: 1px solid rgba(255, 255, 255, 0.08) !important;
+        }
+        .tz-contenido-label {
+            font-family: 'Bakbak One', 'Poppins', sans-serif;
+            font-size: 13px;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+            color: #facc15;
+            margin: 0 0 12px 0;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .tz-contenido-box {
+            background: #0f1523;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 12px;
+            padding: 20px;
+            flex: 1;
+            font-family: 'Poppins', sans-serif;
+            font-size: 13.5px;
+            color: #cbd5e1;
+            line-height: 1.6;
+        }
+        .tz-contenido-box h4 {
+            font-family: 'Bakbak One', 'Poppins', sans-serif;
+            color: #ffffff;
+            font-size: 14px;
+            margin: 16px 0 8px 0;
+            text-transform: uppercase;
+        }
+        .tz-contenido-box h4:first-child {
+            margin-top: 0;
+        }
+        .tz-contenido-box ul {
+            padding-left: 18px;
+            margin: 0 0 14px 0;
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+        .tz-contenido-box li {
+            color: #94a3b8;
+        }
+        .tz-contenido-box strong {
+            color: #facc15;
+            font-weight: 600;
+        }
+
+        /* ── DERECHA: SIDEBAR DE COMPRA Y CHECKOUT ───────────────────────── */
+        .package__modal__side {
+            order: 2 !important;
+            display: flex !important;
+            flex-direction: column !important;
+            justify-content: space-between !important;
+            padding: 24px !important;
+            background: #0f1523 !important;
+            overflow-y: auto !important;
+        }
+
+        .tz-side-top {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            gap: 12px;
+            width: 100%;
+        }
+
+        .tz-modal-img-wrap {
+            height: 130px;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 4px 0;
+        }
+        .tz-modal-img-wrap img {
+            max-height: 120px;
+            max-width: 90%;
+            object-fit: contain;
+            filter: none !important;
+        }
+
+        .tz-modal-title {
+            font-family: 'Bakbak One', 'Poppins', sans-serif;
+            font-size: 20px;
+            color: #ffffff;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin: 0;
+        }
+
+        .tz-modal-price-box {
+            display: flex;
+            align-items: baseline;
+            gap: 8px;
+            margin-bottom: 6px;
+        }
+        .tz-modal-price-val {
+            font-family: 'Poppins', sans-serif;
+            font-size: 24px;
+            font-weight: 800;
+            color: #facc15;
+        }
+        .tz-modal-price-pill {
+            background: rgba(34, 197, 94, 0.12);
+            border: 1px solid rgba(34, 197, 94, 0.3);
+            color: #4ade80;
+            font-size: 11px;
+            font-weight: 700;
+            padding: 2px 8px;
+            border-radius: 4px;
+        }
+
+        /* Formulario / Cantidad & Usuario */
+        .tz-user-target-box {
+            width: 100%;
+            background: #090d16;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 10px;
+            padding: 10px 14px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            box-sizing: border-box;
+            margin: 8px 0;
+        }
+        .tz-user-target-left {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .tz-user-target-avatar {
+            width: 28px;
+            height: 28px;
+            border-radius: 6px;
+            overflow: hidden;
+            background: #1e293b;
+        }
+        .tz-user-target-avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .tz-user-target-name {
+            font-family: 'Poppins', sans-serif;
+            font-size: 12.5px;
+            font-weight: 700;
+            color: #ffffff;
+        }
+        .tz-user-target-badge {
+            font-size: 10.5px;
+            color: #4ade80;
+            font-weight: 600;
+        }
+
+        /* Botón de Compra Directo (Clean & Solid) */
+        .tz-btn-checkout {
+            width: 100%;
+            height: 44px;
+            background: #facc15;
+            border: none;
+            border-radius: 10px;
+            color: #0b0f19;
+            font-family: 'Bakbak One', 'Poppins', sans-serif;
+            font-size: 13.5px;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: all 0.15s ease;
+            margin-top: 6px;
+        }
+        .tz-btn-checkout:hover {
+            background: #fde047;
+            transform: translateY(-1px);
+        }
+        .tz-btn-checkout:active {
+            transform: translateY(0);
+        }
+
+        /* Trust Badges */
+        .tz-modal-trust {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+            width: 100%;
+            margin-top: 14px;
+            padding-top: 12px;
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        .tz-trust-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 11px;
+            color: #94a3b8;
+        }
+        .tz-trust-item i {
+            color: #facc15;
+            font-size: 13px;
+        }
+
+        @media (max-width: 768px) {
+            .package__modal {
+                grid-template-columns: 1fr !important;
+            }
+            .package__modal__content {
+                order: 2 !important;
+            }
+            .package__modal__side {
+                order: 1 !important;
+                border-right: none !important;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
+            }
+        }
+    </style>
+
+    <div class="package__modal">
+        
+        <!-- LEFT: DETALLE Y BENEFICIOS -->
+        <div class="package__modal__content">
+            <h3 class="tz-contenido-label"><i class="mdi mdi-information"></i> Beneficios del Paquete</h3>
+            <div class="tz-contenido-box">
+                {% if package.description %}
+                    {{ package.description|raw }}
+                {% else %}
+                    <h4>👑 Beneficios RPG Incluidos:</h4>
+                    <ul>
+                        <li><strong>Prefijo VIP Exclusivo</strong> en el chat y encima del jugador.</li>
+                        <li>Acceso prioritario y sin colas a todos los servidores de la network.</li>
+                        <li><strong>Kit VIP Mensual:</strong> Armadura completa reforzada, espada de filo mítico y consumibles.</li>
+                        <li>Acceso ilimitado a las <strong>Catamines RPG</strong> de nivel 1 y 2.</li>
+                        <li>Multiplicador permanente de <strong>+20% de Almas y Experiencia</strong> en Mazmorras.</li>
+                        <li>Comandos de comodidad: <code>/fly</code> en parcelas, <code>/workbench</code>, <code>/enderchest</code> y <code>/feed</code>.</li>
+                        <li>Hasta <strong>5 hogares simultáneos</strong> (<code>/sethome</code>).</li>
+                    </ul>
+
+                    <h4>🛡️ Garantía de Compra:</h4>
+                    <p style="color: #64748b; font-size: 12px; margin: 0;">
+                        Los beneficios se entregan de forma 100% automática en el servidor en un plazo de 1 a 3 minutos tras procesar el pago.
+                    </p>
+                {% endif %}
+            </div>
+        </div>
+
+        <!-- RIGHT: SIDEBAR DE COMPRA -->
+        <div class="package__modal__side">
+            
+            <div class="tz-side-top">
+                <button class="tz-close-btn" data-izimodal-close="" aria-label="Cerrar"><i class="mdi mdi-close"></i></button>
+
+                <div class="tz-modal-img-wrap">
+                    <img src="{{ package.image.url|default('https://dunb17ur4ymx4.cloudfront.net/packages/images/627911b9d1fc3d05619a58846649d6f231253039.png') }}" alt="{{ package.name|default('Rango VIP') }}">
+                </div>
+
+                <h2 class="tz-modal-title">{{ package.name|default('Rango VIP') }}</h2>
+
+                <div class="tz-modal-price-box">
+                    <span class="tz-modal-price-val">
+                        {% if currencyAfter %}
+                            {{ package.price|default('7.49') }}{{ currencySymbol }}
+                        {% else %}
+                            {{ currencySymbol }}{{ package.price|default('7.49') }}
+                        {% endif %}
+                    </span>
+                    <span class="tz-modal-price-pill">Permanente</span>
+                </div>
+
+                <!-- Usuario Destino -->
+                <div class="tz-user-target-box">
+                    <div class="tz-user-target-left">
+                        <div class="tz-user-target-avatar">
+                            {% if basket.ign %}
+                                <img src="https://minotar.net/avatar/{{ basket.ign }}/28" alt="{{ basket.ign }}">
+                            {% else %}
+                                <img src="https://minotar.net/avatar/MHF_Question/28" alt="Invitado">
+                            {% endif %}
+                        </div>
+                        <span class="tz-user-target-name">{% if basket.ign %}{{ basket.ign }}{% else %}Invitado{% endif %}</span>
+                    </div>
+                    <span class="tz-user-target-badge"><i class="mdi mdi-check-circle"></i> Listo</span>
+                </div>
+
+                <!-- Botón Comprar / Añadir al carrito -->
+                <a href="/checkout/packages/add/{{ package.id|default('1') }}/single" class="tz-btn-checkout {{ redirectToLogin }}">
+                    <i class="mdi mdi-cart-plus"></i> Añadir al Carrito
+                </a>
+
+                <!-- Sellos de Seguridad -->
+                <div class="tz-modal-trust">
+                    <div class="tz-trust-item"><i class="mdi mdi-lightning-bolt"></i> Activación instantánea automática</div>
+                    <div class="tz-trust-item"><i class="mdi mdi-lock-check"></i> Pago 100% seguro con Tebex SSL</div>
+                    <div class="tz-trust-item"><i class="mdi mdi-headset"></i> Soporte dedicado 24/7 en Discord</div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+{% endblock %}

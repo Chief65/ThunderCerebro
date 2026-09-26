@@ -1,0 +1,257 @@
+﻿menu_title: '&0&l|&r &0ThunderMC &0▶ &8Ubicaciones'
+open_command:
+  - warps
+  - warp
+  - ubicaciones
+size: 54
+open_requirement:
+  requirements: {}
+register_command: true
+update: true
+
+items:
+  # ============================================================================
+  # FILA 1: ACTIVIDADES Y ZONAS PRINCIPALES (SLOTS 11 A 15)
+  # ============================================================================
+  'Warp_Spawn':
+    material: DARK_OAK_SAPLING
+    slot: 11
+    item_flags:
+      - HIDE_ATTRIBUTES
+    display_name: '&#FEEB00Valle Perdido'
+    lore:
+      - '&8ᴠᴀʟʟᴇ ᴘᴇʀᴅɪᴅᴏ'
+      - ''
+      - ' &fCentro neural del'
+      - ' &fservidor, tiendas'
+      - ' &fy misiones de inicio.'
+      - ''
+      - ' &a✔ Zona Pacifica'
+      - ''
+      - '&7▶ Click para ir'
+    left_click_commands:
+      - '[close]'
+      - '[player] warp spawn'
+      - '[sound] ENTITY_ENDERMAN_TELEPORT'
+
+  'Warp_AFK':
+    material: AMETHYST_SHARD
+    slot: 12
+    item_flags:
+      - HIDE_ATTRIBUTES
+    display_name: '&#CF27F5Zona AFK'
+    lore:
+      - '&8ᴢᴏɴᴀ ᴀꜰᴋ'
+      - ''
+      - ' &fConsigue recompensas'
+      - ' &fautomaticas mientras'
+      - ' &festas ausente.'
+      - ''
+      - ' &a✔ Zona Pacifica'
+      - ''
+      - '&7▶ Click para ir'
+    left_click_commands:
+      - '[close]'
+      - '[player] warp afk'
+      - '[sound] ENTITY_ENDERMAN_TELEPORT'
+
+  'Warp_Taberna':
+    material: HONEY_BOTTLE
+    slot: 13
+    item_flags:
+      - HIDE_ATTRIBUTES
+    display_name: '&#FFAA00La Taberna'
+    lore:
+      - '&8ᴛᴀʙᴇʀɴᴀ'
+      - ''
+      - ' &fBebidas con efectos,'
+      - ' &fminijuegos de azar'
+      - ' &fy apuestas 1v1.'
+      - ''
+      - ' &a✔ Zona Social'
+      - ''
+      - '&7▶ Click para ir'
+    left_click_commands:
+      - '[close]'
+      - '[player] warp bar'
+      - '[sound] ENTITY_ENDERMAN_TELEPORT'
+
+  'Warp_Cajas':
+    material: VAULT
+    slot: 14
+    item_flags:
+      - HIDE_ATTRIBUTES
+    display_name: '&#FFD700Zona de Cajas'
+    lore:
+      - '&8ᴄᴀᴊᴀꜱ ʏ ʟʟᴀᴠᴇꜱ'
+      - ''
+      - ' &fAbre tus llaves de'
+      - ' &fcajas para conseguir'
+      - ' &frecompensas epicas.'
+      - ''
+      - ' &a✔ Zona Segura'
+      - ''
+      - '&7▶ Click para ir'
+    left_click_commands:
+      - '[close]'
+      - '[player] warp crates'
+      - '[sound] ENTITY_ENDERMAN_TELEPORT'
+
+  'Submenu_Minas':
+    material: NETHERITE_PICKAXE
+    slot: 15
+    item_flags:
+      - HIDE_ATTRIBUTES
+    display_name: '&#34B0F3Sector Minero'
+    lore:
+      - '&8ꜱᴇᴄᴛᴏʀ ᴍɪɴᴇʀᴏ'
+      - ''
+      - ' &fMinas progresivas'
+      - ' &fpor rangos y zona'
+      - ' &fde mineria PvP.'
+      - ''
+      - ' &7» 7 Zonas activas'
+      - ''
+      - '&7▶ Click para ir'
+    left_click_commands:
+      - '[openguimenu] warps_minas'
+      - '[sound] UI_BUTTON_CLICK'
+
+  # ============================================================================
+  # FILA 2: COMBATE, MAZMORRAS Y LA FORJA (SLOTS 21, 22, 23)
+  # ============================================================================
+  'Warp_PvPSinPerdida':
+    material: MACE
+    slot: 21
+    item_flags:
+      - HIDE_ATTRIBUTES
+    display_name: '&#FFAA00Arena PvP'
+    lore:
+      - '&8ᴀʀᴇɴᴀ ᴘᴠᴘ'
+      - ''
+      - ' &fCombate libre para'
+      - ' &ftodos sin perder'
+      - ' &fobjetos al morir.'
+      - ''
+      - ' &d✦ KeepInventory'
+      - ''
+      - '&7▶ Click para ir'
+    left_click_commands:
+      - '[close]'
+      - '[player] warp pvpsinperdida'
+      - '[sound] ENTITY_ENDERMAN_TELEPORT'
+
+  'Submenu_Dungeons':
+    material: WARDEN_SPAWN_EGG
+    slot: 22
+    item_flags:
+      - HIDE_ATTRIBUTES
+    display_name: '&#9900FFMazmorras'
+    lore:
+      - '&8ᴍᴀᴢᴍᴏʀʀᴀꜱ'
+      - ''
+      - ' &f10 Mazmorras con'
+      - ' &fjefes para cosechar'
+      - ' &falmas arcanas.'
+      - ''
+      - ' &6👑 Requiere VIP'
+      - ''
+      - '&7▶ Click para ir'
+    left_click_commands:
+      - '[openguimenu] warps_dungeons'
+      - '[sound] UI_BUTTON_CLICK'
+
+  'Proximamente_Forja':
+    material: CRAFTER
+    slot: 23
+    item_flags:
+      - HIDE_ATTRIBUTES
+    display_name: '&#777777La Forja'
+    lore:
+      - '&8ʟᴀ ꜰᴏʀᴊᴀ'
+      - ''
+      - ' &fForja de armamento,'
+      - ' &ffusion de gemas'
+      - ' &fy reliquias unicas.'
+      - ''
+      - ' &c✘ Proximamente'
+      - ''
+      - '&7▶ En construccion'
+    left_click_commands:
+      - '[sound] BLOCK_NOTE_BLOCK_BASS'
+
+  # ============================================================================
+  # NAV BAR INFERIOR (FILA 6)
+  # ============================================================================
+  'Nav_PWarps':
+    material: CAMPFIRE
+    slot: 45
+    item_flags:
+      - HIDE_ATTRIBUTES
+    display_name: '&#FF7700Warps de Jugadores'
+    lore:
+      - '&8ᴘᴡᴀʀᴘꜱ'
+      - ''
+      - ' &fTiendas, granjas y'
+      - ' &fbases comunitarias.'
+      - ''
+      - '&7▶ Click para ir'
+    left_click_commands:
+      - '[close]'
+      - '[player] pwarp'
+      - '[sound] UI_BUTTON_CLICK'
+
+  'Nav_RTP':
+    material: ENDER_PEARL
+    slot: 46
+    item_flags:
+      - HIDE_ATTRIBUTES
+    display_name: '&#00FFCCRTP Mundos'
+    lore:
+      - '&8ʀᴛᴘ ᴍᴜɴᴅᴏꜱ'
+      - ''
+      - ' &fTeletransporte al azar'
+      - ' &fa mundos de recursos.'
+      - ''
+      - '&7▶ Click para ir'
+    left_click_commands:
+      - '[openguimenu] warps_rtp'
+      - '[sound] UI_BUTTON_CLICK'
+
+  'Filtro_Navbar':
+    display_name: ' '
+    material: GRAY_STAINED_GLASS_PANE
+    slots:
+      - 47
+      - 48
+      - 50
+      - 51
+      - 52
+
+  'Cerrar':
+    material: DARK_OAK_DOOR
+    slot: 49
+    item_flags:
+      - HIDE_ATTRIBUTES
+    display_name: '&cSalir'
+    left_click_commands:
+      - '[close]'
+      - '[sound] BLOCK_NOTE_BLOCK_BASS'
+
+  'Nav_Ranks':
+    material: GOLDEN_HELMET
+    slot: 53
+    item_flags:
+      - HIDE_ATTRIBUTES
+    display_name: '&#FFD700Rangos'
+    lore:
+      - '&8ʀᴀɴɢᴏꜱ'
+      - ''
+      - ' &fSube de rango para'
+      - ' &fdesbloquear ventajas.'
+      - ''
+      - '&7▶ Click para ir'
+    left_click_commands:
+      - '[close]'
+      - '[player] ranks'
+      - '[sound] UI_BUTTON_CLICK'

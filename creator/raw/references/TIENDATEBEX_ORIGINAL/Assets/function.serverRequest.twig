@@ -1,0 +1,80 @@
+const serverId = "337671";
+
+{% if config('serverType') != 'FiveM' %}
+$(document).ready(function () {
+    $(".minecraft-widget").click(function () {
+        swal({
+            title: "{{ config('server-ip') }}",
+            text: "{{ lang.join_text }}",
+            button: "OK",
+            timer: 5000,
+        });
+        document.getElementById("ipServer").select();
+        document.execCommand("copy");
+    });
+});
+{% endif %}
+
+const fetchData = async (url) => {
+    try {
+        const response = await axios.get(url);
+        return response.data;
+    } catch (error) {
+        console.error('Error fetching data:', error);
+        return null;
+    }
+};
+
+const getDiscordCount = async () => {
+    const data = await fetchData('https://discordapp.com/api/guilds/{{ config('discord_id') }}/embed.json');
+    return data ? data.presence_count : 0;
+};
+
+const getFivemCount = async () => {
+    const cfxURL = "{{ config('fivem-cfx-link') }}"
+    const serverId = cfxURL.split("/").pop();
+    const data = await fetchData(`https://servers-frontend.fivem.net/api/servers/single/${serverId}`);
+    return data ? data.Data.clients : 0;
+};
+
+const getMinetoolsCount = async () => {
+    const data = await fetchData('https://api.minetools.eu/ping/{{ config('server-ip') }}/{{ config('server-port') }}');
+    return data ? data.players.online : 0;
+};
+
+const getRustServersCount = async () => {
+    const data = await fetchData('https://api.rust-servers.info/status/{{ config('server-port') }}');
+    return data ? data.players : 0;
+};
+
+const getGamingServerCount = async () => {
+    switch ("{{ config('serverType') }}") {
+        case "Discord":
+            return getDiscordCount();
+        case "FiveM":
+            return getFivemCount();
+        case "Minecraft":
+            return getMinetoolsCount();
+        case "Rust":
+            return getRustServersCount();
+        default:
+            return 0;
+    }
+};
+
+const setPlayersData = async () => {
+    const discordCounter = await getDiscordCount();
+    const serverCounter = await getGamingServerCount();
+
+    if (discordCounter >= 0) {
+        const discordCountElement = document.getElementById("discord-count");
+        discordCountElement.innerHTML = numberWithCommas(discordCounter);
+    }
+
+    if (serverCounter != null) {
+        const serverCountElement = document.querySelector(".player-count");
+        serverCountElement.innerHTML = numberWithCommas(serverCounter);
+    }
+};
+
+setPlayersData();

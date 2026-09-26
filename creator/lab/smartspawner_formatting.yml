@@ -1,0 +1,104 @@
+# Configuration version – do not modify this value
+language_version: 1.6.6
+
+# SmartSpawner – formatting.yml
+# Number formatting and mob display names used throughout the plugin.
+
+# ──────────────────────────────────────────────────────
+#                 Number Formatting
+# ──────────────────────────────────────────────────────
+# Controls how large numbers are displayed in-game
+format_number:
+  thousand: '{s}K' # Example: 5000 → 5K
+  million: '{s}M' # Example: 2000000 → 2M
+  billion: '{s}B' # Example: 1500000000 → 1.5B
+  trillion: '{s}T' # Example: 1000000000000 → 1T
+  default: '{s}' # Fallback format when no other rule matches
+
+# ──────────────────────────────────────────────────────
+#                 Mob Display Names
+# ──────────────────────────────────────────────────────
+# Defines how mob names appear in spawner GUIs, items, holograms and messages
+mob_names:
+  # Passive Mobs
+  ALLAY: Allay
+  ARMADILLO: Armadillo
+  AXOLOTL: Ajolote
+  BAT: Murciélago
+  BEE: Abeja
+  CAMEL: Camello
+  CAT: Gato
+  CHICKEN: Gallina
+  COD: Bacalao
+  COW: Vaca
+  DOLPHIN: Delfín
+  DONKEY: Burro
+  FOX: Zorro
+  FROG: Rana
+  GLOW_SQUID: Calamar Brillante
+  GOAT: Cabra
+  HORSE: Caballo
+  IRON_GOLEM: Gólem de Hierro
+  LLAMA: Llama
+  MOOSHROOM: Mooshroom
+  MULE: Mula
+  OCELOT: Ocelote
+  PANDA: Panda
+  PARROT: Loro
+  PIG: Cerdo
+  POLAR_BEAR: Oso Polar
+  PUFFERFISH: Pez Globo
+  RABBIT: Conejo
+  SALMON: Salmón
+  SHEEP: Oveja
+  SNIFFER: Fisgón
+  SNOW_GOLEM: Gólem de Nieve
+  SQUID: Calamar
+  STRIDER: Lávagante
+  TADPOLE: Renacuajo
+  TRADER_LLAMA: Llama Mercante
+  TROPICAL_FISH: Pez Tropical
+  TURTLE: Tortuga
+  VILLAGER: Aldeano
+  WANDERING_TRADER: Mercader Errante
+  WOLF: Lobo
+  
+  # Hostile Mobs
+  BLAZE: Blaze
+  BOGGED: Putrefacto
+  BREEZE: Breeze
+  CAVE_SPIDER: Araña de Cueva
+  CREAKING: Creaking
+  CREEPER: Creeper
+  DROWNED: Ahogado
+  ELDER_GUARDIAN: Guardián Anciano
+  ENDERMAN: Enderman
+  ENDERMITE: Endermite
+  EVOKER: Evocador
+  GHAST: Ghast
+  GUARDIAN: Guardián
+  HOGLIN: Hoglin
+  HUSK: Zombie Momificado
+  MAGMA_CUBE: Cubo de Magma
+  PHANTOM: Fantasma
+  PIGLIN: Piglin
+  PIGLIN_BRUTE: Piglin Bruto
+  PILLAGER: Saqueador
+  RAVAGER: Devastador
+  SHULKER: Shulker
+  SILVERFISH: Pececillo de Plata
+  SKELETON: Esqueleto
+  SKELETON_HORSE: Caballo Esqueleto
+  SLIME: Slime
+  SPIDER: Araña
+  STRAY: Esqueleto Glacial
+  VEX: Vex
+  VINDICATOR: Vindicador
+  WARDEN: Warden
+  WITCH: Bruja
+  WITHER_SKELETON: Esqueleto Wither
+  ZOGLIN: Zoglin
+  ZOMBIE: Zombie
+  ZOMBIE_HORSE: Caballo Zombie
+  ZOMBIE_VILLAGER: Aldeano Zombie
+  ZOMBIFIED_PIGLIN: Piglin Zombificado

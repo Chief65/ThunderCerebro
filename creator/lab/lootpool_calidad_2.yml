@@ -1,0 +1,209 @@
+menu_title: '&0&l|&r &0Mazmorras ▶ &#34B0F3Lootpool Calidad II'
+open_command:
+  - lootpool2
+size: 36
+open_requirement:
+  requirements: {}
+register_command: true
+update: true
+
+items:
+  # ============================================================================
+  # FILA 2: CONTENIDO EXPANDIDO CALIDAD II (SLOTS 9 A 17)
+  # ============================================================================
+  'Item_Comida':
+    material: GOLDEN_CARROT
+    slot: 9
+    item_flags:
+      - HIDE_ATTRIBUTES
+    display_name: '&#34B0F3Zanahoria Dorada'
+    lore:
+      - '&8ꜱᴜꜱᴛᴇɴᴛᴏ ᴀᴠᴀɴᴢᴀᴅᴏ'
+      - ''
+      - ' &8| &fCantidad: &e4 - 8'
+      - ' &8| &fProbabilidad: &a50%'
+      - ' &8| &fTier: &7Común'
+      - ''
+      - '&7Saturación y regeneración premium.'
+
+  'Item_Flechas':
+    material: SPECTRAL_ARROW
+    slot: 10
+    item_flags:
+      - HIDE_ATTRIBUTES
+    display_name: '&#34B0F3Flechas Espectrales'
+    lore:
+      - '&8ᴍᴜɴɪᴄɪᴏɴ ᴛᴀᴄᴛɪᴄᴀ'
+      - ''
+      - ' &8| &fCantidad: &e6 - 12'
+      - ' &8| &fProbabilidad: &a40%'
+      - ' &8| &fTier: &7Común'
+      - ''
+      - '&7Ilumina y revela el contorno de los objetivos.'
+
+  'Item_Diamante':
+    material: DIAMOND
+    slot: 11
+    item_flags:
+      - HIDE_ATTRIBUTES
+    display_name: '&#34B0F3Diamante Puro'
+    lore:
+      - '&8ᴍᴀᴛᴇʀɪᴀʟ ᴠᴀʟɪᴏꜱᴏ'
+      - ''
+      - ' &8| &fCantidad: &e1 - 3'
+      - ' &8| &fProbabilidad: &e30%'
+      - ' &8| &fTier: &7Poco Común'
+      - ''
+      - '&7Recurso indispensable de progresión media.'
+
+  'Item_WindCharge':
+    material: WIND_CHARGE
+    slot: 12
+    item_flags:
+      - HIDE_ATTRIBUTES
+    display_name: '&#34B0F3Carga de Viento Concentrada'
+    lore:
+      - '&8ᴜᴛɪʟɪᴅᴀᴅ 1.21'
+      - ''
+      - ' &8| &fCantidad: &e4 - 8'
+      - ' &8| &fProbabilidad: &e30%'
+      - ' &8| &fTier: &7Poco Común'
+      - ''
+      - '&7Maniobras evasivas y combos de derribo.'
+
+  'Item_Almas':
+    material: SOUL_LANTERN
+    slot: 13
+    item_flags:
+      - HIDE_ATTRIBUTES
+      - HIDE_ENCHANTS
+    enchantments:
+      - UNBREAKING;1
+    display_name: '&#34B0F3Vial de Almas'
+    lore:
+      - '&8ᴅɪᴠɪꜱᴀ ᴇꜱᴘᴇᴄɪᴀʟ'
+      - ''
+      - ' &8| &fRecompensa: &#34B0F315 - 35 Almas'
+      - ' &8| &fProbabilidad: &e25%'
+      - ' &8| &fTier: &7Poco Común'
+      - ''
+      - '&7Moneda canjeable en el mercado de almas.'
+
+  'Item_Pocion':
+    material: POTION
+    slot: 14
+    item_flags:
+      - HIDE_ATTRIBUTES
+      - HIDE_POTION_EFFECTS
+    potion_effects:
+      - INCREASE_DAMAGE;3600;0
+    display_name: '&#34B0F3Poción de Fuerza I &7(3:00)'
+    lore:
+      - '&8ᴄᴏɴꜱᴜᴍɪʙʟᴇ'
+      - ''
+      - ' &8| &fCantidad: &e1'
+      - ' &8| &fProbabilidad: &e20%'
+      - ' &8| &fEfecto: &fFuerza (+3 de daño)'
+      - ' &8| &fTier: &7Raro'
+      - ''
+      - '&7Incremento directo para eliminar élites.'
+
+  'Item_ManzanaOro':
+    material: GOLDEN_APPLE
+    slot: 15
+    item_flags:
+      - HIDE_ATTRIBUTES
+    display_name: '&#34B0F3Manzanas Doradas'
+    lore:
+      - '&8ᴄᴏɴꜱᴜᴍɪʙʟᴇ'
+      - ''
+      - ' &8| &fCantidad: &e2 - 4'
+      - ' &8| &fProbabilidad: &e18%'
+      - ' &8| &fTier: &7Raro'
+      - ''
+      - '&7Recuperación rápida en situaciones tensas.'
+
+  'Item_Libro':
+    material: ENCHANTED_BOOK
+    slot: 16
+    item_flags:
+      - HIDE_ATTRIBUTES
+      - HIDE_ENCHANTS
+    enchantments:
+      - DAMAGE_ALL;2
+    display_name: '&#34B0F3Libro Encantado: Filo II'
+    lore:
+      - '&8ᴇɴᴄᴀɴᴛᴀᴍɪᴇɴᴛᴏ ᴍᴇᴅɪᴏ'
+      - ''
+      - ' &8| &fCantidad: &e1'
+      - ' &8| &fProbabilidad: &e15%'
+      - ' &8| &fEnchant: &fAgudeza / Filo II'
+      - ' &8| &fTier: &7Raro'
+      - ''
+      - '&7Aumenta letalidad de espadas y hachas.'
+
+  'Item_Fragmento':
+    material: AMETHYST_SHARD
+    slot: 17
+    item_flags:
+      - HIDE_ATTRIBUTES
+      - HIDE_ENCHANTS
+    enchantments:
+      - UNBREAKING;1
+    display_name: '&#34B0F3Fragmento de Llave Rara'
+    lore:
+      - '&8ᴍᴀᴛᴇʀɪᴀʟ ᴅᴇ ꜰᴏʀᴊᴀ'
+      - ''
+      - ' &8| &fCantidad: &e1'
+      - ' &8| &fProbabilidad: &c10%'
+      - ' &8| &fRequisito: &fJunta 4 para craftear'
+      - ' &8| &fResultado: &#34B0F3Llave Rara'
+      - ' &8| &fTier: &6Muy Raro'
+      - ''
+      - '&7Acceso a cajas intermedias de recompensas.'
+
+  # ============================================================================
+  # NAV BAR INFERIOR (FILA 4 - SLOTS 27 A 35)
+  # ============================================================================
+  'Filtro_Navbar':
+    material: GRAY_STAINED_GLASS_PANE
+    display_name: ' '
+    slots:
+      - 27
+      - 28
+      - 29
+      - 30
+      - 32
+      - 33
+      - 34
+
+  'Volver':
+    material: DARK_OAK_DOOR
+    slot: 31
+    item_flags:
+      - HIDE_ATTRIBUTES
+    display_name: '&cVolver'
+    lore:
+      - '&7▶ Click para regresar a calidades'
+    left_click_commands:
+      - '[openguimenu] lootpools_dungeon'
+      - '[sound] UI_BUTTON_CLICK'
+
+  'Info_Balance':
+    material: head-%player_name%
+    slot: 35
+    item_flags:
+      - HIDE_ATTRIBUTES
+    display_name: '&#FFF275Tu Economia'
+    lore:
+      - '&8Tu Economia'
+      - ''
+      - ' &8| &fDinero: &#59E91F&l$&r&#59E91F%vault_eco_balance_formatted%'
+      - ' &8| &fAlmas: &#34B0F3%thundercurrencys_almas% fuego'
+      - ' &8| &fZafiros: &#1E6BFF%thundercurrencys_zafiros% diamante'
+      - ' &8| &fXP: &#D48BFF%player_level% LVL'
+      - ''
+      - '&7▶ Click para mas informacion'
+    left_click_commands:
+      - '[openguimenu] info_economia'
+      - '[sound] UI_BUTTON_CLICK'

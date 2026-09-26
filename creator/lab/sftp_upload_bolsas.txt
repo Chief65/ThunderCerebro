@@ -1,0 +1,5 @@
+put creator/lab/bolsadedinero.yml plugins/ExecutableItems/items/ThunderMC/bolsadedinero.yml
+put creator/lab/bolsadedinero_2.yml plugins/ExecutableItems/items/ThunderMC/bolsadedinero_2.yml
+put creator/lab/bolsadedinero_3.yml plugins/ExecutableItems/items/ThunderMC/bolsadedinero_3.yml
+put creator/lab/bolsadedinero_4.yml plugins/ExecutableItems/items/ThunderMC/bolsadedinero_4.yml
+put creator/lab/bolsadedinero_5.yml plugins/ExecutableItems/items/ThunderMC/bolsadedinero_5.yml

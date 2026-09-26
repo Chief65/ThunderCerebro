@@ -1,0 +1,46 @@
+ConejoAsesino:
+  Type: RABBIT
+  Display: '&4ᴄᴏɴᴇᴊᴏ ᴀꜱᴇꜱɪɴᴏ &8| <#ED1313><caster.hp{r=0}><&heart>'
+  Health: 4000
+  Damage: 30
+  Options:
+    Glowing: true
+    Scale: 13
+    MovementSpeed: 2
+    PreventOtherDrops: true
+    Despawn: false
+    ReturnHome: true
+    LeashRange: 20
+    IsKillerBunny: true
+    KnockbackResistance: 1.0
+  BossBar:
+    Enabled: true
+    Title: '&8┖&f☠&8┚ &4ᴄᴏɴᴇᴊᴏ ᴀꜱᴇꜱɪɴᴏ'
+    Range: 40
+    Color: RED
+    Style: SEGMENTED_10
+  Disguise: rabbit
+  AIGoalSelectors:
+    - 0 clear
+    - 1 meleeattack
+    - 2 randomstroll
+    - 3 lookatplayers
+    - 4 float
+  AITargetSelectors:
+    - 0 clear
+    - 1 players
+  Drops:
+    - RABBIT 1-2 1
+  Skills:
+    - particles{particle=EXPLOSION_NORMAL;amount=50;speed=0.15;hSpread=1.2;vSpread=0.3} @self ~onAttack
+    - particles{particle=BLOCK_CRACK{data=DIRT};amount=40;speed=0.1;hSpread=1.5;vSpread=0.1} @self ~onAttack
+    - sound{s=entity.generic.explode;v=0.6;p=1.8} @self ~onAttack
+    - command{c="points give <trigger.name> 1 -s";sender=console} @self ~onDeath
+    - actionmessage{m="<#34B0F3>+1 <white>Alma <#34B0F3>🔥 &8| <#59E91F>+<#59E91F>&l$&r<#59E91F>1000"} @trigger ~onDeath
+    - command{c="economy give <trigger.name> 1000 -s";sender=console} @self ~onDeath
+    - particles{particle=SCULK_SOUL;amount=50;speed=0.1;hSpread=0.5;vSpread=0.5} @self ~onDeath
+    - skill{s=InvocarConejos} @self ~onTimer:300
+    - skill{s=BoostAlmas} @self ~onDeath 
+    - setvariable{var=almas;value=1;scope=CASTER;type=INTEGER} @self ~onSpawn
+
+

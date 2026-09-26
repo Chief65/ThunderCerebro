@@ -1,0 +1,4896 @@
+bloques:
+  name: "&0&l|&r &0Tienda ▶ &8Bloques"
+  size: 45
+  fillItem:
+    material: AIR
+    name: " "
+  buttons:
+    goBack:
+      slot: 40
+    previousPage:
+      slot: 39
+    nextPage:
+      slot: 41
+  items:
+    1:
+      type: item
+      item:
+        material: GRASS_BLOCK
+        name: "#FFF275Grass Block"
+        quantity: 1
+      buyPrice: 12
+      sellPrice: -1
+      slot: 9
+      page: 1
+    2:
+      type: item
+      item:
+        material: DIRT
+        name: "#FFF275Dirt"
+        quantity: 1
+      buyPrice: 2
+      sellPrice: -1
+      slot: 10
+      page: 1
+    3:
+      type: item
+      item:
+        material: MYCELIUM
+        name: "#FFF275Mycelium"
+        quantity: 1
+      buyPrice: 75
+      sellPrice: -1
+      slot: 11
+      page: 1
+    4:
+      type: item
+      item:
+        material: PODZOL
+        name: "#FFF275Podzol"
+        quantity: 1
+      buyPrice: 75
+      sellPrice: -1
+      slot: 12
+      page: 1
+    5:
+      type: item
+      item:
+        material: CRIMSON_NYLIUM
+        name: "#FFF275Crimson Nylium"
+        quantity: 1
+      buyPrice: 5
+      sellPrice: -1
+      slot: 13
+      page: 1
+    6:
+      type: item
+      item:
+        material: WARPED_NYLIUM
+        name: "#FFF275Warped Nylium"
+        quantity: 1
+      buyPrice: 75
+      sellPrice: -1
+      slot: 14
+      page: 1
+    7:
+      type: item
+      item:
+        material: GRAVEL
+        name: "#FFF275Gravel"
+        quantity: 1
+      buyPrice: 50
+      sellPrice: -1
+      slot: 15
+      page: 1
+    8:
+      type: item
+      item:
+        material: SAND
+        name: "#FFF275Sand"
+        quantity: 1
+      buyPrice: 5
+      sellPrice: -1
+      slot: 16
+      page: 1
+    9:
+      type: item
+      item:
+        material: RED_SAND
+        name: "#FFF275Red Sand"
+        quantity: 1
+      buyPrice: 37
+      sellPrice: -1
+      slot: 17
+      page: 1
+    10:
+      type: item
+      item:
+        material: COBBLESTONE
+        name: "#FFF275Cobblestone"
+        quantity: 1
+      buyPrice: 5
+      sellPrice: -1
+      slot: 18
+      page: 1
+    11:
+      type: item
+      item:
+        material: STONE
+        name: "#FFF275Stone"
+        quantity: 1
+      buyPrice: 7
+      sellPrice: -1
+      slot: 19
+      page: 1
+    12:
+      type: item
+      item:
+        material: ANDESITE
+        name: "#FFF275Andesite"
+        quantity: 1
+      buyPrice: 2
+      sellPrice: -1
+      slot: 20
+      page: 1
+    13:
+      type: item
+      item:
+        material: GRANITE
+        name: "#FFF275Granite"
+        quantity: 1
+      buyPrice: 2
+      sellPrice: -1
+      slot: 21
+      page: 1
+    14:
+      type: item
+      item:
+        material: DIORITE
+        name: "#FFF275Diorite"
+        quantity: 1
+      buyPrice: 2
+      sellPrice: -1
+      slot: 22
+      page: 1
+    15:
+      type: item
+      item:
+        material: DEEPSLATE
+        name: "#FFF275Deepslate"
+        quantity: 1
+      buyPrice: 15
+      sellPrice: -1
+      slot: 23
+      page: 1
+    16:
+      type: item
+      item:
+        material: PRISMARINE
+        name: "#FFF275Prismarine"
+        quantity: 1
+      buyPrice: 37
+      sellPrice: -1
+      slot: 24
+      page: 1
+    17:
+      type: item
+      item:
+        material: PRISMARINE_BRICKS
+        name: "#FFF275Prismarine Bricks"
+        quantity: 1
+      buyPrice: 37
+      sellPrice: -1
+      slot: 25
+      page: 1
+    18:
+      type: item
+      item:
+        material: DARK_PRISMARINE
+        name: "#FFF275Dark Prismarine"
+        quantity: 1
+      buyPrice: 50
+      sellPrice: -1
+      slot: 26
+      page: 1
+    19:
+      type: item
+      item:
+        material: OAK_LOG
+        name: "#FFF275Oak Log"
+        quantity: 1
+      buyPrice: 12
+      sellPrice: -1
+      slot: 27
+      page: 1
+    20:
+      type: item
+      item:
+        material: SPRUCE_LOG
+        name: "#FFF275Spruce Log"
+        quantity: 1
+      buyPrice: 12
+      sellPrice: -1
+      slot: 28
+      page: 1
+    21:
+      type: item
+      item:
+        material: BIRCH_LOG
+        name: "#FFF275Birch Log"
+        quantity: 1
+      buyPrice: 12
+      sellPrice: -1
+      slot: 29
+      page: 1
+    22:
+      type: item
+      item:
+        material: JUNGLE_LOG
+        name: "#FFF275Jungle Log"
+        quantity: 1
+      buyPrice: 12
+      sellPrice: -1
+      slot: 30
+      page: 1
+    23:
+      type: item
+      item:
+        material: ACACIA_LOG
+        name: "#FFF275Acacia Log"
+        quantity: 1
+      buyPrice: 12
+      sellPrice: -1
+      slot: 31
+      page: 1
+    24:
+      type: item
+      item:
+        material: DARK_OAK_LOG
+        name: "#FFF275Dark Oak Log"
+        quantity: 1
+      buyPrice: 12
+      sellPrice: -1
+      slot: 32
+      page: 1
+    25:
+      type: item
+      item:
+        material: MANGROVE_LOG
+        name: "#FFF275Mangrove Log"
+        quantity: 1
+      buyPrice: 12
+      sellPrice: -1
+      slot: 33
+      page: 1
+    26:
+      type: item
+      item:
+        material: CHERRY_LOG
+        name: "#FFF275Cherry Log"
+        quantity: 1
+      buyPrice: 12
+      sellPrice: -1
+      slot: 34
+      page: 1
+    27:
+      type: item
+      item:
+        material: PALE_OAK_LOG
+        name: "#FFF275Pale Oak Log"
+        quantity: 1
+      buyPrice: 12
+      sellPrice: -1
+      slot: 35
+      page: 1
+    28:
+      type: item
+      item:
+        material: MOSSY_COBBLESTONE
+        name: "#FFF275Mossy Cobblestone"
+        quantity: 1
+      buyPrice: 5
+      sellPrice: -1
+      slot: 9
+      page: 2
+    29:
+      type: item
+      item:
+        material: MOSSY_STONE_BRICKS
+        name: "#FFF275Mossy Stone Bricks"
+        quantity: 1
+      buyPrice: 7
+      sellPrice: -1
+      slot: 10
+      page: 2
+    30:
+      type: item
+      item:
+        material: CALCITE
+        name: "#FFF275Calcite"
+        quantity: 1
+      buyPrice: 2
+      sellPrice: -1
+      slot: 11
+      page: 2
+    31:
+      type: item
+      item:
+        material: BLACKSTONE
+        name: "#FFF275Blackstone"
+        quantity: 1
+      buyPrice: 7
+      sellPrice: -1
+      slot: 12
+      page: 2
+    32:
+      type: item
+      item:
+        material: TUFF
+        name: "#FFF275Tuff"
+        quantity: 1
+      buyPrice: 4
+      sellPrice: -1
+      slot: 13
+      page: 2
+    33:
+      type: item
+      item:
+        material: TERRACOTTA
+        name: "#FFF275Terracotta"
+        quantity: 1
+      buyPrice: 5
+      sellPrice: -1
+      slot: 14
+      page: 2
+    34:
+      type: item
+      item:
+        material: BRICKS
+        name: "#FFF275Bricks"
+        quantity: 1
+      buyPrice: 7
+      sellPrice: -1
+      slot: 15
+      page: 2
+    35:
+      type: item
+      item:
+        material: MUD_BRICKS
+        name: "#FFF275Mud Bricks"
+        quantity: 1
+      buyPrice: 5
+      sellPrice: -1
+      slot: 16
+      page: 2
+    36:
+      type: item
+      item:
+        material: RED_NETHER_BRICKS
+        name: "#FFF275Red Nether Bricks"
+        quantity: 1
+      buyPrice: 7
+      sellPrice: -1
+      slot: 17
+      page: 2
+    37:
+      type: item
+      item:
+        material: GLASS
+        name: "#FFF275Glass"
+        quantity: 1
+      buyPrice: 25
+      sellPrice: -1
+      slot: 18
+      page: 2
+    38:
+      type: item
+      item:
+        material: TINTED_GLASS
+        name: "#FFF275Tinted Glass"
+        quantity: 1
+      buyPrice: 10
+      sellPrice: -1
+      slot: 19
+      page: 2
+    39:
+      type: item
+      item:
+        material: BOOKSHELF
+        name: "#FFF275Bookshelf"
+        quantity: 1
+      buyPrice: 375
+      sellPrice: -1
+      slot: 20
+      page: 2
+    40:
+      type: item
+      item:
+        material: HONEY_BLOCK
+        name: "#FFF275Honey Block"
+        quantity: 1
+      buyPrice: 17
+      sellPrice: -1
+      slot: 21
+      page: 2
+    41:
+      type: item
+      item:
+        material: MAGMA_BLOCK
+        name: "#FFF275Magma Block"
+        quantity: 1
+      buyPrice: 17
+      sellPrice: -1
+      slot: 22
+      page: 2
+    42:
+      type: item
+      item:
+        material: SOUL_SAND
+        name: "#FFF275Soul Sand"
+        quantity: 1
+      buyPrice: 7
+      sellPrice: -1
+      slot: 23
+      page: 2
+    43:
+      type: item
+      item:
+        material: CLAY
+        name: "#FFF275Clay"
+        quantity: 1
+      buyPrice: 7
+      sellPrice: -1
+      slot: 24
+      page: 2
+    44:
+      type: item
+      item:
+        material: MUD
+        name: "#FFF275Mud"
+        quantity: 1
+      buyPrice: 2
+      sellPrice: -1
+      slot: 25
+      page: 2
+    45:
+      type: item
+      item:
+        material: PACKED_MUD
+        name: "#FFF275Packed Mud"
+        quantity: 1
+      buyPrice: 5
+      sellPrice: -1
+      slot: 26
+      page: 2
+    46:
+      type: item
+      item:
+        material: SEA_LANTERN
+        name: "#FFF275Sea Lantern"
+        quantity: 1
+      buyPrice: 35
+      sellPrice: -1
+      slot: 27
+      page: 2
+    47:
+      type: item
+      item:
+        material: SHROOMLIGHT
+        name: "#FFF275Shroomlight"
+        quantity: 1
+      buyPrice: 50
+      sellPrice: -1
+      slot: 28
+      page: 2
+    48:
+      type: item
+      item:
+        material: OCHRE_FROGLIGHT
+        name: "#FFF275Ochre Froglight"
+        quantity: 1
+      buyPrice: 50
+      sellPrice: -1
+      slot: 29
+      page: 2
+    49:
+      type: item
+      item:
+        material: PEARLESCENT_FROGLIGHT
+        name: "#FFF275Pearlescent Froglight"
+        quantity: 1
+      buyPrice: 50
+      sellPrice: -1
+      slot: 30
+      page: 2
+    50:
+      type: item
+      item:
+        material: VERDANT_FROGLIGHT
+        name: "#FFF275Verdant Froglight"
+        quantity: 1
+      buyPrice: 50
+      sellPrice: -1
+      slot: 31
+      page: 2
+    51:
+      type: item
+      item:
+        material: AZALEA_LEAVES
+        name: "#FFF275Azalea Leaves"
+        quantity: 1
+      buyPrice: 15
+      sellPrice: -1
+      slot: 32
+      page: 2
+    52:
+      type: item
+      item:
+        material: FLOWERING_AZALEA_LEAVES
+        name: "#FFF275Flowering Azalea Leaves"
+        quantity: 1
+      buyPrice: 15
+      sellPrice: -1
+      slot: 33
+      page: 2
+    53:
+      type: item
+      item:
+        material: MANGROVE_LEAVES
+        name: "#FFF275Mangrove Leaves"
+        quantity: 1
+      buyPrice: 15
+      sellPrice: -1
+      slot: 34
+      page: 2
+    54:
+      type: item
+      item:
+        material: MANGROVE_ROOTS
+        name: "#FFF275Mangrove Roots"
+        quantity: 1
+      buyPrice: 15
+      sellPrice: -1
+      slot: 35
+      page: 2
+    55:
+      type: item
+      item:
+        material: MUDDY_MANGROVE_ROOTS
+        name: "#FFF275Muddy Mangrove Roots"
+        quantity: 1
+      buyPrice: 7
+      sellPrice: -1
+      slot: 9
+      page: 3
+    56:
+      type: item
+      item:
+        material: NETHERRACK
+        name: "#FFF275Netherrack"
+        quantity: 1
+      buyPrice: 2
+      sellPrice: -1
+      slot: 10
+      page: 3
+    57:
+      type: item
+      item:
+        material: NETHER_BRICKS
+        name: "#FFF275Nether Bricks"
+        quantity: 1
+      buyPrice: 7
+      sellPrice: -1
+      slot: 11
+      page: 3
+    58:
+      type: item
+      item:
+        material: CRACKED_NETHER_BRICKS
+        name: "#FFF275Cracked Nether Bricks"
+        quantity: 1
+      buyPrice: 5
+      sellPrice: -1
+      slot: 12
+      page: 3
+    59:
+      type: item
+      item:
+        material: CHISELED_NETHER_BRICKS
+        name: "#FFF275Chiseled Nether Bricks"
+        quantity: 1
+      buyPrice: 10
+      sellPrice: -1
+      slot: 13
+      page: 3
+    60:
+      type: item
+      item:
+        material: BASALT
+        name: "#FFF275Basalt"
+        quantity: 1
+      buyPrice: 5
+      sellPrice: -1
+      slot: 14
+      page: 3
+    61:
+      type: item
+      item:
+        material: POLISHED_BASALT
+        name: "#FFF275Polished Basalt"
+        quantity: 1
+      buyPrice: 7
+      sellPrice: -1
+      slot: 15
+      page: 3
+    62:
+      type: item
+      item:
+        material: SMOOTH_BASALT
+        name: "#FFF275Smooth Basalt"
+        quantity: 1
+      buyPrice: 7
+      sellPrice: -1
+      slot: 16
+      page: 3
+    63:
+      type: item
+      item:
+        material: GILDED_BLACKSTONE
+        name: "#FFF275Gilded Blackstone"
+        quantity: 1
+      buyPrice: 100
+      sellPrice: -1
+      slot: 17
+      page: 3
+    64:
+      type: item
+      item:
+        material: POLISHED_BLACKSTONE
+        name: "#FFF275Polished Blackstone"
+        quantity: 1
+      buyPrice: 10
+      sellPrice: -1
+      slot: 18
+      page: 3
+    65:
+      type: item
+      item:
+        material: POLISHED_BLACKSTONE_BRICKS
+        name: "#FFF275Polished Blackstone Bricks"
+        quantity: 1
+      buyPrice: 12
+      sellPrice: -1
+      slot: 19
+      page: 3
+    66:
+      type: item
+      item:
+        material: CRACKED_POLISHED_BLACKSTONE_BRICKS
+        name: "#FFF275Cracked Polished Blackstone Bricks"
+        quantity: 1
+      buyPrice: 10
+      sellPrice: -1
+      slot: 20
+      page: 3
+    67:
+      type: item
+      item:
+        material: CHISELED_POLISHED_BLACKSTONE
+        name: "#FFF275Chiseled Polished Blackstone"
+        quantity: 1
+      buyPrice: 15
+      sellPrice: -1
+      slot: 21
+      page: 3
+    68:
+      type: item
+      item:
+        material: END_STONE
+        name: "#FFF275End Stone"
+        quantity: 1
+      buyPrice: 25
+      sellPrice: -1
+      slot: 22
+      page: 3
+    69:
+      type: item
+      item:
+        material: END_STONE_BRICKS
+        name: "#FFF275End Stone Bricks"
+        quantity: 1
+      buyPrice: 30
+      sellPrice: -1
+      slot: 23
+      page: 3
+    70:
+      type: item
+      item:
+        material: PURPUR_BLOCK
+        name: "#FFF275Purpur Block"
+        quantity: 1
+      buyPrice: 37
+      sellPrice: -1
+      slot: 24
+      page: 3
+    71:
+      type: item
+      item:
+        material: PURPUR_PILLAR
+        name: "#FFF275Purpur Pillar"
+        quantity: 1
+      buyPrice: 37
+      sellPrice: -1
+      slot: 25
+      page: 3
+    72:
+      type: item
+      item:
+        material: OBSIDIAN
+        name: "#FFF275Obsidian"
+        quantity: 1
+      buyPrice: 125
+      sellPrice: -1
+      slot: 26
+      page: 3
+    73:
+      type: item
+      item:
+        material: CRYING_OBSIDIAN
+        name: "#FFF275Crying Obsidian"
+        quantity: 1
+      buyPrice: 150
+      sellPrice: -1
+      slot: 27
+      page: 3
+    74:
+      type: item
+      item:
+        material: SMOOTH_STONE
+        name: "#FFF275Smooth Stone"
+        quantity: 1
+      buyPrice: 10
+      sellPrice: -1
+      slot: 28
+      page: 3
+    75:
+      type: item
+      item:
+        material: STONE_BRICKS
+        name: "#FFF275Stone Bricks"
+        quantity: 1
+      buyPrice: 10
+      sellPrice: -1
+      slot: 29
+      page: 3
+    76:
+      type: item
+      item:
+        material: CRACKED_STONE_BRICKS
+        name: "#FFF275Cracked Stone Bricks"
+        quantity: 1
+      buyPrice: 7
+      sellPrice: -1
+      slot: 30
+      page: 3
+    77:
+      type: item
+      item:
+        material: CHISELED_STONE_BRICKS
+        name: "#FFF275Chiseled Stone Bricks"
+        quantity: 1
+      buyPrice: 12
+      sellPrice: -1
+      slot: 31
+      page: 3
+    78:
+      type: item
+      item:
+        material: POLISHED_ANDESITE
+        name: "#FFF275Polished Andesite"
+        quantity: 1
+      buyPrice: 4
+      sellPrice: -1
+      slot: 32
+      page: 3
+    79:
+      type: item
+      item:
+        material: POLISHED_GRANITE
+        name: "#FFF275Polished Granite"
+        quantity: 1
+      buyPrice: 4
+      sellPrice: -1
+      slot: 33
+      page: 3
+    80:
+      type: item
+      item:
+        material: POLISHED_DIORITE
+        name: "#FFF275Polished Diorite"
+        quantity: 1
+      buyPrice: 4
+      sellPrice: -1
+      slot: 34
+      page: 3
+    81:
+      type: item
+      item:
+        material: POLISHED_DEEPSLATE
+        name: "#FFF275Polished Deepslate"
+        quantity: 1
+      buyPrice: 20
+      sellPrice: -1
+      slot: 35
+      page: 3
+    82:
+      type: item
+      item:
+        material: DEEPSLATE_BRICKS
+        name: "#FFF275Deepslate Bricks"
+        quantity: 1
+      buyPrice: 22
+      sellPrice: -1
+      slot: 9
+      page: 4
+    83:
+      type: item
+      item:
+        material: CRACKED_DEEPSLATE_BRICKS
+        name: "#FFF275Cracked Deepslate Bricks"
+        quantity: 1
+      buyPrice: 17
+      sellPrice: -1
+      slot: 10
+      page: 4
+    84:
+      type: item
+      item:
+        material: DEEPSLATE_TILES
+        name: "#FFF275Deepslate Tiles"
+        quantity: 1
+      buyPrice: 25
+      sellPrice: -1
+      slot: 11
+      page: 4
+    85:
+      type: item
+      item:
+        material: CRACKED_DEEPSLATE_TILES
+        name: "#FFF275Cracked Deepslate Tiles"
+        quantity: 1
+      buyPrice: 20
+      sellPrice: -1
+      slot: 12
+      page: 4
+    86:
+      type: item
+      item:
+        material: CHISELED_DEEPSLATE
+        name: "#FFF275Chiseled Deepslate"
+        quantity: 1
+      buyPrice: 25
+      sellPrice: -1
+      slot: 13
+      page: 4
+    87:
+      type: item
+      item:
+        material: COBBLED_DEEPSLATE
+        name: "#FFF275Cobbled Deepslate"
+        quantity: 1
+      buyPrice: 15
+      sellPrice: -1
+      slot: 14
+      page: 4
+    88:
+      type: item
+      item:
+        material: TUFF_BRICKS
+        name: "#FFF275Tuff Bricks"
+        quantity: 1
+      buyPrice: 4
+      sellPrice: -1
+      slot: 15
+      page: 4
+    89:
+      type: item
+      item:
+        material: CHISELED_TUFF
+        name: "#FFF275Chiseled Tuff"
+        quantity: 1
+      buyPrice: 5
+      sellPrice: -1
+      slot: 16
+      page: 4
+    90:
+      type: item
+      item:
+        material: POLISHED_TUFF
+        name: "#FFF275Polished Tuff"
+        quantity: 1
+      buyPrice: 4
+      sellPrice: -1
+      slot: 17
+      page: 4
+    91:
+      type: item
+      item:
+        material: CHISELED_TUFF_BRICKS
+        name: "#FFF275Chiseled Tuff Bricks"
+        quantity: 1
+      buyPrice: 6
+      sellPrice: -1
+      slot: 18
+      page: 4
+    92:
+      type: item
+      item:
+        material: SANDSTONE
+        name: "#FFF275Sandstone"
+        quantity: 1
+      buyPrice: 7
+      sellPrice: -1
+      slot: 19
+      page: 4
+    93:
+      type: item
+      item:
+        material: SMOOTH_SANDSTONE
+        name: "#FFF275Smooth Sandstone"
+        quantity: 1
+      buyPrice: 10
+      sellPrice: -1
+      slot: 20
+      page: 4
+    94:
+      type: item
+      item:
+        material: CHISELED_SANDSTONE
+        name: "#FFF275Chiseled Sandstone"
+        quantity: 1
+      buyPrice: 12
+      sellPrice: -1
+      slot: 21
+      page: 4
+    95:
+      type: item
+      item:
+        material: CUT_SANDSTONE
+        name: "#FFF275Cut Sandstone"
+        quantity: 1
+      buyPrice: 10
+      sellPrice: -1
+      slot: 22
+      page: 4
+    96:
+      type: item
+      item:
+        material: RED_SANDSTONE
+        name: "#FFF275Red Sandstone"
+        quantity: 1
+      buyPrice: 10
+      sellPrice: -1
+      slot: 23
+      page: 4
+    97:
+      type: item
+      item:
+        material: SMOOTH_RED_SANDSTONE
+        name: "#FFF275Smooth Red Sandstone"
+        quantity: 1
+      buyPrice: 12
+      sellPrice: -1
+      slot: 24
+      page: 4
+    98:
+      type: item
+      item:
+        material: CHISELED_RED_SANDSTONE
+        name: "#FFF275Chiseled Red Sandstone"
+        quantity: 1
+      buyPrice: 15
+      sellPrice: -1
+      slot: 25
+      page: 4
+    99:
+      type: item
+      item:
+        material: CUT_RED_SANDSTONE
+        name: "#FFF275Cut Red Sandstone"
+        quantity: 1
+      buyPrice: 12
+      sellPrice: -1
+      slot: 26
+      page: 4
+    100:
+      type: item
+      item:
+        material: QUARTZ_BLOCK
+        name: "#FFF275Quartz Block"
+        quantity: 1
+      buyPrice: 50
+      sellPrice: -1
+      slot: 27
+      page: 4
+    101:
+      type: item
+      item:
+        material: SMOOTH_QUARTZ
+        name: "#FFF275Smooth Quartz"
+        quantity: 1
+      buyPrice: 55
+      sellPrice: -1
+      slot: 28
+      page: 4
+    102:
+      type: item
+      item:
+        material: QUARTZ_PILLAR
+        name: "#FFF275Quartz Pillar"
+        quantity: 1
+      buyPrice: 55
+      sellPrice: -1
+      slot: 29
+      page: 4
+    103:
+      type: item
+      item:
+        material: CHISELED_QUARTZ_BLOCK
+        name: "#FFF275Chiseled Quartz Block"
+        quantity: 1
+      buyPrice: 60
+      sellPrice: -1
+      slot: 30
+      page: 4
+    104:
+      type: item
+      item:
+        material: QUARTZ_BRICKS
+        name: "#FFF275Quartz Bricks"
+        quantity: 1
+      buyPrice: 55
+      sellPrice: -1
+      slot: 31
+      page: 4
+    105:
+      type: item
+      item:
+        material: NETHER_QUARTZ_ORE
+        name: "#FFF275Nether Quartz Ore"
+        quantity: 1
+      buyPrice: 40
+      sellPrice: -1
+      slot: 32
+      page: 4
+    106:
+      type: item
+      item:
+        material: COPPER_BLOCK
+        name: "#FFF275Copper Block"
+        quantity: 1
+      buyPrice: 100
+      sellPrice: -1
+      slot: 33
+      page: 4
+    107:
+      type: item
+      item:
+        material: EXPOSED_COPPER
+        name: "#FFF275Exposed Copper"
+        quantity: 1
+      buyPrice: 75
+      sellPrice: -1
+      slot: 34
+      page: 4
+    108:
+      type: item
+      item:
+        material: WEATHERED_COPPER
+        name: "#FFF275Weathered Copper"
+        quantity: 1
+      buyPrice: 75
+      sellPrice: -1
+      slot: 35
+      page: 4
+    109:
+      type: item
+      item:
+        material: OXIDIZED_COPPER
+        name: "#FFF275Oxidized Copper"
+        quantity: 1
+      buyPrice: 75
+      sellPrice: -1
+      slot: 9
+      page: 5
+    110:
+      type: item
+      item:
+        material: WAXED_COPPER_BLOCK
+        name: "#FFF275Waxed Copper Block"
+        quantity: 1
+      buyPrice: 125
+      sellPrice: -1
+      slot: 10
+      page: 5
+    111:
+      type: item
+      item:
+        material: CUT_COPPER
+        name: "#FFF275Cut Copper"
+        quantity: 1
+      buyPrice: 110
+      sellPrice: -1
+      slot: 11
+      page: 5
+    112:
+      type: item
+      item:
+        material: WAXED_CUT_COPPER
+        name: "#FFF275Waxed Cut Copper"
+        quantity: 1
+      buyPrice: 135
+      sellPrice: -1
+      slot: 12
+      page: 5
+    113:
+      type: item
+      item:
+        material: CHISELED_COPPER
+        name: "#FFF275Chiseled Copper"
+        quantity: 1
+      buyPrice: 115
+      sellPrice: -1
+      slot: 13
+      page: 5
+    114:
+      type: item
+      item:
+        material: COPPER_GRATE
+        name: "#FFF275Copper Grate"
+        quantity: 1
+      buyPrice: 110
+      sellPrice: -1
+      slot: 14
+      page: 5
+    115:
+      type: item
+      item:
+        material: IRON_BLOCK
+        name: "#FFF275Iron Block"
+        quantity: 1
+      buyPrice: 250
+      sellPrice: -1
+      slot: 15
+      page: 5
+    116:
+      type: item
+      item:
+        material: GOLD_BLOCK
+        name: "#FFF275Gold Block"
+        quantity: 1
+      buyPrice: 1000
+      sellPrice: -1
+      slot: 16
+      page: 5
+    117:
+      type: item
+      item:
+        material: DIAMOND_BLOCK
+        name: "#FFF275Diamond Block"
+        quantity: 1
+      buyPrice: 4000
+      sellPrice: -1
+      slot: 17
+      page: 5
+    118:
+      type: item
+      item:
+        material: EMERALD_BLOCK
+        name: "#FFF275Emerald Block"
+        quantity: 1
+      buyPrice: 2500
+      sellPrice: -1
+      slot: 18
+      page: 5
+    119:
+      type: item
+      item:
+        material: LAPIS_BLOCK
+        name: "#FFF275Lapis Block"
+        quantity: 1
+      buyPrice: 750
+      sellPrice: -1
+      slot: 19
+      page: 5
+    120:
+      type: item
+      item:
+        material: NETHERITE_BLOCK
+        name: "#FFF275Netherite Block"
+        quantity: 1
+      buyPrice: 25000
+      sellPrice: -1
+      slot: 20
+      page: 5
+    121:
+      type: item
+      item:
+        material: AMETHYST_BLOCK
+        name: "#FFF275Amethyst Block"
+        quantity: 1
+      buyPrice: 150
+      sellPrice: -1
+      slot: 21
+      page: 5
+    122:
+      type: item
+      item:
+        material: BUDDING_AMETHYST
+        name: "#FFF275Budding Amethyst"
+        quantity: 1
+      buyPrice: 250
+      sellPrice: -1
+      slot: 22
+      page: 5
+    123:
+      type: item
+      item:
+        material: DRIPSTONE_BLOCK
+        name: "#FFF275Dripstone Block"
+        quantity: 1
+      buyPrice: 10
+      sellPrice: -1
+      slot: 23
+      page: 5
+    124:
+      type: item
+      item:
+        material: MOSS_BLOCK
+        name: "#FFF275Moss Block"
+        quantity: 1
+      buyPrice: 12
+      sellPrice: -1
+      slot: 24
+      page: 5
+    125:
+      type: item
+      item:
+        material: SCULK
+        name: "#FFF275Sculk"
+        quantity: 1
+      buyPrice: 15
+      sellPrice: -1
+      slot: 25
+      page: 5
+    126:
+      type: item
+      item:
+        material: SCULK_VEIN
+        name: "#FFF275Sculk Vein"
+        quantity: 1
+      buyPrice: 7
+      sellPrice: -1
+      slot: 26
+      page: 5
+    127:
+      type: item
+      item:
+        material: SCULK_CATALYST
+        name: "#FFF275Sculk Catalyst"
+        quantity: 1
+      buyPrice: 250
+      sellPrice: -1
+      slot: 27
+      page: 5
+    128:
+      type: item
+      item:
+        material: PACKED_ICE
+        name: "#FFF275Packed Ice"
+        quantity: 1
+      buyPrice: 37
+      sellPrice: -1
+      slot: 28
+      page: 5
+    129:
+      type: item
+      item:
+        material: BLUE_ICE
+        name: "#FFF275Blue Ice"
+        quantity: 1
+      buyPrice: 100
+      sellPrice: -1
+      slot: 29
+      page: 5
+    130:
+      type: item
+      item:
+        material: SNOW_BLOCK
+        name: "#FFF275Snow Block"
+        quantity: 1
+      buyPrice: 10
+      sellPrice: -1
+      slot: 30
+      page: 5
+    131:
+      type: item
+      item:
+        material: WHITE_CONCRETE
+        name: "#FFF275White Concrete"
+        quantity: 1
+      buyPrice: 10
+      sellPrice: -1
+      slot: 31
+      page: 5
+    132:
+      type: item
+      item:
+        material: ORANGE_CONCRETE
+        name: "#FFF275Orange Concrete"
+        quantity: 1
+      buyPrice: 10
+      sellPrice: -1
+      slot: 32
+      page: 5
+    133:
+      type: item
+      item:
+        material: MAGENTA_CONCRETE
+        name: "#FFF275Magenta Concrete"
+        quantity: 1
+      buyPrice: 10
+      sellPrice: -1
+      slot: 33
+      page: 5
+    134:
+      type: item
+      item:
+        material: LIGHT_BLUE_CONCRETE
+        name: "#FFF275Light Blue Concrete"
+        quantity: 1
+      buyPrice: 10
+      sellPrice: -1
+      slot: 34
+      page: 5
+    135:
+      type: item
+      item:
+        material: YELLOW_CONCRETE
+        name: "#FFF275Yellow Concrete"
+        quantity: 1
+      buyPrice: 10
+      sellPrice: -1
+      slot: 35
+      page: 5
+    136:
+      type: item
+      item:
+        material: LIME_CONCRETE
+        name: "#FFF275Lime Concrete"
+        quantity: 1
+      buyPrice: 10
+      sellPrice: -1
+      slot: 9
+      page: 6
+    137:
+      type: item
+      item:
+        material: PINK_CONCRETE
+        name: "#FFF275Pink Concrete"
+        quantity: 1
+      buyPrice: 10
+      sellPrice: -1
+      slot: 10
+      page: 6
+    138:
+      type: item
+      item:
+        material: GRAY_CONCRETE
+        name: "#FFF275Gray Concrete"
+        quantity: 1
+      buyPrice: 10
+      sellPrice: -1
+      slot: 11
+      page: 6
+    139:
+      type: item
+      item:
+        material: LIGHT_GRAY_CONCRETE
+        name: "#FFF275Light Gray Concrete"
+        quantity: 1
+      buyPrice: 10
+      sellPrice: -1
+      slot: 12
+      page: 6
+    140:
+      type: item
+      item:
+        material: CYAN_CONCRETE
+        name: "#FFF275Cyan Concrete"
+        quantity: 1
+      buyPrice: 10
+      sellPrice: -1
+      slot: 13
+      page: 6
+    141:
+      type: item
+      item:
+        material: PURPLE_CONCRETE
+        name: "#FFF275Purple Concrete"
+        quantity: 1
+      buyPrice: 10
+      sellPrice: -1
+      slot: 14
+      page: 6
+    142:
+      type: item
+      item:
+        material: BLUE_CONCRETE
+        name: "#FFF275Blue Concrete"
+        quantity: 1
+      buyPrice: 10
+      sellPrice: -1
+      slot: 15
+      page: 6
+    143:
+      type: item
+      item:
+        material: BROWN_CONCRETE
+        name: "#FFF275Brown Concrete"
+        quantity: 1
+      buyPrice: 10
+      sellPrice: -1
+      slot: 16
+      page: 6
+    144:
+      type: item
+      item:
+        material: GREEN_CONCRETE
+        name: "#FFF275Green Concrete"
+        quantity: 1
+      buyPrice: 10
+      sellPrice: -1
+      slot: 17
+      page: 6
+    145:
+      type: item
+      item:
+        material: RED_CONCRETE
+        name: "#FFF275Red Concrete"
+        quantity: 1
+      buyPrice: 10
+      sellPrice: -1
+      slot: 18
+      page: 6
+    146:
+      type: item
+      item:
+        material: BLACK_CONCRETE
+        name: "#FFF275Black Concrete"
+        quantity: 1
+      buyPrice: 10
+      sellPrice: -1
+      slot: 19
+      page: 6
+    147:
+      type: item
+      item:
+        material: WHITE_TERRACOTTA
+        name: "#FFF275White Terracotta"
+        quantity: 1
+      buyPrice: 7
+      sellPrice: -1
+      slot: 20
+      page: 6
+    148:
+      type: item
+      item:
+        material: ORANGE_TERRACOTTA
+        name: "#FFF275Orange Terracotta"
+        quantity: 1
+      buyPrice: 7
+      sellPrice: -1
+      slot: 21
+      page: 6
+    149:
+      type: item
+      item:
+        material: MAGENTA_TERRACOTTA
+        name: "#FFF275Magenta Terracotta"
+        quantity: 1
+      buyPrice: 7
+      sellPrice: -1
+      slot: 22
+      page: 6
+    150:
+      type: item
+      item:
+        material: LIGHT_BLUE_TERRACOTTA
+        name: "#FFF275Light Blue Terracotta"
+        quantity: 1
+      buyPrice: 7
+      sellPrice: -1
+      slot: 23
+      page: 6
+    151:
+      type: item
+      item:
+        material: YELLOW_TERRACOTTA
+        name: "#FFF275Yellow Terracotta"
+        quantity: 1
+      buyPrice: 7
+      sellPrice: -1
+      slot: 24
+      page: 6
+    152:
+      type: item
+      item:
+        material: LIME_TERRACOTTA
+        name: "#FFF275Lime Terracotta"
+        quantity: 1
+      buyPrice: 7
+      sellPrice: -1
+      slot: 25
+      page: 6
+    153:
+      type: item
+      item:
+        material: PINK_TERRACOTTA
+        name: "#FFF275Pink Terracotta"
+        quantity: 1
+      buyPrice: 7
+      sellPrice: -1
+      slot: 26
+      page: 6
+    154:
+      type: item
+      item:
+        material: GRAY_TERRACOTTA
+        name: "#FFF275Gray Terracotta"
+        quantity: 1
+      buyPrice: 7
+      sellPrice: -1
+      slot: 27
+      page: 6
+    155:
+      type: item
+      item:
+        material: LIGHT_GRAY_TERRACOTTA
+        name: "#FFF275Light Gray Terracotta"
+        quantity: 1
+      buyPrice: 7
+      sellPrice: -1
+      slot: 28
+      page: 6
+    156:
+      type: item
+      item:
+        material: CYAN_TERRACOTTA
+        name: "#FFF275Cyan Terracotta"
+        quantity: 1
+      buyPrice: 7
+      sellPrice: -1
+      slot: 29
+      page: 6
+    157:
+      type: item
+      item:
+        material: PURPLE_TERRACOTTA
+        name: "#FFF275Purple Terracotta"
+        quantity: 1
+      buyPrice: 7
+      sellPrice: -1
+      slot: 30
+      page: 6
+    158:
+      type: item
+      item:
+        material: BLUE_TERRACOTTA
+        name: "#FFF275Blue Terracotta"
+        quantity: 1
+      buyPrice: 7
+      sellPrice: -1
+      slot: 31
+      page: 6
+    159:
+      type: item
+      item:
+        material: BROWN_TERRACOTTA
+        name: "#FFF275Brown Terracotta"
+        quantity: 1
+      buyPrice: 7
+      sellPrice: -1
+      slot: 32
+      page: 6
+    160:
+      type: item
+      item:
+        material: GREEN_TERRACOTTA
+        name: "#FFF275Green Terracotta"
+        quantity: 1
+      buyPrice: 7
+      sellPrice: -1
+      slot: 33
+      page: 6
+    161:
+      type: item
+      item:
+        material: RED_TERRACOTTA
+        name: "#FFF275Red Terracotta"
+        quantity: 1
+      buyPrice: 7
+      sellPrice: -1
+      slot: 34
+      page: 6
+    162:
+      type: item
+      item:
+        material: BLACK_TERRACOTTA
+        name: "#FFF275Black Terracotta"
+        quantity: 1
+      buyPrice: 7
+      sellPrice: -1
+      slot: 35
+      page: 6
+    163:
+      type: item
+      item:
+        material: WHITE_GLAZED_TERRACOTTA
+        name: "#FFF275White Glazed Terracotta"
+        quantity: 1
+      buyPrice: 12
+      sellPrice: -1
+      slot: 9
+      page: 7
+    164:
+      type: item
+      item:
+        material: ORANGE_GLAZED_TERRACOTTA
+        name: "#FFF275Orange Glazed Terracotta"
+        quantity: 1
+      buyPrice: 12
+      sellPrice: -1
+      slot: 10
+      page: 7
+    165:
+      type: item
+      item:
+        material: MAGENTA_GLAZED_TERRACOTTA
+        name: "#FFF275Magenta Glazed Terracotta"
+        quantity: 1
+      buyPrice: 12
+      sellPrice: -1
+      slot: 11
+      page: 7
+    166:
+      type: item
+      item:
+        material: LIGHT_BLUE_GLAZED_TERRACOTTA
+        name: "#FFF275Light Blue Glazed Terracotta"
+        quantity: 1
+      buyPrice: 12
+      sellPrice: -1
+      slot: 12
+      page: 7
+    167:
+      type: item
+      item:
+        material: YELLOW_GLAZED_TERRACOTTA
+        name: "#FFF275Yellow Glazed Terracotta"
+        quantity: 1
+      buyPrice: 12
+      sellPrice: -1
+      slot: 13
+      page: 7
+    168:
+      type: item
+      item:
+        material: LIME_GLAZED_TERRACOTTA
+        name: "#FFF275Lime Glazed Terracotta"
+        quantity: 1
+      buyPrice: 12
+      sellPrice: -1
+      slot: 14
+      page: 7
+    169:
+      type: item
+      item:
+        material: PINK_GLAZED_TERRACOTTA
+        name: "#FFF275Pink Glazed Terracotta"
+        quantity: 1
+      buyPrice: 12
+      sellPrice: -1
+      slot: 15
+      page: 7
+    170:
+      type: item
+      item:
+        material: GRAY_GLAZED_TERRACOTTA
+        name: "#FFF275Gray Glazed Terracotta"
+        quantity: 1
+      buyPrice: 12
+      sellPrice: -1
+      slot: 16
+      page: 7
+    171:
+      type: item
+      item:
+        material: LIGHT_GRAY_GLAZED_TERRACOTTA
+        name: "#FFF275Light Gray Glazed Terracotta"
+        quantity: 1
+      buyPrice: 12
+      sellPrice: -1
+      slot: 17
+      page: 7
+    172:
+      type: item
+      item:
+        material: CYAN_GLAZED_TERRACOTTA
+        name: "#FFF275Cyan Glazed Terracotta"
+        quantity: 1
+      buyPrice: 12
+      sellPrice: -1
+      slot: 18
+      page: 7
+    173:
+      type: item
+      item:
+        material: PURPLE_GLAZED_TERRACOTTA
+        name: "#FFF275Purple Glazed Terracotta"
+        quantity: 1
+      buyPrice: 12
+      sellPrice: -1
+      slot: 19
+      page: 7
+    174:
+      type: item
+      item:
+        material: BLUE_GLAZED_TERRACOTTA
+        name: "#FFF275Blue Glazed Terracotta"
+        quantity: 1
+      buyPrice: 12
+      sellPrice: -1
+      slot: 20
+      page: 7
+    175:
+      type: item
+      item:
+        material: BROWN_GLAZED_TERRACOTTA
+        name: "#FFF275Brown Glazed Terracotta"
+        quantity: 1
+      buyPrice: 12
+      sellPrice: -1
+      slot: 21
+      page: 7
+    176:
+      type: item
+      item:
+        material: GREEN_GLAZED_TERRACOTTA
+        name: "#FFF275Green Glazed Terracotta"
+        quantity: 1
+      buyPrice: 12
+      sellPrice: -1
+      slot: 22
+      page: 7
+    177:
+      type: item
+      item:
+        material: RED_GLAZED_TERRACOTTA
+        name: "#FFF275Red Glazed Terracotta"
+        quantity: 1
+      buyPrice: 12
+      sellPrice: -1
+      slot: 23
+      page: 7
+    178:
+      type: item
+      item:
+        material: BLACK_GLAZED_TERRACOTTA
+        name: "#FFF275Black Glazed Terracotta"
+        quantity: 1
+      buyPrice: 12
+      sellPrice: -1
+      slot: 24
+      page: 7
+    179:
+      type: item
+      item:
+        material: WHITE_WOOL
+        name: "#FFF275White Wool"
+        quantity: 1
+      buyPrice: 10
+      sellPrice: -1
+      slot: 25
+      page: 7
+    180:
+      type: item
+      item:
+        material: ORANGE_WOOL
+        name: "#FFF275Orange Wool"
+        quantity: 1
+      buyPrice: 10
+      sellPrice: -1
+      slot: 26
+      page: 7
+    181:
+      type: item
+      item:
+        material: MAGENTA_WOOL
+        name: "#FFF275Magenta Wool"
+        quantity: 1
+      buyPrice: 10
+      sellPrice: -1
+      slot: 27
+      page: 7
+    182:
+      type: item
+      item:
+        material: LIGHT_BLUE_WOOL
+        name: "#FFF275Light Blue Wool"
+        quantity: 1
+      buyPrice: 10
+      sellPrice: -1
+      slot: 28
+      page: 7
+    183:
+      type: item
+      item:
+        material: YELLOW_WOOL
+        name: "#FFF275Yellow Wool"
+        quantity: 1
+      buyPrice: 10
+      sellPrice: -1
+      slot: 29
+      page: 7
+    184:
+      type: item
+      item:
+        material: LIME_WOOL
+        name: "#FFF275Lime Wool"
+        quantity: 1
+      buyPrice: 10
+      sellPrice: -1
+      slot: 30
+      page: 7
+    185:
+      type: item
+      item:
+        material: PINK_WOOL
+        name: "#FFF275Pink Wool"
+        quantity: 1
+      buyPrice: 10
+      sellPrice: -1
+      slot: 31
+      page: 7
+    186:
+      type: item
+      item:
+        material: GRAY_WOOL
+        name: "#FFF275Gray Wool"
+        quantity: 1
+      buyPrice: 10
+      sellPrice: -1
+      slot: 32
+      page: 7
+    187:
+      type: item
+      item:
+        material: LIGHT_GRAY_WOOL
+        name: "#FFF275Light Gray Wool"
+        quantity: 1
+      buyPrice: 10
+      sellPrice: -1
+      slot: 33
+      page: 7
+    188:
+      type: item
+      item:
+        material: CYAN_WOOL
+        name: "#FFF275Cyan Wool"
+        quantity: 1
+      buyPrice: 10
+      sellPrice: -1
+      slot: 34
+      page: 7
+    189:
+      type: item
+      item:
+        material: PURPLE_WOOL
+        name: "#FFF275Purple Wool"
+        quantity: 1
+      buyPrice: 10
+      sellPrice: -1
+      slot: 35
+      page: 7
+    190:
+      type: item
+      item:
+        material: BLUE_WOOL
+        name: "#FFF275Blue Wool"
+        quantity: 1
+      buyPrice: 10
+      sellPrice: -1
+      slot: 9
+      page: 8
+    191:
+      type: item
+      item:
+        material: BROWN_WOOL
+        name: "#FFF275Brown Wool"
+        quantity: 1
+      buyPrice: 10
+      sellPrice: -1
+      slot: 10
+      page: 8
+    192:
+      type: item
+      item:
+        material: GREEN_WOOL
+        name: "#FFF275Green Wool"
+        quantity: 1
+      buyPrice: 10
+      sellPrice: -1
+      slot: 11
+      page: 8
+    193:
+      type: item
+      item:
+        material: RED_WOOL
+        name: "#FFF275Red Wool"
+        quantity: 1
+      buyPrice: 10
+      sellPrice: -1
+      slot: 12
+      page: 8
+    194:
+      type: item
+      item:
+        material: BLACK_WOOL
+        name: "#FFF275Black Wool"
+        quantity: 1
+      buyPrice: 10
+      sellPrice: -1
+      slot: 13
+      page: 8
+    195:
+      type: item
+      item:
+        material: SPONGE
+        name: "#FFF275Sponge"
+        quantity: 1
+      buyPrice: 250
+      sellPrice: -1
+      slot: 14
+      page: 8
+    196:
+      type: item
+      item:
+        material: WET_SPONGE
+        name: "#FFF275Wet Sponge"
+        quantity: 1
+      buyPrice: 250
+      sellPrice: -1
+      slot: 15
+      page: 8
+    197:
+      type: item
+      item:
+        material: HAY_BLOCK
+        name: "#FFF275Hay Block"
+        quantity: 1
+      buyPrice: 200
+      sellPrice: -1
+      slot: 16
+      page: 8
+    198:
+      type: item
+      item:
+        material: SLIME_BLOCK
+        name: "#FFF275Slime Block"
+        quantity: 1
+      buyPrice: 200
+      sellPrice: -1
+      slot: 17
+      page: 8
+    199:
+      type: item
+      item:
+        material: BONE_BLOCK
+        name: "#FFF275Bone Block"
+        quantity: 1
+      buyPrice: 25
+      sellPrice: -1
+      slot: 18
+      page: 8
+    200:
+      type: item
+      item:
+        material: DRIED_KELP_BLOCK
+        name: "#FFF275Dried Kelp Block"
+        quantity: 1
+      buyPrice: 10
+      sellPrice: -1
+      slot: 19
+      page: 8
+    201:
+      type: item
+      item:
+        material: COAL_BLOCK
+        name: "#FFF275Coal Block"
+        quantity: 1
+      buyPrice: 50
+      sellPrice: -1
+      slot: 20
+      page: 8
+    202:
+      type: item
+      item:
+        material: REDSTONE_BLOCK
+        name: "#FFF275Redstone Block"
+        quantity: 1
+      buyPrice: 200
+      sellPrice: -1
+      slot: 21
+      page: 8
+    203:
+      type: item
+      item:
+        material: GLOWSTONE
+        name: "#FFF275Glowstone"
+        quantity: 1
+      buyPrice: 75
+      sellPrice: -1
+      slot: 22
+      page: 8
+    204:
+      type: item
+      item:
+        material: NETHER_WART_BLOCK
+        name: "#FFF275Nether Wart Block"
+        quantity: 1
+      buyPrice: 15
+      sellPrice: -1
+      slot: 23
+      page: 8
+    205:
+      type: item
+      item:
+        material: WARPED_WART_BLOCK
+        name: "#FFF275Warped Wart Block"
+        quantity: 1
+      buyPrice: 15
+      sellPrice: -1
+      slot: 24
+      page: 8
+    206:
+      type: item
+      item:
+        material: CRIMSON_STEM
+        name: "#FFF275Crimson Stem"
+        quantity: 1
+      buyPrice: 12
+      sellPrice: -1
+      slot: 25
+      page: 8
+    207:
+      type: item
+      item:
+        material: WARPED_STEM
+        name: "#FFF275Warped Stem"
+        quantity: 1
+      buyPrice: 12
+      sellPrice: -1
+      slot: 26
+      page: 8
+    208:
+      type: item
+      item:
+        material: STRIPPED_CRIMSON_STEM
+        name: "#FFF275Stripped Crimson Stem"
+        quantity: 1
+      buyPrice: 12
+      sellPrice: -1
+      slot: 27
+      page: 8
+    209:
+      type: item
+      item:
+        material: STRIPPED_WARPED_STEM
+        name: "#FFF275Stripped Warped Stem"
+        quantity: 1
+      buyPrice: 12
+      sellPrice: -1
+      slot: 28
+      page: 8
+    210:
+      type: item
+      item:
+        material: CRIMSON_HYPHAE
+        name: "#FFF275Crimson Hyphae"
+        quantity: 1
+      buyPrice: 10
+      sellPrice: -1
+      slot: 29
+      page: 8
+    211:
+      type: item
+      item:
+        material: WARPED_HYPHAE
+        name: "#FFF275Warped Hyphae"
+        quantity: 1
+      buyPrice: 10
+      sellPrice: -1
+      slot: 30
+      page: 8
+    212:
+      type: item
+      item:
+        material: STRIPPED_OAK_LOG
+        name: "#FFF275Stripped Oak Log"
+        quantity: 1
+      buyPrice: 12
+      sellPrice: -1
+      slot: 31
+      page: 8
+    213:
+      type: item
+      item:
+        material: STRIPPED_SPRUCE_LOG
+        name: "#FFF275Stripped Spruce Log"
+        quantity: 1
+      buyPrice: 12
+      sellPrice: -1
+      slot: 32
+      page: 8
+    214:
+      type: item
+      item:
+        material: STRIPPED_BIRCH_LOG
+        name: "#FFF275Stripped Birch Log"
+        quantity: 1
+      buyPrice: 12
+      sellPrice: -1
+      slot: 33
+      page: 8
+    215:
+      type: item
+      item:
+        material: STRIPPED_JUNGLE_LOG
+        name: "#FFF275Stripped Jungle Log"
+        quantity: 1
+      buyPrice: 12
+      sellPrice: -1
+      slot: 34
+      page: 8
+    216:
+      type: item
+      item:
+        material: STRIPPED_ACACIA_LOG
+        name: "#FFF275Stripped Acacia Log"
+        quantity: 1
+      buyPrice: 12
+      sellPrice: -1
+      slot: 35
+      page: 8
+    217:
+      type: item
+      item:
+        material: STRIPPED_DARK_OAK_LOG
+        name: "#FFF275Stripped Dark Oak Log"
+        quantity: 1
+      buyPrice: 12
+      sellPrice: -1
+      slot: 9
+      page: 9
+    218:
+      type: item
+      item:
+        material: STRIPPED_MANGROVE_LOG
+        name: "#FFF275Stripped Mangrove Log"
+        quantity: 1
+      buyPrice: 12
+      sellPrice: -1
+      slot: 10
+      page: 9
+    219:
+      type: item
+      item:
+        material: STRIPPED_CHERRY_LOG
+        name: "#FFF275Stripped Cherry Log"
+        quantity: 1
+      buyPrice: 12
+      sellPrice: -1
+      slot: 11
+      page: 9
+    220:
+      type: item
+      item:
+        material: STRIPPED_PALE_OAK_LOG
+        name: "#FFF275Stripped Pale Oak Log"
+        quantity: 1
+      buyPrice: 12
+      sellPrice: -1
+      slot: 12
+      page: 9
+    221:
+      type: item
+      item:
+        material: OAK_WOOD
+        name: "#FFF275Oak Wood"
+        quantity: 1
+      buyPrice: 10
+      sellPrice: -1
+      slot: 13
+      page: 9
+    222:
+      type: item
+      item:
+        material: SPRUCE_WOOD
+        name: "#FFF275Spruce Wood"
+        quantity: 1
+      buyPrice: 10
+      sellPrice: -1
+      slot: 14
+      page: 9
+    223:
+      type: item
+      item:
+        material: BIRCH_WOOD
+        name: "#FFF275Birch Wood"
+        quantity: 1
+      buyPrice: 10
+      sellPrice: -1
+      slot: 15
+      page: 9
+    224:
+      type: item
+      item:
+        material: JUNGLE_WOOD
+        name: "#FFF275Jungle Wood"
+        quantity: 1
+      buyPrice: 10
+      sellPrice: -1
+      slot: 16
+      page: 9
+    225:
+      type: item
+      item:
+        material: ACACIA_WOOD
+        name: "#FFF275Acacia Wood"
+        quantity: 1
+      buyPrice: 10
+      sellPrice: -1
+      slot: 17
+      page: 9
+    226:
+      type: item
+      item:
+        material: DARK_OAK_WOOD
+        name: "#FFF275Dark Oak Wood"
+        quantity: 1
+      buyPrice: 10
+      sellPrice: -1
+      slot: 18
+      page: 9
+    227:
+      type: item
+      item:
+        material: MANGROVE_WOOD
+        name: "#FFF275Mangrove Wood"
+        quantity: 1
+      buyPrice: 10
+      sellPrice: -1
+      slot: 19
+      page: 9
+    228:
+      type: item
+      item:
+        material: CHERRY_WOOD
+        name: "#FFF275Cherry Wood"
+        quantity: 1
+      buyPrice: 10
+      sellPrice: -1
+      slot: 20
+      page: 9
+    229:
+      type: item
+      item:
+        material: PALE_OAK_WOOD
+        name: "#FFF275Pale Oak Wood"
+        quantity: 1
+      buyPrice: 10
+      sellPrice: -1
+      slot: 21
+      page: 9
+    230:
+      type: item
+      item:
+        material: NETHER_BRICK
+        name: "#FFF275Nether Brick"
+        quantity: 1
+      buyPrice: 2
+      sellPrice: -1
+      slot: 22
+      page: 9
+    231:
+      type: item
+      item:
+        material: SOUL_SOIL
+        name: "#FFF275Soul Soil"
+        quantity: 1
+      buyPrice: 7
+      sellPrice: -1
+      slot: 23
+      page: 9
+    232:
+      type: item
+      item:
+        material: ANCIENT_DEBRIS
+        name: "#FFF275Ancient Debris"
+        quantity: 1
+      buyPrice: 5000
+      sellPrice: -1
+      slot: 24
+      page: 9
+    233:
+      type: item
+      item:
+        material: RAW_IRON_BLOCK
+        name: "#FFF275Raw Iron Block"
+        quantity: 1
+      buyPrice: 200
+      sellPrice: -1
+      slot: 25
+      page: 9
+    234:
+      type: item
+      item:
+        material: RAW_GOLD_BLOCK
+        name: "#FFF275Raw Gold Block"
+        quantity: 1
+      buyPrice: 750
+      sellPrice: -1
+      slot: 26
+      page: 9
+    235:
+      type: item
+      item:
+        material: RAW_COPPER_BLOCK
+        name: "#FFF275Raw Copper Block"
+        quantity: 1
+      buyPrice: 75
+      sellPrice: -1
+      slot: 27
+      page: 9
+    236:
+      type: item
+      item:
+        material: RESIN_BLOCK
+        name: "#FFF275Resin Block"
+        quantity: 1
+      buyPrice: 40
+      sellPrice: -1
+      slot: 28
+      page: 9
+    237:
+      type: item
+      item:
+        material: RESIN_BRICKS
+        name: "#FFF275Resin Bricks"
+        quantity: 1
+      buyPrice: 45
+      sellPrice: -1
+      slot: 29
+      page: 9
+    238:
+      type: item
+      item:
+        material: CHISELED_RESIN_BRICKS
+        name: "#FFF275Chiseled Resin Bricks"
+        quantity: 1
+      buyPrice: 50
+      sellPrice: -1
+      slot: 30
+      page: 9
+    239:
+      type: item
+      item:
+        material: OAK_PLANKS
+        name: "#FFF275Oak Planks"
+        quantity: 1
+      buyPrice: 5
+      sellPrice: -1
+      slot: 31
+      page: 9
+    240:
+      type: item
+      item:
+        material: SPRUCE_PLANKS
+        name: "#FFF275Spruce Planks"
+        quantity: 1
+      buyPrice: 5
+      sellPrice: -1
+      slot: 32
+      page: 9
+    241:
+      type: item
+      item:
+        material: BIRCH_PLANKS
+        name: "#FFF275Birch Planks"
+        quantity: 1
+      buyPrice: 5
+      sellPrice: -1
+      slot: 33
+      page: 9
+    242:
+      type: item
+      item:
+        material: JUNGLE_PLANKS
+        name: "#FFF275Jungle Planks"
+        quantity: 1
+      buyPrice: 5
+      sellPrice: -1
+      slot: 34
+      page: 9
+    243:
+      type: item
+      item:
+        material: ACACIA_PLANKS
+        name: "#FFF275Acacia Planks"
+        quantity: 1
+      buyPrice: 5
+      sellPrice: -1
+      slot: 35
+      page: 9
+    244:
+      type: item
+      item:
+        material: DARK_OAK_PLANKS
+        name: "#FFF275Dark Oak Planks"
+        quantity: 1
+      buyPrice: 5
+      sellPrice: -1
+      slot: 9
+      page: 10
+    245:
+      type: item
+      item:
+        material: MANGROVE_PLANKS
+        name: "#FFF275Mangrove Planks"
+        quantity: 1
+      buyPrice: 5
+      sellPrice: -1
+      slot: 10
+      page: 10
+    246:
+      type: item
+      item:
+        material: CHERRY_PLANKS
+        name: "#FFF275Cherry Planks"
+        quantity: 1
+      buyPrice: 5
+      sellPrice: -1
+      slot: 11
+      page: 10
+    247:
+      type: item
+      item:
+        material: BAMBOO_PLANKS
+        name: "#FFF275Bamboo Planks"
+        quantity: 1
+      buyPrice: 5
+      sellPrice: -1
+      slot: 12
+      page: 10
+    248:
+      type: item
+      item:
+        material: BAMBOO_MOSAIC
+        name: "#FFF275Bamboo Mosaic"
+        quantity: 1
+      buyPrice: 10
+      sellPrice: -1
+      slot: 13
+      page: 10
+    249:
+      type: item
+      item:
+        material: CRIMSON_PLANKS
+        name: "#FFF275Crimson Planks"
+        quantity: 1
+      buyPrice: 5
+      sellPrice: -1
+      slot: 14
+      page: 10
+    250:
+      type: item
+      item:
+        material: WARPED_PLANKS
+        name: "#FFF275Warped Planks"
+        quantity: 1
+      buyPrice: 5
+      sellPrice: -1
+      slot: 15
+      page: 10
+    251:
+      type: item
+      item:
+        material: BAMBOO_BLOCK
+        name: "#FFF275Bamboo Block"
+        quantity: 1
+      buyPrice: 7
+      sellPrice: -1
+      slot: 16
+      page: 10
+    252:
+      type: item
+      item:
+        material: STRIPPED_BAMBOO_BLOCK
+        name: "#FFF275Stripped Bamboo Block"
+        quantity: 1
+      buyPrice: 7
+      sellPrice: -1
+      slot: 17
+      page: 10
+    253:
+      type: item
+      item:
+        material: OAK_LEAVES
+        name: "#FFF275Oak Leaves"
+        quantity: 1
+      buyPrice: 2
+      sellPrice: -1
+      slot: 18
+      page: 10
+    254:
+      type: item
+      item:
+        material: SPRUCE_LEAVES
+        name: "#FFF275Spruce Leaves"
+        quantity: 1
+      buyPrice: 2
+      sellPrice: -1
+      slot: 19
+      page: 10
+    255:
+      type: item
+      item:
+        material: BIRCH_LEAVES
+        name: "#FFF275Birch Leaves"
+        quantity: 1
+      buyPrice: 2
+      sellPrice: -1
+      slot: 20
+      page: 10
+    256:
+      type: item
+      item:
+        material: JUNGLE_LEAVES
+        name: "#FFF275Jungle Leaves"
+        quantity: 1
+      buyPrice: 2
+      sellPrice: -1
+      slot: 21
+      page: 10
+    257:
+      type: item
+      item:
+        material: ACACIA_LEAVES
+        name: "#FFF275Acacia Leaves"
+        quantity: 1
+      buyPrice: 2
+      sellPrice: -1
+      slot: 22
+      page: 10
+    258:
+      type: item
+      item:
+        material: DARK_OAK_LEAVES
+        name: "#FFF275Dark Oak Leaves"
+        quantity: 1
+      buyPrice: 2
+      sellPrice: -1
+      slot: 23
+      page: 10
+    259:
+      type: item
+      item:
+        material: CHERRY_LEAVES
+        name: "#FFF275Cherry Leaves"
+        quantity: 1
+      buyPrice: 5
+      sellPrice: -1
+      slot: 24
+      page: 10
+    260:
+      type: item
+      item:
+        material: STRIPPED_OAK_WOOD
+        name: "#FFF275Stripped Oak Wood"
+        quantity: 1
+      buyPrice: 10
+      sellPrice: -1
+      slot: 25
+      page: 10
+    261:
+      type: item
+      item:
+        material: STRIPPED_SPRUCE_WOOD
+        name: "#FFF275Stripped Spruce Wood"
+        quantity: 1
+      buyPrice: 10
+      sellPrice: -1
+      slot: 26
+      page: 10
+    262:
+      type: item
+      item:
+        material: STRIPPED_BIRCH_WOOD
+        name: "#FFF275Stripped Birch Wood"
+        quantity: 1
+      buyPrice: 10
+      sellPrice: -1
+      slot: 27
+      page: 10
+    263:
+      type: item
+      item:
+        material: STRIPPED_JUNGLE_WOOD
+        name: "#FFF275Stripped Jungle Wood"
+        quantity: 1
+      buyPrice: 10
+      sellPrice: -1
+      slot: 28
+      page: 10
+    264:
+      type: item
+      item:
+        material: STRIPPED_ACACIA_WOOD
+        name: "#FFF275Stripped Acacia Wood"
+        quantity: 1
+      buyPrice: 10
+      sellPrice: -1
+      slot: 29
+      page: 10
+    265:
+      type: item
+      item:
+        material: STRIPPED_DARK_OAK_WOOD
+        name: "#FFF275Stripped Dark Oak Wood"
+        quantity: 1
+      buyPrice: 10
+      sellPrice: -1
+      slot: 30
+      page: 10
+    266:
+      type: item
+      item:
+        material: STRIPPED_MANGROVE_WOOD
+        name: "#FFF275Stripped Mangrove Wood"
+        quantity: 1
+      buyPrice: 10
+      sellPrice: -1
+      slot: 31
+      page: 10
+    267:
+      type: item
+      item:
+        material: STRIPPED_CHERRY_WOOD
+        name: "#FFF275Stripped Cherry Wood"
+        quantity: 1
+      buyPrice: 10
+      sellPrice: -1
+      slot: 32
+      page: 10
+    268:
+      type: item
+      item:
+        material: STRIPPED_CRIMSON_HYPHAE
+        name: "#FFF275Stripped Crimson Hyphae"
+        quantity: 1
+      buyPrice: 10
+      sellPrice: -1
+      slot: 33
+      page: 10
+    269:
+      type: item
+      item:
+        material: STRIPPED_WARPED_HYPHAE
+        name: "#FFF275Stripped Warped Hyphae"
+        quantity: 1
+      buyPrice: 10
+      sellPrice: -1
+      slot: 34
+      page: 10
+    270:
+      type: item
+      item:
+        material: CHISELED_BOOKSHELF
+        name: "#FFF275Chiseled Bookshelf"
+        quantity: 1
+      buyPrice: 250
+      sellPrice: -1
+      slot: 35
+      page: 10
+    271:
+      type: item
+      item:
+        material: DECORATED_POT
+        name: "#FFF275Decorated Pot"
+        quantity: 1
+      buyPrice: 50
+      sellPrice: -1
+      slot: 9
+      page: 11
+    272:
+      type: item
+      item:
+        material: PITCHER_PLANT
+        name: "#FFF275Pitcher Plant"
+        quantity: 1
+      buyPrice: 25
+      sellPrice: -1
+      slot: 10
+      page: 11
+    273:
+      type: item
+      item:
+        material: TORCHFLOWER
+        name: "#FFF275Torchflower"
+        quantity: 1
+      buyPrice: 20
+      sellPrice: -1
+      slot: 11
+      page: 11
+    274:
+      type: item
+      item:
+        material: PINK_PETALS
+        name: "#FFF275Pink Petals"
+        quantity: 1
+      buyPrice: 10
+      sellPrice: -1
+      slot: 12
+      page: 11
+    275:
+      type: item
+      item:
+        material: SUSPICIOUS_SAND
+        name: "#FFF275Suspicious Sand"
+        quantity: 1
+      buyPrice: 25
+      sellPrice: -1
+      slot: 13
+      page: 11
+    276:
+      type: item
+      item:
+        material: SUSPICIOUS_GRAVEL
+        name: "#FFF275Suspicious Gravel"
+        quantity: 1
+      buyPrice: 25
+      sellPrice: -1
+      slot: 14
+      page: 11
+    277:
+      type: item
+      item:
+        material: CHISELED_COPPER
+        name: "#FFF275Chiseled Copper"
+        quantity: 1
+      buyPrice: 115
+      sellPrice: -1
+      slot: 15
+      page: 11
+    278:
+      type: item
+      item:
+        material: EXPOSED_CHISELED_COPPER
+        name: "#FFF275Exposed Chiseled Copper"
+        quantity: 1
+      buyPrice: 90
+      sellPrice: -1
+      slot: 16
+      page: 11
+    279:
+      type: item
+      item:
+        material: WEATHERED_CHISELED_COPPER
+        name: "#FFF275Weathered Chiseled Copper"
+        quantity: 1
+      buyPrice: 90
+      sellPrice: -1
+      slot: 17
+      page: 11
+    280:
+      type: item
+      item:
+        material: OXIDIZED_CHISELED_COPPER
+        name: "#FFF275Oxidized Chiseled Copper"
+        quantity: 1
+      buyPrice: 90
+      sellPrice: -1
+      slot: 18
+      page: 11
+    281:
+      type: item
+      item:
+        material: WAXED_CHISELED_COPPER
+        name: "#FFF275Waxed Chiseled Copper"
+        quantity: 1
+      buyPrice: 140
+      sellPrice: -1
+      slot: 19
+      page: 11
+    282:
+      type: item
+      item:
+        material: WAXED_EXPOSED_CHISELED_COPPER
+        name: "#FFF275Waxed Exposed Chiseled Copper"
+        quantity: 1
+      buyPrice: 115
+      sellPrice: -1
+      slot: 20
+      page: 11
+    283:
+      type: item
+      item:
+        material: WAXED_WEATHERED_CHISELED_COPPER
+        name: "#FFF275Waxed Weathered Chiseled Copper"
+        quantity: 1
+      buyPrice: 115
+      sellPrice: -1
+      slot: 21
+      page: 11
+    284:
+      type: item
+      item:
+        material: WAXED_OXIDIZED_CHISELED_COPPER
+        name: "#FFF275Waxed Oxidized Chiseled Copper"
+        quantity: 1
+      buyPrice: 115
+      sellPrice: -1
+      slot: 22
+      page: 11
+    285:
+      type: item
+      item:
+        material: EXPOSED_CUT_COPPER
+        name: "#FFF275Exposed Cut Copper"
+        quantity: 1
+      buyPrice: 85
+      sellPrice: -1
+      slot: 23
+      page: 11
+    286:
+      type: item
+      item:
+        material: WEATHERED_CUT_COPPER
+        name: "#FFF275Weathered Cut Copper"
+        quantity: 1
+      buyPrice: 85
+      sellPrice: -1
+      slot: 24
+      page: 11
+    287:
+      type: item
+      item:
+        material: OXIDIZED_CUT_COPPER
+        name: "#FFF275Oxidized Cut Copper"
+        quantity: 1
+      buyPrice: 85
+      sellPrice: -1
+      slot: 25
+      page: 11
+    288:
+      type: item
+      item:
+        material: WAXED_EXPOSED_CUT_COPPER
+        name: "#FFF275Waxed Exposed Cut Copper"
+        quantity: 1
+      buyPrice: 110
+      sellPrice: -1
+      slot: 26
+      page: 11
+    289:
+      type: item
+      item:
+        material: WAXED_WEATHERED_CUT_COPPER
+        name: "#FFF275Waxed Weathered Cut Copper"
+        quantity: 1
+      buyPrice: 110
+      sellPrice: -1
+      slot: 27
+      page: 11
+    290:
+      type: item
+      item:
+        material: WAXED_OXIDIZED_CUT_COPPER
+        name: "#FFF275Waxed Oxidized Cut Copper"
+        quantity: 1
+      buyPrice: 110
+      sellPrice: -1
+      slot: 28
+      page: 11
+    291:
+      type: item
+      item:
+        material: EXPOSED_COPPER_GRATE
+        name: "#FFF275Exposed Copper Grate"
+        quantity: 1
+      buyPrice: 85
+      sellPrice: -1
+      slot: 29
+      page: 11
+    292:
+      type: item
+      item:
+        material: WEATHERED_COPPER_GRATE
+        name: "#FFF275Weathered Copper Grate"
+        quantity: 1
+      buyPrice: 85
+      sellPrice: -1
+      slot: 30
+      page: 11
+    293:
+      type: item
+      item:
+        material: OXIDIZED_COPPER_GRATE
+        name: "#FFF275Oxidized Copper Grate"
+        quantity: 1
+      buyPrice: 85
+      sellPrice: -1
+      slot: 31
+      page: 11
+    294:
+      type: item
+      item:
+        material: WAXED_COPPER_GRATE
+        name: "#FFF275Waxed Copper Grate"
+        quantity: 1
+      buyPrice: 135
+      sellPrice: -1
+      slot: 32
+      page: 11
+    295:
+      type: item
+      item:
+        material: WAXED_EXPOSED_COPPER_GRATE
+        name: "#FFF275Waxed Exposed Copper Grate"
+        quantity: 1
+      buyPrice: 110
+      sellPrice: -1
+      slot: 33
+      page: 11
+    296:
+      type: item
+      item:
+        material: WAXED_WEATHERED_COPPER_GRATE
+        name: "#FFF275Waxed Weathered Copper Grate"
+        quantity: 1
+      buyPrice: 110
+      sellPrice: -1
+      slot: 34
+      page: 11
+    297:
+      type: item
+      item:
+        material: WAXED_OXIDIZED_COPPER_GRATE
+        name: "#FFF275Waxed Oxidized Copper Grate"
+        quantity: 1
+      buyPrice: 110
+      sellPrice: -1
+      slot: 35
+      page: 11
+    298:
+      type: item
+      item:
+        material: EXPOSED_COPPER_BULB
+        name: "#FFF275Exposed Copper Bulb"
+        quantity: 1
+      buyPrice: 85
+      sellPrice: -1
+      slot: 9
+      page: 12
+    299:
+      type: item
+      item:
+        material: WEATHERED_COPPER_BULB
+        name: "#FFF275Weathered Copper Bulb"
+        quantity: 1
+      buyPrice: 85
+      sellPrice: -1
+      slot: 10
+      page: 12
+    300:
+      type: item
+      item:
+        material: OXIDIZED_COPPER_BULB
+        name: "#FFF275Oxidized Copper Bulb"
+        quantity: 1
+      buyPrice: 85
+      sellPrice: -1
+      slot: 11
+      page: 12
+    301:
+      type: item
+      item:
+        material: COPPER_BULB
+        name: "#FFF275Copper Bulb"
+        quantity: 1
+      buyPrice: 110
+      sellPrice: -1
+      slot: 12
+      page: 12
+    302:
+      type: item
+      item:
+        material: WAXED_COPPER_BULB
+        name: "#FFF275Waxed Copper Bulb"
+        quantity: 1
+      buyPrice: 135
+      sellPrice: -1
+      slot: 13
+      page: 12
+    303:
+      type: item
+      item:
+        material: WAXED_EXPOSED_COPPER_BULB
+        name: "#FFF275Waxed Exposed Copper Bulb"
+        quantity: 1
+      buyPrice: 110
+      sellPrice: -1
+      slot: 14
+      page: 12
+    304:
+      type: item
+      item:
+        material: WAXED_WEATHERED_COPPER_BULB
+        name: "#FFF275Waxed Weathered Copper Bulb"
+        quantity: 1
+      buyPrice: 110
+      sellPrice: -1
+      slot: 15
+      page: 12
+    305:
+      type: item
+      item:
+        material: WAXED_OXIDIZED_COPPER_BULB
+        name: "#FFF275Waxed Oxidized Copper Bulb"
+        quantity: 1
+      buyPrice: 110
+      sellPrice: -1
+      slot: 16
+      page: 12
+    306:
+      type: item
+      item:
+        material: CRAFTER
+        name: "#FFF275Crafter"
+        quantity: 1
+      buyPrice: 750
+      sellPrice: -1
+      slot: 17
+      page: 12
+    307:
+      type: item
+      item:
+        material: COBBLED_DEEPSLATE
+        name: "#FFF275Cobbled Deepslate"
+        quantity: 1
+      buyPrice: 10
+      sellPrice: -1
+      slot: 18
+      page: 12
+    308:
+      type: dummy
+      item:
+        material: COMPARATOR
+        quantity: 1
+        glow: true
+        name: "#FFF275Filtrar Categoría"
+        lore:
+        - "&8Elige categoría"
+        - ""
+        - " #FFF275● Bloques"
+        - " &7● Farmeo"
+        - " &7● Comida"
+        - " &7● Mobs"
+        - " &7● Equipo"
+        - " &7● Redstone"
+        - " &7● Misceláneo"
+        - " &7● Tintes"
+        - " &7● Trims"
+        - " &7● Encantamientos"
+        - ""
+        - "&7▶ Click para cambiar"
+      commandsOnClick:
+        - "shop farmeo"
+      slot: 36
+      page: 1
+    309:
+      type: special
+      special: balance
+      slot: 44
+      page: 1
+    310:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 37
+      page: 1
+    311:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 38
+      page: 1
+    312:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 39
+      page: 1
+    313:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 41
+      page: 1
+    314:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 42
+      page: 1
+    315:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 43
+      page: 1
+    316:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 0
+      page: 1
+    317:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 1
+      page: 1
+    318:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 2
+      page: 1
+    319:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 3
+      page: 1
+    320:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 4
+      page: 1
+    321:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 5
+      page: 1
+    322:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 6
+      page: 1
+    323:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 7
+      page: 1
+    324:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 8
+      page: 1
+    325:
+      type: dummy
+      item:
+        material: COMPARATOR
+        quantity: 1
+        glow: true
+        name: "#FFF275Filtrar Categoría"
+        lore:
+        - "&8Elige categoría"
+        - ""
+        - " #FFF275● Bloques"
+        - " &7● Farmeo"
+        - " &7● Comida"
+        - " &7● Mobs"
+        - " &7● Equipo"
+        - " &7● Redstone"
+        - " &7● Misceláneo"
+        - " &7● Tintes"
+        - " &7● Trims"
+        - " &7● Encantamientos"
+        - ""
+        - "&7▶ Click para cambiar"
+      commandsOnClick:
+        - "shop farmeo"
+      slot: 36
+      page: 2
+    326:
+      type: special
+      special: balance
+      slot: 44
+      page: 2
+    327:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 37
+      page: 2
+    328:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 38
+      page: 2
+    329:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 39
+      page: 2
+    330:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 41
+      page: 2
+    331:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 42
+      page: 2
+    332:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 43
+      page: 2
+    333:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 0
+      page: 2
+    334:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 1
+      page: 2
+    335:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 2
+      page: 2
+    336:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 3
+      page: 2
+    337:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 4
+      page: 2
+    338:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 5
+      page: 2
+    339:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 6
+      page: 2
+    340:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 7
+      page: 2
+    341:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 8
+      page: 2
+    342:
+      type: dummy
+      item:
+        material: COMPARATOR
+        quantity: 1
+        glow: true
+        name: "#FFF275Filtrar Categoría"
+        lore:
+        - "&8Elige categoría"
+        - ""
+        - " #FFF275● Bloques"
+        - " &7● Farmeo"
+        - " &7● Comida"
+        - " &7● Mobs"
+        - " &7● Equipo"
+        - " &7● Redstone"
+        - " &7● Misceláneo"
+        - " &7● Tintes"
+        - " &7● Trims"
+        - " &7● Encantamientos"
+        - ""
+        - "&7▶ Click para cambiar"
+      commandsOnClick:
+        - "shop farmeo"
+      slot: 36
+      page: 3
+    343:
+      type: special
+      special: balance
+      slot: 44
+      page: 3
+    344:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 37
+      page: 3
+    345:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 38
+      page: 3
+    346:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 39
+      page: 3
+    347:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 41
+      page: 3
+    348:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 42
+      page: 3
+    349:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 43
+      page: 3
+    350:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 0
+      page: 3
+    351:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 1
+      page: 3
+    352:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 2
+      page: 3
+    353:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 3
+      page: 3
+    354:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 4
+      page: 3
+    355:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 5
+      page: 3
+    356:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 6
+      page: 3
+    357:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 7
+      page: 3
+    358:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 8
+      page: 3
+    359:
+      type: dummy
+      item:
+        material: COMPARATOR
+        quantity: 1
+        glow: true
+        name: "#FFF275Filtrar Categoría"
+        lore:
+        - "&8Elige categoría"
+        - ""
+        - " #FFF275● Bloques"
+        - " &7● Farmeo"
+        - " &7● Comida"
+        - " &7● Mobs"
+        - " &7● Equipo"
+        - " &7● Redstone"
+        - " &7● Misceláneo"
+        - " &7● Tintes"
+        - " &7● Trims"
+        - " &7● Encantamientos"
+        - ""
+        - "&7▶ Click para cambiar"
+      commandsOnClick:
+        - "shop farmeo"
+      slot: 36
+      page: 4
+    360:
+      type: special
+      special: balance
+      slot: 44
+      page: 4
+    361:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 37
+      page: 4
+    362:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 38
+      page: 4
+    363:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 39
+      page: 4
+    364:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 41
+      page: 4
+    365:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 42
+      page: 4
+    366:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 43
+      page: 4
+    367:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 0
+      page: 4
+    368:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 1
+      page: 4
+    369:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 2
+      page: 4
+    370:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 3
+      page: 4
+    371:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 4
+      page: 4
+    372:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 5
+      page: 4
+    373:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 6
+      page: 4
+    374:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 7
+      page: 4
+    375:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 8
+      page: 4
+    376:
+      type: dummy
+      item:
+        material: COMPARATOR
+        quantity: 1
+        glow: true
+        name: "#FFF275Filtrar Categoría"
+        lore:
+        - "&8Elige categoría"
+        - ""
+        - " #FFF275● Bloques"
+        - " &7● Farmeo"
+        - " &7● Comida"
+        - " &7● Mobs"
+        - " &7● Equipo"
+        - " &7● Redstone"
+        - " &7● Misceláneo"
+        - " &7● Tintes"
+        - " &7● Trims"
+        - " &7● Encantamientos"
+        - ""
+        - "&7▶ Click para cambiar"
+      commandsOnClick:
+        - "shop farmeo"
+      slot: 36
+      page: 5
+    377:
+      type: special
+      special: balance
+      slot: 44
+      page: 5
+    378:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 37
+      page: 5
+    379:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 38
+      page: 5
+    380:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 39
+      page: 5
+    381:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 41
+      page: 5
+    382:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 42
+      page: 5
+    383:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 43
+      page: 5
+    384:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 0
+      page: 5
+    385:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 1
+      page: 5
+    386:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 2
+      page: 5
+    387:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 3
+      page: 5
+    388:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 4
+      page: 5
+    389:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 5
+      page: 5
+    390:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 6
+      page: 5
+    391:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 7
+      page: 5
+    392:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 8
+      page: 5
+    393:
+      type: dummy
+      item:
+        material: COMPARATOR
+        quantity: 1
+        glow: true
+        name: "#FFF275Filtrar Categoría"
+        lore:
+        - "&8Elige categoría"
+        - ""
+        - " #FFF275● Bloques"
+        - " &7● Farmeo"
+        - " &7● Comida"
+        - " &7● Mobs"
+        - " &7● Equipo"
+        - " &7● Redstone"
+        - " &7● Misceláneo"
+        - " &7● Tintes"
+        - " &7● Trims"
+        - " &7● Encantamientos"
+        - ""
+        - "&7▶ Click para cambiar"
+      commandsOnClick:
+        - "shop farmeo"
+      slot: 36
+      page: 6
+    394:
+      type: special
+      special: balance
+      slot: 44
+      page: 6
+    395:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 37
+      page: 6
+    396:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 38
+      page: 6
+    397:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 39
+      page: 6
+    398:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 41
+      page: 6
+    399:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 42
+      page: 6
+    400:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 43
+      page: 6
+    401:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 0
+      page: 6
+    402:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 1
+      page: 6
+    403:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 2
+      page: 6
+    404:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 3
+      page: 6
+    405:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 4
+      page: 6
+    406:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 5
+      page: 6
+    407:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 6
+      page: 6
+    408:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 7
+      page: 6
+    409:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 8
+      page: 6
+    410:
+      type: dummy
+      item:
+        material: COMPARATOR
+        quantity: 1
+        glow: true
+        name: "#FFF275Filtrar Categoría"
+        lore:
+        - "&8Elige categoría"
+        - ""
+        - " #FFF275● Bloques"
+        - " &7● Farmeo"
+        - " &7● Comida"
+        - " &7● Mobs"
+        - " &7● Equipo"
+        - " &7● Redstone"
+        - " &7● Misceláneo"
+        - " &7● Tintes"
+        - " &7● Trims"
+        - " &7● Encantamientos"
+        - ""
+        - "&7▶ Click para cambiar"
+      commandsOnClick:
+        - "shop farmeo"
+      slot: 36
+      page: 7
+    411:
+      type: special
+      special: balance
+      slot: 44
+      page: 7
+    412:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 37
+      page: 7
+    413:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 38
+      page: 7
+    414:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 39
+      page: 7
+    415:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 41
+      page: 7
+    416:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 42
+      page: 7
+    417:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 43
+      page: 7
+    418:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 0
+      page: 7
+    419:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 1
+      page: 7
+    420:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 2
+      page: 7
+    421:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 3
+      page: 7
+    422:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 4
+      page: 7
+    423:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 5
+      page: 7
+    424:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 6
+      page: 7
+    425:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 7
+      page: 7
+    426:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 8
+      page: 7
+    427:
+      type: dummy
+      item:
+        material: COMPARATOR
+        quantity: 1
+        glow: true
+        name: "#FFF275Filtrar Categoría"
+        lore:
+        - "&8Elige categoría"
+        - ""
+        - " #FFF275● Bloques"
+        - " &7● Farmeo"
+        - " &7● Comida"
+        - " &7● Mobs"
+        - " &7● Equipo"
+        - " &7● Redstone"
+        - " &7● Misceláneo"
+        - " &7● Tintes"
+        - " &7● Trims"
+        - " &7● Encantamientos"
+        - ""
+        - "&7▶ Click para cambiar"
+      commandsOnClick:
+        - "shop farmeo"
+      slot: 36
+      page: 8
+    428:
+      type: special
+      special: balance
+      slot: 44
+      page: 8
+    429:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 37
+      page: 8
+    430:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 38
+      page: 8
+    431:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 39
+      page: 8
+    432:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 41
+      page: 8
+    433:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 42
+      page: 8
+    434:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 43
+      page: 8
+    435:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 0
+      page: 8
+    436:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 1
+      page: 8
+    437:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 2
+      page: 8
+    438:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 3
+      page: 8
+    439:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 4
+      page: 8
+    440:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 5
+      page: 8
+    441:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 6
+      page: 8
+    442:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 7
+      page: 8
+    443:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 8
+      page: 8
+    444:
+      type: dummy
+      item:
+        material: COMPARATOR
+        quantity: 1
+        glow: true
+        name: "#FFF275Filtrar Categoría"
+        lore:
+        - "&8Elige categoría"
+        - ""
+        - " #FFF275● Bloques"
+        - " &7● Farmeo"
+        - " &7● Comida"
+        - " &7● Mobs"
+        - " &7● Equipo"
+        - " &7● Redstone"
+        - " &7● Misceláneo"
+        - " &7● Tintes"
+        - " &7● Trims"
+        - " &7● Encantamientos"
+        - ""
+        - "&7▶ Click para cambiar"
+      commandsOnClick:
+        - "shop farmeo"
+      slot: 36
+      page: 9
+    445:
+      type: special
+      special: balance
+      slot: 44
+      page: 9
+    446:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 37
+      page: 9
+    447:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 38
+      page: 9
+    448:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 39
+      page: 9
+    449:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 41
+      page: 9
+    450:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 42
+      page: 9
+    451:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 43
+      page: 9
+    452:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 0
+      page: 9
+    453:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 1
+      page: 9
+    454:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 2
+      page: 9
+    455:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 3
+      page: 9
+    456:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 4
+      page: 9
+    457:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 5
+      page: 9
+    458:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 6
+      page: 9
+    459:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 7
+      page: 9
+    460:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 8
+      page: 9
+    461:
+      type: dummy
+      item:
+        material: COMPARATOR
+        quantity: 1
+        glow: true
+        name: "#FFF275Filtrar Categoría"
+        lore:
+        - "&8Elige categoría"
+        - ""
+        - " #FFF275● Bloques"
+        - " &7● Farmeo"
+        - " &7● Comida"
+        - " &7● Mobs"
+        - " &7● Equipo"
+        - " &7● Redstone"
+        - " &7● Misceláneo"
+        - " &7● Tintes"
+        - " &7● Trims"
+        - " &7● Encantamientos"
+        - ""
+        - "&7▶ Click para cambiar"
+      commandsOnClick:
+        - "shop farmeo"
+      slot: 36
+      page: 10
+    462:
+      type: special
+      special: balance
+      slot: 44
+      page: 10
+    463:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 37
+      page: 10
+    464:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 38
+      page: 10
+    465:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 39
+      page: 10
+    466:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 41
+      page: 10
+    467:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 42
+      page: 10
+    468:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 43
+      page: 10
+    469:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 0
+      page: 10
+    470:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 1
+      page: 10
+    471:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 2
+      page: 10
+    472:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 3
+      page: 10
+    473:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 4
+      page: 10
+    474:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 5
+      page: 10
+    475:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 6
+      page: 10
+    476:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 7
+      page: 10
+    477:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 8
+      page: 10
+    478:
+      type: dummy
+      item:
+        material: COMPARATOR
+        quantity: 1
+        glow: true
+        name: "#FFF275Filtrar Categoría"
+        lore:
+        - "&8Elige categoría"
+        - ""
+        - " #FFF275● Bloques"
+        - " &7● Farmeo"
+        - " &7● Comida"
+        - " &7● Mobs"
+        - " &7● Equipo"
+        - " &7● Redstone"
+        - " &7● Misceláneo"
+        - " &7● Tintes"
+        - " &7● Trims"
+        - " &7● Encantamientos"
+        - ""
+        - "&7▶ Click para cambiar"
+      commandsOnClick:
+        - "shop farmeo"
+      slot: 36
+      page: 11
+    479:
+      type: special
+      special: balance
+      slot: 44
+      page: 11
+    480:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 37
+      page: 11
+    481:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 38
+      page: 11
+    482:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 39
+      page: 11
+    483:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 41
+      page: 11
+    484:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 42
+      page: 11
+    485:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 43
+      page: 11
+    486:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 0
+      page: 11
+    487:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 1
+      page: 11
+    488:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 2
+      page: 11
+    489:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 3
+      page: 11
+    490:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 4
+      page: 11
+    491:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 5
+      page: 11
+    492:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 6
+      page: 11
+    493:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 7
+      page: 11
+    494:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 8
+      page: 11
+    495:
+      type: dummy
+      item:
+        material: COMPARATOR
+        quantity: 1
+        glow: true
+        name: "#FFF275Filtrar Categoría"
+        lore:
+        - "&8Elige categoría"
+        - ""
+        - " #FFF275● Bloques"
+        - " &7● Farmeo"
+        - " &7● Comida"
+        - " &7● Mobs"
+        - " &7● Equipo"
+        - " &7● Redstone"
+        - " &7● Misceláneo"
+        - " &7● Tintes"
+        - " &7● Trims"
+        - " &7● Encantamientos"
+        - ""
+        - "&7▶ Click para cambiar"
+      commandsOnClick:
+        - "shop farmeo"
+      slot: 36
+      page: 12
+    496:
+      type: special
+      special: balance
+      slot: 44
+      page: 12
+    497:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 37
+      page: 12
+    498:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 38
+      page: 12
+    499:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 39
+      page: 12
+    500:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 41
+      page: 12
+    501:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 42
+      page: 12
+    502:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 43
+      page: 12
+    503:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 0
+      page: 12
+    504:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 1
+      page: 12
+    505:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 2
+      page: 12
+    506:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 3
+      page: 12
+    507:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 4
+      page: 12
+    508:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 5
+      page: 12
+    509:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 6
+      page: 12
+    510:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 7
+      page: 12
+    511:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 8
+      page: 12

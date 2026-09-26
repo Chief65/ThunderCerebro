@@ -1,0 +1,156 @@
+# ===== ACÓLITO DEL SANTUARIO (MOB COMÚN) =====
+AcolitoSantuario:
+  Type: PIGLIN
+  Display: '&cLvl 4 &8| &fɢᴜᴀʀᴅɪᴀ ᴘɪɢʟɪɴ &8| <#ED1313><caster.hp{r=0}><&heart>'
+  Health: 24
+  Damage: 22
+  Equipment:
+    - GOLDEN_SWORD HAND
+    - IRON_CHESTPLATE CHEST
+  Options:
+    MovementSpeed: 0.24
+    PreventOtherDrops: true
+    LeashRange: 14
+    FollowRange: 10
+    Despawn: false
+    ReturnHome: true
+    Silent: false
+  AIGoalSelectors:
+    - 0 clear
+    - 1 meleeattack
+    - 2 randomstroll
+    - 3 lookatplayers
+    - 4 float
+  AITargetSelectors:
+    - 0 clear
+    - 1 players
+  Drops:
+    - GOLD_NUGGET 3-8 1
+    - GOLD_INGOT 1-2 0.3
+    - EXPERIENCE_BOTTLE 1-3 0.7
+  Skills:
+    ####### VISUAL #######
+    - skill{s=SonidoKill} @trigger ~onDeath
+    - setname{n=<caster.name>;delay=2} @self ~onDamaged
+    - particles{particle=SCULK_SOUL;amount=60;speed=0.1;hSpread=0.6;vSpread=0.6} @self ~onDeath
+    ####### RECOMPENSAS #######
+    - actionmessage{m="<#34B0F3>+4 <white>Almas <#34B0F3>🔥 &8| <#59E91F>+<#59E91F>&l$&r<#59E91F>45"} @trigger ~onDeath 
+    - command{c="points give <trigger.name> 4 -s";sender=console} @self ~onDeath  
+    - command{c="economy give <trigger.name> 45";sender=console} @self ~onDeath   
+    - command{c="si give fragmentosuper 1 <trigger.name> -s";sender=console} @self ~onDeath 0.02 
+    - command{c="si give fragmentorara 1 <trigger.name> -s";sender=console} @self ~onDeath 0.02 
+    - command{c="si give fragmentogadget 1 <trigger.name> -s";sender=console} @self ~onDeath 0.02 
+    - command{c="si give fragmentomitica 1 <trigger.name> -s";sender=console} @self ~onDeath 0.003 
+    ####### EXTRAS #######
+    # Aura de debilitamiento al 50% HP — el jugador nota que algo cambia
+    - potion{type=WEAKNESS;duration=80;level=1} @target ~onDamaged ?health{h=<48}
+    - skill{s=DropFragmentoLimitedGeneral} @self ~onDeath 0.001
+    - skill{s=BoostAlmas} @self ~onDeath 
+    - setvariable{var=almas;value=4;scope=CASTER;type=INTEGER} @self ~onSpawn
+    
+    
+# ===== CENTINELA ETERNO (MOB PESADO) =====
+CentinelaEterno:
+  Type: PIGLIN_BRUTE
+  Display: '&4Lvl 5 &8| &fɢʟᴀᴅɪᴀᴅᴏʀ ᴘɪɢʟɪɴ &8| <#ED1313><caster.hp{r=0}><&heart>'
+  Health: 45
+  Damage: 30
+  Equipment:
+    - DIAMOND_AXE HAND
+    - CHAINMAIL_CHESTPLATE CHEST
+  Options:
+    Scale: 1.3
+    MovementSpeed: 0.21
+    PreventOtherDrops: true
+    LeashRange: 18
+    FollowRange: 10
+    Despawn: false
+    ReturnHome: true
+    Silent: false
+  AIGoalSelectors:
+    - 0 clear
+    - 1 meleeattack
+    - 2 randomstroll
+    - 3 lookatplayers
+  AITargetSelectors:
+    - 0 clear
+    - 1 players
+  Drops:
+    - IRON_INGOT 2-4 1
+    - GOLD_INGOT 1-2 0.5
+    - WITHER_SKELETON_SKULL 1 0.05
+  Skills:
+    ####### VISUAL #######
+    - skill{s=SonidoKill} @trigger ~onDeath
+    - setname{n=<caster.name>;delay=2} @self ~onDamaged
+    - particles{particle=SCULK_SOUL;amount=120;speed=0.15;hSpread=1.5;vSpread=1.5} @self ~onDeath
+    ####### RECOMPENSAS #######
+    - actionmessage{m="<#34B0F3>+8 <white>Almas <#34B0F3>🔥 &8| <#59E91F>+<#59E91F>&l$&r<#59E91F>100"} @trigger ~onDeath  
+    - command{c="points give <trigger.name> 8 -s";sender=console} @self ~onDeath  
+    - command{c="economy give <trigger.name> 100";sender=console} @self ~onDeath  
+    - command{c="si give fragmentosuper 1 <trigger.name> -s";sender=console} @self ~onDeath 0.02 
+    - command{c="si give fragmentorara 1 <trigger.name> -s";sender=console} @self ~onDeath 0.02 
+    - command{c="si give fragmentogadget 1 <trigger.name> -s";sender=console} @self ~onDeath 0.02 
+    - command{c="si give fragmentomitica 1 <trigger.name> -s";sender=console} @self ~onDeath 0.003 
+    ####### EXTRAS #######
+    # Fase 1 — Al 70% HP golpe de tierra (partículas + knockback visual)
+    - particles{particle=BLOCK_CRACK;material=NETHERRACK;amount=40;speed=0.3;hSpread=1.2;vSpread=0.3} @self ~onDamaged ?health{h=<154}
+    - potion{type=SLOWNESS;duration=80;level=2} @target ~onDamaged ?health{h=<154}
+    # Fase 2 — Al 40% HP el Centinela invoca un Acólito de refuerzo
+    - skill{s=InvocarRefuerzo} @self ~onDamaged ?health{h=<88}
+    # Fase 2 — Se fortalece notablemente
+    - potion{type=STRENGTH;duration=200;level=2} @self ~onDamaged ?health{h=<88}
+    - particles{particle=FLAME;amount=80;speed=0.2;hSpread=1.0;vSpread=1.0} @self ~onDamaged ?health{h=<88}
+    # Muerte — muerte épica con título al jugador
+    - message{m="&4El Centinela Eterno ha caído..."} @trigger ~onDeath
+    - skill{s=DropFragmentoLimitedGeneral} @self ~onDeath 0.001
+    - skill{s=BoostAlmas} @self ~onDeath 
+    - setvariable{var=almas;value=8;scope=CASTER;type=INTEGER} @self ~onSpawn
+    
+# ===== ACÓLITO DEL SANTUARIO (MOB COMÚN) =====
+BestiaPiglin:
+  Type: HOGLIN
+  Display: '&cLvl 4 &8| &fʙᴇꜱᴛɪᴀ ʜᴏɢʟɪɴ &8| <#ED1313><caster.hp{r=0}><&heart>'
+  Health: 24
+  Damage: 22
+  Options:
+    ImmuneToZombification: true
+    Scale: 0.8
+    MovementSpeed: 0.3
+    PreventOtherDrops: true
+    LeashRange: 14
+    FollowRange: 10
+    Despawn: false
+    ReturnHome: true
+    Silent: false
+  AIGoalSelectors:
+    - 0 clear
+    - 1 meleeattack
+    - 2 randomstroll
+    - 3 lookatplayers
+    - 4 float
+  AITargetSelectors:
+    - 0 clear
+    - 1 players
+  Drops:
+    - GOLD_NUGGET 3-8 1
+    - GOLD_INGOT 1-2 0.3
+    - EXPERIENCE_BOTTLE 1-3 0.7
+  Skills:
+    ####### VISUAL #######
+    - skill{s=SonidoKill} @trigger ~onDeath
+    - setname{n=<caster.name>;delay=2} @self ~onDamaged
+    - particles{particle=SCULK_SOUL;amount=60;speed=0.1;hSpread=0.6;vSpread=0.6} @self ~onDeath
+    ####### RECOMPENSAS #######
+    - actionmessage{m="<#34B0F3>+4 <white>Almas <#34B0F3>🔥 &8| <#59E91F>+<#59E91F>&l$&r<#59E91F>45"} @trigger ~onDeath  
+    - command{c="points give <trigger.name> 4 -s";sender=console} @self ~onDeath  
+    - command{c="economy give <trigger.name> 45";sender=console} @self ~onDeath    
+    - command{c="si give fragmentosuper 1 <trigger.name> -s";sender=console} @self ~onDeath 0.02 
+    - command{c="si give fragmentorara 1 <trigger.name> -s";sender=console} @self ~onDeath 0.02 
+    - command{c="si give fragmentogadget 1 <trigger.name> -s";sender=console} @self ~onDeath 0.02 
+    - command{c="si give fragmentomitica 1 <trigger.name> -s";sender=console} @self ~onDeath 0.003 
+    ####### EXTRAS #######
+    # Aura de debilitamiento al 50% HP — el jugador nota que algo cambia
+    - skill{s=DropFragmentoLimitedGeneral} @self ~onDeath 0.001
+    - skill{s=BoostAlmas} @self ~onDeath 
+    - setvariable{var=almas;value=4;scope=CASTER;type=INTEGER} @self ~onSpawn

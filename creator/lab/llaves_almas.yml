@@ -1,0 +1,208 @@
+llaves_almas:
+  name: "&0&l|&r &0Mercado ▶ &8Llaves &8(#34B0F3🔥&8)"
+  economy: almas
+  size: 45
+  fillItem:
+    material: AIR
+    name: " "
+  buttons:
+    goBack:
+      slot: -1
+    previousPage:
+      slot: -1
+    nextPage:
+      slot: -1
+  items:
+    1:
+      type: command
+      item:
+        material: TRIPWIRE_HOOK
+        name: '#FFF275x1 Llave Super'
+        glow: true
+        quantity: 1
+      commands:
+        - "excellentcrates key give %PLAYER% vote 1 -s"
+      buyPrice: 100
+      slot: 11
+    2:
+      type: command
+      item:
+        material: TRIPWIRE_HOOK
+        name: '#FFF275x1 Llave Rara'
+        glow: true
+        quantity: 1
+      commands:
+        - "excellentcrates key give %PLAYER% rara 1 -s"
+      buyPrice: 400
+      slot: 12
+    3:
+      type: command
+      item:
+        material: TRIPWIRE_HOOK
+        name: '#FFF275x1 Llave Gadgets'
+        glow: true
+        quantity: 1
+      commands:
+        - "excellentcrates key give %PLAYER% gadgets 1 -s"
+      buyPrice: 600
+      slot: 13
+    4:
+      type: command
+      item:
+        material: TRIAL_KEY
+        name: '#FFF275x1 Llave Mitica'
+        glow: true
+        quantity: 1
+      commands:
+        - "excellentcrates key give %PLAYER% mitica 1 -s"
+      buyPrice: 3000
+      slot: 14
+    5:
+      type: command
+      item:
+        material: OMINOUS_TRIAL_KEY
+        name: '#FFF275x1 Llave Limited'
+        glow: true
+        quantity: 1
+      commands:
+        - "excellentcrates key give %PLAYER% limited 1 -s"
+      buyPrice: 10000
+      slot: 15
+    6:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 0
+    7:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 1
+    8:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 2
+    9:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 3
+    10:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 4
+    11:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 5
+    12:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 6
+    13:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 7
+    14:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 8
+    15:
+      type: dummy
+      item:
+        material: COMPARATOR
+        quantity: 1
+        glow: true
+        name: "#FFF275Filtrar Categoría"
+        lore:
+          - "&8Elige categoría"
+          - ""
+          - " &7● Spawners"
+          - " #FFF275● Llaves"
+          - " &7● Protecciones"
+          - ""
+          - "&7▶ Click para cambiar"
+      commandsOnClick:
+        - "shop protecciones_almas"
+      slot: 36
+    16:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 37
+    17:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 38
+    18:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 39
+    19:
+      type: dummy
+      item:
+        material: DARK_OAK_DOOR
+        quantity: 1
+        name: "&cVolver al Menú"
+        lore:
+          - "&7Regresar a la selección de almas"
+      commandsOnClick:
+        - "dm open mercado_almas"
+      slot: 40
+    20:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 41
+    21:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 42
+    22:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 43
+    23:
+      type: special
+      special: balance
+      slot: 44

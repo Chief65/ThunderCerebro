@@ -1,0 +1,99 @@
+ReyForja:
+  Type: PIGLIN_BRUTE
+  Display: '&cLvl 8 &8| &4ᴇʟ ꜱᴇñᴏʀ ᴅᴇ ʟᴀ ꜰᴏʀᴊᴀ &8| <#ED1313><caster.hp{r=0}><&heart>'
+  Health: 2500
+  Damage: 35
+  DamageModifiers:
+  - PROJECTILE 0
+  - FALL 0
+  - BLOCK_EXPLOSION 0
+  - ENTITY_EXPLOSION 0
+  Options:
+    Scale: 2
+    MovementSpeed: 0.4
+    PreventOtherDrops: true
+    Despawn: false
+    ReturnHome: true
+    LeashRange: 30
+    KnockbackResistance: 0.8
+    Glowing: true
+    PreventSunburn: true
+    PreventZombification: true
+  BossBar:
+    Enabled: true
+    Title: '&8┖&f☠&8┚ &4Hefesto &8| &fᴇʟ ꜱᴇñᴏʀ ᴅᴇ ʟᴀ ꜰᴏʀᴊᴀ'
+    Range: 50
+    Color: WHITE
+    Style: SEGMENTED_10
+  Equipment:
+    - NETHERITE_PICKAXE HAND
+    - NETHERITE_HELMET HEAD
+    - NETHERITE_BOOTS FEET
+    - NETHERITE_LEGGINGS LEGS
+  AIGoalSelectors:
+    - 0 clear
+    - 1 meleeattack
+    - 2 randomstroll
+    - 3 lookatplayers
+    - 4 float
+  AITargetSelectors:
+    - 0 clear
+    - 1 players
+  DropOptions:
+    DropMethod: FANCY
+    ShowDeathChatMessage: false
+    ShowDeathHologram: false
+    PerPlayerDrops: true
+    ClientSideDrops: true
+    Lootsplosion: false
+    HologramItemNames: true
+    ItemGlowByDefault: true
+    ItemBeamByDefault: false
+    ItemVFXByDefault: false
+    ItemVFX:
+      Material: STONE
+      Model: 0
+    RequiredDamagePercent: 0.1
+    HologramTimeout: 6000
+    ChatMessage:
+    - '===================================='
+    - 'BOSS DEFEATED!'
+    - ''
+    - ''
+    - '1st Place »<#ffe259> <1.name> - <1.damage>'
+    - '2nd Place »<#D1FFFF> <2.name> - <2.damage>'
+    - '3rd Place »<#D1FFFF> <3.name> - <3.damage>'
+    - '4th Place »<#E57A00> <4.name> - <4.damage>'
+    - '5th Place »<#E57A00> <5.name> - <5.damage>'
+    - ''
+    - 'Your rank: #<player.rank> - <player.damage> (<pity> Pity)'
+    - '===================================='
+  Drops:
+    - BONE 2-4 1
+    - DIAMOND 1 0.1
+  Skills:
+    - disengage @trigger ~onAttack 
+
+    - skill{s=SaltoMinero} @Trigger ~onDamaged
+    - skill{s=AuraFuego} @self ~onTimer:10
+    - skill{s=fireball_barrage} @self ~onTimer:400
+    - skill{s=hurricane_wave} @self ~onTimer:200
+
+    - effect:blockmask{m=magma_block;r=2;d=20} @PIR{r=30} ~onTimer:5
+    - particles{particle=FLAME;amount=40;speed=0.1;hSpread=1.5;vSpread=1.5} @self ~onTimer:5
+
+    - skill{s=SonidoKill} @trigger ~onDeath
+    - setname{n=<caster.name>;delay=2} @self ~onDamaged
+    - particles{particle=SCULK_SOUL;amount=60;speed=0.1;hSpread=0.6;vSpread=0.6} @self ~onDeath
+    ####### RECOMPENSAS #######
+    - actionmessage{m="<#34B0F3>+40 <white>Almas <#34B0F3>🔥 &8| <#59E91F>+<#59E91F>&l$&r<#59E91F>1200"} @trigger ~onDeath  
+    - command{c="points give <trigger.name> 40 -s";sender=console} @self ~onDeath  
+    - command{c="economy give <trigger.name> 1200";sender=console} @self ~onDeath   
+    - command{c="si give fragmentosuper 1 <trigger.name> -s";sender=console} @self ~onDeath 0.02 
+    - command{c="si give fragmentorara 1 <trigger.name> -s";sender=console} @self ~onDeath 0.02 
+    - command{c="si give fragmentogadget 1 <trigger.name> -s";sender=console} @self ~onDeath 0.02 
+    - command{c="si give fragmentomitica 1 <trigger.name> -s";sender=console} @self ~onDeath 0.003 
+    ####### EXTRAS #######
+    - skill{s=DropFragmentoLimitedGeneral} @self ~onDeath 0.001
+    - skill{s=BoostAlmas} @self ~onDeath 
+    - setvariable{var=almas;value=40;scope=CASTER;type=INTEGER} @self ~onSpawn

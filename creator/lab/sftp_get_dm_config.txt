@@ -1,0 +1,2 @@
+get plugins/DeluxeMenus/config.yml creator/lab/deluxemenus_config.yml
+bye

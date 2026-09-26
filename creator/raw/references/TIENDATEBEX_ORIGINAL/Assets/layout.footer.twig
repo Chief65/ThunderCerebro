@@ -1,0 +1,395 @@
+<input type="text" id="ipServer" value="{{ config("server-ip") }}">
+
+<style>
+  .tz-footer {
+    background: hsl(220, 18%, 9%);
+    border-top: 1px solid rgba(255,255,255,0.07);
+    padding: 36px 24px 20px;
+    width: 100%;
+    margin-top: 60px;
+  }
+
+  .tz-footer__inner {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .tz-footer__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 24px;
+  }
+
+  .tz-footer__col {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    flex: 1;
+    min-width: 180px;
+  }
+
+  .tz-footer__label {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.3);
+  }
+
+  /* Marca */
+  .tz-footer__brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .tz-footer__brand img {
+    width: 36px;
+    height: 36px;
+    border-radius: 8px;
+    display: block;
+    object-fit: contain;
+  }
+  .tz-footer__brand-text {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+  .tz-footer__brand-name {
+    font-size: 14px;
+    font-weight: 800;
+    color: #ffffff;
+    letter-spacing: .5px;
+  }
+  .tz-footer__brand-tag {
+    font-size: 12px;
+    color: rgba(255,255,255,0.4);
+  }
+
+  /* Copyright debajo del logo */
+  .tz-footer__brand-copyright {
+    font-size: 11px;
+    color: rgba(255,255,255,0.25);
+    line-height: 1.6;
+    margin-top: 4px;
+  }
+  .tz-footer__brand-copyright p {
+    margin: 0;
+  }
+
+  /* Bloque IP + puerto */
+  .tz-footer__server-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .tz-footer__server-ip {
+    font-size: 13px;
+    font-weight: 700;
+    color: rgba(255,255,255,0.75);
+  }
+  .tz-footer__server-port {
+    font-size: 11px;
+    color: rgba(255,255,255,0.4);
+  }
+
+  /* Botón copiar → solo texto, sin color */
+  .tz-footer__copy-btn {
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+    font-size: 11px;
+    color: rgba(255,255,255,0.35);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    transition: color 0.15s;
+  }
+  .tz-footer__copy-btn:hover {
+    color: rgba(255,255,255,0.7);
+  }
+  .tz-footer__copy-btn.copied {
+    color: rgba(74, 222, 128, 0.7);
+    text-decoration: none;
+  }
+
+  /* Soporte → solo texto interactivo */
+  .tz-footer__support-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 13px;
+    font-weight: 500;
+    color: rgba(255,255,255,0.55);
+    text-decoration: none;
+    transition: color 0.15s;
+    width: fit-content;
+  }
+  .tz-footer__support-link i {
+    font-size: 15px;
+    color: rgba(255,255,255,0.35);
+  }
+  .tz-footer__support-link:hover {
+    color: rgba(255,255,255,0.9);
+  }
+  .tz-footer__support-link:hover i {
+    color: rgba(255,255,255,0.6);
+  }
+  .tz-footer__support-sub {
+    font-size: 11px;
+    color: rgba(255,255,255,0.35);
+  }
+
+  /* Redes sociales — sin cambios */
+  .tz-footer__socials {
+    display: flex;
+    gap: 8px;
+  }
+  .tz-footer__socials a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 8px;
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.08);
+    color: rgba(255,255,255,0.5);
+    font-size: 15px;
+    text-decoration: none;
+    transition: color 0.15s, background 0.15s, border-color 0.15s;
+  }
+  .tz-footer__socials a:hover {
+    color: #facc15;
+    background: rgba(250,204,21,0.06);
+    border-color: rgba(250,204,21,0.25);
+  }
+
+  /* Ocultar footer original de Tebex */
+  tebex-footer {
+    display: none !important;
+  }
+
+  /* Bloque legal Tebex — al final */
+  .tz-footer__legal {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 24px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255,255,255,0.06);
+  }
+  .tz-footer__legal-logo {
+    flex-shrink: 0;
+    padding-right: 8px;
+  }
+  .tz-footer__legal-logo svg path {
+    fill: rgba(255,255,255,0.25);
+  }
+  .tz-footer__legal-text {
+    flex: 1 1 280px;
+    font-size: 11px;
+    line-height: 1.5;
+    color: rgba(255,255,255,0.35);
+  }
+  .tz-footer__legal-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px 16px;
+    flex-shrink: 0;
+  }
+  .tz-footer__legal-links a {
+    font-size: 11px;
+    color: rgba(255,255,255,0.35);
+    text-decoration: underline;
+    transition: color 0.15s;
+  }
+  .tz-footer__legal-links a:hover { color: rgba(255,255,255,0.7); }
+
+  .tz-footer__designed {
+    margin-top: 8px;
+  }
+  .tz-footer__designed img {
+    height: 18px;
+    display: block;
+    opacity: 0.6;
+    transition: opacity 0.15s;
+  }
+  .tz-footer__designed:hover img { opacity: 1; }
+
+  @media (max-width: 700px) {
+    .tz-footer__top { flex-direction: column; gap: 20px; }
+    .tz-footer__col { min-width: 0; }
+    .tz-footer__legal-logo { display: none; }
+  }
+</style>
+
+<div class="triplezone-wrapper" style="max-width:none;width:100%;">
+    <footer class="tz-footer">
+        <div class="tz-footer__inner">
+
+            <!-- ═══ FILA SUPERIOR: marca · servidor · soporte · redes ═══ -->
+            <div class="tz-footer__top">
+
+                <!-- Marca con logo + copyright debajo -->
+                <div class="tz-footer__col">
+                    <span class="tz-footer__label">Servidor</span>
+                    <div class="tz-footer__brand">
+                        <img src="https://cdn.discordapp.com/attachments/1434159277118853326/1516003817806630952/THUNDER_ICON_PNG.png?ex=6a311014&is=6a2fbe94&hm=5a2ea75a560e3a5b8102108d1082c8b9a6f3f2f8455795ed86f55296a0d66a63&" alt="{{ store.name }}">
+                        <div class="tz-footer__brand-text">
+                            <span class="tz-footer__brand-name">{{ store.name }}</span>
+                            <span class="tz-footer__brand-tag">Servidor de Minecraft RPG</span>
+                        </div>
+                    </div>
+                    <div class="tz-footer__brand-copyright">
+                        <p>Copyright © {{ store.name }} {{ 'now' | date('Y') }}. {{ lang.all_rights_reserved }}</p>
+                        <p>{{ lang.not_afflied }}</p>
+                        {% if config("trademark") == "enabled" %}
+                        <a href="https://coldfiredzn.com" target="_blank" class="tz-footer__designed">
+                            <img src="{{ asset("coldfire.webp") }}" alt="Diseñado por ColdFire">
+                        </a>
+                        {% endif %}
+                    </div>
+                </div>
+
+                <!-- IP + Puerto -->
+                <div class="tz-footer__col">
+                    <span class="tz-footer__label">Conéctate</span>
+                    <div class="tz-footer__server-row">
+                        <span class="tz-footer__server-ip">thundermc.es</span>
+                        <button class="tz-footer__copy-btn" id="tz-footer-copy-ip" aria-label="Copiar IP">
+                            Copiar
+                        </button>
+                    </div>
+                    <span class="tz-footer__server-port">Bedrock · Puerto 19132</span>
+                </div>
+
+                <!-- Soporte -->
+                <div class="tz-footer__col">
+                    <span class="tz-footer__label">Soporte</span>
+                    <a href="{{ config("discord_invite") }}" target="_blank" class="tz-footer__support-link">
+                        <i class="mdi mdi-discord"></i>
+                        Soporte en Discord
+                    </a>
+                    <span class="tz-footer__support-sub">¿Tienes algún problema? Abre un ticket.</span>
+                </div>
+
+                <!-- Redes sociales -->
+                <div class="tz-footer__col">
+                    <span class="tz-footer__label">Comunidad</span>
+                    <div class="tz-footer__socials">
+                        <a href="{{ config("discord_invite") }}" target="_blank" aria-label="Discord">
+                            <i class="mdi mdi-discord"></i>
+                        </a>
+                        <a href="https://www.youtube.com/@somosthundermc/featured" target="_blank" aria-label="YouTube">
+                            <i class="mdi mdi-youtube"></i>
+                        </a>
+                        <a href="https://www.tiktok.com/@somosthundermc_" target="_blank" aria-label="TikTok">
+                            <i class="mdi mdi-music-note"></i>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- ═══ FOOTER LEGAL DE TEBEX — al final del todo ═══ -->
+            <div class="tz-footer__legal">
+                <div class="tz-footer__legal-logo">
+                    <a href="https://www.tebex.io" target="_blank" rel="nofollow">
+                        <svg width="61" height="29" viewBox="0 0 61 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M7.22379 7.36903C8.42455 5.55275 10.5991 5.02655 10.5991 5.02655C10.5991 5.02655 6.44895 4.02049 6.44895 0C6.44895 4.02049 2.29644 5.02655 2.29644 5.02655C2.29644 5.02655 4.47176 5.55275 5.67331 7.36903H0V14.3322L1.28979 12.1758H3.86857V24.1932L9.02693 29V14.2859C7.71147 13.7208 5.8217 12.2842 5.14472 11.1885C6.30056 11.5136 7.85104 11.9411 9.05821 12.1766H12.8963V7.36903H7.22379Z"></path>
+                            <g clip-path="url(#tzclip0_995_406)">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M35.9134 14.0983C36.5813 13.2542 37.62 12.7915 38.8665 12.7915H38.868C41.2702 12.7915 42.9475 14.4698 42.9475 16.8028C42.9475 19.1358 41.2194 20.8283 38.8357 20.8283C37.5616 20.8283 36.5474 20.3884 35.8888 19.5529L35.8457 20.6418H34.0253V9.87207H35.9134V14.0983ZM38.7342 19.3536C40.1961 19.3536 41.2163 18.3259 41.2163 16.8555C41.2163 15.3509 40.3084 14.3417 38.828 14.3417C37.3477 14.3417 36.3135 15.3381 36.3135 16.8555C36.3135 18.3728 37.2722 19.3536 38.7342 19.3536ZM22.7747 19.1045C22.3069 19.4347 21.9345 19.5628 21.4436 19.5628C20.7204 19.5628 20.3049 19.1557 20.3049 18.444V14.4271H23.3395V12.8812H20.3049V10.8742H18.4167V12.8798H17.1041L16.6763 14.4257H18.4167V18.4583C18.4167 20.2162 19.4277 21.1841 21.2651 21.1841C22.1038 21.1841 22.8517 20.945 23.5488 20.4525L23.5996 20.4169L22.8486 19.0518L22.7747 19.1031V19.1045ZM28.2885 12.7303C25.874 12.7303 24.1228 14.4242 24.1228 16.7572C24.1228 19.2127 25.7894 20.7984 28.367 20.7984C29.8396 20.7984 30.9399 20.3827 31.8263 19.4902L31.8725 19.4447L30.8707 18.3273L30.8107 18.3814C30.1197 19.0063 29.4057 19.2853 28.4916 19.2853C27.0574 19.2853 26.1756 18.5579 26.0017 17.2327H32.2049V17.1615C32.2049 17.0903 32.2079 17.0234 32.2125 16.9565C32.2172 16.8868 32.2202 16.817 32.2202 16.743C32.2202 14.3061 30.6768 12.7303 28.2885 12.7303ZM26.0402 16.0882C26.2803 14.9794 27.1482 14.2677 28.2731 14.2677C29.398 14.2677 30.1582 14.9295 30.3244 16.0882H26.0402ZM48.0719 12.7303C45.6575 12.7303 43.9062 14.4242 43.9062 16.7572C43.9062 19.2127 45.5728 20.7984 48.1504 20.7984C49.6231 20.7984 50.7234 20.3827 51.6097 19.4902L51.6559 19.4447L50.6541 18.3273L50.5941 18.3814C49.9032 19.0063 49.1891 19.2853 48.275 19.2853C46.8408 19.2853 45.9591 18.5579 45.7852 17.2327H51.9883V17.1615C51.9883 17.0903 51.9914 17.0234 51.996 16.9565C52.0006 16.8868 52.0037 16.817 52.0037 16.743C52.0037 14.3061 50.4602 12.7303 48.0719 12.7303ZM48.0565 14.2662C49.1984 14.2662 49.9416 14.9281 50.1078 16.0868H45.8237C46.0637 14.9779 46.9316 14.2662 48.0565 14.2662ZM60.2258 12.8798L57.2973 16.5708L60.5566 20.6418H58.313L56.2078 17.8633L54.1488 20.6418H52.016L55.1645 16.6733L52.1576 12.8798H54.4012L56.254 15.4078L58.0914 12.8798H60.2258Z"></path>
+                            </g>
+                            <defs>
+                                <clipPath id="tzclip0_995_406">
+                                    <rect width="43.8803" height="11.3121" fill="white" transform="translate(16.6763 9.87207)"></rect>
+                                </clipPath>
+                            </defs>
+                        </svg>
+                    </a>
+                </div>
+                <div class="tz-footer__legal-text">
+                    Esta web y su proceso de pago son propiedad y están operados por Tebex Limited, quienes gestionan la entrega de productos, soporte de facturación y reembolsos.
+                </div>
+                <div class="tz-footer__legal-links">
+                    <a href="/terms/impressum" rel="nofollow">Impressum</a>
+                    <a href="/terms/checkout" rel="nofollow">Términos y Condiciones</a>
+                    <a href="/terms/privacy" rel="nofollow">Política de Privacidad</a>
+                </div>
+            </div>
+
+        </div>
+    </footer>
+</div>
+
+<script>
+(function () {
+  var copyBtn = document.getElementById('tz-footer-copy-ip');
+  var ipToCopy = 'thundermc.es';
+
+  if (!copyBtn) return;
+
+  copyBtn.addEventListener('click', function () {
+    navigator.clipboard.writeText(ipToCopy).then(function () {
+      copyBtn.classList.add('copied');
+      copyBtn.textContent = '✓ Copiado';
+      setTimeout(function () {
+        copyBtn.classList.remove('copied');
+        copyBtn.textContent = 'Copiar';
+      }, 1800);
+    }).catch(function () {
+      var el = document.createElement('textarea');
+      el.value = ipToCopy;
+      document.body.appendChild(el);
+      el.select();
+      document.execCommand('copy');
+      document.body.removeChild(el);
+    });
+  });
+})();
+</script>
+
+<script>
+(function () {
+  function hideTebexFooter() {
+    document.querySelectorAll('tebex-footer').forEach(function (el) {
+      el.style.setProperty('display', 'none', 'important');
+      el.style.setProperty('visibility', 'hidden', 'important');
+      el.style.setProperty('height', '0px', 'important');
+      el.style.setProperty('max-height', '0px', 'important');
+      el.style.setProperty('min-height', '0px', 'important');
+      el.style.setProperty('overflow', 'hidden', 'important');
+      el.style.setProperty('opacity', '0', 'important');
+      el.style.setProperty('pointer-events', 'none', 'important');
+      el.setAttribute('aria-hidden', 'true');
+      try {
+        if (el.shadowRoot) {
+          var existing = el.shadowRoot.getElementById('tz-force-hide');
+          if (!existing) {
+            var style = document.createElement('style');
+            style.id = 'tz-force-hide';
+            style.textContent = ':host { display: none !important; height: 0 !important; min-height: 0 !important; visibility: hidden !important; }';
+            el.shadowRoot.appendChild(style);
+          }
+        }
+      } catch (e) {}
+    });
+  }
+
+  hideTebexFooter();
+  var observer = new MutationObserver(hideTebexFooter);
+  observer.observe(document.documentElement, { childList: true, subtree: true });
+  var attempts = 0;
+  var interval = setInterval(function () {
+    hideTebexFooter();
+    attempts++;
+    if (attempts > 20) clearInterval(interval);
+  }, 500);
+})();
+</script>

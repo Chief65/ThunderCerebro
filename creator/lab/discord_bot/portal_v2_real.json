@@ -1,0 +1,70 @@
+{
+  "flags": 32768,
+  "components": [
+    {
+      "type": 17,
+      "accent_color": 16706304,
+      "components": [
+        {
+          "type": 10,
+          "content": "# ⚡ BIENVENIDO A THUNDERMC NETWORK\nTu portal de acceso oficial a la comunidad y a nuestros servidores de **Minecraft 1.21.11**.\nExplora una economía progresiva, mazmorras con jefes custom y sistemas de recompensas únicos."
+        },
+        {
+          "type": 14,
+          "divider": true,
+          "spacing": 1
+        },
+        {
+          "type": 10,
+          "content": "### 🌐 Conexión al Servidor\n```yaml\nIP Java: play.thundermc.es\nIP Bedrock: bedrock.thundermc.es (Puerto: 19132)\nVersión: 1.21.x\n```"
+        },
+        {
+          "type": 14,
+          "divider": true,
+          "spacing": 1
+        },
+        {
+          "type": 10,
+          "content": "### 📜 Reglas Esenciales\n> **1.** Respeto absoluto hacia la comunidad y el staff.\n> **2.** Prohibido el uso de clientes modificados, hacks o exploits.\n> **3.** El comercio ilegal con dinero real ajeno a la tienda está sancionado.\n> **4.** Reporta cualquier anomalía en el canal de soporte."
+        },
+        {
+          "type": 14,
+          "divider": true,
+          "spacing": 1
+        },
+        {
+          "type": 1,
+          "components": [
+            {
+              "type": 2,
+              "style": 5,
+              "label": "Tienda Oficial",
+              "emoji": {
+                "name": "🛒"
+              },
+              "url": "https://tienda.thundermc.es"
+            },
+            {
+              "type": 2,
+              "style": 5,
+              "label": "Web & Rangos",
+              "emoji": {
+                "name": "🌐"
+              },
+              "url": "https://thundermc.es"
+            },
+            {
+              "type": 2,
+              "style": 1,
+              "custom_id": "btn_crear_ticket",
+              "label": "Abrir Ticket",
+              "emoji": {
+                "name": "🎫"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

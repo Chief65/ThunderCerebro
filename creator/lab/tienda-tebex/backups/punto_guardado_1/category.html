@@ -1,0 +1,118 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+    {% if config("developerMode") == "enabled" %}
+        <div class="upgrade__developer"></div>
+        {% if category.id in theme_configuration.upgradePackageAddon.upgradeCategories and theme_configuration.upgradePackageAddon.enabled == true %}
+            {% if category.packages|length > 0 %}
+                <script>
+                    document.querySelector(".upgrade__developer").innerHTML += `
+<pre>
+{% for package in category.packages %}
+{% if theme_configuration.upgradePackageAddon.upgradePrefix in package.name %}
+upgrade_{{ package.id }}: { 
+    title: "Title of the rank before {{ package.name | replace({'[Upgrade]': ''}) }}", 
+    image: "Image of the rank before {{ package.name | replace({'[Upgrade]': ''}) }}", 
+    rank_to_upgrade: "{{ package.id }}",
+    category: "{{ category.id }}"
+}{%- if loop.last == false -%}
+,
+{% endif %}
+{% endif %}
+{% endfor %}
+</pre>
+`;
+                </script>
+            {% endif %}
+        {% endif %}
+    {% endif %}
+
+    {% include 'layout.topbar.twig' %}
+
+    {% set isCategoryTableAddon = category.id in theme_configuration.tableAddon.categories and theme_configuration.tableAddon.enabled == true %}
+    {% set isUpgradeCategory = category.id in theme_configuration.upgradePackageAddon.upgradeCategories and theme_configuration.upgradePackageAddon.enabled == true %}
+
+    {% set isQuantityAddonCategory = false %}
+
+    {% if theme_configuration.quantityAddonConfiguration.enabled %}
+        {% for key, categoryData in theme_configuration.quantityAddonConfiguration.categories %}
+        {% if categoryData.id == category.id %}
+            {% set isQuantityAddonCategory = true %}
+        {% endif %}
+        {% endfor %}
+    {% endif %}
+
+    <script>
+        console.log("{{ category.id }}")
+    </script>
+
+    {% if isCategoryTableAddon %}
+        {% include 'tableAddon.twig' ignore missing %}
+    {% endif %}
+
+    <div class="body--with-sidebar" {% if isCategoryTableAddon %} style="display: none;" {% endif %}>
+
+        {% include 'layout.sidebar.twig' %}
+
+        <main class="triplezone-main-content" {% if category.description == "" and not isUpgradeCategory %} data-category-type="no-description" {% endif %}>
+
+            <div class="category__header">
+                <h3>{{ category.name }}</h3>
+                {% if category.description != "" %}
+                    <div class="category__header__description">
+                        {{ category.description|raw }}
+                    </div>
+                {% endif %}
+            </div>
+
+            {% if isQuantityAddonCategory %}
+
+                <div class="triplezone-body-description">
+                    {% include 'quantityAddon.twig' ignore missing %}
+                </div>
+
+            {% else %}
+
+                {# Enable the upgrade addon if is purchased and added to the files #}
+                {% include 'upgradeAddon.twig' ignore missing %}
+
+                <div class="triplezone-body-description">
+
+                    {% if category.packages|length > 0 %}
+                        {% if category.displayType == "list" %}
+                            <div class="category__list">
+                                {% if isUpgradeCategory %}
+                                    {% for package in category.packages if theme_configuration.upgradePackageAddon.upgradePrefix not in package.name %}
+                                        {% include 'layout.categoryListItem.twig' %}
+                                    {% endfor %}
+                                {% else %}
+                                    {% for package in category.packages %}
+                                        {% include 'layout.categoryListItem.twig' %}
+                                    {% endfor %}
+                                {% endif %}
+                            </div>
+                        {% else %}
+
+                            <div class="category__list--with--images">
+                                {% if isUpgradeCategory %}
+                                    {% for package in category.packages if theme_configuration.upgradePackageAddon.upgradePrefix not in package.name %}
+                                        {% include 'layout.categoryImageItem.twig' %}
+                                    {% endfor %}
+                                {% else %}
+                                    {% for package in category.packages %}
+                                        {% include 'layout.categoryImageItem.twig' %}
+                                    {% endfor %}
+                                {% endif %}
+                            </div>
+                        {% endif %}
+                    {% else %}
+                        {{ __("No packages to display in this category.") }}
+                    {% endif %}
+
+                </div>
+            {% endif %}
+        </main>
+    </div>
+
+{% endblock %}

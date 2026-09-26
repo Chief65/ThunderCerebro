@@ -1,0 +1,16 @@
+# Dependencias pesadas de Node.js
+**/node_modules/
+**/package-lock.json
+
+# Archivos de datos pesados (>100MB)
+spark_data_full.json
+spark_summary.json
+
+# Accesos directos y basura de Windows
+*.lnk
+Thumbs.db
+Desktop.ini
+
+# Credenciales y entornos
+.env
+*.session

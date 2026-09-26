@@ -1,0 +1,78 @@
+﻿# ============================================================
+#  ObjetosCreadosPorIA.yml
+#  Objetos generados automaticamente por Antigravity (IA)
+#  Formato exacto ItemEdit | ThunderStudios Survival
+#  Copiar bloque en server-database.yml y recargar con /ie reload
+# ============================================================
+
+# ------------------------------------------------------------
+#  [2026-08-17] Prueba de Hoy -- Espada Epica
+#  ID: pruebasdehoy | Material: diamond_sword | Calidad: EPICA
+#  NOTA: Primer item creado. Gradiente morado->beige (pendiente correccion segun feedback)
+# ------------------------------------------------------------
+
+pruebasdehoy:
+  item:
+    ==: org.bukkit.inventory.ItemStack
+    DataVersion: 4671
+    id: minecraft:diamond_sword
+    count: 1
+    components:
+      minecraft:lore: '["",{extra:[{bold:0b,color:"white",italic:0b,obfuscated:0b,strikethrough:0b,text:" ",underlined:0b},{color:"dark_gray",italic:0b,text:"Efectos:"}],text:""},{extra:[{bold:0b,color:"white",italic:0b,obfuscated:0b,strikethrough:0b,text:" ",underlined:0b},{color:"green",italic:0b,text:"\u2714 Forjada en las sombras del computo"}],text:""},{extra:[{bold:0b,color:"white",italic:0b,obfuscated:0b,strikethrough:0b,text:" ",underlined:0b},{color:"gray",italic:0b,text:"\u00abSolo quien osa probar hoy"}],text:""},{extra:[{bold:0b,color:"white",italic:0b,obfuscated:0b,strikethrough:0b,text:" ",underlined:0b},{color:"gray",italic:0b,text:"  manda manana.\u00bb"}],text:""},"",{extra:[{bold:0b,color:"white",italic:0b,obfuscated:0b,strikethrough:0b,text:" ",underlined:0b},{bold:0b,color:"dark_gray",italic:0b,obfuscated:0b,strikethrough:0b,text:"\u2042 ",underlined:0b},{bold:1b,color:"#A84EDE",italic:0b,obfuscated:0b,strikethrough:0b,text:"E",underlined:0b},{bold:1b,color:"#9B45DF",italic:0b,obfuscated:0b,strikethrough:0b,text:"P",underlined:0b},{bold:1b,color:"#8E3CE0",italic:0b,obfuscated:0b,strikethrough:0b,text:"I",underlined:0b},{bold:1b,color:"#8033E1",italic:0b,obfuscated:0b,strikethrough:0b,text:"C",underlined:0b},{bold:1b,color:"#732AE2",italic:0b,obfuscated:0b,strikethrough:0b,text:"A ",underlined:0b},{bold:0b,color:"yellow",italic:0b,text:"\u2b50\u2b50\u2b50"},{color:"gray",italic:0b,text:"\u2b50\u2b50"}],text:""}]'
+      minecraft:custom_name: '{extra:[{bold:0b,color:"#9B00FF",italic:0b,obfuscated:0b,strikethrough:0b,text:"\ud83d\udde1",underlined:0b},{bold:0b,color:"#9F0DF7",italic:0b,obfuscated:0b,strikethrough:0b,text:" ",underlined:0b},{bold:0b,color:"#A31AEF",italic:0b,obfuscated:0b,strikethrough:0b,text:"P",underlined:0b},{bold:0b,color:"#A727E7",italic:0b,obfuscated:0b,strikethrough:0b,text:"r",underlined:0b},{bold:0b,color:"#AB34DF",italic:0b,obfuscated:0b,strikethrough:0b,text:"u",underlined:0b},{bold:0b,color:"#AF41D7",italic:0b,obfuscated:0b,strikethrough:0b,text:"e",underlined:0b},{bold:0b,color:"#B34ED0",italic:0b,obfuscated:0b,strikethrough:0b,text:"b",underlined:0b},{bold:0b,color:"#B75BC8",italic:0b,obfuscated:0b,strikethrough:0b,text:"a",underlined:0b},{bold:0b,color:"#BB68C0",italic:0b,obfuscated:0b,strikethrough:0b,text:" ",underlined:0b},{bold:0b,color:"#BF75B8",italic:0b,obfuscated:0b,strikethrough:0b,text:"d",underlined:0b},{bold:0b,color:"#C382B0",italic:0b,obfuscated:0b,strikethrough:0b,text:"e",underlined:0b},{bold:0b,color:"#C78FA8",italic:0b,obfuscated:0b,strikethrough:0b,text:" ",underlined:0b},{bold:0b,color:"#CB9CA0",italic:0b,obfuscated:0b,strikethrough:0b,text:"H",underlined:0b},{bold:0b,color:"#CFA999",italic:0b,obfuscated:0b,strikethrough:0b,text:"o",underlined:0b},{bold:0b,color:"#D3B691",italic:0b,obfuscated:0b,strikethrough:0b,text:"y",underlined:0b},{bold:0b,color:"#D3B691",italic:0b,obfuscated:0b,strikethrough:0b,text:" ",underlined:0b},{bold:0b,color:"#D3B691",italic:0b,obfuscated:0b,strikethrough:0b,text:"\ud83d\udde1",underlined:0b}],text:""}'
+      minecraft:enchantments: '{"minecraft:sharpness":5,"minecraft:unbreaking":3,"minecraft:mending":1}'
+    schema_version: 1
+
+# ------------------------------------------------------------
+#  [2026-08-17] Espada del Vacio -- Espada Epica
+#  ID: espadavacio | Material: diamond_sword | Calidad: EPICA
+#  Gradiente: indigo profundo #6A00CC -> violeta #A844FF (purpura puro)
+# ------------------------------------------------------------
+
+espadavacio:
+  item:
+    ==: org.bukkit.inventory.ItemStack
+    DataVersion: 4671
+    id: minecraft:diamond_sword
+    count: 1
+    components:
+      minecraft:lore: '["",{extra:[{bold:0b,color:"white",italic:0b,obfuscated:0b,strikethrough:0b,text:" ",underlined:0b},{color:"dark_gray",italic:0b,text:"Efectos:"}],text:""},{extra:[{bold:0b,color:"white",italic:0b,obfuscated:0b,strikethrough:0b,text:" ",underlined:0b},{color:"green",italic:0b,text:"\u2714 Filo 6"}],text:""},{extra:[{bold:0b,color:"white",italic:0b,obfuscated:0b,strikethrough:0b,text:" ",underlined:0b},{color:"green",italic:0b,text:"\u2714 Saqueo 3"}],text:""},"",{extra:[{bold:0b,color:"white",italic:0b,obfuscated:0b,strikethrough:0b,text:" ",underlined:0b},{bold:0b,color:"dark_gray",italic:0b,obfuscated:0b,strikethrough:0b,text:"\u2042 ",underlined:0b},{bold:1b,color:"#A84EDE",italic:0b,obfuscated:0b,strikethrough:0b,text:"E",underlined:0b},{bold:1b,color:"#9B45DF",italic:0b,obfuscated:0b,strikethrough:0b,text:"P",underlined:0b},{bold:1b,color:"#8E3CE0",italic:0b,obfuscated:0b,strikethrough:0b,text:"I",underlined:0b},{bold:1b,color:"#8033E1",italic:0b,obfuscated:0b,strikethrough:0b,text:"C",underlined:0b},{bold:1b,color:"#732AE2",italic:0b,obfuscated:0b,strikethrough:0b,text:"A ",underlined:0b},{bold:0b,color:"yellow",italic:0b,text:"\u2b50\u2b50\u2b50"},{color:"gray",italic:0b,text:"\u2b50\u2b50"}],text:""}]'
+      minecraft:custom_name: '{extra:[{bold:0b,color:"#6A00CC",italic:0b,obfuscated:0b,strikethrough:0b,text:"\ud83d\udde1",underlined:0b},{bold:0b,color:"#700BD4",italic:0b,obfuscated:0b,strikethrough:0b,text:" ",underlined:0b},{bold:0b,color:"#7616DC",italic:0b,obfuscated:0b,strikethrough:0b,text:"E",underlined:0b},{bold:0b,color:"#7C21E4",italic:0b,obfuscated:0b,strikethrough:0b,text:"s",underlined:0b},{bold:0b,color:"#822DEC",italic:0b,obfuscated:0b,strikethrough:0b,text:"p",underlined:0b},{bold:0b,color:"#8838F4",italic:0b,obfuscated:0b,strikethrough:0b,text:"a",underlined:0b},{bold:0b,color:"#8E43FC",italic:0b,obfuscated:0b,strikethrough:0b,text:"d",underlined:0b},{bold:0b,color:"#944EFF",italic:0b,obfuscated:0b,strikethrough:0b,text:"a",underlined:0b},{bold:0b,color:"#9A59FF",italic:0b,obfuscated:0b,strikethrough:0b,text:" ",underlined:0b},{bold:0b,color:"#9E64FF",italic:0b,obfuscated:0b,strikethrough:0b,text:"d",underlined:0b},{bold:0b,color:"#A26FFF",italic:0b,obfuscated:0b,strikethrough:0b,text:"e",underlined:0b},{bold:0b,color:"#A67AFF",italic:0b,obfuscated:0b,strikethrough:0b,text:"l",underlined:0b},{bold:0b,color:"#AA85FF",italic:0b,obfuscated:0b,strikethrough:0b,text:" ",underlined:0b},{bold:0b,color:"#AE90FF",italic:0b,obfuscated:0b,strikethrough:0b,text:"V",underlined:0b},{bold:0b,color:"#B29BFF",italic:0b,obfuscated:0b,strikethrough:0b,text:"a",underlined:0b},{bold:0b,color:"#B6A6FF",italic:0b,obfuscated:0b,strikethrough:0b,text:"c",underlined:0b},{bold:0b,color:"#BAB1FF",italic:0b,obfuscated:0b,strikethrough:0b,text:"i",underlined:0b},{bold:0b,color:"#BEBCFF",italic:0b,obfuscated:0b,strikethrough:0b,text:"o",underlined:0b},{bold:0b,color:"#BEBCFF",italic:0b,obfuscated:0b,strikethrough:0b,text:" ",underlined:0b},{bold:0b,color:"#BEBCFF",italic:0b,obfuscated:0b,strikethrough:0b,text:"\ud83d\udde1",underlined:0b}],text:""}'
+      minecraft:enchantments: '{"minecraft:looting":3,"minecraft:sharpness":6,"minecraft:unbreaking":3,"minecraft:mending":1}'
+    schema_version: 1
+
+# ------------------------------------------------------------
+#  [2026-08-17] Hacha Umbratica -- Hacha Epica
+#  ID: hachaumbratica | Material: diamond_axe | Calidad: EPICA
+#  Gradiente: purpura medio #7B00EE -> lila claro #CC66FF
+# ------------------------------------------------------------
+
+hachaumbratica:
+  item:
+    ==: org.bukkit.inventory.ItemStack
+    DataVersion: 4671
+    id: minecraft:diamond_axe
+    count: 1
+    components:
+      minecraft:lore: '["",{extra:[{bold:0b,color:"white",italic:0b,obfuscated:0b,strikethrough:0b,text:" ",underlined:0b},{color:"dark_gray",italic:0b,text:"Efectos:"}],text:""},{extra:[{bold:0b,color:"white",italic:0b,obfuscated:0b,strikethrough:0b,text:" ",underlined:0b},{color:"green",italic:0b,text:"\u2714 Filo 7"}],text:""},{extra:[{bold:0b,color:"white",italic:0b,obfuscated:0b,strikethrough:0b,text:" ",underlined:0b},{color:"green",italic:0b,text:"\u2714 Aspecto Igneo 2"}],text:""},"",{extra:[{bold:0b,color:"white",italic:0b,obfuscated:0b,strikethrough:0b,text:" ",underlined:0b},{bold:0b,color:"dark_gray",italic:0b,obfuscated:0b,strikethrough:0b,text:"\u2042 ",underlined:0b},{bold:1b,color:"#A84EDE",italic:0b,obfuscated:0b,strikethrough:0b,text:"E",underlined:0b},{bold:1b,color:"#9B45DF",italic:0b,obfuscated:0b,strikethrough:0b,text:"P",underlined:0b},{bold:1b,color:"#8E3CE0",italic:0b,obfuscated:0b,strikethrough:0b,text:"I",underlined:0b},{bold:1b,color:"#8033E1",italic:0b,obfuscated:0b,strikethrough:0b,text:"C",underlined:0b},{bold:1b,color:"#732AE2",italic:0b,obfuscated:0b,strikethrough:0b,text:"A ",underlined:0b},{bold:0b,color:"yellow",italic:0b,text:"\u2b50\u2b50\u2b50"},{color:"gray",italic:0b,text:"\u2b50\u2b50"}],text:""}]'
+      minecraft:custom_name: '{extra:[{bold:0b,color:"#7B00EE",italic:0b,obfuscated:0b,strikethrough:0b,text:"\ud83e\udea3",underlined:0b},{bold:0b,color:"#8108F2",italic:0b,obfuscated:0b,strikethrough:0b,text:" ",underlined:0b},{bold:0b,color:"#8710F5",italic:0b,obfuscated:0b,strikethrough:0b,text:"H",underlined:0b},{bold:0b,color:"#8D18F8",italic:0b,obfuscated:0b,strikethrough:0b,text:"a",underlined:0b},{bold:0b,color:"#9320FB",italic:0b,obfuscated:0b,strikethrough:0b,text:"c",underlined:0b},{bold:0b,color:"#9928FF",italic:0b,obfuscated:0b,strikethrough:0b,text:"h",underlined:0b},{bold:0b,color:"#9F30FF",italic:0b,obfuscated:0b,strikethrough:0b,text:"a",underlined:0b},{bold:0b,color:"#A538FF",italic:0b,obfuscated:0b,strikethrough:0b,text:" ",underlined:0b},{bold:0b,color:"#AB40FF",italic:0b,obfuscated:0b,strikethrough:0b,text:"U",underlined:0b},{bold:0b,color:"#B148FF",italic:0b,obfuscated:0b,strikethrough:0b,text:"m",underlined:0b},{bold:0b,color:"#B750FF",italic:0b,obfuscated:0b,strikethrough:0b,text:"b",underlined:0b},{bold:0b,color:"#BD58FF",italic:0b,obfuscated:0b,strikethrough:0b,text:"r",underlined:0b},{bold:0b,color:"#C360FF",italic:0b,obfuscated:0b,strikethrough:0b,text:"a",underlined:0b},{bold:0b,color:"#C968FF",italic:0b,obfuscated:0b,strikethrough:0b,text:"t",underlined:0b},{bold:0b,color:"#CC66FF",italic:0b,obfuscated:0b,strikethrough:0b,text:"i",underlined:0b},{bold:0b,color:"#CC66FF",italic:0b,obfuscated:0b,strikethrough:0b,text:"c",underlined:0b},{bold:0b,color:"#CC66FF",italic:0b,obfuscated:0b,strikethrough:0b,text:"a",underlined:0b},{bold:0b,color:"#CC66FF",italic:0b,obfuscated:0b,strikethrough:0b,text:" ",underlined:0b},{bold:0b,color:"#CC66FF",italic:0b,obfuscated:0b,strikethrough:0b,text:"\ud83e\udea3",underlined:0b}],text:""}'
+      minecraft:enchantments: '{"minecraft:fire_aspect":2,"minecraft:sharpness":7,"minecraft:unbreaking":3,"minecraft:mending":1}'
+    schema_version: 1
+
+# ------------------------------------------------------------
+#  [2026-08-17] Arco Sombral -- Arco Epico
+#  ID: arcosombral | Material: bow | Calidad: EPICA
+#  Gradiente: indigo oscuro #4B0082 -> violeta vivo #9B30FF
+# ------------------------------------------------------------
+
+arcosombral:
+  item:
+    ==: org.bukkit.inventory.ItemStack
+    DataVersion: 4671
+    id: minecraft:bow
+    count: 1
+    components:
+      minecraft:lore: '["",{extra:[{bold:0b,color:"white",italic:0b,obfuscated:0b,strikethrough:0b,text:" ",underlined:0b},{color:"dark_gray",italic:0b,text:"Efectos:"}],text:""},{extra:[{bold:0b,color:"white",italic:0b,obfuscated:0b,strikethrough:0b,text:" ",underlined:0b},{color:"green",italic:0b,text:"\u2714 Poder 5"}],text:""},{extra:[{bold:0b,color:"white",italic:0b,obfuscated:0b,strikethrough:0b,text:" ",underlined:0b},{color:"green",italic:0b,text:"\u2714 Retroceso 2"}],text:""},"",{extra:[{bold:0b,color:"white",italic:0b,obfuscated:0b,strikethrough:0b,text:" ",underlined:0b},{bold:0b,color:"dark_gray",italic:0b,obfuscated:0b,strikethrough:0b,text:"\u2042 ",underlined:0b},{bold:1b,color:"#A84EDE",italic:0b,obfuscated:0b,strikethrough:0b,text:"E",underlined:0b},{bold:1b,color:"#9B45DF",italic:0b,obfuscated:0b,strikethrough:0b,text:"P",underlined:0b},{bold:1b,color:"#8E3CE0",italic:0b,obfuscated:0b,strikethrough:0b,text:"I",underlined:0b},{bold:1b,color:"#8033E1",italic:0b,obfuscated:0b,strikethrough:0b,text:"C",underlined:0b},{bold:1b,color:"#732AE2",italic:0b,obfuscated:0b,strikethrough:0b,text:"A ",underlined:0b},{bold:0b,color:"yellow",italic:0b,text:"\u2b50\u2b50\u2b50"},{color:"gray",italic:0b,text:"\u2b50\u2b50"}],text:""}]'
+      minecraft:custom_name: '{extra:[{bold:0b,color:"#4B0082",italic:0b,obfuscated:0b,strikethrough:0b,text:"\ud83c\udff9",underlined:0b},{bold:0b,color:"#550D90",italic:0b,obfuscated:0b,strikethrough:0b,text:" ",underlined:0b},{bold:0b,color:"#5F1A9E",italic:0b,obfuscated:0b,strikethrough:0b,text:"A",underlined:0b},{bold:0b,color:"#6927AC",italic:0b,obfuscated:0b,strikethrough:0b,text:"r",underlined:0b},{bold:0b,color:"#7334BA",italic:0b,obfuscated:0b,strikethrough:0b,text:"c",underlined:0b},{bold:0b,color:"#7D41C8",italic:0b,obfuscated:0b,strikethrough:0b,text:"o",underlined:0b},{bold:0b,color:"#874ED6",italic:0b,obfuscated:0b,strikethrough:0b,text:" ",underlined:0b},{bold:0b,color:"#8B52DA",italic:0b,obfuscated:0b,strikethrough:0b,text:"S",underlined:0b},{bold:0b,color:"#8F5FE4",italic:0b,obfuscated:0b,strikethrough:0b,text:"o",underlined:0b},{bold:0b,color:"#9368EC",italic:0b,obfuscated:0b,strikethrough:0b,text:"m",underlined:0b},{bold:0b,color:"#9771F4",italic:0b,obfuscated:0b,strikethrough:0b,text:"b",underlined:0b},{bold:0b,color:"#9B30FF",italic:0b,obfuscated:0b,strikethrough:0b,text:"r",underlined:0b},{bold:0b,color:"#9B30FF",italic:0b,obfuscated:0b,strikethrough:0b,text:"a",underlined:0b},{bold:0b,color:"#9B30FF",italic:0b,obfuscated:0b,strikethrough:0b,text:"l",underlined:0b},{bold:0b,color:"#9B30FF",italic:0b,obfuscated:0b,strikethrough:0b,text:" ",underlined:0b},{bold:0b,color:"#9B30FF",italic:0b,obfuscated:0b,strikethrough:0b,text:"\ud83c\udff9",underlined:0b}],text:""}'
+      minecraft:enchantments: '{"minecraft:power":5,"minecraft:punch":2,"minecraft:flame":1,"minecraft:infinity":1,"minecraft:unbreaking":3}'
+    schema_version: 1

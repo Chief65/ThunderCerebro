@@ -1,0 +1,645 @@
+menu_title: '&0&l|&r &0Compra ▶ &8Todos &7(11/17)'
+open_command:
+  - compra_todos_11
+size: 45
+open_requirement:
+  requirements: {}
+register_command: true
+update: true
+
+items:
+  # ============================================================================
+  # FILTRO SUPERIOR: PANELES GRISES DECORATIVOS (FILA 1)
+  # ============================================================================
+  'Filtro_Top':
+    material: GRAY_STAINED_GLASS_PANE
+    display_name: ' '
+    slots:
+      - 0
+      - 1
+      - 2
+      - 3
+      - 4
+      - 5
+      - 6
+      - 7
+      - 8
+
+  # ============================================================================
+  # CATÁLOGO DE ÍTEMS DE COMPRA (FILAS 2, 3, 4: SLOTS 9 A 35)
+  # ============================================================================
+  'item_1':
+    material: DECORATED_POT
+    slot: 9
+    item_flags:
+      - HIDE_ATTRIBUTES
+      - HIDE_ENCHANTS
+    display_name: '&#00FF88Decorated Pot'
+    lore:
+      - '&8ᴘʀᴇᴄɪᴏ ᴅᴇ ᴄᴏᴍᴘʀᴀ'
+      - ''
+      - ' &8| &fUnidad: &#59E91F&l$&r&#59E91F50'
+      - ' &8| &fStack x64: &#59E91F&l$&r&#59E91F3200'
+      - ''
+      - '&7▶ Click para comprar'
+    left_click_commands:
+      - '[close]'
+      - '[player] shop bloques'
+      - '[sound] UI_BUTTON_CLICK'
+
+  'item_2':
+    material: PITCHER_PLANT
+    slot: 10
+    item_flags:
+      - HIDE_ATTRIBUTES
+      - HIDE_ENCHANTS
+    display_name: '&#00FF88Pitcher Plant'
+    lore:
+      - '&8ᴘʀᴇᴄɪᴏ ᴅᴇ ᴄᴏᴍᴘʀᴀ'
+      - ''
+      - ' &8| &fUnidad: &#59E91F&l$&r&#59E91F25'
+      - ' &8| &fStack x64: &#59E91F&l$&r&#59E91F1600'
+      - ''
+      - '&7▶ Click para comprar'
+    left_click_commands:
+      - '[close]'
+      - '[player] shop bloques'
+      - '[sound] UI_BUTTON_CLICK'
+
+  'item_3':
+    material: TORCHFLOWER
+    slot: 11
+    item_flags:
+      - HIDE_ATTRIBUTES
+      - HIDE_ENCHANTS
+    display_name: '&#00FF88Torchflower'
+    lore:
+      - '&8ᴘʀᴇᴄɪᴏ ᴅᴇ ᴄᴏᴍᴘʀᴀ'
+      - ''
+      - ' &8| &fUnidad: &#59E91F&l$&r&#59E91F20'
+      - ' &8| &fStack x64: &#59E91F&l$&r&#59E91F1280'
+      - ''
+      - '&7▶ Click para comprar'
+    left_click_commands:
+      - '[close]'
+      - '[player] shop bloques'
+      - '[sound] UI_BUTTON_CLICK'
+
+  'item_4':
+    material: PINK_PETALS
+    slot: 12
+    item_flags:
+      - HIDE_ATTRIBUTES
+      - HIDE_ENCHANTS
+    display_name: '&#00FF88Pink Petals'
+    lore:
+      - '&8ᴘʀᴇᴄɪᴏ ᴅᴇ ᴄᴏᴍᴘʀᴀ'
+      - ''
+      - ' &8| &fUnidad: &#59E91F&l$&r&#59E91F10'
+      - ' &8| &fStack x64: &#59E91F&l$&r&#59E91F640'
+      - ''
+      - '&7▶ Click para comprar'
+    left_click_commands:
+      - '[close]'
+      - '[player] shop bloques'
+      - '[sound] UI_BUTTON_CLICK'
+
+  'item_5':
+    material: SUSPICIOUS_SAND
+    slot: 13
+    item_flags:
+      - HIDE_ATTRIBUTES
+      - HIDE_ENCHANTS
+    display_name: '&#00FF88Suspicious Sand'
+    lore:
+      - '&8ᴘʀᴇᴄɪᴏ ᴅᴇ ᴄᴏᴍᴘʀᴀ'
+      - ''
+      - ' &8| &fUnidad: &#59E91F&l$&r&#59E91F25'
+      - ' &8| &fStack x64: &#59E91F&l$&r&#59E91F1600'
+      - ''
+      - '&7▶ Click para comprar'
+    left_click_commands:
+      - '[close]'
+      - '[player] shop bloques'
+      - '[sound] UI_BUTTON_CLICK'
+
+  'item_6':
+    material: SUSPICIOUS_GRAVEL
+    slot: 14
+    item_flags:
+      - HIDE_ATTRIBUTES
+      - HIDE_ENCHANTS
+    display_name: '&#00FF88Suspicious Gravel'
+    lore:
+      - '&8ᴘʀᴇᴄɪᴏ ᴅᴇ ᴄᴏᴍᴘʀᴀ'
+      - ''
+      - ' &8| &fUnidad: &#59E91F&l$&r&#59E91F25'
+      - ' &8| &fStack x64: &#59E91F&l$&r&#59E91F1600'
+      - ''
+      - '&7▶ Click para comprar'
+    left_click_commands:
+      - '[close]'
+      - '[player] shop bloques'
+      - '[sound] UI_BUTTON_CLICK'
+
+  'item_7':
+    material: CHISELED_COPPER
+    slot: 15
+    item_flags:
+      - HIDE_ATTRIBUTES
+      - HIDE_ENCHANTS
+    display_name: '&#00FF88Chiseled Copper'
+    lore:
+      - '&8ᴘʀᴇᴄɪᴏ ᴅᴇ ᴄᴏᴍᴘʀᴀ'
+      - ''
+      - ' &8| &fUnidad: &#59E91F&l$&r&#59E91F115'
+      - ' &8| &fStack x64: &#59E91F&l$&r&#59E91F7360'
+      - ''
+      - '&7▶ Click para comprar'
+    left_click_commands:
+      - '[close]'
+      - '[player] shop bloques'
+      - '[sound] UI_BUTTON_CLICK'
+
+  'item_8':
+    material: EXPOSED_CHISELED_COPPER
+    slot: 16
+    item_flags:
+      - HIDE_ATTRIBUTES
+      - HIDE_ENCHANTS
+    display_name: '&#00FF88Exposed Chiseled Copper'
+    lore:
+      - '&8ᴘʀᴇᴄɪᴏ ᴅᴇ ᴄᴏᴍᴘʀᴀ'
+      - ''
+      - ' &8| &fUnidad: &#59E91F&l$&r&#59E91F90'
+      - ' &8| &fStack x64: &#59E91F&l$&r&#59E91F5760'
+      - ''
+      - '&7▶ Click para comprar'
+    left_click_commands:
+      - '[close]'
+      - '[player] shop bloques'
+      - '[sound] UI_BUTTON_CLICK'
+
+  'item_9':
+    material: WEATHERED_CHISELED_COPPER
+    slot: 17
+    item_flags:
+      - HIDE_ATTRIBUTES
+      - HIDE_ENCHANTS
+    display_name: '&#00FF88Weathered Chiseled Copper'
+    lore:
+      - '&8ᴘʀᴇᴄɪᴏ ᴅᴇ ᴄᴏᴍᴘʀᴀ'
+      - ''
+      - ' &8| &fUnidad: &#59E91F&l$&r&#59E91F90'
+      - ' &8| &fStack x64: &#59E91F&l$&r&#59E91F5760'
+      - ''
+      - '&7▶ Click para comprar'
+    left_click_commands:
+      - '[close]'
+      - '[player] shop bloques'
+      - '[sound] UI_BUTTON_CLICK'
+
+  'item_10':
+    material: OXIDIZED_CHISELED_COPPER
+    slot: 18
+    item_flags:
+      - HIDE_ATTRIBUTES
+      - HIDE_ENCHANTS
+    display_name: '&#00FF88Oxidized Chiseled Copper'
+    lore:
+      - '&8ᴘʀᴇᴄɪᴏ ᴅᴇ ᴄᴏᴍᴘʀᴀ'
+      - ''
+      - ' &8| &fUnidad: &#59E91F&l$&r&#59E91F90'
+      - ' &8| &fStack x64: &#59E91F&l$&r&#59E91F5760'
+      - ''
+      - '&7▶ Click para comprar'
+    left_click_commands:
+      - '[close]'
+      - '[player] shop bloques'
+      - '[sound] UI_BUTTON_CLICK'
+
+  'item_11':
+    material: WAXED_CHISELED_COPPER
+    slot: 19
+    item_flags:
+      - HIDE_ATTRIBUTES
+      - HIDE_ENCHANTS
+    display_name: '&#00FF88Waxed Chiseled Copper'
+    lore:
+      - '&8ᴘʀᴇᴄɪᴏ ᴅᴇ ᴄᴏᴍᴘʀᴀ'
+      - ''
+      - ' &8| &fUnidad: &#59E91F&l$&r&#59E91F140'
+      - ' &8| &fStack x64: &#59E91F&l$&r&#59E91F8960'
+      - ''
+      - '&7▶ Click para comprar'
+    left_click_commands:
+      - '[close]'
+      - '[player] shop bloques'
+      - '[sound] UI_BUTTON_CLICK'
+
+  'item_12':
+    material: WAXED_EXPOSED_CHISELED_COPPER
+    slot: 20
+    item_flags:
+      - HIDE_ATTRIBUTES
+      - HIDE_ENCHANTS
+    display_name: '&#00FF88Waxed Exposed Chiseled Copper'
+    lore:
+      - '&8ᴘʀᴇᴄɪᴏ ᴅᴇ ᴄᴏᴍᴘʀᴀ'
+      - ''
+      - ' &8| &fUnidad: &#59E91F&l$&r&#59E91F115'
+      - ' &8| &fStack x64: &#59E91F&l$&r&#59E91F7360'
+      - ''
+      - '&7▶ Click para comprar'
+    left_click_commands:
+      - '[close]'
+      - '[player] shop bloques'
+      - '[sound] UI_BUTTON_CLICK'
+
+  'item_13':
+    material: WAXED_WEATHERED_CHISELED_COPPER
+    slot: 21
+    item_flags:
+      - HIDE_ATTRIBUTES
+      - HIDE_ENCHANTS
+    display_name: '&#00FF88Waxed Weathered Chiseled Copper'
+    lore:
+      - '&8ᴘʀᴇᴄɪᴏ ᴅᴇ ᴄᴏᴍᴘʀᴀ'
+      - ''
+      - ' &8| &fUnidad: &#59E91F&l$&r&#59E91F115'
+      - ' &8| &fStack x64: &#59E91F&l$&r&#59E91F7360'
+      - ''
+      - '&7▶ Click para comprar'
+    left_click_commands:
+      - '[close]'
+      - '[player] shop bloques'
+      - '[sound] UI_BUTTON_CLICK'
+
+  'item_14':
+    material: WAXED_OXIDIZED_CHISELED_COPPER
+    slot: 22
+    item_flags:
+      - HIDE_ATTRIBUTES
+      - HIDE_ENCHANTS
+    display_name: '&#00FF88Waxed Oxidized Chiseled Copper'
+    lore:
+      - '&8ᴘʀᴇᴄɪᴏ ᴅᴇ ᴄᴏᴍᴘʀᴀ'
+      - ''
+      - ' &8| &fUnidad: &#59E91F&l$&r&#59E91F115'
+      - ' &8| &fStack x64: &#59E91F&l$&r&#59E91F7360'
+      - ''
+      - '&7▶ Click para comprar'
+    left_click_commands:
+      - '[close]'
+      - '[player] shop bloques'
+      - '[sound] UI_BUTTON_CLICK'
+
+  'item_15':
+    material: EXPOSED_CUT_COPPER
+    slot: 23
+    item_flags:
+      - HIDE_ATTRIBUTES
+      - HIDE_ENCHANTS
+    display_name: '&#00FF88Exposed Cut Copper'
+    lore:
+      - '&8ᴘʀᴇᴄɪᴏ ᴅᴇ ᴄᴏᴍᴘʀᴀ'
+      - ''
+      - ' &8| &fUnidad: &#59E91F&l$&r&#59E91F85'
+      - ' &8| &fStack x64: &#59E91F&l$&r&#59E91F5440'
+      - ''
+      - '&7▶ Click para comprar'
+    left_click_commands:
+      - '[close]'
+      - '[player] shop bloques'
+      - '[sound] UI_BUTTON_CLICK'
+
+  'item_16':
+    material: WEATHERED_CUT_COPPER
+    slot: 24
+    item_flags:
+      - HIDE_ATTRIBUTES
+      - HIDE_ENCHANTS
+    display_name: '&#00FF88Weathered Cut Copper'
+    lore:
+      - '&8ᴘʀᴇᴄɪᴏ ᴅᴇ ᴄᴏᴍᴘʀᴀ'
+      - ''
+      - ' &8| &fUnidad: &#59E91F&l$&r&#59E91F85'
+      - ' &8| &fStack x64: &#59E91F&l$&r&#59E91F5440'
+      - ''
+      - '&7▶ Click para comprar'
+    left_click_commands:
+      - '[close]'
+      - '[player] shop bloques'
+      - '[sound] UI_BUTTON_CLICK'
+
+  'item_17':
+    material: OXIDIZED_CUT_COPPER
+    slot: 25
+    item_flags:
+      - HIDE_ATTRIBUTES
+      - HIDE_ENCHANTS
+    display_name: '&#00FF88Oxidized Cut Copper'
+    lore:
+      - '&8ᴘʀᴇᴄɪᴏ ᴅᴇ ᴄᴏᴍᴘʀᴀ'
+      - ''
+      - ' &8| &fUnidad: &#59E91F&l$&r&#59E91F85'
+      - ' &8| &fStack x64: &#59E91F&l$&r&#59E91F5440'
+      - ''
+      - '&7▶ Click para comprar'
+    left_click_commands:
+      - '[close]'
+      - '[player] shop bloques'
+      - '[sound] UI_BUTTON_CLICK'
+
+  'item_18':
+    material: WAXED_EXPOSED_CUT_COPPER
+    slot: 26
+    item_flags:
+      - HIDE_ATTRIBUTES
+      - HIDE_ENCHANTS
+    display_name: '&#00FF88Waxed Exposed Cut Copper'
+    lore:
+      - '&8ᴘʀᴇᴄɪᴏ ᴅᴇ ᴄᴏᴍᴘʀᴀ'
+      - ''
+      - ' &8| &fUnidad: &#59E91F&l$&r&#59E91F110'
+      - ' &8| &fStack x64: &#59E91F&l$&r&#59E91F7040'
+      - ''
+      - '&7▶ Click para comprar'
+    left_click_commands:
+      - '[close]'
+      - '[player] shop bloques'
+      - '[sound] UI_BUTTON_CLICK'
+
+  'item_19':
+    material: WAXED_WEATHERED_CUT_COPPER
+    slot: 27
+    item_flags:
+      - HIDE_ATTRIBUTES
+      - HIDE_ENCHANTS
+    display_name: '&#00FF88Waxed Weathered Cut Copper'
+    lore:
+      - '&8ᴘʀᴇᴄɪᴏ ᴅᴇ ᴄᴏᴍᴘʀᴀ'
+      - ''
+      - ' &8| &fUnidad: &#59E91F&l$&r&#59E91F110'
+      - ' &8| &fStack x64: &#59E91F&l$&r&#59E91F7040'
+      - ''
+      - '&7▶ Click para comprar'
+    left_click_commands:
+      - '[close]'
+      - '[player] shop bloques'
+      - '[sound] UI_BUTTON_CLICK'
+
+  'item_20':
+    material: WAXED_OXIDIZED_CUT_COPPER
+    slot: 28
+    item_flags:
+      - HIDE_ATTRIBUTES
+      - HIDE_ENCHANTS
+    display_name: '&#00FF88Waxed Oxidized Cut Copper'
+    lore:
+      - '&8ᴘʀᴇᴄɪᴏ ᴅᴇ ᴄᴏᴍᴘʀᴀ'
+      - ''
+      - ' &8| &fUnidad: &#59E91F&l$&r&#59E91F110'
+      - ' &8| &fStack x64: &#59E91F&l$&r&#59E91F7040'
+      - ''
+      - '&7▶ Click para comprar'
+    left_click_commands:
+      - '[close]'
+      - '[player] shop bloques'
+      - '[sound] UI_BUTTON_CLICK'
+
+  'item_21':
+    material: EXPOSED_COPPER_GRATE
+    slot: 29
+    item_flags:
+      - HIDE_ATTRIBUTES
+      - HIDE_ENCHANTS
+    display_name: '&#00FF88Exposed Copper Grate'
+    lore:
+      - '&8ᴘʀᴇᴄɪᴏ ᴅᴇ ᴄᴏᴍᴘʀᴀ'
+      - ''
+      - ' &8| &fUnidad: &#59E91F&l$&r&#59E91F85'
+      - ' &8| &fStack x64: &#59E91F&l$&r&#59E91F5440'
+      - ''
+      - '&7▶ Click para comprar'
+    left_click_commands:
+      - '[close]'
+      - '[player] shop bloques'
+      - '[sound] UI_BUTTON_CLICK'
+
+  'item_22':
+    material: WEATHERED_COPPER_GRATE
+    slot: 30
+    item_flags:
+      - HIDE_ATTRIBUTES
+      - HIDE_ENCHANTS
+    display_name: '&#00FF88Weathered Copper Grate'
+    lore:
+      - '&8ᴘʀᴇᴄɪᴏ ᴅᴇ ᴄᴏᴍᴘʀᴀ'
+      - ''
+      - ' &8| &fUnidad: &#59E91F&l$&r&#59E91F85'
+      - ' &8| &fStack x64: &#59E91F&l$&r&#59E91F5440'
+      - ''
+      - '&7▶ Click para comprar'
+    left_click_commands:
+      - '[close]'
+      - '[player] shop bloques'
+      - '[sound] UI_BUTTON_CLICK'
+
+  'item_23':
+    material: OXIDIZED_COPPER_GRATE
+    slot: 31
+    item_flags:
+      - HIDE_ATTRIBUTES
+      - HIDE_ENCHANTS
+    display_name: '&#00FF88Oxidized Copper Grate'
+    lore:
+      - '&8ᴘʀᴇᴄɪᴏ ᴅᴇ ᴄᴏᴍᴘʀᴀ'
+      - ''
+      - ' &8| &fUnidad: &#59E91F&l$&r&#59E91F85'
+      - ' &8| &fStack x64: &#59E91F&l$&r&#59E91F5440'
+      - ''
+      - '&7▶ Click para comprar'
+    left_click_commands:
+      - '[close]'
+      - '[player] shop bloques'
+      - '[sound] UI_BUTTON_CLICK'
+
+  'item_24':
+    material: WAXED_COPPER_GRATE
+    slot: 32
+    item_flags:
+      - HIDE_ATTRIBUTES
+      - HIDE_ENCHANTS
+    display_name: '&#00FF88Waxed Copper Grate'
+    lore:
+      - '&8ᴘʀᴇᴄɪᴏ ᴅᴇ ᴄᴏᴍᴘʀᴀ'
+      - ''
+      - ' &8| &fUnidad: &#59E91F&l$&r&#59E91F135'
+      - ' &8| &fStack x64: &#59E91F&l$&r&#59E91F8640'
+      - ''
+      - '&7▶ Click para comprar'
+    left_click_commands:
+      - '[close]'
+      - '[player] shop bloques'
+      - '[sound] UI_BUTTON_CLICK'
+
+  'item_25':
+    material: WAXED_EXPOSED_COPPER_GRATE
+    slot: 33
+    item_flags:
+      - HIDE_ATTRIBUTES
+      - HIDE_ENCHANTS
+    display_name: '&#00FF88Waxed Exposed Copper Grate'
+    lore:
+      - '&8ᴘʀᴇᴄɪᴏ ᴅᴇ ᴄᴏᴍᴘʀᴀ'
+      - ''
+      - ' &8| &fUnidad: &#59E91F&l$&r&#59E91F110'
+      - ' &8| &fStack x64: &#59E91F&l$&r&#59E91F7040'
+      - ''
+      - '&7▶ Click para comprar'
+    left_click_commands:
+      - '[close]'
+      - '[player] shop bloques'
+      - '[sound] UI_BUTTON_CLICK'
+
+  'item_26':
+    material: WAXED_WEATHERED_COPPER_GRATE
+    slot: 34
+    item_flags:
+      - HIDE_ATTRIBUTES
+      - HIDE_ENCHANTS
+    display_name: '&#00FF88Waxed Weathered Copper Grate'
+    lore:
+      - '&8ᴘʀᴇᴄɪᴏ ᴅᴇ ᴄᴏᴍᴘʀᴀ'
+      - ''
+      - ' &8| &fUnidad: &#59E91F&l$&r&#59E91F110'
+      - ' &8| &fStack x64: &#59E91F&l$&r&#59E91F7040'
+      - ''
+      - '&7▶ Click para comprar'
+    left_click_commands:
+      - '[close]'
+      - '[player] shop bloques'
+      - '[sound] UI_BUTTON_CLICK'
+
+  'item_27':
+    material: WAXED_OXIDIZED_COPPER_GRATE
+    slot: 35
+    item_flags:
+      - HIDE_ATTRIBUTES
+      - HIDE_ENCHANTS
+    display_name: '&#00FF88Waxed Oxidized Copper Grate'
+    lore:
+      - '&8ᴘʀᴇᴄɪᴏ ᴅᴇ ᴄᴏᴍᴘʀᴀ'
+      - ''
+      - ' &8| &fUnidad: &#59E91F&l$&r&#59E91F110'
+      - ' &8| &fStack x64: &#59E91F&l$&r&#59E91F7040'
+      - ''
+      - '&7▶ Click para comprar'
+    left_click_commands:
+      - '[close]'
+      - '[player] shop bloques'
+      - '[sound] UI_BUTTON_CLICK'
+
+  # ============================================================================
+  # FILTRO Y NAVBAR INFERIOR (FILA 5: SLOTS 36 A 44)
+  # ============================================================================
+  'Boton_Filtro':
+    material: COMPARATOR
+    slot: 36
+    item_flags:
+      - HIDE_ATTRIBUTES
+      - HIDE_ENCHANTS
+    enchantments:
+      - DURABILITY;1
+    display_name: '&#FFD700Filtrar Categoría'
+    lore:
+      - '&8ᴇʟɪɂᴇ ᴄᴀᴛᴇɂᴏʀɪᴀ'
+      - ''
+      - ' &#FFD700● Todos'
+      - ' &7● Bloques'
+      - ' &7● Farmeo'
+      - ' &7● Comida'
+      - ' &7● Mobs'
+      - ' &7● Equipo'
+      - ' &7● Redstone'
+      - ' &7● Misceláneo'
+      - ' &7● Tintes'
+      - ' &7● Trims'
+      - ' &7● Encantamientos'
+      - ''
+      - '&7▶ Click para cambiar'
+    left_click_commands:
+      - '[openguimenu] compra_bloques'
+      - '[sound] UI_BUTTON_CLICK'
+
+  'Pagina_Anterior':
+    material: ARROW
+    slot: 39
+    item_flags:
+      - HIDE_ATTRIBUTES
+    display_name: '&#FFD700◀ Página Anterior'
+    lore:
+      - '&8| &fPágina: &711&8/&717'
+      - ''
+    left_click_commands:
+      - '[openguimenu] compra_todos_10'
+      - '[sound] ITEM_BOOK_PAGE_TURN'
+
+  'Boton_Volver':
+    material: DARK_OAK_DOOR
+    slot: 40
+    item_flags:
+      - HIDE_ATTRIBUTES
+    display_name: '&cVolver al Menú'
+    lore:
+      - '&8| &fRegresar a la selección principal'
+      - ''
+    left_click_commands:
+      - '[openguimenu] tienda_principal'
+      - '[sound] UI_BUTTON_CLICK'
+
+  'Pagina_Siguiente':
+    material: ARROW
+    slot: 41
+    item_flags:
+      - HIDE_ATTRIBUTES
+    display_name: '&#FFD700Página Siguiente ▶'
+    lore:
+      - '&8| &fPágina: &711&8/&717'
+      - ''
+    left_click_commands:
+      - '[openguimenu] compra_todos_12'
+      - '[sound] ITEM_BOOK_PAGE_TURN'
+
+  'Boton_SellGUI':
+    material: HOPPER
+    slot: 43
+    item_flags:
+      - HIDE_ATTRIBUTES
+    display_name: '&#59E91FVenta Rápida'
+    lore:
+      - '&8ᴠᴇɴᴛᴀ ᴀᴗᴛᴏᴍᴀᴛɪᴄᴀ'
+      - ''
+      - ' &fVende ítems en masa'
+      - ' &fde forma instantánea.'
+      - ''
+      - '&7▶ Click para abrir'
+    left_click_commands:
+      - '[close]'
+      - '[player] sellgui'
+      - '[sound] ENTITY_EXPERIENCE_ORB_PICKUP'
+
+  'Info_Balance':
+    material: head-%player_name%
+    slot: 44
+    item_flags:
+      - HIDE_ATTRIBUTES
+    display_name: '&#FFD700Tu Economía'
+    lore:
+      - '&8ᴛᴗ ᴇᴄᴏɴᴏᴍɪᴀ'
+      - ''
+      - ' &8| &fDinero: &#59E91F&l$&r&#59E91F%vault_eco_balance_formatted%'
+      - ' &8| &fAlmas: &#34B0F3%thundercurrencys_almas%🔥'
+      - ' &8| &fZafiros: &#1E6BFF%thundercurrencys_zafiros%💎'
+      - ''

@@ -1,0 +1,208 @@
+{
+  "metadata": {
+    "serverName": "Thunder Survival 1.21.x",
+    "lastUpdated": "2026-09-13T11:46:46.221Z",
+    "networkMode": "Híbrido (Java + Bedrock Geyser / Premium + No-Premium)",
+    "region": "España & LATAM"
+  },
+  "kpis": {
+    "currentCcu": 184,
+    "peakCcuToday": 268,
+    "activePlayersMonth": 28450,
+    "newPlayersToday": 142,
+    "avgPlaytimeMinutes": 68.4,
+    "retentionD1": 28.5,
+    "retentionD7": 11.2,
+    "retentionD30": 4.8,
+    "currentTps": 19.94,
+    "avgMspt": 31.8,
+    "monthlyRevenueEur": 2430,
+    "storeConversionRate": 1.85,
+    "arppuEur": 4.6
+  },
+  "platformBreakdown": {
+    "bedrockMobile": 46.5,
+    "javaNoPremium": 32,
+    "javaPremium": 15.5,
+    "bedrockConsole": 6
+  },
+  "geography": [
+    {
+      "country": "México",
+      "share": 38.5,
+      "ccuAvg": 71
+    },
+    {
+      "country": "España",
+      "share": 22,
+      "ccuAvg": 40
+    },
+    {
+      "country": "Argentina",
+      "share": 15.2,
+      "ccuAvg": 28
+    },
+    {
+      "country": "Colombia",
+      "share": 11.8,
+      "ccuAvg": 22
+    },
+    {
+      "country": "Chile",
+      "share": 7,
+      "ccuAvg": 13
+    },
+    {
+      "country": "Otros LATAM",
+      "share": 5.5,
+      "ccuAvg": 10
+    }
+  ],
+  "weeklyTrend": [
+    {
+      "day": "Lunes",
+      "newPlayers": 110,
+      "peakCcu": 210,
+      "avgMspt": 29.4,
+      "revenue": 290
+    },
+    {
+      "day": "Martes",
+      "newPlayers": 98,
+      "peakCcu": 195,
+      "avgMspt": 28.1,
+      "revenue": 215
+    },
+    {
+      "day": "Miércoles",
+      "newPlayers": 135,
+      "peakCcu": 240,
+      "avgMspt": 33.2,
+      "revenue": 340
+    },
+    {
+      "day": "Jueves",
+      "newPlayers": 122,
+      "peakCcu": 225,
+      "avgMspt": 30.5,
+      "revenue": 280
+    },
+    {
+      "day": "Viernes",
+      "newPlayers": 180,
+      "peakCcu": 295,
+      "avgMspt": 36.8,
+      "revenue": 510
+    },
+    {
+      "day": "Sábado",
+      "newPlayers": 245,
+      "peakCcu": 340,
+      "avgMspt": 41.2,
+      "revenue": 680
+    },
+    {
+      "day": "Domingo",
+      "newPlayers": 210,
+      "peakCcu": 315,
+      "avgMspt": 38.4,
+      "revenue": 590
+    }
+  ],
+  "retentionCurve": [
+    {
+      "day": "Día 1 (24h)",
+      "actual": 28.5,
+      "benchmarkMin": 20,
+      "benchmarkOptimal": 25
+    },
+    {
+      "day": "Día 3 (72h)",
+      "actual": 18.2,
+      "benchmarkMin": 12,
+      "benchmarkOptimal": 16
+    },
+    {
+      "day": "Día 7 (1 sem)",
+      "actual": 11.2,
+      "benchmarkMin": 7,
+      "benchmarkOptimal": 10
+    },
+    {
+      "day": "Día 14 (2 sem)",
+      "actual": 7.5,
+      "benchmarkMin": 4.5,
+      "benchmarkOptimal": 7
+    },
+    {
+      "day": "Día 30 (1 mes)",
+      "actual": 4.8,
+      "benchmarkMin": 2.5,
+      "benchmarkOptimal": 4
+    }
+  ],
+  "paymentMethods": [
+    {
+      "method": "Mercado Pago (LATAM)",
+      "share": 44,
+      "volumeEur": 1069.2
+    },
+    {
+      "method": "OXXO / Efectivo (México)",
+      "share": 23.5,
+      "volumeEur": 571.05
+    },
+    {
+      "method": "PayPal / Tarjetas Internacionales",
+      "share": 22,
+      "volumeEur": 534.6
+    },
+    {
+      "method": "Pago Fácil / Rapipago (Argentina)",
+      "share": 6.5,
+      "volumeEur": 157.95
+    },
+    {
+      "method": "Otros métodos locales",
+      "share": 4,
+      "volumeEur": 97.2
+    }
+  ],
+  "stressTestProfile": [
+    {
+      "ccu": 25,
+      "mspt": 18.5,
+      "status": "Óptimo"
+    },
+    {
+      "ccu": 50,
+      "mspt": 22.1,
+      "status": "Óptimo"
+    },
+    {
+      "ccu": 100,
+      "mspt": 27.4,
+      "status": "Óptimo"
+    },
+    {
+      "ccu": 150,
+      "mspt": 32,
+      "status": "Saludable"
+    },
+    {
+      "ccu": 200,
+      "mspt": 37.8,
+      "status": "Alerta Ligera"
+    },
+    {
+      "ccu": 250,
+      "mspt": 44.5,
+      "status": "Alerta Alta"
+    },
+    {
+      "ccu": 300,
+      "mspt": 52.3,
+      "status": "Sobrecarga (Lag)"
+    }
+  ]
+}

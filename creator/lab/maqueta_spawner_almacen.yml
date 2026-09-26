@@ -1,0 +1,173 @@
+menu_title: '&0&l|&r &0Spawner ▶ &8Almacén &7[1/1]'
+open_command:
+  - maqueta_spawner_almacen
+size: 54
+open_requirement:
+  requirements: {}
+register_command: true
+update: true
+
+items:
+  # =========================================================================
+  # EJEMPLOS DE DROPS ALMACENADOS (SLOTS 0 A 44)
+  # =========================================================================
+  'Drop_Ejemplo_1':
+    material: ROTTEN_FLESH
+    amount: 64
+    slot: 10
+    display_name: '&#FFF275Carne Podrida'
+    lore:
+      - '&8ʙᴏᴛɪɴ ᴅᴇ ꜱᴘᴀᴡɴᴇʀ'
+      - ''
+      - ' &8| &fCantidad: &e64 unidades'
+      - ''
+      - '&7▶ Click para retirar al inventario'
+
+  'Drop_Ejemplo_2':
+    material: ROTTEN_FLESH
+    amount: 64
+    slot: 11
+    display_name: '&#FFF275Carne Podrida'
+    lore:
+      - '&8ʙᴏᴛɪɴ ᴅᴇ ꜱᴘᴀᴡɴᴇʀ'
+      - ''
+      - ' &8| &fCantidad: &e64 unidades'
+      - ''
+      - '&7▶ Click para retirar al inventario'
+
+  'Drop_Ejemplo_3':
+    material: CARROT
+    amount: 14
+    slot: 12
+    display_name: '&#FFF275Zanahoria'
+    lore:
+      - '&8ʙᴏᴛɪɴ ʀᴀʀᴏ (2.5%)'
+      - ''
+      - ' &8| &fCantidad: &e14 unidades'
+      - ''
+      - '&7▶ Click para retirar al inventario'
+
+  'Drop_Ejemplo_4':
+    material: IRON_INGOT
+    amount: 6
+    slot: 13
+    display_name: '&#FFF275Lingote de Hierro'
+    lore:
+      - '&8ʙᴏᴛɪɴ ᴇꜱᴘᴇᴄɪᴀʟ (1.0%)'
+      - ''
+      - ' &8| &fCantidad: &e6 unidades'
+      - ''
+      - '&7▶ Click para retirar al inventario'
+
+  # =========================================================================
+  # FILA 6: BARRA DE CONTROL INFERIOR (SLOTS 45 A 53)
+  # =========================================================================
+
+  # SLOT 45: PÁGINA ANTERIOR
+  'Btn_Pagina_Anterior':
+    material: SPECTRAL_ARROW
+    slot: 45
+    item_flags:
+      - HIDE_ATTRIBUTES
+    display_name: '&#FFF275← Página Anterior'
+    lore:
+      - '&7Ir a la página anterior'
+
+  # SLOT 47: ORDENAR ALMACÉN
+  'Btn_Ordenar':
+    material: CAULDRON
+    slot: 47
+    item_flags:
+      - HIDE_ATTRIBUTES
+    display_name: '&#FFF275Ordenar Almacén'
+    lore:
+      - '&8ᴏʀɢᴀɴɪᴢᴀᴄɪᴏɴ'
+      - ''
+      - ' &fAgrupa y ordena todos los'
+      - ' &fartículos acumulados.'
+      - ''
+      - '&7▶ Click para ordenar'
+    left_click_commands:
+      - '[sound] UI_BUTTON_CLICK'
+
+  # SLOT 48: FILTRO DE BOTÍN
+  'Btn_Filtro':
+    material: HOPPER
+    slot: 48
+    item_flags:
+      - HIDE_ATTRIBUTES
+    display_name: '&#FFF275Filtro de Botín'
+    lore:
+      - '&8ᴄᴏɴꜰɪɢᴜʀᴀᴄɪᴏɴ'
+      - ''
+      - ' &fConfigura qué ítems deseas'
+      - ' &frecolectar o descartar.'
+      - ''
+      - '&7▶ Click para abrir filtro'
+    left_click_commands:
+      - '[sound] UI_BUTTON_CLICK'
+
+  # SLOT 49: VOLVER AL PANEL PRINCIPAL
+  'Boton_Volver':
+    material: DARK_OAK_DOOR
+    slot: 49
+    item_flags:
+      - HIDE_ATTRIBUTES
+    display_name: '&cVolver Atrás'
+    lore:
+      - '&7Regresar al panel del spawner'
+    left_click_commands:
+      - '[openguimenu] maqueta_spawner'
+      - '[sound] BLOCK_NOTE_BLOCK_BASS'
+
+  # SLOT 50: RETIRAR TODO (TAKE ALL)
+  'Btn_Retirar_Todo':
+    material: BUNDLE
+    slot: 50
+    item_flags:
+      - HIDE_ATTRIBUTES
+    display_name: '&#59E91FRetirar Todo el Botín'
+    lore:
+      - '&8ʀᴇᴄᴏʟᴇᴄᴄɪᴏɴ'
+      - ''
+      - ' &fTransfiere todos los ítems'
+      - ' &falmacenados a tu inventario.'
+      - ''
+      - '&7▶ Click para recoger todo'
+    left_click_commands:
+      - '[sound] ENTITY_ITEM_PICKUP'
+
+  # SLOT 51: SOLTAR PÁGINA AL SUELO
+  'Btn_Tirar_Todo':
+    material: DROPPER
+    slot: 51
+    item_flags:
+      - HIDE_ATTRIBUTES
+    display_name: '&#FF4D4DSoltar al Suelo'
+    lore:
+      - '&8ᴅᴇꜱᴄᴀʀɢᴀ'
+      - ''
+      - ' &fVuelca todos los ítems de'
+      - ' &festa página sobre el spawner.'
+      - ''
+      - '&7▶ Click para soltar'
+    left_click_commands:
+      - '[sound] BLOCK_DISPENSER_DISPENSE'
+
+  # SLOT 53: PÁGINA SIGUIENTE
+  'Btn_Pagina_Siguiente':
+    material: SPECTRAL_ARROW
+    slot: 53
+    item_flags:
+      - HIDE_ATTRIBUTES
+    display_name: '&#FFF275Página Siguiente →'
+    lore:
+      - '&7Ir a la siguiente página'
+
+  # RELLENO NAVBAR (SLOTS 46, 52)
+  'Filtro_Navbar':
+    material: GRAY_STAINED_GLASS_PANE
+    display_name: ' '
+    slots:
+      - 46
+      - 52

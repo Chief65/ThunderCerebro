@@ -1,0 +1,2 @@
+get logs/latest.log creator/lab/latest.log
+bye

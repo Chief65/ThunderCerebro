@@ -1,0 +1,2 @@
+put creator/lab/encantamientos.yml plugins/ShopGUIPlus/shops/encantamientos.yml
+bye

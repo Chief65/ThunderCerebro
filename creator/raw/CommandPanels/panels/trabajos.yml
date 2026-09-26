@@ -1,0 +1,167 @@
+title: '&0&l|&r &0Dash ▶ &8Fragmentos '
+type: inventory
+rows: 6
+layout:
+### RELLENO
+  '1':
+  - relleno1
+  '10':
+  - relleno10
+  '19':
+  - relleno19
+  '28':
+  - relleno28
+  '37':
+  - relleno37
+  '46':
+  - relleno46
+  
+### BOTONES
+  '0':
+  - rachas
+  '9':
+  - ubicaciones
+  '18':
+  - temporada
+  '27':
+  - trabajos
+  '36':
+  - recetas
+  '45':
+  - jugador
+
+### EJEMPLO
+  '2':
+  - espada1
+  '3':
+  - arco2
+  
+  
+  
+items:
+### RELLENO
+  relleno1:
+    material: GRAY_STAINED_GLASS_PANE
+    stack: 1
+  relleno10:
+    material: GRAY_STAINED_GLASS_PANE
+    stack: 1
+  relleno19:
+    material: GRAY_STAINED_GLASS_PANE
+    stack: 1
+  relleno28:
+    material: BLACK_STAINED_GLASS_PANE
+    stack: 1
+  relleno37:
+    material: GRAY_STAINED_GLASS_PANE
+    stack: 1
+  relleno46:
+    material: GRAY_STAINED_GLASS_PANE
+    stack: 1
+ 
+### BOTONES 
+  jugador:
+    material: DARK_OAK_DOOR
+    stack: 1
+    name: '&7Inicio'
+    lore:
+    - ''
+    - '&8Click para ver'
+    actions:
+      commands:
+        - '[sound] BLOCK.END_PORTAL_FRAME.FILL volume=1 pitch=0.8'
+        - '[open] inicio'
+    
+  ubicaciones:
+    material: SPYGLASS
+    stack: 1
+    name: '&7Ubicaciones'
+    lore:
+    - ''
+    - '&8Click para ver'
+    actions:
+      commands:
+        - '[sound] BLOCK.END_PORTAL_FRAME.FILL volume=1 pitch=0.8'
+        - '[open] ubicaciones'
+        
+  rachas:
+    material: CAMPFIRE
+    stack: 1
+    name: '&7Rachas'
+    lore:
+    - ''
+    - '&8Click para ver'
+    actions:
+      commands:
+        - '[sound] BLOCK.END_PORTAL_FRAME.FILL volume=1 pitch=0.8'
+        - '[open] rachas'
+        
+  trabajos:
+    material: AMETHYST_SHARD
+    stack: 1
+    enchantments:
+    - unbreaking 1
+    name: '&a⮕ Fragmentos'
+    lore:
+    - ''
+        
+  recetas:
+    material: NETHERITE_UPGRADE_SMITHING_TEMPLATE
+    stack: 1
+    name: '&7Mejoras'
+    lore:
+    - ''
+    - '&8Click para ver'
+    actions:
+      commands:
+        - '[sound] BLOCK.END_PORTAL_FRAME.FILL volume=1 pitch=0.8'
+        - '[open] recetas'
+        
+  temporada:
+    material: EXPERIENCE_BOTTLE
+    stack: 1
+    name: '&7Niveles'
+    lore:
+    - ''
+    - '&8Click para ver'
+    actions:
+      commands:
+        - '[sound] BLOCK.END_PORTAL_FRAME.FILL volume=1 pitch=0.8'
+        - '[open] niveles'
+
+
+### EJEMPLO
+  espada1:
+    material: NETHERITE_SWORD
+    enchantments:
+    - unbreaking 1
+    name: '&#3412D2🗡 &8| &fEspada &e&k|&r&#3412D2☁&e&k|&r&#3412D2&lS&#4111CD&lT&#4D10C8&lO&#5A0EC3&lR&#660DBE&lM&e&k|&r&#660DBE☁&e&k|&r &8[&bLvl 1&8]'
+    lore:
+    - '&8Espada OP'
+    - ''
+    - ' &8Mejorable:'
+    - ' &8&l|&r &7Usa: &e/mejoras'
+    - ' &8&l|&r &7Max lvl: 20'
+    - ''
+    - ' &8Atributos:'
+    - ' &8● &7Afilado 10'
+    - ' &8● &7Afilado 8'
+    - ' &8● &7Afilado 5'
+    - ''
+    - ' &8⁂ §x§F§F§4§B§4§B§l¡§x§F§F§8§B§2§D§lL§x§F§F§D§0§3§1§lI§x§D§C§F§F§3§9§lM§x§A§5§F§F§3§F§lI§x§6§D§F§F§4§5§lT§x§3§B§F§F§C§7§lE§x§5§8§D§0§F§F§lD§x§5§4§8§9§F§F§l!&r §x§F§D§9§A§0§0§m⭐§x§F§A§B§3§0§0§m⭐§x§F§6§C§D§0§0§m⭐§x§F§3§E§6§0§0§m⭐§x§E§F§F§F§0§0§m⭐'
+    - ''
+    - '&8&m                                 '
+    - ''
+    - ' &8Necesario:'
+    - ' &8[&c✘&8] &7Fragmentos Storm 0/16 '
+    - ' &8[&c✘&8] &7Dinero &7&l$&r&7100k'
+    - ''
+    - '&8&m                                 '
+    - ''
+    - '&c▶ Materiales Insuficientes'
+    stack: 1
+  arco2:
+    material: BOW
+    enchantments:
+    - unbreaking 1
+    stack: 1

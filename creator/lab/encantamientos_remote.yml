@@ -1,0 +1,252 @@
+encantamientos:
+  name: "&0&l|&r &0Mercado ▶ #D48BFFEncantamientos"
+  economy: EXP_LEVELS
+  size: 45
+  fillItem:
+    material: AIR
+    name: " "
+  buttons:
+    goBack:
+      slot: -1
+    previousPage:
+      slot: 39
+    nextPage:
+      slot: 41
+  items:
+    1:
+      type: item
+      item:
+        material: ENCHANTED_BOOK
+        name: "#FFF275Enchanted Book"
+        quantity: 1
+      buyPrice: 50
+      sellPrice: -1
+      slot: 9
+    2:
+      type: item
+      item:
+        material: ENCHANTED_BOOK
+        name: "#FFF275Enchanted Book"
+        quantity: 1
+      buyPrice: 50
+      sellPrice: -1
+      slot: 10
+    3:
+      type: item
+      item:
+        material: ENCHANTED_BOOK
+        name: "#FFF275Enchanted Book"
+        quantity: 1
+      buyPrice: 50
+      sellPrice: -1
+      slot: 11
+    4:
+      type: item
+      item:
+        material: ENCHANTED_BOOK
+        name: "#FFF275Enchanted Book"
+        quantity: 1
+      buyPrice: 50
+      sellPrice: -1
+      slot: 12
+    5:
+      type: item
+      item:
+        material: ENCHANTED_BOOK
+        name: "#FFF275Enchanted Book"
+        quantity: 1
+      buyPrice: 50
+      sellPrice: -1
+      slot: 13
+    6:
+      type: item
+      item:
+        material: ENCHANTED_BOOK
+        name: "#FFF275Enchanted Book"
+        quantity: 1
+      buyPrice: 50
+      sellPrice: -1
+      slot: 14
+    7:
+      type: item
+      item:
+        material: ENCHANTED_BOOK
+        name: "#FFF275Enchanted Book"
+        quantity: 1
+      buyPrice: 50
+      sellPrice: -1
+      slot: 15
+    8:
+      type: item
+      item:
+        material: ENCHANTED_BOOK
+        name: "#FFF275Enchanted Book"
+        quantity: 1
+      buyPrice: 50
+      sellPrice: -1
+      slot: 16
+    9:
+      type: item
+      item:
+        material: ENCHANTED_BOOK
+        name: "#FFF275Enchanted Book"
+        quantity: 1
+      buyPrice: 50
+      sellPrice: -1
+      slot: 17
+    10:
+      type: dummy
+      item:
+        material: SPYGLASS
+        quantity: 1
+        name: "#FFF275Catálogo de Precios"
+        lore:
+          - "&8Catalogo de Venta"
+          - ""
+          - " &fConsulta el valor de"
+          - " &ftus excedentes."
+          - ""
+          - "&7▶ Click para ver precios"
+      commandsOnClick:
+        - "dm open precios_todos"
+      slot: 36
+    11:
+      type: special
+      special: balance
+      item:
+        material: EXPERIENCE_BOTTLE
+        quantity: 1
+        glow: true
+        name: "#D48BFFTu Economía"
+        lore:
+          - "&8Tu Economía"
+          - ""
+          - " &8| &fNivel de XP: #D48BFF%balance% LVL DE XP"
+          - ""
+      slot: 44
+    12:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 37
+    13:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 38
+    14:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 39
+    15:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 41
+    16:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 42
+    17:
+      type: dummy
+      item:
+        material: HOPPER
+        quantity: 1
+        name: "#FFF275Venta Rápida"
+        lore:
+          - "&8Venta Automática"
+          - ""
+          - " &fVende ítems en masa"
+          - " &fde forma instantánea."
+          - ""
+          - "&7▶ Click para abrir"
+      commandsOnClick:
+        - "/sellgui"
+      slot: 43
+    18:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 0
+    19:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 1
+    20:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 2
+    21:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 3
+    22:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 4
+    23:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 5
+    24:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 6
+    25:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 7
+    26:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 8
+    27:
+      type: dummy
+      item:
+        material: DARK_OAK_DOOR
+        quantity: 1
+        name: "&cVolver al Menú"
+        lore:
+          - "&7Regresar a la selección de experiencia"
+      commandsOnClick:
+        - "dm open mercado_xp"
+      slot: 40
+

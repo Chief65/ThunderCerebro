@@ -1,0 +1,37 @@
+# ThunderCurrencys - Configuracion
+# Base de datos SQLite
+database:
+  file: "thundercurrencys.db"
+
+# Economias predefinidas
+# Cada economia tiene:
+#   alias: abreviacion para el comando /playerpoints:<alias>
+#   placeholder: nombre del placeholder %thundercurrencys_<placeholder>%
+#   permanent: true = permanente, false = temporal
+#   duration: duracion en minutos (solo si permanent: false, 0 = sin limite)
+#   default-balance: balance inicial para jugadores nuevos
+economies:
+  almas:
+    alias: "p"
+    placeholder: "almas"
+    permanent: true
+    duration: 0
+    default-balance: 0
+  zafiros:
+    alias: "zafiros"
+    placeholder: "zafiros"
+    permanent: true
+    duration: 0
+    default-balance: 0
+  afkpoints:
+    alias: "afk"
+    placeholder: "afkpoints"
+    permanent: true
+    duration: 0
+    default-balance: 0
+  cromaticos:
+    alias: "cr"
+    placeholder: "cromaticos"
+    permanent: true
+    duration: 0
+    default-balance: 0

@@ -1,0 +1,103 @@
+{% set redirectToLogin %}
+	{% if not basket.ign %}
+		data-izimodal-open="#modal-login"
+	{% endif %}
+{% endset %}
+{% if basket.currency == 'USD' %}
+    {% set currencySymbol = '$' %}
+    {% set currencyAfter = false %}
+{% elseif basket.currency == 'EUR' %}
+    {% set currencySymbol = '€' %}
+    {% set currencyAfter = true %}
+{% elseif basket.currency == 'GBP' %}
+    {% set currencySymbol = '£' %}
+    {% set currencyAfter = false %}
+{% else %}
+    {% set currencySymbol = basket.currency %}
+    {% set currencyAfter = true %}
+{% endif %}
+
+<div class="category__list--item" style="background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.08);border-radius:10px;overflow:hidden;cursor:pointer;position:relative;">
+
+  <!-- IMAGEN con fondo amarillo y padding -->
+  <div style="width:100%;aspect-ratio:1/1;overflow:hidden;background:#facc15;padding:16px;box-sizing:border-box;position:relative;">
+    <img src="{{ package.image.url }}" data-remote="/package/{{ package.id }}" class="triplezone__toogle--modal" style="width:100%;height:100%;object-fit:contain;border:0;">
+
+    <!-- BADGES -->
+    {% if package.id == 7478988 %}
+      <div style="position:absolute;bottom:10px;left:10px;background:#f97316;color:#ffffff;font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:1.5px;padding:5px 10px;border-radius:6px;white-space:nowrap;z-index:99;">🏆 El más comprado</div>
+    {% endif %}
+    {% if package.id == 7478989 %}
+      <div style="position:absolute;bottom:10px;left:10px;background:#a855f7;color:#ffffff;font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:1.5px;padding:5px 10px;border-radius:6px;white-space:nowrap;z-index:99;">💎 Mayor valor</div>
+    {% endif %}
+    {% if package.id == 7493378 %}
+      <div style="position:absolute;bottom:10px;left:10px;background:#22c55e;color:#ffffff;font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:1.5px;padding:5px 10px;border-radius:6px;white-space:nowrap;z-index:99;">⭐ Recomendado</div>
+    {% endif %}
+    {% if package.id == 7136759 %}
+      <div style="position:absolute;bottom:10px;left:10px;background:#ef4444;color:#ffffff;font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:1.5px;padding:5px 10px;border-radius:6px;white-space:nowrap    ;z-index:99;">⚡ Llave más OP</div>
+    {% endif %}
+
+    <!-- BOTÓN CARRITO esquinado -->
+    {% if package.basket %}
+      <a href="/checkout/packages/remove/{{ package.id }}" style="position:absolute;top:10px;right:10px;width:32px;height:32px;background:#111827;border-radius:6px;display:flex;align-items:center;justify-content:center;text-decoration:none;">
+        <i class="mdi mdi-minus" style="color:#ffffff;font-size:16px;"></i>
+      </a>
+    {% else %}
+      {% if package.type != "subscription" %}
+        <a href="/checkout/packages/add/{{ package.id }}/single" style="position:absolute;top:10px;right:10px;width:32px;height:32px;background:#111827;border-radius:6px;display:flex;align-items:center;justify-content:center;text-decoration:none;" {{ redirectToLogin }}>
+          <i class="mdi mdi-cart" style="color:#ffffff;font-size:16px;"></i>
+        </a>
+      {% endif %}
+      {% if package.type != "single" %}
+        <a href="/checkout/packages/add/{{ package.id }}/subscribe" style="position:absolute;top:10px;right:10px;width:32px;height:32px;background:#111827;border-radius:6px;display:flex;align-items:center;justify-content:center;text-decoration:none;" {{ redirectToLogin }}>
+          <i class="mdi mdi-cart" style="color:#ffffff;font-size:16px;"></i>
+        </a>
+      {% endif %}
+    {% endif %}
+
+  </div>
+
+  <!-- INFO -->
+  <div style="padding:12px 14px 14px 14px;">
+
+    <!-- NOMBRE -->
+    <p style="margin:0 0 10px 0;font-size:15px;font-weight:700;color:#ffffff;line-height:1.3;">{{ package.name }}</p>
+
+    <!-- PRECIO -->
+    <div style="margin-bottom:10px;min-height:44px;">
+      {% if package.customPrice == false and package.price > 0 %}
+        {% if package.discount.applied %}
+          <p style="margin:0;font-size:11px;color:rgba(255,255,255,0.35);text-decoration:line-through;line-height:1.4;">
+            {% if not currencyAfter %}{{ currencySymbol }}{% endif %}{{ package.discount.original|money }}{% if currencyAfter %} {{ currencySymbol }}{% endif %}
+          </p>
+          <p style="margin:0;font-size:20px;font-weight:800;color:var(--price-normal);line-height:1.2;">
+            {% if not currencyAfter %}{{ currencySymbol }}{% endif %}{{ package.price|money }}{% if currencyAfter %} {{ currencySymbol }}{% endif %}
+          </p>
+        {% else %}
+          <p style="margin:0;font-size:11px;color:transparent;line-height:1.4;">—</p>
+          <p style="margin:0;font-size:20px;font-weight:800;color:var(--price-normal);line-height:1.2;">
+            {% if not currencyAfter %}{{ currencySymbol }}{% endif %}{{ package.price|money }}{% if currencyAfter %} {{ currencySymbol }}{% endif %}
+          </p>
+        {% endif %}
+      {% elseif package.customPrice %}
+        <p style="margin:0;font-size:11px;color:transparent;line-height:1.4;">—</p>
+        <p style="margin:0;font-size:20px;font-weight:800;color:var(--price-normal);">{{ lang.choosePrice }}</p>
+      {% else %}
+        <p style="margin:0;font-size:11px;color:transparent;line-height:1.4;">—</p>
+        <p style="margin:0;font-size:20px;font-weight:800;color:#4ade80;">{{ lang.item_is_free }}</p>
+      {% endif %}
+    </div>
+
+    <!-- BOTÓN VER PAQUETE -->
+    <a href="javascript:void(0);" data-remote="/package/{{ package.id }}" class="triplezone__toogle--modal" style="display:block;width:100%;background:#facc15;color:#111827;padding:9px 0;border-radius:6px;font-size:13px;font-weight:800;text-decoration:none;text-align:center;box-sizing:border-box;">Ver paquete</a>
+
+    <!-- COUNTDOWN si existe -->
+    {% if package.countdownEnds %}
+      <p style="margin:8px 0 0 0;font-size:11px;color:#f87171;">
+        <i class="fa fa-clock-o"></i>
+        <span class="countdown-to" data-countdown="{{ package.countdownEnds }}">{{ __("Ending Soon!") }}</span>
+      </p>
+    {% endif %}
+
+  </div>
+</div>

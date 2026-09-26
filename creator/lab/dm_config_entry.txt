@@ -1,0 +1,2 @@
+  lootpools_dungeon:
+    file: menusIA/lootpools_dungeon.yml

@@ -1,0 +1,106 @@
+menu_title: '&0&l|&r &0Mercado ▶ &8Zafiros &8(&#1E6BFF💎&8)'
+open_command:
+  - mercadozafiros
+  - shopzafiros
+  - zafiros
+size: 36
+open_requirement:
+  requirements: {}
+register_command: true
+update: true
+
+items:
+  # FILA 2: ELECCION PRINCIPAL (SLOT 12: TIENDA DE ZAFIROS, SLOT 14: COMPRAR ZAFIROS)
+  'Opcion_Tienda_Zafiros':
+    material: DIAMOND
+    slot: 12
+    item_flags:
+      - HIDE_ATTRIBUTES
+      - HIDE_ENCHANTS
+    enchantments:
+      - DURABILITY;1
+    display_name: '&#1E6BFFTienda de Zafiros'
+    lore:
+      - '&8Catálogo Exclusivo'
+      - ''
+      - ' &fCanjea tus gemas en cosméticos,'
+      - ' &fbeneficios de rango, auras y'
+      - ' &fartículos de prestigio de élite.'
+      - ''
+      - ' &8| &fCatálogo: &eCosméticos, Rangos, Especiales'
+      - ' &8| &fMoneda: &#1E6BFFZafiros (💎)'
+      - ''
+      - '&7▶ Click para entrar'
+    left_click_commands:
+      - '[close]'
+      - '[player] shop zafiros'
+      - '[sound] UI_BUTTON_CLICK'
+
+  'Opcion_Comprar_Zafiros':
+    material: NETHER_STAR
+    slot: 14
+    item_flags:
+      - HIDE_ATTRIBUTES
+      - HIDE_ENCHANTS
+    enchantments:
+      - DURABILITY;1
+    display_name: '&#FFF275Comprar Zafiros'
+    lore:
+      - '&8Tienda Web Oficial'
+      - ''
+      - ' &fConsigue paquetes de Zafiros'
+      - ' &fapoyando al servidor y desbloquea'
+      - ' &frecompensas VIP al instante.'
+      - ''
+      - ' &8| &fPlataforma: &#FFF275tienda.thundermc.net'
+      - ' &8| &fEntrega: &aInmediata'
+      - ''
+      - '&7▶ Click para ver enlace'
+    left_click_commands:
+      - '[close]'
+      - '[player] buy'
+      - '[sound] UI_BUTTON_CLICK'
+
+  # FILA 4: NAVBAR (SLOTS 27 A 35)
+  'Boton_Volver':
+    material: DARK_OAK_DOOR
+    slot: 31
+    item_flags:
+      - HIDE_ATTRIBUTES
+    display_name: '&cVolver Atrás'
+    lore:
+      - '&7Regresar al menú principal'
+    left_click_commands:
+      - '[openguimenu] tienda_principal'
+      - '[sound] BLOCK_NOTE_BLOCK_BASS'
+
+  'Info_Balance':
+    material: head-%player_name%
+    slot: 35
+    item_flags:
+      - HIDE_ATTRIBUTES
+    display_name: '&#FFF275Tu Economía'
+    lore:
+      - '&8Tu Economía'
+      - ''
+      - ' &8| &fDinero: &#59E91F&l$&r&#59E91F%vault_eco_balance_formatted%'
+      - ' &8| &fAlmas: &#34B0F3%thundercurrencys_almas%🔥'
+      - ' &8| &fZafiros: &#1E6BFF%thundercurrencys_zafiros%💎'
+      - ' &8| &fXP: &#D48BFF%player_level% LVL'
+      - ''
+      - '&7▶ Click para más información'
+    left_click_commands:
+      - '[openguimenu] info_economia'
+      - '[sound] UI_BUTTON_CLICK'
+
+  'Filtro_Navbar':
+    material: GRAY_STAINED_GLASS_PANE
+    display_name: ' '
+    slots:
+      - 27
+      - 28
+      - 29
+      - 30
+      - 32
+      - 33
+      - 34

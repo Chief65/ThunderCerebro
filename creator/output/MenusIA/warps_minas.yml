@@ -1,0 +1,364 @@
+﻿menu_title: '&0&l|&r &0ThunderMC &0▶ &8Sector Minero'
+open_command:
+  - minas
+  - minasgui
+size: 45
+open_requirement:
+  requirements: {}
+register_command: true
+update: true
+
+items:
+  # ============================================================================
+  # FILA 1: LAS 6 MINAS DE RANGO (SLOTS 10 A 15)
+  # ============================================================================
+  'Mina_Inicial':
+    material: DEAD_TUBE_CORAL_BLOCK
+    slot: 10
+    hide_attributes: true
+    display_name: '&#FFAA00Mina Inicial'
+    lore:
+      - '&8ᴍɪɴᴀ ɪɴɪᴄɪᴀʟ'
+      - ''
+      - ' &8ᴅᴀᴛᴏꜱ:'
+      - ' &8▶ &fMinerales: &#FFAA0020.25%'
+      - ' &8▶ &fPiedra: &779.75%'
+      - ' &8▶ &fRequisito: &aDefault'
+      - ''
+      - ' &8ᴅʀᴏᴘꜱ:'
+      - ' &8▶ &fCristal ($10)'
+      - ' &8▶ &fBolsa de Dinero [I]'
+      - ''
+      - '&7▶ Click para ir'
+    left_click_commands:
+      - '[close]'
+      - '[player] warp minainicial'
+      - '[sound] ENTITY_ENDERMAN_TELEPORT'
+
+  'Mina_Knight_Desbloqueada':
+    material: TUBE_CORAL_BLOCK
+    slot: 11
+    priority: 1
+    hide_attributes: true
+    view_requirement:
+      requirements:
+        perm:
+          type: has permission
+          permission: group.knight
+    display_name: '&#00B7FFMina Knight'
+    lore:
+      - '&8ᴍɪɴᴀ ᴋɴɪɢʜᴛ'
+      - ''
+      - ' &8ᴅᴀᴛᴏꜱ:'
+      - ' &8▶ &fMinerales: &#00B7FF30.25%'
+      - ' &8▶ &fPiedra: &769.75%'
+      - ' &8▶ &fRequisito: &#00B7FFKnight'
+      - ''
+      - ' &8ᴅʀᴏᴘꜱ:'
+      - ' &8▶ &fCristal ($10)'
+      - ' &8▶ &fBolsa de Dinero [I]'
+      - ''
+      - '&7▶ Click para ir'
+    left_click_commands:
+      - '[close]'
+      - '[player] warp minaknight'
+      - '[sound] ENTITY_ENDERMAN_TELEPORT'
+
+  'Mina_Knight_Bloqueada':
+    material: BARRIER
+    slot: 11
+    priority: 2
+    hide_attributes: true
+    display_name: '&cMina Knight &8(&cBloqueada&8)'
+    lore:
+      - '&8ᴍɪɴᴀ ᴋɴɪɢʜᴛ'
+      - ''
+      - ' &8ᴅᴀᴛᴏꜱ:'
+      - ' &8▶ &fMinerales: &#00B7FF30.25%'
+      - ' &8▶ &fPiedra: &769.75%'
+      - ' &8▶ &fRequisito: &#00B7FFKnight'
+      - ''
+      - ' &8ᴅʀᴏᴘꜱ:'
+      - ' &8▶ &fCristal ($10)'
+      - ' &8▶ &fBolsa de Dinero [I]'
+      - ''
+      - ' &c✘ Requiere Knight'
+      - ''
+      - '&7▶ Usa /ranks para ascender'
+    left_click_commands:
+      - '[sound] BLOCK_NOTE_BLOCK_BASS'
+
+  'Mina_Heroe_Desbloqueada':
+    material: BUBBLE_CORAL_BLOCK
+    slot: 12
+    priority: 1
+    hide_attributes: true
+    view_requirement:
+      requirements:
+        perm:
+          type: has permission
+          permission: group.heroe
+    display_name: '&#FF00C4Mina Héroe'
+    lore:
+      - '&8ᴍɪɴᴀ ʜéʀᴏᴇ'
+      - ''
+      - ' &8ᴅᴀᴛᴏꜱ:'
+      - ' &8▶ &fMinerales: &#FF00C440.25%'
+      - ' &8▶ &fPiedra: &759.75%'
+      - ' &8▶ &fRequisito: &#FF00C4Heroe'
+      - ''
+      - ' &8ᴅʀᴏᴘꜱ:'
+      - ' &8▶ &fCristal ($10)'
+      - ' &8▶ &fBolsa de Dinero [I]'
+      - ' &8▶ &fLlaves Raras (2.2%)'
+      - ''
+      - '&7▶ Click para ir'
+    left_click_commands:
+      - '[close]'
+      - '[player] warp minaheroe'
+      - '[sound] ENTITY_ENDERMAN_TELEPORT'
+
+  'Mina_Heroe_Bloqueada':
+    material: BARRIER
+    slot: 12
+    priority: 2
+    hide_attributes: true
+    display_name: '&cMina Héroe &8(&cBloqueada&8)'
+    lore:
+      - '&8ᴍɪɴᴀ ʜéʀᴏᴇ'
+      - ''
+      - ' &8ᴅᴀᴛᴏꜱ:'
+      - ' &8▶ &fMinerales: &#FF00C440.25%'
+      - ' &8▶ &fPiedra: &759.75%'
+      - ' &8▶ &fRequisito: &#FF00C4Heroe'
+      - ''
+      - ' &8ᴅʀᴏᴘꜱ:'
+      - ' &8▶ &fCristal ($10)'
+      - ' &8▶ &fBolsa de Dinero [I]'
+      - ' &8▶ &fLlaves Raras (2.2%)'
+      - ''
+      - ' &c✘ Requiere Heroe'
+      - ''
+      - '&7▶ Usa /ranks para ascender'
+    left_click_commands:
+      - '[sound] BLOCK_NOTE_BLOCK_BASS'
+
+  'Mina_Legend_Desbloqueada':
+    material: HORN_CORAL_BLOCK
+    slot: 13
+    priority: 1
+    hide_attributes: true
+    view_requirement:
+      requirements:
+        perm:
+          type: has permission
+          permission: group.legend
+    display_name: '&#FFE300Mina Legend'
+    lore:
+      - '&8ᴍɪɴᴀ ʟᴇɢᴇɴᴅ'
+      - ''
+      - ' &8ᴅᴀᴛᴏꜱ:'
+      - ' &8▶ &fMinerales: &#FFE30050.25%'
+      - ' &8▶ &fPiedra: &749.75%'
+      - ' &8▶ &fRequisito: &#FFE300Legend'
+      - ''
+      - ' &8ᴅʀᴏᴘꜱ:'
+      - ' &8▶ &fCristal ($10)'
+      - ' &8▶ &fBolsa de Dinero [I]'
+      - ' &8▶ &fLlaves Super (2.8%)'
+      - ''
+      - '&7▶ Click para ir'
+    left_click_commands:
+      - '[close]'
+      - '[player] warp minalegend'
+      - '[sound] ENTITY_ENDERMAN_TELEPORT'
+
+  'Mina_Legend_Bloqueada':
+    material: BARRIER
+    slot: 13
+    priority: 2
+    hide_attributes: true
+    display_name: '&cMina Legend &8(&cBloqueada&8)'
+    lore:
+      - '&8ᴍɪɴᴀ ʟᴇɢᴇɴᴅ'
+      - ''
+      - ' &8ᴅᴀᴛᴏꜱ:'
+      - ' &8▶ &fMinerales: &#FFE30050.25%'
+      - ' &8▶ &fPiedra: &749.75%'
+      - ' &8▶ &fRequisito: &#FFE300Legend'
+      - ''
+      - ' &8ᴅʀᴏᴘꜱ:'
+      - ' &8▶ &fCristal ($10)'
+      - ' &8▶ &fBolsa de Dinero [I]'
+      - ' &8▶ &fLlaves Super (2.8%)'
+      - ''
+      - ' &c✘ Requiere Legend'
+      - ''
+      - '&7▶ Usa /ranks para ascender'
+    left_click_commands:
+      - '[sound] BLOCK_NOTE_BLOCK_BASS'
+
+  'Mina_Mythic_Desbloqueada':
+    material: RESIN_BLOCK
+    slot: 14
+    priority: 1
+    hide_attributes: true
+    view_requirement:
+      requirements:
+        perm:
+          type: has permission
+          permission: group.mythic
+    display_name: '&#FF9100Mina Mythic'
+    lore:
+      - '&8ᴍɪɴᴀ ᴍʏᴛʜɪᴄ'
+      - ''
+      - ' &8ᴅᴀᴛᴏꜱ:'
+      - ' &8▶ &fMinerales: &#FF910060.25%'
+      - ' &8▶ &fPiedra: &739.75%'
+      - ' &8▶ &fRequisito: &#FF9100Mythic'
+      - ''
+      - ' &8ᴅʀᴏᴘꜱ:'
+      - ' &8▶ &fCristal ($10)'
+      - ' &8▶ &fBolsa de Dinero [I]'
+      - ' &8▶ &fRecompensas Raras'
+      - ''
+      - '&7▶ Click para ir'
+    left_click_commands:
+      - '[close]'
+      - '[player] warp minamythic'
+      - '[sound] ENTITY_ENDERMAN_TELEPORT'
+
+  'Mina_Mythic_Bloqueada':
+    material: BARRIER
+    slot: 14
+    priority: 2
+    hide_attributes: true
+    display_name: '&cMina Mythic &8(&cBloqueada&8)'
+    lore:
+      - '&8ᴍɪɴᴀ ᴍʏᴛʜɪᴄ'
+      - ''
+      - ' &8ᴅᴀᴛᴏꜱ:'
+      - ' &8▶ &fMinerales: &#FF910060.25%'
+      - ' &8▶ &fPiedra: &739.75%'
+      - ' &8▶ &fRequisito: &#FF9100Mythic'
+      - ''
+      - ' &8ᴅʀᴏᴘꜱ:'
+      - ' &8▶ &fCristal ($10)'
+      - ' &8▶ &fBolsa de Dinero [I]'
+      - ' &8▶ &fRecompensas Raras'
+      - ''
+      - ' &c✘ Requiere Mythic'
+      - ''
+      - '&7▶ Usa /ranks para ascender'
+    left_click_commands:
+      - '[sound] BLOCK_NOTE_BLOCK_BASS'
+
+  'Mina_Titan_Desbloqueada':
+    material: FIRE_CORAL_BLOCK
+    slot: 15
+    priority: 1
+    hide_attributes: true
+    view_requirement:
+      requirements:
+        perm:
+          type: has permission
+          permission: group.titan
+    display_name: '&#FF0A00Mina Titán'
+    lore:
+      - '&8ᴍɪɴᴀ ᴛɪᴛáɴ'
+      - ''
+      - ' &8ᴅᴀᴛᴏꜱ:'
+      - ' &8▶ &fMinerales: &#FF0A0070.25%'
+      - ' &8▶ &fPiedra: &729.75%'
+      - ' &8▶ &fRequisito: &#FF0A00Titan'
+      - ''
+      - ' &8ᴅʀᴏᴘꜱ:'
+      - ' &8▶ &fCristal ($10)'
+      - ' &8▶ &fBolsa de Dinero [I]'
+      - ' &8▶ &fDrops Epicos (4%)'
+      - ''
+      - '&7▶ Click para ir'
+    left_click_commands:
+      - '[close]'
+      - '[player] warp minatitan'
+      - '[sound] ENTITY_ENDERMAN_TELEPORT'
+
+  'Mina_Titan_Bloqueada':
+    material: BARRIER
+    slot: 15
+    priority: 2
+    hide_attributes: true
+    display_name: '&cMina Titán &8(&cBloqueada&8)'
+    lore:
+      - '&8ᴍɪɴᴀ ᴛɪᴛáɴ'
+      - ''
+      - ' &8ᴅᴀᴛᴏꜱ:'
+      - ' &8▶ &fMinerales: &#FF0A0070.25%'
+      - ' &8▶ &fPiedra: &729.75%'
+      - ' &8▶ &fRequisito: &#FF0A00Titan'
+      - ''
+      - ' &8ᴅʀᴏᴘꜱ:'
+      - ' &8▶ &fCristal ($10)'
+      - ' &8▶ &fBolsa de Dinero [I]'
+      - ' &8▶ &fDrops Epicos (4%)'
+      - ''
+      - ' &c✘ Requiere Titan'
+      - ''
+      - '&7▶ Usa /ranks para ascender'
+    left_click_commands:
+      - '[sound] BLOCK_NOTE_BLOCK_BASS'
+
+  # ============================================================================
+  # FILA 2: MINAPVP (SLOT 22)
+  # ============================================================================
+  'Mina_PvP':
+    material: TNT_MINECART
+    slot: 22
+    hide_attributes: true
+    display_name: '&#EB1717Minapvp'
+    lore:
+      - '&8ᴍɪɴᴀ ᴘᴠᴘ'
+      - ''
+      - ' &8ᴅᴀᴛᴏꜱ:'
+      - ' &8▶ &fMinerales: &#EB171780.00%'
+      - ' &8▶ &fPiedra: &720.00%'
+      - ''
+      - ' &8ᴅʀᴏᴘꜱ:'
+      - ' &8▶ &fCristal ($10)'
+      - ' &8▶ &fBolsa de Dinero [I]'
+      - ' &8▶ &fDrops Legendarios (8%)'
+      - ''
+      - ' &c☠ ¡Perdida de Items!'
+      - ''
+      - '&7▶ Click para ir'
+    left_click_commands:
+      - '[close]'
+      - '[player] warp minapvp'
+      - '[sound] ENTITY_ENDERMAN_TELEPORT'
+
+  # ============================================================================
+  # NAV BAR INFERIOR (FILA 5)
+  # ============================================================================
+  'Filtro_Navbar':
+    display_name: ' '
+    material: GRAY_STAINED_GLASS_PANE
+    slots:
+      - 36
+      - 37
+      - 38
+      - 39
+      - 41
+      - 42
+      - 43
+      - 44
+
+  'Volver':
+    material: DARK_OAK_DOOR
+    slot: 40
+    hide_attributes: true
+    display_name: '&cVolver'
+    lore:
+      - '&7▶ Click para regresar'
+    left_click_commands:
+      - '[openguimenu] warps'
+      - '[sound] UI_BUTTON_CLICK'

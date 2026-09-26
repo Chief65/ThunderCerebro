@@ -1,0 +1,567 @@
+menu_title: '&0&l|&r &0Compra ▶ &8Farmeo &7(1/1)'
+open_command:
+  - compra_farmeo
+size: 45
+open_requirement:
+  requirements: {}
+register_command: true
+update: true
+
+items:
+  # ============================================================================
+  # FILTRO SUPERIOR: PANELES GRISES DECORATIVOS (FILA 1)
+  # ============================================================================
+  'Filtro_Top':
+    material: GRAY_STAINED_GLASS_PANE
+    display_name: ' '
+    slots:
+      - 0
+      - 1
+      - 2
+      - 3
+      - 4
+      - 5
+      - 6
+      - 7
+      - 8
+
+  # ============================================================================
+  # CATÁLOGO DE ÍTEMS DE COMPRA (FILAS 2, 3, 4: SLOTS 9 A 35)
+  # ============================================================================
+  'item_1':
+    material: BAMBOO
+    slot: 9
+    item_flags:
+      - HIDE_ATTRIBUTES
+      - HIDE_ENCHANTS
+    display_name: '&#00FF88Bamboo'
+    lore:
+      - '&8ᴘʀᴇᴄɪᴏ ᴅᴇ ᴄᴏᴍᴘʀᴀ'
+      - ''
+      - ' &8| &fUnidad: &#59E91F&l$&r&#59E91F4'
+      - ' &8| &fStack x64: &#59E91F&l$&r&#59E91F256'
+      - ''
+      - '&7▶ Click para comprar'
+    left_click_commands:
+      - '[close]'
+      - '[player] shop farmeo'
+      - '[sound] UI_BUTTON_CLICK'
+
+  'item_2':
+    material: BEETROOT
+    slot: 10
+    item_flags:
+      - HIDE_ATTRIBUTES
+      - HIDE_ENCHANTS
+    display_name: '&#00FF88Beetroot'
+    lore:
+      - '&8ᴘʀᴇᴄɪᴏ ᴅᴇ ᴄᴏᴍᴘʀᴀ'
+      - ''
+      - ' &8| &fUnidad: &#59E91F&l$&r&#59E91F80'
+      - ' &8| &fStack x64: &#59E91F&l$&r&#59E91F5120'
+      - ''
+      - '&7▶ Click para comprar'
+    left_click_commands:
+      - '[close]'
+      - '[player] shop farmeo'
+      - '[sound] UI_BUTTON_CLICK'
+
+  'item_3':
+    material: BEETROOT_SEEDS
+    slot: 11
+    item_flags:
+      - HIDE_ATTRIBUTES
+      - HIDE_ENCHANTS
+    display_name: '&#00FF88Beetroot Seeds'
+    lore:
+      - '&8ᴘʀᴇᴄɪᴏ ᴅᴇ ᴄᴏᴍᴘʀᴀ'
+      - ''
+      - ' &8| &fUnidad: &#59E91F&l$&r&#59E91F5'
+      - ' &8| &fStack x64: &#59E91F&l$&r&#59E91F320'
+      - ''
+      - '&7▶ Click para comprar'
+    left_click_commands:
+      - '[close]'
+      - '[player] shop farmeo'
+      - '[sound] UI_BUTTON_CLICK'
+
+  'item_4':
+    material: BROWN_MUSHROOM
+    slot: 12
+    item_flags:
+      - HIDE_ATTRIBUTES
+      - HIDE_ENCHANTS
+    display_name: '&#00FF88Brown Mushroom'
+    lore:
+      - '&8ᴘʀᴇᴄɪᴏ ᴅᴇ ᴄᴏᴍᴘʀᴀ'
+      - ''
+      - ' &8| &fUnidad: &#59E91F&l$&r&#59E91F20'
+      - ' &8| &fStack x64: &#59E91F&l$&r&#59E91F1280'
+      - ''
+      - '&7▶ Click para comprar'
+    left_click_commands:
+      - '[close]'
+      - '[player] shop farmeo'
+      - '[sound] UI_BUTTON_CLICK'
+
+  'item_5':
+    material: CACTUS
+    slot: 13
+    item_flags:
+      - HIDE_ATTRIBUTES
+      - HIDE_ENCHANTS
+    display_name: '&#00FF88Cactus'
+    lore:
+      - '&8ᴘʀᴇᴄɪᴏ ᴅᴇ ᴄᴏᴍᴘʀᴀ'
+      - ''
+      - ' &8| &fUnidad: &#59E91F&l$&r&#59E91F20'
+      - ' &8| &fStack x64: &#59E91F&l$&r&#59E91F1280'
+      - ''
+      - '&7▶ Click para comprar'
+    left_click_commands:
+      - '[close]'
+      - '[player] shop farmeo'
+      - '[sound] UI_BUTTON_CLICK'
+
+  'item_6':
+    material: CARROT
+    slot: 14
+    item_flags:
+      - HIDE_ATTRIBUTES
+      - HIDE_ENCHANTS
+    display_name: '&#00FF88Carrot'
+    lore:
+      - '&8ᴘʀᴇᴄɪᴏ ᴅᴇ ᴄᴏᴍᴘʀᴀ'
+      - ''
+      - ' &8| &fUnidad: &#59E91F&l$&r&#59E91F60'
+      - ' &8| &fStack x64: &#59E91F&l$&r&#59E91F3840'
+      - ''
+      - '&7▶ Click para comprar'
+    left_click_commands:
+      - '[close]'
+      - '[player] shop farmeo'
+      - '[sound] UI_BUTTON_CLICK'
+
+  'item_7':
+    material: CHORUS_FLOWER
+    slot: 15
+    item_flags:
+      - HIDE_ATTRIBUTES
+      - HIDE_ENCHANTS
+    display_name: '&#00FF88Chorus Flower'
+    lore:
+      - '&8ᴘʀᴇᴄɪᴏ ᴅᴇ ᴄᴏᴍᴘʀᴀ'
+      - ''
+      - ' &8| &fUnidad: &#59E91F&l$&r&#59E91F30'
+      - ' &8| &fStack x64: &#59E91F&l$&r&#59E91F1920'
+      - ''
+      - '&7▶ Click para comprar'
+    left_click_commands:
+      - '[close]'
+      - '[player] shop farmeo'
+      - '[sound] UI_BUTTON_CLICK'
+
+  'item_8':
+    material: CHORUS_FRUIT
+    slot: 16
+    item_flags:
+      - HIDE_ATTRIBUTES
+      - HIDE_ENCHANTS
+    display_name: '&#00FF88Chorus Fruit'
+    lore:
+      - '&8ᴘʀᴇᴄɪᴏ ᴅᴇ ᴄᴏᴍᴘʀᴀ'
+      - ''
+      - ' &8| &fUnidad: &#59E91F&l$&r&#59E91F5'
+      - ' &8| &fStack x64: &#59E91F&l$&r&#59E91F320'
+      - ''
+      - '&7▶ Click para comprar'
+    left_click_commands:
+      - '[close]'
+      - '[player] shop farmeo'
+      - '[sound] UI_BUTTON_CLICK'
+
+  'item_9':
+    material: COCOA_BEANS
+    slot: 17
+    item_flags:
+      - HIDE_ATTRIBUTES
+      - HIDE_ENCHANTS
+    display_name: '&#00FF88Cocoa Beans'
+    lore:
+      - '&8ᴘʀᴇᴄɪᴏ ᴅᴇ ᴄᴏᴍᴘʀᴀ'
+      - ''
+      - ' &8| &fUnidad: &#59E91F&l$&r&#59E91F120'
+      - ' &8| &fStack x64: &#59E91F&l$&r&#59E91F7680'
+      - ''
+      - '&7▶ Click para comprar'
+    left_click_commands:
+      - '[close]'
+      - '[player] shop farmeo'
+      - '[sound] UI_BUTTON_CLICK'
+
+  'item_10':
+    material: KELP
+    slot: 18
+    item_flags:
+      - HIDE_ATTRIBUTES
+      - HIDE_ENCHANTS
+    display_name: '&#00FF88Kelp'
+    lore:
+      - '&8ᴘʀᴇᴄɪᴏ ᴅᴇ ᴄᴏᴍᴘʀᴀ'
+      - ''
+      - ' &8| &fUnidad: &#59E91F&l$&r&#59E91F6'
+      - ' &8| &fStack x64: &#59E91F&l$&r&#59E91F384'
+      - ''
+      - '&7▶ Click para comprar'
+    left_click_commands:
+      - '[close]'
+      - '[player] shop farmeo'
+      - '[sound] UI_BUTTON_CLICK'
+
+  'item_11':
+    material: MELON
+    slot: 19
+    item_flags:
+      - HIDE_ATTRIBUTES
+      - HIDE_ENCHANTS
+    display_name: '&#00FF88Melon'
+    lore:
+      - '&8ᴘʀᴇᴄɪᴏ ᴅᴇ ᴄᴏᴍᴘʀᴀ'
+      - ''
+      - ' &8| &fUnidad: &#59E91F&l$&r&#59E91F45'
+      - ' &8| &fStack x64: &#59E91F&l$&r&#59E91F2880'
+      - ''
+      - '&7▶ Click para comprar'
+    left_click_commands:
+      - '[close]'
+      - '[player] shop farmeo'
+      - '[sound] UI_BUTTON_CLICK'
+
+  'item_12':
+    material: MELON_SEEDS
+    slot: 20
+    item_flags:
+      - HIDE_ATTRIBUTES
+      - HIDE_ENCHANTS
+    display_name: '&#00FF88Melon Seeds'
+    lore:
+      - '&8ᴘʀᴇᴄɪᴏ ᴅᴇ ᴄᴏᴍᴘʀᴀ'
+      - ''
+      - ' &8| &fUnidad: &#59E91F&l$&r&#59E91F5'
+      - ' &8| &fStack x64: &#59E91F&l$&r&#59E91F320'
+      - ''
+      - '&7▶ Click para comprar'
+    left_click_commands:
+      - '[close]'
+      - '[player] shop farmeo'
+      - '[sound] UI_BUTTON_CLICK'
+
+  'item_13':
+    material: MELON_SLICE
+    slot: 21
+    item_flags:
+      - HIDE_ATTRIBUTES
+      - HIDE_ENCHANTS
+    display_name: '&#00FF88Melon Slice'
+    lore:
+      - '&8ᴘʀᴇᴄɪᴏ ᴅᴇ ᴄᴏᴍᴘʀᴀ'
+      - ''
+      - ' &8| &fUnidad: &#59E91F&l$&r&#59E91F5'
+      - ' &8| &fStack x64: &#59E91F&l$&r&#59E91F320'
+      - ''
+      - '&7▶ Click para comprar'
+    left_click_commands:
+      - '[close]'
+      - '[player] shop farmeo'
+      - '[sound] UI_BUTTON_CLICK'
+
+  'item_14':
+    material: NETHER_WART
+    slot: 22
+    item_flags:
+      - HIDE_ATTRIBUTES
+      - HIDE_ENCHANTS
+    display_name: '&#00FF88Nether Wart'
+    lore:
+      - '&8ᴘʀᴇᴄɪᴏ ᴅᴇ ᴄᴏᴍᴘʀᴀ'
+      - ''
+      - ' &8| &fUnidad: &#59E91F&l$&r&#59E91F80'
+      - ' &8| &fStack x64: &#59E91F&l$&r&#59E91F5120'
+      - ''
+      - '&7▶ Click para comprar'
+    left_click_commands:
+      - '[close]'
+      - '[player] shop farmeo'
+      - '[sound] UI_BUTTON_CLICK'
+
+  'item_15':
+    material: POTATO
+    slot: 23
+    item_flags:
+      - HIDE_ATTRIBUTES
+      - HIDE_ENCHANTS
+    display_name: '&#00FF88Potato'
+    lore:
+      - '&8ᴘʀᴇᴄɪᴏ ᴅᴇ ᴄᴏᴍᴘʀᴀ'
+      - ''
+      - ' &8| &fUnidad: &#59E91F&l$&r&#59E91F60'
+      - ' &8| &fStack x64: &#59E91F&l$&r&#59E91F3840'
+      - ''
+      - '&7▶ Click para comprar'
+    left_click_commands:
+      - '[close]'
+      - '[player] shop farmeo'
+      - '[sound] UI_BUTTON_CLICK'
+
+  'item_16':
+    material: PUMPKIN
+    slot: 24
+    item_flags:
+      - HIDE_ATTRIBUTES
+      - HIDE_ENCHANTS
+    display_name: '&#00FF88Pumpkin'
+    lore:
+      - '&8ᴘʀᴇᴄɪᴏ ᴅᴇ ᴄᴏᴍᴘʀᴀ'
+      - ''
+      - ' &8| &fUnidad: &#59E91F&l$&r&#59E91F28'
+      - ' &8| &fStack x64: &#59E91F&l$&r&#59E91F1792'
+      - ''
+      - '&7▶ Click para comprar'
+    left_click_commands:
+      - '[close]'
+      - '[player] shop farmeo'
+      - '[sound] UI_BUTTON_CLICK'
+
+  'item_17':
+    material: PUMPKIN_SEEDS
+    slot: 25
+    item_flags:
+      - HIDE_ATTRIBUTES
+      - HIDE_ENCHANTS
+    display_name: '&#00FF88Pumpkin Seeds'
+    lore:
+      - '&8ᴘʀᴇᴄɪᴏ ᴅᴇ ᴄᴏᴍᴘʀᴀ'
+      - ''
+      - ' &8| &fUnidad: &#59E91F&l$&r&#59E91F5'
+      - ' &8| &fStack x64: &#59E91F&l$&r&#59E91F320'
+      - ''
+      - '&7▶ Click para comprar'
+    left_click_commands:
+      - '[close]'
+      - '[player] shop farmeo'
+      - '[sound] UI_BUTTON_CLICK'
+
+  'item_18':
+    material: RED_MUSHROOM
+    slot: 26
+    item_flags:
+      - HIDE_ATTRIBUTES
+      - HIDE_ENCHANTS
+    display_name: '&#00FF88Red Mushroom'
+    lore:
+      - '&8ᴘʀᴇᴄɪᴏ ᴅᴇ ᴄᴏᴍᴘʀᴀ'
+      - ''
+      - ' &8| &fUnidad: &#59E91F&l$&r&#59E91F5'
+      - ' &8| &fStack x64: &#59E91F&l$&r&#59E91F320'
+      - ''
+      - '&7▶ Click para comprar'
+    left_click_commands:
+      - '[close]'
+      - '[player] shop farmeo'
+      - '[sound] UI_BUTTON_CLICK'
+
+  'item_19':
+    material: SUGAR_CANE
+    slot: 27
+    item_flags:
+      - HIDE_ATTRIBUTES
+      - HIDE_ENCHANTS
+    display_name: '&#00FF88Sugar Cane'
+    lore:
+      - '&8ᴘʀᴇᴄɪᴏ ᴅᴇ ᴄᴏᴍᴘʀᴀ'
+      - ''
+      - ' &8| &fUnidad: &#59E91F&l$&r&#59E91F12'
+      - ' &8| &fStack x64: &#59E91F&l$&r&#59E91F768'
+      - ''
+      - '&7▶ Click para comprar'
+    left_click_commands:
+      - '[close]'
+      - '[player] shop farmeo'
+      - '[sound] UI_BUTTON_CLICK'
+
+  'item_20':
+    material: WHEAT
+    slot: 28
+    item_flags:
+      - HIDE_ATTRIBUTES
+      - HIDE_ENCHANTS
+    display_name: '&#00FF88Wheat'
+    lore:
+      - '&8ᴘʀᴇᴄɪᴏ ᴅᴇ ᴄᴏᴍᴘʀᴀ'
+      - ''
+      - ' &8| &fUnidad: &#59E91F&l$&r&#59E91F80'
+      - ' &8| &fStack x64: &#59E91F&l$&r&#59E91F5120'
+      - ''
+      - '&7▶ Click para comprar'
+    left_click_commands:
+      - '[close]'
+      - '[player] shop farmeo'
+      - '[sound] UI_BUTTON_CLICK'
+
+  'item_21':
+    material: WHEAT_SEEDS
+    slot: 29
+    item_flags:
+      - HIDE_ATTRIBUTES
+      - HIDE_ENCHANTS
+    display_name: '&#00FF88Wheat Seeds'
+    lore:
+      - '&8ᴘʀᴇᴄɪᴏ ᴅᴇ ᴄᴏᴍᴘʀᴀ'
+      - ''
+      - ' &8| &fUnidad: &#59E91F&l$&r&#59E91F5'
+      - ' &8| &fStack x64: &#59E91F&l$&r&#59E91F320'
+      - ''
+      - '&7▶ Click para comprar'
+    left_click_commands:
+      - '[close]'
+      - '[player] shop farmeo'
+      - '[sound] UI_BUTTON_CLICK'
+
+  'item_22':
+    material: SWEET_BERRIES
+    slot: 30
+    item_flags:
+      - HIDE_ATTRIBUTES
+      - HIDE_ENCHANTS
+    display_name: '&#00FF88Sweet Berries'
+    lore:
+      - '&8ᴘʀᴇᴄɪᴏ ᴅᴇ ᴄᴏᴍᴘʀᴀ'
+      - ''
+      - ' &8| &fUnidad: &#59E91F&l$&r&#59E91F28'
+      - ' &8| &fStack x64: &#59E91F&l$&r&#59E91F1792'
+      - ''
+      - '&7▶ Click para comprar'
+    left_click_commands:
+      - '[close]'
+      - '[player] shop farmeo'
+      - '[sound] UI_BUTTON_CLICK'
+
+  'item_23':
+    material: SEA_PICKLE
+    slot: 31
+    item_flags:
+      - HIDE_ATTRIBUTES
+      - HIDE_ENCHANTS
+    display_name: '&#00FF88Sea Pickle'
+    lore:
+      - '&8ᴘʀᴇᴄɪᴏ ᴅᴇ ᴄᴏᴍᴘʀᴀ'
+      - ''
+      - ' &8| &fUnidad: &#59E91F&l$&r&#59E91F5'
+      - ' &8| &fStack x64: &#59E91F&l$&r&#59E91F320'
+      - ''
+      - '&7▶ Click para comprar'
+    left_click_commands:
+      - '[close]'
+      - '[player] shop farmeo'
+      - '[sound] UI_BUTTON_CLICK'
+
+  # ============================================================================
+  # FILTRO Y NAVBAR INFERIOR (FILA 5: SLOTS 36 A 44)
+  # ============================================================================
+  'Boton_Filtro':
+    material: COMPARATOR
+    slot: 36
+    item_flags:
+      - HIDE_ATTRIBUTES
+      - HIDE_ENCHANTS
+    enchantments:
+      - DURABILITY;1
+    display_name: '&#FFD700Filtrar Categoría'
+    lore:
+      - '&8ᴇʟɪɂᴇ ᴄᴀᴛᴇɂᴏʀɪᴀ'
+      - ''
+      - ' &7● Todos'
+      - ' &7● Bloques'
+      - ' &#FFD700● Farmeo'
+      - ' &7● Comida'
+      - ' &7● Mobs'
+      - ' &7● Equipo'
+      - ' &7● Redstone'
+      - ' &7● Misceláneo'
+      - ' &7● Tintes'
+      - ' &7● Trims'
+      - ' &7● Encantamientos'
+      - ''
+      - '&7▶ Click para cambiar'
+    left_click_commands:
+      - '[openguimenu] compra_comida'
+      - '[sound] UI_BUTTON_CLICK'
+
+  'Pagina_Anterior':
+    material: ARROW
+    slot: 39
+    item_flags:
+      - HIDE_ATTRIBUTES
+    display_name: '&#FFD700◀ Página Anterior'
+    lore:
+      - '&8| &fPágina: &71&8/&71'
+      - ''
+    left_click_commands:
+      - '[sound] BLOCK_NOTE_BLOCK_BASS'
+
+  'Boton_Volver':
+    material: DARK_OAK_DOOR
+    slot: 40
+    item_flags:
+      - HIDE_ATTRIBUTES
+    display_name: '&cVolver al Menú'
+    lore:
+      - '&8| &fRegresar a la selección principal'
+      - ''
+    left_click_commands:
+      - '[openguimenu] tienda_principal'
+      - '[sound] UI_BUTTON_CLICK'
+
+  'Pagina_Siguiente':
+    material: ARROW
+    slot: 41
+    item_flags:
+      - HIDE_ATTRIBUTES
+    display_name: '&#FFD700Página Siguiente ▶'
+    lore:
+      - '&8| &fPágina: &71&8/&71'
+      - ''
+    left_click_commands:
+      - '[sound] BLOCK_NOTE_BLOCK_BASS'
+
+  'Boton_SellGUI':
+    material: HOPPER
+    slot: 43
+    item_flags:
+      - HIDE_ATTRIBUTES
+    display_name: '&#59E91FVenta Rápida'
+    lore:
+      - '&8ᴠᴇɴᴛᴀ ᴀᴗᴛᴏᴍᴀᴛɪᴄᴀ'
+      - ''
+      - ' &fVende ítems en masa'
+      - ' &fde forma instantánea.'
+      - ''
+      - '&7▶ Click para abrir'
+    left_click_commands:
+      - '[close]'
+      - '[player] sellgui'
+      - '[sound] ENTITY_EXPERIENCE_ORB_PICKUP'
+
+  'Info_Balance':
+    material: head-%player_name%
+    slot: 44
+    item_flags:
+      - HIDE_ATTRIBUTES
+    display_name: '&#FFD700Tu Economía'
+    lore:
+      - '&8ᴛᴗ ᴇᴄᴏɴᴏᴍɪᴀ'
+      - ''
+      - ' &8| &fDinero: &#59E91F&l$&r&#59E91F%vault_eco_balance_formatted%'
+      - ' &8| &fAlmas: &#34B0F3%thundercurrencys_almas%🔥'
+      - ' &8| &fZafiros: &#1E6BFF%thundercurrencys_zafiros%💎'
+      - ''

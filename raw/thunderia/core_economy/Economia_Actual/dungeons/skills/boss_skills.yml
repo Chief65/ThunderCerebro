@@ -1,0 +1,320 @@
+
+InvocarConejos:
+  Skills:
+    - summon{mob=ConejoEvasivo;amount=20;radius=10} @self
+    - jump{velocity=20}
+    - blockwave{duration=100;material=stone;radius=5;radiusY=5;velocity=10;shape=sphere} @selflocation
+    - sound{s=entity.generic.explode;v=1.0;p=0.8} @self
+    - sound{s=entity.rabbit.hurt;v=0.6;p=0.5} @self
+    - particles{particle=EXPLOSION_HUGE;amount=3;speed=0.1;hSpread=0.5;vSpread=0.5} @self
+    - particles{particle=EXPLOSION_NORMAL;amount=30;speed=0.2;hSpread=2.0;vSpread=1.0} @self
+    - particles{particle=SMOKE_LARGE;amount=40;speed=0.1;hSpread=1.5;vSpread=0.5} @self
+    - message{m="&4¡El Conejo Asesino invoca a sus crías!"} @PIR{r=40}
+    - throw{velocity=20;velocityY=10} @PlayersInRadius{r=5}       
+
+
+
+InvocarAbejas:
+  Skills:
+    - sound{s=entity.generic.explode;v=1.0;p=0.8} @self
+    - particles{particle=EXPLOSION_HUGE;amount=3;speed=0.1;hSpread=0.5;vSpread=0.5} @self
+    - particles{particle=EXPLOSION_NORMAL;amount=30;speed=0.2;hSpread=2.0;vSpread=1.0} @self
+    - particles{particle=SMOKE_LARGE;amount=15;speed=0.1;hSpread=1.5;vSpread=0.5} @self
+    - summon{mob=AbejaObrera;amount=15;radius=5} @self
+    - message{m="&4¡La Reina invoca a sus obreras!"} @PIR{r=40}
+    - throw{velocity=20;velocityY=10} @PlayersInRadius{r=5}   
+
+CegadoObrera:
+  Skills:
+    - potion{type=BLINDNESS;duration=40;level=1} @trigger
+
+LevantamientoWarden:
+  Skills:
+    - sound{s=entity.generic.explode;v=1.0;p=0.8} @self
+    - particles{particle=EXPLOSION_HUGE;amount=3;speed=0.1;hSpread=0.5;vSpread=0.5} @self
+    - particles{particle=EXPLOSION_NORMAL;amount=30;speed=0.2;hSpread=2.0;vSpread=1.0} @self
+    - particles{particle=SMOKE_LARGE;amount=40;speed=0.1;hSpread=1.5;vSpread=0.5} @self
+    - particles{particle=FLAME;amount=240;speed=0.15;hSpread=0.8;vSpread=0.8} @self
+    - message{m="&4¡EL WARDEN DESTRUYE TODO A SU PASO!"} @PIR{r=40}
+    - throw{velocity=20;velocityY=10} @PlayersInRadius{r=10}   
+    - blockwave{duration=100;material=stone;radius=5;radiusY=5;velocity=10;shape=sphere} @selflocation
+
+SlowWarden:
+  Skills:
+  - effect:sound{s=block.fire.extinguish;v=1;p=0.5} @PIR{r=6}
+  - effect:particles{p=explode;a=8;vs=0.5;hs=0.5;s=0;y=1;repeat=5;repeatInterval=20} @PIR{r=6}
+  - effect:particles{p=drip_water;a=10;vs=0.5;hs=0.5;s=0;y=1;repeat=5;repeatInterval=20} @PIR{r=6}
+  - potion{t=SLOW;d=120;l=6} @PIR{r=6}
+  - damage{a=30;pkb=true} @PIR{r=6}
+
+PinataGolpe:
+  Skills:
+    # Sonidos 
+    - sound{s=entity.villager.celebrate;v=1.0;p=1.2} @trigger 0.15
+    - sound{s=entity.player.levelup;v=1.0;p=1.5} @trigger 0.15
+    - sound{s=entity.firework_rocket.blast;v=1.0;p=1.8} @trigger 0.15
+    - sound{s=entity.generic.explode;v=0.5;p=2.0} @trigger 0.15
+    - sound{s=entity.villager.yes;v=1.0;p=0.8} @trigger 0.15
+    - sound{s=entity.enderman.teleport;v=1.0;p=2.0} @trigger 0.15
+    - sound{s=entity.experience_orb.pickup;v=1.0;p=0.5} @trigger 0.15
+    - sound{s=entity.chicken.egg;v=1.0;p=1.0} @trigger 0.15
+    - sound{s=entity.cat.purr;v=1.0;p=1.5} @trigger 0.15
+    - sound{s=entity.panda.sneeze;v=1.0;p=1.0} @trigger 0.15
+    # Partículas 
+    - particles{particle=FIREWORKS_SPARK;amount=30;speed=0.3;hSpread=1.0;vSpread=1.0} @self
+    - particles{particle=TOTEM;amount=20;speed=0.2;hSpread=0.8;vSpread=0.8} @self
+    - particles{particle=VILLAGER_HAPPY;amount=15;speed=0.2;hSpread=0.8;vSpread=0.8} @self 0.3
+    - particles{particle=HEART;amount=10;speed=0.2;hSpread=0.8;vSpread=0.8} @self 0.3
+    - particles{particle=SPELL_MOB;amount=25;speed=0.3;hSpread=1.0;vSpread=1.0} @self 0.3
+    - particles{particle=NOTE;amount=20;speed=0.3;hSpread=1.0;vSpread=0.5} @self 0.3
+    - particles{particle=CRIT_MAGIC;amount=20;speed=0.4;hSpread=0.8;vSpread=0.8} @self 0.3
+    - particles{particle=SLIME;amount=15;speed=0.2;hSpread=0.8;vSpread=0.8} @self 0.2
+    # Efectos al jugador 
+    - potion{type=JUMP;duration=20;level=3} @trigger 0.2
+    - potion{type=SPEED;duration=20;level=2} @trigger 0.2
+    - potion{type=LEVITATION;duration=10;level=1} @trigger 0.1
+
+PinataMuerte:
+  Skills:
+    - sound{s=entity.firework_rocket.large_blast;v=2.0;p=1.0} @self
+    - sound{s=entity.player.levelup;v=2.0;p=0.8} @self
+    - sound{s=entity.villager.celebrate;v=2.0;p=0.5} @self
+    - sound{s=entity.ender_dragon.death;v=1.0;p=1.5} @self
+    - sound{s=entity.panda.sneeze;v=2.0;p=0.5} @self
+    - particles{particle=FIREWORKS_SPARK;amount=200;speed=0.5;hSpread=3.0;vSpread=3.0} @self
+    - particles{particle=TOTEM;amount=150;speed=0.4;hSpread=2.5;vSpread=2.5} @self
+    - particles{particle=EXPLOSION_HUGE;amount=5;speed=0.3;hSpread=2.0;vSpread=2.0} @self
+    - particles{particle=HEART;amount=50;speed=0.3;hSpread=2.0;vSpread=2.0} @self
+    - particles{particle=NOTE;amount=80;speed=0.5;hSpread=3.0;vSpread=2.0} @self
+    - particles{particle=VILLAGER_HAPPY;amount=60;speed=0.4;hSpread=2.5;vSpread=2.0} @self
+ 
+LevantamientoPiñata:
+  Skills:
+    - sound{s=entity.generic.explode;v=1.0;p=0.8} @self
+    - particles{particle=EXPLOSION_HUGE;amount=3;speed=0.1;hSpread=0.5;vSpread=0.5} @self
+    - particles{particle=EXPLOSION_NORMAL;amount=30;speed=0.2;hSpread=2.0;vSpread=1.0} @self
+    - particles{particle=SMOKE_LARGE;amount=40;speed=0.1;hSpread=1.5;vSpread=0.5} @self
+    - particles{particle=FLAME;amount=240;speed=0.15;hSpread=0.8;vSpread=0.8} @self
+    - throw{velocity=20;velocityY=10} @PlayersInRadius{r=10}   
+    
+    
+SonidoKill:
+  Skills:
+   - sound{s=entity.vex.death;v=0.85;p=1.25} @self
+   - sound{s=block.amethyst_cluster.hit;v=1.1;p=2.0} @self 0.05
+
+Invocar75:
+  Conditions:
+    - healthpercent{p=<75%} true
+  Cooldown: 1200
+  Skills:
+    - sound{s=entity.generic.explode;v=1.0;p=0.8} @self
+    - particles{particle=EXPLOSION_HUGE;amount=3;speed=0.1;hSpread=0.5;vSpread=0.5} @self
+    - particles{particle=EXPLOSION_NORMAL;amount=30;speed=0.2;hSpread=2.0;vSpread=1.0} @self
+    - particles{particle=SMOKE_LARGE;amount=40;speed=0.1;hSpread=1.5;vSpread=0.5} @self
+    - summon{mob=AcolitoSantuario;amount=5;radius=5} @self
+    - message{m="&4¡El Warden invoca a sus súbditos!"} @PIR{r=40}
+    - throw{velocity=20;velocityY=10} @PlayersInRadius{r=5}  
+    - particleorbital{r=2;points=16;t=15000;i=1;vy=20;particle=SCULK_SOUL} @self
+
+Invocar50:
+  Conditions:
+    - healthpercent{p=<50%} true
+  Cooldown: 1200
+  Skills:
+    - sound{s=entity.generic.explode;v=1.0;p=0.8} @self
+    - particles{particle=EXPLOSION_HUGE;amount=3;speed=0.1;hSpread=0.5;vSpread=0.5} @self
+    - particles{particle=EXPLOSION_NORMAL;amount=30;speed=0.2;hSpread=2.0;vSpread=1.0} @self
+    - particles{particle=SMOKE_LARGE;amount=40;speed=0.1;hSpread=1.5;vSpread=0.5} @self
+    - summon{mob=AcolitoSantuario;amount=5;radius=5} @self
+    - message{m="&4¡El Warden invoca a sus súbditos!"} @PIR{r=40}
+    - throw{velocity=20;velocityY=10} @PlayersInRadius{r=5}  
+    - particletornado{p=SCULK_SOUL;cp=SCULK_SOUL;mr=1;h=2;i=4;d=15000;rs=1;sh=1;cs=0;ca=0;chs=0.1;cvs=0.1;cps=1;cyo=2} @self
+
+Invocar25:
+  Conditions:
+    - healthpercent{p=<25%} true
+  Cooldown: 1200
+  Skills:
+    - sound{s=entity.generic.explode;v=1.0;p=0.8} @self
+    - particles{particle=EXPLOSION_HUGE;amount=3;speed=0.1;hSpread=0.5;vSpread=0.5} @self
+    - particles{particle=EXPLOSION_NORMAL;amount=30;speed=0.2;hSpread=2.0;vSpread=1.0} @self
+    - particles{particle=SMOKE_LARGE;amount=40;speed=0.1;hSpread=1.5;vSpread=0.5} @self
+    - summon{mob=AcolitoSantuario;amount=5;radius=5} @self
+    - message{m="&4¡El Warden invoca a sus súbditos!"} @PIR{r=40}
+    - throw{velocity=20;velocityY=10} @PlayersInRadius{r=5}  
+    - particlelinehelix{Fo=true;db=0.4;hl=4;syo=1.8;p=scrape;hr=0.5;md=40} @targetlocation
+
+Rayo:
+  Skills:
+  - effect:enderbeam{d=50;y=2} @PIR{r=10}
+  - damage{a=10} @PIR{r=10}
+  - potion{t=SLOW;d=120;l=6} @PIR{r=6}
+
+InvocarArañas75:
+  Conditions:
+    - healthpercent{p=<75%} true
+  Cooldown: 99999
+  Skills:
+    - command{c="mm m k Arañita Dungeon -s";sender=console} @self
+    - sound{s=entity.generic.explode;v=1.0;p=0.8} @self
+    - particles{particle=EXPLOSION_HUGE;amount=3;speed=0.1;hSpread=0.5;vSpread=0.5} @self
+    - particles{particle=EXPLOSION_NORMAL;amount=30;speed=0.2;hSpread=2.0;vSpread=1.0} @self
+    - particles{particle=SMOKE_LARGE;amount=40;speed=0.1;hSpread=1.5;vSpread=0.5} @self
+    - summon{mob=Arañita;amount=10;radius=5} @self
+    - message{m="&4¡Los capullos se han abierto!"} @PIR{r=40}
+    - throw{velocity=20;velocityY=10} @PlayersInRadius{r=5} 
+
+
+InvocarArañas50:
+  Conditions:
+    - healthpercent{p=<50%} true
+  Cooldown: 99999
+  Skills:
+    - command{c="mm m k Arañita Dungeon -s";sender=console} @self
+    - sound{s=entity.generic.explode;v=1.0;p=0.8} @self
+    - particles{particle=EXPLOSION_HUGE;amount=3;speed=0.1;hSpread=0.5;vSpread=0.5} @self
+    - particles{particle=EXPLOSION_NORMAL;amount=30;speed=0.2;hSpread=2.0;vSpread=1.0} @self
+    - particles{particle=SMOKE_LARGE;amount=40;speed=0.1;hSpread=1.5;vSpread=0.5} @self
+    - summon{mob=Arañita;amount=10;radius=5} @self
+    - message{m="&4¡Los capullos se han abierto!"} @PIR{r=40}
+    - throw{velocity=20;velocityY=10} @PlayersInRadius{r=5} 
+
+
+InvocarArañas25:
+  Conditions:
+    - healthpercent{p=<25%} true
+  Cooldown: 99999
+  Skills:
+    - command{c="mm m k Arañita Dungeon -s";sender=console} @self
+    - sound{s=entity.generic.explode;v=1.0;p=0.8} @self
+    - particles{particle=EXPLOSION_HUGE;amount=3;speed=0.1;hSpread=0.5;vSpread=0.5} @self
+    - particles{particle=EXPLOSION_NORMAL;amount=30;speed=0.2;hSpread=2.0;vSpread=1.0} @self
+    - particles{particle=SMOKE_LARGE;amount=40;speed=0.1;hSpread=1.5;vSpread=0.5} @self
+    - summon{mob=Arañita;amount=10;radius=5} @self
+    - message{m="&4¡Los capullos se han abierto!"} @PIR{r=40}
+    - throw{velocity=20;velocityY=10} @PlayersInRadius{r=5}  
+
+
+Guardian_Beam:
+   Skills:
+   - guardianbeam{d=100;i=1;syo=1;fromOrigin=True;oS=AStartingSkill;oT=ATickingSkill;oE=AEndingSkill} @Target
+   - damage{a=10} @target
+   - potion{t=SLOW;d=60;l=6} @target
+   - sound{s=entity.spider.ambient;v=1.5;p=0.6} @self
+   - sound{s=block.web.hit;v=1.0;p=0.8} @self
+   - pull{velocity=10.0} @target
+
+
+EscudoHielo:
+   Skills:
+   - orbital{onTick=EscudoHielo-Tick;onHit=EscudoHielo-Hit;points=20;interval=1;duration=200;charges=5}
+EscudoHielo-Tick:
+   Skills:
+   - effect:particles{p=snowballpoof;amount=20;speed=0;hS=0.2;vS=0.2} @origin
+EscudoHielo-Hit:
+   Skills:
+   - damage{a=10}
+   - potion{type=SLOW;duration=50;lvl=2}
+
+PrisionHielo:
+  Conditions:
+   - healthpercent{p=<50%} true
+  Cooldown: 1200
+  Skills:
+    - prison{material=ICE;duration=160;breakable=true} @PIR{r=15}
+    - message{m="&b❄ &f¡Estás atrapado en una prisión de hielo! &b❄"} @PIR{r=15}
+    - particles{particle=SNOWFLAKE;amount=80;speed=0.2;hSpread=2.0;vSpread=2.0} @PIR{r=15}
+    - particles{particle=REDSTONE;color=#ADD8E6;amount=60;speed=0;hSpread=2.0;vSpread=2.0} @PIR{r=15}
+    - freeze{ticks=160}
+    - damage{a=1;cd=2;damagecause=FREEZE}
+    - particles{particle=HEART;amount=5;speed=0.2;hSpread=0.5;vSpread=0.5} @self
+    - heal{amount=5} @self
+    - delay 10
+    - particles{particle=HEART;amount=5;speed=0.2;hSpread=0.5;vSpread=0.5} @self
+    - heal{amount=50} @self
+    - delay 10
+    - particles{particle=HEART;amount=5;speed=0.2;hSpread=0.5;vSpread=0.5} @self
+    - heal{amount=50} @self
+    - delay 10
+    - particles{particle=HEART;amount=5;speed=0.2;hSpread=0.5;vSpread=0.5} @self
+    - heal{amount=50} @self
+    - delay 10
+    - particles{particle=HEART;amount=5;speed=0.2;hSpread=0.5;vSpread=0.5} @self
+    - heal{amount=50} @self
+    - delay 10
+    - particles{particle=HEART;amount=5;speed=0.2;hSpread=0.5;vSpread=0.5} @self
+    - heal{amount=50} @self
+    - delay 10
+    - particles{particle=HEART;amount=5;speed=0.2;hSpread=0.5;vSpread=0.5} @self
+    - heal{amount=50} @self
+    - delay 10
+    - particles{particle=HEART;amount=5;speed=0.2;hSpread=0.5;vSpread=0.5} @self
+    - heal{amount=50} @self
+    - delay 10
+    - particles{particle=HEART;amount=10;speed=0.3;hSpread=1.0;vSpread=1.0} @self
+    - heal{amount=50} @self
+    - delay 10
+    - particles{particle=HEART;amount=10;speed=0.3;hSpread=1.0;vSpread=1.0} @self
+    - heal{amount=50} @self
+    - sound{s=entity.player.levelup;v=1.0;p=0.8} @self
+
+InvocarCarceleros25:
+  Conditions:
+    - healthpercent{p=<25%} true
+  Cooldown: 99999
+  Skills:
+    - command{c="mm m k Carcelero1 Dungeon -s";sender=console} @self
+    - sound{s=entity.generic.explode;v=1.0;p=0.8} @self
+    - particles{particle=EXPLOSION_HUGE;amount=3;speed=0.1;hSpread=0.5;vSpread=0.5} @self
+    - particles{particle=EXPLOSION_NORMAL;amount=30;speed=0.2;hSpread=2.0;vSpread=1.0} @self
+    - particles{particle=SMOKE_LARGE;amount=40;speed=0.1;hSpread=1.5;vSpread=0.5} @self
+    - summon{mob=Carcelero1;amount=10;radius=10} @self
+    - message{m="&4¡El Ghoul invoca a sus secuaces!"} @PIR{r=40}
+    - throw{velocity=20;velocityY=10} @PlayersInRadius{r=5}  
+
+BolaFuego:
+  Skills:
+  - shootfireball{y=1;v=0.5} @target
+  - delay 10
+  - shootfireball{y=1;v=0.5} @target
+  - delay 10
+  - shootfireball{y=1;v=0.5} @target
+
+SaltoMinero:
+  Cooldown: 15
+  Skills:
+    - leap{velocity=200} @target
+    - delay 20
+    - jump{velocity=10}
+    - throw{velocity=20;velocityY=10} @PlayersInRadius{r=10}
+    - blockwave{duration=100;material=stone;radius=5;radiusY=5;velocity=10;shape=sphere} @selflocation
+    - sound{s=entity.generic.explode;v=1.0;p=0.8} @self
+    - particles{particle=EXPLOSION_HUGE;amount=3;speed=0.1;hSpread=0.5;vSpread=0.5} @self
+    - particles{particle=EXPLOSION_NORMAL;amount=30;speed=0.2;hSpread=2.0;vSpread=1.0} @self
+    - particles{particle=SMOKE_LARGE;amount=40;speed=0.1;hSpread=1.5;vSpread=0.5} @self
+    - delay 5
+    - leap{velocity=200} @target
+    - effect:explosion @self
+    - damage{amount=20} @EntitiesInRadius{r=20}
+    - sound{s=entity.generic.explode;v=1.0;p=0.8} @self
+    - particles{particle=EXPLOSION_HUGE;amount=3;speed=0.1;hSpread=0.5;vSpread=0.5} @self
+    - particles{particle=EXPLOSION_NORMAL;amount=30;speed=0.2;hSpread=2.0;vSpread=1.0} @self
+    - particles{particle=SMOKE_LARGE;amount=40;speed=0.1;hSpread=1.5;vSpread=0.5} @self
+    - delay 12
+    - sound{s=entity.generic.explode;v=1.0;p=0.8} @self
+    - particles{particle=EXPLOSION_HUGE;amount=3;speed=0.1;hSpread=0.5;vSpread=0.5} @self
+    - particles{particle=EXPLOSION_NORMAL;amount=30;speed=0.2;hSpread=2.0;vSpread=1.0} @self
+    - particles{particle=SMOKE_LARGE;amount=40;speed=0.1;hSpread=1.5;vSpread=0.5} @self
+
+AuraFuego:
+  Skills:
+    - particles{p=FLAME;mr=1.5;h=2.0;i=10;d=100;rs=2;sh=1} @self ~onTimer:5
+    - particles{p=LAVA;mr=1.0;h=2.0;i=8;d=100;rs=3;sh=1} @self ~onTimer:7
+    - particles{particle=FLAME;amount=10;speed=0.05;hSpread=1.5;vSpread=1.5} @self ~onTimer:10
+    - ignite{ticks=60} @PIR{r=4} ~onTimer:20
+    - damage{amount=2} @PIR{r=4} ~onTimer:20
+
+Geyser:
+  Skills:
+  - geyser{type=LAVA;height=10;speed=100} @PlayersInRadius{r=20}

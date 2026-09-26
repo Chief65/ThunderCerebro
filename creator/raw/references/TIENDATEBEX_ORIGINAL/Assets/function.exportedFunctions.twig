@@ -1,0 +1,37 @@
+{# INIT THE MODALS #}
+{% include 'function.initModals.js' %}
+
+{# Include the utils functions #}
+{% include 'function.utils.js' %}
+
+{# Get the data for discord and game server #}
+{% include 'function.serverRequests.twig' %}
+
+{# Clickable Functionability #}
+{% include 'function.storeFunctions.js' %}
+
+{# Giftcard Module #}
+{% include 'function.giftcard.js' %}
+
+{# Featured Products Module #}
+{% include 'function.featuredProducts.js' %}
+
+{# Donation Goal Module #}
+{% if config("goalModule") == "enabled" %}
+    {% include 'function.donationGoal.js' %}
+{% endif %}
+
+{# Checkout Functionability #}
+{% include 'function.checkout.js' %}
+
+{# Sidebar / Topbar Functionability #}
+{% include 'function.sidebar.js' %}
+
+{# Product Modal #}
+{% include 'function.productModal.js' %}
+
+{# Login Modal Functionability #}
+{% include 'function.loginModal.js' %}
+
+{# If Developer Mode is enabled, this will generate the icons for sidebar, topbar #}
+{% include 'function.generateIcons.js' %}

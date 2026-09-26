@@ -1,0 +1,181 @@
+﻿menu_title: '&0&l|&r &0ThunderMC &0▶ &8Precios de Venta'
+open_command:
+  - shopvender
+  - preciosvender
+size: 36
+open_requirement:
+  requirements: {}
+register_command: true
+update: true
+
+items:
+  # ============================================================================
+  # FILA CENTRAL: CATEGORÍAS DE VENTA ORGANIZADAS (SIN BOLD, MÁX 3 LÍNEAS CORTAS)
+  # ============================================================================
+  'Cat_Farmeo':
+    material: WHEAT
+    slot: 10
+    hide_attributes: true
+    display_name: '&#FFAA00Agricultura'
+    lore:
+      - '&8ᴀɢʀɪᴄᴜʟᴛᴜʀᴀ'
+      - ''
+      - ' &fPrecios de venta de'
+      - ' &fcultivos y semillas.'
+      - ''
+      - '&7▶ Click para ver'
+    left_click_commands:
+      - '[openguimenu] precios_farmeo'
+      - '[sound] UI_BUTTON_CLICK'
+
+  'Cat_Mobs':
+    material: GUNPOWDER
+    slot: 11
+    hide_attributes: true
+    display_name: '&#00FF88Drops de Mobs'
+    lore:
+      - '&8ᴅʀᴏᴘꜱ ᴅᴇ ᴍᴏʙꜱ'
+      - ''
+      - ' &fPrecios de restos y'
+      - ' &fdrops de criaturas.'
+      - ''
+      - '&7▶ Click para ver'
+    left_click_commands:
+      - '[openguimenu] precios_mobs'
+      - '[sound] UI_BUTTON_CLICK'
+
+  'Cat_Comida':
+    material: COOKED_BEEF
+    slot: 12
+    hide_attributes: true
+    display_name: '&#FF5555Comida'
+    lore:
+      - '&8ᴀʟɪᴍᴇɴᴛᴏꜱ'
+      - ''
+      - ' &fPrecios de carnes,'
+      - ' &fpescados y alimentos.'
+      - ''
+      - '&7▶ Click para ver'
+    left_click_commands:
+      - '[openguimenu] precios_comida'
+      - '[sound] UI_BUTTON_CLICK'
+
+  'Cat_Bloques':
+    material: GRASS_BLOCK
+    slot: 13
+    hide_attributes: true
+    display_name: '&#00B7FFBloques'
+    lore:
+      - '&8ʙʟᴏǫᴜᴇꜱ'
+      - ''
+      - ' &fPrecios de piedra,'
+      - ' &fmadera y derivados.'
+      - ''
+      - '&7▶ Click para ver'
+    left_click_commands:
+      - '[close]'
+      - '[player] shop bloques'
+      - '[sound] UI_BUTTON_CLICK'
+
+  'Cat_Minerales_Misc':
+    material: AMETHYST_SHARD
+    slot: 14
+    hide_attributes: true
+    display_name: '&#CF27F5Misceláneo'
+    lore:
+      - '&8ᴍɪꜱᴄᴇʟᴀɴᴇᴏ'
+      - ''
+      - ' &fPrecios de cajas,'
+      - ' &fesponjas y utilidades.'
+      - ''
+      - '&7▶ Click para ver'
+    left_click_commands:
+      - '[openguimenu] precios_misc'
+      - '[sound] UI_BUTTON_CLICK'
+
+  'Cat_Redstone':
+    material: REDSTONE
+    slot: 15
+    hide_attributes: true
+    display_name: '&#FF3333Redstone'
+    lore:
+      - '&8ʀᴇᴅꜱᴛᴏɴᴇ'
+      - ''
+      - ' &fPrecios de tolvas,'
+      - ' &fmecanismos y slime.'
+      - ''
+      - '&7▶ Click para ver'
+    left_click_commands:
+      - '[openguimenu] precios_redstone'
+      - '[sound] UI_BUTTON_CLICK'
+
+  'Cat_Equipo_Venta':
+    material: DIAMOND_SWORD
+    slot: 16
+    hide_attributes: true
+    display_name: '&#E727F5Equipo & Especiales'
+    lore:
+      - '&8ᴇǫᴜɪᴘᴏ'
+      - ''
+      - ' &fPrecios de equipo y'
+      - ' &fcristales de minería.'
+      - ''
+      - '&7▶ Click para ver'
+    left_click_commands:
+      - '[openguimenu] precios_equipo'
+      - '[sound] UI_BUTTON_CLICK'
+
+  # ============================================================================
+  # NAVBAR INFERIOR (FILA 4)
+  # ============================================================================
+  'Boton_Volver':
+    material: DARK_OAK_DOOR
+    slot: 31
+    hide_attributes: true
+    display_name: '&cVolver Atrás'
+    lore:
+      - '&8Regresar al menú principal'
+    left_click_commands:
+      - '[openguimenu] tienda_principal'
+      - '[sound] UI_BUTTON_CLICK'
+
+  'Boton_SellGUI':
+    material: HOPPER
+    slot: 34
+    hide_attributes: true
+    display_name: '&#00B7FFVenta Rápida'
+    lore:
+      - '&8ᴠᴇɴᴛᴀ ᴀᴜᴛᴏᴍᴀᴛɪᴄᴀ'
+      - ''
+      - ' &fVende todo tu inventario'
+      - ' &fde forma instantánea.'
+      - ''
+      - '&7▶ Click para abrir'
+    left_click_commands:
+      - '[close]'
+      - '[player] sellgui'
+      - '[sound] ENTITY_EXPERIENCE_ORB_PICKUP'
+
+  'Info_Balance':
+    material: SUNFLOWER
+    slot: 35
+    hide_attributes: true
+    display_name: '&#FFD700Tu Economía'
+    lore:
+      - '&8ʙᴀʟᴀɴᴄᴇ'
+      - ''
+      - ' &8▶ &a$%vault_eco_balance_formatted%'
+
+  # ============================================================================
+  # FILTRO NAVBAR
+  # ============================================================================
+  'Filtro_Navbar':
+    material: GRAY_STAINED_GLASS_PANE
+    display_name: ' '
+    slots:
+      - 27
+      - 28
+      - 29
+      - 30
+      - 32
+      - 33

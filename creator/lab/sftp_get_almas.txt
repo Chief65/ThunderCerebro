@@ -1,0 +1,2 @@
+get plugins/ShopGUIPlus/shops/almas.yml creator/lab/almas.yml
+bye

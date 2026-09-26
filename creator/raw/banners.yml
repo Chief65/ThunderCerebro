@@ -1,0 +1,3260 @@
+banners:
+  name: "&0&l|&r &0Mercado ▶ &8Banners &8(#59E91F$&8)"
+  size: 45
+  fillItem:
+    material: AIR
+    name: " "
+  buttons:
+    goBack:
+      slot: 40
+    previousPage:
+      slot: 39
+    nextPage:
+      slot: 41
+  items:
+    # --- PÁGINA 1: MARCO Y NAVBAR ---
+    1:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 0
+      page: 1
+    2:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 1
+      page: 1
+    3:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 2
+      page: 1
+    4:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 3
+      page: 1
+    5:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 4
+      page: 1
+    6:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 5
+      page: 1
+    7:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 6
+      page: 1
+    8:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 7
+      page: 1
+    9:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 8
+      page: 1
+    10:
+      type: dummy
+      item:
+        material: COMPARATOR
+        quantity: 1
+        glow: true
+        name: "#FFF275Filtrar Categoría"
+        lore:
+          - "&8Elige categoría"
+          - ""
+          - " &7● Bloques"
+          - " &7● Farmeo"
+          - " &7● Comida"
+          - " &7● Mobs"
+          - " &7● Equipo"
+          - " &7● Redstone"
+          - " &7● Misceláneo"
+          - " &7● Tintes"
+          - " #FFF275● Banners"
+          - ""
+          - "&7▶ Click para cambiar"
+      commandsOnClick:
+        - "shop bloques"
+      slot: 36
+      page: 1
+    11:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 37
+      page: 1
+    12:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 38
+      page: 1
+    13:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 39
+      page: 1
+    14:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 42
+      page: 1
+    15:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 43
+      page: 1
+    16:
+      type: special
+      special: balance
+      slot: 44
+      page: 1
+    17:
+      type: item
+      item:
+        material: WHITE_BANNER
+        name: "#FFF275White Banner"
+        quantity: 1
+      buyPrice: 50
+      sellPrice: -1
+      slot: 9
+      page: 1
+    18:
+      type: item
+      item:
+        material: ORANGE_BANNER
+        name: "#FFF275Orange Banner"
+        quantity: 1
+      buyPrice: 50
+      sellPrice: -1
+      slot: 10
+      page: 1
+    19:
+      type: item
+      item:
+        material: MAGENTA_BANNER
+        name: "#FFF275Magenta Banner"
+        quantity: 1
+      buyPrice: 50
+      sellPrice: -1
+      slot: 11
+      page: 1
+    20:
+      type: item
+      item:
+        material: LIGHT_BLUE_BANNER
+        name: "#FFF275Light Blue Banner"
+        quantity: 1
+      buyPrice: 50
+      sellPrice: -1
+      slot: 12
+      page: 1
+    21:
+      type: item
+      item:
+        material: YELLOW_BANNER
+        name: "#FFF275Yellow Banner"
+        quantity: 1
+      buyPrice: 50
+      sellPrice: -1
+      slot: 13
+      page: 1
+    22:
+      type: item
+      item:
+        material: LIME_BANNER
+        name: "#FFF275Lime Banner"
+        quantity: 1
+      buyPrice: 50
+      sellPrice: -1
+      slot: 14
+      page: 1
+    23:
+      type: item
+      item:
+        material: PINK_BANNER
+        name: "#FFF275Pink Banner"
+        quantity: 1
+      buyPrice: 50
+      sellPrice: -1
+      slot: 15
+      page: 1
+    24:
+      type: item
+      item:
+        material: GRAY_BANNER
+        name: "#FFF275Gray Banner"
+        quantity: 1
+      buyPrice: 50
+      sellPrice: -1
+      slot: 16
+      page: 1
+    25:
+      type: item
+      item:
+        material: LIGHT_GRAY_BANNER
+        name: "#FFF275Light Gray Banner"
+        quantity: 1
+      buyPrice: 50
+      sellPrice: -1
+      slot: 17
+      page: 1
+    26:
+      type: item
+      item:
+        material: CYAN_BANNER
+        name: "#FFF275Cyan Banner"
+        quantity: 1
+      buyPrice: 50
+      sellPrice: -1
+      slot: 18
+      page: 1
+    27:
+      type: item
+      item:
+        material: PURPLE_BANNER
+        name: "#FFF275Purple Banner"
+        quantity: 1
+      buyPrice: 50
+      sellPrice: -1
+      slot: 19
+      page: 1
+    28:
+      type: item
+      item:
+        material: BLUE_BANNER
+        name: "#FFF275Blue Banner"
+        quantity: 1
+      buyPrice: 50
+      sellPrice: -1
+      slot: 20
+      page: 1
+    29:
+      type: item
+      item:
+        material: BROWN_BANNER
+        name: "#FFF275Brown Banner"
+        quantity: 1
+      buyPrice: 50
+      sellPrice: -1
+      slot: 21
+      page: 1
+    30:
+      type: item
+      item:
+        material: GREEN_BANNER
+        name: "#FFF275Green Banner"
+        quantity: 1
+      buyPrice: 50
+      sellPrice: -1
+      slot: 22
+      page: 1
+    31:
+      type: item
+      item:
+        material: RED_BANNER
+        name: "#FFF275Red Banner"
+        quantity: 1
+      buyPrice: 50
+      sellPrice: -1
+      slot: 23
+      page: 1
+    32:
+      type: item
+      item:
+        material: BLACK_BANNER
+        name: "#FFF275Black Banner"
+        quantity: 1
+      buyPrice: 50
+      sellPrice: -1
+      slot: 24
+      page: 1
+    33:
+      type: item
+      item:
+        material: ORANGE_BANNER
+        name: "#FFF275Fox Banner"
+        quantity: 1
+        patterns:
+          1:
+            color: WHITE
+            type: RHOMBUS_MIDDLE
+          2:
+            color: ORANGE
+            type: STRIPE_BOTTOM
+          3:
+            color: ORANGE
+            type: STRIPE_TOP
+          4:
+            color: ORANGE
+            type: TRIANGLES_BOTTOM
+          5:
+            color: ORANGE
+            type: CIRCLE_MIDDLE
+          6:
+            color: ORANGE
+            type: TRIANGLE_BOTTOM
+      buyPrice: 200
+      sellPrice: -1
+      slot: 25
+      page: 1
+    34:
+      type: item
+      item:
+        material: BLACK_BANNER
+        name: "#FFF275MC-Hacker Banner"
+        quantity: 1
+        patterns:
+          1:
+            color: LIME
+            type: BRICKS
+          2:
+            color: BLACK
+            type: BRICKS
+          3:
+            color: GREEN
+            type: STRIPE_SMALL
+          4:
+            color: BLACK
+            type: BRICKS
+          5:
+            color: LIME
+            type: GLOBE
+      buyPrice: 200
+      sellPrice: -1
+      slot: 26
+      page: 1
+    35:
+      type: item
+      item:
+        material: PURPLE_BANNER
+        name: "#FFF275Portail du Nether"
+        quantity: 1
+        patterns:
+          1:
+            color: MAGENTA
+            type: STRIPE_SMALL
+          2:
+            color: PURPLE
+            type: BRICKS
+          3:
+            color: MAGENTA
+            type: CURLY_BORDER
+          4:
+            color: BLACK
+            type: BORDER
+      buyPrice: 200
+      sellPrice: -1
+      slot: 27
+      page: 1
+    36:
+      type: item
+      item:
+        material: WHITE_BANNER
+        name: "#FFF275Sabre Laser"
+        quantity: 1
+        patterns:
+          1:
+            color: PURPLE
+            type: STRIPE_SMALL
+          2:
+            color: BLACK
+            type: STRIPE_LEFT
+          3:
+            color: BLACK
+            type: STRIPE_RIGHT
+          4:
+            color: BLACK
+            type: SQUARE_BOTTOM_LEFT
+          5:
+            color: BLACK
+            type: SQUARE_BOTTOM_RIGHT
+          6:
+            color: BLACK
+            type: TRIANGLES_BOTTOM
+      buyPrice: 200
+      sellPrice: -1
+      slot: 28
+      page: 1
+    37:
+      type: item
+      item:
+        material: BLUE_BANNER
+        name: "#FFF275Tardis"
+        quantity: 1
+        patterns:
+          1:
+            color: WHITE
+            type: BRICKS
+          2:
+            color: BLUE
+            type: HALF_HORIZONTAL_BOTTOM
+          3:
+            color: BLACK
+            type: CROSS
+          4:
+            color: BLUE
+            type: CROSS
+          5:
+            color: BLACK
+            type: BORDER
+          6:
+            color: BLUE
+            type: BORDER
+      buyPrice: 200
+      sellPrice: -1
+      slot: 29
+      page: 1
+    38:
+      type: item
+      item:
+        material: WHITE_BANNER
+        name: "#FFF275Fox"
+        quantity: 1
+        patterns:
+          1:
+            color: BLACK
+            type: RHOMBUS_MIDDLE
+          2:
+            color: ORANGE
+            type: CURLY_BORDER
+          3:
+            color: ORANGE
+            type: CIRCLE_MIDDLE
+          4:
+            color: ORANGE
+            type: CREEPER
+          5:
+            color: ORANGE
+            type: TRIANGLE_TOP
+          6:
+            color: ORANGE
+            type: TRIANGLES_TOP
+      buyPrice: 200
+      sellPrice: -1
+      slot: 30
+      page: 1
+    39:
+      type: item
+      item:
+        material: WHITE_BANNER
+        name: "#FFF275No Smoking"
+        quantity: 1
+        patterns:
+          1:
+            color: GRAY
+            type: TRIANGLES_TOP
+          2:
+            color: ORANGE
+            type: STRIPE_BOTTOM
+          3:
+            color: BROWN
+            type: STRIPE_LEFT
+          4:
+            color: BROWN
+            type: STRIPE_RIGHT
+          5:
+            color: BROWN
+            type: BORDER
+          6:
+            color: RED
+            type: STRIPE_DOWNLEFT
+      buyPrice: 200
+      sellPrice: -1
+      slot: 31
+      page: 1
+    40:
+      type: item
+      item:
+        material: YELLOW_BANNER
+        name: "#FFF275Planet"
+        quantity: 1
+        patterns:
+          1:
+            color: GREEN
+            type: RHOMBUS_MIDDLE
+          2:
+            color: LIGHT_BLUE
+            type: MOJANG
+          3:
+            color: BLACK
+            type: BORDER
+          4:
+            color: BLACK
+            type: STRIPE_BOTTOM
+          5:
+            color: BLACK
+            type: STRIPE_TOP
+          6:
+            color: BLACK
+            type: GRADIENT_UP
+      buyPrice: 200
+      sellPrice: -1
+      slot: 32
+      page: 1
+    41:
+      type: item
+      item:
+        material: ORANGE_BANNER
+        name: "#FFF275Sunshine"
+        quantity: 1
+        patterns:
+          1:
+            color: RED
+            type: GRADIENT
+          2:
+            color: ORANGE
+            type: FLOWER
+          3:
+            color: YELLOW
+            type: CIRCLE_MIDDLE
+          4:
+            color: BROWN
+            type: TRIANGLE_BOTTOM
+          5:
+            color: GREEN
+            type: TRIANGLES_BOTTOM
+      buyPrice: 200
+      sellPrice: -1
+      slot: 33
+      page: 1
+    42:
+      type: item
+      item:
+        material: LIGHT_BLUE_BANNER
+        name: "#FFF275Angel"
+        quantity: 1
+        patterns:
+          1:
+            color: BLUE
+            type: GRADIENT
+          2:
+            color: WHITE
+            type: CURLY_BORDER
+          3:
+            color: WHITE
+            type: CROSS
+          4:
+            color: WHITE
+            type: CIRCLE_MIDDLE
+          5:
+            color: BLUE
+            type: FLOWER
+          6:
+            color: WHITE
+            type: TRIANGLE_TOP
+      buyPrice: 200
+      sellPrice: -1
+      slot: 34
+      page: 1
+    43:
+      type: item
+      item:
+        material: BLACK_BANNER
+        name: "#FFF275EnderFlag"
+        quantity: 1
+        patterns:
+          1:
+            color: WHITE
+            type: STRIPE_DOWNLEFT
+          2:
+            color: PURPLE
+            type: RHOMBUS_MIDDLE
+          3:
+            color: BLACK
+            type: STRIPE_DOWNLEFT
+          4:
+            color: MAGENTA
+            type: CIRCLE_MIDDLE
+          5:
+            color: BLACK
+            type: FLOWER
+      buyPrice: 200
+      sellPrice: -1
+      slot: 35
+      page: 1
+    # --- PÁGINA 2: MARCO Y NAVBAR ---
+    44:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 0
+      page: 2
+    45:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 1
+      page: 2
+    46:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 2
+      page: 2
+    47:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 3
+      page: 2
+    48:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 4
+      page: 2
+    49:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 5
+      page: 2
+    50:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 6
+      page: 2
+    51:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 7
+      page: 2
+    52:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 8
+      page: 2
+    53:
+      type: dummy
+      item:
+        material: COMPARATOR
+        quantity: 1
+        glow: true
+        name: "#FFF275Filtrar Categoría"
+        lore:
+          - "&8Elige categoría"
+          - ""
+          - " &7● Bloques"
+          - " &7● Farmeo"
+          - " &7● Comida"
+          - " &7● Mobs"
+          - " &7● Equipo"
+          - " &7● Redstone"
+          - " &7● Misceláneo"
+          - " &7● Tintes"
+          - " #FFF275● Banners"
+          - ""
+          - "&7▶ Click para cambiar"
+      commandsOnClick:
+        - "shop bloques"
+      slot: 36
+      page: 2
+    54:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 37
+      page: 2
+    55:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 38
+      page: 2
+    56:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 42
+      page: 2
+    57:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 43
+      page: 2
+    58:
+      type: special
+      special: balance
+      slot: 44
+      page: 2
+    59:
+      type: item
+      item:
+        material: PURPLE_BANNER
+        name: "#FFF275Enderman"
+        quantity: 1
+        patterns:
+          1:
+            color: MAGENTA
+            type: STRIPE_SMALL
+          2:
+            color: MAGENTA
+            type: BORDER
+          3:
+            color: BLACK
+            type: STRIPE_TOP
+          4:
+            color: BLACK
+            type: CROSS
+          5:
+            color: BLACK
+            type: HALF_HORIZONTAL_BOTTOM
+          6:
+            color: BLACK
+            type: STRIPE_MIDDLE
+      buyPrice: 200
+      sellPrice: -1
+      slot: 9
+      page: 2
+    60:
+      type: item
+      item:
+        material: WHITE_BANNER
+        name: "#FFF275Rabbit"
+        quantity: 1
+        patterns:
+          1:
+            color: BLACK
+            type: CIRCLE_MIDDLE
+          2:
+            color: WHITE
+            type: FLOWER
+          3:
+            color: BLACK
+            type: TRIANGLE_TOP
+          4:
+            color: WHITE
+            type: CROSS
+          5:
+            color: BLACK
+            type: CURLY_BORDER
+          6:
+            color: WHITE
+            type: TRIANGLES_BOTTOM
+      buyPrice: 200
+      sellPrice: -1
+      slot: 10
+      page: 2
+    61:
+      type: item
+      item:
+        material: BLUE_BANNER
+        name: "#FFF275City Full Moon"
+        quantity: 1
+        patterns:
+          1:
+            color: LIGHT_GRAY
+            type: MOJANG
+          2:
+            color: LIGHT_BLUE
+            type: GRADIENT_UP
+          3:
+            color: BLACK
+            type: GRADIENT
+          4:
+            color: BLACK
+            type: TRIANGLES_BOTTOM
+          5:
+            color: WHITE
+            type: CIRCLE_MIDDLE
+          6:
+            color: BLACK
+            type: SQUARE_BOTTOM_LEFT
+      buyPrice: 200
+      sellPrice: -1
+      slot: 11
+      page: 2
+    62:
+      type: item
+      item:
+        material: BLACK_BANNER
+        name: "#FFF275Fire"
+        quantity: 1
+        patterns:
+          1:
+            color: ORANGE
+            type: MOJANG
+          2:
+            color: BLACK
+            type: BRICKS
+          3:
+            color: ORANGE
+            type: TRIANGLE_BOTTOM
+          4:
+            color: BLACK
+            type: RHOMBUS_MIDDLE
+          5:
+            color: ORANGE
+            type: GRADIENT_UP
+          6:
+            color: YELLOW
+            type: TRIANGLES_BOTTOM
+      buyPrice: 200
+      sellPrice: -1
+      slot: 12
+      page: 2
+    63:
+      type: item
+      item:
+        material: WHITE_BANNER
+        name: "#FFF275Quartz sculpteacute"
+        quantity: 1
+        patterns:
+          1:
+            color: BLACK
+            type: CROSS
+          2:
+            color: WHITE
+            type: CROSS
+          3:
+            color: BLACK
+            type: FLOWER
+          4:
+            color: WHITE
+            type: FLOWER
+      buyPrice: 200
+      sellPrice: -1
+      slot: 13
+      page: 2
+    64:
+      type: item
+      item:
+        material: WHITE_BANNER
+        name: "#FFF275Pokemon"
+        quantity: 1
+        patterns:
+          1:
+            color: RED
+            type: HALF_HORIZONTAL
+          2:
+            color: BLACK
+            type: RHOMBUS_MIDDLE
+          3:
+            color: BLACK
+            type: STRIPE_MIDDLE
+          4:
+            color: RED
+            type: STRIPE_TOP
+          5:
+            color: WHITE
+            type: STRIPE_BOTTOM
+          6:
+            color: WHITE
+            type: CIRCLE_MIDDLE
+      buyPrice: 200
+      sellPrice: -1
+      slot: 14
+      page: 2
+    65:
+      type: item
+      item:
+        material: BLACK_BANNER
+        name: "#FFF275Bol De Riz"
+        quantity: 1
+        patterns:
+          1:
+            color: BROWN
+            type: STRIPE_DOWNLEFT
+          2:
+            color: BLACK
+            type: CROSS
+          3:
+            color: WHITE
+            type: CIRCLE_MIDDLE
+          4:
+            color: RED
+            type: HALF_HORIZONTAL_BOTTOM
+          5:
+            color: BLACK
+            type: CURLY_BORDER
+          6:
+            color: BLACK
+            type: STRIPE_BOTTOM
+      buyPrice: 200
+      sellPrice: -1
+      slot: 15
+      page: 2
+    66:
+      type: item
+      item:
+        material: WHITE_BANNER
+        name: "#FFF275Ender Dragon"
+        quantity: 1
+        patterns:
+          1:
+            color: BLACK
+            type: CURLY_BORDER
+          2:
+            color: WHITE
+            type: STRIPE_RIGHT
+          3:
+            color: PURPLE
+            type: FLOWER
+          4:
+            color: BLACK
+            type: STRIPE_MIDDLE
+          5:
+            color: WHITE
+            type: TRIANGLE_TOP
+          6:
+            color: BLACK
+            type: MOJANG
+      buyPrice: 200
+      sellPrice: -1
+      slot: 16
+      page: 2
+    67:
+      type: item
+      item:
+        material: LIME_BANNER
+        name: "#FFF275Like pls -"
+        quantity: 1
+        patterns:
+          1:
+            color: YELLOW
+            type: GRADIENT
+          2:
+            color: LIGHT_BLUE
+            type: GRADIENT_UP
+          3:
+            color: WHITE
+            type: CURLY_BORDER
+          4:
+            color: WHITE
+            type: CROSS
+          5:
+            color: WHITE
+            type: RHOMBUS_MIDDLE
+          6:
+            color: LIME
+            type: CIRCLE_MIDDLE
+      buyPrice: 200
+      sellPrice: -1
+      slot: 17
+      page: 2
+    68:
+      type: item
+      item:
+        material: BLACK_BANNER
+        name: "#FFF275Piarte"
+        quantity: 1
+        patterns:
+          1:
+            color: WHITE
+            type: SKULL
+          2:
+            color: BROWN
+            type: STRIPE_TOP
+          3:
+            color: BLACK
+            type: GRADIENT_UP
+          4:
+            color: BLACK
+            type: CURLY_BORDER
+          5:
+            color: BLACK
+            type: TRIANGLES_TOP
+      buyPrice: 200
+      sellPrice: -1
+      slot: 18
+      page: 2
+    69:
+      type: item
+      item:
+        material: WHITE_BANNER
+        name: "#FFF275Owl"
+        quantity: 1
+        patterns:
+          1:
+            color: BLACK
+            type: FLOWER
+          2:
+            color: WHITE
+            type: SKULL
+          3:
+            color: WHITE
+            type: CIRCLE_MIDDLE
+          4:
+            color: WHITE
+            type: STRIPE_TOP
+          5:
+            color: WHITE
+            type: HALF_HORIZONTAL
+      buyPrice: 200
+      sellPrice: -1
+      slot: 19
+      page: 2
+    70:
+      type: item
+      item:
+        material: BLACK_BANNER
+        name: "#FFF275DRAGON"
+        quantity: 1
+        patterns:
+          1:
+            color: LIME
+            type: CURLY_BORDER
+          2:
+            color: BLACK
+            type: STRIPE_RIGHT
+          3:
+            color: RED
+            type: FLOWER
+          4:
+            color: LIME
+            type: STRIPE_MIDDLE
+          5:
+            color: BLACK
+            type: TRIANGLE_TOP
+          6:
+            color: LIME
+            type: MOJANG
+      buyPrice: 200
+      sellPrice: -1
+      slot: 20
+      page: 2
+    71:
+      type: item
+      item:
+        material: BROWN_BANNER
+        name: "#FFF275Milka"
+        quantity: 1
+        patterns:
+          1:
+            color: BLACK
+            type: BRICKS
+          2:
+            color: BROWN
+            type: BRICKS
+          3:
+            color: PURPLE
+            type: HALF_HORIZONTAL_BOTTOM
+          4:
+            color: PURPLE
+            type: FLOWER
+          5:
+            color: PURPLE
+            type: CIRCLE_MIDDLE
+          6:
+            color: WHITE
+            type: MOJANG
+      buyPrice: 200
+      sellPrice: -1
+      slot: 21
+      page: 2
+    72:
+      type: item
+      item:
+        material: RED_BANNER
+        name: "#FFF275Kraken"
+        quantity: 1
+        patterns:
+          1:
+            color: BLUE
+            type: TRIANGLE_BOTTOM
+          2:
+            color: RED
+            type: STRIPE_SMALL
+          3:
+            color: WHITE
+            type: STRIPE_MIDDLE
+          4:
+            color: BLUE
+            type: CURLY_BORDER
+          5:
+            color: RED
+            type: CIRCLE_MIDDLE
+          6:
+            color: BLUE
+            type: BORDER
+      buyPrice: 200
+      sellPrice: -1
+      slot: 22
+      page: 2
+    73:
+      type: item
+      item:
+        material: LIGHT_BLUE_BANNER
+        name: "#FFF275NIGHT SKELETON"
+        quantity: 1
+        patterns:
+          1:
+            color: BLACK
+            type: STRIPE_SMALL
+          2:
+            color: BLACK
+            type: CROSS
+          3:
+            color: BLUE
+            type: BORDER
+          4:
+            color: WHITE
+            type: CIRCLE_MIDDLE
+          5:
+            color: BLACK
+            type: CURLY_BORDER
+          6:
+            color: BLACK
+            type: SKULL
+      buyPrice: 200
+      sellPrice: -1
+      slot: 23
+      page: 2
+    74:
+      type: item
+      item:
+        material: WHITE_BANNER
+        name: "#FFF275Poule"
+        quantity: 1
+        patterns:
+          1:
+            color: BLACK
+            type: STRIPE_TOP
+          2:
+            color: WHITE
+            type: CROSS
+          3:
+            color: RED
+            type: HALF_HORIZONTAL_BOTTOM
+          4:
+            color: WHITE
+            type: BORDER
+          5:
+            color: WHITE
+            type: STRIPE_BOTTOM
+          6:
+            color: YELLOW
+            type: STRIPE_MIDDLE
+      buyPrice: 200
+      sellPrice: -1
+      slot: 24
+      page: 2
+    75:
+      type: item
+      item:
+        material: BLACK_BANNER
+        name: "#FFF275Skull I"
+        quantity: 1
+        patterns:
+          1:
+            color: WHITE
+            type: CURLY_BORDER
+          2:
+            color: WHITE
+            type: STRIPE_CENTER
+          3:
+            color: BLACK
+            type: STRIPE_BOTTOM
+          4:
+            color: WHITE
+            type: STRIPE_TOP
+          5:
+            color: WHITE
+            type: CREEPER
+          6:
+            color: BLACK
+            type: GRADIENT
+      buyPrice: 200
+      sellPrice: -1
+      slot: 25
+      page: 2
+    76:
+      type: item
+      item:
+        material: WHITE_BANNER
+        name: "#FFF275Villageois"
+        quantity: 1
+        patterns:
+          1:
+            color: LIME
+            type: RHOMBUS_MIDDLE
+          2:
+            color: BROWN
+            type: STRIPE_BOTTOM
+          3:
+            color: ORANGE
+            type: STRIPE_CENTER
+          4:
+            color: BROWN
+            type: BORDER
+          5:
+            color: BLACK
+            type: STRIPE_MIDDLE
+          6:
+            color: BROWN
+            type: HALF_HORIZONTAL
+      buyPrice: 200
+      sellPrice: -1
+      slot: 26
+      page: 2
+    77:
+      type: item
+      item:
+        material: LIGHT_BLUE_BANNER
+        name: "#FFF275Sheep"
+        quantity: 1
+        patterns:
+          1:
+            color: LIME
+            type: STRIPE_BOTTOM
+          2:
+            color: WHITE
+            type: CIRCLE_MIDDLE
+          3:
+            color: BLACK
+            type: CREEPER
+          4:
+            color: WHITE
+            type: FLOWER
+      buyPrice: 200
+      sellPrice: -1
+      slot: 27
+      page: 2
+    78:
+      type: item
+      item:
+        material: BLACK_BANNER
+        name: "#FFF275Ghast"
+        quantity: 1
+        patterns:
+          1:
+            color: RED
+            type: TRIANGLES_BOTTOM
+          2:
+            color: RED
+            type: CIRCLE_MIDDLE
+          3:
+            color: WHITE
+            type: CREEPER
+          4:
+            color: WHITE
+            type: STRIPE_TOP
+          5:
+            color: WHITE
+            type: CURLY_BORDER
+          6:
+            color: WHITE
+            type: CROSS
+      buyPrice: 200
+      sellPrice: -1
+      slot: 28
+      page: 2
+    79:
+      type: item
+      item:
+        material: LIGHT_BLUE_BANNER
+        name: "#FFF275Island"
+        quantity: 1
+        patterns:
+          1:
+            color: BLACK
+            type: RHOMBUS_MIDDLE
+          2:
+            color: WHITE
+            type: GRADIENT_UP
+          3:
+            color: GREEN
+            type: FLOWER
+          4:
+            color: BROWN
+            type: MOJANG
+          5:
+            color: BROWN
+            type: CIRCLE_MIDDLE
+          6:
+            color: BLUE
+            type: HALF_HORIZONTAL_BOTTOM
+      buyPrice: 200
+      sellPrice: -1
+      slot: 29
+      page: 2
+    80:
+      type: item
+      item:
+        material: LIGHT_GRAY_BANNER
+        name: "#FFF275The Wither"
+        quantity: 1
+        patterns:
+          1:
+            color: BLACK
+            type: HALF_HORIZONTAL_BOTTOM
+          2:
+            color: LIGHT_GRAY
+            type: STRIPE_BOTTOM
+          3:
+            color: BLACK
+            type: STRIPE_CENTER
+          4:
+            color: LIGHT_GRAY
+            type: HALF_HORIZONTAL
+          5:
+            color: BLACK
+            type: CREEPER
+          6:
+            color: BLACK
+            type: SKULL
+      buyPrice: 200
+      sellPrice: -1
+      slot: 30
+      page: 2
+    81:
+      type: item
+      item:
+        material: LIGHT_BLUE_BANNER
+        name: "#FFF275Master Sword"
+        quantity: 1
+        patterns:
+          1:
+            color: WHITE
+            type: STRIPE_CENTER
+          2:
+            color: BLUE
+            type: FLOWER
+          3:
+            color: LIGHT_BLUE
+            type: HALF_HORIZONTAL
+          4:
+            color: BLUE
+            type: TRIANGLE_TOP
+          5:
+            color: LIGHT_BLUE
+            type: STRIPE_TOP
+          6:
+            color: WHITE
+            type: GRADIENT
+      buyPrice: 200
+      sellPrice: -1
+      slot: 31
+      page: 2
+    82:
+      type: item
+      item:
+        material: BLACK_BANNER
+        name: "#FFF275Bouche"
+        quantity: 1
+        patterns:
+          1:
+            color: RED
+            type: GRADIENT_UP
+          2:
+            color: RED
+            type: TRIANGLE_BOTTOM
+          3:
+            color: WHITE
+            type: TRIANGLES_BOTTOM
+          4:
+            color: WHITE
+            type: TRIANGLES_TOP
+      buyPrice: 200
+      sellPrice: -1
+      slot: 32
+      page: 2
+    83:
+      type: item
+      item:
+        material: BLUE_BANNER
+        name: "#FFF275Custom Banner"
+        quantity: 1
+        patterns:
+          1:
+            color: ORANGE
+            type: GRADIENT_UP
+          2:
+            color: BLACK
+            type: STRIPE_SMALL
+          3:
+            color: BLACK
+            type: RHOMBUS_MIDDLE
+          4:
+            color: BLACK
+            type: CURLY_BORDER
+          5:
+            color: ORANGE
+            type: FLOWER
+          6:
+            color: BLACK
+            type: FLOWER
+      buyPrice: 200
+      sellPrice: -1
+      slot: 33
+      page: 2
+    84:
+      type: item
+      item:
+        material: PURPLE_BANNER
+        name: "#FFF275Falling Star"
+        quantity: 1
+        patterns:
+          1:
+            color: WHITE
+            type: TRIANGLE_TOP
+          2:
+            color: PURPLE
+            type: DIAGONAL_LEFT
+          3:
+            color: ORANGE
+            type: GRADIENT_UP
+          4:
+            color: LIME
+            type: TRIANGLES_BOTTOM
+          5:
+            color: BROWN
+            type: TRIANGLES_BOTTOM
+      buyPrice: 200
+      sellPrice: -1
+      slot: 34
+      page: 2
+    85:
+      type: item
+      item:
+        material: WHITE_BANNER
+        name: "#FFF275France Flag"
+        quantity: 1
+        patterns:
+          1:
+            color: RED
+            type: STRIPE_RIGHT
+          2:
+            color: BLUE
+            type: STRIPE_LEFT
+          3:
+            color: BLUE
+            type: STRIPE_LEFT
+          4:
+            color: RED
+            type: STRIPE_RIGHT
+      buyPrice: 200
+      sellPrice: -1
+      slot: 35
+      page: 2
+    # --- PÁGINA 3: MARCO Y NAVBAR ---
+    86:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 0
+      page: 3
+    87:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 1
+      page: 3
+    88:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 2
+      page: 3
+    89:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 3
+      page: 3
+    90:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 4
+      page: 3
+    91:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 5
+      page: 3
+    92:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 6
+      page: 3
+    93:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 7
+      page: 3
+    94:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 8
+      page: 3
+    95:
+      type: dummy
+      item:
+        material: COMPARATOR
+        quantity: 1
+        glow: true
+        name: "#FFF275Filtrar Categoría"
+        lore:
+          - "&8Elige categoría"
+          - ""
+          - " &7● Bloques"
+          - " &7● Farmeo"
+          - " &7● Comida"
+          - " &7● Mobs"
+          - " &7● Equipo"
+          - " &7● Redstone"
+          - " &7● Misceláneo"
+          - " &7● Tintes"
+          - " #FFF275● Banners"
+          - ""
+          - "&7▶ Click para cambiar"
+      commandsOnClick:
+        - "shop bloques"
+      slot: 36
+      page: 3
+    96:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 37
+      page: 3
+    97:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 38
+      page: 3
+    98:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 42
+      page: 3
+    99:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 43
+      page: 3
+    100:
+      type: special
+      special: balance
+      slot: 44
+      page: 3
+    101:
+      type: item
+      item:
+        material: RED_BANNER
+        name: "#FFF2755-colour rainbow bricks"
+        quantity: 1
+        patterns:
+          1:
+            color: YELLOW
+            type: HALF_HORIZONTAL
+          2:
+            color: LIME
+            type: STRIPE_TOP
+          3:
+            color: ORANGE
+            type: HALF_HORIZONTAL_BOTTOM
+          4:
+            color: RED
+            type: STRIPE_BOTTOM
+          5:
+            color: LIGHT_BLUE
+            type: TRIANGLES_TOP
+          6:
+            color: WHITE
+            type: BRICKS
+      buyPrice: 200
+      sellPrice: -1
+      slot: 9
+      page: 3
+    102:
+      type: item
+      item:
+        material: LIGHT_BLUE_BANNER
+        name: "#FFF275Angel of Darkness"
+        quantity: 1
+        patterns:
+          1:
+            color: BLACK
+            type: HALF_HORIZONTAL_BOTTOM
+          2:
+            color: LIGHT_BLUE
+            type: HALF_HORIZONTAL
+          3:
+            color: LIGHT_BLUE
+            type: CROSS
+          4:
+            color: BLACK
+            type: SKULL
+          5:
+            color: LIGHT_BLUE
+            type: TRIANGLES_BOTTOM
+      buyPrice: 200
+      sellPrice: -1
+      slot: 10
+      page: 3
+    103:
+      type: item
+      item:
+        material: BLACK_BANNER
+        name: "#FFF275End Crystal"
+        quantity: 1
+        patterns:
+          1:
+            color: ORANGE
+            type: TRIANGLES_BOTTOM
+          2:
+            color: MAGENTA
+            type: CIRCLE_MIDDLE
+          3:
+            color: MAGENTA
+            type: CIRCLE_MIDDLE
+          4:
+            color: WHITE
+            type: GLOBE
+      buyPrice: 200
+      sellPrice: -1
+      slot: 11
+      page: 3
+    104:
+      type: item
+      item:
+        material: GRAY_BANNER
+        name: "#FFF275Cat"
+        quantity: 1
+        patterns:
+          1:
+            color: LIGHT_BLUE
+            type: TRIANGLES_TOP
+          2:
+            color: LIGHT_BLUE
+            type: SQUARE_TOP_LEFT
+          3:
+            color: LIGHT_BLUE
+            type: CURLY_BORDER
+          4:
+            color: LIME
+            type: STRIPE_BOTTOM
+          5:
+            color: GRAY
+            type: MOJANG
+          6:
+            color: BROWN
+            type: TRIANGLES_BOTTOM
+      buyPrice: 200
+      sellPrice: -1
+      slot: 12
+      page: 3
+    105:
+      type: item
+      item:
+        material: RED_BANNER
+        name: "#FFF275Swiss Flag"
+        quantity: 1
+        patterns:
+          1:
+            color: WHITE
+            type: CROSS
+          2:
+            color: WHITE
+            type: CROSS
+          3:
+            color: RED
+            type: BORDER
+          4:
+            color: RED
+            type: STRIPE_TOP
+          5:
+            color: RED
+            type: STRIPE_BOTTOM
+          6:
+            color: RED
+            type: BORDER
+      buyPrice: 200
+      sellPrice: -1
+      slot: 13
+      page: 3
+    106:
+      type: item
+      item:
+        material: GREEN_BANNER
+        name: "#FFF275Brazil Flag"
+        quantity: 1
+        patterns:
+          1:
+            color: YELLOW
+            type: RHOMBUS_MIDDLE
+          2:
+            color: YELLOW
+            type: RHOMBUS_MIDDLE
+          3:
+            color: BLUE
+            type: CIRCLE_MIDDLE
+          4:
+            color: BLUE
+            type: CIRCLE_MIDDLE
+      buyPrice: 200
+      sellPrice: -1
+      slot: 14
+      page: 3
+    107:
+      type: item
+      item:
+        material: WHITE_BANNER
+        name: "#FFF275Wolf"
+        quantity: 1
+        patterns:
+          1:
+            color: BLACK
+            type: RHOMBUS_MIDDLE
+          2:
+            color: LIGHT_GRAY
+            type: CURLY_BORDER
+          3:
+            color: LIGHT_GRAY
+            type: CIRCLE_MIDDLE
+          4:
+            color: LIGHT_GRAY
+            type: CREEPER
+          5:
+            color: LIGHT_GRAY
+            type: TRIANGLE_TOP
+          6:
+            color: LIGHT_GRAY
+            type: TRIANGLES_TOP
+      buyPrice: 200
+      sellPrice: -1
+      slot: 15
+      page: 3
+    108:
+      type: item
+      item:
+        material: ORANGE_BANNER
+        name: "#FFF275Balrog"
+        quantity: 1
+        patterns:
+          1:
+            color: YELLOW
+            type: RHOMBUS_MIDDLE
+          2:
+            color: WHITE
+            type: CIRCLE_MIDDLE
+          3:
+            color: YELLOW
+            type: SKULL
+          4:
+            color: BLACK
+            type: CURLY_BORDER
+          5:
+            color: BLACK
+            type: TRIANGLE_TOP
+          6:
+            color: BLACK
+            type: CREEPER
+      buyPrice: 200
+      sellPrice: -1
+      slot: 16
+      page: 3
+    109:
+      type: item
+      item:
+        material: LIGHT_BLUE_BANNER
+        name: "#FFF275A epic mirror"
+        quantity: 1
+        patterns:
+          1:
+            color: WHITE
+            type: STRIPE_DOWNLEFT
+          2:
+            color: BLUE
+            type: GRADIENT
+          3:
+            color: WHITE
+            type: GRADIENT
+          4:
+            color: BLUE
+            type: GRADIENT
+          5:
+            color: YELLOW
+            type: TRIANGLES_TOP
+          6:
+            color: YELLOW
+            type: BORDER
+      buyPrice: 200
+      sellPrice: -1
+      slot: 17
+      page: 3
+    110:
+      type: item
+      item:
+        material: LIGHT_BLUE_BANNER
+        name: "#FFF275PourWotan"
+        quantity: 1
+        patterns:
+          1:
+            color: BLACK
+            type: STRIPE_SMALL
+          2:
+            color: BLACK
+            type: CROSS
+          3:
+            color: BLUE
+            type: BORDER
+          4:
+            color: WHITE
+            type: CIRCLE_MIDDLE
+          5:
+            color: BLACK
+            type: CURLY_BORDER
+          6:
+            color: BLACK
+            type: FLOWER
+      buyPrice: 200
+      sellPrice: -1
+      slot: 18
+      page: 3
+    111:
+      type: item
+      item:
+        material: BLACK_BANNER
+        name: "#FFF275Zombie"
+        quantity: 1
+        patterns:
+          1:
+            color: GREEN
+            type: SKULL
+          2:
+            color: BLUE
+            type: STRIPE_BOTTOM
+          3:
+            color: LIGHT_BLUE
+            type: CREEPER
+          4:
+            color: BLACK
+            type: STRIPE_LEFT
+          5:
+            color: BLACK
+            type: STRIPE_RIGHT
+          6:
+            color: BLACK
+            type: GRADIENT
+      buyPrice: 200
+      sellPrice: -1
+      slot: 19
+      page: 3
+    112:
+      type: item
+      item:
+        material: YELLOW_BANNER
+        name: "#FFF275Belgium Flag"
+        quantity: 1
+        patterns:
+          1:
+            color: BLACK
+            type: STRIPE_LEFT
+          2:
+            color: RED
+            type: STRIPE_RIGHT
+          3:
+            color: RED
+            type: STRIPE_RIGHT
+          4:
+            color: BLACK
+            type: STRIPE_LEFT
+          5:
+            color: YELLOW
+            type: STRIPE_CENTER
+      buyPrice: 200
+      sellPrice: -1
+      slot: 20
+      page: 3
+    113:
+      type: item
+      item:
+        material: WHITE_BANNER
+        name: "#FFF275Fishing rod"
+        quantity: 1
+        patterns:
+          1:
+            color: BLACK
+            type: RHOMBUS_MIDDLE
+          2:
+            color: RED
+            type: SQUARE_BOTTOM_RIGHT
+          3:
+            color: BLACK
+            type: DIAGONAL_UP_LEFT
+          4:
+            color: BROWN
+            type: STRIPE_DOWNLEFT
+          5:
+            color: BLACK
+            type: DIAGONAL_LEFT
+          6:
+            color: BLACK
+            type: CURLY_BORDER
+      buyPrice: 200
+      sellPrice: -1
+      slot: 21
+      page: 3
+    114:
+      type: item
+      item:
+        material: BLACK_BANNER
+        name: "#FFF275Neptune"
+        quantity: 1
+        patterns:
+          1:
+            color: BLUE
+            type: RHOMBUS_MIDDLE
+          2:
+            color: BLACK
+            type: STRIPE_DOWNLEFT
+          3:
+            color: LIGHT_BLUE
+            type: CIRCLE_MIDDLE
+          4:
+            color: BLACK
+            type: FLOWER
+      buyPrice: 200
+      sellPrice: -1
+      slot: 22
+      page: 3
+    115:
+      type: item
+      item:
+        material: YELLOW_BANNER
+        name: "#FFF275Phenix"
+        quantity: 1
+        patterns:
+          1:
+            color: BLACK
+            type: CURLY_BORDER
+          2:
+            color: BLACK
+            type: CROSS
+          3:
+            color: BLACK
+            type: RHOMBUS_MIDDLE
+          4:
+            color: YELLOW
+            type: FLOWER
+          5:
+            color: BLACK
+            type: TRIANGLE_TOP
+          6:
+            color: BLACK
+            type: TRIANGLES_BOTTOM
+      buyPrice: 200
+      sellPrice: -1
+      slot: 23
+      page: 3
+    116:
+      type: item
+      item:
+        material: YELLOW_BANNER
+        name: "#FFF275Nuclear"
+        quantity: 1
+        patterns:
+          1:
+            color: GRAY
+            type: TRIANGLE_BOTTOM
+          2:
+            color: GRAY
+            type: HALF_HORIZONTAL
+          3:
+            color: YELLOW
+            type: TRIANGLE_TOP
+          4:
+            color: YELLOW
+            type: STRIPE_TOP
+          5:
+            color: YELLOW
+            type: STRIPE_BOTTOM
+          6:
+            color: YELLOW
+            type: CURLY_BORDER
+      buyPrice: 200
+      sellPrice: -1
+      slot: 24
+      page: 3
+    117:
+      type: item
+      item:
+        material: WHITE_BANNER
+        name: "#FFF275End"
+        quantity: 1
+        patterns:
+          1:
+            color: BLACK
+            type: CROSS
+          2:
+            color: WHITE
+            type: BORDER
+          3:
+            color: WHITE
+            type: STRIPE_TOP
+          4:
+            color: WHITE
+            type: GRADIENT_UP
+      buyPrice: 200
+      sellPrice: -1
+      slot: 25
+      page: 3
+    118:
+      type: item
+      item:
+        material: LIGHT_GRAY_BANNER
+        name: "#FFF275Fermeture eacuteclair"
+        quantity: 1
+        patterns:
+          1:
+            color: BLACK
+            type: STRIPE_CENTER
+          2:
+            color: LIGHT_GRAY
+            type: BRICKS
+          3:
+            color: WHITE
+            type: GRADIENT
+          4:
+            color: LIGHT_BLUE
+            type: STRIPE_SMALL
+          5:
+            color: BLUE
+            type: STRIPE_LEFT
+          6:
+            color: BLUE
+            type: STRIPE_RIGHT
+      buyPrice: 200
+      sellPrice: -1
+      slot: 26
+      page: 3
+    119:
+      type: item
+      item:
+        material: BLACK_BANNER
+        name: "#FFF275Appareil photo"
+        quantity: 1
+        patterns:
+          1:
+            color: WHITE
+            type: SQUARE_TOP_LEFT
+          2:
+            color: LIGHT_GRAY
+            type: SKULL
+          3:
+            color: LIGHT_GRAY
+            type: CIRCLE_MIDDLE
+          4:
+            color: WHITE
+            type: STRIPE_TOP
+          5:
+            color: BLACK
+            type: FLOWER
+          6:
+            color: WHITE
+            type: STRIPE_BOTTOM
+      buyPrice: 200
+      sellPrice: -1
+      slot: 27
+      page: 3
+    120:
+      type: item
+      item:
+        material: WHITE_BANNER
+        name: "#FFF275Rumjanceff gerb"
+        quantity: 1
+        patterns:
+          1:
+            color: YELLOW
+            type: CROSS
+          2:
+            color: BLACK
+            type: CROSS
+          3:
+            color: YELLOW
+            type: FLOWER
+          4:
+            color: BLACK
+            type: FLOWER
+      buyPrice: 200
+      sellPrice: -1
+      slot: 28
+      page: 3
+    121:
+      type: item
+      item:
+        material: WHITE_BANNER
+        name: "#FFF275Telefon"
+        quantity: 1
+        patterns:
+          1:
+            color: LIGHT_GRAY
+            type: BRICKS
+          2:
+            color: WHITE
+            type: STRIPE_MIDDLE
+          3:
+            color: LIGHT_BLUE
+            type: HALF_HORIZONTAL
+          4:
+            color: WHITE
+            type: BORDER
+      buyPrice: 200
+      sellPrice: -1
+      slot: 29
+      page: 3
+    122:
+      type: item
+      item:
+        material: WHITE_BANNER
+        name: "#FFF275Kratos Explodus"
+        quantity: 1
+        patterns:
+          1:
+            color: RED
+            type: MOJANG
+          2:
+            color: WHITE
+            type: STRIPE_CENTER
+          3:
+            color: BLACK
+            type: CREEPER
+      buyPrice: 200
+      sellPrice: -1
+      slot: 30
+      page: 3
+    123:
+      type: item
+      item:
+        material: MAGENTA_BANNER
+        name: "#FFF275Bunny lt3"
+        quantity: 1
+        patterns:
+          1:
+            color: WHITE
+            type: CIRCLE_MIDDLE
+          2:
+            color: WHITE
+            type: FLOWER
+          3:
+            color: WHITE
+            type: CROSS
+          4:
+            color: BLACK
+            type: STRIPE_MIDDLE
+          5:
+            color: PURPLE
+            type: CURLY_BORDER
+          6:
+            color: WHITE
+            type: TRIANGLE_BOTTOM
+      buyPrice: 200
+      sellPrice: -1
+      slot: 31
+      page: 3
+    124:
+      type: item
+      item:
+        material: BLACK_BANNER
+        name: "#FFF275Hey Listen"
+        quantity: 1
+        patterns:
+          1:
+            color: WHITE
+            type: CROSS
+          2:
+            color: BLACK
+            type: HALF_HORIZONTAL_BOTTOM
+          3:
+            color: CYAN
+            type: CIRCLE_MIDDLE
+          4:
+            color: BLACK
+            type: CURLY_BORDER
+          5:
+            color: BLACK
+            type: BORDER
+      buyPrice: 200
+      sellPrice: -1
+      slot: 32
+      page: 3
+    125:
+      type: item
+      item:
+        material: BLACK_BANNER
+        name: "#FFF275Wither"
+        quantity: 1
+        patterns:
+          1:
+            color: RED
+            type: FLOWER
+          2:
+            color: PURPLE
+            type: STRIPE_SMALL
+          3:
+            color: BLACK
+            type: CURLY_BORDER
+          4:
+            color: BLACK
+            type: TRIANGLE_TOP
+          5:
+            color: MAGENTA
+            type: SKULL
+          6:
+            color: BLACK
+            type: CREEPER
+      buyPrice: 200
+      sellPrice: -1
+      slot: 33
+      page: 3
+    126:
+      type: item
+      item:
+        material: LIGHT_BLUE_BANNER
+        name: "#FFF275WAVES"
+        quantity: 1
+        patterns:
+          1:
+            color: BLUE
+            type: STRIPE_BOTTOM
+          2:
+            color: BLUE
+            type: STRIPE_LEFT
+          3:
+            color: LIGHT_BLUE
+            type: STRIPE_TOP
+          4:
+            color: LIGHT_BLUE
+            type: CIRCLE_MIDDLE
+          5:
+            color: BLUE
+            type: MOJANG
+          6:
+            color: LIGHT_BLUE
+            type: GRADIENT
+      buyPrice: 200
+      sellPrice: -1
+      slot: 34
+      page: 3
+    127:
+      type: item
+      item:
+        material: BLACK_BANNER
+        name: "#FFF275Blue eye"
+        quantity: 1
+        patterns:
+          1:
+            color: WHITE
+            type: STRIPE_MIDDLE
+          2:
+            color: BLUE
+            type: FLOWER
+          3:
+            color: BLACK
+            type: CURLY_BORDER
+          4:
+            color: BLACK
+            type: CROSS
+          5:
+            color: BLACK
+            type: CREEPER
+          6:
+            color: BLACK
+            type: HALF_HORIZONTAL
+      buyPrice: 200
+      sellPrice: -1
+      slot: 35
+      page: 3
+    # --- PÁGINA 4: MARCO Y NAVBAR ---
+    128:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 0
+      page: 4
+    129:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 1
+      page: 4
+    130:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 2
+      page: 4
+    131:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 3
+      page: 4
+    132:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 4
+      page: 4
+    133:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 5
+      page: 4
+    134:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 6
+      page: 4
+    135:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 7
+      page: 4
+    136:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 8
+      page: 4
+    137:
+      type: dummy
+      item:
+        material: COMPARATOR
+        quantity: 1
+        glow: true
+        name: "#FFF275Filtrar Categoría"
+        lore:
+          - "&8Elige categoría"
+          - ""
+          - " &7● Bloques"
+          - " &7● Farmeo"
+          - " &7● Comida"
+          - " &7● Mobs"
+          - " &7● Equipo"
+          - " &7● Redstone"
+          - " &7● Misceláneo"
+          - " &7● Tintes"
+          - " #FFF275● Banners"
+          - ""
+          - "&7▶ Click para cambiar"
+      commandsOnClick:
+        - "shop bloques"
+      slot: 36
+      page: 4
+    138:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 37
+      page: 4
+    139:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 38
+      page: 4
+    140:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 41
+      page: 4
+    141:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 42
+      page: 4
+    142:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 43
+      page: 4
+    143:
+      type: special
+      special: balance
+      slot: 44
+      page: 4
+    144:
+      type: item
+      item:
+        material: GRAY_BANNER
+        name: "#FFF275Batman"
+        quantity: 1
+        patterns:
+          1:
+            color: BLACK
+            type: STRIPE_CENTER
+          2:
+            color: GRAY
+            type: TRIANGLES_TOP
+          3:
+            color: YELLOW
+            type: FLOWER
+          4:
+            color: BLACK
+            type: GRADIENT_UP
+          5:
+            color: BLACK
+            type: FLOWER
+          6:
+            color: BLACK
+            type: CREEPER
+      buyPrice: 200
+      sellPrice: -1
+      slot: 9
+      page: 4
+    145:
+      type: item
+      item:
+        material: YELLOW_BANNER
+        name: "#FFF275Bee"
+        quantity: 1
+        patterns:
+          1:
+            color: BLACK
+            type: STRIPE_SMALL
+          2:
+            color: WHITE
+            type: STRIPE_TOP
+          3:
+            color: WHITE
+            type: STRIPE_BOTTOM
+          4:
+            color: LIME
+            type: CURLY_BORDER
+          5:
+            color: LIME
+            type: SQUARE_BOTTOM_LEFT
+          6:
+            color: LIME
+            type: SQUARE_TOP_LEFT
+      buyPrice: 200
+      sellPrice: -1
+      slot: 10
+      page: 4
+    146:
+      type: item
+      item:
+        material: BLUE_BANNER
+        name: "#FFF275Union Jack"
+        quantity: 1
+        patterns:
+          1:
+            color: WHITE
+            type: STRIPE_DOWNRIGHT
+          2:
+            color: WHITE
+            type: STRIPE_DOWNLEFT
+          3:
+            color: RED
+            type: CROSS
+          4:
+            color: WHITE
+            type: STRIPE_CENTER
+          5:
+            color: WHITE
+            type: STRIPE_MIDDLE
+          6:
+            color: RED
+            type: CROSS
+      buyPrice: 200
+      sellPrice: -1
+      slot: 11
+      page: 4
+    147:
+      type: item
+      item:
+        material: LIGHT_GRAY_BANNER
+        name: "#FFF275My Gun"
+        quantity: 1
+        patterns:
+          1:
+            color: GRAY
+            type: FLOWER
+          2:
+            color: BROWN
+            type: STRIPE_DOWNLEFT
+          3:
+            color: LIGHT_GRAY
+            type: DIAGONAL_UP_RIGHT
+          4:
+            color: BLACK
+            type: STRIPE_DOWNRIGHT
+          5:
+            color: LIGHT_GRAY
+            type: SQUARE_BOTTOM_RIGHT
+          6:
+            color: LIGHT_GRAY
+            type: CURLY_BORDER
+      buyPrice: 200
+      sellPrice: -1
+      slot: 12
+      page: 4
+    148:
+      type: item
+      item:
+        material: PURPLE_BANNER
+        name: "#FFF275QuotSquot"
+        quantity: 1
+        patterns:
+          1:
+            color: BLACK
+            type: STRIPE_MIDDLE
+          2:
+            color: BLACK
+            type: RHOMBUS_MIDDLE
+          3:
+            color: PURPLE
+            type: STRIPE_DOWNRIGHT
+          4:
+            color: BLACK
+            type: BORDER
+          5:
+            color: BLACK
+            type: CURLY_BORDER
+      buyPrice: 200
+      sellPrice: -1
+      slot: 13
+      page: 4
+    149:
+      type: item
+      item:
+        material: BLUE_BANNER
+        name: "#FFF275Nebe a peklo"
+        quantity: 1
+        patterns:
+          1:
+            color: ORANGE
+            type: GRADIENT_UP
+          2:
+            color: BLACK
+            type: STRIPE_SMALL
+          3:
+            color: BLACK
+            type: CURLY_BORDER
+          4:
+            color: BLACK
+            type: RHOMBUS_MIDDLE
+          5:
+            color: ORANGE
+            type: FLOWER
+          6:
+            color: BLACK
+            type: FLOWER
+      buyPrice: 200
+      sellPrice: -1
+      slot: 14
+      page: 4
+    150:
+      type: item
+      item:
+        material: ORANGE_BANNER
+        name: "#FFF275Blaze"
+        quantity: 1
+        patterns:
+          1:
+            color: YELLOW
+            type: STRIPE_SMALL
+          2:
+            color: RED
+            type: TRIANGLES_BOTTOM
+          3:
+            color: RED
+            type: HALF_HORIZONTAL
+          4:
+            color: YELLOW
+            type: SKULL
+      buyPrice: 200
+      sellPrice: -1
+      slot: 15
+      page: 4
+    151:
+      type: item
+      item:
+        material: LIGHT_BLUE_BANNER
+        name: "#FFF275Miroir"
+        quantity: 1
+        patterns:
+          1:
+            color: WHITE
+            type: STRIPE_DOWNLEFT
+          2:
+            color: WHITE
+            type: GRADIENT_UP
+          3:
+            color: GRAY
+            type: BORDER
+          4:
+            color: GRAY
+            type: BORDER
+          5:
+            color: GRAY
+            type: BORDER
+      buyPrice: 200
+      sellPrice: -1
+      slot: 16
+      page: 4
+    152:
+      type: item
+      item:
+        material: WHITE_BANNER
+        name: "#FFF275Chess king"
+        quantity: 1
+        patterns:
+          1:
+            color: BLACK
+            type: TRIANGLE_TOP
+          2:
+            color: BLACK
+            type: RHOMBUS_MIDDLE
+          3:
+            color: WHITE
+            type: HALF_HORIZONTAL_BOTTOM
+          4:
+            color: BLACK
+            type: STRIPE_CENTER
+          5:
+            color: WHITE
+            type: CURLY_BORDER
+          6:
+            color: BLACK
+            type: TRIANGLE_BOTTOM
+      buyPrice: 200
+      sellPrice: -1
+      slot: 17
+      page: 4
+    153:
+      type: item
+      item:
+        material: RED_BANNER
+        name: "#FFF275Red"
+        quantity: 1
+        patterns:
+          1:
+            color: RED
+            type: CURLY_BORDER
+          2:
+            color: WHITE
+            type: CURLY_BORDER
+          3:
+            color: RED
+            type: STRIPE_CENTER
+          4:
+            color: WHITE
+            type: STRIPE_CENTER
+          5:
+            color: RED
+            type: FLOWER
+          6:
+            color: WHITE
+            type: FLOWER
+      buyPrice: 200
+      sellPrice: -1
+      slot: 18
+      page: 4
+    154:
+      type: item
+      item:
+        material: BLACK_BANNER
+        name: "#FFF275Warden"
+        quantity: 1
+        patterns:
+          1:
+            color: CYAN
+            type: STRIPE_SMALL
+          2:
+            color: YELLOW
+            type: FLOWER
+          3:
+            color: BLACK
+            type: CURLY_BORDER
+          4:
+            color: BLACK
+            type: TRIANGLE_TOP
+          5:
+            color: LIGHT_GRAY
+            type: SKULL
+          6:
+            color: BLACK
+            type: CREEPER
+      buyPrice: 200
+      sellPrice: -1
+      slot: 19
+      page: 4
+    155:
+      type: item
+      item:
+        material: BLACK_BANNER
+        name: "#FFF275Chaudron"
+        quantity: 1
+        patterns:
+          1:
+            color: BROWN
+            type: STRIPE_DOWNLEFT
+          2:
+            color: BLACK
+            type: DIAGONAL_RIGHT
+          3:
+            color: LIGHT_GRAY
+            type: HALF_HORIZONTAL_BOTTOM
+          4:
+            color: BLACK
+            type: CURLY_BORDER
+          5:
+            color: ORANGE
+            type: TRIANGLES_BOTTOM
+      buyPrice: 200
+      sellPrice: -1
+      slot: 20
+      page: 4
+    156:
+      type: item
+      item:
+        material: BROWN_BANNER
+        name: "#FFF275Domo Dude"
+        quantity: 1
+        patterns:
+          1:
+            color: BLACK
+            type: STRIPE_MIDDLE
+          2:
+            color: BROWN
+            type: STRIPE_CENTER
+          3:
+            color: RED
+            type: STRIPE_BOTTOM
+          4:
+            color: WHITE
+            type: TRIANGLES_BOTTOM
+          5:
+            color: BROWN
+            type: BORDER
+      buyPrice: 200
+      sellPrice: -1
+      slot: 21
+      page: 4
+    157:
+      type: item
+      item:
+        material: RED_BANNER
+        name: "#FFF275Zombie pigman"
+        quantity: 1
+        patterns:
+          1:
+            color: GREEN
+            type: STRIPE_LEFT
+          2:
+            color: WHITE
+            type: CURLY_BORDER
+          3:
+            color: PINK
+            type: HALF_VERTICAL_RIGHT
+          4:
+            color: BLACK
+            type: CROSS
+          5:
+            color: PINK
+            type: STRIPE_CENTER
+          6:
+            color: GREEN
+            type: TRIANGLE_BOTTOM
+      buyPrice: 200
+      sellPrice: -1
+      slot: 22
+      page: 4
+    158:
+      type: item
+      item:
+        material: BLACK_BANNER
+        name: "#FFF275Du chocolat de MOJANG"
+        quantity: 1
+        patterns:
+          1:
+            color: BROWN
+            type: BRICKS
+          2:
+            color: RED
+            type: DIAGONAL_RIGHT
+          3:
+            color: RED
+            type: HALF_HORIZONTAL_BOTTOM
+          4:
+            color: RED
+            type: STRIPE_MIDDLE
+          5:
+            color: WHITE
+            type: MOJANG
+      buyPrice: 200
+      sellPrice: -1
+      slot: 23
+      page: 4
+    159:
+      type: item
+      item:
+        material: YELLOW_BANNER
+        name: "#FFF275Phenix 3"
+        quantity: 1
+        patterns:
+          1:
+            color: ORANGE
+            type: GRADIENT
+          2:
+            color: WHITE
+            type: CROSS
+          3:
+            color: WHITE
+            type: CURLY_BORDER
+          4:
+            color: WHITE
+            type: CIRCLE_MIDDLE
+          5:
+            color: ORANGE
+            type: FLOWER
+          6:
+            color: WHITE
+            type: TRIANGLE_TOP
+      buyPrice: 200
+      sellPrice: -1
+      slot: 24
+      page: 4
+    160:
+      type: item
+      item:
+        material: WHITE_BANNER
+        name: "#FFF275Chess queen"
+        quantity: 1
+        patterns:
+          1:
+            color: BLACK
+            type: CROSS
+          2:
+            color: BLACK
+            type: STRIPE_CENTER
+          3:
+            color: WHITE
+            type: BORDER
+          4:
+            color: BLACK
+            type: TRIANGLE_TOP
+          5:
+            color: WHITE
+            type: CURLY_BORDER
+          6:
+            color: BLACK
+            type: TRIANGLE_BOTTOM
+      buyPrice: 200
+      sellPrice: -1
+      slot: 25
+      page: 4
+    161:
+      type: item
+      item:
+        material: LIGHT_BLUE_BANNER
+        name: "#FFF275Pikachu"
+        quantity: 1
+        patterns:
+          1:
+            color: RED
+            type: STRIPE_MIDDLE
+          2:
+            color: BLACK
+            type: CIRCLE_MIDDLE
+          3:
+            color: YELLOW
+            type: FLOWER
+          4:
+            color: YELLOW
+            type: CROSS
+          5:
+            color: LIGHT_BLUE
+            type: STRIPE_BOTTOM
+          6:
+            color: LIGHT_BLUE
+            type: BORDER
+      buyPrice: 200
+      sellPrice: -1
+      slot: 26
+      page: 4
+    162:
+      type: item
+      item:
+        material: WHITE_BANNER
+        name: "#FFF275End 2"
+        quantity: 1
+        patterns:
+          1:
+            color: PINK
+            type: CIRCLE_MIDDLE
+          2:
+            color: BLACK
+            type: CROSS
+          3:
+            color: WHITE
+            type: BORDER
+          4:
+            color: WHITE
+            type: STRIPE_TOP
+          5:
+            color: WHITE
+            type: GRADIENT_UP
+      buyPrice: 200
+      sellPrice: -1
+      slot: 27
+      page: 4
+    163:
+      type: item
+      item:
+        material: BLACK_BANNER
+        name: "#FFF275Joker"
+        quantity: 1
+        patterns:
+          1:
+            color: RED
+            type: STRIPE_BOTTOM
+          2:
+            color: WHITE
+            type: CREEPER
+          3:
+            color: WHITE
+            type: CURLY_BORDER
+          4:
+            color: WHITE
+            type: STRIPE_CENTER
+          5:
+            color: WHITE
+            type: STRIPE_TOP
+          6:
+            color: LIME
+            type: TRIANGLES_TOP
+      buyPrice: 200
+      sellPrice: -1
+      slot: 28
+      page: 4
+    164:
+      type: item
+      item:
+        material: YELLOW_BANNER
+        name: "#FFF275Nuclear 2"
+        quantity: 1
+        patterns:
+          1:
+            color: BLACK
+            type: TRIANGLE_BOTTOM
+          2:
+            color: BLACK
+            type: HALF_HORIZONTAL
+          3:
+            color: YELLOW
+            type: TRIANGLE_TOP
+          4:
+            color: YELLOW
+            type: STRIPE_TOP
+          5:
+            color: YELLOW
+            type: STRIPE_BOTTOM
+          6:
+            color: YELLOW
+            type: CURLY_BORDER
+      buyPrice: 200
+      sellPrice: -1
+      slot: 29
+      page: 4
+    165:
+      type: item
+      item:
+        material: GREEN_BANNER
+        name: "#FFF275Elephant"
+        quantity: 1
+        patterns:
+          1:
+            color: WHITE
+            type: CIRCLE_MIDDLE
+          2:
+            color: LIGHT_GRAY
+            type: TRIANGLE_TOP
+          3:
+            color: LIGHT_GRAY
+            type: FLOWER
+          4:
+            color: LIGHT_GRAY
+            type: CREEPER
+          5:
+            color: GREEN
+            type: STRIPE_TOP
+      buyPrice: 200
+      sellPrice: -1
+      slot: 30
+      page: 4
+    166:
+      type: item
+      item:
+        material: LIGHT_BLUE_BANNER
+        name: "#FFF275Mirror"
+        quantity: 1
+        patterns:
+          1:
+            color: BLUE
+            type: STRIPE_DOWNRIGHT
+          2:
+            color: LIGHT_BLUE
+            type: GRADIENT_UP
+          3:
+            color: LIGHT_BLUE
+            type: GRADIENT
+          4:
+            color: YELLOW
+            type: BORDER
+      buyPrice: 200
+      sellPrice: -1
+      slot: 31
+      page: 4
+    167:
+      type: item
+      item:
+        material: PINK_BANNER
+        name: "#FFF275Pink"
+        quantity: 1
+        patterns:
+          1:
+            color: PINK
+            type: CURLY_BORDER
+          2:
+            color: WHITE
+            type: CURLY_BORDER
+          3:
+            color: RED
+            type: STRIPE_CENTER
+          4:
+            color: WHITE
+            type: STRIPE_CENTER
+          5:
+            color: RED
+            type: FLOWER
+          6:
+            color: WHITE
+            type: FLOWER
+      buyPrice: 200
+      sellPrice: -1
+      slot: 32
+      page: 4
+    168:
+      type: item
+      item:
+        material: WHITE_BANNER
+        name: "#FFF275Panda"
+        quantity: 1
+        patterns:
+          1:
+            color: BLACK
+            type: TRIANGLES_TOP
+          2:
+            color: WHITE
+            type: STRIPE_CENTER
+          3:
+            color: BLACK
+            type: CREEPER
+          4:
+            color: WHITE
+            type: SKULL
+          5:
+            color: WHITE
+            type: STRIPE_BOTTOM
+      buyPrice: 200
+      sellPrice: -1
+      slot: 33
+      page: 4
+    169:
+      type: item
+      item:
+        material: ORANGE_BANNER
+        name: "#FFF275Phenix 2"
+        quantity: 1
+        patterns:
+          1:
+            color: BLACK
+            type: CURLY_BORDER
+          2:
+            color: BLACK
+            type: CROSS
+          3:
+            color: BLACK
+            type: RHOMBUS_MIDDLE
+          4:
+            color: ORANGE
+            type: FLOWER
+          5:
+            color: BLACK
+            type: TRIANGLE_TOP
+          6:
+            color: BLACK
+            type: TRIANGLES_BOTTOM
+      buyPrice: 200
+      sellPrice: -1
+      slot: 34
+      page: 4
+    170:
+      type: item
+      item:
+        material: LIGHT_GRAY_BANNER
+        name: "#FFF275Loup blanc  yeux bleus"
+        quantity: 1
+        patterns:
+          1:
+            color: LIGHT_BLUE
+            type: STRIPE_MIDDLE
+          2:
+            color: BLACK
+            type: RHOMBUS_MIDDLE
+          3:
+            color: WHITE
+            type: CREEPER
+          4:
+            color: WHITE
+            type: CIRCLE_MIDDLE
+          5:
+            color: WHITE
+            type: TRIANGLE_TOP
+          6:
+            color: WHITE
+            type: CURLY_BORDER
+      buyPrice: 200
+      sellPrice: -1
+      slot: 35
+      page: 4

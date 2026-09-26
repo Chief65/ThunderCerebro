@@ -1,0 +1,373 @@
+menu_title: '&0&l|&r &0Mercado ▶ &8Trims &8(&#D48BFF✦&8)'
+open_command:
+  - xp_trims
+size: 45
+open_requirement:
+  requirements: {}
+register_command: true
+update: true
+
+items:
+  'Filtro_Top':
+    material: GRAY_STAINED_GLASS_PANE
+    display_name: ' '
+    slots:
+      - 0
+      - 1
+      - 2
+      - 3
+      - 4
+      - 5
+      - 6
+      - 7
+      - 8
+
+  'item_1':
+    material: SENTRY_ARMOR_TRIM_SMITHING_TEMPLATE
+    slot: 9
+    item_flags:
+      - HIDE_ATTRIBUTES
+      - HIDE_ENCHANTS
+    display_name: '&#FFF275Sentry Armor Trim'
+    lore:
+      - '&8ᴘʀᴇᴄɪᴏ ᴅᴇ ᴄᴀɴᴊᴇ'
+      - ''
+      - ' &8| &fPrecio: &#D48BFF10 Niveles (⭐)'
+      - ''
+      - '&7▶ Click para comprar'
+    left_click_commands:
+      - '[sound] UI_BUTTON_CLICK'
+
+  'item_2':
+    material: VEX_ARMOR_TRIM_SMITHING_TEMPLATE
+    slot: 10
+    item_flags:
+      - HIDE_ATTRIBUTES
+      - HIDE_ENCHANTS
+    display_name: '&#FFF275Vex Armor Trim'
+    lore:
+      - '&8ᴘʀᴇᴄɪᴏ ᴅᴇ ᴄᴀɴᴊᴇ'
+      - ''
+      - ' &8| &fPrecio: &#D48BFF10 Niveles (⭐)'
+      - ''
+      - '&7▶ Click para comprar'
+    left_click_commands:
+      - '[sound] UI_BUTTON_CLICK'
+
+  'item_3':
+    material: WILD_ARMOR_TRIM_SMITHING_TEMPLATE
+    slot: 11
+    item_flags:
+      - HIDE_ATTRIBUTES
+      - HIDE_ENCHANTS
+    display_name: '&#FFF275Wild Armor Trim'
+    lore:
+      - '&8ᴘʀᴇᴄɪᴏ ᴅᴇ ᴄᴀɴᴊᴇ'
+      - ''
+      - ' &8| &fPrecio: &#D48BFF10 Niveles (⭐)'
+      - ''
+      - '&7▶ Click para comprar'
+    left_click_commands:
+      - '[sound] UI_BUTTON_CLICK'
+
+  'item_4':
+    material: COAST_ARMOR_TRIM_SMITHING_TEMPLATE
+    slot: 12
+    item_flags:
+      - HIDE_ATTRIBUTES
+      - HIDE_ENCHANTS
+    display_name: '&#FFF275Coast Armor Trim'
+    lore:
+      - '&8ᴘʀᴇᴄɪᴏ ᴅᴇ ᴄᴀɴᴊᴇ'
+      - ''
+      - ' &8| &fPrecio: &#D48BFF10 Niveles (⭐)'
+      - ''
+      - '&7▶ Click para comprar'
+    left_click_commands:
+      - '[sound] UI_BUTTON_CLICK'
+
+  'item_5':
+    material: DUNE_ARMOR_TRIM_SMITHING_TEMPLATE
+    slot: 13
+    item_flags:
+      - HIDE_ATTRIBUTES
+      - HIDE_ENCHANTS
+    display_name: '&#FFF275Dune Armor Trim'
+    lore:
+      - '&8ᴘʀᴇᴄɪᴏ ᴅᴇ ᴄᴀɴᴊᴇ'
+      - ''
+      - ' &8| &fPrecio: &#D48BFF10 Niveles (⭐)'
+      - ''
+      - '&7▶ Click para comprar'
+    left_click_commands:
+      - '[sound] UI_BUTTON_CLICK'
+
+  'item_6':
+    material: WAYFINDER_ARMOR_TRIM_SMITHING_TEMPLATE
+    slot: 14
+    item_flags:
+      - HIDE_ATTRIBUTES
+      - HIDE_ENCHANTS
+    display_name: '&#FFF275Wayfinder Armor Trim'
+    lore:
+      - '&8ᴘʀᴇᴄɪᴏ ᴅᴇ ᴄᴀɴᴊᴇ'
+      - ''
+      - ' &8| &fPrecio: &#D48BFF10 Niveles (⭐)'
+      - ''
+      - '&7▶ Click para comprar'
+    left_click_commands:
+      - '[sound] UI_BUTTON_CLICK'
+
+  'item_7':
+    material: RAISER_ARMOR_TRIM_SMITHING_TEMPLATE
+    slot: 15
+    item_flags:
+      - HIDE_ATTRIBUTES
+      - HIDE_ENCHANTS
+    display_name: '&#FFF275Raiser Armor Trim'
+    lore:
+      - '&8ᴘʀᴇᴄɪᴏ ᴅᴇ ᴄᴀɴᴊᴇ'
+      - ''
+      - ' &8| &fPrecio: &#D48BFF10 Niveles (⭐)'
+      - ''
+      - '&7▶ Click para comprar'
+    left_click_commands:
+      - '[sound] UI_BUTTON_CLICK'
+
+  'item_8':
+    material: SHAPER_ARMOR_TRIM_SMITHING_TEMPLATE
+    slot: 16
+    item_flags:
+      - HIDE_ATTRIBUTES
+      - HIDE_ENCHANTS
+    display_name: '&#FFF275Shaper Armor Trim'
+    lore:
+      - '&8ᴘʀᴇᴄɪᴏ ᴅᴇ ᴄᴀɴᴊᴇ'
+      - ''
+      - ' &8| &fPrecio: &#D48BFF10 Niveles (⭐)'
+      - ''
+      - '&7▶ Click para comprar'
+    left_click_commands:
+      - '[sound] UI_BUTTON_CLICK'
+
+  'item_9':
+    material: HOST_ARMOR_TRIM_SMITHING_TEMPLATE
+    slot: 17
+    item_flags:
+      - HIDE_ATTRIBUTES
+      - HIDE_ENCHANTS
+    display_name: '&#FFF275Host Armor Trim'
+    lore:
+      - '&8ᴘʀᴇᴄɪᴏ ᴅᴇ ᴄᴀɴᴊᴇ'
+      - ''
+      - ' &8| &fPrecio: &#D48BFF10 Niveles (⭐)'
+      - ''
+      - '&7▶ Click para comprar'
+    left_click_commands:
+      - '[sound] UI_BUTTON_CLICK'
+
+  'item_10':
+    material: WARD_ARMOR_TRIM_SMITHING_TEMPLATE
+    slot: 18
+    item_flags:
+      - HIDE_ATTRIBUTES
+      - HIDE_ENCHANTS
+    display_name: '&#FFF275Ward Armor Trim'
+    lore:
+      - '&8ᴘʀᴇᴄɪᴏ ᴅᴇ ᴄᴀɴᴊᴇ'
+      - ''
+      - ' &8| &fPrecio: &#D48BFF10 Niveles (⭐)'
+      - ''
+      - '&7▶ Click para comprar'
+    left_click_commands:
+      - '[sound] UI_BUTTON_CLICK'
+
+  'item_11':
+    material: SILENCE_ARMOR_TRIM_SMITHING_TEMPLATE
+    slot: 19
+    item_flags:
+      - HIDE_ATTRIBUTES
+      - HIDE_ENCHANTS
+    display_name: '&#FFF275Silence Armor Trim'
+    lore:
+      - '&8ᴘʀᴇᴄɪᴏ ᴅᴇ ᴄᴀɴᴊᴇ'
+      - ''
+      - ' &8| &fPrecio: &#D48BFF10 Niveles (⭐)'
+      - ''
+      - '&7▶ Click para comprar'
+    left_click_commands:
+      - '[sound] UI_BUTTON_CLICK'
+
+  'item_12':
+    material: TIDE_ARMOR_TRIM_SMITHING_TEMPLATE
+    slot: 20
+    item_flags:
+      - HIDE_ATTRIBUTES
+      - HIDE_ENCHANTS
+    display_name: '&#FFF275Tide Armor Trim'
+    lore:
+      - '&8ᴘʀᴇᴄɪᴏ ᴅᴇ ᴄᴀɴᴊᴇ'
+      - ''
+      - ' &8| &fPrecio: &#D48BFF10 Niveles (⭐)'
+      - ''
+      - '&7▶ Click para comprar'
+    left_click_commands:
+      - '[sound] UI_BUTTON_CLICK'
+
+  'item_13':
+    material: SNOUT_ARMOR_TRIM_SMITHING_TEMPLATE
+    slot: 21
+    item_flags:
+      - HIDE_ATTRIBUTES
+      - HIDE_ENCHANTS
+    display_name: '&#FFF275Snout Armor Trim'
+    lore:
+      - '&8ᴘʀᴇᴄɪᴏ ᴅᴇ ᴄᴀɴᴊᴇ'
+      - ''
+      - ' &8| &fPrecio: &#D48BFF10 Niveles (⭐)'
+      - ''
+      - '&7▶ Click para comprar'
+    left_click_commands:
+      - '[sound] UI_BUTTON_CLICK'
+
+  'item_14':
+    material: RIB_ARMOR_TRIM_SMITHING_TEMPLATE
+    slot: 22
+    item_flags:
+      - HIDE_ATTRIBUTES
+      - HIDE_ENCHANTS
+    display_name: '&#FFF275Rib Armor Trim'
+    lore:
+      - '&8ᴘʀᴇᴄɪᴏ ᴅᴇ ᴄᴀɴᴊᴇ'
+      - ''
+      - ' &8| &fPrecio: &#D48BFF10 Niveles (⭐)'
+      - ''
+      - '&7▶ Click para comprar'
+    left_click_commands:
+      - '[sound] UI_BUTTON_CLICK'
+
+  'item_15':
+    material: EYE_ARMOR_TRIM_SMITHING_TEMPLATE
+    slot: 23
+    item_flags:
+      - HIDE_ATTRIBUTES
+      - HIDE_ENCHANTS
+    display_name: '&#FFF275Eye Armor Trim'
+    lore:
+      - '&8ᴘʀᴇᴄɪᴏ ᴅᴇ ᴄᴀɴᴊᴇ'
+      - ''
+      - ' &8| &fPrecio: &#D48BFF10 Niveles (⭐)'
+      - ''
+      - '&7▶ Click para comprar'
+    left_click_commands:
+      - '[sound] UI_BUTTON_CLICK'
+
+  'item_16':
+    material: SPIRE_ARMOR_TRIM_SMITHING_TEMPLATE
+    slot: 24
+    item_flags:
+      - HIDE_ATTRIBUTES
+      - HIDE_ENCHANTS
+    display_name: '&#FFF275Spire Armor Trim'
+    lore:
+      - '&8ᴘʀᴇᴄɪᴏ ᴅᴇ ᴄᴀɴᴊᴇ'
+      - ''
+      - ' &8| &fPrecio: &#D48BFF10 Niveles (⭐)'
+      - ''
+      - '&7▶ Click para comprar'
+    left_click_commands:
+      - '[sound] UI_BUTTON_CLICK'
+
+  'item_17':
+    material: FLOW_ARMOR_TRIM_SMITHING_TEMPLATE
+    slot: 25
+    item_flags:
+      - HIDE_ATTRIBUTES
+      - HIDE_ENCHANTS
+    display_name: '&#FFF275Flow Armor Trim'
+    lore:
+      - '&8ᴘʀᴇᴄɪᴏ ᴅᴇ ᴄᴀɴᴊᴇ'
+      - ''
+      - ' &8| &fPrecio: &#D48BFF10 Niveles (⭐)'
+      - ''
+      - '&7▶ Click para comprar'
+    left_click_commands:
+      - '[sound] UI_BUTTON_CLICK'
+
+  'item_18':
+    material: BOLT_ARMOR_TRIM_SMITHING_TEMPLATE
+    slot: 26
+    item_flags:
+      - HIDE_ATTRIBUTES
+      - HIDE_ENCHANTS
+    display_name: '&#FFF275Bolt Armor Trim'
+    lore:
+      - '&8ᴘʀᴇᴄɪᴏ ᴅᴇ ᴄᴀɴᴊᴇ'
+      - ''
+      - ' &8| &fPrecio: &#D48BFF10 Niveles (⭐)'
+      - ''
+      - '&7▶ Click para comprar'
+    left_click_commands:
+      - '[sound] UI_BUTTON_CLICK'
+
+  'Boton_Filtro':
+    material: COMPARATOR
+    slot: 36
+    item_flags:
+      - HIDE_ATTRIBUTES
+      - HIDE_ENCHANTS
+    enchantments:
+      - DURABILITY;1
+    display_name: '&#FFF275Filtrar Categoría'
+    lore:
+      - '&8ᴇʟɪɢᴇ ᴄᴀᴛᴇɢᴏʀɪᴀ'
+      - ''
+      - ' &#FFF275● Trims'
+      - ' &7● Encantamientos'
+      - ''
+      - '&7▶ Click para cambiar'
+    left_click_commands:
+      - '[openguimenu] xp_encantamientos'
+      - '[sound] UI_BUTTON_CLICK'
+
+  'Filtro_Navbar':
+    material: GRAY_STAINED_GLASS_PANE
+    display_name: ' '
+    slots:
+      - 37
+      - 38
+      - 39
+      - 41
+      - 42
+      - 43
+
+  'Boton_Volver':
+    material: DARK_OAK_DOOR
+    slot: 40
+    item_flags:
+      - HIDE_ATTRIBUTES
+    display_name: '&cVolver Atrás'
+    lore:
+      - '&7Regresar al catálogo de XP'
+    left_click_commands:
+      - '[openguimenu] tienda_xp_fija'
+      - '[sound] BLOCK_NOTE_BLOCK_BASS'
+
+  'Info_Balance':
+    material: head-%player_name%
+    slot: 44
+    item_flags:
+      - HIDE_ATTRIBUTES
+    display_name: '&#FFF275Tu Economía'
+    lore:
+      - '&8Tu Economía'
+      - ''
+      - ' &8| &fDinero: &#59E91F&l$&r&#59E91F%vault_eco_balance_formatted%'
+      - ' &8| &fAlmas: &#34B0F3%thundercurrencys_almas%🔥'
+      - ' &8| &fZafiros: &#1E6BFF%thundercurrencys_zafiros%💎'
+      - ' &8| &fXP: &#D48BFF%player_level% LVL'
+      - ''
+      - '&7▶ Click para más información'
+    left_click_commands:
+      - '[openguimenu] info_economia'
+      - '[sound] UI_BUTTON_CLICK'

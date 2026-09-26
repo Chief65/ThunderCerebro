@@ -1,0 +1,209 @@
+menu_title: '&0&l|&r &0Mazmorras ▶ &#59E91FLootpool Calidad I'
+open_command:
+  - lootpool1
+size: 36
+open_requirement:
+  requirements: {}
+register_command: true
+update: true
+
+items:
+  # ============================================================================
+  # FILA 2: CONTENIDO EXPANDIDO CALIDAD I (SLOTS 9 A 17)
+  # ============================================================================
+  'Item_Comida':
+    material: COOKED_BEEF
+    slot: 9
+    item_flags:
+      - HIDE_ATTRIBUTES
+    display_name: '&#59E91FFilete Asado'
+    lore:
+      - '&8ꜱᴜꜱᴛᴇɴᴛᴏ ʙᴀꜱɪᴄᴏ'
+      - ''
+      - ' &8| &fCantidad: &e4 - 8'
+      - ' &8| &fProbabilidad: &a65%'
+      - ' &8| &fTier: &7Común'
+      - ''
+      - '&7Comida indispensable de supervivencia.'
+
+  'Item_Flechas':
+    material: ARROW
+    slot: 10
+    item_flags:
+      - HIDE_ATTRIBUTES
+    display_name: '&#59E91FFlechas de Caza'
+    lore:
+      - '&8ᴍᴜɴɪᴄɪᴏɴ'
+      - ''
+      - ' &8| &fCantidad: &e8 - 16'
+      - ' &8| &fProbabilidad: &a55%'
+      - ' &8| &fTier: &7Común'
+      - ''
+      - '&7Munición estándar para arcos en dungeon.'
+
+  'Item_Hierro':
+    material: IRON_INGOT
+    slot: 11
+    item_flags:
+      - HIDE_ATTRIBUTES
+    display_name: '&#59E91FLingote de Hierro'
+    lore:
+      - '&8ᴍᴀᴛᴇʀɪᴀʟ ᴜᴛɪʟ'
+      - ''
+      - ' &8| &fCantidad: &e2 - 5'
+      - ' &8| &fProbabilidad: &a45%'
+      - ' &8| &fTier: &7Común'
+      - ''
+      - '&7Material para reparar herramientas y armaduras.'
+
+  'Item_WindCharge':
+    material: WIND_CHARGE
+    slot: 12
+    item_flags:
+      - HIDE_ATTRIBUTES
+    display_name: '&#59E91FCarga de Viento'
+    lore:
+      - '&8ᴜᴛɪʟɪᴅᴀᴅ 1.21'
+      - ''
+      - ' &8| &fCantidad: &e2 - 4'
+      - ' &8| &fProbabilidad: &a35%'
+      - ' &8| &fTier: &7Poco Común'
+      - ''
+      - '&7Impulso de salto o activación táctica.'
+
+  'Item_Monedas':
+    material: GOLD_NUGGET
+    slot: 13
+    item_flags:
+      - HIDE_ATTRIBUTES
+      - HIDE_ENCHANTS
+    enchantments:
+      - UNBREAKING;1
+    display_name: '&#59E91FBolsa de Monedas'
+    lore:
+      - '&8ᴇᴄᴏɴᴏᴍɪᴀ'
+      - ''
+      - ' &8| &fRecompensa: &#59E91F$150 - $350'
+      - ' &8| &fProbabilidad: &a35%'
+      - ' &8| &fTier: &7Poco Común'
+      - ''
+      - '&7Inyección económica directa al balance.'
+
+  'Item_Pocion':
+    material: POTION
+    slot: 14
+    item_flags:
+      - HIDE_ATTRIBUTES
+      - HIDE_POTION_EFFECTS
+    potion_effects:
+      - SPEED;1800;0
+    display_name: '&#59E91FPoción de Velocidad I &7(3:00)'
+    lore:
+      - '&8ᴄᴏɴꜱᴜᴍɪʙʟᴇ'
+      - ''
+      - ' &8| &fCantidad: &e1'
+      - ' &8| &fProbabilidad: &a25%'
+      - ' &8| &fEfecto: &fVelocidad (+20%)'
+      - ' &8| &fTier: &7Poco Común'
+      - ''
+      - '&7Permite esquivar ataques o huir de hordas.'
+
+  'Item_ManzanaOro':
+    material: GOLDEN_APPLE
+    slot: 15
+    item_flags:
+      - HIDE_ATTRIBUTES
+    display_name: '&#59E91FManzana Dorada'
+    lore:
+      - '&8ᴄᴏɴꜱᴜᴍɪʙʟᴇ'
+      - ''
+      - ' &8| &fCantidad: &e1 - 2'
+      - ' &8| &fProbabilidad: &a20%'
+      - ' &8| &fTier: &7Raro'
+      - ''
+      - '&7Absorción y regeneración para emergencias.'
+
+  'Item_Libro':
+    material: ENCHANTED_BOOK
+    slot: 16
+    item_flags:
+      - HIDE_ATTRIBUTES
+      - HIDE_ENCHANTS
+    enchantments:
+      - PROTECTION_ENVIRONMENTAL;1
+    display_name: '&#59E91FLibro Encantado: Protección I'
+    lore:
+      - '&8ᴇɴᴄᴀɴᴛᴀᴍɪᴇɴᴛᴏ ʙᴀꜱɪᴄᴏ'
+      - ''
+      - ' &8| &fCantidad: &e1'
+      - ' &8| &fProbabilidad: &a15%'
+      - ' &8| &fEnchant: &fProtección I'
+      - ' &8| &fTier: &7Raro'
+      - ''
+      - '&7Mejora defensiva para novatos.'
+
+  'Item_Fragmento':
+    material: PRISMARINE_SHARD
+    slot: 17
+    item_flags:
+      - HIDE_ATTRIBUTES
+      - HIDE_ENCHANTS
+    enchantments:
+      - UNBREAKING;1
+    display_name: '&#FFF275Fragmento de Llave Común'
+    lore:
+      - '&8ᴍᴀᴛᴇʀɪᴀʟ ᴅᴇ ꜰᴏʀᴊᴀ'
+      - ''
+      - ' &8| &fCantidad: &e1'
+      - ' &8| &fProbabilidad: &a12%'
+      - ' &8| &fRequisito: &fJunta 4 para craftear'
+      - ' &8| &fResultado: &#FFF275Llave Común'
+      - ' &8| &fTier: &6Muy Raro'
+      - ''
+      - '&7Canjeable por premios en /warp cajas.'
+
+  # ============================================================================
+  # NAV BAR INFERIOR (FILA 4 - SLOTS 27 A 35)
+  # ============================================================================
+  'Filtro_Navbar':
+    material: GRAY_STAINED_GLASS_PANE
+    display_name: ' '
+    slots:
+      - 27
+      - 28
+      - 29
+      - 30
+      - 32
+      - 33
+      - 34
+
+  'Volver':
+    material: DARK_OAK_DOOR
+    slot: 31
+    item_flags:
+      - HIDE_ATTRIBUTES
+    display_name: '&cVolver'
+    lore:
+      - '&7▶ Click para regresar a calidades'
+    left_click_commands:
+      - '[openguimenu] lootpools_dungeon'
+      - '[sound] UI_BUTTON_CLICK'
+
+  'Info_Balance':
+    material: head-%player_name%
+    slot: 35
+    item_flags:
+      - HIDE_ATTRIBUTES
+    display_name: '&#FFF275Tu Economia'
+    lore:
+      - '&8Tu Economia'
+      - ''
+      - ' &8| &fDinero: &#59E91F&l$&r&#59E91F%vault_eco_balance_formatted%'
+      - ' &8| &fAlmas: &#34B0F3%thundercurrencys_almas% fuego'
+      - ' &8| &fZafiros: &#1E6BFF%thundercurrencys_zafiros% diamante'
+      - ' &8| &fXP: &#D48BFF%player_level% LVL'
+      - ''
+      - '&7▶ Click para mas informacion'
+    left_click_commands:
+      - '[openguimenu] info_economia'
+      - '[sound] UI_BUTTON_CLICK'

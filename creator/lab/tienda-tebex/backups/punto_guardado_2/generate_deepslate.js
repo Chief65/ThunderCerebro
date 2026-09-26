@@ -1,0 +1,63 @@
+﻿const fs = require('fs');
+
+// Generamos textura Deepslate / Pizarra Profunda con vetas de minerales raros (Oro y Zafiro/Diamante) con baja opacidad
+const svgDeepslateOres = `<svg xmlns="http://www.w3.org/2000/svg" width="96" height="96" viewBox="0 0 32 32" shape-rendering="crispEdges">
+  <!-- Fondo base Deepslate Oscuro -->
+  <rect width="32" height="32" fill="#080c14"/>
+
+  <!-- Capas horizontales estratificadas de Deepslate (Pizarra Profunda 1.21) -->
+  <!-- Capa 1: Y=0 a 7 -->
+  <rect x="0" y="1" width="32" height="1" fill="#0c121e"/>
+  <rect x="4" y="2" width="12" height="1" fill="#0f1625"/>
+  <rect x="18" y="2" width="14" height="1" fill="#0b101b"/>
+  <rect x="0" y="3" width="8" height="1" fill="#0d1422"/>
+  <rect x="14" y="3" width="10" height="1" fill="#111929"/>
+  <rect x="0" y="5" width="32" height="1" fill="#06090f"/>
+  <rect x="6" y="6" width="16" height="1" fill="#0d1422"/>
+  <rect x="24" y="6" width="8" height="1" fill="#101827"/>
+
+  <!-- Capa 2: Y=8 a 15 -->
+  <rect x="0" y="8" width="14" height="1" fill="#0b101b"/>
+  <rect x="16" y="8" width="16" height="1" fill="#0e1524"/>
+  <rect x="0" y="10" width="32" height="1" fill="#0c121e"/>
+  <rect x="2" y="11" width="10" height="1" fill="#111929"/>
+  <rect x="15" y="11" width="12" height="1" fill="#0d1422"/>
+  <rect x="0" y="13" width="32" height="1" fill="#06090f"/>
+  <rect x="5" y="14" width="14" height="1" fill="#0f1625"/>
+  <rect x="22" y="14" width="9" height="1" fill="#0b101b"/>
+
+  <!-- Capa 3: Y=16 a 23 -->
+  <rect x="0" y="17" width="32" height="1" fill="#0c121e"/>
+  <rect x="3" y="18" width="15" height="1" fill="#101827"/>
+  <rect x="20" y="18" width="10" height="1" fill="#0e1524"/>
+  <rect x="0" y="20" width="8" height="1" fill="#06090f"/>
+  <rect x="10" y="20" width="22" height="1" fill="#06090f"/>
+  <rect x="4" y="22" width="12" height="1" fill="#0d1422"/>
+  <rect x="18" y="22" width="14" height="1" fill="#0f1625"/>
+
+  <!-- Capa 4: Y=24 a 31 -->
+  <rect x="0" y="25" width="32" height="1" fill="#0c121e"/>
+  <rect x="2" y="26" width="16" height="1" fill="#0e1524"/>
+  <rect x="20" y="26" width="10" height="1" fill="#111929"/>
+  <rect x="0" y="28" width="32" height="1" fill="#06090f"/>
+  <rect x="6" y="29" width="18" height="1" fill="#0d1422"/>
+  <rect x="0" y="31" width="32" height="1" fill="#090d16"/>
+
+  <!-- Inclusiones discretas de Minerales (Baja opacidad/Micro destellos) -->
+  <!-- Veta de Oro (Gold Ore) en la roca -->
+  <rect x="9" y="3" width="2" height="1" fill="#2d2714"/>
+  <rect x="10" y="4" width="2" height="1" fill="#3b3215"/>
+  <rect x="11" y="4" width="1" height="1" fill="#524418"/>
+  <rect x="25" y="18" width="2" height="1" fill="#2d2714"/>
+  <rect x="26" y="19" width="1" height="1" fill="#443916"/>
+
+  <!-- Veta de Zafiro / Diamante Profundo (Deepslate Diamond/Sapphire) -->
+  <rect x="22" y="10" width="2" height="1" fill="#0e232e"/>
+  <rect x="23" y="11" width="1" height="1" fill="#163748"/>
+  <rect x="24" y="11" width="1" height="1" fill="#1f4c63"/>
+  <rect x="6" y="26" width="2" height="1" fill="#0e232e"/>
+  <rect x="7" y="27" width="1" height="1" fill="#163748"/>
+</svg>`;
+
+fs.writeFileSync('C:/Users/tecno/Desktop/ThunderCerebro/creator/lab/tienda-tebex/Assets/mc_deepslate_ores.svg', svgDeepslateOres, 'utf8');
+console.log('Textura Deepslate con vetas de mineral generada con éxito');

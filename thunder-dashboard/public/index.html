@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thunder Telemetry & Market Intelligence — Sr Ramos</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        thunderYellow: '#ffc400',
+                        thunderYellowHover: '#e6b000',
+                        thunderDark: '#0f172a',
+                        brandBlue: '#2563eb',
+                        brandEmerald: '#10b981',
+                        brandRose: '#e11d48'
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Chart.js CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="h-screen w-screen overflow-hidden bg-slate-50 text-slate-900 flex">
+
+    <!-- BARRA LATERAL WHITE MINIMALIST (VARIANTE 1) -->
+    <aside class="sidebar-minimalist w-64 flex flex-col justify-between shrink-0 h-full select-none z-30 shadow-xs">
+        
+        <!-- Top: Logo Oficial & Info de Servidor -->
+        <div class="p-4 border-b border-slate-100 flex flex-col gap-3">
+            <div class="flex items-center gap-2.5">
+                <div class="h-10 w-10 rounded-xl bg-white border border-slate-200 shadow-sm p-1.5 flex items-center justify-center shrink-0">
+                    <img src="logo.png" alt="Thunder Icon" class="h-full w-full object-contain">
+                </div>
+                <div class="overflow-hidden">
+                    <h1 class="font-extrabold text-sm text-slate-900 tracking-tight leading-tight">THUNDER CEREBRO</h1>
+                    <span class="text-[11px] font-bold text-amber-600 font-mono tracking-wider">PLAN INTELLIGENCE</span>
+                </div>
+            </div>
+
+            <!-- Server Badge con acento #ffc400 -->
+            <div class="flex items-center justify-between px-2.5 py-1.5 rounded-lg bg-slate-50 border border-slate-200 text-xs">
+                <span class="flex items-center gap-1.5 font-semibold text-slate-800">
+                    <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+                    Survival 1.21.x
+                </span>
+                <span class="font-mono text-[10px] font-extrabold px-2 py-0.5 rounded-md bg-thunderYellow text-slate-900 shadow-xs">
+                    ONLINE
+                </span>
+            </div>
+        </div>
+
+        <!-- Scrollable Navigation Menu -->
+        <div class="flex-1 overflow-y-auto px-3 py-2 space-y-3">
+            
+            <!-- Grupo 1: General & Tráfico -->
+            <div>
+                <p class="sidebar-category-clean">Resumen de Red</p>
+                <nav class="space-y-1">
+                    <button class="sidebar-item-clean active" data-tab="tab-overview">
+                        <span class="flex items-center gap-2.5">
+                            <i data-lucide="layout-dashboard" class="w-4 h-4"></i>
+                            <span>Tráfico & Demografía</span>
+                        </span>
+                    </button>
+                    <button class="sidebar-item-clean" data-tab="tab-overview" onclick="document.getElementById('geo-cards-container')?.scrollIntoView({behavior:'smooth'})">
+                        <span class="flex items-center gap-2.5">
+                            <i data-lucide="globe" class="w-4 h-4"></i>
+                            <span>Geolocalización (LATAM)</span>
+                        </span>
+                    </button>
+                </nav>
+            </div>
+
+            <!-- Grupo 2: Jugadores & Retención -->
+            <div>
+                <p class="sidebar-category-clean">Jugadores & Retención</p>
+                <nav class="space-y-1">
+                    <button class="sidebar-item-clean" data-tab="tab-retention">
+                        <span class="flex items-center gap-2.5">
+                            <i data-lucide="trending-up" class="w-4 h-4"></i>
+                            <span>Retención & Cohortes</span>
+                        </span>
+                    </button>
+                    <button class="sidebar-item-clean" data-tab="tab-retention">
+                        <span class="flex items-center gap-2.5">
+                            <i data-lucide="user-check" class="w-4 h-4"></i>
+                            <span>Diagnóstico de Churn</span>
+                        </span>
+                    </button>
+                </nav>
+            </div>
+
+            <!-- Grupo 3: Rendimiento de Motor -->
+            <div>
+                <p class="sidebar-category-clean">Rendimiento Técnico</p>
+                <nav class="space-y-1">
+                    <button class="sidebar-item-clean" data-tab="tab-technical">
+                        <span class="flex items-center gap-2.5">
+                            <i data-lucide="cpu" class="w-4 h-4"></i>
+                            <span>MSPT & Estabilidad TPS</span>
+                        </span>
+                    </button>
+                    <button class="sidebar-item-clean" data-tab="tab-technical">
+                        <span class="flex items-center gap-2.5">
+                            <i data-lucide="activity" class="w-4 h-4"></i>
+                            <span>Curva de Estrés (CCU)</span>
+                        </span>
+                    </button>
+                </nav>
+            </div>
+
+            <!-- Grupo 4: Economía & Tebex -->
+            <div>
+                <p class="sidebar-category-clean">Economía & Tienda</p>
+                <nav class="space-y-1">
+                    <button class="sidebar-item-clean" data-tab="tab-economy">
+                        <span class="flex items-center gap-2.5">
+                            <i data-lucide="credit-card" class="w-4 h-4"></i>
+                            <span>Monetización & Pasarelas</span>
+                        </span>
+                    </button>
+                    <button class="sidebar-item-clean" data-tab="tab-economy">
+                        <span class="flex items-center gap-2.5">
+                            <i data-lucide="wallet" class="w-4 h-4"></i>
+                            <span>OXXO / Mercado Pago</span>
+                        </span>
+                    </button>
+                </nav>
+            </div>
+
+            <!-- Grupo 5: Simulador Financiero -->
+            <div>
+                <p class="sidebar-category-clean">Estrategia & Escalado</p>
+                <nav class="space-y-1">
+                    <button class="sidebar-item-clean" data-tab="tab-simulator">
+                        <span class="flex items-center gap-2.5">
+                            <i data-lucide="calculator" class="w-4 h-4"></i>
+                            <span>Calculadora de Negocio</span>
+                        </span>
+                    </button>
+                    <button class="sidebar-item-clean" data-tab="tab-simulator">
+                        <span class="flex items-center gap-2.5">
+                            <i data-lucide="scale" class="w-4 h-4"></i>
+                            <span>Mercado US/UK vs LATAM</span>
+                        </span>
+                    </button>
+                </nav>
+            </div>
+
+        </div>
+
+        <!-- Sidebar Footer -->
+        <div class="p-3 border-t border-slate-100 bg-slate-50/70 flex items-center justify-between">
+            <div class="flex items-center gap-2.5">
+                <div class="w-8 h-8 rounded-full bg-thunderYellow text-slate-900 border border-amber-400/60 flex items-center justify-center font-black text-xs font-mono shadow-xs">
+                    SR
+                </div>
+                <div>
+                    <p class="text-xs font-bold text-slate-900 leading-tight">Sr Ramos</p>
+                    <p class="text-[10px] text-slate-500 font-mono">ThunderStudios Owner</p>
+                </div>
+            </div>
+            <span class="text-[10px] px-2 py-0.5 rounded bg-white border border-slate-200 font-mono text-slate-600 font-bold shadow-xs">
+                :3838
+            </span>
+        </div>
+
+    </aside>
+
+    <!-- CONTENEDOR PRINCIPAL DERECHO -->
+    <div class="flex-1 flex flex-col h-full overflow-hidden">
+
+        <!-- Top Header Navbar -->
+        <header class="h-16 border-b border-slate-200 bg-white/95 backdrop-blur px-6 flex items-center justify-between shrink-0 z-20">
+            <div class="flex items-center gap-3">
+                <span class="text-xs px-2.5 py-1 rounded-full bg-amber-50 text-amber-900 border border-amber-200 font-bold flex items-center gap-1.5 shadow-2xs">
+                    <span class="w-2 h-2 rounded-full bg-thunderYellow"></span>
+                    Ecosistema Hispanohablante & Plan Telemetry
+                </span>
+                <span class="hidden md:inline text-xs text-slate-300">•</span>
+                <span class="hidden md:inline text-xs font-medium text-slate-500">Benchmark vs Red Real</span>
+            </div>
+
+            <div class="flex items-center gap-3">
+                <div class="hidden lg:flex items-center gap-2 px-3 py-1.5 rounded-lg bg-slate-50 border border-slate-200 text-xs font-mono text-slate-700">
+                    <span class="w-2 h-2 rounded-full bg-emerald-500 animate-ping"></span>
+                    <span>Modo Híbrido Activo</span>
+                </div>
+
+                <button id="btn-refresh" class="btn-thunder-cta px-3.5 py-1.5 rounded-lg text-xs font-extrabold flex items-center gap-1.5 transition">
+                    <i data-lucide="refresh-cw" class="w-3.5 h-3.5 text-slate-900"></i>
+                    Actualizar Datos
+                </button>
+                <button id="btn-reset" class="px-3 py-1.5 rounded-lg bg-white hover:bg-slate-50 border border-slate-200 text-xs font-semibold text-slate-700 flex items-center gap-1.5 transition shadow-2xs">
+                    <i data-lucide="rotate-ccw" class="w-3.5 h-3.5 text-slate-500"></i>
+                    Reset
+                </button>
+            </div>
+        </header>
+
+        <!-- Main Scrollable Body Area -->
+        <main class="flex-1 overflow-y-auto p-6 space-y-6">
+
+            <!-- Banner de Salud Global del Servidor -->
+            <div class="card-thunder rounded-xl p-5 relative overflow-hidden flex flex-col md:flex-row items-start md:items-center justify-between gap-4 border-l-4 border-l-emerald-500 bg-white">
+                <div class="space-y-1">
+                    <div class="flex items-center gap-2">
+                        <span class="text-xs font-mono tracking-wider uppercase text-slate-500 font-semibold">DIAGNÓSTICO GENERAL DE RED</span>
+                        <span class="badge-green text-xs font-bold px-2.5 py-0.5 rounded-full">ESTADO ÓPTIMO 🟢</span>
+                    </div>
+                    <h2 class="text-xl font-bold text-slate-900 flex items-center gap-2">
+                        Salud de Tracción & Balance: <span class="text-emerald-600 font-mono font-extrabold">91 / 100</span>
+                    </h2>
+                    <p class="text-xs text-slate-600 max-w-2xl">
+                        Las métricas de retención (<strong class="text-slate-900">D1: 28.5%</strong>) y tiempo de sesión (<strong class="text-slate-900">68 min</strong>) superan los umbrales mínimos del mercado hispanohablante. El hardware opera en zona segura (<strong class="text-slate-900">MSPT 31.8ms</strong>).
+                    </p>
+                </div>
+                <div class="flex items-center gap-4 bg-slate-50 px-4 py-2.5 rounded-lg border border-slate-200">
+                    <div class="text-right">
+                        <p class="text-[11px] text-slate-500 uppercase font-semibold">Región Objetivo</p>
+                        <p class="text-sm font-extrabold text-slate-900">España & LATAM</p>
+                    </div>
+                    <div class="h-8 w-px bg-slate-300"></div>
+                    <div class="text-right">
+                        <p class="text-[11px] text-slate-500 uppercase font-semibold">Monetización Tebex</p>
+                        <p class="text-sm font-extrabold text-amber-600">2.430 € / mes</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tarjetas de KPIs Superiores (4 Cuadrantes) -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                
+                <!-- KPI 1: Concurrencia -->
+                <div class="card-thunder rounded-xl p-4 space-y-3 bg-white">
+                    <div class="flex items-center justify-between text-slate-500 text-xs">
+                        <span class="font-bold uppercase tracking-wider">JUGADORES SIMULTÁNEOS</span>
+                        <i data-lucide="users" class="w-4 h-4 text-blue-600"></i>
+                    </div>
+                    <div class="flex items-baseline gap-2">
+                        <span id="val-current-ccu" class="text-3xl font-black font-mono text-slate-900">184</span>
+                        <span class="text-xs text-slate-500 font-medium">CCU Actual</span>
+                    </div>
+                    <div class="flex items-center justify-between pt-2 border-t border-slate-100 text-xs">
+                        <span class="text-slate-500">Pico hoy: <strong id="val-peak-ccu" class="text-slate-900 font-mono font-bold">268</strong></span>
+                        <span class="badge-green px-1.5 py-0.5 rounded text-[11px] font-mono font-bold">Nivel 2 Sólido</span>
+                    </div>
+                </div>
+
+                <!-- KPI 2: Retención D1 -->
+                <div class="card-thunder rounded-xl p-4 space-y-3 bg-white">
+                    <div class="flex items-center justify-between text-slate-500 text-xs">
+                        <span class="font-bold uppercase tracking-wider">RETENCIÓN D1 (24H)</span>
+                        <i data-lucide="repeat" class="w-4 h-4 text-emerald-600"></i>
+                    </div>
+                    <div class="flex items-baseline gap-2">
+                        <span id="val-retention-d1" class="text-3xl font-black font-mono text-emerald-600">28.5%</span>
+                        <span class="text-xs text-slate-500 font-medium">Objetivo: >25%</span>
+                    </div>
+                    <div class="flex items-center justify-between pt-2 border-t border-slate-100 text-xs">
+                        <span class="text-slate-500">Retención D7: <strong id="val-retention-d7" class="text-slate-900 font-mono font-bold">11.2%</strong></span>
+                        <span class="badge-green px-1.5 py-0.5 rounded text-[11px] font-mono font-bold">+3.5% vs Bench</span>
+                    </div>
+                </div>
+
+                <!-- KPI 3: Rendimiento Motor (TPS / MSPT) -->
+                <div class="card-thunder rounded-xl p-4 space-y-3 bg-white">
+                    <div class="flex items-center justify-between text-slate-500 text-xs">
+                        <span class="font-bold uppercase tracking-wider">ESTABILIDAD DEL MOTOR</span>
+                        <i data-lucide="cpu" class="w-4 h-4 text-blue-600"></i>
+                    </div>
+                    <div class="flex items-baseline gap-2">
+                        <span id="val-tps" class="text-3xl font-black font-mono text-slate-900">19.94</span>
+                        <span class="text-xs text-slate-500 font-medium">TPS</span>
+                    </div>
+                    <div class="flex items-center justify-between pt-2 border-t border-slate-100 text-xs">
+                        <span class="text-slate-500">MSPT medio: <strong id="val-mspt" class="text-blue-600 font-mono font-bold">31.8 ms</strong></span>
+                        <span class="badge-green px-1.5 py-0.5 rounded text-[11px] font-mono font-bold">Cero Lag (&lt;35ms)</span>
+                    </div>
+                </div>
+
+                <!-- KPI 4: Economía & Facturación -->
+                <div class="card-thunder rounded-xl p-4 space-y-3 bg-white">
+                    <div class="flex items-center justify-between text-slate-500 text-xs">
+                        <span class="font-bold uppercase tracking-wider">FACTURACIÓN MENSUAL</span>
+                        <i data-lucide="badge-dollar-sign" class="w-4 h-4 text-amber-600"></i>
+                    </div>
+                    <div class="flex items-baseline gap-2">
+                        <span id="val-revenue" class="text-3xl font-black font-mono text-amber-600">2.430 €</span>
+                        <span class="text-xs text-slate-500 font-medium">Neto est.</span>
+                    </div>
+                    <div class="flex items-center justify-between pt-2 border-t border-slate-100 text-xs">
+                        <span class="text-slate-500">Ticket medio: <strong id="val-arppu" class="text-slate-900 font-mono font-bold">4.60 €</strong></span>
+                        <span class="badge-green px-1.5 py-0.5 rounded text-[11px] font-mono font-bold">Conv: 1.85%</span>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- TAB CONTENT 1: TRÁFICO & DEMOGRAFÍA -->
+            <div id="tab-overview" class="tab-pane space-y-6">
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+                    
+                    <!-- Gráfico Semanal -->
+                    <div class="card-thunder rounded-xl p-5 lg:col-span-2 space-y-4 bg-white">
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <h3 class="font-extrabold text-slate-900 text-base">Evolución de Tráfico Semanal</h3>
+                                <p class="text-xs text-slate-500">Picos de Concurrencia (CCU) y Nuevos Registros por día</p>
+                            </div>
+                            <span class="text-xs font-mono px-2.5 py-1 rounded-md bg-slate-100 border border-slate-200 text-slate-700 font-bold">Últimos 7 días</span>
+                        </div>
+                        <div class="h-64">
+                            <canvas id="chartWeeklyTraffic"></canvas>
+                        </div>
+                    </div>
+
+                    <!-- Gráfico Desglose Plataforma -->
+                    <div class="card-thunder rounded-xl p-5 space-y-4 bg-white">
+                        <div>
+                            <h3 class="font-extrabold text-slate-900 text-base">Distribución por Dispositivo</h3>
+                            <p class="text-xs text-slate-500">Java vs Bedrock Móvil vs Cuentas No-Premium</p>
+                        </div>
+                        <div class="h-52 relative flex items-center justify-center">
+                            <canvas id="chartPlatformBreakdown"></canvas>
+                        </div>
+                        <div class="space-y-1.5 text-xs">
+                            <div class="flex items-center justify-between text-slate-700">
+                                <span class="flex items-center gap-1.5"><span class="w-2.5 h-2.5 rounded-full bg-blue-600"></span> Bedrock Móvil (Android APK):</span>
+                                <span class="font-mono font-extrabold text-slate-900">46.5%</span>
+                            </div>
+                            <div class="flex items-center justify-between text-slate-700">
+                                <span class="flex items-center gap-1.5"><span class="w-2.5 h-2.5 rounded-full bg-emerald-500"></span> Java No-Premium (Launchers):</span>
+                                <span class="font-mono font-extrabold text-slate-900">32.0%</span>
+                            </div>
+                            <div class="flex items-center justify-between text-slate-700">
+                                <span class="flex items-center gap-1.5"><span class="w-2.5 h-2.5 rounded-full bg-thunderYellow border border-amber-400"></span> Java Premium (Oficial):</span>
+                                <span class="font-mono font-extrabold text-slate-900">15.5%</span>
+                            </div>
+                            <div class="flex items-center justify-between text-slate-700">
+                                <span class="flex items-center gap-1.5"><span class="w-2.5 h-2.5 rounded-full bg-purple-600"></span> Bedrock Consolas:</span>
+                                <span class="font-mono font-extrabold text-slate-900">6.0%</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Tabla de Procedencia Geográfica -->
+                <div class="card-thunder rounded-xl p-5 space-y-4 bg-white">
+                    <div class="flex items-center justify-between">
+                        <div>
+                            <h3 class="font-extrabold text-slate-900 text-base">Procedencia Geográfica de la Demanda</h3>
+                            <p class="text-xs text-slate-500">Distribución de tráfico en la comunidad hispanohablante</p>
+                        </div>
+                        <span class="badge-green text-xs px-2.5 py-1 rounded-md font-mono font-extrabold">LATAM: 78% | España: 22%</span>
+                    </div>
+                    <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3" id="geo-cards-container">
+                        <!-- Dinámico vía JS -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- TAB CONTENT 2: RETENCIÓN & COHORTES -->
+            <div id="tab-retention" class="tab-pane hidden space-y-6">
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+                    
+                    <div class="card-thunder rounded-xl p-5 lg:col-span-2 space-y-4 bg-white">
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <h3 class="font-extrabold text-slate-900 text-base">Curva de Caída de Retención (Día 1 a Día 30)</h3>
+                                <p class="text-xs text-slate-500">Métricas reales de cohorte vs. Benchmarks del Estudio de Mercado</p>
+                            </div>
+                            <span class="badge-green text-xs px-2.5 py-1 rounded-full font-mono font-bold">Zona Saludable</span>
+                        </div>
+                        <div class="h-64">
+                            <canvas id="chartRetentionCurve"></canvas>
+                        </div>
+                    </div>
+
+                    <div class="card-thunder rounded-xl p-5 space-y-4 flex flex-col justify-between bg-white">
+                        <div class="space-y-3">
+                            <h3 class="font-extrabold text-slate-900 text-base">Diagnóstico de Churn</h3>
+                            <p class="text-xs text-slate-500">Comportamiento en los primeros 30 minutos de juego:</p>
+                            
+                            <div class="p-3.5 rounded-lg bg-slate-50 border border-slate-200 space-y-2">
+                                <div class="flex justify-between text-xs">
+                                    <span class="text-slate-600 font-medium">Tiempo medio de sesión:</span>
+                                    <span class="font-mono text-blue-600 font-bold">68.4 minutos</span>
+                                </div>
+                                <div class="w-full bg-slate-200 rounded-full h-2">
+                                    <div class="bg-blue-600 h-2 rounded-full" style="width: 78%"></div>
+                                </div>
+                                <p class="text-[11px] text-slate-500">Supera la barrera de los 45 min (inmersión conseguida).</p>
+                            </div>
+
+                            <div class="p-3.5 rounded-lg bg-slate-50 border border-slate-200 space-y-2">
+                                <div class="flex justify-between text-xs">
+                                    <span class="text-slate-600 font-medium">Bounce Rate (Salen antes de 5 min):</span>
+                                    <span class="font-mono text-emerald-600 font-bold">16.2%</span>
+                                </div>
+                                <div class="w-full bg-slate-200 rounded-full h-2">
+                                    <div class="bg-emerald-500 h-2 rounded-full" style="width: 16%"></div>
+                                </div>
+                                <p class="text-[11px] text-slate-500">Bajo rebote (buen spawn, guía inicial clara).</p>
+                            </div>
+                        </div>
+
+                        <div class="p-3.5 rounded-lg bg-emerald-50 border border-emerald-200 text-xs text-emerald-900">
+                            <strong class="text-emerald-800 block mb-1">Recomendación de Retención:</strong>
+                            El cuello de botella de caída se produce entre el Día 7 y el Día 14. Se recomienda programar eventos de fin de semana para reactivar a jugadores casuales.
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- TAB CONTENT 3: MONITOR TÉCNICO (MSPT) -->
+            <div id="tab-technical" class="tab-pane hidden space-y-6">
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+                    
+                    <div class="card-thunder rounded-xl p-5 lg:col-span-2 space-y-4 bg-white">
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <h3 class="font-extrabold text-slate-900 text-base">Correlación: CCU vs MSPT (Estrés de Motor)</h3>
+                                <p class="text-xs text-slate-500">Milisegundos por tick (MSPT) a medida que aumenta el número de jugadores</p>
+                            </div>
+                            <span class="text-xs font-mono px-2.5 py-1 rounded-md bg-rose-50 border border-rose-200 text-rose-700 font-bold">Límite Crítico: 50.0 ms</span>
+                        </div>
+                        <div class="h-64">
+                            <canvas id="chartTechnicalStress"></canvas>
+                        </div>
+                    </div>
+
+                    <div class="card-thunder rounded-xl p-5 space-y-4 bg-white">
+                        <h3 class="font-extrabold text-slate-900 text-base">Límites de Capacidad</h3>
+                        <p class="text-xs text-slate-500">Hardware actual: <strong class="text-slate-900">Ryzen 9 7950X</strong></p>
+
+                        <div class="space-y-2.5 text-xs">
+                            <div class="p-2.5 rounded-lg bg-slate-50 border border-slate-200 flex items-center justify-between">
+                                <span class="text-slate-700 font-medium">0 – 150 CCU:</span>
+                                <span class="badge-green px-2 py-0.5 rounded font-mono font-bold">20.0 TPS (100% fluido)</span>
+                            </div>
+                            <div class="p-2.5 rounded-lg bg-slate-50 border border-slate-200 flex items-center justify-between">
+                                <span class="text-slate-700 font-medium">150 – 240 CCU:</span>
+                                <span class="badge-green px-2 py-0.5 rounded font-mono font-bold">19.8 TPS (Zona Segura)</span>
+                            </div>
+                            <div class="p-2.5 rounded-lg bg-slate-50 border border-slate-200 flex items-center justify-between">
+                                <span class="text-slate-700 font-medium">240 – 290 CCU:</span>
+                                <span class="badge-yellow px-2 py-0.5 rounded font-mono font-bold">18.8 TPS (Alerta Redstone)</span>
+                            </div>
+                            <div class="p-2.5 rounded-lg bg-slate-50 border border-slate-200 flex items-center justify-between">
+                                <span class="text-slate-700 font-medium">> 300 CCU:</span>
+                                <span class="badge-red px-2 py-0.5 rounded font-mono font-bold">&lt; 17.5 TPS (Exige Nodos)</span>
+                            </div>
+                        </div>
+
+                        <div class="p-3.5 rounded-lg bg-blue-50 border border-blue-200 text-xs text-blue-900">
+                            <strong class="text-blue-800 block mb-1">Diagnóstico de Arquitectura:</strong>
+                            Para superar los 300 jugadores concurrentes en 1.21 sin lag, la red requerirá separar el mundo Survival en dos instancias conectadas mediante el proxy Velocity.
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- TAB CONTENT 4: MONETIZACIÓN & PASARELAS -->
+            <div id="tab-economy" class="tab-pane hidden space-y-6">
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+                    
+                    <div class="card-thunder rounded-xl p-5 space-y-4 bg-white">
+                        <div>
+                            <h3 class="font-extrabold text-slate-900 text-base">Distribución por Pasarela</h3>
+                            <p class="text-xs text-slate-500">Métodos de pago utilizados por los jugadores</p>
+                        </div>
+                        <div class="h-56 relative flex items-center justify-center">
+                            <canvas id="chartPaymentMethods"></canvas>
+                        </div>
+                    </div>
+
+                    <div class="card-thunder rounded-xl p-5 lg:col-span-2 space-y-4 bg-white">
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <h3 class="font-extrabold text-slate-900 text-base">Impacto de Pasarelas Locales en LATAM</h3>
+                                <p class="text-xs text-slate-500">Volumen de ventas desbloqueado por método de pago</p>
+                            </div>
+                            <span class="badge-green text-xs px-2.5 py-1 rounded-full font-mono font-bold">Tebex Integrado</span>
+                        </div>
+
+                        <div class="space-y-3" id="payment-bars-container">
+                            <!-- Dinámico vía JS -->
+                        </div>
+
+                        <div class="p-3.5 rounded-lg bg-amber-50 border border-amber-200 text-xs text-amber-900 flex items-start gap-2.5">
+                            <i data-lucide="info" class="w-4 h-4 text-amber-700 shrink-0 mt-0.5"></i>
+                            <span>
+                                <strong class="text-amber-800">Regla de Oro de Monetización:</strong> El <strong class="text-slate-900">67.5% de la facturación</strong> procede de métodos de pago en efectivo o billeteras locales (Mercado Pago y OXXO). Si la tienda se limitara a PayPal y tarjeta de crédito clásica, los ingresos se desplomarían de 2.430€ a menos de 600€/mes.
+                            </span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- TAB CONTENT 5: CALCULADORA DE PROYECCIÓN Y ESCALADO -->
+            <div id="tab-simulator" class="tab-pane hidden space-y-6">
+                <div class="card-thunder rounded-xl p-6 space-y-6 bg-white">
+                    <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-slate-200 pb-4">
+                        <div>
+                            <h3 class="font-extrabold text-slate-900 text-lg flex items-center gap-2">
+                                <i data-lucide="sliders" class="w-5 h-5 text-amber-500"></i>
+                                Simulador Financiero & Escalado de Red
+                            </h3>
+                            <p class="text-xs text-slate-500">Modifique los parámetros para proyectar costes fijos, ingresos y margen neto según el mercado objetivo.</p>
+                        </div>
+                        
+                        <!-- Selector de Mercado -->
+                        <div class="flex items-center gap-2 bg-slate-100 p-1.5 rounded-lg border border-slate-200 text-xs">
+                            <button id="calc-mode-es" class="px-3.5 py-1.5 rounded-md font-extrabold bg-thunderYellow text-slate-900 border border-amber-400 shadow-xs transition">
+                                Mercado España & LATAM
+                            </button>
+                            <button id="calc-mode-en" class="px-3.5 py-1.5 rounded-md font-medium text-slate-600 hover:text-slate-900 transition">
+                                Mercado Anglosajón (US/UK)
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Controles del Simulador -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        
+                        <div class="space-y-6">
+                            <!-- Slider CCU con acento #ffc400 -->
+                            <div class="space-y-2">
+                                <div class="flex justify-between items-baseline">
+                                    <label class="text-sm font-bold text-slate-900">Jugadores Simultáneos Objetivo (Pico CCU):</label>
+                                    <span id="calc-label-ccu" class="text-xl font-black font-mono text-amber-600">250 CCU</span>
+                                </div>
+                                <input type="range" id="calc-slider-ccu" min="30" max="1500" step="10" value="250" class="w-full accent-amber-500 cursor-pointer">
+                                <div class="flex justify-between text-[11px] text-slate-500 font-mono">
+                                    <span>30 (Inicial)</span>
+                                    <span>250 (Mediano)</span>
+                                    <span>600 (Grande)</span>
+                                    <span>1500 (Macro-red)</span>
+                                </div>
+                            </div>
+
+                            <!-- Info contextual generada -->
+                            <div class="p-4 rounded-lg bg-slate-50 border border-slate-200 space-y-3 text-xs">
+                                <div class="flex justify-between">
+                                    <span class="text-slate-600 font-medium">Jugadores Únicos Mensuales Estimados:</span>
+                                    <span id="calc-unique-players" class="font-mono text-slate-900 font-bold">~28.000 únicos/mes</span>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span class="text-slate-600 font-medium">Tasa de Conversión Estimada:</span>
+                                    <span id="calc-conv-rate" class="font-mono text-slate-800 font-semibold">1.8%</span>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span class="text-slate-600 font-medium">Gasto Medio por Comprador (ARPPU):</span>
+                                    <span id="calc-arppu-val" class="font-mono text-slate-800 font-semibold">4.50 €</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Resultados Financieros Proyectados -->
+                        <div class="grid grid-cols-2 gap-4">
+                            
+                            <div class="p-4 rounded-xl bg-slate-50 border border-slate-200 space-y-1">
+                                <span class="text-xs text-slate-500 uppercase tracking-wider font-mono font-medium">COSTES FIJOS (OPEX)</span>
+                                <p id="calc-opex" class="text-2xl font-black font-mono text-rose-600">~210 € / mes</p>
+                                <p class="text-[11px] text-slate-500">Hardware + Proxies + Tebex</p>
+                            </div>
+
+                            <div class="p-4 rounded-xl bg-slate-50 border border-slate-200 space-y-1">
+                                <span class="text-xs text-slate-500 uppercase tracking-wider font-mono font-medium">INGRESOS BRUTOS</span>
+                                <p id="calc-gross" class="text-2xl font-black font-mono text-amber-600">~2.268 € / mes</p>
+                                <p class="text-[11px] text-slate-500">Tienda web & pases</p>
+                            </div>
+
+                            <div class="col-span-2 p-5 rounded-xl bg-emerald-50 border border-emerald-200 space-y-1">
+                                <div class="flex justify-between items-center">
+                                    <span class="text-xs font-mono tracking-wider uppercase text-emerald-800 font-bold">BENEFICIO NETO MENSUAL ESTIMADO</span>
+                                    <span id="calc-margin-pct" class="badge-green px-2.5 py-0.5 rounded text-xs font-mono font-bold">Margen: 90.7%</span>
+                                </div>
+                                <p id="calc-net-profit" class="text-3xl font-black font-mono text-emerald-700">~2.058 € / mes</p>
+                                <p class="text-xs text-emerald-900 pt-1">
+                                    Retorno operativo limpio tras descontar todos los gastos de servidores y licencias.
+                                </p>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+        </main>
+
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

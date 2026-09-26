@@ -1,0 +1,2 @@
+put creator/lab/lonja_venta.yml plugins/DeluxeMenus/gui_menus/menusIA/lonja_venta.yml
+bye

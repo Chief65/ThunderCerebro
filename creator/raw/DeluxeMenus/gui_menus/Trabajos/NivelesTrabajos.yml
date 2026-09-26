@@ -1,0 +1,24 @@
+open_command: trabajos3
+size: 54
+menu_title: '&0&l|&r &0Trabajos ▶ &8Menu '
+
+items:
+  'Filtro':
+    material: GRAY_STAINED_GLASS_PANE
+    slots: [45-48,50-52]
+    
+  'Cerrar':
+    material: DARK_OAK_DOOR
+    slot: 49
+    display_name: "&cSalir"
+    left_click_commands:
+      - '[close]'
+
+  'Niveles':
+    material: WRITABLE_BOOK
+    slot: 53
+    display_name: "&e⚡ &8| &eNiveles de trabajo"
+    lore:
+      - "&7▶ Click para ver"
+    left_click_commands:
+      - '[openguimenu]'

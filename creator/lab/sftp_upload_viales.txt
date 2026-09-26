@@ -1,0 +1,5 @@
+put creator/lab/vialdealmas.yml plugins/ExecutableItems/items/ThunderMC/vialdealmas.yml
+put creator/lab/vialdealmas_2.yml plugins/ExecutableItems/items/ThunderMC/vialdealmas_2.yml
+put creator/lab/vialdealmas_3.yml plugins/ExecutableItems/items/ThunderMC/vialdealmas_3.yml
+put creator/lab/vialdealmas_4.yml plugins/ExecutableItems/items/ThunderMC/vialdealmas_4.yml
+put creator/lab/vialdealmas_5.yml plugins/ExecutableItems/items/ThunderMC/vialdealmas_5.yml

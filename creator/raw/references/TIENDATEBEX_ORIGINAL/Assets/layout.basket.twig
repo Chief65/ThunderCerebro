@@ -1,0 +1,83 @@
+<div id="modal">
+    <div class="shopping-cart-overlay" id="shopping-cart-overlay">
+        <div class="shopping-cart" id="shopping-cart">
+            <div class="shopping-cart-header" style="padding-top: 20px;">
+                {% if config("serverType") == "Minecraft" %}
+
+                {% set isCracked = config("minecraftServerType") == "Cracked" %}
+                
+                {% set bedrockPrefix = config("bedrockPrefix") %}
+                {% set ignWithoutPrefix = basket.ign | replace({ (bedrockPrefix) : ''}) %}
+                {% set minecraftSkinCracked = "https://minotar.net/bust/#{ignWithoutPrefix}/87" %}                
+
+                <div class="avatar-shoppingcart">
+                    {% if basket.ign %}
+                        {% if isCracked %}
+                        <img src="{{ minecraftSkinCracked }}" alt="{{basket.ign}}'s Cart">
+                        {% else %}
+                        <img src="https://visage.surgeplay.com/bust/87/{{basket.username}}" alt="{{basket.ign}}'s Cart">
+                        {% endif %}
+                    {% endif %}
+                </div>
+                {% endif %}
+                <div class="cart-description">
+                    <p class="title-cart">{{ lang.player_cart | replace({'%user%': basket.ign}) }}</p>
+                    <div class="currency-triplezone">
+                        <a href="/checkout/logout" class="logout-btn">{{ lang.logout }}</a>
+                        <button id="activate-dropdown">{{ lang.currency }}: <span>{{ basket.currency }}</span> <i
+                                class="mdi mdi-chevron-down"></i></button>
+                        <div id="dropdown-currency-triplezone">
+                            <ul>
+                                {% for currency in store.currencies %}
+                                    {% if currency.code in [store.currency, "AUD", "BRL", "CAD", "DKK", "EUR", "NOK", "NZD", "GBP", "SEK", "USD", "PLN"] %}
+                                        <li {% if basket.currency == currency.code %}class="active" {% endif %}>
+                                            <a href="?currency={{ currency.code }}">{{ currency.code }}</a>
+                                        </li>
+                                    {% endif %}
+                                {% endfor %}
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <button class="close-shoppingcart" id="close-cart-btn"><i class="mdi mdi-close-thick"></i></button>
+            </div>
+            <div class="shopping-cart-body">
+                {% if basket.packages|length >= 1 %}
+                <p class="cart-tile">{{ lang.shopping_cart }}</p>
+                <p class="cart-desc">
+                    {{ basket.packages|length }} items | <span class="__total--basket">{{ basket.price|money }}</span> {{ basket.currency }}
+                </p>
+                {% else %}
+                <p class="empty-cart-title">{{ lang.empty_cart }}</p>
+                <p class="empty-cart-description">{{ lang.keep_adding_items }}</p>
+                {% endif %}
+                
+                <div id="cart-items">
+                    {% for package in basket.packages %}
+                    <div class="shopping-item">
+                        <div class="shopping-item-description">
+                            <p class="title-item">{% if package.quantity > 1%}<span class="package__quantity">{{ package.quantity }}x</span> {{ package.name[:25] }}{% else %}{{ package.name[:25] }}{% endif %}</p>
+                            <p class="description-item">{% if package.price|money > 0.00 %}{{ package.price|money }} {{ basket.currency }}{% else %}{{ lang.free_basket }}{% endif%}</p>
+                            {% if package.options or package.ign|length %}
+                            <p class="options__display">
+                                {% for option in package.options %}
+                                    {{ option.name }}: {{ option.value|raw }}{%- if not loop.last -%},{% endif %}					
+        						{% endfor %}
+        					</p>
+                            {% endif %}                               
+                        </div>
+                        <a class="test-to-remove" data-to-remove="{{ package.id }}" data-url="/checkout/packages/remove/{{ package.id }}" href="/checkout/packages/remove/{{ package.id }}"><i class="mdi mdi-cart-remove"></i></a>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+
+            {% if basket.packages|length >= 1 %}
+            <div class="shopping-cart-footer">
+                <a href="/checkout/basket">{{ lang.proceed_to_checkout }} <i class="mdi mdi-arrow-right"></i></a>
+            </div>
+            {% endif %}
+
+        </div>
+    </div>
+</div>

@@ -1,0 +1,85 @@
+prefix: '[CommandPanels]'
+command_no_permission: No permission.
+command_unknown_subcommand: Unknown subcommand. Use /pa help.
+command_subcommand_help: Use /pa help for a list of subcommands.
+file_create_panels_fail: Failed to create panels folder!
+file_create_example_fail: Could not create example panels!
+file_create_config_fail: Could not create the config file!
+file_update_config_fail: Could not update the config file!
+file_create_lang_fail: Failed to create language file!
+file_update_lang_fail: Failed to update language file!
+file_save_data_fail: Could not save data file.
+file_save_panel_fail: Could not save new panel file.
+panel_layout_number_missing: Panel layout is missing/skipping a number.
+panel_invalid_type: Invalid inventory type.
+panel_not_found: Panel not found.
+panel_open_triggered: Panel open triggered for player.
+panel_open_log: '{0} opened {1}.'
+panel_open_usage: 'Usage: /pa open <panelName> [playerName]'
+panel_open_player_required: You must be a player to open a panel for yourself.
+panel_open_player_offline: Player is not online.
+item_create_fail: Failed to create item {0} issue with {1}
+item_decoration_fail: Failed to add item decoration to {0} issue with {1}
+item_head_load_fail: 'Head Material Tag: Could not load head: {0}'
+item_model_invalid: Invalid Item Model format. Must be namespace:key.
+item_custom_model_invalid: Invalid Custom Model Data. Must not be empty.
+item_give_error: Error giving item.
+item_grant_syntax_invalid: 'Invalid syntax. Usage: [grant] permission command'
+item_action_syntax_invalid: 'Invalid item action syntax. Usage: slot action [params]'
+item_action_unknown: Unknown item action
+item_action_execute_fail: An error occurred while executing item action.
+item_action_usage_improper: Improper usage.
+item_enchant_missing_args: Missing enchantment name or level.
+item_enchant_invalid: Invalid enchantment
+item_enchant_remove_missing: Missing enchantment to remove.
+item_enchant_action_unknown: Unknown enchant action.
+data_usage: 'Usage: /pa data <action> <player> [key] [value]'
+data_missing_key: Missing key.
+data_missing_key_or_value: Missing key or value.
+data_missing_key_or_expression: Missing key or expression.
+data_unknown_action: Unknown action.
+data_player_required: You must be a player.
+data_value: 'Value: {0}'
+data_set: Set key '{0}' to '{1}' (if not existing).
+data_overwrite: Overwrote key '{0}' with '{1}'.
+data_math: Performed math '{0}' on key '{1}'.
+data_delete: Deleted key '{0}'.
+data_clear: Cleared all data for '{0}'.
+requirement_unknown_tag: Unknown requirement tag.
+requirement_data_invalid: 'Invalid data requirement. Use: [data] <key> <amount>'
+requirement_amount_invalid: Invalid amount.
+requirement_data_read_fail: Could not read data.
+requirement_material_invalid: Invalid material.
+requirement_material_required: Material is required for item requirement.
+requirement_economy_invalid: 'Invalid economy value: {0}'
+requirement_xp_invalid: 'Invalid XP requirement. Use: [xp] <levels|points> <amount>'
+requirement_xp_amount_invalid: Invalid XP amount.
+requirement_xp_type_invalid: Invalid XP type.
+requirement_item_invalid: Invalid item.
+requirement_source_invalid: Invalid source. Must be player or panel.
+sound_no_args: No sound arguments provided.
+sound_play_fail: Failed to play sound.
+sound_stop_fail: Failed to stop sound.
+generate_mode_enabled: Generate mode enabled.
+generate_mode_expired: Generate mode expired.
+generate_panel_created: Generated a new panel file.
+plugin_commands: 'Plugin Commands:'
+plugin_reloaded: Plugin Reloaded.
+plugin_developer: Developer {0}
+plugin_version: Version {0}
+help_open_command: /pa open <panel> [player]
+help_open_description: Opens a panel
+help_reload_command: /pa reload
+help_reload_description: Reloads all config and panel files
+help_generate_command: /pa generate
+help_generate_description: Enter generate mode to generate panels
+help_data_command: /pa data
+help_data_description: Modify data for players
+help_version_command: /pa version
+help_version_description: Gets the plugin version
+help_help_command: /pa help
+help_help_description: Shows this help menu
+dialog_no_buttons: Dialog needs at least one button
+cooldown_error: You're opening panels too quickly
+teleport_error: Error with teleport tag
+require_head_database: Download the HeadDatabase plugin to use this feature!

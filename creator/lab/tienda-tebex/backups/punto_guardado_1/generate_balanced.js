@@ -1,0 +1,42 @@
+﻿const fs = require('fs');
+
+// Textura Bedrock / Piedra Minecraft con contraste visible pero elegante y equilibrado (64x64)
+const svgBedrockBalanced = `<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 16 16" shape-rendering="crispEdges">
+  <rect width="16" height="16" fill="#090d16"/>
+  <!-- Píxeles de contraste medio-bajo -->
+  <rect x="0" y="0" width="2" height="1" fill="#131929"/>
+  <rect x="5" y="0" width="1" height="1" fill="#161f33"/>
+  <rect x="10" y="1" width="2" height="1" fill="#111726"/>
+  <rect x="14" y="0" width="2" height="1" fill="#141c2e"/>
+  
+  <rect x="2" y="2" width="2" height="1" fill="#151e30"/>
+  <rect x="7" y="3" width="2" height="1" fill="#101624"/>
+  <rect x="12" y="2" width="1" height="1" fill="#161f33"/>
+
+  <rect x="0" y="5" width="1" height="1" fill="#161f33"/>
+  <rect x="4" y="4" width="2" height="1" fill="#121827"/>
+  <rect x="9" y="5" width="2" height="1" fill="#151e30"/>
+  <rect x="13" y="4" width="2" height="1" fill="#111726"/>
+
+  <rect x="1" y="7" width="2" height="1" fill="#111726"/>
+  <rect x="6" y="7" width="2" height="1" fill="#161f33"/>
+  <rect x="11" y="6" width="2" height="1" fill="#131929"/>
+  <rect x="15" y="7" width="1" height="1" fill="#151e30"/>
+
+  <rect x="3" y="9" width="2" height="1" fill="#141c2e"/>
+  <rect x="8" y="10" width="1" height="1" fill="#161f33"/>
+  <rect x="12" y="9" width="2" height="1" fill="#111726"/>
+
+  <rect x="0" y="11" width="2" height="1" fill="#151e30"/>
+  <rect x="5" y="12" width="2" height="1" fill="#121827"/>
+  <rect x="10" y="11" width="2" height="1" fill="#161f33"/>
+  <rect x="14" y="12" width="2" height="1" fill="#131929"/>
+
+  <rect x="2" y="14" width="2" height="1" fill="#111726"/>
+  <rect x="7" y="14" width="2" height="1" fill="#151e30"/>
+  <rect x="11" y="15" width="2" height="1" fill="#121827"/>
+  <rect x="15" y="14" width="1" height="1" fill="#161f33"/>
+</svg>`;
+
+fs.writeFileSync('C:/Users/tecno/Desktop/ThunderCerebro/creator/lab/tienda-tebex/Assets/mc_bedrock_minimal.svg', svgBedrockBalanced, 'utf8');
+console.log('Textura Bedrock con contraste equilibrado generada');

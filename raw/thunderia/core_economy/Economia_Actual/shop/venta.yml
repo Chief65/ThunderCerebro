@@ -1,0 +1,57 @@
+venta:
+  name: "&0&l| &0Tienda ▶ &8Tintes"
+  size: 45
+  fillItem:
+    material: GRAY_STAINED_GLASS_PANE
+    name: " "
+  buttons:
+    goBack:
+      slot: 40
+    previousPage:
+      slot: 39
+    nextPage:
+      slot: 41
+  items:
+    1:
+      type: item
+      item:
+        material: AMETHYST_CLUSTER
+        quantity: 1
+        name: "&x&E&7&2&7&F&5⭐ Cristal Estelar ⭐"
+        lore:
+        - '&8Objeto Vendible'
+        - ''
+        - ' &fCristal cosmico'
+        - ' &fmuy valioso'
+        - ''
+        - ' &x&5&9&E&9&1&F| &fPrecio: &x&5&9&E&9&1&F&l$&x&5&9&E&9&1&F10'
+        - ''
+        - '&7▲ Vendelo: /sellgui &f'
+        enchantments:
+          - UNBREAKING:1
+      buyPrice: -1
+      sellPrice: 10
+      slot: 9
+      
+    2:
+      type: item
+      item:
+        material: AMETHYST_CLUSTER
+        quantity: 1
+        name: "&x&E&7&2&7&F&5⭐ Cristal Estelar ⭐"
+        lore:
+        - '&8Objeto Vendible'
+        - ''
+        - ' &fᴄʀɪꜱᴛᴀʟ ᴄᴏꜱᴍɪᴄᴏ'
+        - ' &fᴜᴛɪʟ ᴘᴀʀᴀ ᴠᴇɴᴅᴇʀ'
+        - ''
+        - ' &x&5&9&E&9&1&F| &fPrecio: &x&5&9&E&9&1&F&l$&x&5&9&E&9&1&F10'
+        - ''
+        - '&7 &8⁂ &#4BFD00&lS&#47F504&lU&#44EC08&lP&#40E40C&lE&#3CDB10&lR &e⭐&7⭐⭐⭐⭐'
+        - ''
+        - '&7▲ Vendelo: /sellgui &f'
+        enchantments:
+          - UNBREAKING:1
+      buyPrice: -1
+      sellPrice: 10
+      slot: 9

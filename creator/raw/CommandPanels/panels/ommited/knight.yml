@@ -1,0 +1,315 @@
+title: '&0&l|&r &0Rangos ▶ &8Knight'
+type: inventory
+rows: 6
+layout:
+  '0':
+  - item_gray_stained_glass_pane_0
+  '1':
+  - item_gray_stained_glass_pane_1
+  '2':
+  - item_gray_stained_glass_pane_2
+  '3':
+  - item_gray_stained_glass_pane_3
+  '4':
+  - item_tube_coral_block_4
+  '5':
+  - item_gray_stained_glass_pane_5
+  '6':
+  - item_gray_stained_glass_pane_6
+  '7':
+  - item_gray_stained_glass_pane_7
+  '8':
+  - item_gray_stained_glass_pane_8
+  '9':
+  - item_gray_stained_glass_pane_9
+  '10':
+  - item_light_blue_stained_glass_pane_10
+  '11':
+  - item_fire_charge_11
+  '12':
+  - item_firework_star_12
+  '13':
+  - item_firework_star_13
+  '14':
+  - item_firework_star_14
+  '15':
+  - item_firework_star_15
+  '16':
+  - item_light_blue_stained_glass_pane_16
+  '17':
+  - item_gray_stained_glass_pane_17
+  '18':
+  - item_gray_stained_glass_pane_18
+  '19':
+  - item_light_blue_stained_glass_pane_19
+  '20':
+  - item_firework_star_20
+  '21':
+  - item_firework_star_21
+  '22':
+  - item_firework_star_22
+  '23':
+  - item_firework_star_23
+  '24':
+  - item_firework_star_24
+  '25':
+  - item_light_blue_stained_glass_pane_25
+  '26':
+  - item_gray_stained_glass_pane_26
+  '27':
+  - item_gray_stained_glass_pane_27
+  '28':
+  - item_light_blue_stained_glass_pane_28
+  '29':
+  - item_firework_star_29
+  '30':
+  - item_firework_star_30
+  '31':
+  - item_firework_star_31
+  '32':
+  - item_firework_star_32
+  '33':
+  - item_firework_star_33
+  '34':
+  - item_light_blue_stained_glass_pane_34
+  '35':
+  - item_gray_stained_glass_pane_35
+  '36':
+  - item_gray_stained_glass_pane_36
+  '37':
+  - item_light_blue_stained_glass_pane_37
+  '38':
+  - item_firework_star_38
+  '39':
+  - item_firework_star_39
+  '40':
+  - item_firework_star_40
+  '41':
+  - item_firework_star_41
+  '42':
+  - item_firework_star_42
+  '43':
+  - item_light_blue_stained_glass_pane_43
+  '44':
+  - item_gray_stained_glass_pane_44
+  '45':
+  - item_gray_stained_glass_pane_45
+  '46':
+  - item_gray_stained_glass_pane_46
+  '47':
+  - item_gray_stained_glass_pane_47
+  '48':
+  - item_gray_stained_glass_pane_48
+  '49':
+  - item_dark_oak_door_49
+  '50':
+  - item_gray_stained_glass_pane_50
+  '51':
+  - item_gray_stained_glass_pane_51
+  '52':
+  - item_gray_stained_glass_pane_52
+  '53':
+  - item_gray_stained_glass_pane_53
+items:
+  item_gray_stained_glass_pane_0:
+    material: GRAY_STAINED_GLASS_PANE
+    stack: 1
+  item_gray_stained_glass_pane_1:
+    material: GRAY_STAINED_GLASS_PANE
+    stack: 1
+  item_gray_stained_glass_pane_2:
+    material: GRAY_STAINED_GLASS_PANE
+    stack: 1
+  item_gray_stained_glass_pane_3:
+    material: GRAY_STAINED_GLASS_PANE
+    stack: 1
+  item_tube_coral_block_4:
+    material: TUBE_CORAL_BLOCK
+    stack: 1
+  item_gray_stained_glass_pane_5:
+    material: GRAY_STAINED_GLASS_PANE
+    stack: 1
+  item_gray_stained_glass_pane_6:
+    material: GRAY_STAINED_GLASS_PANE
+    stack: 1
+  item_gray_stained_glass_pane_7:
+    material: GRAY_STAINED_GLASS_PANE
+    stack: 1
+  item_gray_stained_glass_pane_8:
+    material: GRAY_STAINED_GLASS_PANE
+    stack: 1
+  item_gray_stained_glass_pane_9:
+    material: GRAY_STAINED_GLASS_PANE
+    stack: 1
+  item_light_blue_stained_glass_pane_10:
+    material: LIGHT_BLUE_STAINED_GLASS_PANE
+    stack: 1
+  item_fire_charge_11:
+    material: FIRE_CHARGE
+    name: '&a✔ &fNivel 1 &8| &a¡Completado!'
+    lore:
+    - '&8Objeto Informativo'
+    - ''
+    - ' &7Ya has completado'
+    - ' &7este nivel'
+    - ''
+    
+    stack: 1
+  item_firework_star_12:
+    material: FIREWORK_STAR
+    name: '&e⏳ &fNivel 2 &8| &eEn progreso...'
+    lore:
+    - '&8Objeto Informativo'
+    - ''
+    - ' &8ʀᴇᴄᴏᴍᴘᴇɴꜱᴀ:'
+    - ' &8● &ax1 Llave Super'
+    - ''
+    - '&8&m                               '
+    - ' &#59E91F|&r &fPrecio: &#59E91F&l$&r&a1k'
+    - '&8&m                               '
+    - ''
+    - '&7▶ Click para comprar'
+    stack: 2
+    enchantments:
+    - unbreaking 1
+  item_firework_star_13:
+    material: FIREWORK_STAR
+    name: '&c🔒 &fNivel 3 &8| &cBloqueado'
+    lore:
+    - '&8Objeto Informativo'
+    - ''
+    - ' &8ʀᴇᴄᴏᴍᴘᴇɴꜱᴀ:'
+    - ' &8● &ax1 Llave Super'
+    - ''
+    - '&8&m                               '
+    - ' &#59E91F|&r &fPrecio: &#59E91F&l$&r&a1k'
+    - '&8&m                               '
+    - ''
+    - '&cDesbloquea el nivel'
+    - '&canterior primero.'
+    stack: 3
+  item_firework_star_14:
+    material: FIREWORK_STAR
+    stack: 4
+  item_firework_star_15:
+    material: FIREWORK_STAR
+    stack: 5
+  item_light_blue_stained_glass_pane_16:
+    material: LIGHT_BLUE_STAINED_GLASS_PANE
+    stack: 1
+  item_gray_stained_glass_pane_17:
+    material: GRAY_STAINED_GLASS_PANE
+    stack: 1
+  item_gray_stained_glass_pane_18:
+    material: GRAY_STAINED_GLASS_PANE
+    stack: 1
+  item_light_blue_stained_glass_pane_19:
+    material: LIGHT_BLUE_STAINED_GLASS_PANE
+    stack: 1
+  item_firework_star_20:
+    material: FIREWORK_STAR
+    stack: 6
+  item_firework_star_21:
+    material: FIREWORK_STAR
+    stack: 7
+  item_firework_star_22:
+    material: FIREWORK_STAR
+    stack: 8
+  item_firework_star_23:
+    material: FIREWORK_STAR
+    stack: 9
+  item_firework_star_24:
+    material: FIREWORK_STAR
+    stack: 10
+  item_light_blue_stained_glass_pane_25:
+    material: LIGHT_BLUE_STAINED_GLASS_PANE
+    stack: 1
+  item_gray_stained_glass_pane_26:
+    material: GRAY_STAINED_GLASS_PANE
+    stack: 1
+  item_gray_stained_glass_pane_27:
+    material: GRAY_STAINED_GLASS_PANE
+    stack: 1
+  item_light_blue_stained_glass_pane_28:
+    material: LIGHT_BLUE_STAINED_GLASS_PANE
+    stack: 1
+  item_firework_star_29:
+    material: FIREWORK_STAR
+    stack: 11
+  item_firework_star_30:
+    material: FIREWORK_STAR
+    stack: 12
+  item_firework_star_31:
+    material: FIREWORK_STAR
+    stack: 13
+  item_firework_star_32:
+    material: FIREWORK_STAR
+    stack: 14
+  item_firework_star_33:
+    material: FIREWORK_STAR
+    stack: 15
+  item_light_blue_stained_glass_pane_34:
+    material: LIGHT_BLUE_STAINED_GLASS_PANE
+    stack: 1
+  item_gray_stained_glass_pane_35:
+    material: GRAY_STAINED_GLASS_PANE
+    stack: 1
+  item_gray_stained_glass_pane_36:
+    material: GRAY_STAINED_GLASS_PANE
+    stack: 1
+  item_light_blue_stained_glass_pane_37:
+    material: LIGHT_BLUE_STAINED_GLASS_PANE
+    stack: 1
+  item_firework_star_38:
+    material: FIREWORK_STAR
+    stack: 16
+  item_firework_star_39:
+    material: FIREWORK_STAR
+    stack: 17
+  item_firework_star_40:
+    material: FIREWORK_STAR
+    stack: 18
+  item_firework_star_41:
+    material: FIREWORK_STAR
+    stack: 19
+  item_firework_star_42:
+    material: FIREWORK_STAR
+    stack: 20
+  item_light_blue_stained_glass_pane_43:
+    material: LIGHT_BLUE_STAINED_GLASS_PANE
+    stack: 1
+  item_gray_stained_glass_pane_44:
+    material: GRAY_STAINED_GLASS_PANE
+    stack: 1
+  item_gray_stained_glass_pane_45:
+    material: GRAY_STAINED_GLASS_PANE
+    stack: 1
+  item_gray_stained_glass_pane_46:
+    material: GRAY_STAINED_GLASS_PANE
+    stack: 1
+  item_gray_stained_glass_pane_47:
+    material: GRAY_STAINED_GLASS_PANE
+    stack: 1
+  item_gray_stained_glass_pane_48:
+    material: GRAY_STAINED_GLASS_PANE
+    stack: 1
+  item_dark_oak_door_49:
+    material: DARK_OAK_DOOR
+    name: '&cVolver'
+    actions:
+      commands:
+        - '[sound] BLOCK.END_PORTAL_FRAME.FILL volume=1 pitch=0.8'
+        - '[open] inicioranks'
+    stack: 1
+  item_gray_stained_glass_pane_50:
+    material: GRAY_STAINED_GLASS_PANE
+    stack: 1
+  item_gray_stained_glass_pane_51:
+    material: GRAY_STAINED_GLASS_PANE
+    stack: 1
+  item_gray_stained_glass_pane_52:
+    material: GRAY_STAINED_GLASS_PANE
+    stack: 1
+  item_gray_stained_glass_pane_53:
+    material: GRAY_STAINED_GLASS_PANE
+    stack: 1

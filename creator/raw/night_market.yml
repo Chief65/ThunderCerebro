@@ -1,0 +1,287 @@
+menu_title: '&0&l|&r &0Mercado ▶ &#34B0F3Altar Sombrío &8(Nocturno)'
+open_command:
+  - nightmarket
+  - mercadonocturno
+  - almasmarket
+size: 54
+open_requirement:
+  requirements: {}
+register_command: true
+update: true
+
+items:
+  'Filtro_Superior':
+    material: GRAY_STAINED_GLASS_PANE
+    display_name: ' '
+    slots:
+      - 0
+      - 1
+      - 2
+      - 3
+      - 5
+      - 6
+      - 7
+      - 8
+
+  'Header_Info':
+    material: SOUL_LANTERN
+    slot: 4
+    item_flags:
+      - HIDE_ATTRIBUTES
+      - HIDE_ENCHANTS
+    enchantments:
+      - DURABILITY;1
+    display_name: '&#34B0F3Altar de las Sombras &8[&#34B0F3Night Market&8]'
+    lore:
+      - '&8Mercado Nocturno de Almas'
+      - ''
+      - ' &8| &fMoneda: &#34B0F3Almas (🔥)'
+      - ' &8| &fDescuento Global: &#59E91F-35% OFF'
+      - ' &8| &fStock: &c1 compra por carta'
+      - ' &8| &fReinicio: &eCada noche (08h 15m)'
+      - ''
+      - '&8El descuento aplica a todos tus articulos.'
+
+  'Slot_1_Super':
+    material: POTION
+    slot: 20
+    item_flags:
+      - HIDE_ATTRIBUTES
+      - HIDE_ENCHANTS
+    display_name: '&#59E91FPoción Abisal de Rapidez III &8[&#59E91F-35%&8]'
+    lore:
+      - '&8Rareza: &#59E91FSuper'
+      - ''
+      - ' &fVelocidad aumentada durante'
+      - ' &f15 minutos en el mundo abisal.'
+      - ''
+      - ' &8| &fPrecio Base: &71,300 Almas'
+      - ' &8| &fPrecio Oferta: &#34B0F3850 Almas 🔥'
+      - ' &8| &fDescuento: &#59E91F35% OFF'
+      - ' &8| &fStock: &e1/1 disponible'
+      - ''
+      - '&7▶ Click para comprar'
+    left_click_commands:
+      - '[sound] ENTITY_EXPERIENCE_ORB_PICKUP'
+
+  'Slot_2_Rara':
+    material: GLOW_INK_SAC
+    slot: 21
+    item_flags:
+      - HIDE_ATTRIBUTES
+      - HIDE_ENCHANTS
+    enchantments:
+      - DURABILITY;1
+    display_name: '&#1E6BFFGlow Espectral Cian &8[&#59E91F-35%&8]'
+    lore:
+      - '&8Rareza: &#1E6BFFRara'
+      - ''
+      - ' &fBrillo permanente para tu'
+      - ' &fpersonaje en zonas oscuras.'
+      - ''
+      - ' &8| &fPrecio Base: &715,000 Almas'
+      - ' &8| &fPrecio Oferta: &#34B0F39,750 Almas 🔥'
+      - ' &8| &fDescuento: &#59E91F35% OFF'
+      - ' &8| &fStock: &e1/1 disponible'
+      - ''
+      - '&7▶ Click para comprar'
+    left_click_commands:
+      - '[sound] ENTITY_EXPERIENCE_ORB_PICKUP'
+
+  'Slot_3_Epica':
+    material: TRIPWIRE_HOOK
+    slot: 22
+    item_flags:
+      - HIDE_ATTRIBUTES
+      - HIDE_ENCHANTS
+    enchantments:
+      - DURABILITY;1
+    display_name: '&#D48BFFLlave de la Cripta &8[&#59E91F-35%&8]'
+    lore:
+      - '&8Rareza: &#D48BFFEpica'
+      - ''
+      - ' &fAbre la Caja Suprema del spawn.'
+      - ' &fContiene botín exclusivo.'
+      - ''
+      - ' &8| &fPrecio Base: &735,000 Almas'
+      - ' &8| &fPrecio Oferta: &#34B0F322,750 Almas 🔥'
+      - ' &8| &fDescuento: &#59E91F35% OFF'
+      - ' &8| &fStock: &e1/1 disponible'
+      - ''
+      - '&7▶ Click para comprar'
+    left_click_commands:
+      - '[sound] ENTITY_EXPERIENCE_ORB_PICKUP'
+
+  'Slot_4_Legend':
+    material: NETHERITE_SWORD
+    slot: 23
+    item_flags:
+      - HIDE_ATTRIBUTES
+      - HIDE_ENCHANTS
+    enchantments:
+      - DURABILITY;1
+    display_name: '&#FFF275Filo de la Guadaña Oscura &8[&#59E91F-35%&8]'
+    lore:
+      - '&8Rareza: &#FFF275Legend'
+      - ''
+      - ' &fGuadaña imbuida en almas con'
+      - ' &fpasiva de robo de vida abisal.'
+      - ''
+      - ' &8| &fPrecio Base: &775,000 Almas'
+      - ' &8| &fPrecio Oferta: &#34B0F348,750 Almas 🔥'
+      - ' &8| &fDescuento: &#59E91F35% OFF'
+      - ' &8| &fStock: &e1/1 disponible'
+      - ''
+      - '&7▶ Click para comprar'
+    left_click_commands:
+      - '[sound] ENTITY_EXPERIENCE_ORB_PICKUP'
+
+  'Slot_5_Limited':
+    material: NETHER_STAR
+    slot: 24
+    item_flags:
+      - HIDE_ATTRIBUTES
+      - HIDE_ENCHANTS
+    enchantments:
+      - DURABILITY;1
+    display_name: '&#FF4D4DTalismán de Fuego Eterno &8[&#59E91F-35%&8]'
+    lore:
+      - '&8Rareza: &#FF4D4DLimited'
+      - ''
+      - ' &fReliquia legendaria abisal.'
+      - ' &fOtorga resistencia al fuego total.'
+      - ''
+      - ' &8| &fPrecio Base: &7220,000 Almas'
+      - ' &8| &fPrecio Oferta: &#34B0F3143,000 Almas 🔥'
+      - ' &8| &fDescuento: &#59E91F35% OFF'
+      - ' &8| &fStock: &e1/1 disponible'
+      - ''
+      - '&7▶ Click para comprar'
+    left_click_commands:
+      - '[sound] ENTITY_EXPERIENCE_ORB_PICKUP'
+
+  'Status_Slot_1':
+    material: LIME_STAINED_GLASS_PANE
+    slot: 29
+    display_name: '&#59E91FCalidad: SUPER'
+    lore:
+      - '&7Probabilidad base: 45%'
+
+  'Status_Slot_2':
+    material: LIGHT_BLUE_STAINED_GLASS_PANE
+    slot: 30
+    display_name: '&#1E6BFFCalidad: RARA'
+    lore:
+      - '&7Probabilidad base: 28%'
+
+  'Status_Slot_3':
+    material: PURPLE_STAINED_GLASS_PANE
+    slot: 31
+    display_name: '&#D48BFFCalidad: ÉPICA'
+    lore:
+      - '&7Probabilidad base: 16%'
+
+  'Status_Slot_4':
+    material: YELLOW_STAINED_GLASS_PANE
+    slot: 32
+    display_name: '&#FFF275Calidad: LEGEND'
+    lore:
+      - '&7Probabilidad base: 8%'
+
+  'Status_Slot_5':
+    material: RED_STAINED_GLASS_PANE
+    slot: 33
+    display_name: '&#FF4D4DCalidad: LIMITED'
+    lore:
+      - '&7Probabilidad base: 3% (Pity activo)'
+
+  'Boton_Premios_Pity':
+    material: SPYGLASS
+    slot: 45
+    item_flags:
+      - HIDE_ATTRIBUTES
+      - HIDE_ENCHANTS
+    enchantments:
+      - DURABILITY;1
+    display_name: '&#FFF275Ver Premios y Pity'
+    lore:
+      - '&8Catálogo de Rarezas'
+      - ''
+      - ' &fConsulta todos los premios'
+      - ' &fy las chances de cada calidad.'
+      - ''
+      - ' &8| &fPity Limited: &eDía 4 sin salir'
+      - ' &8| &fGarantía: &aa los 7 días'
+      - ''
+      - '&7▶ Click para ver catálogo'
+    left_click_commands:
+      - '[openguimenu] nightmarket_premios'
+      - '[sound] UI_BUTTON_CLICK'
+
+  'Filtro_Navbar':
+    material: GRAY_STAINED_GLASS_PANE
+    display_name: ' '
+    slots:
+      - 46
+      - 47
+      - 50
+      - 51
+
+  'Boton_Reroll_Descuento':
+    material: DIAMOND
+    slot: 48
+    item_flags:
+      - HIDE_ATTRIBUTES
+      - HIDE_ENCHANTS
+    enchantments:
+      - DURABILITY;1
+    display_name: '&#1E6BFFResortear Descuento Global'
+    lore:
+      - '&8Re-roll de Oferta'
+      - ''
+      - ' &fLanza los dados para obtener'
+      - ' &fun descuento mayor para hoy.'
+      - ''
+      - ' &8| &fDescuento Actual: &#59E91F35% OFF'
+      - ' &8| &fTope Máximo: &e50% OFF'
+      - ' &8| &fCosto: &#1E6BFF150 Zafiros 💎'
+      - ''
+      - '&7▶ Click para relanzar descuento'
+    left_click_commands:
+      - '[sound] UI_BUTTON_CLICK'
+
+  'Boton_Volver':
+    material: DARK_OAK_DOOR
+    slot: 49
+    item_flags:
+      - HIDE_ATTRIBUTES
+    display_name: '&cVolver Atrás'
+    lore:
+      - '&7Regresar al menú de almas'
+    left_click_commands:
+      - '[openguimenu] mercado_almas'
+      - '[sound] BLOCK_NOTE_BLOCK_BASS'
+
+  'Filtro_Respirador_52':
+    material: GRAY_STAINED_GLASS_PANE
+    slot: 52
+    display_name: ' '
+
+  'Info_Balance':
+    material: head-%player_name%
+    slot: 53
+    item_flags:
+      - HIDE_ATTRIBUTES
+    display_name: '&#FFF275Tu Economía'
+    lore:
+      - '&8Tu Economía'
+      - ''
+      - ' &8| &fDinero: &#59E91F&l$&r&#59E91F%vault_eco_balance_formatted%'
+      - ' &8| &fAlmas: &#34B0F3%thundercurrencys_almas%🔥'
+      - ' &8| &fZafiros: &#1E6BFF%thundercurrencys_zafiros%💎'
+      - ' &8| &fXP: &#D48BFF%player_level% LVL'
+      - ''
+      - '&7▶ Click para más información'
+    left_click_commands:
+      - '[openguimenu] info_economia'
+      - '[sound] UI_BUTTON_CLICK'

@@ -1,0 +1,91 @@
+menu_title: '&0&l|&r &0Mercado ▶ &8Experiencia &8(&#D48BFF✦&8)'
+open_command:
+  - shop xp
+  - mercado xp
+size: 36
+open_requirement:
+  requirements: {}
+register_command: true
+update: true
+
+items:
+  'Categoria_Trims':
+    material: SILENCE_ARMOR_TRIM_SMITHING_TEMPLATE
+    slot: 12
+    item_flags:
+      - HIDE_ATTRIBUTES
+      - HIDE_ARMOR_TRIM
+      - HIDE_ENCHANTS
+      - HIDE_UNBREAKABLE
+      - HIDE_DESTROYS
+      - HIDE_PLACED_ON
+      - HIDE_DYE
+    display_name: '&#FFF275Trims'
+    lore:
+      - '&8Plantillas de Armadura'
+      - ''
+      - ' &8| &fArtículos: &e18'
+      - ' &8| &fMoneda: &#D48BFFXP (Lvl)'
+      - ''
+      - '&7▶ Click para ver catálogo'
+    left_click_commands:
+      - '[close]'
+      - '[player] shop trims'
+      - '[sound] UI_BUTTON_CLICK'
+
+  'Categoria_Encantamientos':
+    material: ENCHANTED_BOOK
+    slot: 14
+    item_flags:
+      - HIDE_ATTRIBUTES
+    display_name: '&#FFF275Encantamientos'
+    lore:
+      - '&8Libros y Encantamientos'
+      - ''
+      - ' &8| &fArtículos: &e9'
+      - ' &8| &fMoneda: &#D48BFFXP (Lvl)'
+      - ''
+      - '&7▶ Click para ver catálogo'
+    left_click_commands:
+      - '[close]'
+      - '[player] shop encantamientos'
+      - '[sound] UI_BUTTON_CLICK'
+
+  'Boton_Volver':
+    material: DARK_OAK_DOOR
+    slot: 31
+    item_flags:
+      - HIDE_ATTRIBUTES
+    display_name: '&cVolver Atrás'
+    lore:
+      - '&7Regresar al menú principal'
+    left_click_commands:
+      - '[openguimenu] tienda_principal'
+      - '[sound] BLOCK_NOTE_BLOCK_BASS'
+
+  'Info_Balance':
+    material: EXPERIENCE_BOTTLE
+    slot: 35
+    item_flags:
+      - HIDE_ENCHANTS
+      - HIDE_ATTRIBUTES
+    enchantments:
+      - DURABILITY;1
+    display_name: '&#FFF275Tu Economía'
+    lore:
+      - '&8Tu Economía'
+      - ''
+      - ' &8| &fExperiencia: &#D48BFF%player_level% LVL DE XP'
+      - ''
+
+  'Filtro_Navbar':
+    material: GRAY_STAINED_GLASS_PANE
+    display_name: ' '
+    slots:
+      - 27
+      - 28
+      - 29
+      - 30
+      - 32
+      - 33
+      - 34

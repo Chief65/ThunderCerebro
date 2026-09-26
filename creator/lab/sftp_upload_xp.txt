@@ -1,0 +1,6 @@
+put creator/lab/mercado_xp.yml plugins/DeluxeMenus/gui_menus/menusIA/mercado_xp.yml
+put creator/lab/tienda_xp_fija.yml plugins/DeluxeMenus/gui_menus/menusIA/tienda_xp_fija.yml
+put creator/lab/xp_trims.yml plugins/DeluxeMenus/gui_menus/menusIA/xp_trims.yml
+put creator/lab/xp_encantamientos.yml plugins/DeluxeMenus/gui_menus/menusIA/xp_encantamientos.yml
+put creator/lab/deluxemenus_config.yml plugins/DeluxeMenus/config.yml
+bye

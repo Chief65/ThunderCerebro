@@ -1,0 +1,373 @@
+{% extends "config.twig" %}
+
+{% block layout %}
+
+    {# Theme Version: 5.4.1  #}
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>{{ store.name }} | {{ page.title }}</title>
+
+        {# SEO #}
+        <meta
+                name="robots"
+                content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
+        >
+        <meta name="og:type" content="website">
+        <meta name="og:locale" content="en_EN">
+        <meta name="og:image:width" content="1200">
+        <meta name="og:image:height" content="630">
+        <meta name="twitter:card" content="summary_large_image">
+
+        <meta name="og:site_name" content="{{ store.name }} | {{ __(page.title) }}">
+        <meta name="og:title" content="{{ store.name }} | {{ __(page.title) }}">
+        <meta name="og:image" content="{{ config("og-image") }}">
+        <meta name="og:image:alt" content="{{ store.name }} | {{ __(page.title) }}">
+        <meta
+                name="description"
+                content="{{ config("site-description") }}"
+        >
+        <meta
+                name="og:description"
+                content="{{ config("site-description") }}"
+        >
+
+        <link rel="shortcut icon" href="{{ store.favicon }}">
+        <meta name="theme-color" content="{{ config("theme-color") }}">
+        {# SEO #}
+
+        {# Colors from config.php #}
+        {{ colors }}
+
+        <link rel="shortcut icon" href="{{ store.favicon }}">
+
+        {% include 'external_assets.twig' %}
+
+        <script type="text/javascript">
+            var _gaq = _gaq || [];
+
+            _gaq.push(['_setAccount', 'UA-36735942-3']);
+            _gaq.push(['_trackPageview']);
+
+            {% if store.googleAnalytics %}
+            _gaq.push(['b._setAccount', '{{ store.googleAnalytics }}']);
+            _gaq.push(['b._trackPageview']);
+            {% endif %}
+
+            (function () {
+                var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+            })();
+
+            const featuredProducts = new Map()
+        </script>
+
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+
+        {% if page.category == "checkout" and config("cordarium") == "enabled" %}
+            <script src="https://app.cordarium.com/cdn/tebex-widget/index.js" crossorigin type="module" defer></script>
+            <link href="https://app.cordarium.com/cdn/tebex-widget/style.css" rel="stylesheet">
+        {% endif %}
+
+        <style>
+            {{ store.css|raw }}
+            #particles-js {
+                position: absolute;
+                width: 100%;
+                margin: 0 auto;
+                left: 0;
+                right: 0;
+                margin-left: auto;
+                margin-right: auto;
+                pointer-events: none;
+            {% if config("background-size") == "height" %}
+                height: var(--height-image);
+            {% else %}
+                position: fixed;
+            {% endif %}
+            }
+            .rank__table__grid__col img {
+                max-width: clamp(5.813rem,-4.28rem + 14.81vw,8.313rem);
+                margin-bottom: 10px;
+                height: 100px;
+                object-fit: contain;
+            }
+            .rank__table__grid__col--title {
+                text-align: center;
+            }
+            button#pay-with-cordarium {
+                border-radius: 5px;
+                font-weight: 700;
+                width: 100%;
+                text-decoration: none;
+                text-shadow: 0 2px 2px rgba(0,0,0,.1);
+                padding: 24px 20px;
+                font-size: 1rem;
+                background: var(--green-button);
+                box-shadow: none;
+            }
+            .modal__content__box .package__modal__side__header__content__description img {
+                max-height: 164px;
+                object-fit: contain;
+            }
+            .checkout__page .cryptoButton, .checkout__page button#pay-with-cordarium {
+                display: none;
+            }
+            {% if config("trademark") == "disabled" %}
+            .footer-triplezone {
+                justify-content: center;
+            }
+            .footer-copyright {
+                text-align: center;
+            }
+            {% endif %}
+            {% if config("background-size") == "fullscreen" %}
+            body {
+                position: relative;
+            }
+            body::before {
+                inset: 0;
+                width: 100%;
+                height: 100%;
+                background-image: var(--header-img) !important;
+                background-attachment: fixed !important;
+                background-size: cover !important;
+                background-repeat: no-repeat !important;
+                background-position: top center !important;
+                position: absolute;
+                content: "";
+                opacity: var(--opacity-image);
+                z-index: -1;
+                filter: blur(var(--blur-image));
+            }
+            {% endif %}
+        </style>
+
+        {% include 'stylePreferences.twig' %}
+        
+        <script defer src="https://js.tebex.io/v/1.js"></script>
+
+    </head>
+
+    <body>
+
+    {% if config("particles") == "enabled" and config("background-size") == "fullscreen" %}
+        <div id="particles-js"></div>
+    {% endif %}
+
+    {% if config("store_theme") == "christmas" %}
+        <ul class="lightrope"><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li></ul>
+    {% endif %}
+
+    {% include 'layout.basket.twig' %}
+
+    {% include 'layout.login_modal.twig' %}
+
+    {% include 'layout.header.twig' %}
+
+    <div class="triplezone-wrapper">
+
+        <div class="notification">
+
+            {% if page.message.display %}
+                <script>
+                    Toastify({
+                        text: "{{ page.message.text | raw }}",
+                        duration: 6000,
+                        close: true,
+                        gravity: "top", // `top` or `bottom`
+                        position: "center", // `left`, `center` or `right`
+                        stopOnFocus: true, // Prevents dismissing of toast on hover
+                        offset: {
+                            y: "3rem" // vertical axis - can be a number or a string indicating unity. eg: '2em'
+                        },
+                        style: {
+                            background: "linear-gradient(to right, #f44336, rgb(153 50 42))",
+                            boxShadow: "0 3px 6px -1px rgb(0 0 0 / 12%), 0 10px 36px -4px rgb(244 67 54 / 35%)",
+                            padding: "1.5rem",
+                            borderRadius: "6px",
+                        },
+                        onClick: function(){}
+                    }).showToast();
+                </script>
+            {% endif %}
+
+        </div>
+
+        {% block content %}{% endblock %}
+
+    </div>
+
+    {% include 'layout.footer.twig' %}
+
+    <dialog class="modal" data-loading-modal data-modal-type="package">
+        <div class="modal__loading">
+            <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M2 25C2 37.7026 12.2974 48 25 48C37.7026 48 48 37.7026 48 25C48 12.2974 37.7026 2 25 2"
+                      stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+        </div>
+        <div class="modal__content">
+            {% if config('modal_type') == "sidebar" %}
+                <button class="modal__content--close" aria-label="Close Modal">
+                    <i aria-hidden="true" class="mdi mdi-window-close"></i>
+                </button>
+            {% endif %}
+            <div class="modal__content__box">
+            </div>
+        </div>
+    </dialog>
+
+    <dialog class="modal" data-loading-modal data-modal-type="crypto" style="--max-width: 33rem;">
+        <div class="modal__loading">
+            <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M2 25C2 37.7026 12.2974 48 25 48C37.7026 48 48 37.7026 48 25C48 12.2974 37.7026 2 25 2"
+                      stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+        </div>
+        <div class="modal__content">
+            <button class="modal__content--close" aria-label="Close Modal">
+                <i aria-hidden="true" class="mdi mdi-window-close"></i>
+            </button>
+            <div class="modal__content__box">
+                <div class="modal__content__box__steps">
+
+                    <div class="modal__content__box__steps__title">
+                        <h2>How to pay with crypto</h2>
+                    </div>
+
+                    <div class="modal__content__box__steps__step">
+                        <p class="step__title">Step 1.</p>
+                        <p><span>Visit</span> the {{ store.name }} Crypto Exchange</p>
+                    </div>
+
+                    <div class="modal__content__box__steps__step">
+                        <p class="step__title">Step 2.</p>
+                        <p>Choose your cryptocurrency and purchase <span>{{basket.price|money }} {{ basket.currency }}</span> of store credit</p>
+                    </div>
+
+                    <div class="modal__content__box__steps__step">
+                        <p class="step__title">Step 3.</p>
+                        <p>Redeem your store credit code at checkout</p>
+                    </div>
+
+                    <a href="{{ config("cryptoWidgetURL") }}" target="_blank">Visit Crypto Exchange <span class="mdi mdi-arrow-right-thin" aria-hidden="true"></span></a>
+
+                </div>
+            </div>
+        </div>
+    </dialog>
+
+    {% if config("category_navigation") == "modal" %}
+
+        {% set searchWithoutLogging %}
+            {% if config("searchOnStore") == "disabled" %}
+                {% if not basket.ign %}
+                    data-login-category data-izimodal-open="#modal-login"
+                {% endif %}
+            {% endif %}
+        {% endset %}
+
+        <dialog class="modal" data-loading-modal data-modal-type="categorySelector">
+            <div class="modal__loading">
+                <svg width="50" height="50" viewbox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M2 25C2 37.7026 12.2974 48 25 48C37.7026 48 48 37.7026 48 25C48 12.2974 37.7026 2 25 2" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </div>
+            <div class="modal__content">
+                <button class="modal__content--close" aria-label="Close Modal">
+                    <i aria-hidden="true" class="mdi mdi-window-close"></i>
+                </button>
+                <div class="modal__content__box">
+
+                    <div class="modal__content__box__categoryModal">
+                        <h3>{{ lang.select_category }}</h3>
+                        <ul>
+                            {% for category in store.categories %}
+
+                                {# Get first subcategory URL #}
+
+                                {% set categoryURL = '' %}
+
+                                {% for subcategory in category.subcategories %}
+                                    {% if categoryURL == '' %}
+                                        {% set categoryURL = '/category/' ~ subcategory.id %}
+                                    {% endif %}
+                                {% endfor %}
+
+                                {% if not categoryURL %}
+                                    {% set categoryURL = '/category/' ~ category.id %}
+                                {% endif %}
+
+                                <li class="{% if category.active %}active-dropdown{% endif %}">
+
+                                    <a {{ searchWithoutLogging | raw }} href="{{ categoryURL }}" class="{% if category.active %}link__active{% endif %}">
+                                        {% set hasIcon = config("icon-#{category.id}") != "" %}
+                                        {% if hasIcon %}
+                                            <img src="{{ config("icon-#{category.id}") }}" />
+                                        {% endif %}
+                                        {{ category.name }}
+                                    </a>
+                                </li>
+
+
+
+                            {% endfor %}
+
+                            {% for page in store.pages %}
+                                <li class="{% if page.active %}active-dropdown{% endif %}">
+                                    <a href="/{{ page.slug }}" class="{% if page.active %}link__active{% endif %}">
+
+                                        {% set hasIcon = config("icon-#{page.slug}") != "" %}
+                                        {% if hasIcon %}
+                                            <img src="{{ config("icon-#{page.slug}") }}" />
+                                        {% endif %}
+
+                                        {{ page.title }}
+                                    </a>
+                                </li>
+                            {% endfor %}
+
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </dialog>
+    {% endif %}
+
+    {% include 'externals_scripts.twig' %}
+    {% include 'app.twig' %}
+
+    <div id="basket_items" style="display: none;">
+        {
+        "basket": {
+        "products": [
+        {% for package in basket.packages %}
+            {
+            "id": "{{ package.id }}",
+            "name": "{{ package.name }}",
+            "price": "{{ package.price|money }}",
+            "quantity": {{ package.quantity }}
+            }
+            {%- if not loop.last -%}
+                ,
+            {% endif %}
+        {% endfor %}
+        ],
+        "store_currency": "{{ basket.currency }}",
+        "total_basket": {{ basket.price|money }}
+        }
+        }
+    </div>
+
+    </body>
+
+    </html>
+{% endblock %}

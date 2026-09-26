@@ -1,0 +1,206 @@
+menu_title: '&0&l|&r &0Mercado ▶ &8Spawners &8(&#34B0F3🔥&8)'
+open_command:
+  - almas_spawners
+size: 45
+open_requirement:
+  requirements: {}
+register_command: true
+update: true
+
+items:
+  'Filtro_Top':
+    material: GRAY_STAINED_GLASS_PANE
+    display_name: ' '
+    slots:
+      - 0
+      - 1
+      - 2
+      - 3
+      - 4
+      - 5
+      - 6
+      - 7
+      - 8
+
+  'item_1':
+    material: SPAWNER
+    slot: 10
+    item_flags:
+      - HIDE_ATTRIBUTES
+    display_name: '&#FFF275Spawner de Cerdo'
+    lore:
+      - '&8ᴘʀᴇᴄɪᴏ ᴅᴇ ᴄᴀɴᴊᴇ'
+      - ''
+      - ' &8| &fPrecio: &#34B0F3150 Almas (🔥)'
+      - ''
+      - '&7▶ Click para comprar'
+    left_click_commands:
+      - '[sound] UI_BUTTON_CLICK'
+
+  'item_2':
+    material: SPAWNER
+    slot: 11
+    item_flags:
+      - HIDE_ATTRIBUTES
+    display_name: '&#FFF275Spawner de Vaca'
+    lore:
+      - '&8ᴘʀᴇᴄɪᴏ ᴅᴇ ᴄᴀɴᴊᴇ'
+      - ''
+      - ' &8| &fPrecio: &#34B0F3300 Almas (🔥)'
+      - ''
+      - '&7▶ Click para comprar'
+    left_click_commands:
+      - '[sound] UI_BUTTON_CLICK'
+
+  'item_3':
+    material: SPAWNER
+    slot: 12
+    item_flags:
+      - HIDE_ATTRIBUTES
+    display_name: '&#FFF275Spawner de Zombie'
+    lore:
+      - '&8ᴘʀᴇᴄɪᴏ ᴅᴇ ᴄᴀɴᴊᴇ'
+      - ''
+      - ' &8| &fPrecio: &#34B0F3450 Almas (🔥)'
+      - ''
+      - '&7▶ Click para comprar'
+    left_click_commands:
+      - '[sound] UI_BUTTON_CLICK'
+
+  'item_4':
+    material: SPAWNER
+    slot: 13
+    item_flags:
+      - HIDE_ATTRIBUTES
+    display_name: '&#FFF275Spawner de Araña'
+    lore:
+      - '&8ᴘʀᴇᴄɪᴏ ᴅᴇ ᴄᴀɴᴊᴇ'
+      - ''
+      - ' &8| &fPrecio: &#34B0F3600 Almas (🔥)'
+      - ''
+      - '&7▶ Click para comprar'
+    left_click_commands:
+      - '[sound] UI_BUTTON_CLICK'
+
+  'item_5':
+    material: SPAWNER
+    slot: 14
+    item_flags:
+      - HIDE_ATTRIBUTES
+    display_name: '&#FFF275Spawner de Esqueleto'
+    lore:
+      - '&8ᴘʀᴇᴄɪᴏ ᴅᴇ ᴄᴀɴᴊᴇ'
+      - ''
+      - ' &8| &fPrecio: &#34B0F3800 Almas (🔥)'
+      - ''
+      - '&7▶ Click para comprar'
+    left_click_commands:
+      - '[sound] UI_BUTTON_CLICK'
+
+  'item_6':
+    material: SPAWNER
+    slot: 15
+    item_flags:
+      - HIDE_ATTRIBUTES
+    display_name: '&#FFF275Spawner de Blaze'
+    lore:
+      - '&8ᴘʀᴇᴄɪᴏ ᴅᴇ ᴄᴀɴᴊᴇ'
+      - ''
+      - ' &8| &fPrecio: &#34B0F31,200 Almas (🔥)'
+      - ''
+      - '&7▶ Click para comprar'
+    left_click_commands:
+      - '[sound] UI_BUTTON_CLICK'
+
+  'item_7':
+    material: SPAWNER
+    slot: 16
+    item_flags:
+      - HIDE_ATTRIBUTES
+    display_name: '&#FFF275Spawner de Slime'
+    lore:
+      - '&8ᴘʀᴇᴄɪᴏ ᴅᴇ ᴄᴀɴᴊᴇ'
+      - ''
+      - ' &8| &fPrecio: &#34B0F31,600 Almas (🔥)'
+      - ''
+      - '&7▶ Click para comprar'
+    left_click_commands:
+      - '[sound] UI_BUTTON_CLICK'
+
+  'item_8':
+    material: SPAWNER
+    slot: 19
+    item_flags:
+      - HIDE_ATTRIBUTES
+    display_name: '&#FFF275Spawner de Magma Cube'
+    lore:
+      - '&8ᴘʀᴇᴄɪᴏ ᴅᴇ ᴄᴀɴᴊᴇ'
+      - ''
+      - ' &8| &fPrecio: &#34B0F32,000 Almas (🔥)'
+      - ''
+      - '&7▶ Click para comprar'
+    left_click_commands:
+      - '[sound] UI_BUTTON_CLICK'
+
+  'Boton_Filtro':
+    material: COMPARATOR
+    slot: 36
+    item_flags:
+      - HIDE_ATTRIBUTES
+      - HIDE_ENCHANTS
+    enchantments:
+      - DURABILITY;1
+    display_name: '&#FFF275Filtrar Categoría'
+    lore:
+      - '&8ᴇʟɪɢᴇ ᴄᴀᴛᴇɢᴏʀɪᴀ'
+      - ''
+      - ' &#FFF275● Spawners'
+      - ' &7● Llaves'
+      - ' &7● Protecciones'
+      - ''
+      - '&7▶ Click para cambiar'
+    left_click_commands:
+      - '[openguimenu] almas_llaves'
+      - '[sound] UI_BUTTON_CLICK'
+
+  'Filtro_Navbar':
+    material: GRAY_STAINED_GLASS_PANE
+    display_name: ' '
+    slots:
+      - 37
+      - 38
+      - 39
+      - 41
+      - 42
+      - 43
+
+  'Boton_Volver':
+    material: DARK_OAK_DOOR
+    slot: 40
+    item_flags:
+      - HIDE_ATTRIBUTES
+    display_name: '&cVolver Atrás'
+    lore:
+      - '&7Regresar a la selección de almas'
+    left_click_commands:
+      - '[openguimenu] tienda_almas_fija'
+      - '[sound] BLOCK_NOTE_BLOCK_BASS'
+
+  'Info_Balance':
+    material: head-%player_name%
+    slot: 44
+    item_flags:
+      - HIDE_ATTRIBUTES
+    display_name: '&#FFF275Tu Economía'
+    lore:
+      - '&8Tu Economía'
+      - ''
+      - ' &8| &fDinero: &#59E91F&l$&r&#59E91F%vault_eco_balance_formatted%'
+      - ' &8| &fAlmas: &#34B0F3%thundercurrencys_almas%🔥'
+      - ' &8| &fZafiros: &#1E6BFF%thundercurrencys_zafiros%💎'
+      - ' &8| &fXP: &#D48BFF%player_level% LVL'
+      - ''
+      - '&7▶ Click para más información'
+    left_click_commands:
+      - '[openguimenu] info_economia'
+      - '[sound] UI_BUTTON_CLICK'

@@ -1,0 +1,46 @@
+# ============================================================
+#   GUARDIÁN DEL VACÍO - DIFICULTAD FÁCIL
+# ============================================================
+GuardianVacio:
+  Type: WARDEN
+  Display: '&2&l⚡ Guardián del Vacío &a[Fácil]'
+  Health: 1200
+  Damage: 50
+  Options:
+    Scale: 2.1
+    PreventOtherDrops: true
+    MovementSpeed: 0.28
+    Knockback: 2
+    Silent: false
+  BossBar:
+    Enabled: true
+    Title: '&2⚡ Guardián del Vacío &7| &aFácil'
+    Color: GREEN
+    Style: SEGMENTED_20
+    CreateFog: false
+  Skills:
+    # --- Fase 1 (100% → 66%) ---
+    - skill{s=WardenLanzarArriba_F} @target ~onTimer:320 ?health{h=<800}!
+    - skill{s=WardenEmbestida_F}    @target ~onTimer:280 ?health{h=<800}!
+    - skill{s=WardenHordaFase1}     @self   ~onTimer:600 ?health{h=<800}!
+    # --- Transición Fase 2 ---
+    - skill{s=WardenTransicion2}    @self   ~onTimer:20  ?health{h=<800} ?health{h=>400} ?hasaura{aura=fase2}!
+    # --- Fase 2 (66% → 33%) ---
+    - skill{s=WardenLanzarArriba_F} @target ~onTimer:260 ?health{h=<800} ?health{h=>400}
+    - skill{s=WardenEmbestida_F}    @target ~onTimer:220 ?health{h=800} ?health{h=>400}
+    - skill{s=WardenHordaFase2}     @self   ~onTimer:480 ?health{h=800} ?health{h=>400}
+    # --- Transición Fase 3 ---
+    - skill{s=WardenTransicion3}    @self   ~onTimer:20  ?health{h=<1000} ?hasaura{aura=fase3}!
+    # --- Fase 3 (33% → 0%) ---
+    - skill{s=WardenLanzarArriba_F} @target ~onTimer:200 ?health{h=<400}
+    - skill{s=WardenEmbestida_F}    @target ~onTimer:180 ?health{h=<400}
+    - skill{s=WardenHordaFase3}     @self   ~onTimer:360 ?health{h=<400}
+    - skill{s=WardenRabia}          @self   ~onTimer:400 ?health{h=<400}
+    # --- Muerte ---
+    - skill{s=WardenMuerte}         @self   ~onDeath
+    # --- Spawn ---
+    - skill{s=WardenSpawn}          @self   ~onSpawn
+  Drops:
+
+    - ECHO_SHARD 1-2 0.60
+

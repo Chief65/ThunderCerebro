@@ -1,0 +1,4 @@
+put creator/lab/mercado_zafiros.yml plugins/DeluxeMenus/gui_menus/menusIA/mercado_zafiros.yml
+put creator/lab/tienda_principal_sandbox.yml plugins/DeluxeMenus/gui_menus/menusIA/tienda_principal.yml
+put creator/lab/deluxemenus_config.yml plugins/DeluxeMenus/config.yml
+bye

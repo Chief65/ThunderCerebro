@@ -1,0 +1,2 @@
+put creator/lab/slime.yml plugins/ExcellentCrates/crates/slime.yml
+bye

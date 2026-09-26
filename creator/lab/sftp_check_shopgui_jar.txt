@@ -1,0 +1,2 @@
+get plugins/ShopGUIPlus/lang.yml creator/lab/shopgui_lang.yml
+bye

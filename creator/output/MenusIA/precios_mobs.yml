@@ -1,0 +1,430 @@
+menu_title: '&0&l|&r &0Venta ▶ &8Drops de Mobs &7(1/1)'
+open_command:
+  - precios_mobs
+size: 45
+open_requirement:
+  requirements: {}
+register_command: true
+update: true
+
+items:
+  # ============================================================================
+  # FILTRO SUPERIOR: PANELES GRISES DECORATIVOS (FILA 1)
+  # ============================================================================
+  'Filtro_Top':
+    material: GRAY_STAINED_GLASS_PANE
+    display_name: ' '
+    slots:
+      - 0
+      - 1
+      - 2
+      - 3
+      - 4
+      - 5
+      - 6
+      - 7
+      - 8
+
+  # ============================================================================
+  # CATÁLOGO DE ÍTEMS (FILAS 2, 3, 4: SLOTS 9 A 35)
+  # ============================================================================
+  'item_1':
+    material: ARROW
+    slot: 9
+    item_flags:
+      - HIDE_ATTRIBUTES
+    display_name: '&#FFF275Flecha'
+    lore:
+      - '&8ᴘʀᴇᴄɪᴏ ᴅᴇ ᴠᴇɴᴛᴀ'
+      - ''
+      - ' &8| &fUnidad: &#59E91F&l$&r&#59E91F1'
+      - ' &8| &fStack x64: &#59E91F&l$&r&#59E91F64'
+      - ''
+
+
+
+
+
+  'item_2':
+    material: BLAZE_POWDER
+    slot: 10
+    item_flags:
+      - HIDE_ATTRIBUTES
+    display_name: '&#FFF275Polvo de Blaze'
+    lore:
+      - '&8ᴘʀᴇᴄɪᴏ ᴅᴇ ᴠᴇɴᴛᴀ'
+      - ''
+      - ' &8| &fUnidad: &#59E91F&l$&r&#59E91F1'
+      - ' &8| &fStack x64: &#59E91F&l$&r&#59E91F64'
+      - ''
+
+
+
+
+
+  'item_3':
+    material: BLAZE_ROD
+    slot: 11
+    item_flags:
+      - HIDE_ATTRIBUTES
+    display_name: '&#FFF275Vara de Blaze'
+    lore:
+      - '&8ᴘʀᴇᴄɪᴏ ᴅᴇ ᴠᴇɴᴛᴀ'
+      - ''
+      - ' &8| &fUnidad: &#59E91F&l$&r&#59E91F2'
+      - ' &8| &fStack x64: &#59E91F&l$&r&#59E91F128'
+      - ''
+
+
+
+
+
+  'item_4':
+    material: BREEZE_ROD
+    slot: 12
+    item_flags:
+      - HIDE_ATTRIBUTES
+    display_name: '&#FFF275Vara de Breeze'
+    lore:
+      - '&8ᴘʀᴇᴄɪᴏ ᴅᴇ ᴠᴇɴᴛᴀ'
+      - ''
+      - ' &8| &fUnidad: &#59E91F&l$&r&#59E91F2'
+      - ' &8| &fStack x64: &#59E91F&l$&r&#59E91F128'
+      - ''
+
+
+
+
+
+  'item_5':
+    material: BONE
+    slot: 13
+    item_flags:
+      - HIDE_ATTRIBUTES
+    display_name: '&#FFF275Hueso'
+    lore:
+      - '&8ᴘʀᴇᴄɪᴏ ᴅᴇ ᴠᴇɴᴛᴀ'
+      - ''
+      - ' &8| &fUnidad: &#59E91F&l$&r&#59E91F4'
+      - ' &8| &fStack x64: &#59E91F&l$&r&#59E91F256'
+      - ''
+
+
+
+
+
+  'item_6':
+    material: ENDER_PEARL
+    slot: 14
+    item_flags:
+      - HIDE_ATTRIBUTES
+    display_name: '&#FFF275Perla de Ender'
+    lore:
+      - '&8ᴘʀᴇᴄɪᴏ ᴅᴇ ᴠᴇɴᴛᴀ'
+      - ''
+      - ' &8| &fUnidad: &#59E91F&l$&r&#59E91F5'
+      - ' &8| &fStack x64: &#59E91F&l$&r&#59E91F320'
+      - ''
+
+
+
+
+
+  'item_7':
+    material: FEATHER
+    slot: 15
+    item_flags:
+      - HIDE_ATTRIBUTES
+    display_name: '&#FFF275Pluma'
+    lore:
+      - '&8ᴘʀᴇᴄɪᴏ ᴅᴇ ᴠᴇɴᴛᴀ'
+      - ''
+      - ' &8| &fUnidad: &#59E91F&l$&r&#59E91F1'
+      - ' &8| &fStack x64: &#59E91F&l$&r&#59E91F64'
+      - ''
+
+
+
+
+
+  'item_8':
+    material: GUNPOWDER
+    slot: 16
+    item_flags:
+      - HIDE_ATTRIBUTES
+    display_name: '&#FFF275Pólvora'
+    lore:
+      - '&8ᴘʀᴇᴄɪᴏ ᴅᴇ ᴠᴇɴᴛᴀ'
+      - ''
+      - ' &8| &fUnidad: &#59E91F&l$&r&#59E91F4'
+      - ' &8| &fStack x64: &#59E91F&l$&r&#59E91F256'
+      - ''
+
+
+
+
+
+  'item_9':
+    material: MAGMA_CREAM
+    slot: 17
+    item_flags:
+      - HIDE_ATTRIBUTES
+    display_name: '&#FFF275Crema de Magma'
+    lore:
+      - '&8ᴘʀᴇᴄɪᴏ ᴅᴇ ᴠᴇɴᴛᴀ'
+      - ''
+      - ' &8| &fUnidad: &#59E91F&l$&r&#59E91F20'
+      - ' &8| &fStack x64: &#59E91F&l$&r&#59E91F1280'
+      - ''
+
+
+
+
+
+  'item_10':
+    material: PHANTOM_MEMBRANE
+    slot: 18
+    item_flags:
+      - HIDE_ATTRIBUTES
+    display_name: '&#FFF275Membrana de Phantom'
+    lore:
+      - '&8ᴘʀᴇᴄɪᴏ ᴅᴇ ᴠᴇɴᴛᴀ'
+      - ''
+      - ' &8| &fUnidad: &#59E91F&l$&r&#59E91F3'
+      - ' &8| &fStack x64: &#59E91F&l$&r&#59E91F192'
+      - ''
+
+
+
+
+
+  'item_11':
+    material: RABBIT_FOOT
+    slot: 19
+    item_flags:
+      - HIDE_ATTRIBUTES
+    display_name: '&#FFF275Pata de Conejo'
+    lore:
+      - '&8ᴘʀᴇᴄɪᴏ ᴅᴇ ᴠᴇɴᴛᴀ'
+      - ''
+      - ' &8| &fUnidad: &#59E91F&l$&r&#59E91F1'
+      - ' &8| &fStack x64: &#59E91F&l$&r&#59E91F64'
+      - ''
+
+
+
+
+
+  'item_12':
+    material: RABBIT_HIDE
+    slot: 20
+    item_flags:
+      - HIDE_ATTRIBUTES
+    display_name: '&#FFF275Piel de Conejo'
+    lore:
+      - '&8ᴘʀᴇᴄɪᴏ ᴅᴇ ᴠᴇɴᴛᴀ'
+      - ''
+      - ' &8| &fUnidad: &#59E91F&l$&r&#59E91F2'
+      - ' &8| &fStack x64: &#59E91F&l$&r&#59E91F128'
+      - ''
+
+
+
+
+
+  'item_13':
+    material: ROTTEN_FLESH
+    slot: 21
+    item_flags:
+      - HIDE_ATTRIBUTES
+    display_name: '&#FFF275Carne Podrida'
+    lore:
+      - '&8ᴘʀᴇᴄɪᴏ ᴅᴇ ᴠᴇɴᴛᴀ'
+      - ''
+      - ' &8| &fUnidad: &#59E91F&l$&r&#59E91F2'
+      - ' &8| &fStack x64: &#59E91F&l$&r&#59E91F128'
+      - ''
+
+
+
+
+
+  'item_14':
+    material: SLIME_BALL
+    slot: 22
+    item_flags:
+      - HIDE_ATTRIBUTES
+    display_name: '&#FFF275Bola de Slime'
+    lore:
+      - '&8ᴘʀᴇᴄɪᴏ ᴅᴇ ᴠᴇɴᴛᴀ'
+      - ''
+      - ' &8| &fUnidad: &#59E91F&l$&r&#59E91F7'
+      - ' &8| &fStack x64: &#59E91F&l$&r&#59E91F448'
+      - ''
+
+
+
+
+
+  'item_15':
+    material: SPIDER_EYE
+    slot: 23
+    item_flags:
+      - HIDE_ATTRIBUTES
+    display_name: '&#FFF275Ojo de Araña'
+    lore:
+      - '&8ᴘʀᴇᴄɪᴏ ᴅᴇ ᴠᴇɴᴛᴀ'
+      - ''
+      - ' &8| &fUnidad: &#59E91F&l$&r&#59E91F1'
+      - ' &8| &fStack x64: &#59E91F&l$&r&#59E91F64'
+      - ''
+
+
+
+
+
+  'item_16':
+    material: STRING
+    slot: 24
+    item_flags:
+      - HIDE_ATTRIBUTES
+    display_name: '&#FFF275Hilo'
+    lore:
+      - '&8ᴘʀᴇᴄɪᴏ ᴅᴇ ᴠᴇɴᴛᴀ'
+      - ''
+      - ' &8| &fUnidad: &#59E91F&l$&r&#59E91F15'
+      - ' &8| &fStack x64: &#59E91F&l$&r&#59E91F960'
+      - ''
+
+
+
+
+
+  'item_17':
+    material: PRISMARINE_SHARD
+    slot: 25
+    item_flags:
+      - HIDE_ATTRIBUTES
+    display_name: '&#FFF275Fragmento de Prismarina'
+    lore:
+      - '&8ᴘʀᴇᴄɪᴏ ᴅᴇ ᴠᴇɴᴛᴀ'
+      - ''
+      - ' &8| &fUnidad: &#59E91F&l$&r&#59E91F5'
+      - ' &8| &fStack x64: &#59E91F&l$&r&#59E91F320'
+      - ''
+
+
+
+
+
+  'item_18':
+    material: LEATHER
+    slot: 26
+    item_flags:
+      - HIDE_ATTRIBUTES
+    display_name: '&#FFF275Cuero'
+    lore:
+      - '&8ᴘʀᴇᴄɪᴏ ᴅᴇ ᴠᴇɴᴛᴀ'
+      - ''
+      - ' &8| &fUnidad: &#59E91F&l$&r&#59E91F3'
+      - ' &8| &fStack x64: &#59E91F&l$&r&#59E91F192'
+      - ''
+
+
+
+
+
+  'item_19':
+    material: HONEYCOMB
+    slot: 27
+    item_flags:
+      - HIDE_ATTRIBUTES
+    display_name: '&#FFF275Panal de Miel'
+    lore:
+      - '&8ᴘʀᴇᴄɪᴏ ᴅᴇ ᴠᴇɴᴛᴀ'
+      - ''
+      - ' &8| &fUnidad: &#59E91F&l$&r&#59E91F3'
+      - ' &8| &fStack x64: &#59E91F&l$&r&#59E91F192'
+      - ''
+
+
+
+
+
+  # ============================================================================
+  # NAVBAR INFERIOR (FILA 5: SLOTS 36 A 44)
+  # ============================================================================
+  'Boton_Filtro':
+    material: COMPARATOR
+    slot: 36
+    item_flags:
+      - HIDE_ATTRIBUTES
+      - HIDE_ENCHANTS
+    enchantments:
+      - DURABILITY;1
+    display_name: '&#FFD700Filtrar Categoría'
+    lore:
+      - '&8ᴇʟɪɢᴇ ᴄᴀᴛᴇɢᴏʀɪᴀ'
+      - ''
+      - ' &7● Todos'
+      - ' &7● Cultivos'
+      - ' &#FFD700● Drops de Mobs'
+      - ' &7● Especiales'
+      - ''
+      - '&7▶ Click para cambiar'
+    left_click_commands:
+      - '[openguimenu] precios_especiales'
+      - '[sound] UI_BUTTON_CLICK'
+
+  'Boton_Volver':
+    material: DARK_OAK_DOOR
+    slot: 40
+    item_flags:
+      - HIDE_ATTRIBUTES
+    display_name: '&cVolver Atrás'
+    lore:
+      - '&8Regresar al menú principal'
+    left_click_commands:
+      - '[openguimenu] tienda_principal'
+      - '[sound] UI_BUTTON_CLICK'
+
+  'Boton_SellGUI':
+    material: HOPPER
+    slot: 43
+    item_flags:
+      - HIDE_ATTRIBUTES
+    display_name: '&#59E91FVenta Rápida'
+    lore:
+      - '&8ᴠᴇɴᴛᴀ ᴀᴜᴛᴏᴍᴀᴛɪᴄᴀ'
+      - ''
+      - ' &fVende tu inventario.'
+      - ''
+      - '&7▶ Click para abrir'
+    left_click_commands:
+      - '[close]'
+      - '[player] sellgui'
+      - '[sound] ENTITY_EXPERIENCE_ORB_PICKUP'
+
+  'Info_Balance':
+    material: head-%player_name%
+    slot: 44
+    item_flags:
+      - HIDE_ATTRIBUTES
+    display_name: '&#FFD700Tu Economía'
+    lore:
+      - '&8ᴛᴜ ᴇᴄᴏɴᴏᴍɪᴀ'
+      - ''
+      - ' &8| &fDinero: &#59E91F&l$&r&#59E91F%vault_eco_balance_formatted%'
+      - ' &8| &fAlmas: &#34B0F3%thundercurrencys_almas%🔥'
+      - ' &8| &fZafiros: &#1E6BFF%thundercurrencys_zafiros%💎'
+      - ''
+
+  'Filtro_Bottom':
+    material: GRAY_STAINED_GLASS_PANE
+    display_name: ' '
+    slots:
+      - 37
+      - 38
+      - 39
+      - 41
+      - 42

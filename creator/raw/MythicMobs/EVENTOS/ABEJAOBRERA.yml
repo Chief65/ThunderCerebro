@@ -1,0 +1,43 @@
+AbejaObrera:
+  Type: BEE
+  Display: '&a[Lv.1] &4Abeja Obrera'
+  Health: 5
+  Damage: 5
+  Options:
+    Scale: 1
+    MovementSpeed: 2
+    PreventOtherDrops: true
+    Despawn: false
+    ReturnHome: true
+    LeashRange: 20
+  AIGoalSelectors:
+    - 0 clear
+    - 1 meleeattack
+    - 2 randomstroll
+    - 3 lookatplayers
+    - 4 float
+  AITargetSelectors:
+    - 0 clear
+    - 1 players
+  Drops:
+    - HONEYCOMB 1-2 1
+  Skills:
+    - command{c="points give <trigger.name> 1 -s";sender=console} @self ~onDeath
+    - actionmessage{m="<#34B0F3>+1 <white>Alma <#34B0F3>🔥 &8| <#59E91F>+<#59E91F>&l$&r<#59E91F>10"} @trigger ~onDeath
+    - command{c="economy give <trigger.name> 10 -s";sender=console} @self ~onDeath
+    - particles{particle=SCULK_SOUL;amount=50;speed=0.1;hSpread=0.5;vSpread=0.5} @self ~onDeath
+    - skill{s=CegadoObrera} @trigger ~onAttack
+
+    - command{c="si give fragmentosuper 1 <trigger.name> -s";sender=console} @self ~onDeath 0.25
+    - command{c="si give fragmentorara 1 <trigger.name> -s";sender=console} @self ~onDeath 0.15
+    - command{c="si give fragmentogadget 1 <trigger.name> -s";sender=console} @self ~onDeath 0.05
+    - command{c="si give fragmentomitica 1 <trigger.name> -s";sender=console} @self ~onDeath 0.025
+    - skill{s=DropFragmentoLimitedAbeja} @self ~onDeath 0.001
+
+    - skill{s=DropLlaveSuper} @self ~onDeath 0.05
+    - skill{s=DropLlaveRara} @self ~onDeath 0.035
+    - skill{s=DropLlaveGadgets} @self ~onDeath 0.025
+    - skill{s=DropLlaveMiticaAbeja} @self ~onDeath 0.001
+
+    - skill{s=BoostAlmas} @self ~onDeath 
+    - setvariable{var=almas;value=1;scope=CASTER;type=INTEGER} @self ~onSpawn

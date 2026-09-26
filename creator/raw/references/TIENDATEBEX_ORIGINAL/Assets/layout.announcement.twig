@@ -1,0 +1,98 @@
+<div class="banner" style="
+  --main-color: {{ config("announcementColor") }};
+  background: #facc15;
+  border-bottom: 1px solid rgba(250,204,21,0.25);
+  min-height: 2.5rem;
+  overflow: hidden;
+">
+
+  <style>
+    .tz-announce-slot {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 1.6em;
+      overflow: hidden;
+      min-width: 340px;
+    }
+    .tz-announce-item {
+      position: absolute;
+      width: 100%;
+      text-align: center;
+      white-space: nowrap;
+      font-size: 13px;
+      font-weight: 700;
+      color: #0f172a;
+      letter-spacing: 0.3px;
+      transition: transform 0.45s cubic-bezier(.4,0,.2,1), opacity 0.45s ease;
+      will-change: transform, opacity;
+    }
+    .tz-announce-item.tz-active {
+      transform: translateY(0);
+      opacity: 1;
+    }
+    .tz-announce-item.tz-exit {
+      transform: translateY(110%);
+      opacity: 0;
+    }
+    .tz-announce-item.tz-enter {
+      transform: translateY(-110%);
+      opacity: 0;
+    }
+  </style>
+
+  <div class="tz-announce-slot" id="tz-announce-slot">
+    <span class="tz-announce-item tz-active" id="tz-text">{{ config("announcementText") | raw }}</span>
+    <span class="tz-announce-item tz-enter"  id="tz-timer">⏰ Quedan: --</span>
+  </div>
+
+  {% if config("announcementLink") != "" %}
+    {% set hrefType = config("announcementLinkOpen") == "same" ? "_self" : "_blank" %}
+    <a href="{{ config("announcementLink") }}" target="{{ hrefType }}" class="button">{{ config("announcementLinkText") }}</a>
+  {% endif %}
+</div>
+
+<script>
+(function() {
+  var end     = new Date("2026-06-30T23:59:59").getTime();
+  var timerEl = document.getElementById('tz-timer');
+  var textEl  = document.getElementById('tz-text');
+  var showing = 0;
+
+  function formatCountdown() {
+    var diff = end - Date.now();
+    if (diff <= 0) return "⏰ ¡Oferta finalizada!";
+    var d = Math.floor(diff / 86400000);
+    var h = Math.floor((diff % 86400000) / 3600000);
+    var m = Math.floor((diff % 3600000)  / 60000);
+    var s = Math.floor((diff % 60000)    / 1000);
+    return "⏰ Quedan: " + d + "d  " + h + "h  " + m + "m  " + s + "s";
+  }
+
+  setInterval(function() { timerEl.textContent = formatCountdown(); }, 1000);
+  timerEl.textContent = formatCountdown();
+
+  function swap() {
+    var outEl = showing === 0 ? textEl  : timerEl;
+    var inEl  = showing === 0 ? timerEl : textEl;
+
+    outEl.classList.remove('tz-active');
+    outEl.classList.add('tz-exit');
+
+    setTimeout(function() {
+      inEl.classList.remove('tz-enter');
+      inEl.classList.add('tz-active');
+    }, 80);
+
+    setTimeout(function() {
+      outEl.classList.remove('tz-exit');
+      outEl.classList.add('tz-enter');
+    }, 500);
+
+    showing = 1 - showing;
+  }
+
+  setInterval(swap, 5000);
+})();
+</script>

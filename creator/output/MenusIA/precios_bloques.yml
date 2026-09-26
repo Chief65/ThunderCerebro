@@ -1,0 +1,434 @@
+menu_title: '&0&l|&r &0ThunderMC &0▶ &8Precios ▶ Bloques'
+open_command:
+  - precios_bloques
+size: 54
+open_requirement:
+  requirements: {}
+register_command: true
+update: true
+
+items:
+  # ============================================================================
+  # NAVBAR SUPERIOR: PESTAÑAS DE CATEGORÍAS (FILA 1)
+  # ============================================================================
+  'Tab_precios_farmeo':
+    material: WHEAT
+    slot: 1
+    hide_attributes: true
+    display_name: '&7Agricultura'
+    lore:
+      - '&8ᴘᴇꜱᴛᴀñᴀ'
+      - ''
+      - ' &fVer catálogo de'
+      - ' &fagricultura.'
+      - ''
+      - '&7▶ Click para cambiar'
+    left_click_commands:
+      - '[openguimenu] precios_farmeo'
+      - '[sound] UI_BUTTON_CLICK'
+
+  'Tab_precios_mobs':
+    material: GUNPOWDER
+    slot: 2
+    hide_attributes: true
+    display_name: '&7Drops de Mobs'
+    lore:
+      - '&8ᴘᴇꜱᴛᴀñᴀ'
+      - ''
+      - ' &fVer catálogo de'
+      - ' &fdrops de mobs.'
+      - ''
+      - '&7▶ Click para cambiar'
+    left_click_commands:
+      - '[openguimenu] precios_mobs'
+      - '[sound] UI_BUTTON_CLICK'
+
+  'Tab_precios_comida':
+    material: COOKED_BEEF
+    slot: 3
+    hide_attributes: true
+    display_name: '&7Comida'
+    lore:
+      - '&8ᴘᴇꜱᴛᴀñᴀ'
+      - ''
+      - ' &fVer catálogo de'
+      - ' &fcomida.'
+      - ''
+      - '&7▶ Click para cambiar'
+    left_click_commands:
+      - '[openguimenu] precios_comida'
+      - '[sound] UI_BUTTON_CLICK'
+
+  'Tab_precios_misc':
+    material: AMETHYST_SHARD
+    slot: 4
+    hide_attributes: true
+    display_name: '&7Misceláneo'
+    lore:
+      - '&8ᴘᴇꜱᴛᴀñᴀ'
+      - ''
+      - ' &fVer catálogo de'
+      - ' &fmisceláneo.'
+      - ''
+      - '&7▶ Click para cambiar'
+    left_click_commands:
+      - '[openguimenu] precios_misc'
+      - '[sound] UI_BUTTON_CLICK'
+
+  'Tab_precios_redstone':
+    material: REDSTONE
+    slot: 5
+    hide_attributes: true
+    display_name: '&7Redstone'
+    lore:
+      - '&8ᴘᴇꜱᴛᴀñᴀ'
+      - ''
+      - ' &fVer catálogo de'
+      - ' &fredstone.'
+      - ''
+      - '&7▶ Click para cambiar'
+    left_click_commands:
+      - '[openguimenu] precios_redstone'
+      - '[sound] UI_BUTTON_CLICK'
+
+  'Tab_precios_equipo':
+    material: DIAMOND_SWORD
+    slot: 6
+    hide_attributes: true
+    display_name: '&7Equipo & Minería'
+    lore:
+      - '&8ᴘᴇꜱᴛᴀñᴀ'
+      - ''
+      - ' &fVer catálogo de'
+      - ' &fequipo & minería.'
+      - ''
+      - '&7▶ Click para cambiar'
+    left_click_commands:
+      - '[openguimenu] precios_equipo'
+      - '[sound] UI_BUTTON_CLICK'
+
+  'Tab_precios_bloques':
+    material: GRASS_BLOCK
+    slot: 7
+    hide_attributes: true
+    hide_enchantments: true
+    enchantments:
+      - DURABILITY;1
+    display_name: '&#00B7FFBloques &a✔'
+    lore:
+      - '&8ᴘᴇꜱᴛᴀñᴀ ᴀᴄᴛɪᴠᴀ'
+      - ''
+      - ' &aActualmente viendo'
+      - ' &aesta categoría.'
+
+  'Separador_Top':
+    material: BLACK_STAINED_GLASS_PANE
+    display_name: ' '
+    slots:
+      - 0
+      - 8
+      - 9
+      - 10
+      - 11
+      - 12
+      - 13
+      - 14
+      - 15
+      - 16
+      - 17
+
+  # ============================================================================
+  # CATÁLOGO DE ÍTEMS DE LA CATEGORÍA (FILAS 3 A 5)
+  # ============================================================================
+  'item_1':
+    material: GRASS_BLOCK
+    slot: 19
+    hide_attributes: true
+    display_name: ' '
+    lore:
+      - '&8ᴘʀᴇᴄɪᴏ ᴅᴇ ᴠᴇɴᴛᴀ'
+      - ''
+      - ' &8▶ &fUnidad: &a$3'
+      - ' &8▶ &fStack x64: &a$192'
+
+  'item_2':
+    material: DIRT
+    slot: 20
+    hide_attributes: true
+    display_name: '&#FFF275DIRT'
+    lore:
+      - '&8ᴘʀᴇᴄɪᴏ ᴅᴇ ᴠᴇɴᴛᴀ'
+      - ''
+      - ' &8▶ &fUnidad: &a$1'
+      - ' &8▶ &fStack x64: &a$64'
+
+  'item_3':
+    material: MYCELIUM
+    slot: 21
+    hide_attributes: true
+    display_name: '&#FFF275MYCELIUM'
+    lore:
+      - '&8ᴘʀᴇᴄɪᴏ ᴅᴇ ᴠᴇɴᴛᴀ'
+      - ''
+      - ' &8▶ &fUnidad: &a$4'
+      - ' &8▶ &fStack x64: &a$256'
+
+  'item_4':
+    material: PODZOL
+    slot: 22
+    hide_attributes: true
+    display_name: '&#FFF275PODZOL'
+    lore:
+      - '&8ᴘʀᴇᴄɪᴏ ᴅᴇ ᴠᴇɴᴛᴀ'
+      - ''
+      - ' &8▶ &fUnidad: &a$4'
+      - ' &8▶ &fStack x64: &a$256'
+
+  'item_5':
+    material: CRIMSON_NYLIUM
+    slot: 23
+    hide_attributes: true
+    display_name: '&#FFF275CRIMSON NYLIUM'
+    lore:
+      - '&8ᴘʀᴇᴄɪᴏ ᴅᴇ ᴠᴇɴᴛᴀ'
+      - ''
+      - ' &8▶ &fUnidad: &a$2'
+      - ' &8▶ &fStack x64: &a$128'
+
+  'item_6':
+    material: WARPED_NYLIUM
+    slot: 24
+    hide_attributes: true
+    display_name: '&#FFF275WARPED NYLIUM'
+    lore:
+      - '&8ᴘʀᴇᴄɪᴏ ᴅᴇ ᴠᴇɴᴛᴀ'
+      - ''
+      - ' &8▶ &fUnidad: &a$4'
+      - ' &8▶ &fStack x64: &a$256'
+
+  'item_7':
+    material: GRAVEL
+    slot: 25
+    hide_attributes: true
+    display_name: '&#FFF275GRAVEL'
+    lore:
+      - '&8ᴘʀᴇᴄɪᴏ ᴅᴇ ᴠᴇɴᴛᴀ'
+      - ''
+      - ' &8▶ &fUnidad: &a$7'
+      - ' &8▶ &fStack x64: &a$448'
+
+  'item_8':
+    material: SAND
+    slot: 28
+    hide_attributes: true
+    display_name: '&#FFF275SAND'
+    lore:
+      - '&8ᴘʀᴇᴄɪᴏ ᴅᴇ ᴠᴇɴᴛᴀ'
+      - ''
+      - ' &8▶ &fUnidad: &a$2'
+      - ' &8▶ &fStack x64: &a$128'
+
+  'item_9':
+    material: RED_SAND
+    slot: 29
+    hide_attributes: true
+    display_name: '&#FFF275RED SAND'
+    lore:
+      - '&8ᴘʀᴇᴄɪᴏ ᴅᴇ ᴠᴇɴᴛᴀ'
+      - ''
+      - ' &8▶ &fUnidad: &a$4'
+      - ' &8▶ &fStack x64: &a$256'
+
+  'item_10':
+    material: COBBLESTONE
+    slot: 30
+    hide_attributes: true
+    display_name: '&#FFF275COBBLESTONE'
+    lore:
+      - '&8ᴘʀᴇᴄɪᴏ ᴅᴇ ᴠᴇɴᴛᴀ'
+      - ''
+      - ' &8▶ &fUnidad: &a$1'
+      - ' &8▶ &fStack x64: &a$64'
+
+  'item_11':
+    material: STONE
+    slot: 31
+    hide_attributes: true
+    display_name: '&#FFF275STONE'
+    lore:
+      - '&8ᴘʀᴇᴄɪᴏ ᴅᴇ ᴠᴇɴᴛᴀ'
+      - ''
+      - ' &8▶ &fUnidad: &a$2'
+      - ' &8▶ &fStack x64: &a$128'
+
+  'item_12':
+    material: ANDESITE
+    slot: 32
+    hide_attributes: true
+    display_name: '&#FFF275ANDESITE'
+    lore:
+      - '&8ᴘʀᴇᴄɪᴏ ᴅᴇ ᴠᴇɴᴛᴀ'
+      - ''
+      - ' &8▶ &fUnidad: &a$1'
+      - ' &8▶ &fStack x64: &a$64'
+
+  'item_13':
+    material: GRANITE
+    slot: 33
+    hide_attributes: true
+    display_name: '&#FFF275GRANITE'
+    lore:
+      - '&8ᴘʀᴇᴄɪᴏ ᴅᴇ ᴠᴇɴᴛᴀ'
+      - ''
+      - ' &8▶ &fUnidad: &a$1'
+      - ' &8▶ &fStack x64: &a$64'
+
+  'item_14':
+    material: DIORITE
+    slot: 34
+    hide_attributes: true
+    display_name: '&#FFF275DIORITE'
+    lore:
+      - '&8ᴘʀᴇᴄɪᴏ ᴅᴇ ᴠᴇɴᴛᴀ'
+      - ''
+      - ' &8▶ &fUnidad: &a$1'
+      - ' &8▶ &fStack x64: &a$64'
+
+  'item_15':
+    material: DEEPSLATE
+    slot: 37
+    hide_attributes: true
+    display_name: '&#FFF275DEEPSLATE'
+    lore:
+      - '&8ᴘʀᴇᴄɪᴏ ᴅᴇ ᴠᴇɴᴛᴀ'
+      - ''
+      - ' &8▶ &fUnidad: &a$3'
+      - ' &8▶ &fStack x64: &a$192'
+
+  'item_16':
+    material: PRISMARINE
+    slot: 38
+    hide_attributes: true
+    display_name: '&#FFF275PRISMARINE'
+    lore:
+      - '&8ᴘʀᴇᴄɪᴏ ᴅᴇ ᴠᴇɴᴛᴀ'
+      - ''
+      - ' &8▶ &fUnidad: &a$5'
+      - ' &8▶ &fStack x64: &a$320'
+
+  'item_17':
+    material: PRISMARINE_BRICKS
+    slot: 39
+    hide_attributes: true
+    display_name: '&#FFF275PRISMARINE BRICKS'
+    lore:
+      - '&8ᴘʀᴇᴄɪᴏ ᴅᴇ ᴠᴇɴᴛᴀ'
+      - ''
+      - ' &8▶ &fUnidad: &a$5'
+      - ' &8▶ &fStack x64: &a$320'
+
+  'item_18':
+    material: DARK_PRISMARINE
+    slot: 40
+    hide_attributes: true
+    display_name: '&#FFF275DARK PRISMARINE'
+    lore:
+      - '&8ᴘʀᴇᴄɪᴏ ᴅᴇ ᴠᴇɴᴛᴀ'
+      - ''
+      - ' &8▶ &fUnidad: &a$8'
+      - ' &8▶ &fStack x64: &a$512'
+
+  'item_19':
+    material: OAK_LOG
+    slot: 41
+    hide_attributes: true
+    display_name: '&#FFF275OAK LOG'
+    lore:
+      - '&8ᴘʀᴇᴄɪᴏ ᴅᴇ ᴠᴇɴᴛᴀ'
+      - ''
+      - ' &8▶ &fUnidad: &a$1'
+      - ' &8▶ &fStack x64: &a$64'
+
+  'item_20':
+    material: SPRUCE_LOG
+    slot: 42
+    hide_attributes: true
+    display_name: '&#FFF275SPRUCE LOG'
+    lore:
+      - '&8ᴘʀᴇᴄɪᴏ ᴅᴇ ᴠᴇɴᴛᴀ'
+      - ''
+      - ' &8▶ &fUnidad: &a$1'
+      - ' &8▶ &fStack x64: &a$64'
+
+  'item_21':
+    material: BIRCH_LOG
+    slot: 43
+    hide_attributes: true
+    display_name: '&#FFF275BIRCH LOG'
+    lore:
+      - '&8ᴘʀᴇᴄɪᴏ ᴅᴇ ᴠᴇɴᴛᴀ'
+      - ''
+      - ' &8▶ &fUnidad: &a$1'
+      - ' &8▶ &fStack x64: &a$64'
+
+  'Bordes_Laterales':
+    material: GRAY_STAINED_GLASS_PANE
+    display_name: ' '
+    slots:
+      - 18
+      - 26
+      - 27
+      - 35
+      - 36
+      - 44
+
+  # ============================================================================
+  # NAVBAR INFERIOR (FILA 6)
+  # ============================================================================
+  'Boton_Volver':
+    material: DARK_OAK_DOOR
+    slot: 49
+    hide_attributes: true
+    display_name: '&cVolver Atrás'
+    lore:
+      - '&8Regresar al menú principal'
+    left_click_commands:
+      - '[openguimenu] tienda_principal'
+      - '[sound] UI_BUTTON_CLICK'
+
+  'Boton_SellGUI':
+    material: HOPPER
+    slot: 52
+    hide_attributes: true
+    display_name: '&#00B7FFVenta Rápida'
+    lore:
+      - '&8ᴠᴇɴᴛᴀ ᴀᴜᴛᴏᴍᴀᴛɪᴄᴀ'
+      - ''
+      - ' &fVende tu inventario.'
+      - ''
+      - '&7▶ Click para abrir'
+    left_click_commands:
+      - '[close]'
+      - '[player] sellgui'
+      - '[sound] ENTITY_EXPERIENCE_ORB_PICKUP'
+
+  'Info_Balance':
+    material: SUNFLOWER
+    slot: 53
+    hide_attributes: true
+    display_name: '&#FFD700Tu Economía'
+    lore:
+      - '&8ʙᴀʟᴀɴᴄᴇ'
+      - ''
+      - ' &8▶ &a$%vault_eco_balance_formatted%'
+
+  'Filtro_Navbar_Bottom':
+    material: GRAY_STAINED_GLASS_PANE
+    display_name: ' '
+    slots:
+      - 45
+      - 46
+      - 47
+      - 48
+      - 50
+      - 51

@@ -1,0 +1,217 @@
+title: '&0&l|&r &0Dash ▶ &8Rachas '
+type: inventory
+rows: 6
+layout:
+### RELLENO
+  '1':
+  - relleno1
+  '10':
+  - relleno10
+  '19':
+  - relleno19
+  '28':
+  - relleno28
+  '37':
+  - relleno37
+  '46':
+  - relleno46
+  
+### BOTONES
+  '0':
+  - rachas
+  '9':
+  - ubicaciones
+  '18':
+  - temporada
+  '27':
+  - trabajos
+  '36':
+  - recetas
+  '45':
+  - jugador
+  
+### EJEMPLO
+  '5':
+  - item_knowledge_book_5
+  '6':
+  - item_amethyst_shard_6
+  '21':
+  - item_golden_carrot_21
+  '22':
+  - item_tripwire_hook_22
+  '23':
+  - item_totem_of_undying_23
+  '24':
+  - item_enchanted_golden_apple_24
+  '25':
+  - item_netherite_chestplate_25
+  '30':
+  - item_lime_stained_glass_pane_30
+  '31':
+  - item_yellow_stained_glass_pane_31
+  '32':
+  - item_red_stained_glass_pane_32
+  '33':
+  - item_red_stained_glass_pane_33
+  '34':
+  - item_red_stained_glass_pane_34
+  '48':
+  - item_campfire_48
+  '49':
+  - item_soul_campfire_49
+  '50':
+  - item_soul_campfire_50
+  '51':
+  - item_soul_campfire_51
+  '52':
+  - item_soul_campfire_52
+  
+items:
+### RELLENO
+  relleno1:
+    material: BLACK_STAINED_GLASS_PANE
+    stack: 1
+  relleno10:
+    material: GRAY_STAINED_GLASS_PANE
+    stack: 1
+  relleno19:
+    material: GRAY_STAINED_GLASS_PANE
+    stack: 1
+  relleno28:
+    material: GRAY_STAINED_GLASS_PANE
+    stack: 1
+  relleno37:
+    material: GRAY_STAINED_GLASS_PANE
+    stack: 1
+  relleno46:
+    material: GRAY_STAINED_GLASS_PANE
+    stack: 1
+ 
+### BOTONES 
+  jugador:
+    material: DARK_OAK_DOOR
+    stack: 1
+    name: '&7Inicio'
+    lore:
+    - ''
+    - '&8Click para ver'
+    actions:
+      commands:
+        - '[sound] BLOCK.END_PORTAL_FRAME.FILL volume=1 pitch=0.8'
+        - '[open] inicio'
+    
+  ubicaciones:
+    material: SPYGLASS
+    stack: 1
+    name: '&7Ubicaciones'
+    lore:
+    - ''
+    - '&8Click para ver'
+    actions:
+      commands:
+        - '[sound] BLOCK.END_PORTAL_FRAME.FILL volume=1 pitch=0.8'
+        - '[open] ubicaciones'
+        
+  rachas:
+    material: CAMPFIRE
+    stack: 1
+    enchantments:
+    - unbreaking 1
+    name: '&a⮕ Rachas'
+    lore:
+    - ''
+        
+  trabajos:
+    material: AMETHYST_SHARD
+    stack: 1
+    name: '&7Fragmentos'
+    lore:
+    - ''
+    - '&8Click para ver'
+    actions:
+      commands:
+        - '[sound] BLOCK.END_PORTAL_FRAME.FILL volume=1 pitch=0.8'
+        - '[open] trabajos'
+        
+  recetas:
+    material: NETHERITE_UPGRADE_SMITHING_TEMPLATE
+    stack: 1
+    name: '&7Mejoras'
+    lore:
+    - ''
+    - '&8Click para ver'
+    actions:
+      commands:
+        - '[sound] BLOCK.END_PORTAL_FRAME.FILL volume=1 pitch=0.8'
+        - '[open] recetas'
+        
+  temporada:
+    material: EXPERIENCE_BOTTLE
+    stack: 1
+    name: '&7Niveles'
+    lore:
+    - ''
+    - '&8Click para ver'
+    actions:
+      commands:
+        - '[sound] BLOCK.END_PORTAL_FRAME.FILL volume=1 pitch=0.8'
+        - '[open] niveles'
+
+### EJEMPLO
+  item_knowledge_book_5:
+    material: KNOWLEDGE_BOOK
+    stack: 1
+  item_amethyst_shard_6:
+    material: AMETHYST_SHARD
+    stack: 3
+  item_golden_carrot_21:
+    material: GOLDEN_CARROT
+    stack: 1
+  item_tripwire_hook_22:
+    material: TRIPWIRE_HOOK
+    stack: 20
+    enchantments:
+    - unbreaking 1
+  item_totem_of_undying_23:
+    material: TOTEM_OF_UNDYING
+    stack: 1
+  item_enchanted_golden_apple_24:
+    material: ENCHANTED_GOLDEN_APPLE
+    stack: 5
+  item_netherite_chestplate_25:
+    material: NETHERITE_CHESTPLATE
+    stack: 1
+    enchantments:
+    - unbreaking 1
+  item_lime_stained_glass_pane_30:
+    material: LIME_STAINED_GLASS_PANE
+    stack: 1
+  item_yellow_stained_glass_pane_31:
+    material: YELLOW_STAINED_GLASS_PANE
+    stack: 1
+  item_red_stained_glass_pane_32:
+    material: RED_STAINED_GLASS_PANE
+    stack: 1
+  item_red_stained_glass_pane_33:
+    material: RED_STAINED_GLASS_PANE
+    stack: 1
+  item_red_stained_glass_pane_34:
+    material: RED_STAINED_GLASS_PANE
+    stack: 1
+  item_campfire_48:
+    material: CAMPFIRE
+    stack: 1
+  item_soul_campfire_49:
+    material: SOUL_CAMPFIRE
+    stack: 2
+    enchantments:
+    - unbreaking 1
+  item_soul_campfire_50:
+    material: SOUL_CAMPFIRE
+    stack: 3
+  item_soul_campfire_51:
+    material: SOUL_CAMPFIRE
+    stack: 4
+  item_soul_campfire_52:
+    material: SOUL_CAMPFIRE
+    stack: 5

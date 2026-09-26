@@ -1,0 +1,2 @@
+put creator/lab/trims.yml plugins/ShopGUIPlus/shops/trims.yml
+bye

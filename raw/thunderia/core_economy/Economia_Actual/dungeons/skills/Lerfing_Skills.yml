@@ -1,0 +1,3328 @@
+#Caster dashes forward then attacks in front, knocking up
+dynamic_entry_mob:
+  Cooldown: 10
+  Conditions:
+  - targetnotwithin{d=10} true
+  - targetwithin{d=20} true
+  Skills:
+  - message{m="<caster.name>&2 has cast&6 Dynamic Entry!"} @PlayersInRadius{r=40}
+  - potion{type=GLOWING;duration=20;level=1;p=false} @Self
+  - sound{s=entity.evoker.prepare_attack;v=2;p=2} @self
+  - delay 20
+  - sound{s=entity.bat.takeoff;v=2;p=2} @self
+  - effect:particles{particle=crit} @Cone{a=30;r=2;p=100}
+  - potion{type=SPEED;duration=10;level=12;p=false} @Self
+  - potion{type=WEAKNESS;duration=20;level=50;p=false} @Self
+  - delay 16
+  - effect:particles{particle=cloud} @Cone{a=30;r=2;p=100}
+  - sound{s=entity.evoker_fangs.attack;v=2;p=0.9} @self
+  - delay 4
+  - damage{amount=7} @LivingInCone{a=30;r=5}
+  - throw{velocity=3;velocityY=5} @LivingInCone{a=30;r=5}
+  - effect:particles{particle=block_crack;material=COBBLESTONE} @Cone{a=30;r=5;p=200}
+
+#Caster enters a defensive stance and flows, gaining high resistance to all damage for 4 seconds.
+endure_mob:
+  Cooldown: 10
+  Conditions:
+  - targetwithin{d=9} true
+  Skills:
+  - message{m="<caster.name>&2 has cast&6 Endure!"} @PlayersInRadius{r=40}
+  - potion{type=GLOWING;duration=20;level=1;p=false} @Self
+  - sound{s=entity.player.breath;v=2;p=2} @self
+  - delay 20
+  - equip{item=shield HEAD}
+  - sound{s=entity.player.breath;v=2;p=1} @self
+  - potion{type=DAMAGE_RESISTANCE;duration=80;level=3;p=true} @Self
+  - potion{type=FIRE_RESISTANCE;duration=80;level=3;p=true} @Self
+  - potion{type=SLOW;duration=80;level=2;p=true} @Self
+  - delay 80
+  - equip{item=air HEAD}
+
+#Caster wears a dragon head and shoots a flame thrower
+flamethrower_mob:
+  Cooldown: 10
+  Conditions:
+  - targetwithin{d=14} true
+  Skills:
+  - equip{item=dragon_head OFFHAND}
+  - message{m="<caster.name>&2 has cast&6 Fire Breath!"} @PlayersInRadius{r=40}
+  - potion{type=GLOWING;duration=20;level=1;p=false} @Self
+  - potion{type=SLOW;duration=70;level=1;p=false} @Self
+  - sound{s=entity.ender_dragon.growl;v=2;p=1} @self
+  - delay 25
+  - sound{s=entity.ender_dragon.growl;v=2;p=0.5} @self
+  - damage{amount=3} @LivingInCone{a=45;r=6}
+  - ignite @LivingInCone{a=45;r=6}
+  - effect:particles{particle=flame;amount=10;hS=0.4;vS=0.1;speed=0.01} @Forward{f=3;uel=true;rot=20}
+  - effect:particles{particle=flame;amount=10;hS=0.4;vS=0.1;speed=0.01} @Forward{f=3;uel=true;rot=0}
+  - effect:particles{particle=flame;amount=10;hS=0.4;vS=0.1;speed=0.01} @Forward{f=3;uel=true;rot=-20}
+  - effect:particles{particle=flame;amount=20;hS=1;vS=0.1;speed=0.01} @Forward{f=6;uel=true;rot=30}
+  - effect:particles{particle=flame;amount=20;hS=1;vS=0.1;speed=0.01} @Forward{f=6;uel=true;rot=0}
+  - effect:particles{particle=flame;amount=20;hS=1;vS=0.1;speed=0.01} @Forward{f=6;uel=true;rot=-30}
+  - delay 15
+  - damage{amount=3} @LivingInCone{a=45;r=6}
+  - ignite @LivingInCone{a=45;r=6}
+  - effect:particles{particle=flame;amount=10;hS=0.4;vS=0.1;speed=0.01} @Forward{f=3;uel=true;rot=20}
+  - effect:particles{particle=flame;amount=10;hS=0.4;vS=0.1;speed=0.01} @Forward{f=3;uel=true;rot=0}
+  - effect:particles{particle=flame;amount=10;hS=0.4;vS=0.1;speed=0.01} @Forward{f=3;uel=true;rot=-20}
+  - effect:particles{particle=flame;amount=20;hS=1;vS=0.1;speed=0.01} @Forward{f=6;uel=true;rot=30}
+  - effect:particles{particle=flame;amount=20;hS=1;vS=0.1;speed=0.01} @Forward{f=6;uel=true;rot=0}
+  - effect:particles{particle=flame;amount=20;hS=1;vS=0.1;speed=0.01} @Forward{f=6;uel=true;rot=-30}
+  - delay 15
+  - damage{amount=3} @LivingInCone{a=45;r=6}
+  - ignite @LivingInCone{a=45;r=6}
+  - effect:particles{particle=flame;amount=10;hS=0.4;vS=0.1;speed=0.01} @Forward{f=3;uel=true;rot=20}
+  - effect:particles{particle=flame;amount=10;hS=0.4;vS=0.1;speed=0.01} @Forward{f=3;uel=true;rot=0}
+  - effect:particles{particle=flame;amount=10;hS=0.4;vS=0.1;speed=0.01} @Forward{f=3;uel=true;rot=-20}
+  - effect:particles{particle=flame;amount=20;hS=1;vS=0.1;speed=0.01} @Forward{f=6;uel=true;rot=30}
+  - effect:particles{particle=flame;amount=20;hS=1;vS=0.1;speed=0.01} @Forward{f=6;uel=true;rot=0}
+  - effect:particles{particle=flame;amount=20;hS=1;vS=0.1;speed=0.01} @Forward{f=6;uel=true;rot=-30}
+  - delay 15
+  - damage{amount=3} @LivingInCone{a=45;r=6}
+  - ignite @LivingInCone{a=45;r=6}
+  - effect:particles{particle=flame;amount=10;hS=0.4;vS=0.1;speed=0.01} @Forward{f=3;uel=true;rot=20}
+  - effect:particles{particle=flame;amount=10;hS=0.4;vS=0.1;speed=0.01} @Forward{f=3;uel=true;rot=0}
+  - effect:particles{particle=flame;amount=10;hS=0.4;vS=0.1;speed=0.01} @Forward{f=3;uel=true;rot=-20}
+  - effect:particles{particle=flame;amount=20;hS=1;vS=0.1;speed=0.01} @Forward{f=6;uel=true;rot=30}
+  - effect:particles{particle=flame;amount=20;hS=1;vS=0.1;speed=0.01} @Forward{f=6;uel=true;rot=0}
+  - effect:particles{particle=flame;amount=20;hS=1;vS=0.1;speed=0.01} @Forward{f=6;uel=true;rot=-30}
+  - delay 15
+  - damage{amount=3} @LivingInCone{a=45;r=6}
+  - ignite @LivingInCone{a=45;r=6}
+  - effect:particles{particle=flame;amount=10;hS=0.4;vS=0.1;speed=0.01} @Forward{f=3;uel=true;rot=20}
+  - effect:particles{particle=flame;amount=10;hS=0.4;vS=0.1;speed=0.01} @Forward{f=3;uel=true;rot=0}
+  - effect:particles{particle=flame;amount=10;hS=0.4;vS=0.1;speed=0.01} @Forward{f=3;uel=true;rot=-20}
+  - effect:particles{particle=flame;amount=20;hS=1;vS=0.1;speed=0.01} @Forward{f=6;uel=true;rot=30}
+  - effect:particles{particle=flame;amount=20;hS=1;vS=0.1;speed=0.01} @Forward{f=6;uel=true;rot=0}
+  - effect:particles{particle=flame;amount=20;hS=1;vS=0.1;speed=0.01} @Forward{f=6;uel=true;rot=-30}
+  - damage{amount=2} @LivingInCone{a=45;r=6}
+  - ignite @LivingInCone{a=45;r=6}
+  - effect:particles{particle=flame;amount=10;hS=0.4;vS=0.1;speed=0.01} @Forward{f=3;uel=true;rot=20}
+  - effect:particles{particle=flame;amount=10;hS=0.4;vS=0.1;speed=0.01} @Forward{f=3;uel=true;rot=0}
+  - effect:particles{particle=flame;amount=10;hS=0.4;vS=0.1;speed=0.01} @Forward{f=3;uel=true;rot=-20}
+  - effect:particles{particle=flame;amount=20;hS=1;vS=0.1;speed=0.01} @Forward{f=6;uel=true;rot=30}
+  - effect:particles{particle=flame;amount=20;hS=1;vS=0.1;speed=0.01} @Forward{f=6;uel=true;rot=0}
+  - effect:particles{particle=flame;amount=20;hS=1;vS=0.1;speed=0.01} @Forward{f=6;uel=true;rot=-30}
+  - equip{item=air OFFHAND}
+
+#Mob pulls out an apple and eats it, healing itself for 20% of maximum HP.
+eat_apple:
+  Cooldown: 9
+  Skills:
+  - message{m="<caster.name>&2 eats a&6 Golden Apple!"} @PlayersInRadius{r=40}
+  - potion{type=SLOW;duration=50;level=4} @self
+  - equip{item=golden_apple OFFHAND}
+  - delay 10
+  - effect:sound{s=entity.generic.eat;volume=1;pitch=1} @self
+  - delay 4
+  - effect:sound{s=entity.generic.eat;volume=1;pitch=1} @self
+  - delay 4
+  - effect:sound{s=entity.generic.eat;volume=1;pitch=1} @self
+  - delay 4
+  - effect:sound{s=entity.generic.eat;volume=1;pitch=1} @self
+  - delay 4
+  - effect:sound{s=entity.generic.eat;volume=1;pitch=1} @self
+  - delay 4
+  - effect:sound{s=entity.generic.eat;volume=1;pitch=1} @self
+  - delay 4
+  - effect:sound{s=entity.generic.eat;volume=1;pitch=1} @self
+  - delay 4
+  - effect:sound{s=entity.generic.eat;volume=1;pitch=1} @self
+  - delay 4
+  - effect:sound{s=entity.generic.eat;volume=1;pitch=1} @self
+  - delay 4
+  - effect:sound{s=entity.generic.eat;volume=1;pitch=1} @self
+  - delay 4
+  - effect:sound{s=entity.player.burp;volume=1;pitch=1} @self
+  - healpercent{m=0.05} @self
+  - delay 10
+  - healpercent{m=0.05} @self
+  - delay 10
+  - healpercent{m=0.05} @self
+  - delay 10
+  - healpercent{m=0.05} @self
+  - equip{item=shield OFFHAND}
+
+#Mob leaps away and shoots a high speed arrow at the target
+future_sight_mob:
+  Cooldown: 10
+  Conditions:
+  - targetwithin 9
+  Skills:
+  - potion{type=GLOWING;duration=8;level=1;p=false} @Self
+  - sound{s=entity.armor_stand.hit;v=2;p=2} @self
+  - message{m="<caster.name>&2 has cast&6 Future Sight!"} @PlayersInRadius{r=40}
+  - delay 5
+  - sound{s=block.glass.break;v=2;p=1} @self
+  - jump{velocity=1}
+  - delay 2
+  - leap{velocity=-350} @target
+  - delay 18
+  - sound{s=entity.arrow.shoot;v=3;p=1} @self
+  - shoot{type=ARROW;velocity=1;damage=58;vs=15;hs=15} @Target
+  - jump{velocity=-100}
+
+#Mob charges, then shoots a ghast fireball. Can be deflected back.
+fireball_generic:
+  Cooldown: 5
+  Conditions:
+  - targetwithin 40
+  Skills:
+  - message{m="<caster.name>&2 casts&6 Fireball!"} @PlayersInRadius{r=40}
+  - potion{type=GLOWING;duration=20;level=1} @self
+  - potion{type=SLOW;duration=20;level=2} @self
+  - sound{s=entity.blaze.hurt;v=2;p=1} @self
+  - effect:particles{particle=wax_off;amount=300;hS=1;vS=1;speed=0.2} @self
+  - delay 30
+  - effect:particles{particle=wax_off;amount=300;hS=1;vS=1;speed=0.2} @self
+  - shootfireball{y=3;v=0.2;ps=true} @target
+
+#Shoots an extremely damaging fireball after a cinematic chargeup. Can be deflected back.
+extreme_fireball:
+  Cooldown: 10
+  Conditions:
+  - targetwithin 40
+  Skills:
+  - message{m="<caster.name>&2 is charging a devestating&6 GIGA Fireball!"} @PlayersInRadius{r=40}
+  - sound{s=entity.elder_guardian.curse;v=2;p=0.7} @self
+  - potion{type=LEVITATION;duration=100;level=1} @self
+  - potion{type=GLOWING;duration=100;level=1} @self
+  - potion{type=SLOW_FALLING;duration=140;level=0} @self
+  - sound{s=block.portal.travel;v=2;p=1.4} @self
+  - effect:particles{particle=wax_off;amount=300;hS=1;vS=1;speed=0.2} @self
+  - delay 20
+  - effect:particles{particle=wax_off;amount=300;hS=1;vS=1;speed=0.2} @self
+  - delay 20
+  - effect:particles{particle=wax_off;amount=300;hS=1;vS=1;speed=0.2} @self
+  - delay 20
+  - effect:particles{particle=wax_off;amount=300;hS=1;vS=1;speed=0.2} @self
+  - delay 20
+  - effect:particles{particle=wax_off;amount=300;hS=1;vS=1;speed=0.2} @self
+  - delay 20
+  - shootfireball{y=5;v=0.1;ps=true} @target
+
+#This is fireballs for a specific boss, needs to have an additional mechanic setting his stance to "neutral"
+#This is added to prevent multiple fireball skills spamming over itself
+normal_fireball:
+  Cooldown: 2
+  Conditions:
+  - stance neutral
+  - targetwithin 40
+  Skills:
+  - setstance{stance=casting} @self
+  - message{m="<caster.name>&2 casts&6 Fireball!"} @PlayersInRadius{r=40}
+  - potion{type=GLOWING;duration=20;level=1} @self
+  - sound{s=entity.blaze.hurt;v=2;p=1} @self
+  - effect:particles{particle=wax_off;amount=300;hS=1;vS=1;speed=0.2} @self
+  - delay 30
+  - effect:particles{particle=wax_off;amount=300;hS=1;vS=1;speed=0.2} @self
+  - shootfireball{y=4;v=0.2;ps=true} @target
+  - delay 20
+  - setstance{stance=neutral} @self
+
+normal_fireball2:
+  Cooldown: 2
+  Conditions:
+  - targetwithin 40
+  Skills:
+  - setstance{stance=casting} @self
+  - message{m="<caster.name>&2 casts&6 Fireball!"} @PlayersInRadius{r=40}
+  - potion{type=GLOWING;duration=20;level=1} @self
+  - sound{s=entity.blaze.hurt;v=2;p=1} @self
+  - effect:particles{particle=wax_off;amount=300;hS=1;vS=1;speed=0.2} @self
+  - delay 30
+  - effect:particles{particle=wax_off;amount=300;hS=1;vS=1;speed=0.2} @self
+  - shootfireball{y=4;v=0.2;ps=true} @target
+  - delay 20
+  - setstance{stance=neutral} @self
+
+giga_fireball:
+  Cooldown: 10
+  Conditions:
+  - stance neutral
+  - targetwithin 40
+  Skills:
+  - setstance{stance=casting} @self
+  - message{m="<caster.name>&2 is charging a devestating&6 GIGA Fireball!"} @PlayersInRadius{r=40}
+  - sound{s=entity.elder_guardian.curse;v=2;p=0.7} @self
+  - potion{type=LEVITATION;duration=100;level=1} @self
+  - potion{type=GLOWING;duration=100;level=1} @self
+  - potion{type=SLOW_FALLING;duration=140;level=0} @self
+  - sound{s=block.portal.travel;v=2;p=1.4} @self
+  - effect:particles{particle=wax_off;amount=300;hS=1;vS=1;speed=0.2} @self
+  - delay 20
+  - effect:particles{particle=wax_off;amount=300;hS=1;vS=1;speed=0.2} @self
+  - delay 20
+  - effect:particles{particle=wax_off;amount=300;hS=1;vS=1;speed=0.2} @self
+  - delay 20
+  - effect:particles{particle=wax_off;amount=300;hS=1;vS=1;speed=0.2} @self
+  - delay 20
+  - effect:particles{particle=wax_off;amount=300;hS=1;vS=1;speed=0.2} @self
+  - delay 20
+  - shootfireball{y=9;v=0.1;ps=true} @target
+  - setstance{stance=neutral} @self
+
+#Makes an anvil sound, then lunges forward and knocks up players
+super_smash_attack:
+  Cooldown: 6
+  Conditions:
+  - targetwithin 15
+  Skills:
+  - message{m="<caster.name>&2 cast&6 Smash Attack!"} @PlayersInRadius{r=40}
+  - potion{type=GLOWING;duration=20;level=1} @self
+  - effect:sound{s=block.anvil.place;volume=0.9;pitch=1.2} @self
+  - delay 10
+  - leap{velocity=200} @target
+  - delay 5
+  - jump{velocity=-100}
+  - delay 10
+  - throw{velocity=0;velocityY=1} @PlayersInRadius{r=4}
+  - delay 5
+  - damage{amount=1;ignorearmor=false} @PlayersInRadius{r=4}
+  - throw{velocity=0;velocityY=3} @PlayersInRadius{r=4}
+  - effect:explosion @Self
+  - skill{s=super_smash_attack_hit_confirm}
+
+#confirm for super_smash_attack, don't use this.
+super_smash_attack_hit_confirm:
+  Cooldown: 1
+  Conditions:
+  - targetwithin 4
+  Skills:
+  - delay 9
+  - jump{velocity=100}
+  - delay 5
+  - damage{amount=6;ignorearmor=false} @PlayersInRadius{r=15}
+  - throw{velocity=3;velocityY=2} @PlayersInRadius{r=15}
+  - effect:explosion @Self
+  - delay 1
+  - throw{velocity=6;velocityY=2} @PlayersInRadius{r=15}
+
+#After charging, shoots a barrage of energy that constantly damages a target. Recommended to be blocked as dodging this is difficult.
+soul_blast_mob:
+  Cooldown: 8
+  Conditions:
+  - incombat true
+  - targetwithin 90
+  Skills:
+  - message{m="<caster.name>&2 has cast&6 Homing Soul Blast!"} @PlayersInRadius{r=40}
+  - potion{type=GLOWING;duration=50;level=1} @self
+  - potion{type=SLOW;duration=50;level=2} @self
+  - effect:sound{s=entity.wither.ambient;volume=2;pitch=2} @PIR{r=80}
+  - delay 40
+  - effect:sound{s=entity.wither.death;volume=2;pitch=1} @PIR{r=80}
+  - skill{s=blastHomer} @Target
+  - delay 3
+  - skill{s=blastHomer} @Target
+  - delay 3
+  - skill{s=blastHomer} @Target
+  - delay 3
+  - skill{s=blastHomer} @Target
+  - delay 3
+  - skill{s=blastHomer} @Target
+  - delay 3
+  - skill{s=blastHomer} @Target
+  - delay 3
+  - skill{s=blastHomer} @Target
+  - delay 3
+  - skill{s=blastHomer} @Target
+  - delay 3
+  - skill{s=blastHomer} @Target
+  - delay 3
+  - skill{s=blastHomer} @Target
+  - delay 3
+  - skill{s=blastHomer} @Target
+  - delay 3
+  - skill{s=blastHomer} @Target
+  - delay 3
+  - skill{s=blastHomer} @Target
+#Extra skills for soul_blast_mob that help it work better
+blastHomer:
+  Skills:
+  - missile{ot=blastHomer_TICK;oh=blastHomer_HIT;v=70;i=1;hR=1;vR=1;in=1;md=40}
+
+blastHomer_TICK:
+  Skills:
+  - effect:particles{p=snowballpoof;amount=20;speed=1;hS=1;vS=1} @origin
+
+blastHomer_HIT:
+  Skills:
+  - damage{a=4}
+  - effect:explosion
+
+#Caster deals damaged in an area multiple times around itself
+gravitas:
+  Cooldown: 10
+  Conditions:
+  - targetwithin 10
+  Skills:
+  - message{m="<caster.name>&2 has cast&6 Gravitas!"} @PlayersInRadius{r=40}
+  - potion{type=GLOWING;duration=20;level=1} @self
+  - effect:sound{s=entity.wither.hurt;volume=3;pitch=0.5} @self
+  - delay 30
+  - effect:particles{particle=dragon_breath;amount=10;hS=0.4;vS=0.1;speed=0.01} @Sphere{r=8;points=50}
+  - throw{velocity=0;velocityY=-5} @PIR{r=10}
+  - potion{type=SLOW;duration=30;level=2} @PIR{r=8}
+  - effect:sound{s=entity.wither.shoot;volume=3;pitch=1} @self
+  - damage{a=3} @PIR{r=8}
+  - delay 5
+  - throw{velocity=0;velocityY=-5} @PIR{r=10}
+  - delay 5
+  - throw{velocity=0;velocityY=-5} @PIR{r=10}
+  - delay 5
+  - throw{velocity=0;velocityY=-5} @PIR{r=10}
+  - delay 5
+  - throw{velocity=0;velocityY=-5} @PIR{r=10}
+  - effect:particles{particle=dragon_breath;amount=10;hS=0.4;vS=0.1;speed=0.01} @Sphere{r=8;points=50}
+  - throw{velocity=0;velocityY=-5} @PIR{r=10}
+  - potion{type=SLOW;duration=30;level=2} @PIR{r=8}
+  - effect:sound{s=entity.wither.shoot;volume=3;pitch=1} @self
+  - damage{a=3} @PIR{r=8}
+  - delay 5
+  - throw{velocity=0;velocityY=-5} @PIR{r=10}
+  - delay 5
+  - throw{velocity=0;velocityY=-5} @PIR{r=10}
+  - delay 5
+  - throw{velocity=0;velocityY=-5} @PIR{r=10}
+  - delay 5
+  - effect:particles{particle=dragon_breath;amount=10;hS=0.4;vS=0.1;speed=0.01} @Sphere{r=8;points=50}
+  - throw{velocity=0;velocityY=-5} @PIR{r=10}
+  - potion{type=SLOW;duration=30;level=2} @PIR{r=8}
+  - effect:sound{s=entity.wither.shoot;volume=3;pitch=1} @self
+  - damage{a=3} @PIR{r=8}
+  - delay 5
+  - throw{velocity=0;velocityY=-5} @PIR{r=10}
+  - delay 5
+  - throw{velocity=0;velocityY=-5} @PIR{r=10}
+  - delay 5
+  - throw{velocity=0;velocityY=-5} @PIR{r=10}
+  - delay 5
+  - effect:particles{particle=dragon_breath;amount=10;hS=0.4;vS=0.1;speed=0.01} @Sphere{r=8;points=50}
+  - damage{a=3} @PIR{r=8}
+  - throw{velocity=0;velocityY=-5} @PIR{r=10}
+  - potion{type=SLOW;duration=30;level=2} @PIR{r=8}
+  - effect:sound{s=entity.wither.shoot;volume=3;pitch=1} @self
+
+#After charging deal a high damage attack around itself
+circular_slash_mob:
+  Cooldown: 5
+  Conditions:
+  - targetwithin 10
+  Skills:
+  - message{m="<caster.name>&2 has cast&6 Great Spinning Slash!"} @PlayersInRadius{r=40}
+  - potion{type=GLOWING;duration=20;level=1} @self
+  - sound{s=entity.blaze.ambient;v=4;p=0.8} @Self
+  - effect:spin{duration=50;velocity=30} @self
+  - effect:particles{particle=flame;amount=50;hS=1;vS=1;speed=0.3} @self
+  - delay 5
+  - potion{type=SLOW;duration=50;level=5} @self
+  - potion{type=LEVITATION;duration=25;level=3} @self
+  - sound{s=entity.blaze.shoot;v=16;p=1;sc=music} @Self
+  - delay 50
+  - effect:particles{particle=flame;amount=200;hS=1;vS=1;speed=0.6} @self
+  - effect:explosion @self
+  - sound{s=entity.blaze.hurt;v=4;p=1} @Self
+  - damage{amount=9} @PlayersInRadius{r=8}
+
+#Caster spins and summons a tornado on itself that deals damage constantly.
+raging_tornado:
+  Cooldown: 5
+  Conditions:
+  - targetwithin 30
+  Skills:
+  - message{m="<caster.name>&2 has cast&6 Vortex!"} @PlayersInRadius{r=40}
+  - potion{type=GLOWING;duration=60;level=1} @self
+  - potion{type=SLOW;duration=20;level=3} @self
+  - sound{s=entity.player.attack.sweep;v=4;p=0.8} @Self
+  - effect:spin{duration=60;velocity=45} @self
+  - effect:particles{particle=entity.player.attack.sweep;amount=5;hS=1;vS=1;speed=0.3} @self
+  - delay 10
+  - sound{s=entity.player.attack.sweep;v=4;p=0.8} @Self
+  - effect:particles{particle=entity.player.attack.sweep;amount=5;hS=1;vS=1;speed=0.3} @self
+  - delay 10
+  - potion{type=SPEED;duration=40;level=10} @self
+  - sound{s=entity.player.attack.sweep;v=4;p=0.8} @Self
+  - effect:particles{particle=entity.player.attack.sweep;amount=5;hS=1;vS=1;speed=0.3} @self
+  - delay 5
+  - damage{amount=4} @PlayersInRadius{r=3}
+  - sound{s=entity.player.attack.sweep;v=4;p=0.8} @Self
+  - effect:particles{particle=entity.player.attack.sweep;amount=5;hS=1;vS=1;speed=0.3} @self
+  - delay 5
+  - damage{amount=4} @PlayersInRadius{r=3}
+  - sound{s=entity.player.attack.sweep;v=4;p=0.8} @Self
+  - effect:particles{particle=entity.player.attack.sweep;amount=5;hS=1;vS=1;speed=0.3} @self
+  - delay 5
+  - damage{amount=4} @PlayersInRadius{r=3}
+  - sound{s=entity.player.attack.sweep;v=4;p=0.8} @Self
+  - effect:particles{particle=entity.player.attack.sweep;amount=5;hS=1;vS=1;speed=0.3} @self
+  - delay 5
+  - damage{amount=4} @PlayersInRadius{r=3}
+  - sound{s=entity.player.attack.sweep;v=4;p=0.8} @Self
+  - effect:particles{particle=entity.player.attack.sweep;amount=5;hS=1;vS=1;speed=0.3} @self
+  - delay 5
+  - damage{amount=4} @PlayersInRadius{r=3}
+  - sound{s=entity.player.attack.sweep;v=4;p=0.8} @Self
+  - effect:particles{particle=entity.player.attack.sweep;amount=5;hS=1;vS=1;speed=0.3} @self
+  - delay 5
+  - damage{amount=4} @PlayersInRadius{r=3}
+  - sound{s=entity.player.attack.sweep;v=4;p=0.8} @Self
+  - effect:particles{particle=entity.player.attack.sweep;amount=5;hS=1;vS=1;speed=0.3} @self
+
+#After charging, unleash a deadly hitbox in front that multi hits the player and deals damage constantly.
+dimension_slash_mob:
+  Cooldown: 11
+  Conditions:
+  - targetwithin 10
+  Skills:
+  - message{m="<caster.name>&2 has cast&6 Dimension Slash!"} @PlayersInRadius{r=40}
+  - effect:particles{particle=cloud;amount=50;hS=1;vS=1;speed=0.1} @self
+  - potion{type=SLOW;duration=50;level=5} @self
+  - potion{type=GLOWING;duration=50;level=5} @self
+  - sound{s=entity.ender_dragon.growl;v=4;p=1} @Self
+  - delay 40
+  - effect:particles{particle=crit_magic;amount=200;hS=2;vS=2;speed=0.6} @Forward{f=5;uel=true}
+  - shoot{type=snowball;velocity=5;damage=10;oh=dimensionSlash;md=8} @NearestPlayer{r=8}
+
+dimensionSlash:
+  Skills:
+  - damage{a=4}
+  - sound{s=entity.endermen.hurt;v=3;p=1} @Self
+  - effect:particles{particle=crit_magic;amount=50;hS=1;vS=1;speed=1} @Target
+  - throw{velocity=3;velocityY=1} @Target
+  - delay 3
+  - sound{s=entity.wither.break_block;v=3;p=1} @Target
+  - effect:particles{particle=crit_magic;amount=50;hS=1;vS=1;speed=1} @Target
+  - throw{velocity=3;velocityY=1} @Target
+  - delay 3
+  - damage{a=2}
+  - sound{s=entity.wither.break_block;v=3;p=1} @Target
+  - effect:particles{particle=crit_magic;amount=50;hS=1;vS=1;speed=1} @Target
+  - throw{velocity=3;velocityY=1} @Target
+  - delay 3
+  - sound{s=entity.wither.break_block;v=3;p=1} @Target
+  - effect:particles{particle=crit_magic;amount=50;hS=1;vS=1;speed=1} @Target
+  - throw{velocity=3;velocityY=1} @Target
+  - damage{a=2}
+  - delay 4
+  - sound{s=entity.wither.break_block;v=3;p=1} @Target
+  - effect:particles{particle=crit_magic;amount=50;hS=1;vS=1;speed=1} @Target
+  - throw{velocity=3;velocityY=1} @Target
+  - delay 3
+  - damage{a=2}
+  - sound{s=entity.wither.break_block;v=3;p=1} @Target
+  - effect:particles{particle=crit_magic;amount=50;hS=1;vS=1;speed=1} @Target
+  - throw{velocity=3;velocityY=1} @Target
+  - delay 4
+  - sound{s=entity.wither.break_block;v=3;p=1} @Target
+  - effect:particles{particle=crit_magic;amount=50;hS=1;vS=1;speed=1} @Target
+  - throw{velocity=3;velocityY=1} @Target
+  - damage{a=2}
+  - delay 3
+  - sound{s=entity.wither.break_block;v=3;p=1} @Target
+  - effect:particles{particle=crit_magic;amount=50;hS=1;vS=1;speed=1} @Target
+  - throw{velocity=5;velocityY=2} @Target
+  - delay 4
+  - sound{s=entity.wither.break_block;v=3;p=1} @Target
+  - effect:particles{particle=crit_magic;amount=50;hS=1;vS=1;speed=1} @Target
+  - throw{velocity=3;velocityY=1} @Target
+  - damage{a=2}
+  - delay 3
+  - sound{s=entity.wither.break_block;v=3;p=1} @Target
+  - effect:particles{particle=crit_magic;amount=50;hS=1;vS=1;speed=1} @Target
+  - throw{velocity=3;velocityY=1} @Target
+  - damage{a=2}
+
+#Mid range attack that shoots out a wave of damage, multi hitting.
+sonic_boom_mob:
+  Conditions:
+  - targetnotwithin 12
+  - targetwithin 50
+  Skills:
+  - message{m="<caster.name>&2 has cast&6 Sonic Boom!"} @PlayersInRadius{r=40}
+  - potion{type=SLOW;duration=15;level=5} @self
+  - potion{type=GLOWING;duration=15;level=5} @self
+  - sound{s=block.piston.extend;v=4;p=0.5} @Self
+  - delay 15
+  - sound{s=block.piston.extend;v=10;p=1.2} @Self
+  - missile{ot=blastHomer_TICK;oh=blastHomer_HIT;v=30;i=2;hR=1;vR=1;in=1;md=70} @Target
+
+#Another variant of fireball.
+generic_fireball:
+  Conditions:
+  - targetwithin 70
+  - incombat true
+  Skills:
+  - sound{s=entity.ghast.warn;v=5;p=1} @Self
+  - message{m="<caster.name>&2 has casted&6 Fireball!"} @PlayersInRadius{r=40}
+  - potion{type=SLOW;duration=90;level=5} @self
+  - potion{type=GLOWING;duration=50;level=5} @self
+  - effect:particles{particle=flame;amount=50;hS=1;vS=1;speed=0.3} @self
+  - delay 40
+  - shootfireball{y=4;v=1.5} @NearestPlayer{r=70}
+  - sound{s=entity.ghast.shoot;v=4;p=1.5} @Self
+
+#Mob leaps away from target and pelts them with fireballs.
+fireball_barrage:
+  Conditions:
+  - targetwithin 70
+  - incombat true
+  Skills:
+  - leap{velocity=-450} @Target
+  - potion{type=SLOW;duration=90;level=5} @self
+  - potion{type=GLOWING;duration=50;level=5} @self
+  - potion{type=LEVITATION;duration=100;level=1} @self
+  - effect:particles{particle=flame;amount=50;hS=1;vS=1;speed=0.3} @self
+  - sound{s=entity.wither.spawn;v=4;p=1} @Self
+  - delay 60
+  - shootfireball{y=5;v=1.5} @NearestPlayer{r=60}
+  - sound{s=entity.ghast.shoot;v=4;p=1.5} @Self
+  - delay 5
+  - shootfireball{y=5;v=1.5} @NearestPlayer{r=60}
+  - sound{s=entity.ghast.shoot;v=4;p=1.5} @Self
+  - delay 5
+  - shootfireball{y=5;v=1.5} @NearestPlayer{r=60}
+  - sound{s=entity.ghast.shoot;v=4;p=1.5} @Self
+  - delay 5
+  - shootfireball{y=5;v=1.5} @NearestPlayer{r=60}
+  - sound{s=entity.ghast.shoot;v=4;p=1} @Self
+  - delay 5
+  - shootfireball{y=5;v=1.5} @NearestPlayer{r=60}
+  - sound{s=entity.ghast.shoot;v=4;p=1} @Self
+  - delay 5
+  - shootfireball{y=5;v=1.5} @NearestPlayer{r=60}
+  - sound{s=entity.ghast.shoot;v=4;p=1} @Self
+  - delay 5
+  - shootfireball{y=5;v=1.5} @NearestPlayer{r=60}
+  - sound{s=entity.ghast.shoot;v=4;p=1} @Self
+  - delay 5
+  - shootfireball{y=5;v=1.5} @NearestPlayer{r=60}
+  - sound{s=entity.ghast.shoot;v=4;p=1} @Self
+  - delay 5
+  - shootfireball{y=5;v=1.5} @NearestPlayer{r=60}
+  - sound{s=entity.ghast.shoot;v=4;p=1} @Self
+  - delay 5
+  - shootfireball{y=5;v=1.5} @NearestPlayer{r=60}
+  - sound{s=entity.ghast.shoot;v=4;p=1} @Self
+  - delay 5
+  - shootfireball{y=5;v=1.5} @NearestPlayer{r=60}
+  - sound{s=entity.ghast.shoot;v=4;p=1} @Self
+  - delay 5
+  - shootfireball{y=5;v=1.5} @NearestPlayer{r=60}
+  - sound{s=entity.ghast.shoot;v=4;p=1} @Self
+  - delay 5
+  - shootfireball{y=5;v=5} @NearestPlayer{r=60}
+  - sound{s=entity.ghast.shoot;v=4;p=1} @Self
+
+#Another variants of fireball barrage.
+mini_fireball_barrage:
+  Conditions:
+  - targetwithin 70
+  - incombat true
+  Skills:
+  - message{m="<caster.name>&2 is casting&6 Fireball Barrage!"} @PlayersInRadius{r=40}
+  - leap{velocity=-450} @Target
+  - potion{type=SLOW;duration=90;level=5} @self
+  - potion{type=GLOWING;duration=50;level=5} @self
+  - potion{type=LEVITATION;duration=100;level=1} @self
+  - effect:particles{particle=flame;amount=50;hS=1;vS=1;speed=0.3} @self
+  - sound{s=entity.wither.spawn;v=4;p=1} @Self
+  - delay 30
+  - shootfireball{y=5;v=1.5} @NearestPlayer{r=60}
+  - sound{s=entity.ghast.shoot;v=4;p=1.5} @Self
+  - delay 10
+  - shootfireball{y=5;v=1.5} @NearestPlayer{r=60}
+  - sound{s=entity.ghast.shoot;v=4;p=1.5} @Self
+  - delay 10
+  - shootfireball{y=5;v=1.5} @NearestPlayer{r=60}
+  - sound{s=entity.ghast.shoot;v=4;p=1.5} @Self
+  - delay 10
+  - shootfireball{y=5;v=1.5} @NearestPlayer{r=60}
+  - sound{s=entity.ghast.shoot;v=4;p=1} @Self
+  - delay 10
+  - shootfireball{y=5;v=1.5} @NearestPlayer{r=60}
+  - sound{s=entity.ghast.shoot;v=4;p=1} @Self
+  - delay 10
+  - shootfireball{y=5;v=1.5} @NearestPlayer{r=60}
+  - sound{s=entity.ghast.shoot;v=4;p=1} @Self
+
+#Mob jumps back from the target
+SmallJump:
+  Cooldown: 1
+  Conditions:
+  - targetwithin 4
+  Skills:
+  - jump{velocity=1}
+  - delay 1
+  - leap{velocity=90} @target
+
+#Mob jumps forward at target
+LargeJump:
+  Cooldown: 1
+  Conditions:
+  - targetwithin 10
+  Skills:
+  - jump{velocity=0.7}
+  - delay 2
+  - leap{velocity=250} @target
+  - delay 8
+  - jump{velocity=0.7}
+  - delay 2
+  - leap{velocity=150} @target
+
+#Mob leaps backwards, then leaps forwards
+BackAttack:
+  Cooldown: 2
+  Conditions:
+  - targetwithin 10
+  Skills:
+  - jump{velocity=0.7}
+  - delay 2
+  - leap{velocity=-250} @target
+  - delay 13
+  - leap{velocity=650} @target
+
+#Mob attempts to dodge an attack by quickly moving 3 blocks in a random direction.
+Evade:
+  Cooldown: 6
+  Conditions:
+  - targetwithin 6
+  Skills:
+  - effect:sound{s=entity.witch.throw;volume=2;pitch=0.8}
+  - delay 8
+  - teleport{spreadh=3;spreadv=0}
+
+#Mob attempts to dodge an attack by stepping to the left of the player
+sidestep_left:
+  Cooldown: 5
+  Conditions:
+  - targetwithin 7
+  Skills:
+  - effect:sound{s=entity.witch.throw;volume=2;pitch=0.8}
+  - leap{velocity=200} @Forward{f=6;uel=false;rot=90}
+
+#Mob attempts to dodge an attack by stepping to the right of the player
+sidestep_right:
+  Cooldown: 5
+  Conditions:
+  - targetwithin 7
+  Skills:
+  - effect:sound{s=entity.witch.throw;volume=2;pitch=0.8}
+  - leap{velocity=200} @Forward{f=6;uel=false;rot=-90}
+
+#Mob jumps high into the sky, then causes an explosion on impact.
+GiantJump:
+  Cooldown: 11
+  Conditions:
+  - targetwithin 20
+  Skills:
+  - jump{velocity=0.7}
+  - delay 5
+  - jump{velocity=0.7}
+  - delay 5
+  - jump{velocity=0.7}
+  - delay 5
+  - jump{velocity=0.7}
+  - potion{type=DAMAGE_RESISTANCE;duration=60;level=5} @Self
+  - delay 40
+  - explosion{yield=8} @Self
+
+#Another variation of a flame thrower attack
+FlameSpit:
+  Cooldown: 5
+  Conditions:
+  - targetwithin 15
+  Skills:
+  - effect:particles{particle=lava;amount=60;hS=2;vS=2;speed=0.1} @LivingInCone{a=90.0;r=5.0;rot=0.0}	
+  - delay 10
+  - effect:particles{particle=lava;amount=60;hS=2;vS=2;speed=0.1} @LivingInCone{a=90.0;r=5.0;rot=0.0}	
+  - delay 10
+  - ignite{ticks=60} @LivingInCone{a=90.0;r=5.0;rot=0.0}	
+  - effect:particles{particle=lava;amount=60;hS=2;vS=2;speed=0.1} @LivingInCone{a=90.0;r=5.0;rot=0.0}	
+  - delay 20
+  - ignite{ticks=60} @LivingInCone{a=90.0;r=16.0;rot=0.0}	
+  - effect:particles{particle=lava;amount=60;hS=2;vS=2;speed=0.1} @LivingInCone{a=90.0;r=5.0;rot=0.0}	
+  - delay 20
+  - ignite{ticks=60} @LivingInCone{a=90.0;r=5.0;rot=0.0}	
+  - effect:particles{particle=lava;amount=60;hS=2;vS=2;speed=0.1} @LivingInCone{a=90.0;r=5.0;rot=0.0}
+
+#Flame thrower attack, but ice variant. Slows target.
+IceSpit:
+  Cooldown: 5
+  Conditions:
+  - targetwithin 15
+  Skills:
+  - effect:sound{s=block.fire.extinguish;volume=2;pitch=1.0} @PlayersInRadius{r=20}
+  - effect:particles{particle=reddust;amount=200;hS=1;vS=1;speed=2;color=#DCD8F3} @self
+  - delay 20
+  - effect:particles{particle=reddust;amount=400;hS=4;vS=1;speed=2;color=#DCD8F3} @self
+  - potion{type=SLOW;duration=60;level=2} @PlayersInRadius{r=5}
+  - damage{amount=2;ignorearmor=false} @PlayersInRadius{r=5}
+  - effect:sound{s=block.fire.extinguish;volume=2;pitch=1.0} @PlayersInRadius{r=20}
+  - delay 10
+  - effect:particles{particle=reddust;amount=400;hS=4;vS=1;speed=2;color=#DCD8F3} @self
+  - potion{type=SLOW;duration=60;level=2} @PlayersInRadius{r=5}
+  - damage{amount=2;ignorearmor=false} @PlayersInRadius{r=5}
+  - effect:sound{s=block.fire.extinguish;volume=2;pitch=1.0} @PlayersInRadius{r=20}
+  - delay 10
+  - effect:particles{particle=reddust;amount=400;hS=4;vS=1;speed=2;color=#DCD8F3} @self
+  - potion{type=SLOW;duration=60;level=2} @PlayersInRadius{r=5}
+  - damage{amount=2;ignorearmor=false} @PlayersInRadius{r=5}
+  - effect:sound{s=block.fire.extinguish;volume=2;pitch=1.0} @PlayersInRadius{r=20}
+  - delay 10
+  - effect:particles{particle=reddust;amount=400;hS=4;vS=1;speed=2;color=#DCD8F3} @self
+  - potion{type=SLOW;duration=60;level=2} @PlayersInRadius{r=5}
+  - damage{amount=3;ignorearmor=false} @PlayersInRadius{r=5}
+  - effect:sound{s=block.fire.extinguish;volume=2;pitch=1.0} @PlayersInRadius{r=20}
+
+#Shoots 3 wither skulls at the target.
+SkullBarrage:
+  Skills:
+  - shootskull{y=2;v=0.5} @target
+  - delay 10
+  - shootskull{y=2;v=0.5} @target
+  - delay 10
+  - shootskull{y=2;v=0.5} @target
+
+#Leaps at the target from a further distance, then explodes and deals damage.
+GuardianLeap:
+  Cooldown: 4
+  Skills:
+  - leap{velocity=200} @NearestPlayer{r=30}
+  - delay 20
+  - effect:explosion @self
+  - damage{amount=5} @EntitiesInRadius{r=5}
+
+#Put this skill on a bat mob to make him aggressive. Set this skill to trigger ~onTimer:20 for best results.
+batAttack:
+  Skills:
+  - leap{velocity=250} @NearestPlayer{r=30}
+  - delay 10
+  - damage{amount=3} @EntitiesInRadius{r=3}
+
+#Not unique to shulkers, just shoots a bunch of arrows.
+shulkerTurret:
+  Cooldown: 1
+  Conditions:
+  - targetwithin 30
+  Skills:
+  - arrowvolley{a=1;s=90;v=30;f=40;rd=200} @Target
+  - effect:sound{s=entity.arrow.shoot;volume=2;pitch=0.9}
+  - delay 3
+  - arrowvolley{a=1;s=90;v=21;f=40;rd=200} @Target
+  - effect:sound{s=entity.arrow.shoot;volume=2;pitch=0.8}
+  - delay 3
+  - arrowvolley{a=1;s=90;v=23;f=20;rd=200} @Target
+  - effect:sound{s=entity.arrow.shoot;volume=2;pitch=1.1}
+  - delay 3
+  - arrowvolley{a=1;s=90;v=26;f=20;rd=200} @Target
+  - effect:sound{s=entity.arrow.shoot;volume=2;pitch=0.9}
+  - delay 3
+  - arrowvolley{a=1;s=90;v=28;f=40;rd=200} @Target
+  - effect:sound{s=entity.arrow.shoot;volume=2;pitch=1}
+  - delay 3
+  - arrowvolley{a=1;s=90;v=25;f=40;rd=200} @Target
+  - effect:sound{s=entity.arrow.shoot;volume=2;pitch=0.8}
+  - delay 3
+  - arrowvolley{a=1;s=90;v=30;f=40;rd=200} @Target
+  - effect:sound{s=entity.arrow.shoot;volume=2;pitch=0.9}
+  - delay 3
+  - arrowvolley{a=1;s=90;v=31;f=40;rd=200} @Target
+  - effect:sound{s=entity.arrow.shoot;volume=2;pitch=0.8}
+  - delay 3
+  - arrowvolley{a=1;s=90;v=30;f=40;rd=200} @Target
+  - effect:sound{s=entity.arrow.shoot;volume=2;pitch=0.9}
+  - delay 3
+  - arrowvolley{a=1;s=90;v=21;f=40;rd=200} @Target
+  - effect:sound{s=entity.arrow.shoot;volume=2;pitch=0.8}
+  - delay 3
+  - arrowvolley{a=1;s=90;v=23;f=40;rd=200} @Target
+  - effect:sound{s=entity.arrow.shoot;volume=2;pitch=1.1}
+  - delay 3
+  - arrowvolley{a=1;s=90;v=26;f=40;rd=200} @Target
+  - effect:sound{s=entity.arrow.shoot;volume=2;pitch=0.9}
+  - delay 3
+  - arrowvolley{a=1;s=90;v=28;f=40;rd=200} @Target
+  - effect:sound{s=entity.arrow.shoot;volume=2;pitch=1}
+  - delay 3
+  - arrowvolley{a=1;s=90;v=25;f=40;rd=200} @Target
+  - effect:sound{s=entity.arrow.shoot;volume=2;pitch=0.8}
+  - delay 3
+  - arrowvolley{a=1;s=90;v=30;f=40;rd=200} @Target
+  - effect:sound{s=entity.arrow.shoot;volume=2;pitch=0.9}
+  - delay 3
+  - arrowvolley{a=1;s=90;v=31;f=40;rd=200} @Target
+  - effect:sound{s=entity.arrow.shoot;volume=2;pitch=0.8}
+
+#Shoots arrows constantly in a spread pattern
+ArrowBarrage:
+  Cooldown: 4
+  Conditions:
+  - targetwithin 40
+  Skills:
+  - effect:sound{s=entity.arrow.shoot;volume=2;pitch=1.2} @self
+  - shoot{type=ARROW;velocity=0.7;damage=15;a=0.9}
+  - delay 4
+  - effect:sound{s=entity.arrow.shoot;volume=2;pitch=0.9} @self
+  - shoot{type=ARROW;velocity=0.7;damage=15;a=0.9}
+  - delay 4
+  - effect:sound{s=entity.arrow.shoot;volume=2;pitch=1.0} @self
+  - shoot{type=ARROW;velocity=0.7;damage=15;a=0.9}
+  - delay 4
+  - effect:sound{s=entity.arrow.shoot;volume=2;pitch=1.2} @self
+  - shoot{type=ARROW;velocity=0.7;damage=15;a=0.9}
+  - delay 4
+  - effect:sound{s=entity.arrow.shoot;volume=2;pitch=1.1} @self
+  - shoot{type=ARROW;velocity=0.7;damage=15;a=0.9}
+  - delay 4
+  - effect:sound{s=entity.arrow.shoot;volume=2;pitch=0.9} @self
+  - shoot{type=ARROW;velocity=0.7;damage=15;a=0.9}
+  - delay 4
+  - effect:sound{s=entity.arrow.shoot;volume=2;pitch=1.0} @self
+  - shoot{type=ARROW;velocity=0.7;damage=15;a=0.9}
+  - delay 4
+  - effect:sound{s=entity.arrow.shoot;volume=2;pitch=1.3} @self
+  - shoot{type=ARROW;velocity=0.7;damage=15;a=0.9}
+  - delay 4
+  - effect:sound{s=entity.arrow.shoot;volume=2;pitch=1.1} @self
+  - shoot{type=ARROW;velocity=0.7;damage=15;a=0.9}
+  - delay 4
+  - effect:sound{s=entity.arrow.shoot;volume=2;pitch=0.9} @self
+  - shoot{type=ARROW;velocity=0.7;damage=15;a=0.9}
+  - delay 4
+  - effect:sound{s=entity.arrow.shoot;volume=2;pitch=1.0} @self
+  - shoot{type=ARROW;velocity=0.7;damage=15;a=0.9}
+
+#Makes the mob perform a critical strike similar to a player.
+playerCrit:
+  Cooldown: 7
+  Conditions:
+  - targetwithin 5
+  Skills:
+  - jump{velocity=0.75}
+  - delay 4
+  - leap{velocity=40} @target
+  - delay 5
+  - basedamage{m=2.0} @target{r=4}
+  - effect:particles{p=crit;amount=100;hS=1;vS=1;speed=1} @target
+  - sound{s=entity.player.attack.crit} @target
+
+#Makes a mob jump run like a player
+playerJumpRun:
+  Cooldown: 0
+  Conditions:
+  - targetnotwithin{d=6}
+  Skills:
+  - jump{velocity=0.4}
+  - delay 2
+  - leap{velocity=120} @target
+
+#Mob slightly retreats
+walkBack:
+  Cooldown: 0
+  Conditions:
+  - targetwithin{d=4}
+  Skills:
+  - leap{velocity=-40} @target
+
+#Mob jumps up and leaps forward at high velocity, often jumping past the player
+leapIntroEscape:
+  Cooldown: 3
+  Skills:
+  - jump{velocity=5}
+  - effect:particles{p=cloud;amount=30;hS=0;vS=0;speed=0.1} @self
+  - delay 6
+  - leap{velocity=1050} @Forward{f=30;lockpitch=true}
+  - effect:particles{p=cloud;amount=30;hS=0;vS=0;speed=0.1} @self
+  - sound{s=entity.bat.takeoff} @self
+
+#Leap toward a target.
+playerBigLeapToward:
+  Cooldown: 5
+  Conditions:
+  - targetnotwithin{d=15}
+  Skills:
+  - leap{velocity=980} @target
+  - effect:particles{p=cloud;amount=30;hS=0;vS=0;speed=0.1} @self
+  - sound{s=entity.bat.takeoff} @self
+
+#Variant of leaping toward a target
+playerBigLeapToward2:
+  Cooldown: 5
+  Skills:
+  - jump{velocity=1.2}
+  - delay 4
+  - leap{velocity=580} @target
+  - effect:particles{p=cloud;amount=30;hS=0;vS=0;speed=0.1} @self
+  - sound{s=entity.bat.takeoff} @self
+
+#Leaps away
+playerBigLeapAway:
+  Cooldown: 3
+  Skills:
+  - jump{velocity=1.2}
+  - delay 3
+  - leap{velocity=-500} @target
+  - effect:particles{p=cloud;amount=30;hS=0;vS=0;speed=0.1} @self
+  - sound{s=entity.bat.takeoff} @self
+
+#Leaps away at lower velocity.
+vexBigLeapAway:
+  Cooldown: 4
+  Skills:
+  - leap{velocity=-400} @target
+  - effect:particles{p=cloud;amount=30;hS=0;vS=0;speed=0.1} @self
+  - sound{s=entity.bat.takeoff} @self
+
+#Jumps upwards and attempts to land on the target
+playerBigLeapUpward:
+  Cooldown: 5
+  Skills:
+  - jump{velocity=0.5}
+  - delay 10
+  - jump{velocity=1.25}
+  - effect:particles{p=cloud;amount=30;hS=0.1;vS=1;speed=0.1} @self
+  - sound{s=entity.bat.takeoff} @self
+  - delay 6
+  - leap{velocity=50} @target
+
+#Deals true damage and stacks. Best for ~onAttack.
+soul_fire:
+  Cooldown: 0
+  Skills:
+  - delay 5
+  - damage{amount=1;ignoreArmor=true} @target
+  - sound{s=entity.player.hurt_on_fire} @target
+  - delay 20
+  - damage{amount=1;ignoreArmor=true} @target
+  - sound{s=entity.player.hurt_on_fire} @target
+  - delay 20
+  - damage{amount=1;ignoreArmor=true} @target
+  - sound{s=entity.player.hurt_on_fire} @target
+  - delay 20
+  - damage{amount=1;ignoreArmor=true} @target
+  - sound{s=entity.player.hurt_on_fire} @target
+
+#Another upwards leap variant.
+playerJumpUp:
+  Cooldown: 5
+  Conditions:
+  - incombat true
+  Skills:
+  - jump{velocity=1.3}
+  - effect:particles{p=cloud;amount=30;hS=0;vS=0;speed=0.1} @self
+  - sound{s=entity.bat.takeoff} @self
+
+#Shoots a white projectile at the target, on hit summons cobwebs on them that disappears after 2 seconds.
+shoot_web:
+  Cooldown: 5
+  Conditions:
+  - targetwithin{d=40} true
+  Skills:
+  - message{m="<caster.name>&2 uses&6 Web Attack!"} @PlayersInRadius{r=40}
+  - sound{s=entity.slime.attack;v=3;p=0.8} @self
+  - potion{type=GLOWING;duration=20;level=1;p=false} @Self
+  - potion{type=SLOW;duration=50;level=4;p=false} @Self
+  - delay 20
+  - sound{s=entity.snowball.throw;v=3;p=0.5} @self
+  - missile{ot=blastHomer_TICK;oh=web_target;v=15;i=2;hR=1;vR=1;md=60;in=100} @target
+
+web_target:
+  Skills:
+  - damage{a=7}
+  - prison{material=WEB;duration=40;breakable=true}
+
+#Shoots an ender pearl that pulls the mob to the target if it hits.
+pull_shot:
+  Cooldown: 4
+  Conditions:
+  - targetwithin{d=40} true
+  Skills:
+  - shoot{type=enderpearl;velocity=0.7;damage=30;onhitskill=pull_shot_hit} @Target
+
+pull_shot_hit:
+  Cooldown: 4
+  Skills:
+  - pull{velocity=12} @target
+
+SuperCreeperExplode:
+  Cooldown: 4
+  Skills:
+  - explosion{yield=8} @Origin
+  - effect:particles{particle=flame;amount=20;hS=1;vS=1;speed=1} @Origin
+  - delay 5
+  - explosion{yield=8} @Origin
+  - effect:particles{particle=flame;amount=20;hS=1;vS=1;speed=1} @Origin
+  - delay 5
+  - explosion{yield=8} @Origin
+  - effect:particles{particle=flame;amount=20;hS=1;vS=1;speed=1} @Origin
+  - delay 5
+  - explosion{yield=8} @Origin
+  - effect:particles{particle=flame;amount=20;hS=1;vS=1;speed=1} @Origin
+  - delay 5
+  - explosion{yield=8} @Origin
+  - effect:particles{particle=flame;amount=20;hS=1;vS=1;speed=1} @Origin
+  - delay 5
+  - explosion{yield=8} @Origin
+  - effect:particles{particle=flame;amount=20;hS=1;vS=1;speed=1} @Origin
+  - delay 5
+  - explosion{yield=8} @Origin
+  - effect:particles{particle=flame;amount=20;hS=1;vS=1;speed=1} @Origin
+  - delay 5
+  - explosion{yield=8} @Origin
+  - effect:particles{particle=flame;amount=20;hS=1;vS=1;speed=1} @Origin
+  - delay 5
+  - explosion{yield=8} @Origin
+  - effect:particles{particle=flame;amount=20;hS=1;vS=1;speed=1} @Origin
+  - delay 5
+  - explosion{yield=8} @Origin
+  - effect:particles{particle=flame;amount=20;hS=1;vS=1;speed=1} @Origin
+  - delay 5
+  - explosion{yield=8} @Origin
+  - effect:particles{particle=flame;amount=20;hS=1;vS=1;speed=1} @Origin
+  - delay 5
+  - explosion{yield=8} @Origin
+  - effect:particles{particle=flame;amount=20;hS=1;vS=1;speed=1} @Origin
+  - delay 5
+  - explosion{yield=8} @Origin
+  - effect:particles{particle=flame;amount=20;hS=1;vS=1;speed=1} @Origin
+  - delay 5
+  - explosion{yield=8} @Origin
+  - effect:particles{particle=flame;amount=20;hS=1;vS=1;speed=1} @Origin
+  - delay 5
+  - explosion{yield=8} @Origin
+  - effect:particles{particle=flame;amount=20;hS=1;vS=1;speed=1} @Origin
+  - delay 5
+  - explosion{yield=8} @Origin
+  - effect:particles{particle=flame;amount=20;hS=1;vS=1;speed=1} @Origin
+  - delay 5
+  - explosion{yield=8} @Origin
+  - effect:particles{particle=flame;amount=20;hS=1;vS=1;speed=1} @Origin
+  - delay 5
+  - explosion{yield=8} @Origin
+  - effect:particles{particle=flame;amount=20;hS=1;vS=1;speed=1} @Origin
+  - delay 5
+  - explosion{yield=8} @Origin
+  - effect:particles{particle=flame;amount=20;hS=1;vS=1;speed=1} @Origin
+  - delay 5
+  - explosion{yield=8} @Origin
+  - effect:particles{particle=flame;amount=20;hS=1;vS=1;speed=1} @Origin
+  - delay 5
+  - explosion{yield=8} @Origin
+  - effect:particles{particle=flame;amount=20;hS=1;vS=1;speed=1} @Origin
+  - delay 5
+  - explosion{yield=8} @Origin
+  - effect:particles{particle=flame;amount=20;hS=1;vS=1;speed=1} @Origin
+  - delay 5
+  - explosion{yield=8} @Origin
+  - effect:particles{particle=flame;amount=20;hS=1;vS=1;speed=1} @Origin
+  - delay 5
+  - explosion{yield=8} @Origin
+  - effect:particles{particle=flame;amount=20;hS=1;vS=1;speed=1} @Origin
+  - delay 5
+  - explosion{yield=8} @Origin
+  - effect:particles{particle=flame;amount=20;hS=1;vS=1;speed=1} @Origin
+  - delay 5
+  - explosion{yield=8} @Origin
+  - effect:particles{particle=flame;amount=20;hS=1;vS=1;speed=1} @Origin
+  - delay 5
+  - explosion{yield=8} @Origin
+  - effect:particles{particle=flame;amount=20;hS=1;vS=1;speed=1} @Origin
+  - delay 5
+  - explosion{yield=8} @Origin
+  - effect:particles{particle=flame;amount=20;hS=1;vS=1;speed=1} @Origin
+  - delay 5
+  - explosion{yield=8} @Origin
+  - effect:particles{particle=flame;amount=20;hS=1;vS=1;speed=1} @Origin
+  - delay 5
+  - explosion{yield=8} @Origin
+  - effect:particles{particle=flame;amount=20;hS=1;vS=1;speed=1} @Origin
+  - delay 5
+  - explosion{yield=8} @Origin
+  - effect:particles{particle=flame;amount=20;hS=1;vS=1;speed=1} @Origin
+  - delay 5
+  - explosion{yield=8} @Origin
+  - effect:particles{particle=flame;amount=20;hS=1;vS=1;speed=1} @Origin
+  - delay 5
+  - explosion{yield=8} @Origin
+  - effect:particles{particle=flame;amount=20;hS=1;vS=1;speed=1} @Origin
+  - delay 5
+  - explosion{yield=8} @Origin
+  - effect:particles{particle=flame;amount=20;hS=1;vS=1;speed=1} @Origin
+  - delay 5
+  - explosion{yield=8} @Origin
+  - effect:particles{particle=flame;amount=20;hS=1;vS=1;speed=1} @Origin
+  - delay 5
+  - explosion{yield=8} @Origin
+  - effect:particles{particle=flame;amount=20;hS=1;vS=1;speed=1} @Origin
+  - delay 5
+  - explosion{yield=8} @Origin
+  - effect:particles{particle=flame;amount=20;hS=1;vS=1;speed=1} @Origin
+  - delay 5
+  - explosion{yield=8} @Origin
+  - effect:particles{particle=flame;amount=20;hS=1;vS=1;speed=1} @Origin
+  - delay 5
+  - explosion{yield=8} @Origin
+  - effect:particles{particle=flame;amount=20;hS=1;vS=1;speed=1} @Origin
+
+drink_regen_potion:
+  Cooldown: 25
+  Conditions:
+  - targetwithin{d=40} true
+  Skills:
+  - message{m="<caster.name>&2 is about to drop a&6 Super Combat Potion!"} @PlayersInRadius{r=40}
+  - potion{type=GLOWING;duration=30;level=1;p=false} @Self
+  - sound{s=entity.evoker.prepare_attack;v=3;p=1.5} @self
+  - sound{s=entity.generic.drink;v=3;p=1} @self
+  - delay 4
+  - sound{s=entity.generic.drink;v=3;p=1} @self
+  - delay 3
+  - sound{s=entity.generic.drink;v=3;p=0.9} @self
+  - delay 4
+  - sound{s=entity.generic.drink;v=3;p=1.1} @self
+  - delay 4
+  - sound{s=entity.generic.drink;v=3;p=0.8} @self
+  - delay 6
+  - sound{s=entity.generic.drink;v=3;p=1} @self
+  - delay 3
+  - sound{s=entity.generic.drink;v=3;p=1} @self
+  - delay 2
+  - sound{s=entity.generic.drink;v=3;p=0.9} @self
+  - delay 3
+  - sound{s=entity.generic.drink;v=3;p=1.1} @self
+  - delay 4
+  - sound{s=entity.generic.drink;v=3;p=0.8} @self
+  - shootpotion{type=ABSORPTION;duration=500;level=5;velocity=0} @self
+  - shootpotion{type=REGENERATION;duration=500;level=2;velocity=0} @self
+
+cripple_potion:
+  Cooldown: 5
+  Conditions:
+  - targetwithin{d=40} true
+  Skills:
+  - message{m="<caster.name>&2 readies a&6 Cripple Potion!"} @PlayersInRadius{r=40}
+  - potion{type=GLOWING;duration=30;level=1;p=false} @Self
+  - sound{s=entity.evoker.prepare_attack;v=3;p=1.5} @self
+  - sound{s=entity.wither.break_block;v=3;p=0.5} @self
+  - delay 30
+  - sound{s=entity.egg.throw;v=3;p=0.8} @self
+  - shootpotion{type=SLOW;duration=400;level=4;velocity=1} @target
+
+super_damage_potion:
+  Cooldown: 5
+  Conditions:
+  - targetwithin{d=40} true
+  Skills:
+  - message{m="<caster.name>&2 readies a&6 Super Damage Potion!"} @PlayersInRadius{r=40}
+  - potion{type=GLOWING;duration=30;level=1;p=false} @Self
+  - sound{s=entity.evoker.prepare_attack;v=3;p=1.5} @self
+  - sound{s=entity.wither.break_block;v=3;p=0.5} @self
+  - delay 30
+  - sound{s=entity.egg.throw;v=3;p=0.8} @self
+  - shootpotion{type=HARM;duration=10;level=4;velocity=1} @target
+
+super_poison_potion:
+  Cooldown: 5
+  Conditions:
+  - targetwithin{d=40} true
+  Skills:
+  - message{m="<caster.name>&2 readies a&6 Super Poison Potion!"} @PlayersInRadius{r=40}
+  - potion{type=GLOWING;duration=30;level=1;p=false} @Self
+  - sound{s=entity.evoker.prepare_attack;v=3;p=1.5} @self
+  - sound{s=entity.wither.break_block;v=3;p=0.5} @self
+  - delay 30
+  - sound{s=entity.egg.throw;v=3;p=0.8} @self
+  - shootpotion{type=POISON;duration=300;level=2;velocity=1} @target
+
+ground_slam:
+  Cooldown: 10
+  Conditions:
+  - targetwithin{d=30} true
+  Skills:
+  - message{m="<caster.name>&2 is causing an&6 Earthquake!"} @PlayersInRadius{r=40}
+  - potion{type=GLOWING;duration=40;level=1;p=false} @Self
+  - sound{s=entity.evoker.prepare_attack;v=3;p=0.5} @self
+  - sound{s=entity.wither.break_block;v=3;p=2} @self
+  - potion{type=LEVITATION;duration=40;level=1;p=false} @Self
+  - effect:particles{particle=block_crack;material=dirt;hs=2;vs=2;a=100;repeat=5;repeatInterval=4} @Self
+  - delay 40
+  - jump{velocity=-10}
+  - sound{s=entity.bat.takeoff;v=3;p=0.5} @self
+  - delay 2
+  - damage{a=9} @PIR{r=4}
+  - delay 2
+  - sound{s=entity.wither.break_block;v=3;p=0.5} @self
+  - delay 2
+  - summon{type=dirt_wave;amount=1;radius=1} @Ring{r=3;p=40}
+  - delay 2
+  - throw{velocity=15;velocityY=0} @Children
+  - delay 8
+  - throw{velocity=15;velocityY=0} @Children
+  - delay 8
+  - throw{velocity=15;velocityY=0} @Children
+  - delay 8
+  - throw{velocity=15;velocityY=0} @Children
+  - delay 8
+  - throw{velocity=15;velocityY=0} @Children
+
+tremors:
+  Cooldown: 10
+  Conditions:
+  - targetwithin{d=30} true
+  Skills:
+  - message{m="<caster.name>&2 causes&6 Tremors!"} @PlayersInRadius{r=40}
+  - potion{type=GLOWING;duration=40;level=1;p=false} @Self
+  - sound{s=entity.evoker.prepare_attack;v=3;p=0.5} @self
+  - sound{s=entity.wither.break_block;v=3;p=2} @self
+  - potion{type=LEVITATION;duration=40;level=1;p=false} @Self
+  - effect:particles{particle=block_crack;material=dirt;hs=2;vs=2;a=100;repeat=5;repeatInterval=4} @Self
+  - delay 40
+  - jump{velocity=-10}
+  - sound{s=entity.bat.takeoff;v=3;p=0.5} @self
+  - delay 2
+  - damage{a=8} @PIR{r=4}
+  - delay 2
+  - summon{type=dirt_wave;amount=1;radius=1} @Ring{r=3;p=5}
+  - delay 5
+  - summon{type=dirt_wave;amount=1;radius=1} @Ring{r=5;p=8}
+  - delay 5
+  - summon{type=dirt_wave;amount=1;radius=1} @Ring{r=7;p=10}
+  - delay 5
+  - summon{type=dirt_wave;amount=1;radius=1} @Ring{r=9;p=15}
+
+#uses ice_bullet mob
+ice_bullets:
+  Cooldown: 10
+  Conditions:
+  - targetwithin{d=100} true
+  Skills:
+  - throw{velocity=8;velocityY=1} @PIR{r=8}
+  - message{m="<caster.name>&2 has cast&6 Ice Bullets!"} @PlayersInRadius{r=40}
+  - potion{type=GLOWING;duration=65;level=1;p=false} @Self
+  - potion{type=SLOW;duration=65;level=4;p=false} @Self
+  - sound{s=entity.evoker.prepare_attack;v=3;p=1} @self
+  - sound{s=block.glass.break;v=3;p=0.5} @self
+  - effect:particles{particle=block_crack;material=packed_ice;hs=1;vs=1;a=40;repeat=5;repeatInterval=4} @Self
+  - delay 20
+  - summon{type=ice_bullet;amount=1;radius=1} @Forward{f=5;uel=false;rot=0}
+  - sound{s=block.glass.break;v=3;p=1} @self
+  - delay 5
+  - summon{type=ice_bullet;amount=1;radius=1} @Forward{f=5;uel=false;rot=20}
+  - sound{s=block.glass.break;v=3;p=1} @self
+  - delay 5
+  - summon{type=ice_bullet;amount=1;radius=1} @Forward{f=5;uel=false;rot=-20}
+  - sound{s=block.glass.break;v=3;p=1} @self
+  - delay 5
+  - summon{type=ice_bullet;amount=1;radius=1} @Forward{f=5;uel=false;rot=30}
+  - sound{s=block.glass.break;v=3;p=1} @self
+  - delay 5
+  - summon{type=ice_bullet;amount=1;radius=1} @Forward{f=5;uel=false;rot=-30}
+  - sound{s=block.glass.break;v=3;p=1} @self
+  - delay 5
+  - summon{type=ice_bullet;amount=1;radius=1} @Forward{f=5;uel=true;rot=3}
+  - sound{s=block.glass.break;v=3;p=1} @self
+  - delay 5
+  - summon{type=ice_bullet;amount=1;radius=1} @Forward{f=5;uel=true;rot=-3}
+  - sound{s=block.glass.break;v=3;p=1} @self
+  - delay 10
+  - sound{s=entity.bat.takeoff;v=3;p=0.5} @self
+  - delay 2
+  - sound{s=entity.wither.break_block;v=3;p=2} @self
+  - delay 2
+  - throw{velocity=15;velocityY=-12} @Children
+  - delay 8
+  - throw{velocity=15;velocityY=0} @Children
+
+ice_explode:
+  Cooldown: 10
+  Conditions:
+  - targetwithin{d=100} true
+  Skills:
+  - throw{velocity=7;velocityY=1} @PIR{r=8}
+  - message{m="<caster.name>&2 summons an&6 Ice Storm!"} @PlayersInRadius{r=40}
+  - effect:spin{duration=100;velocity=30} @self
+  - potion{type=GLOWING;duration=85;level=1;p=false} @Self
+  - potion{type=SLOW;duration=110;level=6;p=false} @Self
+  - sound{s=entity.evoker.prepare_attack;v=3;p=0.5} @self
+  - sound{s=block.glass.break;v=3;p=0.5} @self
+  - effect:particles{particle=block_crack;material=packed_ice;hs=1;vs=1;a=40;repeat=5;repeatInterval=4} @Self
+  - delay 40
+  - summon{type=ice_bullet;amount=4;radius=5} @Self
+  - sound{s=block.glass.break;v=3;p=1} @self
+  - delay 5
+  - summon{type=ice_bullet;amount=4;radius=5} @Self
+  - sound{s=block.glass.break;v=3;p=1} @self
+  - delay 5
+  - summon{type=ice_bullet;amount=4;radius=5} @Self
+  - sound{s=block.glass.break;v=3;p=1} @self
+  - delay 5
+  - summon{type=ice_bullet;amount=4;radius=5} @Self
+  - sound{s=block.glass.break;v=3;p=1} @self
+  - delay 5
+  - summon{type=ice_bullet;amount=4;radius=5} @Self
+  - sound{s=block.glass.break;v=3;p=1} @self
+  - delay 5
+  - summon{type=ice_bullet;amount=4;radius=5} @Self
+  - sound{s=block.glass.break;v=3;p=1} @self
+  - delay 5
+  - summon{type=ice_bullet;amount=4;radius=5} @Self
+  - sound{s=block.glass.break;v=3;p=1} @self
+  - delay 5
+  - summon{type=ice_bullet;amount=4;radius=5} @Self
+  - sound{s=block.glass.break;v=3;p=1} @self
+  - delay 5
+  - summon{type=ice_bullet;amount=4;radius=5} @Self
+  - sound{s=block.glass.break;v=3;p=1} @self
+  - leap{velocity=-300} @target
+  - delay 10
+  - sound{s=entity.bat.takeoff;v=3;p=0.5} @self
+  - delay 2
+  - sound{s=entity.wither.break_block;v=3;p=2} @self
+  - delay 2
+  - throw{velocity=15;velocityY=-7} @Children
+  - delay 8
+  - throw{velocity=15;velocityY=0} @Children
+  - delay 8
+  - throw{velocity=15;velocityY=0} @Children
+
+ice_explode2:
+  Cooldown: 10
+  Conditions:
+  - targetwithin{d=40} true
+  Skills:
+  - throw{velocity=8;velocityY=1} @PIR{r=8}
+  - message{m="<caster.name>&2 summons an&6 Ice Storm!"} @PlayersInRadius{r=40}
+  - potion{type=GLOWING;duration=85;level=1;p=false} @Self
+  - potion{type=SLOW;duration=110;level=6;p=false} @Self
+  - sound{s=entity.evoker.prepare_attack;v=3;p=0.5} @self
+  - sound{s=block.glass.break;v=3;p=0.5} @self
+  - effect:particles{particle=block_crack;material=packed_ice;hs=1;vs=1;a=40;repeat=5;repeatInterval=4} @Self
+  - delay 40
+  - summon{type=ice_bullet;amount=4;radius=5} @Self
+  - sound{s=block.glass.break;v=3;p=1} @self
+  - delay 5
+  - summon{type=ice_bullet;amount=4;radius=5} @Self
+  - sound{s=block.glass.break;v=3;p=1} @self
+  - delay 5
+  - summon{type=ice_bullet;amount=4;radius=5} @Self
+  - sound{s=block.glass.break;v=3;p=1} @self
+  - delay 5
+  - summon{type=ice_bullet;amount=4;radius=5} @Self
+  - sound{s=block.glass.break;v=3;p=1} @self
+  - delay 5
+  - summon{type=ice_bullet;amount=4;radius=5} @Self
+  - sound{s=block.glass.break;v=3;p=1} @self
+  - delay 5
+  - summon{type=ice_bullet;amount=4;radius=5} @Self
+  - sound{s=block.glass.break;v=3;p=1} @self
+  - delay 5
+  - summon{type=ice_bullet;amount=4;radius=5} @Self
+  - sound{s=block.glass.break;v=3;p=1} @self
+  - delay 5
+  - summon{type=ice_bullet;amount=4;radius=5} @Self
+  - sound{s=block.glass.break;v=3;p=1} @self
+  - delay 5
+  - summon{type=ice_bullet;amount=4;radius=5} @Self
+  - sound{s=block.glass.break;v=3;p=1} @self
+  - leap{velocity=-300} @target
+  - delay 10
+  - sound{s=entity.bat.takeoff;v=3;p=0.5} @self
+  - delay 2
+  - sound{s=entity.wither.break_block;v=3;p=2} @self
+  - delay 2
+  - throw{velocity=25;velocityY=-7} @Children
+  - delay 4
+  - throw{velocity=25;velocityY=-8} @Children
+  - delay 4
+  - throw{velocity=25;velocityY=-8} @Children
+  - delay 4
+  - throw{velocity=15;velocityY=-8} @Children
+  - delay 4
+  - throw{velocity=15;velocityY=-8} @Children
+  - delay 4
+  - throw{velocity=15;velocityY=-8} @Children
+#uses ruin_bullet mob
+corrupted_nebula:
+  Cooldown: 30
+  Conditions:
+  - targetwithin{d=100} true
+  Skills:
+  - message{m="<caster.name>&2 is summoning a&6 Corrupted Nebula!"} @PlayersInRadius{r=80}
+  - potion{type=GLOWING;duration=400;level=1;p=false} @Self
+  - potion{type=SLOW;duration=400;level=4;p=false} @Self
+  - sound{s=entity.elder_guardian.death;v=3;p=0.5} @self
+  - effect:particles{particle=block_crack;material=purple_wool;hs=2;vs=2;a=30;repeat=5;repeatInterval=4} @Self
+  - delay 40
+  - sound{s=entity.blaze.shoot;v=3;p=1.5;repeat=20;repeatInterval=10} @self
+  - summon{type=ruin_bullet;amount=10;radius=3;repeat=20;repeatInterval=10} @Self
+  - delay 2
+  - throw{velocity=8;velocityY=-6;repeat=50;repeatInterval=4} @Children
+
+#all lightning uses lightning_bullet mob
+lightning_strike_mob:
+  Cooldown: 3
+  Conditions:
+  - targetwithin{d=40} true
+  - stance neutral
+  Skills:
+  - setstance{stance=casting} @self
+  - message{m="<caster.name>&2 is summoning&6 Lightning Strikes!"} @PlayersInRadius{r=40}
+  - potion{type=GLOWING;duration=30;level=1;p=false} @Self
+  - potion{type=SLOW;duration=40;level=4;p=false} @Self
+  - sound{s=entity.creeper.primed;v=3;p=0.5} @self
+  - effect:particles{particle=block_crack;material=yellow_wool;hs=2;vs=2;a=30;repeat=2;repeatInterval=10} @Self
+  - delay 20
+  - summon{type=lightning_bullet;amount=20;radius=20} @Self
+  - setstance{stance=neutral} @self
+
+lightning_storm_mob:
+  Cooldown: 20
+  Conditions:
+  - targetwithin{d=40} true
+  - stance neutral
+  Skills:
+  - setstance{stance=casting} @self
+  - message{m="<caster.name>&2 is summoning a&6 Lightning Storm!"} @PlayersInRadius{r=40}
+  - potion{type=GLOWING;duration=40;level=1;p=false} @Self
+  - potion{type=SLOW;duration=40;level=4;p=false} @Self
+  - potion{type=LEVITATION;duration=40;level=2;p=false} @Self
+  - effect:spin{duration=30;velocity=30} @self
+  - sound{s=entity.creeper.primed;v=3;p=0.5} @self
+  - effect:particles{particle=block_crack;material=yellow_wool;hs=2;vs=2;a=30;repeat=2;repeatInterval=10} @Self
+  - delay 20
+  - summon{type=lightning_bullet;amount=5;radius=10;repeat=10;repeatInterval=60} @Self
+  - setstance{stance=neutral} @self
+
+targeted_lightning:
+  Cooldown: 6
+  Conditions:
+  - targetwithin{d=40} true
+  - stance neutral
+  Skills:
+  - setstance{stance=casting} @self
+  - message{m="<caster.name>&2 is attempting to strike you with&6 Lightning!"} @PlayersInRadius{r=40}
+  - potion{type=GLOWING;duration=40;level=1;p=false} @Self
+  - potion{type=SLOW;duration=40;level=4;p=false} @Self
+  - potion{type=LEVITATION;duration=40;level=2;p=false} @Self
+  - effect:spin{duration=30;velocity=30} @self
+  - sound{s=entity.creeper.primed;v=3;p=2} @self
+  - effect:particles{particle=block_crack;material=orange_wool;hs=2;vs=2;a=30;repeat=2;repeatInterval=10} @Self
+  - delay 20
+  - summon{type=lightning_bullet;amount=6;radius=9} @Target
+  - setstance{stance=neutral} @self
+
+lightning_line_mob:
+  Cooldown: 3
+  Conditions:
+  - targetwithin{d=31} true
+  - stance neutral
+  Skills:
+  - setstance{stance=casting} @self
+  - message{m="<caster.name>&2 has cast&6 Lightning Line!"} @PlayersInRadius{r=40}
+  - potion{type=GLOWING;duration=40;level=1;p=false} @Self
+  - potion{type=SLOW;duration=40;level=4;p=false} @Self
+  - sound{s=entity.creeper.primed;v=3;p=1} @self
+  - effect:particles{particle=block_crack;material=orange_wool;hs=2;vs=2;a=30;repeat=2;repeatInterval=10} @Self
+  - delay 20
+  - summon{type=lightning_bullet;amount=1;radius=2} @Forward{f=4;uel=true;rot=0}
+  - delay 2
+  - summon{type=lightning_bullet;amount=1;radius=2} @Forward{f=7;uel=true;rot=0}
+  - delay 2
+  - summon{type=lightning_bullet;amount=1;radius=2} @Forward{f=10;uel=true;rot=0}
+  - delay 2
+  - summon{type=lightning_bullet;amount=1;radius=2} @Forward{f=13;uel=true;rot=0}
+  - delay 2
+  - summon{type=lightning_bullet;amount=1;radius=2} @Forward{f=16;uel=true;rot=0}
+  - delay 2
+  - summon{type=lightning_bullet;amount=1;radius=2} @Forward{f=19;uel=true;rot=0}
+  - delay 2
+  - summon{type=lightning_bullet;amount=1;radius=2} @Forward{f=22;uel=true;rot=0}
+  - delay 2
+  - summon{type=lightning_bullet;amount=1;radius=2} @Forward{f=25;uel=true;rot=0}
+  - delay 2
+  - summon{type=lightning_bullet;amount=1;radius=2} @Forward{f=28;uel=true;rot=0}
+  - delay 2
+  - summon{type=lightning_bullet;amount=1;radius=2} @Forward{f=31;uel=true;rot=0}
+  - setstance{stance=neutral} @self
+
+lightning_chase:
+  Cooldown: 5
+  Conditions:
+  - targetwithin{d=40} true
+  - stance neutral
+  Skills:
+  - setstance{stance=casting} @self
+  - message{m="<caster.name>&2 casts&6 Lightning Chase!"} @PlayersInRadius{r=40}
+  - potion{type=GLOWING;duration=40;level=1;p=false} @Self
+  - potion{type=SLOW;duration=40;level=4;p=false} @Self
+  - potion{type=LEVITATION;duration=40;level=2;p=false} @Self
+  - effect:spin{duration=30;velocity=30} @self
+  - sound{s=entity.creeper.primed;v=3;p=0.5} @self
+  - effect:particles{particle=block_crack;material=yellow_wool;hs=2;vs=2;a=30;repeat=2;repeatInterval=10} @Self
+  - delay 20
+  - summon{type=lightning_bullet;amount=1;radius=1;repeat=20;repeatInterval=4} @Target
+  - setstance{stance=neutral} @self
+
+#uses sword bullet
+holy_sword_rain:
+  Cooldown: 50
+  Conditions:
+  - targetwithin{d=40} true
+  Skills:
+  - message{m="<caster.name>&2 has cast&6 Holy Sword Rain!"} @PlayersInRadius{r=40}
+  - potion{type=GLOWING;duration=100;level=1;p=false} @Self
+  - potion{type=SLOW;duration=100;level=4;p=false} @Self
+  - sound{s=entity.allay.hurt;v=3;p=0.5} @self
+  - sound{s=entity.evoker.prepare_summon;v=3;p=0.5} @self
+  - delay 5
+  - throw{velocity=6;velocityY=1;repeat=5;repeatInterval=20} @PIR{r=7}
+  - effect:particles{particle=composter;hs=1;vs=1;a=10;repeat=5;repeatInterval=20} @Sphere{r=6;points=50;e=true}
+  - delay 5
+  - summon{type=sword_bullet;amount=1;radius=1;repeat=6;repeatInterval=20} @Forward{f=3;uel=true;rot=0;yo=5}
+  - delay 1
+  - summon{type=sword_bullet;amount=1;radius=1;repeat=6;repeatInterval=20} @Forward{f=7;uel=true;rot=0;yo=5}
+  - delay 1
+  - summon{type=sword_bullet;amount=1;radius=1;repeat=6;repeatInterval=20} @Forward{f=11;uel=true;rot=0;yo=5}
+  - delay 1
+  - summon{type=sword_bullet;amount=1;radius=1;repeat=6;repeatInterval=20} @Forward{f=15;uel=true;rot=0;yo=5}
+  - delay 1
+  - summon{type=sword_bullet;amount=1;radius=1;repeat=6;repeatInterval=20} @Forward{f=19;uel=true;rot=0;yo=5}
+  - delay 1
+  - summon{type=sword_bullet;amount=1;radius=1;repeat=6;repeatInterval=20} @Forward{f=24;uel=true;rot=0;yo=5}
+  - delay 1
+  - summon{type=sword_bullet;amount=1;radius=1;repeat=6;repeatInterval=20} @Forward{f=3;uel=true;rot=30;yo=5}
+  - delay 1
+  - summon{type=sword_bullet;amount=1;radius=1;repeat=6;repeatInterval=20} @Forward{f=7;uel=true;rot=30;yo=5}
+  - delay 1
+  - summon{type=sword_bullet;amount=1;radius=1;repeat=6;repeatInterval=20} @Forward{f=11;uel=true;rot=30;yo=5}
+  - delay 1
+  - summon{type=sword_bullet;amount=1;radius=1;repeat=6;repeatInterval=20} @Forward{f=15;uel=true;rot=30;yo=5}
+  - delay 1
+  - summon{type=sword_bullet;amount=1;radius=1;repeat=6;repeatInterval=20} @Forward{f=19;uel=true;rot=30;yo=5}
+  - delay 1
+  - summon{type=sword_bullet;amount=1;radius=1;repeat=6;repeatInterval=20} @Forward{f=24;uel=true;rot=30;yo=5}
+  - delay 1
+  - summon{type=sword_bullet;amount=1;radius=1;repeat=6;repeatInterval=20} @Forward{f=7;uel=true;rot=-30;yo=5}
+  - delay 1
+  - summon{type=sword_bullet;amount=1;radius=1;repeat=6;repeatInterval=20} @Forward{f=11;uel=true;rot=-30;yo=5}
+  - delay 1
+  - summon{type=sword_bullet;amount=1;radius=1;repeat=6;repeatInterval=20} @Forward{f=15;uel=true;rot=-30;yo=5}
+  - delay 1
+  - summon{type=sword_bullet;amount=1;radius=1;repeat=6;repeatInterval=20} @Forward{f=19;uel=true;rot=-30;yo=5}
+  - delay 1
+  - summon{type=sword_bullet;amount=1;radius=1;repeat=6;repeatInterval=20} @Forward{f=24;uel=true;rot=-30;yo=5}
+
+defensive_sword_rain:
+  Cooldown: 20
+  Conditions:
+  - targetwithin{d=15} true
+  Skills:
+  - message{m="<caster.name>&2 has cast&6 Defensive Sword Rain!"} @PlayersInRadius{r=40}
+  - potion{type=GLOWING;duration=100;level=1;p=false} @Self
+  - potion{type=SLOW;duration=100;level=4;p=false} @Self
+  - sound{s=entity.allay.hurt;v=3;p=2} @self
+  - sound{s=entity.evoker.prepare_summon;v=3;p=2} @self
+  - summon{type=sword_bullet;amount=4;radius=9;repeat=60;repeatInterval=1} @Forward{f=5;uel=true;rot=0;yo=3}
+  - leap{velocity=-150;repeat=30;repeatInterval=2} @target
+  - throw{velocity=1;velocityY=-10;repeat=12;repeatInterval=5} @Target
+  - potion{type=SLOW;duration=40;level=4;p=false} @Target
+
+#uses demon sword bullets
+demon_sword_summon:
+  Cooldown: 7
+  Conditions:
+  - targetwithin{d=40} true
+  Skills:
+  - message{m="<caster.name>&2 summons&6 Demonic Swords!"} @PlayersInRadius{r=40}
+  - sound{s=entity.evoker.prepare_summon;v=3;p=1} @self
+  - potion{type=GLOWING;duration=10;level=1;p=false} @Self
+  - potion{type=SLOW;duration=30;level=4;p=false} @Self
+  - sound{s=entity.zombie.attack_iron_door;v=3;p=0.5} @self
+  - throw{velocity=10;velocityY=2;repeat=2;repeatInterval=4} @PIR{r=7}
+  - delay 5
+  - summon{type=demon_sword_bullet;amount=1;radius=1} @Forward{f=5;uel=true;rot=0;yo=0}
+  - delay 2
+  - summon{type=demon_sword_bullet;amount=1;radius=1} @Forward{f=5;uel=true;rot=30;yo=0}
+  - delay 2
+  - summon{type=demon_sword_bullet;amount=1;radius=1} @Forward{f=5;uel=true;rot=-30;yo=0}
+  - delay 2
+  - summon{type=demon_sword_bullet;amount=1;radius=1} @Forward{f=5;uel=true;rot=60;yo=0}
+  - delay 2
+  - summon{type=demon_sword_bullet;amount=1;radius=1} @Forward{f=5;uel=true;rot=-60;yo=0}
+
+demon_sword_assault:
+  Cooldown: 5
+  Conditions:
+  - targetwithin{d=40} true
+  Skills:
+  - message{m="<caster.name>&2 casted&6 Demonic Sword Assault!"} @PlayersInRadius{r=40}
+  - sound{s=entity.evoker.prepare_summon;v=3;p=0.5} @self
+  - sound{s=entity.wither.ambient;v=3;p=0.5} @self
+  - potion{type=GLOWING;duration=10;level=1;p=false} @Self
+  - potion{type=SLOW;duration=30;level=4;p=false} @Self
+  - sound{s=entity.zombie.attack_iron_door;v=3;p=0.5} @self
+  - throw{velocity=5;velocityY=1;repeat=2;repeatInterval=4} @PIR{r=7}
+  - delay 5
+  - summon{type=demon_sword_bullet;amount=1;radius=1;repeat=10;repeatInterval=2} @Forward{f=5;uel=true;rot=0;yo=3}
+
+demon_sword_encirclement:
+  Cooldown: 5
+  Conditions:
+  - targetwithin{d=40} true
+  Skills:
+  - message{m="<caster.name>&2 casted&6 Demonic Sword Encirclement!"} @PlayersInRadius{r=40}
+  - sound{s=entity.evoker.prepare_summon;v=3;p=2} @self
+  - sound{s=entity.wither.ambient;v=3;p=2} @self
+  - potion{type=GLOWING;duration=10;level=1;p=false} @Self
+  - potion{type=SLOW;duration=30;level=4;p=false} @Self
+  - sound{s=entity.zombie.attack_iron_door;v=3;p=0.5} @self
+  - leap{velocity=-200;repeat=4;repeatInterval=5} @target
+  - delay 5
+  - summon{type=demon_sword_bullet;amount=9;radius=10} @Target
+
+demon_sword_summon_nokb:
+  Cooldown: 7
+  Conditions:
+  - targetwithin{d=40} true
+  Skills:
+  - message{m="<caster.name>&2 summons&6 Demonic Swords!"} @PlayersInRadius{r=40}
+  - sound{s=entity.evoker.prepare_summon;v=3;p=1} @self
+  - potion{type=GLOWING;duration=10;level=1;p=false} @Self
+  - potion{type=SLOW;duration=30;level=4;p=false} @Self
+  - sound{s=entity.zombie.attack_iron_door;v=3;p=0.5} @self
+  - delay 5
+  - summon{type=demon_sword_bullet;amount=1;radius=1} @Forward{f=5;uel=true;rot=0;yo=0}
+  - delay 2
+  - summon{type=demon_sword_bullet;amount=1;radius=1} @Forward{f=5;uel=true;rot=30;yo=0}
+  - delay 2
+  - summon{type=demon_sword_bullet;amount=1;radius=1} @Forward{f=5;uel=true;rot=-30;yo=0}
+  - delay 2
+  - summon{type=demon_sword_bullet;amount=1;radius=1} @Forward{f=5;uel=true;rot=60;yo=0}
+  - delay 2
+  - summon{type=demon_sword_bullet;amount=1;radius=1} @Forward{f=5;uel=true;rot=-60;yo=0}
+
+demon_sword_assault_nokb:
+  Cooldown: 5
+  Conditions:
+  - targetwithin{d=40} true
+  Skills:
+  - message{m="<caster.name>&2 casted&6 Demonic Sword Assault!"} @PlayersInRadius{r=40}
+  - sound{s=entity.evoker.prepare_summon;v=3;p=0.5} @self
+  - sound{s=entity.wither.ambient;v=3;p=0.5} @self
+  - potion{type=GLOWING;duration=10;level=1;p=false} @Self
+  - potion{type=SLOW;duration=30;level=4;p=false} @Self
+  - sound{s=entity.zombie.attack_iron_door;v=3;p=0.5} @self
+  - delay 5
+  - summon{type=demon_sword_bullet;amount=1;radius=1;repeat=10;repeatInterval=2} @Forward{f=5;uel=true;rot=0;yo=3}
+
+demon_sword_encirclement_nokb:
+  Cooldown: 5
+  Conditions:
+  - targetwithin{d=40} true
+  Skills:
+  - message{m="<caster.name>&2 casted&6 Demonic Sword Encirclement!"} @PlayersInRadius{r=40}
+  - sound{s=entity.evoker.prepare_summon;v=3;p=2} @self
+  - sound{s=entity.wither.ambient;v=3;p=2} @self
+  - potion{type=GLOWING;duration=10;level=1;p=false} @Self
+  - potion{type=SLOW;duration=30;level=4;p=false} @Self
+  - sound{s=entity.zombie.attack_iron_door;v=3;p=0.5} @self
+  - delay 5
+  - summon{type=demon_sword_bullet;amount=9;radius=10} @Target
+
+cloud_summon:
+  Cooldown: 5
+  Conditions:
+  - targetwithin{d=30} true
+  Skills:
+  - message{m="<caster.name>&2 summons &6Deadly Clouds!"} @PlayersInRadius{r=40}
+  - potion{type=GLOWING;duration=40;level=1;p=false} @Self
+  - potion{type=SLOW;duration=40;level=4;p=false} @Self
+  - sound{s=entity.armor_stand.break;v=3;p=0.5} @self
+  - effect:particles{particle=block_crack;material=white_wool;hs=2;vs=2;a=30;repeat=2;repeatInterval=10} @Self
+  - delay 20
+  - summon{type=cloud_bullet;amount=4;radius=25} @Self
+
+cloud_summon_self:
+  Cooldown: 5
+  Conditions:
+  - targetwithin{d=30} true
+  Skills:
+  - message{m="<caster.name>&2 summons a &6Death Cloud!"} @PlayersInRadius{r=40}
+  - sound{s=entity.player.attack.sweep;v=3;p=1.5} @self
+  - potion{type=GLOWING;duration=40;level=1;p=false} @Self
+  - potion{type=SLOW;duration=40;level=4;p=false} @Self
+  - delay 20
+  - sound{s=entity.player.attack.sweep;v=3;p=0.5} @self
+  - leap{velocity=-200} @target
+  - summon{type=cloud_bullet;amount=1;radius=1} @Self
+
+#tornado bullets
+tornado_bullets:
+  Cooldown: 10
+  Conditions:
+  - targetwithin{d=30} true
+  Skills:
+  - sound{s=entity.player.attack.sweep;v=3;p=0.5} @self
+  - message{m="<caster.name>&2 summons &6Tornado Bullets!"} @PlayersInRadius{r=40}
+  - potion{type=GLOWING;duration=40;level=1;p=false} @Self
+  - potion{type=SLOW;duration=40;level=4;p=false} @Self
+  - delay 2
+  - sound{s=entity.player.attack.sweep;v=3;p=0.5} @self
+  - delay 2
+  - sound{s=entity.player.attack.sweep;v=3;p=0.7} @self
+  - delay 2
+  - sound{s=entity.player.attack.sweep;v=3;p=0.9} @self
+  - delay 2
+  - sound{s=entity.player.attack.sweep;v=3;p=1.1} @self
+  - delay 2
+  - sound{s=entity.player.attack.sweep;v=3;p=1.3} @self
+  - delay 2
+  - sound{s=entity.player.attack.sweep;v=3;p=1.5} @self
+  - delay 28
+  - sound{s=entity.player.attack.sweep;v=3;p=0.5} @self
+  - summon{type=tornado_bullet;amount=5;radius=25} @Self
+
+tornado_circle:
+  Cooldown: 10
+  Conditions:
+  - targetwithin{d=15} true
+  Skills:
+  - sound{s=entity.player.attack.sweep;v=3;p=0.5} @self
+  - message{m="<caster.name>&2 summons &6Tornado Ring!"} @PlayersInRadius{r=40}
+  - throw{velocity=7;velocityY=1} @PIR{r=5}
+  - potion{type=GLOWING;duration=40;level=1;p=false} @Self
+  - potion{type=SLOW;duration=40;level=4;p=false} @Self
+  - delay 2
+  - throw{velocity=7;velocityY=1} @PIR{r=5}
+  - sound{s=entity.player.attack.sweep;v=3;p=1.5} @self
+  - delay 2
+  - sound{s=entity.player.attack.sweep;v=3;p=1.3} @self
+  - delay 2
+  - sound{s=entity.player.attack.sweep;v=3;p=1.1} @self
+  - delay 2
+  - sound{s=entity.player.attack.sweep;v=3;p=0.9} @self
+  - delay 2
+  - sound{s=entity.player.attack.sweep;v=3;p=0.7} @self
+  - delay 2
+  - sound{s=entity.player.attack.sweep;v=3;p=0.5} @self
+  - delay 28
+  - sound{s=entity.player.attack.sweep;v=3;p=2} @self
+  - summon{type=tornado_slow_bullet;amount=1;radius=0} @Ring{r=10;p=20}
+
+tornado_waves:
+  Cooldown: 10
+  Conditions:
+  - targetwithin{d=15} true
+  Skills:
+  - sound{s=entity.evoker.cast_spell;v=3;p=0.5} @self
+  - message{m="<caster.name>&2 summons &6Tornado Waves!"} @PlayersInRadius{r=40}
+  - throw{velocity=7;velocityY=1} @PIR{r=5}
+  - potion{type=GLOWING;duration=40;level=1;p=false} @Self
+  - potion{type=SLOW;duration=40;level=4;p=false} @Self
+  - delay 2
+  - throw{velocity=7;velocityY=1} @PIR{r=5}
+  - delay 40
+  - sound{s=entity.player.attack.sweep;v=3;p=2} @self
+  - summon{type=tornado_slow_bullet;amount=1;radius=0} @Ring{r=3;p=10}
+  - delay 20
+  - pull{velocity=40} @Children
+  - delay 20
+  - pull{velocity=40} @Children
+  - delay 20
+  - pull{velocity=40} @Children
+  - delay 20
+  - pull{velocity=40} @Children
+  - delay 20
+  - pull{velocity=40} @Children
+  - delay 20
+  - pull{velocity=40} @Children
+  - delay 20
+  - pull{velocity=40} @Children
+  - delay 20
+  - pull{velocity=40} @Children
+  - delay 20
+  - pull{velocity=40} @Children
+  - delay 20
+  - pull{velocity=40} @Children
+  - delay 20
+  - pull{velocity=40} @Children
+  - delay 20
+  - pull{velocity=40} @Children
+  - delay 20
+  - pull{velocity=40} @Children
+  - delay 20
+  - pull{velocity=40} @Children
+  - delay 20
+  - pull{velocity=40} @Children
+
+hurricane_wave:
+  Cooldown: 10
+  Conditions:
+  - targetwithin{d=40} true
+  Skills:
+  - throw{velocity=1;velocityY=0.5} @PIR{r=5}
+  - sound{s=entity.evoker.cast_spell;v=3;p=0.5} @self
+  - potion{type=GLOWING;duration=40;level=1;p=false} @Self
+  - delay 2
+  - throw{velocity=8;velocityY=0} @PIR{r=7}
+  - potion{type=SLOW;duration=60;level=5;p=false} @Self
+  - delay 30
+  - sound{s=entity.player.attack.sweep;v=3;p=0.5} @self
+  - summon{type=hurricane_wave_bullet;amount=1;radius=0} @Forward{f=3;uel=true;rot=0}
+  - summon{type=hurricane_wave_bullet;amount=1;radius=0} @Forward{f=3;uel=true;rot=5}
+  - summon{type=hurricane_wave_bullet;amount=1;radius=0} @Forward{f=3;uel=true;rot=-5}
+  - summon{type=hurricane_wave_bullet;amount=1;radius=0} @Forward{f=3;uel=true;rot=10}
+  - summon{type=hurricane_wave_bullet;amount=1;radius=0} @Forward{f=3;uel=true;rot=-10}
+  - summon{type=hurricane_wave_bullet;amount=1;radius=0} @Forward{f=3;uel=true;rot=15}
+  - summon{type=hurricane_wave_bullet;amount=1;radius=0} @Forward{f=3;uel=true;rot=-15}
+  - summon{type=hurricane_wave_bullet;amount=1;radius=0} @Forward{f=3;uel=true;rot=20}
+  - summon{type=hurricane_wave_bullet;amount=1;radius=0} @Forward{f=3;uel=true;rot=-20}
+  - summon{type=hurricane_wave_bullet;amount=1;radius=0} @Forward{f=3;uel=true;rot=25}
+  - summon{type=hurricane_wave_bullet;amount=1;radius=0} @Forward{f=3;uel=true;rot=-25}
+  - summon{type=hurricane_wave_bullet;amount=1;radius=0} @Forward{f=3;uel=true;rot=30}
+  - summon{type=hurricane_wave_bullet;amount=1;radius=0} @Forward{f=3;uel=true;rot=-30}
+  - summon{type=hurricane_wave_bullet;amount=1;radius=0} @Forward{f=3;uel=true;rot=35}
+  - summon{type=hurricane_wave_bullet;amount=1;radius=0} @Forward{f=3;uel=true;rot=-35}
+  - summon{type=hurricane_wave_bullet;amount=1;radius=0} @Forward{f=3;uel=true;rot=40}
+  - summon{type=hurricane_wave_bullet;amount=1;radius=0} @Forward{f=3;uel=true;rot=-40}
+  - delay 4
+  - throw{velocity=1;velocityY=-10} @Children
+  - delay 6
+  - throw{velocity=4.5;velocityY=0;repeat=50;repeatInterval=4} @Children
+
+#boss leveling
+
+boss_players1:
+  Cooldown: 9999
+  Conditions:
+  - playersinradius{a=1;r=200}
+  Skills:
+  - message{m="&6Scaling Boss HP for 1 player!"} @PlayersInRadius{r=120}
+  - delay 5
+  - setlevel{a=set;l=2} @self
+
+boss_players2:
+  Cooldown: 9999
+  Conditions:
+  - playersinradius{a=2;r=200}
+  Skills:
+  - message{m="&6Scaling Boss HP for 2 players!"} @PlayersInRadius{r=120}
+  - delay 5
+  - setlevel{a=set;l=2} @self
+
+boss_players3:
+  Cooldown: 9999
+  Conditions:
+  - playersinradius{a=3;r=200}
+  Skills:
+  - message{m="&6Scaling Boss HP for 3 players!"} @PlayersInRadius{r=120}
+  - delay 5
+  - setlevel{a=set;l=3} @self
+
+boss_players4:
+  Cooldown: 9999
+  Conditions:
+  - playersinradius{a=4;r=200}
+  Skills:
+  - message{m="&6Scaling Boss HP for 4 players!"} @PlayersInRadius{r=120}
+  - delay 5
+  - setlevel{a=set;l=4} @self
+
+boss_players5:
+  Cooldown: 9999
+  Conditions:
+  - playersinradius{a=5;r=200}
+  Skills:
+  - message{m="&6Scaling Boss HP for 5+ players!"} @PlayersInRadius{r=120}
+  - delay 5
+  - setlevel{a=set;l=5} @self
+
+tutorial_boss_defeated:
+  Cooldown: 9999
+  Skills:
+  - command{c="stopsound <target.name>";op=false} @PIR{r=100}
+  - delay 1
+  - sound{s=ui.toast.challenge_complete;v=10;p=1} @self
+  - sendtitle{title="&6&LGUARDIAN DEFEATED";subtitle="&bWelcome to Cosmalverse!";d=300;fo=20;fi=20} @PlayersInRadius{r=100}
+  - delay 90
+  - command{c="scoreboard players set <target.name> intro 3";op=false} @PIR{r=70}
+
+boss_defeated1:
+  Cooldown: 9999
+  Skills:
+  - command{c="stopsound <target.name>";op=false} @PIR{r=100}
+  - delay 1
+  - sound{s=ui.toast.challenge_complete;v=10;p=1} @self
+  - sendtitle{title="&6&LLEGEND DEFEATED";subtitle="&bYour Universe Level has Increased!";d=300;fo=20;fi=20} @PlayersInRadius{r=100}
+
+final_evergaol_defeated1:
+  Cooldown: 9999
+  Skills:
+  - command{c="stopsound <target.name>";op=false} @PIR{r=100}
+  - delay 1
+  - sound{s=ui.toast.challenge_complete;v=10;p=1} @self
+  - sendtitle{title="&6&LULTIMATE FOE DEFEATED";subtitle="&bClaim Your Place as the Strongest!";d=300;fo=20;fi=20} @PlayersInRadius{r=100}
+
+finalboss_defeated1:
+  Cooldown: 9999
+  Skills:
+  - command{c="stopsound <target.name>";op=false} @PIR{r=100}
+  - delay 1
+  - sound{s=entity.wither.spawn;v=10;p=0.5} @self
+  - sound{s=ui.toast.challenge_complete;v=10;p=0.5} @self
+  - sendtitle{title="&6&LDIETY SLAIN";subtitle="&bA Portal to the Next World Has Opened!";d=300;fo=20;fi=20} @PlayersInRadius{r=100}
+
+dungeon_defeated1:
+  Cooldown: 9999
+  Skills:
+  - command{c="stopsound <target.name>";op=false} @PIR{r=100}
+  - delay 1
+  - sound{s=ui.toast.challenge_complete;v=10;p=1.5} @self
+  - sendtitle{title="&6&LDUNGEON COMPLETE";subtitle="&bYour Universe Level has Increased!";d=300;fo=20;fi=20} @PlayersInRadius{r=100}
+
+miniboss_defeated1:
+  Cooldown: 9999
+  Skills:
+  - command{c="stopsound <target.name>";op=false} @PIR{r=25}
+  - delay 1
+  - sound{s=ui.toast.challenge_complete;v=2;p=1} @self
+  - sendtitle{title="&6&LTITAN SLAIN";subtitle="&bThe Path Forward Has Opened!";d=300;fo=20;fi=20} @PlayersInRadius{r=25}
+
+#dungeon minibosses
+mini_music1:
+  Cooldown: 9999
+  Skills:
+  - command{c="stopsound <target.name>";op=false} @PIR{r=30}
+  - delay 1
+  - sound{s=music_disc.far;v=2;p=1} @self
+  - sendtitle{title="&c&EELECTRIC KNIGHT";subtitle="&6Knight of Deadly Storms";d=30;fo=20;fi=20} @PlayersInRadius{r=30}
+
+
+# boss skills
+#The Immured Shaman
+tutorial_music:
+  Cooldown: 9999
+  Skills:
+  - command{c="stopsound <target.name>";op=false} @PIR{r=60}
+  - delay 1
+  - sound{s=music_disc.pigstep;v=6;p=1} @self
+  - sendtitle{title="&l&bGATE SENTINEL";subtitle="&6Guardian of Cosmalverse";d=100;fo=20;fi=20} @PlayersInRadius{r=80}
+  - delay 100
+  - message{m="&6<mob.name><&co> &6Welcome, other worlder. I exist to test beings such as you."} @PlayersInRadius{r=80}
+  - delay 60
+  - message{m="&6<mob.name><&co> &6For you to enter, you must prove yourself worthy through trial in combat."} @PlayersInRadius{r=80}
+  - delay 60
+  - message{m="&6<mob.name><&co> &6Your performance will now be judged."} @PlayersInRadius{r=80}
+
+LowHealth:
+  Cooldown: 1
+  TargetConditions:
+  - health{h=<5} true
+  Skills:
+  - potion{type=DAMAGE_RESISTANCE;duration=100;level=4;p=true;p=false} @Target
+
+immured_music:
+  Cooldown: 9999
+  Skills:
+  - command{c="stopsound <target.name>";op=false} @PIR{r=60}
+  - delay 1
+  - sound{s=music_disc.pigstep;v=6;p=1} @self
+  - sendtitle{title="&c&LTHE IMMURED SHAMAN";subtitle="&7Your Worst Nightmare";d=100;fo=20;fi=20} @PlayersInRadius{r=60}
+
+blue_flames_spread:
+  Cooldown: 23
+  Conditions:
+  - targetwithin{d=30} true
+  Skills:
+  - message{m="<caster.name>&2 summons &6Azure Fire!"} @PlayersInRadius{r=40}
+  - potion{type=GLOWING;duration=40;level=1;p=false} @Self
+  - potion{type=SLOW;duration=40;level=4;p=false} @Self
+  - potion{type=LEVITATION;duration=40;level=1;p=false} @Self
+  - sound{s=entity.armor_stand.break;v=3;p=0.5} @self
+  - sound{s=entity.allay.hurt;v=3;p=0.5} @self
+  - effect:particles{particle=block_crack;material=blue_wool;hs=2;vs=2;a=30;repeat=2;repeatInterval=10} @Self
+  - delay 20
+  - summon{type=blue_fire_bullet;amount=2;radius=15;repeat=3;repeatInterval=20} @Self
+  - leap{velocity=650} @Forward{f=30;lockpitch=true}
+
+shaman_phase2:
+  Cooldown: 30
+  Skills:
+  - message{m="<caster.name>&6 is getting desperate, he readies a devestating attack!"} @PlayersInRadius{r=40}
+  - sound{s=entity.elder_guardian.curse;v=3;p=0.5} @self
+  - delay 40
+  - skill{s=fireball_barrage}
+  - skill{s=playerBigLeapAway}
+
+#Lordgeneor
+evergaol2_music:
+  Cooldown: 9999
+  Skills:
+  - command{c="stopsound <target.name>";op=false} @PIR{r=60}
+  - delay 1
+  - sound{s=music_disc.otherside;v=6;p=1} @self
+  - sendtitle{title="&4&LGENERAL OF LORDGENEOR";subtitle="&7The Scourge of Planet Origin";d=100;fo=20;fi=20} @PlayersInRadius{r=60}
+
+evergaol2_phase2:
+  Cooldown: 60
+  Skills:
+  - message{m="<caster.name><&co>&6 My warriors! Fight for glory!"} @PlayersInRadius{r=40}
+  - sound{s=entity.evoker.cast_spell;v=3;p=0.5} @self
+  - delay 40
+  - sound{s=entity.evoker.prepare_summon;v=3;p=2} @self
+  - skill{s=playerBigLeapAway}
+  - delay 10
+  - summon{type=Evergaol2_Skeleton;amount=1;radius=1} @Ring{r=5;p=6}
+
+#rumpwart the scoundral
+evergaol3_music:
+  Cooldown: 9999
+  Skills:
+  - command{c="stopsound <target.name>";op=false} @PIR{r=50}
+  - delay 1
+  - sound{s=music_disc.cat;v=4;p=0.5} @self
+  - sendtitle{title="&2&LRUMPWART THE SCOUNDREL";subtitle="&3The Most Notorious Witch on Planet Origin";d=100;fo=20;fi=20} @PlayersInRadius{r=50}
+
+evergaol4_music:
+  Cooldown: 9999
+  Skills:
+  - command{c="stopsound <target.name>";op=false} @PIR{r=60}
+  - delay 1
+  - sound{s=music_disc.blocks;v=4;p=0.5} @self
+  - sendtitle{title="&B&LDEATH ICE KNIGHT";subtitle="&7Reaper of the North Forest";d=100;fo=20;fi=20} @PlayersInRadius{r=60}
+
+summon_poison_creepers:
+  Cooldown: 20
+  Skills:
+  - message{m="<caster.name> &6summons Rumpwart Creepers!"} @PlayersInRadius{r=40}
+  - sound{s=entity.evoker.cast_spell;v=3;p=0.5} @self
+  - delay 20
+  - sound{s=entity.snowball.throw;v=3;p=0.5} @self
+  - summon{type=Evergaol3_Creeper;amount=5;radius=5}
+  - delay 100
+  - summon{type=Evergaol3_Regen_Creeper;amount=1;radius=1}
+
+#Death Ice Knight
+drink_speed_potion:
+  Cooldown: 20
+  Conditions:
+  - targetwithin{d=90} true
+  Skills:
+  - message{m="<caster.name>&2 prepares a &6Super Speed Potion!"} @PlayersInRadius{r=40}
+  - potion{type=GLOWING;duration=30;level=1;p=false} @Self
+  - potion{type=SLOWNESS;duration=30;level=4;p=false} @Self
+  - sound{s=entity.evoker.prepare_attack;v=3;p=1.5} @self
+  - sound{s=entity.generic.drink;v=3;p=1} @self
+  - delay 4
+  - sound{s=entity.generic.drink;v=3;p=1} @self
+  - delay 3
+  - sound{s=entity.generic.drink;v=3;p=0.9} @self
+  - delay 4
+  - sound{s=entity.generic.drink;v=3;p=1.1} @self
+  - delay 4
+  - sound{s=entity.generic.drink;v=3;p=0.8} @self
+  - delay 6
+  - sound{s=entity.generic.drink;v=3;p=1} @self
+  - delay 3
+  - sound{s=entity.generic.drink;v=3;p=1} @self
+  - delay 2
+  - sound{s=entity.generic.drink;v=3;p=0.9} @self
+  - delay 3
+  - sound{s=entity.generic.drink;v=3;p=1.1} @self
+  - delay 4
+  - sound{s=entity.generic.drink;v=3;p=0.8} @self
+  - delay 10
+  - shootpotion{type=SPEED;duration=200;level=3;velocity=0} @self
+
+freeze_time:
+  Cooldown: 20
+  Conditions:
+  - targetwithin{d=60} true
+  Skills:
+  - leap{velocity=100} @target
+  - message{m="<caster.name>&2 uses &BFrozen Time Prison!"} @PlayersInRadius{r=40}
+  - potion{type=GLOWING;duration=40;level=1;p=false} @Self
+  - potion{type=SLOW;duration=80;level=5;p=false} @Self
+  - sound{s=entity.evoker.prepare_attack;v=3;p=0.5} @self
+  - sound{s=entity.axolotl.death;v=3;p=0.5} @self
+  - effect:particles{particle=block_crack;material=blue_ice;hs=15;vs=1;a=100;repeat=4;repeatInterval=10} @Self
+  - delay 40
+  - sound{s=block.glass.break;v=3;p=0.5} @self
+  - effect:particles{particle=snowflake;hs=15;vs=10;a=100;repeat=10;repeatInterval=5} @Self
+  - sound{s=bone_block.place;v=3;p=2} @self
+  - potion{type=SLOW;duration=160;level=6} @PIR{r=15}
+  - freeze{ticks=300} @PIR{r=15}
+  - delay 2
+  - sound{s=block.bone_block.place;v=3;p=1.9} @self
+  - delay 2
+  - sound{s=block.bone_block.place;v=3;p=1.8} @self
+  - delay 2
+  - sound{s=block.bone_block.place;v=3;p=1.7} @self
+  - delay 2
+  - sound{s=block.bone_block.place;v=3;p=1.6} @self
+  - delay 2
+  - sound{s=block.bone_block.place;v=3;p=1.5} @self
+  - delay 2
+  - sound{s=block.bone_block.place;v=3;p=1.4} @self
+  - delay 2
+  - sound{s=block.bone_block.place;v=3;p=1.3} @self
+  - delay 2
+  - sound{s=block.bone_block.place;v=3;p=1.2} @self
+  - delay 2
+  - sound{s=block.bone_block.place;v=3;p=1.1} @self
+  - delay 2
+  - sound{s=block.bone_block.place;v=3;p=1.0} @self
+  - delay 2
+  - sound{s=block.bone_block.place;v=3;p=0.9} @self
+  - delay 2
+  - sound{s=block.bone_block.place;v=3;p=0.8} @self
+  - delay 2
+  - sound{s=block.bone_block.place;v=3;p=0.7} @self
+  - delay 2
+  - sound{s=block.bone_block.place;v=3;p=0.6} @self
+  - freeze{ticks=300} @PIR{r=15}
+  - delay 40
+  - freeze{ticks=300} @PIR{r=15}
+  - delay 40
+  - freeze{ticks=300} @PIR{r=15}
+
+#confined apostle
+
+evergaol5_music:
+  Cooldown: 9999
+  Skills:
+  - command{c="stopsound <target.name>";op=false} @PIR{r=100}
+  - delay 1
+  - sound{s=music_disc.mellohi;v=7;p=1} @self
+  - sendtitle{title="&L&6THE CONFINED APOSTLE";subtitle="&bThe All Seeing Eye";d=100;fo=20;fi=20} @PlayersInRadius{r=100}
+
+guardian_lightning:
+  Cooldown: 6
+  Conditions:
+  - targetwithin{d=40} true
+  Skills:
+  - setstance{stance=casting} @self
+  - message{m="<caster.name>&2 is attempting to strike you with&6 Lightning!"} @PlayersInRadius{r=40}
+  - potion{type=GLOWING;duration=40;level=1;p=false} @Self
+  - sound{s=entity.creeper.primed;v=3;p=2} @self
+  - effect:particles{particle=block_crack;material=orange_wool;hs=2;vs=2;a=30;repeat=2;repeatInterval=10} @Self
+  - delay 20
+  - summon{type=lightning_bullet;amount=6;radius=9} @Target
+
+# The Weapon Master
+
+evergaol6_music:
+  Cooldown: 9999
+  Skills:
+  - command{c="stopsound <target.name>";op=false} @PIR{r=100}
+  - delay 1
+  - sound{s=music_disc.pigstep;v=10;p=1} @self
+  - sendtitle{title="&L&6THE WEAPON MASTER";subtitle="&bMaster of all Combat Arts";d=100;fo=20;fi=20} @PlayersInRadius{r=100}
+
+#primordial shaman
+final_evergaol_music:
+  Cooldown: 9999
+  Skills:
+  - command{c="stopsound <target.name>";op=false} @PIR{r=100}
+  - delay 1
+  - sound{s=music_disc.pigstep;v=10;p=1} @self
+  - sendtitle{title="&L&6PRIMORDIAL SHAMAN";subtitle="&bThe Impossible Boss";d=100;fo=20;fi=20} @PlayersInRadius{r=100}
+  
+crossbow_stance:
+  Cooldown: 5
+  Conditions:
+  - targetnotwithin{d=9} true
+  Skills:
+  - message{m="<caster.name>&2 pulls out&6 Dual Shotbows!"} @PlayersInRadius{r=60}
+  - potion{type=SLOW;duration=50;level=4;p=false} @Self
+  - sound{s=entity.player.attack.crit;v=3;p=2} @self
+  - sound{s=item.crossbow.quick_charge_3;v=3;p=1} @self
+  - equip{item=crossbow HAND} @self
+  - equip{item=crossbow OFFHAND} @self
+  - delay 10
+  - sound{s=item.crossbow.loading_end;v=3;p=1} @self
+  - delay 10
+  - sound{s=item.crossbow.loading_end;v=3;p=1} @self
+  - jump{velocity=0.85}
+  - delay 10
+  - sound{s=item.crossbow.shoot;v=3;p=2} @self
+  - shoot{type=ARROW;velocity=1;damage=7;a=0.7}
+  - shoot{type=ARROW;velocity=1;damage=7;a=0.7}
+  - shoot{type=ARROW;velocity=1;damage=7;a=0.7}
+  - shoot{type=ARROW;velocity=1;damage=7;a=0.7}
+  - shoot{type=ARROW;velocity=1;damage=7;a=0.7}
+  - shoot{type=ARROW;velocity=1;damage=7;a=0.7}
+  - shoot{type=ARROW;velocity=1;damage=7;a=0.7}
+  - shoot{type=ARROW;velocity=1;damage=7;a=0.7}
+  - shoot{type=ARROW;velocity=1;damage=7;a=0.7}
+  - shoot{type=ARROW;velocity=1;damage=7;a=0.7}
+  - shoot{type=ARROW;velocity=1;damage=7;a=0.7}
+  - shoot{type=ARROW;velocity=1;damage=7;a=0.7}
+  - delay 10
+  - sound{s=item.crossbow.shoot;v=3;p=2} @self
+  - shoot{type=ARROW;velocity=1;damage=7;a=0.7}
+  - shoot{type=ARROW;velocity=1;damage=7;a=0.7}
+  - shoot{type=ARROW;velocity=1;damage=7;a=0.7}
+  - shoot{type=ARROW;velocity=1;damage=7;a=0.7}
+  - shoot{type=ARROW;velocity=1;damage=7;a=0.7}
+  - shoot{type=ARROW;velocity=1;damage=7;a=0.7}
+  - shoot{type=ARROW;velocity=1;damage=7;a=0.7}
+  - shoot{type=ARROW;velocity=1;damage=7;a=0.7}
+  - shoot{type=ARROW;velocity=1;damage=7;a=0.7}
+  - shoot{type=ARROW;velocity=1;damage=7;a=0.7}
+  - shoot{type=ARROW;velocity=1;damage=7;a=0.7}
+  - shoot{type=ARROW;velocity=1;damage=7;a=0.7}
+  - delay 5
+  - skill{s=playerBigLeapToward2}
+  - delay 10
+  - equip{item=kbresist_sword HAND} @self
+  - equip{item=kbresist_sword OFFHAND} @self
+  - sound{s=entity.wither.break_block;v=3;p=0.5} @self
+  - jump{velocity=-10}
+  - sound{s=entity.bat.takeoff;v=3;p=0.5} @self
+  - delay 3
+  - summon{type=dirt_wave;amount=5;radius=3} @Self
+  - potion{type=SLOW;duration=60;level=2;p=false} @Self
+  - delay 60
+  - equip{item=kbresist_sword HAND} @self
+  - equip{item=kbresist_sword OFFHAND} @self
+
+crossbow_stance2:
+  Cooldown: 12
+  Conditions:
+  - targetwithin{d=50} true
+  Skills:
+  - message{m="<caster.name>&2 pulls out&6 Super Dual Shotbows!"} @PlayersInRadius{r=60}
+  - potion{type=SLOW;duration=50;level=4;p=false} @Self
+  - sound{s=entity.player.attack.crit;v=3;p=2} @self
+  - sound{s=item.crossbow.quick_charge_3;v=3;p=1} @self
+  - equip{item=crossbow HAND} @self
+  - equip{item=crossbow OFFHAND} @self
+  - delay 10
+  - sound{s=item.crossbow.loading_end;v=3;p=1} @self
+  - delay 10
+  - sound{s=item.crossbow.loading_end;v=3;p=1} @self
+  - jump{velocity=0.85}
+  - delay 10
+  - sound{s=item.crossbow.shoot;v=3;p=2} @self
+  - shoot{type=ARROW;velocity=1;damage=7;a=0.7}
+  - shoot{type=ARROW;velocity=1;damage=7;a=0.7}
+  - shoot{type=ARROW;velocity=1;damage=7;a=0.7}
+  - shoot{type=ARROW;velocity=1;damage=7;a=0.7}
+  - shoot{type=ARROW;velocity=1;damage=7;a=0.7}
+  - shoot{type=ARROW;velocity=1;damage=7;a=0.7}
+  - shoot{type=ARROW;velocity=1;damage=7;a=0.7}
+  - shoot{type=ARROW;velocity=1;damage=7;a=0.7}
+  - shoot{type=ARROW;velocity=1;damage=7;a=0.7}
+  - shoot{type=ARROW;velocity=1;damage=7;a=0.7}
+  - shoot{type=ARROW;velocity=1;damage=7;a=0.7}
+  - shoot{type=ARROW;velocity=1;damage=7;a=0.7}
+  - delay 10
+  - sound{s=item.crossbow.shoot;v=3;p=2} @self
+  - shoot{type=ARROW;velocity=1;damage=7;a=0.7}
+  - shoot{type=ARROW;velocity=1;damage=7;a=0.7}
+  - shoot{type=ARROW;velocity=1;damage=7;a=0.7}
+  - shoot{type=ARROW;velocity=1;damage=7;a=0.7}
+  - shoot{type=ARROW;velocity=1;damage=7;a=0.7}
+  - shoot{type=ARROW;velocity=1;damage=7;a=0.7}
+  - shoot{type=ARROW;velocity=1;damage=7;a=0.7}
+  - shoot{type=ARROW;velocity=1;damage=7;a=0.7}
+  - shoot{type=ARROW;velocity=1;damage=7;a=0.7}
+  - shoot{type=ARROW;velocity=1;damage=7;a=0.7}
+  - shoot{type=ARROW;velocity=1;damage=7;a=0.7}
+  - shoot{type=ARROW;velocity=1;damage=7;a=0.7}
+  - delay 10
+  - sound{s=item.crossbow.shoot;v=3;p=2} @self
+  - shoot{type=ARROW;velocity=1;damage=7;a=0.7}
+  - shoot{type=ARROW;velocity=1;damage=7;a=0.7}
+  - shoot{type=ARROW;velocity=1;damage=7;a=0.7}
+  - shoot{type=ARROW;velocity=1;damage=7;a=0.7}
+  - shoot{type=ARROW;velocity=1;damage=7;a=0.7}
+  - shoot{type=ARROW;velocity=1;damage=7;a=0.7}
+  - shoot{type=ARROW;velocity=1;damage=7;a=0.7}
+  - shoot{type=ARROW;velocity=1;damage=7;a=0.7}
+  - shoot{type=ARROW;velocity=1;damage=7;a=0.7}
+  - shoot{type=ARROW;velocity=1;damage=7;a=0.7}
+  - shoot{type=ARROW;velocity=1;damage=7;a=0.7}
+  - shoot{type=ARROW;velocity=1;damage=7;a=0.7}
+  - delay 10
+  - sound{s=item.crossbow.shoot;v=3;p=2} @self
+  - shoot{type=ARROW;velocity=1;damage=7;a=0.7}
+  - shoot{type=ARROW;velocity=1;damage=7;a=0.7}
+  - shoot{type=ARROW;velocity=1;damage=7;a=0.7}
+  - shoot{type=ARROW;velocity=1;damage=7;a=0.7}
+  - shoot{type=ARROW;velocity=1;damage=7;a=0.7}
+  - shoot{type=ARROW;velocity=1;damage=7;a=0.7}
+  - shoot{type=ARROW;velocity=1;damage=7;a=0.7}
+  - shoot{type=ARROW;velocity=1;damage=7;a=0.7}
+  - shoot{type=ARROW;velocity=1;damage=7;a=0.7}
+  - shoot{type=ARROW;velocity=1;damage=7;a=0.7}
+  - shoot{type=ARROW;velocity=1;damage=7;a=0.7}
+  - shoot{type=ARROW;velocity=1;damage=7;a=0.7}
+  - delay 5
+  - skill{s=playerBigLeapToward2}
+  - delay 10
+  - equip{item=kbresist_sword HAND} @self
+  - equip{item=kbresist_sword OFFHAND} @self
+  - sound{s=entity.wither.break_block;v=3;p=0.5} @self
+  - jump{velocity=-10}
+  - sound{s=entity.bat.takeoff;v=3;p=0.5} @self
+  - delay 3
+  - summon{type=dirt_wave;amount=5;radius=3} @Self
+  - potion{type=SLOW;duration=60;level=2;p=false} @Self
+  - delay 60
+  - equip{item=kbresist_sword HAND} @self
+  - equip{item=kbresist_sword OFFHAND} @self
+
+berserker_stance:
+  Cooldown: 16
+  Conditions:
+  - targetwithin{d=9} true
+  Skills:
+  - sound{s=item.armor.equip_netherite;v=3;p=0.5} @self
+  - effect:glow{color=GREEN;duration=160}
+  - potion{type=SLOW;duration=160;level=0;p=false} @Self
+  - potion{type=RESISTANCE;duration=160;level=1;p=false} @Self
+  - equip{item=kbresist_axe HAND} @self
+  - equip{item=kbresist_axe OFFHAND} @self
+  - delay 160
+  - leap{velocity=-310} @target
+  - potion{type=SLOW;duration=40;level=3;p=false} @Self
+  - sound{s=entity.player.attack.crit;v=3;p=2} @self
+  - sound{s=item.crossbow.quick_charge_3;v=3;p=1} @self
+  - equip{item=crossbow OFFHAND} @self
+  - delay 20
+  - sound{s=item.crossbow.loading_end;v=3;p=1} @self
+  - delay 10
+  - sound{s=item.crossbow.shoot;v=3;p=1} @self
+  - shoot{type=ARROW;velocity=1;damage=7;a=0.7}
+  - shoot{type=ARROW;velocity=1;damage=7;a=0.7}
+  - shoot{type=ARROW;velocity=1;damage=7;a=0.7}
+  - shoot{type=ARROW;velocity=1;damage=7;a=0.7}
+  - shoot{type=ARROW;velocity=1;damage=7;a=0.7}
+  - shoot{type=ARROW;velocity=1;damage=7;a=0.7}
+  - shoot{type=ARROW;velocity=1;damage=7;a=0.7}
+  - shoot{type=ARROW;velocity=1;damage=7;a=0.7}
+  - shoot{type=ARROW;velocity=1;damage=7;a=0.7}
+  - shoot{type=ARROW;velocity=1;damage=7;a=0.7}
+  - shoot{type=ARROW;velocity=1;damage=7;a=0.7}
+  - shoot{type=ARROW;velocity=1;damage=7;a=0.7}
+  - delay 10
+  - sound{s=item.armor.equip_chain;v=3;p=1} @self
+  - equip{item=kbresist_sword HAND} @self
+  - equip{item=kbresist_sword OFFHAND} @self
+
+berserker_stance2:
+  Cooldown: 16
+  Conditions:
+  - targetwithin{d=9} true
+  Skills:
+  - sound{s=item.armor.equip_netherite;v=3;p=0.5} @self
+  - effect:glow{color=GREEN;duration=160}
+  - potion{type=SLOW;duration=160;level=0;p=false} @Self
+  - potion{type=RESISTANCE;duration=160;level=1;p=false} @Self
+  - equip{item=kbresist_axe HAND} @self
+  - equip{item=kbresist_axe OFFHAND} @self
+  - delay 160
+  - leap{velocity=-310} @target
+  - potion{type=SLOW;duration=40;level=3;p=false} @Self
+  - sound{s=entity.player.attack.crit;v=3;p=2} @self
+  - sound{s=item.crossbow.quick_charge_3;v=3;p=1} @self
+  - equip{item=crossbow OFFHAND} @self
+  - delay 20
+  - sound{s=item.crossbow.loading_end;v=3;p=1} @self
+  - delay 10
+  - sound{s=item.crossbow.shoot;v=3;p=1} @self
+  - shoot{type=ARROW;velocity=1;damage=7;a=0.7}
+  - shoot{type=ARROW;velocity=1;damage=7;a=0.7}
+  - shoot{type=ARROW;velocity=1;damage=7;a=0.7}
+  - shoot{type=ARROW;velocity=1;damage=7;a=0.7}
+  - shoot{type=ARROW;velocity=1;damage=7;a=0.7}
+  - shoot{type=ARROW;velocity=1;damage=7;a=0.7}
+  - shoot{type=ARROW;velocity=1;damage=7;a=0.7}
+  - shoot{type=ARROW;velocity=1;damage=7;a=0.7}
+  - shoot{type=ARROW;velocity=1;damage=7;a=0.7}
+  - shoot{type=ARROW;velocity=1;damage=7;a=0.7}
+  - shoot{type=ARROW;velocity=1;damage=7;a=0.7}
+  - shoot{type=ARROW;velocity=1;damage=7;a=0.7}
+  - delay 10
+  - sound{s=item.crossbow.shoot;v=3;p=1} @self
+  - shoot{type=ARROW;velocity=1;damage=7;a=0.7}
+  - shoot{type=ARROW;velocity=1;damage=7;a=0.7}
+  - shoot{type=ARROW;velocity=1;damage=7;a=0.7}
+  - shoot{type=ARROW;velocity=1;damage=7;a=0.7}
+  - shoot{type=ARROW;velocity=1;damage=7;a=0.7}
+  - shoot{type=ARROW;velocity=1;damage=7;a=0.7}
+  - shoot{type=ARROW;velocity=1;damage=7;a=0.7}
+  - shoot{type=ARROW;velocity=1;damage=7;a=0.7}
+  - shoot{type=ARROW;velocity=1;damage=7;a=0.7}
+  - shoot{type=ARROW;velocity=1;damage=7;a=0.7}
+  - shoot{type=ARROW;velocity=1;damage=7;a=0.7}
+  - shoot{type=ARROW;velocity=1;damage=7;a=0.7}
+  - delay 10
+  - sound{s=item.armor.equip_chain;v=3;p=1} @self
+  - equip{item=kbresist_sword HAND} @self
+  - equip{item=kbresist_sword OFFHAND} @self
+
+# Frost Giant King
+evergaol7_music:
+  Cooldown: 9999
+  Skills:
+  - command{c="stopsound <target.name>";op=false} @PIR{r=100}
+  - delay 1
+  - sound{s=music_disc.strad;v=6;p=1} @self
+  - sendtitle{title="&L&9FROST GIANT KING";subtitle="&bLord of a Fallen Realm";d=100;fo=20;fi=20} @PlayersInRadius{r=90}
+
+ice_bombs:
+  Cooldown: 12
+  Conditions:
+  - targetwithin{d=70} true
+  Skills:
+  - message{m="<caster.name>&2 summons &6Frost Bombs!"} @PlayersInRadius{r=70}
+  - potion{type=GLOWING;duration=60;level=1;p=false} @Self
+  - potion{type=SLOW;duration=60;level=4;p=false} @Self
+  - sound{s=entity.evoker.prepare_summon;v=5;p=0.5} @self
+  - delay 20
+  - summon{type=giant_ice_bullet;amount=1;radius=3;repeat=6;repeatInterval=20} @Self
+
+ice_rain:
+  Cooldown: 5
+  Conditions:
+  - targetwithin{d=70} true
+  Skills:
+  - message{m="<caster.name>&2 summons a &6Hail Storm!"} @PlayersInRadius{r=70}
+  - potion{type=GLOWING;duration=40;level=1;p=false} @Self
+  - potion{type=SLOW;duration=40;level=4;p=false} @Self
+  - sound{s=entity.evoker.prepare_summon;v=5;p=2} @self
+  - delay 20
+  - summon{type=ice_rain;amount=5;radius=6;repeat=12;repeatInterval=4} @Target
+
+#reaper of the west
+evergaol9_music:
+  Cooldown: 9999
+  Skills:
+  - command{c="stopsound <target.name>";op=false} @PIR{r=100}
+  - delay 1
+  - sound{s=music_disc.pigstep;v=10;p=1} @self
+  - sendtitle{title="&L&7REAPER OF THE WEST";subtitle="&bHarvester of Souls";d=100;fo=20;fi=20} @PlayersInRadius{r=100}
+
+reaper_clouds:
+  Cooldown: 5
+  Conditions:
+  - targetwithin{d=30} true
+  Skills:
+  - message{m="<caster.name>&2 summons &6Reaper Clouds!"} @PlayersInRadius{r=40}
+  - potion{type=GLOWING;duration=40;level=1;p=false} @Self
+  - potion{type=SLOW;duration=40;level=4;p=false} @Self
+  - sound{s=entity.tnt.primed;v=3;p=1} @self
+  - effect:particles{particle=block_crack;material=black_wool;hs=2;vs=2;a=30;repeat=2;repeatInterval=10} @Self
+  - delay 20
+  - sound{s=entity.wither.shoot.;v=3;p=0.5} @self
+  - summon{type=dark_cloud_bullet;amount=7;radius=13} @Location{location=-22,-20,-227,0,0}
+
+melee_stance:
+  Cooldown: 10
+  Conditions:
+  - targetwithin{d=25} true
+  Skills:
+  - sound{s=item.armor.equip_netherite;v=3;p=0.5} @self
+  - potion{type=SPEED;duration=140;level=1;p=true} @Self
+  - equip{item=Reaper_Axe HAND} @self
+  - delay 140
+  - equip{item=Reaper_Bow HAND} @self
+
+
+# Dungeon skills
+dungeon1_music:
+  Cooldown: 9999
+  Skills:
+  - command{c="stopsound <target.name>";op=false} @PIR{r=100}
+  - delay 1
+  - sound{s=music_disc.strad;v=10;p=1} @self
+  - sendtitle{title="&L&ELIGHTNING EVOKER";subtitle="&7Summoner of Spirits and Lightning";d=100;fo=20;fi=20} @PlayersInRadius{r=100}
+
+dungeon2_music:
+  Cooldown: 9999
+  Skills:
+  - command{c="stopsound <target.name>";op=false} @PIR{r=100}
+  - delay 1
+  - sound{s=music_disc.ward;v=10;p=1} @self
+  - sendtitle{title="&L&BSKY KING PHANTOM";subtitle="&6Ruler of the Wind";d=100;fo=20;fi=20} @PlayersInRadius{r=100}
+
+skyking_tornado_bullets:
+  Cooldown: 10
+  Conditions:
+  - targetwithin{d=50} true
+  Skills:
+  - sound{s=entity.player.attack.sweep;v=3;p=0.5} @self
+  - message{m="<caster.name>&2 summons &6Tornado Bullets!"} @PlayersInRadius{r=40}
+  - potion{type=GLOWING;duration=40;level=1;p=false} @Self
+  - potion{type=SLOW;duration=40;level=4;p=false} @Self
+  - delay 2
+  - sound{s=entity.player.attack.sweep;v=3;p=0.5} @self
+  - delay 2
+  - sound{s=entity.player.attack.sweep;v=3;p=0.7} @self
+  - delay 2
+  - sound{s=entity.player.attack.sweep;v=3;p=0.9} @self
+  - delay 2
+  - sound{s=entity.player.attack.sweep;v=3;p=1.1} @self
+  - delay 2
+  - sound{s=entity.player.attack.sweep;v=3;p=1.3} @self
+  - delay 2
+  - sound{s=entity.player.attack.sweep;v=3;p=1.5} @self
+  - delay 28
+  - sound{s=entity.player.attack.sweep;v=3;p=0.5} @self
+  - summon{type=tornado_bullet;amount=10;radius=15} @Self
+
+dripstone_smasher:
+  Cooldown: 10
+  Conditions:
+  - targetwithin 100
+  Skills:
+  - message{m="<caster.name>&2 &6Shakes the Entire Cave!"} @PlayersInRadius{r=60}
+  - potion{type=SLOW;duration=80;level=4;p=false} @Self
+  - sound{s=entity.ender_dragon.growl;v=3;p=1} @self
+  - equip{item=crossbow HAND} @self
+  - equip{item=crossbow OFFHAND} @self
+  - jump{velocity=1}
+  - delay 30
+  - sound{s=entity.wither_skeleton.hurt;v=3;p=0.5} @self
+  - summon{type=dripstone_bullet;amount=20;radius=25;repeat=5;repeatInterval=20} @Self
+
+dripstone_wave:
+  Cooldown: 10
+  Conditions:
+  - targetwithin 100
+  Skills:
+  - message{m="<caster.name>&2 &6Shakes Forward!"} @PlayersInRadius{r=60}
+  - potion{type=SLOW;duration=70;level=4;p=false} @Self
+  - sound{s=entity.ender_dragon.growl;v=3;p=2} @self
+  - equip{item=crossbow HAND} @self
+  - equip{item=crossbow OFFHAND} @self
+  - jump{velocity=1}
+  - delay 30
+  - sound{s=entity.wither_skeleton.hurt;v=3;p=0.5} @self
+  - summon{type=dripstone_bullet;amount=5;radius=4} @Forward{f=2;uel=false;rot=0}
+  - delay 5
+  - summon{type=dripstone_bullet;amount=5;radius=4} @Forward{f=5;uel=false;rot=0}
+  - delay 5
+  - summon{type=dripstone_bullet;amount=5;radius=4} @Forward{f=8;uel=false;rot=0}
+  - delay 5
+  - summon{type=dripstone_bullet;amount=8;radius=4} @Forward{f=11;uel=false;rot=0}
+  - delay 5
+  - summon{type=dripstone_bullet;amount=8;radius=4} @Forward{f=14;uel=false;rot=0}
+  - delay 5
+  - summon{type=dripstone_bullet;amount=8;radius=4} @Forward{f=17;uel=false;rot=0}
+  - delay 5
+  - summon{type=dripstone_bullet;amount=8;radius=4} @Forward{f=19;uel=false;rot=0}
+  - delay 5
+  - summon{type=dripstone_bullet;amount=8;radius=4} @Forward{f=21;uel=false;rot=0}
+
+dungeon3_music:
+  Cooldown: 9999
+  Skills:
+  - command{c="stopsound <target.name>";op=false} @PIR{r=100}
+  - delay 1
+  - sound{s=music_disc.chirp;v=10;p=1} @self
+  - sendtitle{title="&L&2ABOMINATION RAVAGER";subtitle="&3Destroyer of the Earth";d=100;fo=20;fi=20} @PlayersInRadius{r=100}
+
+dungeon4_music:
+  Cooldown: 9999
+  Skills:
+  - command{c="stopsound <target.name>";op=false} @PIR{r=100}
+  - delay 1
+  - sound{s=music_disc.mall;v=10;p=1} @self
+  - sendtitle{title="&L&6TOWER MASTER";subtitle="Turtle of Doom";d=100;fo=20;fi=20} @PlayersInRadius{r=100}
+
+towermaster:
+  Cooldown: 9999
+  Skills:
+  - message{m="<caster.name><&co>&2 You think you can bully me?! I'll show you!!!"} @PlayersInRadius{r=60}
+  - potion{type=GLOWING;duration=70;level=4;p=false} @Self
+  - sound{s=entity.ender_dragon.growl;v=3;p=2} @self
+  - delay 40
+  - mount{type=Tower1} @self
+
+dungeon5_music:
+  Cooldown: 9999
+  Skills:
+  - command{c="stopsound <target.name>";op=false} @PIR{r=100}
+  - delay 1
+  - sound{s=music_disc.5;v=10;p=1} @self
+  - sendtitle{title="&L&2ARAKUNA";subtitle="&3The Infamous Cannibal Spider";d=100;fo=20;fi=20} @PlayersInRadius{r=100}
+
+arakuna_potion:
+  Cooldown: 10
+  Conditions:
+  - targetwithin{d=40} true
+  Skills:
+  - message{m="<caster.name>&2 readies a&6 Super Poison Splash!"} @PlayersInRadius{r=40}
+  - potion{type=GLOWING;duration=30;level=1;p=false} @Self
+  - sound{s=entity.evoker.prepare_attack;v=3;p=1.5} @self
+  - sound{s=entity.wither.break_block;v=3;p=0.5} @self
+  - delay 30
+  - sound{s=entity.egg.throw;v=3;p=0.8} @self
+  - shootpotion{type=POISON;duration=400;level=0;velocity=1} @NearestPlayer
+
+#Minotaur
+
+dungeon6_music:
+  Cooldown: 9999
+  Skills:
+  - command{c="stopsound <target.name>";op=false} @PIR{r=100}
+  - delay 1
+  - sound{s=music_disc.11;v=10;p=0.75} @self
+  - sendtitle{title="&L&cLABYRINTH MINOTAUR";subtitle="&4Terror of the Labyrinth";d=100;fo=20;fi=20} @PlayersInRadius{r=100}
+  - potion{type=DAMAGE_RESISTANCE;duration=99999;level=5} @Self
+  - potion{type=GLOWING;duration=99999;level=5} @Self
+  - delay 40
+  - message{m="<caster.name>&2 uses &6Blessing of the Labyrinth!"} @PlayersInRadius{r=40}
+
+dungeon7_music:
+  Cooldown: 9999
+  Skills:
+  - command{c="stopsound <target.name>";op=false} @PIR{r=100}
+  - delay 1
+  - sound{s=music_disc.11;v=10;p=0.75} @self
+  - sendtitle{title="&L&cLABYRINTH MINOTAUR";subtitle="&4Terror of the Labyrinth";d=100;fo=20;fi=20} @PlayersInRadius{r=100}
+  - potion{type=DAMAGE_RESISTANCE;duration=99999;level=5} @Self
+  - potion{type=GLOWING;duration=99999;level=5} @Self
+  - delay 40
+  - message{m="<caster.name>&2 uses &6Blessing of the Labyrinth!"} @PlayersInRadius{r=40}
+
+dungeon8_music:
+  Cooldown: 9999
+  Skills:
+  - command{c="stopsound <target.name>";op=false} @PIR{r=100}
+  - delay 1
+  - sound{s=music_disc.11;v=10;p=0.75} @self
+  - sendtitle{title="&L&eFOUNTAIN GUARDIAN";subtitle="&9Fairy of Ocean Rock";d=100;fo=20;fi=20} @PlayersInRadius{r=100}
+  - potion{type=GLOWING;duration=99999;level=5} @Self
+
+dungeon9_music:
+  Cooldown: 9999
+  Skills:
+  - command{c="stopsound <target.name>";op=false} @PIR{r=100}
+  - delay 1
+  - sound{s=music_disc.pigstep;v=10;p=1} @self
+  - sendtitle{title="&L&BCorrupted Crystal Heads";subtitle="&7Creator of the Crystal Graveyard";d=100;fo=20;fi=20} @PlayersInRadius{r=100}
+
+vex_shoot:
+  Cooldown: 4
+  Conditions:
+  - targetwithin{d=100} true
+  Skills:
+  - potion{type=SLOW;duration=50;level=4;p=false} @Self
+  - sound{s=entity.player.attack.crit;v=3;p=2} @self
+  - sound{s=item.crossbow.quick_charge_3;v=3;p=1} @self
+  - equip{item=arrow OFFHAND} @self
+  - delay 10
+  - sound{s=item.crossbow.loading_end;v=3;p=1} @self
+  - delay 10
+  - equip{item=crossbow OFFHAND} @self
+  - sound{s=item.crossbow.loading_end;v=3;p=1} @self
+  - delay 10
+  - sound{s=item.crossbow.shoot;v=3;p=1} @self
+  - shoot{type=ARROW;velocity=1;damage=80;a=0.7;kb=3} @Target
+  - shoot{type=ARROW;velocity=1;damage=80;a=0.7;kb=3} @Target
+  - shoot{type=ARROW;velocity=1;damage=80;a=0.7;kb=3} @Target
+  - shoot{type=ARROW;velocity=1;damage=80;a=0.7;kb=3} @Target
+  - shoot{type=ARROW;velocity=1;damage=80;a=0.7;kb=3} @Target
+
+stay_out_of_ground:
+  Cooldown: 1
+  Conditions:
+  - inblock{b=STONE} true
+  Skills:
+  - jump{velocity=0.2} @self
+
+dungeon_lava_music:
+  Cooldown: 9999
+  Skills:
+  - command{c="stopsound <target.name>";op=false} @PIR{r=100}
+  - delay 1
+  - sound{s=music_disc.blocks;v=10;p=0.75} @self
+  - sendtitle{title="&L&4Ghast of Tyranny";subtitle="&5Space Lava Scourge";d=100;fo=20;fi=20} @PlayersInRadius{r=100}
+
+#final boss
+boss_defeated_final:
+  Cooldown: 9999
+  Skills:
+  - command{c="stopsound <target.name>";op=false} @PIR{r=100}
+  - delay 1
+  - sound{s=ui.toast.challenge_complete;v=10;p=1} @self
+  - sendtitle{title="&BDEITY SLAIN";subtitle="&bYou can now access the next galaxy!";d=300;fo=20;fi=20} @PlayersInRadius{r=100}
+
+dungeon10_music:
+  Cooldown: 9999
+  Skills:
+  - command{c="stopsound <target.name>";op=false} @PIR{r=100}
+  - delay 1
+  - sound{s=music_disc.chirp;v=10;p=1} @self
+  - sendtitle{title="&L&cLORD OF ORIGIN";subtitle="&bDeity of Planet Origin";d=100;fo=20;fi=20} @PlayersInRadius{r=100}
+
+origin_shoot1:
+  Cooldown: 30
+  Conditions:
+  - targetwithin{d=100} true
+  Skills:
+  - message{m="<caster.name>&2 readies a&6 Super Arrow Barrage!"} @PlayersInRadius{r=40}
+  - potion{type=SLOW;duration=50;level=4;p=false} @Self
+  - sound{s=entity.player.attack.crit;v=3;p=2} @self
+  - sound{s=item.crossbow.quick_charge_3;v=3;p=1} @self
+  - equip{item=arrow OFFHAND} @self
+  - delay 10
+  - sound{s=item.crossbow.loading_end;v=3;p=0.5} @self
+  - delay 10
+  - equip{item=bow OFFHAND} @self
+  - sound{s=item.crossbow.loading_end;v=3;p=0.5} @self
+  - delay 10
+  - sound{s=item.crossbow.shoot;v=3;p=1} @self
+  - shoot{type=ARROW;velocity=1;damage=7;a=0.7;kb=3} @Target
+  - shoot{type=ARROW;velocity=1;damage=7;a=0.7;kb=3} @Target
+  - shoot{type=ARROW;velocity=1;damage=7;a=0.7;kb=3} @Target
+  - shoot{type=ARROW;velocity=1;damage=7;a=0.7;kb=3} @Target
+  - shoot{type=ARROW;velocity=1;damage=7;a=0.7;kb=3} @Target
+  - delay 10
+  - sound{s=item.crossbow.shoot;v=3;p=1} @self
+  - shoot{type=ARROW;velocity=1;damage=7;a=0.7;kb=3} @Target
+  - shoot{type=ARROW;velocity=1;damage=7;a=0.7;kb=3} @Target
+  - shoot{type=ARROW;velocity=1;damage=7;a=0.7;kb=3} @Target
+  - shoot{type=ARROW;velocity=1;damage=7;a=0.7;kb=3} @Target
+  - shoot{type=ARROW;velocity=1;damage=7;a=0.7;kb=3} @Target
+  - delay 10
+  - sound{s=item.crossbow.shoot;v=3;p=1} @self
+  - shoot{type=ARROW;velocity=1;damage=7;a=0.7;kb=3} @Target
+  - shoot{type=ARROW;velocity=1;damage=7;a=0.7;kb=3} @Target
+  - shoot{type=ARROW;velocity=1;damage=7;a=0.7;kb=3} @Target
+  - shoot{type=ARROW;velocity=1;damage=7;a=0.7;kb=3} @Target
+  - shoot{type=ARROW;velocity=1;damage=7;a=0.7;kb=3} @Target
+  - delay 10
+  - sound{s=item.crossbow.shoot;v=3;p=1} @self
+  - shoot{type=ARROW;velocity=1;damage=7;a=0.7;kb=3} @Target
+  - shoot{type=ARROW;velocity=1;damage=7;a=0.7;kb=3} @Target
+  - shoot{type=ARROW;velocity=1;damage=7;a=0.7;kb=3} @Target
+  - shoot{type=ARROW;velocity=1;damage=7;a=0.7;kb=3} @Target
+  - shoot{type=ARROW;velocity=1;damage=7;a=0.7;kb=3} @Target
+  - delay 10
+  - sound{s=item.crossbow.shoot;v=3;p=1} @self
+  - shoot{type=ARROW;velocity=1;damage=7;a=0.7;kb=3} @Target
+  - shoot{type=ARROW;velocity=1;damage=7;a=0.7;kb=3} @Target
+  - shoot{type=ARROW;velocity=1;damage=7;a=0.7;kb=3} @Target
+  - shoot{type=ARROW;velocity=1;damage=7;a=0.7;kb=3} @Target
+  - shoot{type=ARROW;velocity=1;damage=7;a=0.7;kb=3} @Target
+  - delay 10
+  - sound{s=item.crossbow.shoot;v=3;p=1} @self
+  - shoot{type=ARROW;velocity=1;damage=7;a=0.7;kb=3} @Target
+  - shoot{type=ARROW;velocity=1;damage=7;a=0.7;kb=3} @Target
+  - shoot{type=ARROW;velocity=1;damage=7;a=0.7;kb=3} @Target
+  - shoot{type=ARROW;velocity=1;damage=7;a=0.7;kb=3} @Target
+  - shoot{type=ARROW;velocity=1;damage=7;a=0.7;kb=3} @Target
+  - delay 10
+  - sound{s=item.crossbow.shoot;v=3;p=1} @self
+  - shoot{type=ARROW;velocity=1;damage=7;a=0.7;kb=3} @Target
+  - shoot{type=ARROW;velocity=1;damage=7;a=0.7;kb=3} @Target
+  - shoot{type=ARROW;velocity=1;damage=7;a=0.7;kb=3} @Target
+  - shoot{type=ARROW;velocity=1;damage=7;a=0.7;kb=3} @Target
+  - shoot{type=ARROW;velocity=1;damage=7;a=0.7;kb=3} @Target
+
+origin_arrow_barrage:
+  Cooldown: 15
+  Conditions:
+  - targetwithin{d=100} true
+  Skills:
+  - message{m="<caster.name>&2 uses&6 Super Gattling Arrow Barrage!"} @PlayersInRadius{r=40}
+  - potion{type=SLOW;duration=50;level=4;p=false} @Self
+  - sound{s=entity.player.attack.crit;v=3;p=0.5} @self
+  - sound{s=item.crossbow.quick_charge_3;v=3;p=1} @self
+  - equip{item=arrow OFFHAND} @self
+  - delay 10
+  - sound{s=item.crossbow.loading_end;v=3;p=0.5} @self
+  - delay 10
+  - equip{item=bow OFFHAND} @self
+  - effect:sound{s=entity.arrow.shoot;volume=2;pitch=1.2} @self
+  - shoot{type=ARROW;velocity=1;damage=7;a=0.8;kb=1} @Target
+  - delay 4
+  - effect:sound{s=entity.arrow.shoot;volume=2;pitch=0.9} @self
+  - shoot{type=ARROW;velocity=1;damage=7;a=0.8;kb=3} @Target
+  - delay 4
+  - effect:sound{s=entity.arrow.shoot;volume=2;pitch=1.0} @self
+  - shoot{type=ARROW;velocity=1;damage=7;a=0.8;kb=3} @Target
+  - delay 4
+  - effect:sound{s=entity.arrow.shoot;volume=2;pitch=1.2} @self
+  - shoot{type=ARROW;velocity=1;damage=7;a=0.8;kb=3} @Target
+  - delay 4
+  - effect:sound{s=entity.arrow.shoot;volume=2;pitch=1.1} @self
+  - shoot{type=ARROW;velocity=1;damage=7;a=0.8;kb=3} @Target
+  - delay 4
+  - effect:sound{s=entity.arrow.shoot;volume=2;pitch=0.9} @self
+  - shoot{type=ARROW;velocity=1;damage=7;a=0.8;kb=3} @Target
+  - delay 4
+  - effect:sound{s=entity.arrow.shoot;volume=2;pitch=1.0} @self
+  - shoot{type=ARROW;velocity=1;damage=7;a=0.8;kb=3} @Target
+  - delay 4
+  - effect:sound{s=entity.arrow.shoot;volume=2;pitch=1.3} @self
+  - shoot{type=ARROW;velocity=1;damage=7;a=0.8;kb=3} @Target
+  - delay 4
+  - effect:sound{s=entity.arrow.shoot;volume=2;pitch=1.1} @self
+  - shoot{type=ARROW;velocity=1;damage=7;a=0.8;kb=3} @Target
+  - delay 4
+  - effect:sound{s=entity.arrow.shoot;volume=2;pitch=0.9} @self
+  - shoot{type=ARROW;velocity=1;damage=7;a=0.8;kb=3} @Target
+  - delay 4
+  - effect:sound{s=entity.arrow.shoot;volume=2;pitch=1.0} @self
+  - shoot{type=ARROW;velocity=1;damage=7;a=0.8;kb=3} @Target
+  - delay 4
+  - effect:sound{s=entity.arrow.shoot;volume=2;pitch=0.9} @self
+  - shoot{type=ARROW;velocity=1;damage=7;a=0.8;kb=3} @Target
+  - delay 4
+  - effect:sound{s=entity.arrow.shoot;volume=2;pitch=1.0} @self
+  - shoot{type=ARROW;velocity=1;damage=7;a=0.8;kb=3} @Target
+  - delay 4
+  - effect:sound{s=entity.arrow.shoot;volume=2;pitch=1.2} @self
+  - shoot{type=ARROW;velocity=1;damage=7;a=0.8;kb=3} @Target
+  - delay 4
+  - effect:sound{s=entity.arrow.shoot;volume=2;pitch=1.1} @self
+  - shoot{type=ARROW;velocity=1;damage=7;a=0.8;kb=3} @Target
+  - delay 4
+  - effect:sound{s=entity.arrow.shoot;volume=2;pitch=0.9} @self
+  - shoot{type=ARROW;velocity=1;damage=7;a=0.8;kb=3} @Target
+  - delay 4
+  - effect:sound{s=entity.arrow.shoot;volume=2;pitch=1.0} @self
+  - shoot{type=ARROW;velocity=1;damage=7;a=0.8;kb=3} @Target
+  - delay 4
+  - effect:sound{s=entity.arrow.shoot;volume=2;pitch=1.3} @self
+  - shoot{type=ARROW;velocity=1;damage=7;a=0.8;kb=3} @Target
+  - delay 4
+  - effect:sound{s=entity.arrow.shoot;volume=2;pitch=1.1} @self
+  - shoot{type=ARROW;velocity=1;damage=7;a=0.8;kb=3} @Target
+  - delay 4
+  - effect:sound{s=entity.arrow.shoot;volume=2;pitch=0.9} @self
+  - shoot{type=ARROW;velocity=1;damage=7;a=0.8;kb=3} @Target
+  - delay 4
+  - effect:sound{s=entity.arrow.shoot;volume=2;pitch=1.0} @self
+  - shoot{type=ARROW;velocity=1;damage=7;a=0.8;kb=3} @Target
+
+demon_sword_summon_1:
+  Cooldown: 7
+  Conditions:
+  - targetwithin{d=40} true
+  Skills:
+  - message{m="<caster.name>&2 summons a&6 Demonic Sword!"} @PlayersInRadius{r=40}
+  - sound{s=entity.evoker.prepare_summon;v=3;p=1} @self
+  - potion{type=GLOWING;duration=10;level=1;p=false} @Self
+  - potion{type=SLOW;duration=30;level=4;p=false} @Self
+  - sound{s=entity.zombie.attack_iron_door;v=3;p=1} @self
+  - throw{velocity=6;velocityY=1;repeat=2;repeatInterval=4} @PIR{r=5}
+  - delay 5
+  - summon{type=demon_sword_bullet;amount=2;radius=2} @Forward{f=5;uel=true;rot=0;yo=0}
+
+doppeltp:
+  Cooldown: 1
+  Conditions:
+  - playernotwithin{d=10} true
+  - playerwithin{d=100} true
+  Skills:
+  - sound{s=entity.enderman.teleport;v=4;p=0.5} @self
+  - teleport{spreadh=1;spreadv=0} @target
+  - potion{type=WEAKNESS;duration=40;level=10;p=false} @Self
+  - delay 5
+  - message{m="<caster.name>&2 warps to you!"} @PIR{r=5}
+
+cannonlaunch:
+  Cooldown: 9999
+  Conditions:
+  - targetwithin{d=30} true
+  Skills:
+  - sound{s=entity.creeper.primed;v=3;p=1} @self
+  - sound{s=entity.creeper.primed;v=3;p=1} @self
+  - delay 30
+  - effect:particles{particle=explosion_huge;hs=1;vs=1;a=1} @self
+  - sound{s=entity.generic.explode;v=3;p=0.5} @self
+  - delay 5
+  - randomskill{skills=
+    [- leap{velocity=1810} @target],
+    [- leap{velocity=910} @target],
+    [- leap{velocity=1310} @target],
+    [- leap{velocity=1510} @target]}
+  - sound{s=entity.snowball.throw;v=3;p=0.5} @self
+  - delay 40
+  - explosion{yield=3} @Self
+  - damage{a=12;pkb=true} @PIR{r=2}
+  - damage{a=6;pkb=true} @PIR{r=4}
+  - damage{a=3;pkb=true} @PIR{r=6}
+  - delay 1
+  - remove @self
+
+defensive_crystal_rain:
+  Cooldown: 50
+  Conditions:
+  - targetwithin{d=25} true
+  Skills:
+  - message{m="<caster.name>&2 has cast&6 Death Crystal Rain!"} @PlayersInRadius{r=40}
+  - potion{type=GLOWING;duration=100;level=1;p=false} @Self
+  - potion{type=SLOW;duration=100;level=4;p=false} @Self
+  - sound{s=entity.allay.hurt;v=3;p=2} @self
+  - sound{s=entity.evoker.prepare_summon;v=3;p=2} @self
+  - summon{type=crystal_bullet;amount=5;radius=20;repeat=60;repeatInterval=2} @Forward{f=5;uel=true;rot=0;yo=3}
+  - leap{velocity=-150;repeat=50;repeatInterval=2} @target
+
+ghast_fireball:
+  Cooldown: 3
+  Conditions:
+  - targetwithin{d=40} true
+  Skills:
+  - sound{s=entity.ghast.warn;v=3;p=1} @self
+  - disguisemodify{d="setAggressive true"} @self
+  - delay 20
+  - disguisemodify{d="setAggressive false"} @self
+  - sound{s=entity.ghast.shoot;v=3;p=1} @self
+  - shootfireball{y=2;v=0.6} @target
+
+fire_ground_slam:
+  Cooldown: 10
+  Skills:
+  - message{m="<caster.name>&2 is causing a&6 Flaming Earthquake!"} @PlayersInRadius{r=40}
+  - potion{type=GLOWING;duration=40;level=1;p=false} @Self
+  - sound{s=entity.evoker.prepare_attack;v=3;p=0.5} @self
+  - sound{s=entity.wither.break_block;v=3;p=2} @self
+  - potion{type=LEVITATION;duration=40;level=1;p=false} @Self
+  - effect:particles{particle=block_crack;material=dirt;hs=2;vs=2;a=100;repeat=5;repeatInterval=4} @Self
+  - delay 40
+  - jump{velocity=-10}
+  - sound{s=entity.bat.takeoff;v=3;p=0.5} @self
+  - delay 2
+  - damage{a=8} @PIR{r=4}
+  - delay 2
+  - sound{s=entity.wither.break_block;v=3;p=0.5} @self
+  - delay 2
+  - summon{type=fire_dirt_wave;amount=1;radius=1} @Ring{r=3;p=70}
+  - delay 2
+  - throw{velocity=15;velocityY=-5} @Children
+  - delay 4
+  - throw{velocity=15;velocityY=-1} @Children
+  - delay 4
+  - throw{velocity=15;velocityY=-1} @Children
+  - delay 4
+  - throw{velocity=15;velocityY=-1} @Children
+  - delay 4
+  - throw{velocity=15;velocityY=0} @Children
+  - delay 4
+  - throw{velocity=15;velocityY=0} @Children
+  - delay 4
+  - throw{velocity=15;velocityY=0} @Children
+  - delay 4
+  - throw{velocity=15;velocityY=0} @Children
+  - delay 4
+  - throw{velocity=15;velocityY=0} @Children
+
+ghast_dragon_fireball:
+  Cooldown: 3
+  Conditions:
+  - targetwithin{d=40} true
+  Skills:
+  - sound{s=entity.ghast.warn;v=3;p=0.5} @self
+  - disguisemodify{d="setAggressive true"} @self
+  - delay 20
+  - disguisemodify{d="setAggressive false"} @self
+  - sound{s=entity.ghast.shoot;v=3;p=0.5} @self
+  - shootfireball{type=DRAGON;y=1;v=0.6} @target
+
+ghast_blaze_fireball:
+  Cooldown: 3
+  Conditions:
+  - targetwithin{d=40} true
+  Skills:
+  - sound{s=entity.ghast.warn;v=3;p=2} @self
+  - disguisemodify{d="setAggressive true"} @self
+  - delay 20
+  - disguisemodify{d="setAggressive false"} @self
+  - sound{s=entity.ghast.shoot;v=3;p=2} @self
+  - shootfireball{type=SMALL;y=1;v=0.6} @target
+  - delay 4
+  - sound{s=entity.ghast.shoot;v=3;p=2} @self
+  - shootfireball{type=SMALL;y=1;v=0.6} @target
+  - delay 4
+  - sound{s=entity.ghast.shoot;v=3;p=2} @self
+  - shootfireball{type=SMALL;y=1;v=0.6} @target
+
+ghast_tnt_fireball:
+  Cooldown: 3
+  Conditions:
+  - targetwithin{d=40} true
+  Skills:
+  - message{m="<caster.name>&2 summons an&6 Explosive!"} @PlayersInRadius{r=40}
+  - sound{s=entity.ghast.scream;v=3;p=1} @self
+  - disguisemodify{d="setAggressive true"} @self
+  - delay 20
+  - disguisemodify{d="setAggressive false"} @self
+  - sound{s=entity.ghast.shoot;v=3;p=2} @self
+  - summon{type=explosion_bullet;amount=1;radius=0} @target
+
+golden_sword_fall:
+  Cooldown: 1
+  Conditions:
+  - targetwithin{d=60} true
+  Skills:
+  - message{m="<caster.name>&2 summons&6 Sword Rain!"} @PlayersInRadius{r=40}
+  - potion{type=GLOWING;duration=40;level=1;p=false} @Self
+  - potion{type=SLOW;duration=40;level=4;p=false} @Self
+  - sound{s=entity.allay.hurt;v=3;p=2} @self
+  - sound{s=entity.evoker.prepare_summon;v=3;p=2} @self
+  - summon{type=sword_bullet;amount=4;radius=9;repeat=6;repeatInterval=5} @Target
+
+super_normal_fireball:
+  Cooldown: 2
+  Conditions:
+  - stance neutral
+  - targetwithin 40
+  Skills:
+  - potion{type=LEVITATION;duration=50;level=2} @self
+  - setstance{stance=casting} @self
+  - message{m="<caster.name>&2 casts&6 Super Fireball!"} @PlayersInRadius{r=40}
+  - potion{type=GLOWING;duration=20;level=1} @self
+  - sound{s=entity.blaze.hurt;v=2;p=1} @self
+  - effect:particles{particle=wax_off;amount=300;hS=1;vS=1;speed=0.2} @self
+  - delay 30
+  - effect:particles{particle=wax_off;amount=300;hS=1;vS=1;speed=0.2} @self
+  - shootfireball{y=5;v=0.2;ps=true} @target
+  - delay 20
+  - setstance{stance=neutral} @self
+
+super_giga_fireball:
+  Cooldown: 10
+  Conditions:
+  - stance neutral
+  - targetwithin 40
+  Skills:
+  - setstance{stance=casting} @self
+  - message{m="<caster.name>&2 is charging a devestating&6Super GIGA Fireball!"} @PlayersInRadius{r=40}
+  - sound{s=entity.elder_guardian.curse;v=2;p=0.7} @self
+  - potion{type=LEVITATION;duration=100;level=1} @self
+  - potion{type=GLOWING;duration=100;level=1} @self
+  - potion{type=SLOW_FALLING;duration=140;level=0} @self
+  - sound{s=block.portal.travel;v=2;p=1.4} @self
+  - effect:particles{particle=wax_off;amount=300;hS=1;vS=1;speed=0.2} @self
+  - delay 20
+  - effect:particles{particle=wax_off;amount=300;hS=1;vS=1;speed=0.2} @self
+  - delay 20
+  - effect:particles{particle=wax_off;amount=300;hS=1;vS=1;speed=0.2} @self
+  - delay 20
+  - effect:particles{particle=wax_off;amount=300;hS=1;vS=1;speed=0.2} @self
+  - delay 20
+  - effect:particles{particle=wax_off;amount=300;hS=1;vS=1;speed=0.2} @self
+  - delay 20
+  - shootfireball{y=9;v=0.1;ps=true} @target
+  - setstance{stance=neutral} @self
+
+super_blue_flames_spread:
+  Cooldown: 23
+  Conditions:
+  - targetwithin{d=40} true
+  Skills:
+  - message{m="<caster.name>&2 summons &6Molten Azure Flames!"} @PlayersInRadius{r=40}
+  - potion{type=GLOWING;duration=40;level=1;p=false} @Self
+  - potion{type=SLOW;duration=40;level=4;p=false} @Self
+  - potion{type=LEVITATION;duration=40;level=1;p=false} @Self
+  - sound{s=entity.armor_stand.break;v=3;p=0.5} @self
+  - sound{s=entity.allay.hurt;v=3;p=0.5} @self
+  - effect:particles{particle=block_crack;material=blue_wool;hs=2;vs=2;a=30;repeat=2;repeatInterval=10} @Self
+  - delay 20
+  - summon{type=super_blue_fire_bullet;amount=4;radius=15;repeat=3;repeatInterval=20} @Self
+  - leap{velocity=650} @Forward{f=30;lockpitch=true}
+
+planet_fireball_wave:
+  Cooldown: 10
+  Conditions:
+  - stance neutral
+  - targetwithin 100
+  Skills:
+  - setstance{stance=casting} @self
+  - message{m="<caster.name>&2 launches &6Flaming Planetary Moons!"} @PlayersInRadius{r=40}
+  - sound{s=entity.elder_guardian.curse;v=2;p=0.7} @self
+  - potion{type=GLOWING;duration=100;level=1} @self
+  - sound{s=block.portal.travel;v=2;p=1.4} @self
+  - effect:particles{particle=wax_off;amount=100;hS=1;vS=1;speed=0.2} @self
+  - delay 10
+  - effect:particles{particle=wax_off;amount=100;hS=1;vS=1;speed=0.2} @self
+  - delay 10
+  - effect:particles{particle=wax_off;amount=100;hS=1;vS=1;speed=0.2} @self
+  - delay 10
+  - effect:particles{particle=wax_off;amount=100;hS=1;vS=1;speed=0.2} @self
+  - delay 20
+  - shootfireball{y=8;v=0.1;ps=true} @Forward{f=1;uel=true;rot=-35}
+  - delay 5
+  - shootfireball{y=8;v=0.1;ps=true} @Forward{f=1;uel=true;rot=-30}
+  - delay 5
+  - shootfireball{y=8;v=0.1;ps=true} @Target
+  - delay 5
+  - shootfireball{y=8;v=0.1;ps=true} @Forward{f=1;uel=true;rot=-20}
+  - delay 5
+  - shootfireball{y=8;v=0.1;ps=true} @Forward{f=1;uel=true;rot=-15}
+  - delay 5
+  - shootfireball{y=8;v=0.1;ps=true} @Target
+  - delay 5
+  - shootfireball{y=8;v=0.1;ps=true} @Forward{f=1;uel=true;rot=-5}
+  - delay 5
+  - shootfireball{y=8;v=0.1;ps=true} @Target
+  - delay 5
+  - shootfireball{y=8;v=0.1;ps=true} @Forward{f=1;uel=true;rot=5}
+  - delay 5
+  - shootfireball{y=8;v=0.1;ps=true} @Target
+  - delay 5
+  - shootfireball{y=8;v=0.1;ps=true} @Forward{f=1;uel=true;rot=15}
+  - delay 5
+  - shootfireball{y=8;v=0.1;ps=true} @Forward{f=5;uel=true;rot=20}
+  - delay 5
+  - shootfireball{y=8;v=0.1;ps=true} @Target
+  - delay 5
+  - shootfireball{y=8;v=0.1;ps=true} @Forward{f=1;uel=true;rot=30}
+  - delay 5
+  - shootfireball{y=8;v=0.1;ps=true} @Forward{f=1;uel=true;rot=35}
+  - delay 5
+  - setstance{stance=neutral} @self
+
+final_boss_hurricane_attack:
+  Cooldown: 20
+  Conditions:
+  - targetwithin{d=80} true
+  Skills:
+  - setstance{stance=casting} @self
+  - message{m="<caster.name>&2 launches a&6 Planetary Tornado!"} @PlayersInRadius{r=40}
+  - potion{type=GLOWING;duration=40;level=1;p=false} @Self
+  - sound{s=entity.evoker.prepare_attack;v=3;p=0.5} @self
+  - sound{s=entity.wither.break_block;v=3;p=2} @self
+  - potion{type=LEVITATION;duration=40;level=1;p=false} @Self
+  - effect:particles{particle=block_crack;material=dirt;hs=2;vs=2;a=100;repeat=5;repeatInterval=4} @Self
+  - delay 40
+  - sound{s=entity.bat.takeoff;v=3;p=0.5} @self
+  - delay 2
+  - summon{type=final_boss_hurricane;amount=1;radius=1} @self
+  - setstance{stance=neutral} @self
+
+explosive_nebula:
+  Cooldown: 10
+  Conditions:
+  - targetwithin{d=80} true
+  - stance neutral
+  Skills:
+  - setstance{stance=casting} @self
+  - message{m="<caster.name>&2 summons an&6 Explosive Nebula!"} @PlayersInRadius{r=40}
+  - potion{type=GLOWING;duration=40;level=1;p=false} @Self
+  - sound{s=entity.evoker.prepare_attack;v=3;p=0.5} @self
+  - sound{s=entity.ender_dragon.growl;v=3;p=1} @self
+  - potion{type=LEVITATION;duration=40;level=1;p=false} @Self
+  - effect:particles{particle=block_crack;material=tnt;hs=2;vs=2;a=100;repeat=5;repeatInterval=4} @Self
+  - delay 2
+  - summon{type=explosion_bullet_final_boss;amount=7;radius=40;repeat=10;repeatInterval=4} @self
+  - setstance{stance=neutral} @self
+
+final_soul_blast_mob:
+  Cooldown: 8
+  Conditions:
+  - targetwithin{d=160} true
+  - stance neutral
+  Skills:
+  - setstance{stance=casting} @self
+  - message{m="<caster.name>&2 has cast&6 Homing Soul Blast!"} @PlayersInRadius{r=40}
+  - potion{type=GLOWING;duration=50;level=1} @self
+  - potion{type=SLOW;duration=50;level=2} @self
+  - effect:sound{s=entity.wither.ambient;volume=2;pitch=2} @PIR{r=80}
+  - delay 40
+  - effect:sound{s=entity.wither.death;volume=2;pitch=1} @PIR{r=80}
+  - skill{s=blastHomer} @Target
+  - delay 3
+  - skill{s=blastHomer} @Target
+  - delay 3
+  - skill{s=blastHomer} @Target
+  - delay 3
+  - skill{s=blastHomer} @Target
+  - delay 3
+  - skill{s=blastHomer} @Target
+  - delay 3
+  - skill{s=blastHomer} @Target
+  - delay 3
+  - skill{s=blastHomer} @Target
+  - delay 3
+  - skill{s=blastHomer} @Target
+  - delay 3
+  - skill{s=blastHomer} @Target
+  - delay 3
+  - skill{s=blastHomer} @Target
+  - delay 3
+  - skill{s=blastHomer} @Target
+  - delay 3
+  - skill{s=blastHomer} @Target
+  - delay 3
+  - skill{s=blastHomer} @Target
+  - setstance{stance=neutral} @self
+
+demon_sword_assault_final:
+  Cooldown: 5
+  Conditions:
+  - targetwithin{d=80} true
+  - stance neutral
+  Skills:
+  - setstance{stance=casting} @self
+  - message{m="<caster.name>&2 casted&6 Giga Demonic Sword Assault!"} @PlayersInRadius{r=40}
+  - sound{s=entity.evoker.prepare_summon;v=3;p=0.5} @self
+  - sound{s=entity.wither.ambient;v=3;p=0.5} @self
+  - potion{type=GLOWING;duration=10;level=1;p=false} @Self
+  - potion{type=SLOW;duration=30;level=4;p=false} @Self
+  - sound{s=entity.zombie.attack_iron_door;v=3;p=0.5} @self
+  - delay 5
+  - summon{type=demon_sword_bullet_highdmg;amount=1;radius=1;repeat=10;repeatInterval=2} @Forward{f=5;uel=true;rot=0;yo=3}
+  - setstance{stance=neutral} @self
+
+demon_sword_encirclement_final:
+  Cooldown: 5
+  Conditions:
+  - targetwithin{d=80} true
+  - stance neutral
+  Skills:
+  - setstance{stance=casting} @self
+  - message{m="<caster.name>&2 casted&6 Giga Demonic Sword Encirclement!"} @PlayersInRadius{r=40}
+  - sound{s=entity.evoker.prepare_summon;v=3;p=2} @self
+  - sound{s=entity.wither.ambient;v=3;p=2} @self
+  - potion{type=GLOWING;duration=10;level=1;p=false} @Self
+  - potion{type=SLOW;duration=30;level=4;p=false} @Self
+  - sound{s=entity.zombie.attack_iron_door;v=3;p=0.5} @self
+  - delay 5
+  - summon{type=demon_sword_bullet_highdmg;amount=9;radius=10} @Target
+  - setstance{stance=neutral} @self
+
+giant_sword_rain:
+  Cooldown: 20
+  Conditions:
+  - targetwithin{d=100} true
+  - stance neutral
+  Skills:
+  - setstance{stance=casting} @self
+  - message{m="<caster.name>&2 has cast&6 GIGA Holy Sword Rain!"} @PlayersInRadius{r=40}
+  - potion{type=GLOWING;duration=100;level=1;p=false} @Self
+  - potion{type=SLOW;duration=100;level=4;p=false} @Self
+  - sound{s=entity.allay.hurt;v=5;p=2} @self
+  - sound{s=entity.evoker.prepare_summon;v=5;p=0.5} @self
+  - summon{type=giant_sword_bullet;amount=4;radius=30;repeat=30;repeatInterval=2} @Target
+  - setstance{stance=neutral} @self
+
+origin_heal:
+  Cooldown: 15
+  Conditions:
+  - targetnotwithin{d=70} true
+  Skills:
+  - message{m="<caster.name>&2 uses&6 Supreme Lord Heal"} @PlayersInRadius{r=300}
+  - potion{type=SLOW;duration=50;level=4;p=false} @Self
+  - sound{s=entity.player.attack.crit;v=8;p=0.5} @self
+  - sound{s=block.portal.travel;v=10;p=2} @self
+  - delay 50
+  - sound{s=entity.player.attack.crit;v=8;p=0.5} @self
+  - healpercent{m=0.5} @self
+
+shoot_explosive_bullet:
+  Cooldown: 8
+  Conditions:
+  - playerwithin{d=20} true
+  - targetwithin{d=20} true
+  Skills:
+  - summon{type=explosion_bullet_launch;radius=0;amount=1} @self

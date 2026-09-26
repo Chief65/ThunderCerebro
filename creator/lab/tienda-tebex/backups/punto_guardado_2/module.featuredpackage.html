@@ -1,0 +1,5 @@
+{% if module.display %}
+    <script>
+        featuredProducts.set('{{ module.package.id }}', {image: "{{ module.package.image.url }}", color: "{{ module.header }}", name: "{{ module.package.name[:20] }}", discountPercent: "{{ (((module.package.discount.original|money - module.package.price|money) / module.package.discount.original|money) * 100)}}" ,  price: "{{ module.package.price|money }}", discount: {{ module.package.discount.applied ? module.package.discount.original|money : 0 }} })
+    </script>
+{% endif %}

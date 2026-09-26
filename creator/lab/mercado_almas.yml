@@ -1,0 +1,105 @@
+﻿menu_title: '&0&l|&r &0Mercado ▶ &8Almas &8(&#34B0F3🔥&8)'
+open_command:
+  - mercadoalmas
+  - shopalmas
+  - almas
+size: 36
+open_requirement:
+  requirements: {}
+register_command: true
+update: true
+
+items:
+  # FILA 2: ELECCION PRINCIPAL (SLOT 12: TIENDA DE ALMAS, SLOT 14: NIGHT MARKET)
+  'Opcion_Tienda_Estable':
+    material: SOUL_CAMPFIRE
+    slot: 12
+    item_flags:
+      - HIDE_ATTRIBUTES
+      - HIDE_ENCHANTS
+    enchantments:
+      - DURABILITY;1
+    display_name: '&#34B0F3Tienda de Almas'
+    lore:
+      - '&8Catálogo Permanente'
+      - ''
+      - ' &fAdquiere generadores de criaturas,'
+      - ' &fllaves de recompensa y bloques de'
+      - ' &fprotección PS con precio fijo.'
+      - ''
+      - ' &8| &fCatálogo: &eSpawners, Llaves, Protecciones'
+      - ' &8| &fMoneda: &#34B0F3Almas (🔥)'
+      - ''
+      - '&7▶ Click para ver categorías'
+    left_click_commands:
+      - '[openguimenu] tienda_almas_fija'
+      - '[sound] UI_BUTTON_CLICK'
+
+  'Opcion_Night_Market':
+    material: SOUL_LANTERN
+    slot: 14
+    item_flags:
+      - HIDE_ATTRIBUTES
+      - HIDE_ENCHANTS
+    enchantments:
+      - DURABILITY;1
+    display_name: '&#FFF275Night Market'
+    lore:
+      - '&8Altar Sombrío de Medianoche'
+      - ''
+      - ' &f5 ofertas rotativas exclusivas'
+      - ' &fcon descuento global diario y'
+      - ' &fsistema de rarezas con pity.'
+      - ''
+      - ' &8| &fEstado: &#59E91FActivo (03h 42m)'
+      - ' &8| &fRarezas: &eSúper &7a &#FF4D4DLimited'
+      - ' &8| &fMoneda: &#34B0F3Almas (🔥)'
+      - ''
+      - '&7▶ Click para entrar al altar'
+    left_click_commands:
+      - '[openguimenu] night_market'
+      - '[sound] UI_BUTTON_CLICK'
+
+  # FILA 4: NAVBAR (SLOTS 27 A 35)
+  'Boton_Volver':
+    material: DARK_OAK_DOOR
+    slot: 31
+    item_flags:
+      - HIDE_ATTRIBUTES
+    display_name: '&cVolver Atrás'
+    lore:
+      - '&7Regresar al menú principal'
+    left_click_commands:
+      - '[openguimenu] tienda_principal'
+      - '[sound] BLOCK_NOTE_BLOCK_BASS'
+
+  'Info_Balance':
+    material: head-%player_name%
+    slot: 35
+    item_flags:
+      - HIDE_ATTRIBUTES
+    display_name: '&#FFF275Tu Economía'
+    lore:
+      - '&8Tu Economía'
+      - ''
+      - ' &8| &fDinero: &#59E91F&l$&r&#59E91F%vault_eco_balance_formatted%'
+      - ' &8| &fAlmas: &#34B0F3%thundercurrencys_almas%🔥'
+      - ' &8| &fZafiros: &#1E6BFF%thundercurrencys_zafiros%💎'
+      - ' &8| &fXP: &#D48BFF%player_level% LVL'
+      - ''
+      - '&7▶ Click para más información'
+    left_click_commands:
+      - '[openguimenu] info_economia'
+      - '[sound] UI_BUTTON_CLICK'
+
+  'Filtro_Navbar':
+    material: GRAY_STAINED_GLASS_PANE
+    display_name: ' '
+    slots:
+      - 27
+      - 28
+      - 29
+      - 30
+      - 32
+      - 33
+      - 34

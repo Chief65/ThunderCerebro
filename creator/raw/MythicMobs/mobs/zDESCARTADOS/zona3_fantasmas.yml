@@ -1,0 +1,34 @@
+CaballeroErrante1:
+  Type: ZOMBIE
+  Display: '&e[Lv.1] &7Caballero Errante'
+  Health: 120
+  Damage: 15
+  Options:
+    Silent: true
+  Equipment:
+    - CHAINMAIL_HELMET HEAD
+    - CHAINMAIL_CHESTPLATE CHEST
+    - LEATHER_LEGGINGS LEGS
+    - STONE_AXE HAND
+  Drops:
+    - FragmentoAlmaPerdida 1 0.40
+    - HuesoAntiguo 2-4 0.70
+    - IRON_INGOT 1-2 0.30
+  Disguise: caballero_errante
+
+CaballeroErrante2:
+  Type: ZOMBIE
+  Display: '&c[Lv.2] &7Caballero Espectral'
+  Health: 180
+  Damage: 20
+  Equipment:
+    - IRON_HELMET HEAD
+    - IRON_CHESTPLATE CHEST
+    - IRON_LEGGINGS LEGS
+    - IRON_BOOTS FEET
+    - IRON_SWORD HAND
+  Drops:
+    - FragmentoAlmaPerdida 1-2 0.60
+    - EsenciaDragon 1 0.10
+    - DIAMOND 1 0.15
+  Disguise: caballero_errante

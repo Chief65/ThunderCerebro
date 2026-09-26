@@ -1,0 +1,237 @@
+﻿redstone:
+  name: "&0&l|&r &0Mercado ▶ &8Redstone &8(#59E91F$&8)"
+  size: 45
+  fillItem:
+    material: AIR
+    name: " "
+  buttons:
+    goBack:
+      slot: 40
+    previousPage:
+      slot: 39
+    nextPage:
+      slot: 41
+  items:
+    1:
+      type: item
+      item:
+        material: CRAFTER
+        name: "#FFF275Crafter"
+        quantity: 1
+      buyPrice: 500
+      sellPrice: -1
+      slot: 9
+    2:
+      type: item
+      item:
+        material: DISPENSER
+        name: "#FFF275Dispenser"
+        quantity: 1
+      buyPrice: 300
+      sellPrice: -1
+      slot: 10
+    3:
+      type: item
+      item:
+        material: DROPPER
+        name: "#FFF275Dropper"
+        quantity: 1
+      buyPrice: 250
+      sellPrice: -1
+      slot: 11
+    4:
+      type: item
+      item:
+        material: OBSERVER
+        name: "#FFF275Observer"
+        quantity: 1
+      buyPrice: 1500
+      sellPrice: -1
+      slot: 12
+    5:
+      type: item
+      item:
+        material: COMPARATOR
+        name: "#FFF275Comparator"
+        quantity: 1
+      buyPrice: 750
+      sellPrice: -1
+      slot: 13
+    6:
+      type: item
+      item:
+        material: REPEATER
+        name: "#FFF275Repeater"
+        quantity: 1
+      buyPrice: 1250
+      sellPrice: -1
+      slot: 14
+    7:
+      type: item
+      item:
+        material: PISTON
+        name: "#FFF275Piston"
+        quantity: 1
+      buyPrice: 1200
+      sellPrice: -1
+      slot: 15
+    8:
+      type: item
+      item:
+        material: STICKY_PISTON
+        name: "#FFF275Sticky Piston"
+        quantity: 1
+      buyPrice: 1800
+      sellPrice: -1
+      slot: 16
+    9:
+      type: item
+      item:
+        material: SLIME_BLOCK
+        name: "#FFF275Slime Block"
+        quantity: 1
+      buyPrice: 2500
+      sellPrice: -1
+      slot: 17
+    10:
+      type: item
+      item:
+        material: HOPPER
+        name: "#FFF275Hopper"
+        quantity: 1
+      buyPrice: 400
+      sellPrice: -1
+      slot: 18
+    11:
+      type: dummy
+      item:
+        material: COMPARATOR
+        quantity: 1
+        glow: true
+        name: "#FFF275Filtrar Categoría"
+        lore:
+        - "&8Elige categoría"
+        - ""
+        - " &7● Bloques"
+        - " &7● Farmeo"
+        - " &7● Comida"
+        - " &7● Mobs"
+        - " &7● Equipo"
+        - " #FFF275● Redstone"
+        - " &7● Misceláneo"
+        - " &7● Tintes"
+        - " &7● Banners"
+        - ""
+        - "&7▶ Click para cambiar"
+      commandsOnClick:
+        - "shop miscellaneo"
+      slot: 36
+    12:
+      type: special
+      special: balance
+      slot: 44
+    13:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 37
+    14:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 38
+    15:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 39
+    16:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 41
+    17:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 42
+    18:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 43
+    19:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 0
+    20:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 1
+    21:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 2
+    22:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 3
+    23:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 4
+    24:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 5
+    25:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 6
+    26:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 7
+    27:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 8

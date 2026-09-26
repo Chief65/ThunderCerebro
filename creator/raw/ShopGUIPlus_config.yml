@@ -1,0 +1,680 @@
+#
+# See our Wiki for ShopGUI+ at the link below:
+# https://docs.brcdev.net/ -> Both 'General' & 'ShopGUI+' Sections are for ShopGUI+
+#
+# Is this your first time using ShopGUI+? Start here:
+# https://docs.brcdev.net/#/shopgui/shops-items-setup
+#
+# Join our Discord support server at the link below:
+# https://discord.brcdev.net/
+#
+database:
+  type: sqlite
+  mySQLHost: localhost
+  mySQLPort: 3306
+  mySQLDatabase: db
+  mySQLUser: root
+  mySQLPassword: ""
+  tableNames:
+    players: "players"
+
+currencies:
+  prefixes:
+    VAULT: ""
+    CUSTOM: "#34B0F3"
+  suffixes:
+    CUSTOM: " #34B0F3🔥"
+
+economyTypes:
+  - VAULT
+  - EXP_LEVELS
+  - CUSTOM
+
+shopMenuName: "&0&l|&r &0Mercado ▶ #59E91FDinero &8(#59E91F$&8)"
+shopMenuSize: 36
+shopMenuFillItem:
+  material: AIR
+  name: " "
+
+enableSellAll: false
+enableBuyGUI: true
+enableSellGUI: true
+enableBuyMoreGUI: true
+enableSellMoreGUI: true
+enableSellGUISellAll: true
+returnToShop: true
+quickBuySell: false
+hideBuyPriceForUnbuyable: true
+buyPriceForUnsellablePlaceholder: "-"
+hideSellPriceForUnsellable: true
+sellPriceForUnsellablePlaceholder: "&lX"
+
+clickActions:
+  LEFT: BUY
+  RIGHT: SELL
+  SHIFT_RIGHT: SELL_ALL
+  MIDDLE: SELL_ALL
+
+maxEnchantments: 3
+limitEnchantmentLevelDiff: false
+enableAmountSelectionFix: true
+allowAllSellAllStackSizes: false
+roundPrices: DOWN
+disableMainMenu: false
+useDifferentMessagesForFreeItems: true
+capitalizeItemNames: true
+priceModifiersType: BOTH
+closeGuiAfterSellAll: false
+openBulkGuiImmediately: false
+sudoAllowAllShopsAccess: false
+
+itemStackSizeCappedAt:
+  1:
+    material: ENDER_PEARL
+    size: 16
+  2:
+    material: SNOWBALL
+    size: 16
+  3:
+    material: EGG
+    size: 16
+  4:
+    material: BUCKET
+    size: 1
+
+disableShopsInGamemodes:
+  - ADVENTURE
+  - CREATIVE
+  - SPECTATOR
+disableShopsInWorlds: [ ]
+
+displayPriceModifiersInPercents: true
+disableSudoWorldPermissionCheck: false
+disableSudoShopPermissionCheck: false
+disableUnsafeEnchantmentCheck: false
+allowEnchantmentLevelIncrease: true
+
+sounds:
+  MAIN_MENU_OPEN: UI_BUTTON_CLICK
+  SHOP_OPEN: ""
+  SHOP_SELECT_ITEM: ""
+  SHOP_SWITCH_PAGE: ITEM_BOOK_PAGE_TURN
+  SELL_ITEM: ENTITY_EXPERIENCE_ORB_PICKUP
+  SELL_ALL_ITEM: ENTITY_EXPERIENCE_ORB_PICKUP
+  BUY_ITEM: ENTITY_EXPERIENCE_ORB_PICKUP
+  FULL_INVENTORY: UI_BUTTON_CLICK
+  INSUFFICIENT_FUNDS: UI_BUTTON_CLICK
+  CANCEL: UI_BUTTON_CLICK
+
+defaultItemSettings:
+  compareMeta: false
+  stripItemMeta: true
+  compareModel: true
+  compareDamage: false
+  compareNbt: false
+  compareRepairCost: false
+
+shopItemLoreFormat:
+  item:
+    - "&8Precio de Compra"
+    - ""
+    - " #59E91F▲ &fPrecio: #59E91F&l$&r#59E91F%buy%"
+    - " #FF2A2A▼ &fVenta: #FF2A2A&l$&r#FF2A2A%sell%"
+    - ""
+    - "&7▶ Click para comprar"
+  itemBuyGUI:
+    - "&8Compra en Cantidad"
+    - ""
+    - " &8| &fCantidad: &e%amount%"
+    - ""
+    - " #59E91F▲ &fTotal: #59E91F&l$&r#59E91F%buy%"
+    - ""
+  itemSellGUI:
+    - "&8Venta en Cantidad"
+    - ""
+    - " &8| &fCantidad: &e%amount%"
+    - ""
+    - " #FF2A2A▼ &fTotal: #FF2A2A&l$&r#FF2A2A%sell%"
+    - ""
+  itemSellGUISellAll:
+    - "#FF2A2A▼ &fVender todo por: #FF2A2A&l$&r#FF2A2A%sell%"
+    - ""
+  permission:
+    - " #59E91F▲ &fPrecio: #59E91F&l$&r#59E91F%buy%"
+  enchantment:
+    - " #59E91F▲ &fPrecio: #59E91F&l$&r#59E91F%buy%"
+  command:
+    - " #59E91F▲ &fPrecio: #59E91F&l$&r#59E91F%buy%"
+log:
+  toConsole: true
+  toFile: false
+  formatDate: "yyyy/MM/dd HH:mm:ss"
+  formatBuyCommand: "%player% bought %amount% x %command% command for %price% from %shop% shop"
+  formatBuyEnchantment: "%player% bought %enchantment% enchantment for %price% from %shop% shop"
+  formatBuyPermission: "%player% bought %permission% permission for %price% from %shop% shop"
+  formatBuy: "%player% bought %amount% x %item% for %price% from %shop% shop"
+  formatSell: "%player% sold %amount% x %item% for %price% to %shop% shop"
+  formatSellAll: "%player% sold all %amount% x %item% for %price% to %shop% shop"
+
+sellHand:
+  allowAllQuantities: true
+  sellsAllItems: false
+  excludeFreeItems: true
+  excludeArmorSlots: true
+  excludeOffHand: false
+
+sellAll:
+  detailedSummary: false
+  findMaxSellPrice: true
+  excludeFreeItems: true
+  excludeArmorSlots: true
+  excludeOffHand: false
+
+disableCommands:
+  sell: false
+
+buttons:
+  goBack:
+    item:
+      material: DARK_OAK_DOOR
+      amount: 1
+      name: "&cVolver al Menú"
+      lore:
+        - "&7Regresar a la selección principal"
+    slot: 40
+  previousPage:
+    item:
+      material: ARROW
+      quantity: 1
+      name: "#FFF275◀ Página Anterior"
+    slot: 39
+  nextPage:
+    item:
+      material: ARROW
+      quantity: 1
+      name: "#FFF275Página Siguiente ▶"
+    slot: 41
+
+amountSelectionGUIBulkBuy:
+  size: 18
+  fillItem:
+    material: BLACK_STAINED_GLASS_PANE
+    name: " "
+  replaceButtonsType: true
+  buttons:
+    buy1:
+      item:
+        material: CHEST
+        quantity: 1
+        name: "&aComprar 1 stack"
+        lore:
+          - "&7Precio: &c%buy%"
+      value: 1
+      slot: 0
+    buy2:
+      item:
+        material: CHEST
+        quantity: 2
+        name: "&aComprar 2 stacks"
+        lore:
+          - "&7Precio: &c%buy%"
+      value: 2
+      slot: 1
+    buy3:
+      item:
+        material: CHEST
+        quantity: 3
+        name: "&aComprar 3 stacks"
+        lore:
+          - "&7Precio: &c%buy%"
+      value: 3
+      slot: 2
+    buy4:
+      item:
+        material: CHEST
+        quantity: 4
+        name: "&aComprar 4 stacks"
+        lore:
+          - "&7Precio: &c%buy%"
+      value: 4
+      slot: 3
+    buy5:
+      item:
+        material: CHEST
+        quantity: 5
+        name: "&aComprar 5 stacks"
+        lore:
+          - "&7Precio: &c%buy%"
+      value: 5
+      slot: 4
+    buy6:
+      item:
+        material: CHEST
+        quantity: 6
+        name: "&aComprar 6 stacks"
+        lore:
+          - "&7Precio: &c%buy%"
+      value: 6
+      slot: 5
+    buy7:
+      item:
+        material: CHEST
+        quantity: 7
+        name: "&aComprar 7 stacks"
+        lore:
+          - "&7Precio: &c%buy%"
+      value: 7
+      slot: 6
+    buy8:
+      item:
+        material: CHEST
+        quantity: 8
+        name: "&aComprar 8 stacks"
+        lore:
+          - "&7Precio: &c%buy%"
+      value: 8
+      slot: 7
+    buy9:
+      item:
+        material: CHEST
+        quantity: 9
+        name: "&aComprar 9 stacks"
+        lore:
+          - "&7Precio: &c%buy%"
+      value: 9
+      slot: 8
+    cancel:
+      item:
+        material: DARK_OAK_DOOR
+        quantity: 1
+        name: "&cCancelar"
+      slot: 13
+
+
+amountSelectionGUIBulkSell:
+  size: 18
+  fillItem:
+    material: GRAY_STAINED_GLASS_PANE
+    name: " "
+  replaceButtonsType: true
+  buttons:
+    sell1:
+      item:
+        material: CHEST
+        quantity: 1
+        name: "&aVender 1 stack"
+        lore:
+          - "&7Precio: &c%sell%"
+      value: 1
+      slot: 0
+    sell2:
+      item:
+        material: CHEST
+        quantity: 2
+        name: "&aVender 2 stacks"
+        lore:
+          - "&7Precio: &c%sell%"
+      value: 2
+      slot: 1
+    sell3:
+      item:
+        material: CHEST
+        quantity: 3
+        name: "&aVender 3 stacks"
+        lore:
+          - "&7Precio: &c%sell%"
+      value: 3
+      slot: 2
+    sell4:
+      item:
+        material: CHEST
+        quantity: 4
+        name: "&aVender 4 stacks"
+        lore:
+          - "&7Precio: &c%sell%"
+      value: 4
+      slot: 3
+    sell5:
+      item:
+        material: CHEST
+        quantity: 5
+        name: "&aVender 5 stacks"
+        lore:
+          - "&7Precio: &c%sell%"
+      value: 5
+      slot: 4
+    sell6:
+      item:
+        material: CHEST
+        quantity: 6
+        name: "&aVender 6 stacks"
+        lore:
+          - "&7Precio: &c%sell%"
+      value: 6
+      slot: 5
+    sell7:
+      item:
+        material: CHEST
+        quantity: 7
+        name: "&aVender 7 stacks"
+        lore:
+          - "&7Precio: &c%sell%"
+      value: 7
+      slot: 6
+    sell8:
+      item:
+        material: CHEST
+        quantity: 8
+        name: "&aVender 8 stacks"
+        lore:
+          - "&7Precio: &c%sell%"
+      value: 8
+      slot: 7
+    sell9:
+      item:
+        material: CHEST
+        quantity: 9
+        name: "&aVender 9 stacks"
+        lore:
+          - "&7Precio: &c%sell%"
+      value: 9
+      slot: 8
+    cancel:
+      item:
+        material: DARK_OAK_DOOR
+        quantity: 1
+        name: "&cCancelar"
+      slot: 13
+
+amountSelectionGUI:
+  size: 27
+  itemSlot: 13
+  buttons:
+    set1:
+      item:
+        material: RED_STAINED_GLASS_PANE
+        quantity: 1
+        name: "&cEstablecer 1"
+      slot: 9
+    remove10:
+      item:
+        material: RED_STAINED_GLASS_PANE
+        quantity: 10
+        name: "&cQuitar 10"
+      slot: 10
+    remove1:
+      item:
+        material: RED_STAINED_GLASS_PANE
+        quantity: 1
+        name: "&cQuitar 1"
+      slot: 11
+    cancel:
+      item:
+        material: RED_SHULKER_BOX
+        quantity: 1
+        name: "&cCancelar"
+      slot: 12
+    confirm:
+      item:
+        material: LIME_SHULKER_BOX
+        quantity: 1
+        name: "&aConfirmar Compra"
+      slot: 14
+    add1:
+      item:
+        material: LIME_STAINED_GLASS_PANE
+        quantity: 1
+        name: "&aAgregar 1"
+      slot: 15
+    add10:
+      item:
+        material: LIME_STAINED_GLASS_PANE
+        quantity: 10
+        name: "&aAgregar 10"
+      slot: 16
+    set64:
+      item:
+        material: LIME_STAINED_GLASS_PANE
+        quantity: 64
+        name: "&aEstablecer 64"
+      slot: 17
+    set16:
+      item:
+        material: LIME_STAINED_GLASS_PANE
+        quantity: 16
+        name: "&aEstablecer 16"
+      slot: -1
+    sellAll:
+      item:
+        material: LIME_SHULKER_BOX
+        quantity: 1
+        name: "&aVender Todo"
+      slot: -1
+    buyMore:
+      item:
+        material: CHEST_MINECART
+        quantity: 1
+        name: "&eComprar Stacks"
+        lore:
+          - "&8Varios stacks"
+          - ""
+          - "&7▶ Elegir cantidad"
+      slot: 22
+    sellMore:
+      item:
+        material: CHEST_MINECART
+        quantity: 1
+        name: "&eVender Stacks"
+        lore:
+          - "&8Varios stacks"
+          - ""
+          - "&7▶ Elegir cantidad"
+      slot: 22
+
+shopMenuItems:
+  1:
+    item:
+      material: GRASS_BLOCK
+      quantity: 1
+      name: "#FFF275Bloques"
+      lore:
+        - "&8Tienda de Construcción"
+        - ""
+        - " &8| &fArtículos: &e307"
+        - ""
+        - "&7▶ Click para ver catálogo"
+    shop: "bloques"
+    slot: 9
+  2:
+    item:
+      material: WHEAT
+      quantity: 1
+      name: "#FFF275Farmeo"
+      lore:
+        - "&8Agricultura y Cultivos"
+        - ""
+        - " &8| &fArtículos: &e23"
+        - ""
+        - "&7▶ Click para ver catálogo"
+    shop: "farmeo"
+    slot: 10
+  3:
+    item:
+      material: COOKED_BEEF
+      quantity: 1
+      name: "#FFF275Comida"
+      lore:
+        - "&8Alimentos y Nutrición"
+        - ""
+        - " &8| &fArtículos: &e17"
+        - ""
+        - "&7▶ Click para ver catálogo"
+    shop: "comida"
+    slot: 11
+  4:
+    item:
+      material: GUNPOWDER
+      quantity: 1
+      name: "#FFF275Mobs"
+      lore:
+        - "&8Drops y Botín de Mobs"
+        - ""
+        - " &8| &fArtículos: &e19"
+        - ""
+        - "&7▶ Click para ver catálogo"
+    shop: "mobs"
+    slot: 12
+  5:
+    item:
+      material: TOTEM_OF_UNDYING
+      quantity: 1
+      name: "#FFF275Equipo"
+      lore:
+        - "&8Armas y Armaduras"
+        - ""
+        - " &8| &fArtículos: &e17"
+        - ""
+        - "&7▶ Click para ver catálogo"
+    shop: "equipo"
+    slot: 13
+  6:
+    item:
+      material: REDSTONE
+      quantity: 1
+      name: "#FFF275Redstone"
+      lore:
+        - "&8Circuitos y Mecanismos"
+        - ""
+        - " &8| &fArtículos: &e10"
+        - ""
+        - "&7▶ Click para ver catálogo"
+    shop: "redstone"
+    slot: 14
+  7:
+    item:
+      material: SADDLE
+      quantity: 1
+      name: "#FFF275Misceláneo"
+      lore:
+        - "&8Objetos Especiales"
+        - ""
+        - " &8| &fArtículos: &e20"
+        - ""
+        - "&7▶ Click para ver catálogo"
+    shop: "miscellaneo"
+    slot: 15
+  8:
+    item:
+      material: RED_DYE
+      quantity: 1
+      name: "#FFF275Tintes"
+      lore:
+        - "&8Tintes y Pigmentos"
+        - ""
+        - " &8| &fArtículos: &e16"
+        - ""
+        - "&7▶ Click para ver catálogo"
+    shop: "tintes"
+    slot: 16
+  9:
+    item:
+      material: CYAN_BANNER
+      quantity: 1
+      name: "#FFF275Banners"
+      lore:
+        - "&8Estandartes y Patrones"
+        - ""
+        - " &8| &fArtículos: &e25"
+        - ""
+        - "&7▶ Click para ver catálogo"
+    shop: "banners"
+    slot: 17
+  11:
+    type: dummy
+    item:
+      material: DARK_OAK_DOOR
+      quantity: 1
+      name: "&cVolver Atrás"
+      lore:
+        - "&7Regresar al menú principal"
+    commandsOnClick:
+      - "dm open tienda_principal"
+    slot: 31
+  12:
+    type: dummy
+    item:
+      material: GRAY_STAINED_GLASS_PANE
+      quantity: 1
+      name: " "
+    slot: 27
+  13:
+    type: dummy
+    item:
+      material: GRAY_STAINED_GLASS_PANE
+      quantity: 1
+      name: " "
+    slot: 28
+  14:
+    type: dummy
+    item:
+      material: GRAY_STAINED_GLASS_PANE
+      quantity: 1
+      name: " "
+    slot: 29
+  15:
+    type: dummy
+    item:
+      material: GRAY_STAINED_GLASS_PANE
+      quantity: 1
+      name: " "
+    slot: 30
+  16:
+    type: dummy
+    item:
+      material: GRAY_STAINED_GLASS_PANE
+      quantity: 1
+      name: " "
+    slot: 32
+  17:
+    type: dummy
+    item:
+      material: GRAY_STAINED_GLASS_PANE
+      quantity: 1
+      name: " "
+    slot: 33
+  18:
+    type: dummy
+    item:
+      material: GRAY_STAINED_GLASS_PANE
+      quantity: 1
+      name: " "
+    slot: 34
+  19:
+    type: special
+    special: balance
+    slot: 35
+
+specialElements:
+  balance:
+    item:
+      material: KELP
+      quantity: 1
+      name: "#FFF275Tu Economía"
+      lore:
+        - "&8Tu Economía"
+        - ""
+        - " &8| &fDinero: #59E91F&l$&r#59E91F%balance%"
+        - ""
+numberFormat:
+  decimalSeparator: "."
+  groupingSeparator: ","
+  minimumIntegerDigits: 1
+  maximumIntegerDigits: 32
+  minimumFractionDigits: 0
+  maximumFractionDigits: 0
+  hideFraction: true
+  shortScale:
+    enableShortScaleNumbering: false
+    shortScaleLimit: 1000000
+    shortHandDecimalLimit: 2
+    shortHandNumberLimit: 32

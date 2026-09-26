@@ -1,0 +1,1147 @@
+open_command: trabajos
+size: 54
+menu_title: '&0&l|&r &0Trabajos ▶ &8Selector'
+
+items:
+  'Filtro':
+    display_name: " "
+    material: GRAY_STAINED_GLASS_PANE
+    slots: [45-48,50-52]
+    
+  'Cerrar':
+    material: DARK_OAK_DOOR
+    slot: 49
+    display_name: "&cSalir"
+    left_click_commands:
+      - '[close]'
+
+  'Niveles':
+    material: WRITABLE_BOOK
+    slot: 53
+    display_name: "&e⚡ &8| &eNiveles de trabajo"
+    lore:
+      - "&7▶ Click para ver"
+    left_click_commands:
+      - '[openguimenu] Trabajos'
+    
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+
+  'Hechizero':
+    material: BREWING_STAND
+    slot: 19
+    priority: 1
+    enchantment_glint_override: true
+    display_name: "&#E23AE4&lʜᴇᴄʜɪᴢᴇʀᴏ"
+    lore:
+      - "&8Trabajo"
+      - ""
+      - "&8&l | &fNivel máximo: &#E23AE4100"
+      - "&8&l | &fTrabajadores: &#E23AE4%jobsr_totalplayers_Hechizero%"
+      - ""
+      - "&8¿Qué es esto?"
+      - "&8 | &fPuedes conseguir dinero muy"
+      - "&8 | &ffácilmente creando pociones."
+      - ""
+      - "&8▶ &7Click para &#FF0000dejar este trabajo"
+    view_requirement:
+      requirements:
+        job_requirement:
+          type: string equals
+          input: '%changeoutput_contains_input:{jobsr_user_jobs}_matcher:Hechizero_ifmatch:yes_else:no%'
+          output: 'yes'
+    left_click_commands:
+      - '[player] jobs leave Hechizero'
+      - '[refresh]'
+
+  'Hechizero2':
+    material: BREWING_STAND
+    slot: 19
+    priority: 2
+    display_name: "&#E23AE4&lʜᴇᴄʜɪᴢᴇʀᴏ"
+    lore:
+      - "&8Trabajo"
+      - ""
+      - "&8&l | &fNivel máximo: &#E23AE4100"
+      - "&8&l | &fTrabajadores: &#E23AE4%jobsr_totalplayers_Hechizero%"
+      - ""
+      - "&8¿Qué es esto?"
+      - "&8 | &fPuedes conseguir dinero muy"
+      - "&8 | &ffácilmente creando pociones."
+      - ""
+      - "&8▶ &#FF0000¡Ya tienes 3 trabajos!"
+    view_requirement:
+      requirements:
+        job_requirement:
+          type: string equals
+          input: '%jobsr_user_joinedjobcount%'
+          output: '3'
+    left_click_commands:
+      - '[player] jobs join Hechizero'
+      - '[refresh]'
+
+  'Hechizero3':
+    material: BREWING_STAND
+    slot: 19
+    priority: 3
+    display_name: "&#E23AE4&lʜᴇᴄʜɪᴢᴇʀᴏ"
+    lore:
+      - "&8Trabajo"
+      - ""
+      - "&8&l | &fNivel máximo: &#E23AE4100"
+      - "&8&l | &fTrabajadores: &#E23AE4%jobsr_totalplayers_Hechizero%"
+      - ""
+      - "&8¿Qué es esto?"
+      - "&8 | &fPuedes conseguir dinero muy"
+      - "&8 | &ffácilmente creando pociones."
+      - ""
+      - "&8▶ &7Click para &#E23AE4elegir este trabajo"
+    view_requirement:
+      requirements:
+        job_requirement:
+          type: string equals
+          input: '%changeoutput_contains_input:{jobsr_user_jobs}_matcher:Hechizero_ifmatch:yes_else:no%'
+          output: 'no'
+    left_click_commands:
+      - '[player] jobs join Hechizero'
+      - '[refresh]'
+ 
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+
+  'Constructor':
+    material: BRICKS
+    slot: 20
+    priority: 1
+    enchantment_glint_override: true
+    display_name: "&#E43A3A&lᴄᴏɴꜱᴛʀᴜᴄᴛᴏʀ"
+    lore:
+      - "&8Trabajo"
+      - ""
+      - "&8&l | &fNivel máximo: &#E43A3A100"
+      - "&8&l | &fTrabajadores: &#E43A3A%jobsr_totalplayers_Constructor%"
+      - ""
+      - "&8¿Qué es esto?"
+      - "&8 | &fPuedes conseguir dinero muy"
+      - "&8 | &ffácilmente construyendo lo que sea."
+      - ""
+      - "&8▶ &7Click para &#E43A3Adejar este trabajo"
+    view_requirement:
+      requirements:
+        job_requirement:
+          type: string equals
+          input: '%changeoutput_contains_input:{jobsr_user_jobs}_matcher:Constructor_ifmatch:yes_else:no%'
+          output: 'yes'
+    left_click_commands:
+      - '[player] jobs leave Constructor'
+      - '[refresh]'
+
+  'Constructor2':
+    material: BRICKS
+    slot: 20
+    priority: 2
+    display_name: "&#E43A3A&lᴄᴏɴꜱᴛʀᴜᴄᴛᴏʀ"
+    lore:
+      - "&8Trabajo"
+      - ""
+      - "&8&l | &fNivel máximo: &#E43A3A100"
+      - "&8&l | &fTrabajadores: &#E43A3A%jobsr_totalplayers_Constructor%"
+      - ""
+      - "&8¿Qué es esto?"
+      - "&8 | &fPuedes conseguir dinero muy"
+      - "&8 | &ffácilmente construyendo lo que sea."
+      - ""
+      - "&8▶ &#FF0000¡Ya tienes 3 trabajos!"
+    view_requirement:
+      requirements:
+        job_requirement:
+          type: string equals
+          input: '%jobsr_user_joinedjobcount%'
+          output: '3'
+    left_click_commands:
+      - '[player] jobs join Constructor'
+      - '[refresh]'
+ 
+  'Constructor3':
+    material: BRICKS
+    slot: 20
+    priority: 3
+    display_name: "&#E43A3A&lᴄᴏɴꜱᴛʀᴜᴄᴛᴏʀ"
+    lore:
+      - "&8Trabajo"
+      - ""
+      - "&8&l | &fNivel máximo: &#E43A3A100"
+      - "&8&l | &fTrabajadores: &#E43A3A%jobsr_totalplayers_Constructor%"
+      - ""
+      - "&8¿Qué es esto?"
+      - "&8 | &fPuedes conseguir dinero muy"
+      - "&8 | &ffácilmente construyendo lo que sea."
+      - ""
+      - "&8▶ &7Click para &#E43A3Aelegir este trabajo"
+    view_requirement:
+      requirements:
+        job_requirement:
+          type: string equals
+          input: '%changeoutput_contains_input:{jobsr_user_jobs}_matcher:Constructor_ifmatch:yes_else:no%'
+          output: 'no'
+    left_click_commands:
+      - '[player] jobs join Constructor'
+      - '[refresh]'
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+
+  'Craftero':
+    material: CRAFTING_TABLE
+    slot: 21
+    priority: 1
+    enchantment_glint_override: true
+    display_name: "&#F4C542&lᴄʀᴀꜰᴛᴇʀᴏ"
+    lore:
+      - "&8Trabajo"
+      - ""
+      - "&8&l | &fNivel máximo: &#F4C542100"
+      - "&8&l | &fTrabajadores: &#F4C542%jobsr_totalplayers_Craftero%"
+      - ""
+      - "&8¿Qué es esto?"
+      - "&8 | &fPuedes conseguir dinero muy"
+      - "&8 | &ffácilmente crafteando objetos."
+      - ""
+      - "&8▶ &7Click para &#FF0000dejar este trabajo"
+    view_requirement:
+      requirements:
+        job_requirement:
+          type: string equals
+          input: '%changeoutput_contains_input:{jobsr_user_jobs}_matcher:Craftero_ifmatch:yes_else:no%'
+          output: 'yes'
+    left_click_commands:
+      - '[player] jobs leave Craftero'
+      - '[refresh]'
+
+  'Craftero2':
+    material: CRAFTING_TABLE
+    slot: 21
+    priority: 2
+    display_name: "&#F4C542&lᴄʀᴀꜰᴛᴇʀᴏ"
+    lore:
+      - "&8Trabajo"
+      - ""
+      - "&8&l | &fNivel máximo: &#F4C542100"
+      - "&8&l | &fTrabajadores: &#F4C542%jobsr_totalplayers_Craftero%"
+      - ""
+      - "&8¿Qué es esto?"
+      - "&8 | &fPuedes conseguir dinero muy"
+      - "&8 | &ffácilmente crafteando objetos."
+      - ""
+      - "&8▶ &#FF0000¡Ya tienes 3 trabajos!"
+    view_requirement:
+      requirements:
+        job_requirement:
+          type: string equals
+          input: '%jobsr_user_joinedjobcount%'
+          output: '3'
+    left_click_commands:
+      - '[player] jobs join Craftero'
+      - '[refresh]'
+
+  'Craftero3':
+    material: CRAFTING_TABLE
+    slot: 21
+    priority: 3
+    display_name: "&#F4C542&lᴄʀᴀꜰᴛᴇʀᴏ"
+    lore:
+      - "&8Trabajo"
+      - ""
+      - "&8&l | &fNivel máximo: &#F4C542100"
+      - "&8&l | &fTrabajadores: &#F4C542%jobsr_totalplayers_Craftero%"
+      - ""
+      - "&8¿Qué es esto?"
+      - "&8 | &fPuedes conseguir dinero muy"
+      - "&8 | &ffácilmente crafteando objetos."
+      - ""
+      - "&8▶ &7Click para &#F4C542elegir este trabajo"
+    view_requirement:
+      requirements:
+        job_requirement:
+          type: string equals
+          input: '%changeoutput_contains_input:{jobsr_user_jobs}_matcher:Craftero_ifmatch:yes_else:no%'
+          output: 'no'
+    left_click_commands:
+      - '[player] jobs join Craftero'
+      - '[refresh]'
+
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+
+  'Excavador':
+    material: IRON_SHOVEL
+    slot: 22
+    priority: 1
+    enchantment_glint_override: true
+    item_flags:
+      - HIDE_ATTRIBUTES
+    display_name: "&#C68642&lᴇxᴄᴀᴠᴀᴅᴏʀ"
+    lore:
+      - "&8Trabajo"
+      - ""
+      - "&8&l | &fNivel máximo: &#C68642100"
+      - "&8&l | &fTrabajadores: &#C68642%jobsr_totalplayers_Excavador%"
+      - ""
+      - "&8¿Qué es esto?"
+      - "&8 | &fPuedes conseguir dinero muy"
+      - "&8 | &ffácilmente excavando bloques."
+      - ""
+      - "&8▶ &7Click para &#FF0000dejar este trabajo"
+    view_requirement:
+      requirements:
+        job_requirement:
+          type: string equals
+          input: '%changeoutput_contains_input:{jobsr_user_jobs}_matcher:Excavador_ifmatch:yes_else:no%'
+          output: 'yes'
+    left_click_commands:
+      - '[player] jobs leave Excavador'
+      - '[refresh]'
+
+  'Excavador2':
+    material: IRON_SHOVEL
+    slot: 22
+    priority: 2
+    item_flags:
+      - HIDE_ATTRIBUTES
+    display_name: "&#C68642&lᴇxᴄᴀᴠᴀᴅᴏʀ"
+    lore:
+      - "&8Trabajo"
+      - ""
+      - "&8&l | &fNivel máximo: &#C68642100"
+      - "&8&l | &fTrabajadores: &#C68642%jobsr_totalplayers_Excavador%"
+      - ""
+      - "&8¿Qué es esto?"
+      - "&8 | &fPuedes conseguir dinero muy"
+      - "&8 | &ffácilmente excavando bloques."
+      - ""
+      - "&8▶ &#FF0000¡Ya tienes 3 trabajos!"
+    view_requirement:
+      requirements:
+        job_requirement:
+          type: string equals
+          input: '%jobsr_user_joinedjobcount%'
+          output: '3'
+    left_click_commands:
+      - '[player] jobs join Excavador'
+      - '[refresh]'
+
+  'Excavador3':
+    material: IRON_SHOVEL
+    slot: 22
+    priority: 3
+    item_flags:
+      - HIDE_ATTRIBUTES
+    display_name: "&#C68642&lᴇxᴄᴀᴠᴀᴅᴏʀ"
+    lore:
+      - "&8Trabajo"
+      - ""
+      - "&8&l | &fNivel máximo: &#C68642100"
+      - "&8&l | &fTrabajadores: &#C68642%jobsr_totalplayers_Excavador%"
+      - ""
+      - "&8¿Qué es esto?"
+      - "&8 | &fPuedes conseguir dinero muy"
+      - "&8 | &ffácilmente excavando bloques."
+      - ""
+      - "&8▶ &7Click para &#C68642elegir este trabajo"
+    view_requirement:
+      requirements:
+        job_requirement:
+          type: string equals
+          input: '%changeoutput_contains_input:{jobsr_user_jobs}_matcher:Excavador_ifmatch:yes_else:no%'
+          output: 'no'
+    left_click_commands:
+      - '[player] jobs join Excavador'
+      - '[refresh]'
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+
+  'Encantador':
+    material: ENCHANTING_TABLE
+    slot: 23
+    priority: 1
+    enchantment_glint_override: true
+    display_name: "&#9B59FF&lᴇɴᴄᴀɴᴛᴀᴅᴏʀ"
+    lore:
+      - "&8Trabajo"
+      - ""
+      - "&8&l | &fNivel máximo: &#9B59FF100"
+      - "&8&l | &fTrabajadores: &#9B59FF%jobsr_totalplayers_Encantador%"
+      - ""
+      - "&8¿Qué es esto?"
+      - "&8 | &fPuedes conseguir dinero muy"
+      - "&8 | &ffácilmente encantando objetos."
+      - ""
+      - "&8▶ &7Click para &#FF0000dejar este trabajo"
+    view_requirement:
+      requirements:
+        job_requirement:
+          type: string equals
+          input: '%changeoutput_contains_input:{jobsr_user_jobs}_matcher:Encantador_ifmatch:yes_else:no%'
+          output: 'yes'
+    left_click_commands:
+      - '[player] jobs leave Encantador'
+      - '[refresh]'
+
+  'Encantador2':
+    material: ENCHANTING_TABLE
+    slot: 23
+    priority: 2
+    display_name: "&#9B59FF&lᴇɴᴄᴀɴᴛᴀᴅᴏʀ"
+    lore:
+      - "&8Trabajo"
+      - ""
+      - "&8&l | &fNivel máximo: &#9B59FF100"
+      - "&8&l | &fTrabajadores: &#9B59FF%jobsr_totalplayers_Encantador%"
+      - ""
+      - "&8¿Qué es esto?"
+      - "&8 | &fPuedes conseguir dinero muy"
+      - "&8 | &ffácilmente encantando objetos."
+      - ""
+      - "&8▶ &#FF0000¡Ya tienes 3 trabajos!"
+    view_requirement:
+      requirements:
+        job_requirement:
+          type: string equals
+          input: '%jobsr_user_joinedjobcount%'
+          output: '3'
+    left_click_commands:
+      - '[player] jobs join Encantador'
+      - '[refresh]'
+
+  'Encantador3':
+    material: ENCHANTING_TABLE
+    slot: 23
+    priority: 3
+    display_name: "&#9B59FF&lᴇɴᴄᴀɴᴛᴀᴅᴏʀ"
+    lore:
+      - "&8Trabajo"
+      - ""
+      - "&8&l | &fNivel máximo: &#9B59FF100"
+      - "&8&l | &fTrabajadores: &#9B59FF%jobsr_totalplayers_Encantador%"
+      - ""
+      - "&8¿Qué es esto?"
+      - "&8 | &fPuedes conseguir dinero muy"
+      - "&8 | &ffácilmente encantando objetos."
+      - ""
+      - "&8▶ &7Click para &#9B59FFelegir este trabajo"
+    view_requirement:
+      requirements:
+        job_requirement:
+          type: string equals
+          input: '%changeoutput_contains_input:{jobsr_user_jobs}_matcher:Encantador_ifmatch:yes_else:no%'
+          output: 'no'
+    left_click_commands:
+      - '[player] jobs join Encantador'
+      - '[refresh]'
+
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+
+  'Granjero':
+    material: WHEAT
+    slot: 24
+    priority: 1
+    enchantment_glint_override: true
+    display_name: "&#7CCF4D&lɢʀᴀɴᴊᴇʀᴏ"
+    lore:
+      - "&8Trabajo"
+      - ""
+      - "&8&l | &fNivel máximo: &#7CCF4D100"
+      - "&8&l | &fTrabajadores: &#7CCF4D%jobsr_totalplayers_Granjero%"
+      - ""
+      - "&8¿Qué es esto?"
+      - "&8 | &fPuedes conseguir dinero muy"
+      - "&8 | &ffácilmente cultivando recursos."
+      - ""
+      - "&8▶ &7Click para &#FF0000dejar este trabajo"
+    view_requirement:
+      requirements:
+        job_requirement:
+          type: string equals
+          input: '%changeoutput_contains_input:{jobsr_user_jobs}_matcher:Granjero_ifmatch:yes_else:no%'
+          output: 'yes'
+    left_click_commands:
+      - '[player] jobs leave Granjero'
+      - '[refresh]'
+
+  'Granjero2':
+    material: WHEAT
+    slot: 24
+    priority: 2
+    display_name: "&#7CCF4D&lɢʀᴀɴᴊᴇʀᴏ"
+    lore:
+      - "&8Trabajo"
+      - ""
+      - "&8&l | &fNivel máximo: &#7CCF4D100"
+      - "&8&l | &fTrabajadores: &#7CCF4D%jobsr_totalplayers_Granjero%"
+      - ""
+      - "&8¿Qué es esto?"
+      - "&8 | &fPuedes conseguir dinero muy"
+      - "&8 | &ffácilmente cultivando recursos."
+      - ""
+      - "&8▶ &#FF0000¡Ya tienes 3 trabajos!"
+    view_requirement:
+      requirements:
+        job_requirement:
+          type: string equals
+          input: '%jobsr_user_joinedjobcount%'
+          output: '3'
+    left_click_commands:
+      - '[player] jobs join Granjero'
+      - '[refresh]'
+
+  'Granjero3':
+    material: WHEAT
+    slot: 24
+    priority: 3
+    display_name: "&#7CCF4D&lɢʀᴀɴᴊᴇʀᴏ"
+    lore:
+      - "&8Trabajo"
+      - ""
+      - "&8&l | &fNivel máximo: &#7CCF4D100"
+      - "&8&l | &fTrabajadores: &#7CCF4D%jobsr_totalplayers_Granjero%"
+      - ""
+      - "&8¿Qué es esto?"
+      - "&8 | &fPuedes conseguir dinero muy"
+      - "&8 | &ffácilmente cultivando recursos."
+      - ""
+      - "&8▶ &7Click para &#7CCF4Delegir este trabajo"
+    view_requirement:
+      requirements:
+        job_requirement:
+          type: string equals
+          input: '%changeoutput_contains_input:{jobsr_user_jobs}_matcher:Granjero_ifmatch:yes_else:no%'
+          output: 'no'
+    left_click_commands:
+      - '[player] jobs join Granjero'
+      - '[refresh]'
+
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+
+  'Pescador':
+    material: FISHING_ROD
+    slot: 25
+    priority: 1
+    enchantment_glint_override: true
+    display_name: "&#3AA8FF&lᴘᴇꜱᴄᴀᴅᴏʀ"
+    lore:
+      - "&8Trabajo"
+      - ""
+      - "&8&l | &fNivel máximo: &#3AA8FF100"
+      - "&8&l | &fTrabajadores: &#3AA8FF%jobsr_totalplayers_Pescador%"
+      - ""
+      - "&8¿Qué es esto?"
+      - "&8 | &fPuedes conseguir dinero muy"
+      - "&8 | &ffácilmente pescando tesoros."
+      - ""
+      - "&8▶ &7Click para &#FF0000dejar este trabajo"
+    view_requirement:
+      requirements:
+        job_requirement:
+          type: string equals
+          input: '%changeoutput_contains_input:{jobsr_user_jobs}_matcher:Pescador_ifmatch:yes_else:no%'
+          output: 'yes'
+    left_click_commands:
+      - '[player] jobs leave Pescador'
+      - '[refresh]'
+
+  'Pescador2':
+    material: FISHING_ROD
+    slot: 25
+    priority: 2
+    display_name: "&#3AA8FF&lᴘᴇꜱᴄᴀᴅᴏʀ"
+    lore:
+      - "&8Trabajo"
+      - ""
+      - "&8&l | &fNivel máximo: &#3AA8FF100"
+      - "&8&l | &fTrabajadores: &#3AA8FF%jobsr_totalplayers_Pescador%"
+      - ""
+      - "&8¿Qué es esto?"
+      - "&8 | &fPuedes conseguir dinero muy"
+      - "&8 | &ffácilmente pescando tesoros."
+      - ""
+      - "&8▶ &#FF0000¡Ya tienes 3 trabajos!"
+    view_requirement:
+      requirements:
+        job_requirement:
+          type: string equals
+          input: '%jobsr_user_joinedjobcount%'
+          output: '3'
+    left_click_commands:
+      - '[player] jobs join Pescador'
+      - '[refresh]'
+
+  'Pescador3':
+    material: FISHING_ROD
+    slot: 25
+    priority: 3
+    display_name: "&#3AA8FF&lᴘᴇꜱᴄᴀᴅᴏʀ"
+    lore:
+      - "&8Trabajo"
+      - ""
+      - "&8&l | &fNivel máximo: &#3AA8FF100"
+      - "&8&l | &fTrabajadores: &#3AA8FF%jobsr_totalplayers_Pescador%"
+      - ""
+      - "&8¿Qué es esto?"
+      - "&8 | &fPuedes conseguir dinero muy"
+      - "&8 | &ffácilmente pescando tesoros."
+      - ""
+      - "&8▶ &7Click para &#3AA8FFelegir este trabajo"
+    view_requirement:
+      requirements:
+        job_requirement:
+          type: string equals
+          input: '%changeoutput_contains_input:{jobsr_user_jobs}_matcher:Pescador_ifmatch:yes_else:no%'
+          output: 'no'
+    left_click_commands:
+      - '[player] jobs join Pescador'
+      - '[refresh]'
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+
+  'Cazador':
+    material: BOW
+    slot: 29
+    priority: 1
+    enchantment_glint_override: true
+    display_name: "&#D94A4A&lᴄᴀᴢᴀᴅᴏʀ"
+    lore:
+      - "&8Trabajo"
+      - ""
+      - "&8&l | &fNivel máximo: &#D94A4A100"
+      - "&8&l | &fTrabajadores: &#D94A4A%jobsr_totalplayers_Cazador%"
+      - ""
+      - "&8¿Qué es esto?"
+      - "&8 | &fPuedes conseguir dinero muy"
+      - "&8 | &ffácilmente cazando criaturas."
+      - ""
+      - "&8▶ &7Click para &#FF0000dejar este trabajo"
+    view_requirement:
+      requirements:
+        job_requirement:
+          type: string equals
+          input: '%changeoutput_contains_input:{jobsr_user_jobs}_matcher:Cazador_ifmatch:yes_else:no%'
+          output: 'yes'
+    left_click_commands:
+      - '[player] jobs leave Cazador'
+      - '[refresh]'
+
+  'Cazador2':
+    material: BOW
+    slot: 29
+    priority: 2
+    display_name: "&#D94A4A&lᴄᴀᴢᴀᴅᴏʀ"
+    lore:
+      - "&8Trabajo"
+      - ""
+      - "&8&l | &fNivel máximo: &#D94A4A100"
+      - "&8&l | &fTrabajadores: &#D94A4A%jobsr_totalplayers_Cazador%"
+      - ""
+      - "&8¿Qué es esto?"
+      - "&8 | &fPuedes conseguir dinero muy"
+      - "&8 | &ffácilmente cazando criaturas."
+      - ""
+      - "&8▶ &#FF0000¡Ya tienes 3 trabajos!"
+    view_requirement:
+      requirements:
+        job_requirement:
+          type: string equals
+          input: '%jobsr_user_joinedjobcount%'
+          output: '3'
+    left_click_commands:
+      - '[player] jobs join Cazador'
+      - '[refresh]'
+
+  'Cazador3':
+    material: BOW
+    slot: 29
+    priority: 3
+    display_name: "&#D94A4A&lᴄᴀᴢᴀᴅᴏʀ"
+    lore:
+      - "&8Trabajo"
+      - ""
+      - "&8&l | &fNivel máximo: &#D94A4A100"
+      - "&8&l | &fTrabajadores: &#D94A4A%jobsr_totalplayers_Cazador%"
+      - ""
+      - "&8¿Qué es esto?"
+      - "&8 | &fPuedes conseguir dinero muy"
+      - "&8 | &ffácilmente cazando criaturas."
+      - ""
+      - "&8▶ &7Click para &#D94A4Aelegir este trabajo"
+    view_requirement:
+      requirements:
+        job_requirement:
+          type: string equals
+          input: '%changeoutput_contains_input:{jobsr_user_jobs}_matcher:Cazador_ifmatch:yes_else:no%'
+          output: 'no'
+    left_click_commands:
+      - '[player] jobs join Cazador'
+      - '[refresh]'
+
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+
+  'Herrero':
+    material: ANVIL
+    slot: 30
+    priority: 1
+    enchantment_glint_override: true
+    display_name: "&#8E8E8E&lʜᴇʀʀᴇʀᴏ"
+    lore:
+      - "&8Trabajo"
+      - ""
+      - "&8&l | &fNivel máximo: &#8E8E8E100"
+      - "&8&l | &fTrabajadores: &#8E8E8E%jobsr_totalplayers_Herrero%"
+      - ""
+      - "&8¿Qué es esto?"
+      - "&8 | &fPuedes conseguir dinero"
+      - "&8 | &ffabricando y reparando equipo."
+      - ""
+      - "&8▶ &7Click para &#FF0000dejar este trabajo"
+    view_requirement:
+      requirements:
+        job_requirement:
+          type: string equals
+          input: '%changeoutput_contains_input:{jobsr_user_jobs}_matcher:Herrero_ifmatch:yes_else:no%'
+          output: 'yes'
+    left_click_commands:
+      - '[player] jobs leave Herrero'
+      - '[refresh]'
+
+  'Herrero2':
+    material: ANVIL
+    slot: 30
+    priority: 2
+    display_name: "&#8E8E8E&lʜᴇʀʀᴇʀᴏ"
+    lore:
+      - "&8Trabajo"
+      - ""
+      - "&8&l | &fNivel máximo: &#8E8E8E100"
+      - "&8&l | &fTrabajadores: &#8E8E8E%jobsr_totalplayers_Herrero%"
+      - ""
+      - "&8¿Qué es esto?"
+      - "&8 | &fPuedes conseguir dinero"
+      - "&8 | &ffabricando y reparando equipo."
+      - ""
+      - "&8▶ &#FF0000¡Ya tienes 3 trabajos!"
+    view_requirement:
+      requirements:
+        job_requirement:
+          type: string equals
+          input: '%jobsr_user_joinedjobcount%'
+          output: '3'
+    left_click_commands:
+      - '[player] jobs join Herrero'
+      - '[refresh]'
+
+  'Herrero3':
+    material: ANVIL
+    slot: 30
+    priority: 3
+    display_name: "&#8E8E8E&lʜᴇʀʀᴇʀᴏ"
+    lore:
+      - "&8Trabajo"
+      - ""
+      - "&8&l | &fNivel máximo: &#8E8E8E100"
+      - "&8&l | &fTrabajadores: &#8E8E8E%jobsr_totalplayers_Herrero%"
+      - ""
+      - "&8¿Qué es esto?"
+      - "&8 | &fPuedes conseguir dinero"
+      - "&8 | &ffabricando y reparando equipo."
+      - ""
+      - "&8▶ &7Click para &#8E8E8Eelegir este trabajo"
+    view_requirement:
+      requirements:
+        job_requirement:
+          type: string equals
+          input: '%changeoutput_contains_input:{jobsr_user_jobs}_matcher:Herrero_ifmatch:yes_else:no%'
+          output: 'no'
+    left_click_commands:
+      - '[player] jobs join Herrero'
+      - '[refresh]'
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+
+  'Leñador':
+    material: IRON_AXE
+    slot: 31
+    priority: 1
+    enchantment_glint_override: true
+    item_flags:
+      - HIDE_ATTRIBUTES
+    display_name: "&#8B5A2B&lʟᴇñᴀᴅᴏʀ"
+    lore:
+      - "&8Trabajo"
+      - ""
+      - "&8&l | &fNivel máximo: &#8B5A2B100"
+      - "&8&l | &fTrabajadores: &#8B5A2B%jobsr_totalplayers_Leñador%"
+      - ""
+      - "&8¿Qué es esto?"
+      - "&8 | &fPuedes conseguir dinero"
+      - "&8 | &ftalando árboles y obteniendo madera."
+      - ""
+      - "&8▶ &7Click para &#FF0000dejar este trabajo"
+    view_requirement:
+      requirements:
+        job_requirement:
+          type: string equals
+          input: '%changeoutput_contains_input:{jobsr_user_jobs}_matcher:Leñador_ifmatch:yes_else:no%'
+          output: 'yes'
+    left_click_commands:
+      - '[player] jobs leave Leñador'
+      - '[refresh]'
+
+  'Leñador2':
+    material: IRON_AXE
+    slot: 31
+    priority: 2
+    item_flags:
+      - HIDE_ATTRIBUTES
+    display_name: "&#8B5A2B&lʟᴇñᴀᴅᴏʀ"
+    lore:
+      - "&8Trabajo"
+      - ""
+      - "&8&l | &fNivel máximo: &#8B5A2B100"
+      - "&8&l | &fTrabajadores: &#8B5A2B%jobsr_totalplayers_Leñador%"
+      - ""
+      - "&8¿Qué es esto?"
+      - "&8 | &fPuedes conseguir dinero"
+      - "&8 | &ftalando árboles y obteniendo madera."
+      - ""
+      - "&8▶ &#FF0000¡Ya tienes 3 trabajos!"
+    view_requirement:
+      requirements:
+        job_requirement:
+          type: string equals
+          input: '%jobsr_user_joinedjobcount%'
+          output: '3'
+    left_click_commands:
+      - '[player] jobs join Leñador'
+      - '[refresh]'
+
+  'Leñador3':
+    material: IRON_AXE
+    slot: 31
+    priority: 3
+    item_flags:
+      - HIDE_ATTRIBUTES
+    display_name: "&#8B5A2B&lʟᴇñᴀᴅᴏʀ"
+    lore:
+      - "&8Trabajo"
+      - ""
+      - "&8&l | &fNivel máximo: &#8B5A2B100"
+      - "&8&l | &fTrabajadores: &#8B5A2B%jobsr_totalplayers_Leñador%"
+      - ""
+      - "&8¿Qué es esto?"
+      - "&8 | &fPuedes conseguir dinero"
+      - "&8 | &ftalando árboles y obteniendo madera."
+      - ""
+      - "&8▶ &7Click para &#8B5A2Belegir este trabajo"
+    view_requirement:
+      requirements:
+        job_requirement:
+          type: string equals
+          input: '%changeoutput_contains_input:{jobsr_user_jobs}_matcher:Leñador_ifmatch:yes_else:no%'
+          output: 'no'
+    left_click_commands:
+      - '[player] jobs join Leñador'
+      - '[refresh]'
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+
+  'Explorador':
+    material: COMPASS
+    slot: 32
+    priority: 1
+    enchantment_glint_override: true
+    display_name: "&#4DB8FF&lᴇxᴘʟᴏʀᴀᴅᴏʀ"
+    lore:
+      - "&8Trabajo"
+      - ""
+      - "&8&l | &fNivel máximo: &#4DB8FF100"
+      - "&8&l | &fTrabajadores: &#4DB8FF%jobsr_totalplayers_Explorador%"
+      - ""
+      - "&8¿Qué es esto?"
+      - "&8 | &fPuedes conseguir dinero"
+      - "&8 | &fexplorando el mundo y descubriendo"
+      - "&8 | &fnuevos lugares."
+      - ""
+      - "&8▶ &7Click para &#FF0000dejar este trabajo"
+    enchantaments:
+    - 'BREACH;1'
+    view_requirement:
+      requirements:
+        job_requirement:
+          type: string equals
+          input: '%changeoutput_contains_input:{jobsr_user_jobs}_matcher:Explorador_ifmatch:yes_else:no%'
+          output: 'yes'
+    left_click_commands:
+      - '[player] jobs leave Explorador'
+      - '[refresh]'
+
+  'Explorador2':
+    material: COMPASS
+    slot: 32
+    priority: 2
+    display_name: "&#4DB8FF&lᴇxᴘʟᴏʀᴀᴅᴏʀ"
+    lore:
+      - "&8Trabajo"
+      - ""
+      - "&8&l | &fNivel máximo: &#4DB8FF100"
+      - "&8&l | &fTrabajadores: &#4DB8FF%jobsr_totalplayers_Explorador%"
+      - ""
+      - "&8¿Qué es esto?"
+      - "&8 | &fPuedes conseguir dinero"
+      - "&8 | &fexplorando el mundo y descubriendo"
+      - "&8 | &fnuevos lugares."
+      - ""
+      - "&8▶ &#FF0000¡Ya tienes 3 trabajos!"
+    view_requirement:
+      requirements:
+        job_requirement:
+          type: string equals
+          input: '%jobsr_user_joinedjobcount%'
+          output: '3'
+    left_click_commands:
+      - '[player] jobs join Explorador'
+      - '[refresh]'
+
+  'Explorador3':
+    material: COMPASS
+    slot: 32
+    priority: 3
+    display_name: "&#4DB8FF&lᴇxᴘʟᴏʀᴀᴅᴏʀ"
+    lore:
+      - "&8Trabajo"
+      - ""
+      - "&8&l | &fNivel máximo: &#4DB8FF100"
+      - "&8&l | &fTrabajadores: &#4DB8FF%jobsr_totalplayers_Explorador%"
+      - ""
+      - "&8¿Qué es esto?"
+      - "&8 | &fPuedes conseguir dinero"
+      - "&8 | &fexplorando el mundo y descubriendo"
+      - "&8 | &fnuevos lugares."
+      - ""
+      - "&8▶ &7Click para &#4DB8FFelegir este trabajo"
+    view_requirement:
+      requirements:
+        job_requirement:
+          type: string equals
+          input: '%changeoutput_contains_input:{jobsr_user_jobs}_matcher:Explorador_ifmatch:yes_else:no%'
+          output: 'no'
+    left_click_commands:
+      - '[player] jobs join Explorador'
+      - '[refresh]'
+
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+
+  'Minero':
+    material: DIAMOND_PICKAXE
+    slot: 33
+    priority: 1
+    enchantment_glint_override: true
+    item_flags:
+      - HIDE_ATTRIBUTES
+    display_name: "&#5FC9C9&lᴍɪɴᴇʀᴏ"
+    lore:
+      - "&8Trabajo"
+      - ""
+      - "&8&l | &fNivel máximo: &#5FC9C9100"
+      - "&8&l | &fTrabajadores: &#5FC9C9%jobsr_totalplayers_Minero%"
+      - ""
+      - "&8¿Qué es esto?"
+      - "&8 | &fPuedes conseguir dinero"
+      - "&8 | &fextrayendo minerales valiosos."
+      - ""
+      - "&8▶ &7Click para &#FF0000dejar este trabajo"
+    view_requirement:
+      requirements:
+        job_requirement:
+          type: string equals
+          input: '%changeoutput_contains_input:{jobsr_user_jobs}_matcher:Minero_ifmatch:yes_else:no%'
+          output: 'yes'
+    left_click_commands:
+      - '[player] jobs leave Minero'
+      - '[refresh]'
+
+  'Minero2':
+    material: DIAMOND_PICKAXE
+    slot: 33
+    priority: 2
+    item_flags:
+      - HIDE_ATTRIBUTES
+    display_name: "&#5FC9C9&lᴍɪɴᴇʀᴏ"
+    lore:
+      - "&8Trabajo"
+      - ""
+      - "&8&l | &fNivel máximo: &#5FC9C9100"
+      - "&8&l | &fTrabajadores: &#5FC9C9%jobsr_totalplayers_Minero%"
+      - ""
+      - "&8¿Qué es esto?"
+      - "&8 | &fPuedes conseguir dinero"
+      - "&8 | &fextrayendo minerales valiosos."
+      - ""
+      - "&8▶ &#FF0000¡Ya tienes 3 trabajos!"
+    view_requirement:
+      requirements:
+        job_requirement:
+          type: string equals
+          input: '%jobsr_user_joinedjobcount%'
+          output: '3'
+    left_click_commands:
+      - '[player] jobs join Minero'
+      - '[refresh]'
+
+  'Minero3':
+    material: DIAMOND_PICKAXE
+    slot: 33
+    priority: 3
+    item_flags:
+      - HIDE_ATTRIBUTES
+    display_name: "&#5FC9C9&lᴍɪɴᴇʀᴏ"
+    lore:
+      - "&8Trabajo"
+      - ""
+      - "&8&l | &fNivel máximo: &#5FC9C9100"
+      - "&8&l | &fTrabajadores: &#5FC9C9%jobsr_totalplayers_Minero%"
+      - ""
+      - "&8¿Qué es esto?"
+      - "&8 | &fPuedes conseguir dinero"
+      - "&8 | &fextrayendo minerales valiosos."
+      - ""
+      - "&8▶ &7Click para &#5FC9C9elegir este trabajo"
+    view_requirement:
+      requirements:
+        job_requirement:
+          type: string equals
+          input: '%changeoutput_contains_input:{jobsr_user_jobs}_matcher:Minero_ifmatch:yes_else:no%'
+          output: 'no'
+    left_click_commands:
+      - '[player] jobs join Minero'
+      - '[refresh]'

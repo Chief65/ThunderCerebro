@@ -1,0 +1,2 @@
+ls plugins/DeluxeMenus/gui_menus/menusIA/
+bye

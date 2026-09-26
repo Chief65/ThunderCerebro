@@ -1,0 +1,645 @@
+menu_title: '&0&l|&r &0Compra ▶ &8Todos &7(14/17)'
+open_command:
+  - compra_todos_14
+size: 45
+open_requirement:
+  requirements: {}
+register_command: true
+update: true
+
+items:
+  # ============================================================================
+  # FILTRO SUPERIOR: PANELES GRISES DECORATIVOS (FILA 1)
+  # ============================================================================
+  'Filtro_Top':
+    material: GRAY_STAINED_GLASS_PANE
+    display_name: ' '
+    slots:
+      - 0
+      - 1
+      - 2
+      - 3
+      - 4
+      - 5
+      - 6
+      - 7
+      - 8
+
+  # ============================================================================
+  # CATÁLOGO DE ÍTEMS DE COMPRA (FILAS 2, 3, 4: SLOTS 9 A 35)
+  # ============================================================================
+  'item_1':
+    material: ENDER_PEARL
+    slot: 9
+    item_flags:
+      - HIDE_ATTRIBUTES
+      - HIDE_ENCHANTS
+    display_name: '&#00FF88Ender Pearl'
+    lore:
+      - '&8ᴘʀᴇᴄɪᴏ ᴅᴇ ᴄᴏᴍᴘʀᴀ'
+      - ''
+      - ' &8| &fUnidad: &#59E91F&l$&r&#59E91F50'
+      - ' &8| &fStack x64: &#59E91F&l$&r&#59E91F3200'
+      - ''
+      - '&7▶ Click para comprar'
+    left_click_commands:
+      - '[close]'
+      - '[player] shop mobs'
+      - '[sound] UI_BUTTON_CLICK'
+
+  'item_2':
+    material: FEATHER
+    slot: 10
+    item_flags:
+      - HIDE_ATTRIBUTES
+      - HIDE_ENCHANTS
+    display_name: '&#00FF88Feather'
+    lore:
+      - '&8ᴘʀᴇᴄɪᴏ ᴅᴇ ᴄᴏᴍᴘʀᴀ'
+      - ''
+      - ' &8| &fUnidad: &#59E91F&l$&r&#59E91F6'
+      - ' &8| &fStack x64: &#59E91F&l$&r&#59E91F384'
+      - ''
+      - '&7▶ Click para comprar'
+    left_click_commands:
+      - '[close]'
+      - '[player] shop mobs'
+      - '[sound] UI_BUTTON_CLICK'
+
+  'item_3':
+    material: MAGMA_CREAM
+    slot: 11
+    item_flags:
+      - HIDE_ATTRIBUTES
+      - HIDE_ENCHANTS
+    display_name: '&#00FF88Magma Cream'
+    lore:
+      - '&8ᴘʀᴇᴄɪᴏ ᴅᴇ ᴄᴏᴍᴘʀᴀ'
+      - ''
+      - ' &8| &fUnidad: &#59E91F&l$&r&#59E91F200'
+      - ' &8| &fStack x64: &#59E91F&l$&r&#59E91F12800'
+      - ''
+      - '&7▶ Click para comprar'
+    left_click_commands:
+      - '[close]'
+      - '[player] shop mobs'
+      - '[sound] UI_BUTTON_CLICK'
+
+  'item_4':
+    material: PHANTOM_MEMBRANE
+    slot: 12
+    item_flags:
+      - HIDE_ATTRIBUTES
+      - HIDE_ENCHANTS
+    display_name: '&#00FF88Phantom Membrane'
+    lore:
+      - '&8ᴘʀᴇᴄɪᴏ ᴅᴇ ᴄᴏᴍᴘʀᴀ'
+      - ''
+      - ' &8| &fUnidad: &#59E91F&l$&r&#59E91F10'
+      - ' &8| &fStack x64: &#59E91F&l$&r&#59E91F640'
+      - ''
+      - '&7▶ Click para comprar'
+    left_click_commands:
+      - '[close]'
+      - '[player] shop mobs'
+      - '[sound] UI_BUTTON_CLICK'
+
+  'item_5':
+    material: RABBIT_FOOT
+    slot: 13
+    item_flags:
+      - HIDE_ATTRIBUTES
+      - HIDE_ENCHANTS
+    display_name: '&#00FF88Rabbit Foot'
+    lore:
+      - '&8ᴘʀᴇᴄɪᴏ ᴅᴇ ᴄᴏᴍᴘʀᴀ'
+      - ''
+      - ' &8| &fUnidad: &#59E91F&l$&r&#59E91F5'
+      - ' &8| &fStack x64: &#59E91F&l$&r&#59E91F320'
+      - ''
+      - '&7▶ Click para comprar'
+    left_click_commands:
+      - '[close]'
+      - '[player] shop mobs'
+      - '[sound] UI_BUTTON_CLICK'
+
+  'item_6':
+    material: ROTTEN_FLESH
+    slot: 14
+    item_flags:
+      - HIDE_ATTRIBUTES
+      - HIDE_ENCHANTS
+    display_name: '&#00FF88Rotten Flesh'
+    lore:
+      - '&8ᴘʀᴇᴄɪᴏ ᴅᴇ ᴄᴏᴍᴘʀᴀ'
+      - ''
+      - ' &8| &fUnidad: &#59E91F&l$&r&#59E91F6'
+      - ' &8| &fStack x64: &#59E91F&l$&r&#59E91F384'
+      - ''
+      - '&7▶ Click para comprar'
+    left_click_commands:
+      - '[close]'
+      - '[player] shop mobs'
+      - '[sound] UI_BUTTON_CLICK'
+
+  'item_7':
+    material: SLIME_BALL
+    slot: 15
+    item_flags:
+      - HIDE_ATTRIBUTES
+      - HIDE_ENCHANTS
+    display_name: '&#00FF88Slime Ball'
+    lore:
+      - '&8ᴘʀᴇᴄɪᴏ ᴅᴇ ᴄᴏᴍᴘʀᴀ'
+      - ''
+      - ' &8| &fUnidad: &#59E91F&l$&r&#59E91F25'
+      - ' &8| &fStack x64: &#59E91F&l$&r&#59E91F1600'
+      - ''
+      - '&7▶ Click para comprar'
+    left_click_commands:
+      - '[close]'
+      - '[player] shop mobs'
+      - '[sound] UI_BUTTON_CLICK'
+
+  'item_8':
+    material: SPIDER_EYE
+    slot: 16
+    item_flags:
+      - HIDE_ATTRIBUTES
+      - HIDE_ENCHANTS
+    display_name: '&#00FF88Spider Eye'
+    lore:
+      - '&8ᴘʀᴇᴄɪᴏ ᴅᴇ ᴄᴏᴍᴘʀᴀ'
+      - ''
+      - ' &8| &fUnidad: &#59E91F&l$&r&#59E91F7'
+      - ' &8| &fStack x64: &#59E91F&l$&r&#59E91F448'
+      - ''
+      - '&7▶ Click para comprar'
+    left_click_commands:
+      - '[close]'
+      - '[player] shop mobs'
+      - '[sound] UI_BUTTON_CLICK'
+
+  'item_9':
+    material: STRING
+    slot: 17
+    item_flags:
+      - HIDE_ATTRIBUTES
+      - HIDE_ENCHANTS
+    display_name: '&#00FF88String'
+    lore:
+      - '&8ᴘʀᴇᴄɪᴏ ᴅᴇ ᴄᴏᴍᴘʀᴀ'
+      - ''
+      - ' &8| &fUnidad: &#59E91F&l$&r&#59E91F35'
+      - ' &8| &fStack x64: &#59E91F&l$&r&#59E91F2240'
+      - ''
+      - '&7▶ Click para comprar'
+    left_click_commands:
+      - '[close]'
+      - '[player] shop mobs'
+      - '[sound] UI_BUTTON_CLICK'
+
+  'item_10':
+    material: PRISMARINE_SHARD
+    slot: 18
+    item_flags:
+      - HIDE_ATTRIBUTES
+      - HIDE_ENCHANTS
+    display_name: '&#00FF88Prismarine Shard'
+    lore:
+      - '&8ᴘʀᴇᴄɪᴏ ᴅᴇ ᴄᴏᴍᴘʀᴀ'
+      - ''
+      - ' &8| &fUnidad: &#59E91F&l$&r&#59E91F100'
+      - ' &8| &fStack x64: &#59E91F&l$&r&#59E91F6400'
+      - ''
+      - '&7▶ Click para comprar'
+    left_click_commands:
+      - '[close]'
+      - '[player] shop mobs'
+      - '[sound] UI_BUTTON_CLICK'
+
+  'item_11':
+    material: HONEYCOMB
+    slot: 19
+    item_flags:
+      - HIDE_ATTRIBUTES
+      - HIDE_ENCHANTS
+    display_name: '&#00FF88Honeycomb'
+    lore:
+      - '&8ᴘʀᴇᴄɪᴏ ᴅᴇ ᴄᴏᴍᴘʀᴀ'
+      - ''
+      - ' &8| &fUnidad: &#59E91F&l$&r&#59E91F50'
+      - ' &8| &fStack x64: &#59E91F&l$&r&#59E91F3200'
+      - ''
+      - '&7▶ Click para comprar'
+    left_click_commands:
+      - '[close]'
+      - '[player] shop mobs'
+      - '[sound] UI_BUTTON_CLICK'
+
+  'item_12':
+    material: EXPERIENCE_BOTTLE
+    slot: 20
+    item_flags:
+      - HIDE_ATTRIBUTES
+      - HIDE_ENCHANTS
+    display_name: '&#00FF88Experience Bottle'
+    lore:
+      - '&8ᴘʀᴇᴄɪᴏ ᴅᴇ ᴄᴏᴍᴘʀᴀ'
+      - ''
+      - ' &8| &fUnidad: &#59E91F&l$&r&#59E91F100'
+      - ' &8| &fStack x64: &#59E91F&l$&r&#59E91F6400'
+      - ''
+      - '&7▶ Click para comprar'
+    left_click_commands:
+      - '[close]'
+      - '[player] shop equipo'
+      - '[sound] UI_BUTTON_CLICK'
+
+  'item_13':
+    material: GOLDEN_APPLE
+    slot: 21
+    item_flags:
+      - HIDE_ATTRIBUTES
+      - HIDE_ENCHANTS
+    display_name: '&#00FF88Golden Apple'
+    lore:
+      - '&8ᴘʀᴇᴄɪᴏ ᴅᴇ ᴄᴏᴍᴘʀᴀ'
+      - ''
+      - ' &8| &fUnidad: &#59E91F&l$&r&#59E91F350'
+      - ' &8| &fStack x64: &#59E91F&l$&r&#59E91F22400'
+      - ''
+      - '&7▶ Click para comprar'
+    left_click_commands:
+      - '[close]'
+      - '[player] shop equipo'
+      - '[sound] UI_BUTTON_CLICK'
+
+  'item_14':
+    material: WIND_CHARGE
+    slot: 22
+    item_flags:
+      - HIDE_ATTRIBUTES
+      - HIDE_ENCHANTS
+    display_name: '&#00FF88Wind Charge'
+    lore:
+      - '&8ᴘʀᴇᴄɪᴏ ᴅᴇ ᴄᴏᴍᴘʀᴀ'
+      - ''
+      - ' &8| &fUnidad: &#59E91F&l$&r&#59E91F10'
+      - ' &8| &fStack x64: &#59E91F&l$&r&#59E91F640'
+      - ''
+      - '&7▶ Click para comprar'
+    left_click_commands:
+      - '[close]'
+      - '[player] shop equipo'
+      - '[sound] UI_BUTTON_CLICK'
+
+  'item_15':
+    material: ENDER_PEARL
+    slot: 23
+    item_flags:
+      - HIDE_ATTRIBUTES
+      - HIDE_ENCHANTS
+    display_name: '&#00FF88Ender Pearl'
+    lore:
+      - '&8ᴘʀᴇᴄɪᴏ ᴅᴇ ᴄᴏᴍᴘʀᴀ'
+      - ''
+      - ' &8| &fUnidad: &#59E91F&l$&r&#59E91F50'
+      - ' &8| &fStack x64: &#59E91F&l$&r&#59E91F3200'
+      - ''
+      - '&7▶ Click para comprar'
+    left_click_commands:
+      - '[close]'
+      - '[player] shop equipo'
+      - '[sound] UI_BUTTON_CLICK'
+
+  'item_16':
+    material: TIPPED_ARROW
+    slot: 24
+    item_flags:
+      - HIDE_ATTRIBUTES
+      - HIDE_ENCHANTS
+    display_name: '&#00FF88Tipped Arrow'
+    lore:
+      - '&8ᴘʀᴇᴄɪᴏ ᴅᴇ ᴄᴏᴍᴘʀᴀ'
+      - ''
+      - ' &8| &fUnidad: &#59E91F&l$&r&#59E91F100'
+      - ' &8| &fStack x64: &#59E91F&l$&r&#59E91F6400'
+      - ''
+      - '&7▶ Click para comprar'
+    left_click_commands:
+      - '[close]'
+      - '[player] shop equipo'
+      - '[sound] UI_BUTTON_CLICK'
+
+  'item_17':
+    material: ARROW
+    slot: 25
+    item_flags:
+      - HIDE_ATTRIBUTES
+      - HIDE_ENCHANTS
+    display_name: '&#00FF88Arrow'
+    lore:
+      - '&8ᴘʀᴇᴄɪᴏ ᴅᴇ ᴄᴏᴍᴘʀᴀ'
+      - ''
+      - ' &8| &fUnidad: &#59E91F&l$&r&#59E91F5'
+      - ' &8| &fStack x64: &#59E91F&l$&r&#59E91F320'
+      - ''
+      - '&7▶ Click para comprar'
+    left_click_commands:
+      - '[close]'
+      - '[player] shop equipo'
+      - '[sound] UI_BUTTON_CLICK'
+
+  'item_18':
+    material: SPECTRAL_ARROW
+    slot: 26
+    item_flags:
+      - HIDE_ATTRIBUTES
+      - HIDE_ENCHANTS
+    display_name: '&#00FF88Spectral Arrow'
+    lore:
+      - '&8ᴘʀᴇᴄɪᴏ ᴅᴇ ᴄᴏᴍᴘʀᴀ'
+      - ''
+      - ' &8| &fUnidad: &#59E91F&l$&r&#59E91F100'
+      - ' &8| &fStack x64: &#59E91F&l$&r&#59E91F6400'
+      - ''
+      - '&7▶ Click para comprar'
+    left_click_commands:
+      - '[close]'
+      - '[player] shop equipo'
+      - '[sound] UI_BUTTON_CLICK'
+
+  'item_19':
+    material: NETHERITE_UPGRADE_SMITHING_TEMPLATE
+    slot: 27
+    item_flags:
+      - HIDE_ATTRIBUTES
+      - HIDE_ENCHANTS
+    display_name: '&#00FF88Netherite Upgrade Smithing Template'
+    lore:
+      - '&8ᴘʀᴇᴄɪᴏ ᴅᴇ ᴄᴏᴍᴘʀᴀ'
+      - ''
+      - ' &8| &fUnidad: &#59E91F&l$&r&#59E91F25000'
+      - ' &8| &fStack x64: &#59E91F&l$&r&#59E91F1600000'
+      - ''
+      - '&7▶ Click para comprar'
+    left_click_commands:
+      - '[close]'
+      - '[player] shop equipo'
+      - '[sound] UI_BUTTON_CLICK'
+
+  'item_20':
+    material: TOTEM_OF_UNDYING
+    slot: 28
+    item_flags:
+      - HIDE_ATTRIBUTES
+      - HIDE_ENCHANTS
+    display_name: '&#00FF88Totem Of Undying'
+    lore:
+      - '&8ᴘʀᴇᴄɪᴏ ᴅᴇ ᴄᴏᴍᴘʀᴀ'
+      - ''
+      - ' &8| &fUnidad: &#59E91F&l$&r&#59E91F2500'
+      - ' &8| &fStack x64: &#59E91F&l$&r&#59E91F160000'
+      - ''
+      - '&7▶ Click para comprar'
+    left_click_commands:
+      - '[close]'
+      - '[player] shop equipo'
+      - '[sound] UI_BUTTON_CLICK'
+
+  'item_21':
+    material: MILK_BUCKET
+    slot: 29
+    item_flags:
+      - HIDE_ATTRIBUTES
+      - HIDE_ENCHANTS
+    display_name: '&#00FF88Milk Bucket'
+    lore:
+      - '&8ᴘʀᴇᴄɪᴏ ᴅᴇ ᴄᴏᴍᴘʀᴀ'
+      - ''
+      - ' &8| &fUnidad: &#59E91F&l$&r&#59E91F5000'
+      - ' &8| &fStack x64: &#59E91F&l$&r&#59E91F320000'
+      - ''
+      - '&7▶ Click para comprar'
+    left_click_commands:
+      - '[close]'
+      - '[player] shop equipo'
+      - '[sound] UI_BUTTON_CLICK'
+
+  'item_22':
+    material: SPLASH_POTION
+    slot: 30
+    item_flags:
+      - HIDE_ATTRIBUTES
+      - HIDE_ENCHANTS
+    display_name: '&#00FF88Splash Potion'
+    lore:
+      - '&8ᴘʀᴇᴄɪᴏ ᴅᴇ ᴄᴏᴍᴘʀᴀ'
+      - ''
+      - ' &8| &fUnidad: &#59E91F&l$&r&#59E91F420'
+      - ' &8| &fStack x64: &#59E91F&l$&r&#59E91F26880'
+      - ''
+      - '&7▶ Click para comprar'
+    left_click_commands:
+      - '[close]'
+      - '[player] shop equipo'
+      - '[sound] UI_BUTTON_CLICK'
+
+  'item_23':
+    material: SPLASH_POTION
+    slot: 31
+    item_flags:
+      - HIDE_ATTRIBUTES
+      - HIDE_ENCHANTS
+    display_name: '&#00FF88Splash Potion'
+    lore:
+      - '&8ᴘʀᴇᴄɪᴏ ᴅᴇ ᴄᴏᴍᴘʀᴀ'
+      - ''
+      - ' &8| &fUnidad: &#59E91F&l$&r&#59E91F500'
+      - ' &8| &fStack x64: &#59E91F&l$&r&#59E91F32000'
+      - ''
+      - '&7▶ Click para comprar'
+    left_click_commands:
+      - '[close]'
+      - '[player] shop equipo'
+      - '[sound] UI_BUTTON_CLICK'
+
+  'item_24':
+    material: SPLASH_POTION
+    slot: 32
+    item_flags:
+      - HIDE_ATTRIBUTES
+      - HIDE_ENCHANTS
+    display_name: '&#00FF88Splash Potion'
+    lore:
+      - '&8ᴘʀᴇᴄɪᴏ ᴅᴇ ᴄᴏᴍᴘʀᴀ'
+      - ''
+      - ' &8| &fUnidad: &#59E91F&l$&r&#59E91F500'
+      - ' &8| &fStack x64: &#59E91F&l$&r&#59E91F32000'
+      - ''
+      - '&7▶ Click para comprar'
+    left_click_commands:
+      - '[close]'
+      - '[player] shop equipo'
+      - '[sound] UI_BUTTON_CLICK'
+
+  'item_25':
+    material: SPLASH_POTION
+    slot: 33
+    item_flags:
+      - HIDE_ATTRIBUTES
+      - HIDE_ENCHANTS
+    display_name: '&#00FF88Splash Potion'
+    lore:
+      - '&8ᴘʀᴇᴄɪᴏ ᴅᴇ ᴄᴏᴍᴘʀᴀ'
+      - ''
+      - ' &8| &fUnidad: &#59E91F&l$&r&#59E91F500'
+      - ' &8| &fStack x64: &#59E91F&l$&r&#59E91F32000'
+      - ''
+      - '&7▶ Click para comprar'
+    left_click_commands:
+      - '[close]'
+      - '[player] shop equipo'
+      - '[sound] UI_BUTTON_CLICK'
+
+  'item_26':
+    material: SPLASH_POTION
+    slot: 34
+    item_flags:
+      - HIDE_ATTRIBUTES
+      - HIDE_ENCHANTS
+    display_name: '&#00FF88Splash Potion'
+    lore:
+      - '&8ᴘʀᴇᴄɪᴏ ᴅᴇ ᴄᴏᴍᴘʀᴀ'
+      - ''
+      - ' &8| &fUnidad: &#59E91F&l$&r&#59E91F500'
+      - ' &8| &fStack x64: &#59E91F&l$&r&#59E91F32000'
+      - ''
+      - '&7▶ Click para comprar'
+    left_click_commands:
+      - '[close]'
+      - '[player] shop equipo'
+      - '[sound] UI_BUTTON_CLICK'
+
+  'item_27':
+    material: SPLASH_POTION
+    slot: 35
+    item_flags:
+      - HIDE_ATTRIBUTES
+      - HIDE_ENCHANTS
+    display_name: '&#00FF88Splash Potion'
+    lore:
+      - '&8ᴘʀᴇᴄɪᴏ ᴅᴇ ᴄᴏᴍᴘʀᴀ'
+      - ''
+      - ' &8| &fUnidad: &#59E91F&l$&r&#59E91F500'
+      - ' &8| &fStack x64: &#59E91F&l$&r&#59E91F32000'
+      - ''
+      - '&7▶ Click para comprar'
+    left_click_commands:
+      - '[close]'
+      - '[player] shop equipo'
+      - '[sound] UI_BUTTON_CLICK'
+
+  # ============================================================================
+  # FILTRO Y NAVBAR INFERIOR (FILA 5: SLOTS 36 A 44)
+  # ============================================================================
+  'Boton_Filtro':
+    material: COMPARATOR
+    slot: 36
+    item_flags:
+      - HIDE_ATTRIBUTES
+      - HIDE_ENCHANTS
+    enchantments:
+      - DURABILITY;1
+    display_name: '&#FFD700Filtrar Categoría'
+    lore:
+      - '&8ᴇʟɪɂᴇ ᴄᴀᴛᴇɂᴏʀɪᴀ'
+      - ''
+      - ' &#FFD700● Todos'
+      - ' &7● Bloques'
+      - ' &7● Farmeo'
+      - ' &7● Comida'
+      - ' &7● Mobs'
+      - ' &7● Equipo'
+      - ' &7● Redstone'
+      - ' &7● Misceláneo'
+      - ' &7● Tintes'
+      - ' &7● Trims'
+      - ' &7● Encantamientos'
+      - ''
+      - '&7▶ Click para cambiar'
+    left_click_commands:
+      - '[openguimenu] compra_bloques'
+      - '[sound] UI_BUTTON_CLICK'
+
+  'Pagina_Anterior':
+    material: ARROW
+    slot: 39
+    item_flags:
+      - HIDE_ATTRIBUTES
+    display_name: '&#FFD700◀ Página Anterior'
+    lore:
+      - '&8| &fPágina: &714&8/&717'
+      - ''
+    left_click_commands:
+      - '[openguimenu] compra_todos_13'
+      - '[sound] ITEM_BOOK_PAGE_TURN'
+
+  'Boton_Volver':
+    material: DARK_OAK_DOOR
+    slot: 40
+    item_flags:
+      - HIDE_ATTRIBUTES
+    display_name: '&cVolver al Menú'
+    lore:
+      - '&8| &fRegresar a la selección principal'
+      - ''
+    left_click_commands:
+      - '[openguimenu] tienda_principal'
+      - '[sound] UI_BUTTON_CLICK'
+
+  'Pagina_Siguiente':
+    material: ARROW
+    slot: 41
+    item_flags:
+      - HIDE_ATTRIBUTES
+    display_name: '&#FFD700Página Siguiente ▶'
+    lore:
+      - '&8| &fPágina: &714&8/&717'
+      - ''
+    left_click_commands:
+      - '[openguimenu] compra_todos_15'
+      - '[sound] ITEM_BOOK_PAGE_TURN'
+
+  'Boton_SellGUI':
+    material: HOPPER
+    slot: 43
+    item_flags:
+      - HIDE_ATTRIBUTES
+    display_name: '&#59E91FVenta Rápida'
+    lore:
+      - '&8ᴠᴇɴᴛᴀ ᴀᴗᴛᴏᴍᴀᴛɪᴄᴀ'
+      - ''
+      - ' &fVende ítems en masa'
+      - ' &fde forma instantánea.'
+      - ''
+      - '&7▶ Click para abrir'
+    left_click_commands:
+      - '[close]'
+      - '[player] sellgui'
+      - '[sound] ENTITY_EXPERIENCE_ORB_PICKUP'
+
+  'Info_Balance':
+    material: head-%player_name%
+    slot: 44
+    item_flags:
+      - HIDE_ATTRIBUTES
+    display_name: '&#FFD700Tu Economía'
+    lore:
+      - '&8ᴛᴗ ᴇᴄᴏɴᴏᴍɪᴀ'
+      - ''
+      - ' &8| &fDinero: &#59E91F&l$&r&#59E91F%vault_eco_balance_formatted%'
+      - ' &8| &fAlmas: &#34B0F3%thundercurrencys_almas%🔥'
+      - ' &8| &fZafiros: &#1E6BFF%thundercurrencys_zafiros%💎'
+      - ''

@@ -1,0 +1,2 @@
+get plugins/ShopGUIPlus/shops/venta.yml creator/lab/venta.yml
+bye

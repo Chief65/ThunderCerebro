@@ -1,0 +1,104 @@
+encantamientos:
+  name: "&0&l| &0Tienda ▶ &8Encantamientos"
+  size: 45
+  fillItem:
+    material: GRAY_STAINED_GLASS_PANE
+    name: " "
+  buttons:
+    goBack:
+      slot: 40
+    previousPage:
+      slot: 39
+    nextPage:
+      slot: 41
+  items:
+    1:
+      type: item
+      item:
+        material: ENCHANTED_BOOK
+        enchantments:
+          - PROTECTION:4
+        quantity: 1
+      buyPrice: 50000
+      sellPrice: -1
+      slot: 9
+    2:
+      type: item
+      item:
+        material: ENCHANTED_BOOK
+        enchantments:
+          - UNBREAKING:3
+        quantity: 1
+      buyPrice: 50000
+      sellPrice: -1
+      slot: 10
+    3:
+      type: item
+      item:
+        material: ENCHANTED_BOOK
+        enchantments:
+          - MENDING:1
+        quantity: 1
+      buyPrice: 50000
+      sellPrice: -1
+      slot: 11
+    4:
+      type: item
+      item:
+        material: ENCHANTED_BOOK
+        enchantments:
+          - WIND_BURST:1
+        quantity: 1
+      buyPrice: 50000
+      sellPrice: -1
+      slot: 12
+    5:
+      type: item
+      item:
+        material: ENCHANTED_BOOK
+        enchantments:
+          - WIND_BURST:2
+        quantity: 1
+      buyPrice: 50000
+      sellPrice: -1
+      slot: 13
+    6:
+      type: item
+      item:
+        material: ENCHANTED_BOOK
+        enchantments:
+          - WIND_BURST:3
+        quantity: 1
+      buyPrice: 50000
+      sellPrice: -1
+      slot: 14
+    7:
+      type: item
+      item:
+        material: ENCHANTED_BOOK
+        enchantments:
+          - SHARPNESS:5
+        quantity: 1
+      buyPrice: 50000
+      sellPrice: -1
+      slot: 15
+    8:
+      type: item
+      item:
+        material: ENCHANTED_BOOK
+        enchantments:
+          - SMITE:5
+        quantity: 1
+      buyPrice: 50000
+      sellPrice: -1
+      slot: 16
+    9:
+      type: item
+      item:
+        material: ENCHANTED_BOOK
+        enchantments:
+          - EFFICIENCY:5
+        quantity: 1
+      buyPrice: 50000
+      sellPrice: -1
+      slot: 17

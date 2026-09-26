@@ -1,0 +1,189 @@
+menu_title: '&0&l|&r &0Compra ▶ &8Elegir Cantidad'
+open_command:
+  - compracantidad
+  - maquetacantidad
+size: 36
+open_requirement:
+  requirements: {}
+register_command: true
+update: true
+
+items:
+  # ============================================================================
+  # FILA 2: CONTROLES DE CANTIDAD INVERTIDOS (SLOTS 9 A 17)
+  # ============================================================================
+  # IZQUIERDA (AGREGAR Y CONFIRMAR)
+  'Boton_Set64':
+    material: LIME_STAINED_GLASS_PANE
+    slot: 9
+    amount: 64
+    item_flags:
+      - HIDE_ATTRIBUTES
+    display_name: '&aEstablecer 64'
+    lore:
+      - '&7Fijar cantidad en 64 (1 stack)'
+      - ''
+      - '&7▶ Click para seleccionar'
+    left_click_commands:
+      - '[sound] UI_BUTTON_CLICK'
+
+  'Boton_Add10':
+    material: LIME_STAINED_GLASS_PANE
+    slot: 10
+    amount: 10
+    item_flags:
+      - HIDE_ATTRIBUTES
+    display_name: '&aAgregar 10'
+    lore:
+      - '&7Sumar 10 unidades'
+      - ''
+      - '&7▶ Click para sumar'
+    left_click_commands:
+      - '[sound] UI_BUTTON_CLICK'
+
+  'Boton_Add1':
+    material: LIME_STAINED_GLASS_PANE
+    slot: 11
+    item_flags:
+      - HIDE_ATTRIBUTES
+    display_name: '&aAgregar 1'
+    lore:
+      - '&7Sumar 1 unidad'
+      - ''
+      - '&7▶ Click para sumar'
+    left_click_commands:
+      - '[sound] UI_BUTTON_CLICK'
+
+  'Boton_Confirmar':
+    material: LIME_SHULKER_BOX
+    slot: 12
+    item_flags:
+      - HIDE_ATTRIBUTES
+    display_name: '&aConfirmar Compra'
+    lore:
+      - '&7Finalizar adquisición del ítem'
+      - ''
+      - ' &8| &fTotal: &#59E91F&l$&r&#59E91F50'
+      - ''
+      - '&a▶ Click para comprar'
+    left_click_commands:
+      - '[sound] ENTITY_EXPERIENCE_ORB_PICKUP'
+
+  # CENTRO: OBJETO A COMPRAR
+  'Item_Seleccionado':
+    material: GOLDEN_CARROT
+    slot: 13
+    amount: 1
+    item_flags:
+      - HIDE_ATTRIBUTES
+      - HIDE_ENCHANTS
+    display_name: '&#FFF275Golden Carrot'
+    lore:
+      - '&8Compra en Cantidad'
+      - ''
+      - ' &8| &fCantidad: &e1'
+      - ''
+      - ' &#59E91F▲ &fTotal: &#59E91F&l$&r&#59E91F50'
+      - ''
+      - '&7▶ Confirmar en la caja verde'
+    left_click_commands:
+      - '[sound] UI_BUTTON_CLICK'
+
+  # DERECHA (CANCELAR Y REMOVER)
+  'Boton_Cancelar':
+    material: RED_SHULKER_BOX
+    slot: 14
+    item_flags:
+      - HIDE_ATTRIBUTES
+    display_name: '&cCancelar'
+    lore:
+      - '&7Regresar al catálogo de compra'
+      - ''
+      - '&7▶ Click para volver'
+    left_click_commands:
+      - '[openguimenu] compra_comida'
+      - '[sound] BLOCK_NOTE_BLOCK_BASS'
+
+  'Boton_Remove1':
+    material: RED_STAINED_GLASS_PANE
+    slot: 15
+    item_flags:
+      - HIDE_ATTRIBUTES
+    display_name: '&cQuitar 1'
+    lore:
+      - '&7Restar 1 unidad'
+      - ''
+      - '&7▶ Click para restar'
+    left_click_commands:
+      - '[sound] UI_BUTTON_CLICK'
+
+  'Boton_Remove10':
+    material: RED_STAINED_GLASS_PANE
+    slot: 16
+    amount: 10
+    item_flags:
+      - HIDE_ATTRIBUTES
+    display_name: '&cQuitar 10'
+    lore:
+      - '&7Restar 10 unidades'
+      - ''
+      - '&7▶ Click para restar'
+    left_click_commands:
+      - '[sound] UI_BUTTON_CLICK'
+
+  'Boton_Set1':
+    material: RED_STAINED_GLASS_PANE
+    slot: 17
+    item_flags:
+      - HIDE_ATTRIBUTES
+    display_name: '&cEstablecer 1'
+    lore:
+      - '&7Fijar cantidad en 1 unidad'
+      - ''
+      - '&7▶ Click para seleccionar'
+    left_click_commands:
+      - '[sound] UI_BUTTON_CLICK'
+
+  # ============================================================================
+  # FILA 4: NAVBAR (SLOTS 27 A 35) CON PANELES GRISES
+  # ============================================================================
+  # A LA IZQUIERDA DEL TODO (SLOT 27): COMPRAR STACKS
+  'Boton_BuyMore':
+    material: CHEST_MINECART
+    slot: 27
+    item_flags:
+      - HIDE_ATTRIBUTES
+    display_name: '&#FFF275Comprar Stacks'
+    lore:
+      - '&8Varios stacks'
+      - ''
+      - '&7▶ Elegir cantidad'
+    left_click_commands:
+      - '[openguimenu] compra_stacks'
+      - '[sound] UI_BUTTON_CLICK'
+
+  # CENTRO (SLOT 31): VOLVER ATRÁS
+  'Boton_Volver':
+    material: DARK_OAK_DOOR
+    slot: 31
+    item_flags:
+      - HIDE_ATTRIBUTES
+    display_name: '&cVolver Atrás'
+    lore:
+      - '&7Regresar al menú anterior'
+    left_click_commands:
+      - '[openguimenu] compra_comida'
+      - '[sound] BLOCK_NOTE_BLOCK_BASS'
+
+  # CRISTALES GRISES DECORATIVOS EN LA NAVBAR
+  'Filtro_Navbar':
+    material: GRAY_STAINED_GLASS_PANE
+    display_name: ' '
+    slots:
+      - 28
+      - 29
+      - 30
+      - 32
+      - 33
+      - 34
+      - 35

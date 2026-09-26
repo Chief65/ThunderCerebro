@@ -1,0 +1,132 @@
+menu_title: '&0&l|&r &0Spawner ▶ &8Zombie &7(x4)'
+open_command:
+  - maqueta_spawner
+  - demo_spawner
+size: 27
+open_requirement:
+  requirements: {}
+register_command: true
+update: true
+
+items:
+  # =========================================================================
+  # MARCO DE RELLENO (CRISTALES GRISES EN BORDES)
+  # =========================================================================
+  'Filtro_Bordes':
+    material: GRAY_STAINED_GLASS_PANE
+    display_name: ' '
+    slots:
+      - 0
+      - 1
+      - 2
+      - 3
+      - 4
+      - 5
+      - 6
+      - 7
+      - 8
+      - 9
+      - 10
+      - 16
+      - 17
+      - 18
+      - 19
+      - 20
+      - 21
+      - 23
+      - 24
+      - 25
+      - 26
+
+  # =========================================================================
+  # BOTONES PRINCIPALES (FILA 2: SLOTS 11, 13, 15)
+  # =========================================================================
+
+  # SLOT 11: ALMACÉN DE BOTÍN (CHEST)
+  'Boton_Almacen':
+    material: CHEST
+    slot: 11
+    item_flags:
+      - HIDE_ATTRIBUTES
+      - HIDE_ENCHANTS
+    enchantments:
+      - DURABILITY;1
+    display_name: '&#FFF275Almacén del Spawner'
+    lore:
+      - '&8ᴀʟᴍᴀᴄᴇɴᴀᴍɪᴇɴᴛᴏ'
+      - ''
+      - ' &8| &fCapacidad: &e18 &8/ &745 ranuras'
+      - ' &8| &fOcupación: &#59E91F40% lleno'
+      - ''
+      - ' &8| &fBotín acumulado:'
+      - '   &8• &fCarne Podrida: &e128'
+      - '   &8• &fZanahorias: &e14'
+      - '   &8• &fHierro: &e6'
+      - ''
+      - '&7▶ Click para abrir almacén'
+    left_click_commands:
+      - '[openguimenu] maqueta_spawner_almacen'
+      - '[sound] UI_BUTTON_CLICK'
+
+  # SLOT 13: INFORMACIÓN Y GESTIÓN DE PILA (CABEZA DE MOB)
+  'Boton_Info_Pila':
+    material: ZOMBIE_HEAD
+    slot: 13
+    item_flags:
+      - HIDE_ATTRIBUTES
+    display_name: '&#FFF275Spawner de Zombie &8[&#59E91Fx4&8]'
+    lore:
+      - '&8ɪɴꜰᴏʀᴍᴀᴄɪᴏɴ'
+      - ''
+      - ' &8| &fApilados: &#FFF2754 &8/ &716 spawners'
+      - ' &8| &fRango: &e16 bloques'
+      - ' &8| &fTasa: &e1 - 4 mobs / ciclo'
+      - ' &8| &fPróxima oleada: &a04s'
+      - ''
+      - ' &8| &fEstado: &#59E91F● Activo (Jugador cerca)'
+      - ''
+      - '&7▶ Click izquierdo: Reclamar botín'
+      - '&7▶ Click derecho: Gestionar apilado'
+    left_click_commands:
+      - '[openguimenu] maqueta_spawner_almacen'
+      - '[sound] UI_BUTTON_CLICK'
+    right_click_commands:
+      - '[openguimenu] maqueta_spawner_apilar'
+      - '[sound] UI_BUTTON_CLICK'
+
+  # SLOT 15: RECLAMAR EXPERIENCIA (EXPERIENCE BOTTLE)
+  'Boton_Experiencia':
+    material: EXPERIENCE_BOTTLE
+    slot: 15
+    item_flags:
+      - HIDE_ATTRIBUTES
+      - HIDE_ENCHANTS
+    enchantments:
+      - DURABILITY;1
+    display_name: '&#D48BFFExperiencia Acumulada'
+    lore:
+      - '&8ᴇxᴘᴇʀɪᴇɴᴄɪᴀ'
+      - ''
+      - ' &8| &fAlmacenada: &#D48BFF640 &8/ &71,000 XP'
+      - ' &8| &fEquivalente: &a~24 Niveles'
+      - ''
+      - ' &8| &fReparación (Mending): &aActivada'
+      - ''
+      - '&7▶ Click para reclamar experiencia'
+    left_click_commands:
+      - '[sound] ENTITY_EXPERIENCE_ORB_PICKUP'
+
+  # =========================================================================
+  # SALIDA / CERRAR (SLOT 22)
+  # =========================================================================
+  'Boton_Cerrar':
+    material: DARK_OAK_DOOR
+    slot: 22
+    item_flags:
+      - HIDE_ATTRIBUTES
+    display_name: '&cSalir'
+    lore:
+      - '&7Cerrar panel de spawner'
+    left_click_commands:
+      - '[close]'
+      - '[sound] BLOCK_NOTE_BLOCK_BASS'

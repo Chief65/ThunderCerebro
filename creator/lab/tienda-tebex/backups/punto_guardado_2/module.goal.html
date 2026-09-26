@@ -1,0 +1,7 @@
+<script>
+    const GOAL_PROGRESS = "{{ module.percentage }}"
+    {% if module.displayAmount %}
+    const GOAL_AMOUNT = "{{ module.total }} / {{ module.target }} {{ store.currency }}"
+    {% endif %}
+    const IS_GOAL_ANIMATED = {{ module.bar.animated ? "true" : "false" }}
+</script>

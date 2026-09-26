@@ -1,0 +1,124 @@
+<div class="tz-announcement-bar" style="
+  background: linear-gradient(90deg, #ca8a04 0%, #eab308 50%, #ca8a04 100%);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  min-height: 2.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px 16px;
+  position: relative;
+  overflow: hidden;
+">
+
+  <style>
+    .tz-announcement-bar::after {
+      content: '';
+      position: absolute;
+      top: 0; left: -100%; width: 50%; height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.25), transparent);
+      animation: tzShimmer 4s infinite linear;
+      pointer-events: none;
+    }
+    @keyframes tzShimmer {
+      0% { left: -100%; }
+      50%, 100% { left: 200%; }
+    }
+
+    .tz-announce-slot {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 1.5em;
+      overflow: hidden;
+      min-width: 320px;
+    }
+    .tz-announce-item {
+      position: absolute;
+      width: 100%;
+      text-align: center;
+      white-space: nowrap;
+      font-size: 13px;
+      font-weight: 700;
+      color: #0f172a;
+      letter-spacing: 0.2px;
+      transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.4s ease;
+      will-change: transform, opacity;
+    }
+    .tz-announce-item.tz-active {
+      transform: translateY(0);
+      opacity: 1;
+    }
+    .tz-announce-item.tz-exit {
+      transform: translateY(100%);
+      opacity: 0;
+    }
+    .tz-announce-item.tz-enter {
+      transform: translateY(-100%);
+      opacity: 0;
+    }
+
+    .tz-announce-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      margin-left: 14px;
+      padding: 4px 12px;
+      background: #0f172a;
+      color: #facc15;
+      font-size: 12px;
+      font-weight: 700;
+      border-radius: 6px;
+      text-decoration: none;
+      transition: all 0.2s ease;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.25);
+    }
+    .tz-announce-btn:hover {
+      background: #1e293b;
+      transform: scale(1.04);
+      color: #ffffff;
+    }
+  </style>
+
+  <div class="tz-announce-slot" id="tz-announce-slot">
+    <span class="tz-announce-item tz-active" id="tz-text">{{ config("announcementText") | default('⚡ ¡OFERTAS DE TEMPORADA EN THUNDERMC! Descuentos de hasta el 35% en Rangos VIP') | raw }}</span>
+    <span class="tz-announce-item tz-enter"  id="tz-timer">⏰ Finaliza pronto: aprovecha las ofertas</span>
+  </div>
+
+  {% if config("announcementLink") != "" %}
+    {% if config("announcementLinkOpen") == "same" %}
+      {% set hrefType = "_self" %}
+    {% else %}
+      {% set hrefType = "_blank" %}
+    {% endif %}
+    <a href="{{ config("announcementLink") }}" target="{{ hrefType }}" class="tz-announce-btn">{{ config("announcementLinkText") | default('Ver Ofertas') }} <i class="mdi mdi-arrow-right"></i></a>
+  {% endif %}
+</div>
+
+<script>
+(function() {
+  var timerEl = document.getElementById('tz-timer');
+  var textEl  = document.getElementById('tz-text');
+  if (!timerEl || !textEl) return;
+
+  var showText = true;
+  setInterval(function() {
+    if (showText) {
+      textEl.classList.remove('tz-active');
+      textEl.classList.add('tz-exit');
+      timerEl.classList.remove('tz-enter');
+      timerEl.classList.add('tz-active');
+    } else {
+      timerEl.classList.remove('tz-active');
+      timerEl.classList.add('tz-exit');
+      textEl.classList.remove('tz-exit');
+      textEl.classList.add('tz-active');
+      setTimeout(function() {
+        timerEl.classList.remove('tz-exit');
+        timerEl.classList.add('tz-enter');
+      }, 400);
+    }
+    showText = !showText;
+  }, 4500);
+})();
+</script>

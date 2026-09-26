@@ -1,0 +1,97 @@
+menu_title: '&0&l|&r &0Mercado ▶ &8Dinero &8(&#59E91F$&8)'
+open_command:
+  - mercadocomercio
+  - comercio
+size: 36
+open_requirement:
+  requirements: {}
+register_command: true
+update: true
+
+items:
+  'Opcion_Comprar':
+    material: CHEST_MINECART
+    slot: 12
+    item_flags:
+      - HIDE_ATTRIBUTES
+      - HIDE_ENCHANTS
+    enchantments:
+      - DURABILITY;1
+    display_name: '&#59E91FTienda de Compra'
+    lore:
+      - '&8Catálogo de Suministros'
+      - ''
+      - ' &fAdquiere bloques, materiales,'
+      - ' &fherramientas y recursos.'
+      - ''
+      - ' &8| &fMoneda: &#59E91FDinero ($)'
+      - ''
+      - '&7▶ Click para ver categorías'
+    left_click_commands:
+      - '[openguimenu] mercado_dinero'
+      - '[sound] UI_BUTTON_CLICK'
+
+  'Opcion_Vender':
+    material: HOPPER_MINECART
+    slot: 14
+    item_flags:
+      - HIDE_ATTRIBUTES
+      - HIDE_ENCHANTS
+    enchantments:
+      - DURABILITY;1
+    display_name: '&#FFF275Tienda de Venta'
+    lore:
+      - '&8Bolsa de Valores y Exportación'
+      - ''
+      - ' &fVende tus cultivos, minerales'
+      - ' &fy drops al mercado general.'
+      - ''
+      - ' &8| &fPrecios Dinámicos por Oferta/Demanda'
+      - ''
+      - '&7▶ Click para abrir lonja'
+    left_click_commands:
+      - '[openguimenu] lonja_venta'
+      - '[sound] UI_BUTTON_CLICK'
+
+  'Boton_Volver':
+    material: DARK_OAK_DOOR
+    slot: 31
+    item_flags:
+      - HIDE_ATTRIBUTES
+    display_name: '&cVolver Atras'
+    lore:
+      - '&7Regresar al menu principal'
+    left_click_commands:
+      - '[openguimenu] tienda_principal'
+      - '[sound] BLOCK_NOTE_BLOCK_BASS'
+
+  'Info_Balance':
+    material: head-%player_name%
+    slot: 35
+    item_flags:
+      - HIDE_ATTRIBUTES
+    display_name: '&#FFF275Tu Economía'
+    lore:
+      - '&8Tu Economía'
+      - ''
+      - ' &8| &fDinero: &#59E91F&l$&r&#59E91F%vault_eco_balance_formatted%'
+      - ' &8| &fAlmas: &#34B0F3%thundercurrencys_almas%🔥'
+      - ' &8| &fZafiros: &#1E6BFF%thundercurrencys_zafiros%💎'
+      - ' &8| &fXP: &#D48BFF%player_level% LVL'
+      - ''
+      - '&7▶ Click para más información'
+    left_click_commands:
+      - '[openguimenu] info_economia'
+      - '[sound] UI_BUTTON_CLICK'
+
+  'Filtro_Navbar':
+    material: GRAY_STAINED_GLASS_PANE
+    display_name: ' '
+    slots:
+      - 27
+      - 28
+      - 29
+      - 30
+      - 32
+      - 33
+      - 34

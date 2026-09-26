@@ -1,0 +1,3 @@
+ls plugins/DeluxeMenus/gui_menus/
+ls plugins/ShopGUIPlus/
+bye

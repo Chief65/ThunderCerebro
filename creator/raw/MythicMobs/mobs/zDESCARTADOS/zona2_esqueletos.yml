@@ -1,0 +1,35 @@
+EsqueletoCripta1:
+  Type: SKELETON
+  Display: '&a[Lv.1] &fArquero Caído'
+  Health: 40
+  Damage: 6
+  Equipment:
+    - BOW HAND
+  Drops:
+    - BONE 1-2 1
+    - ARROW 2-4 0.50
+    - HuesoAntiguo 1 0.30
+
+EsqueletoCripta2:
+  Type: WITHER_SKELETON  # Usa esqueleto del wither para que sostenga espada
+  Display: '&e[Lv.2] &8Espadachín Óseo'
+  Health: 70
+  Damage: 10
+  Equipment:
+    - STONE_SWORD HAND
+  Drops:
+    - HuesoAntiguo 1-2 0.45
+    - FragmentoAlmaPerdida 1 0.15
+
+EsqueletoCripta3:
+  Type: WITHER_SKELETON
+  Display: '&c[Lv.3] &8Guardián Óseo'
+  Health: 110
+  Damage: 14
+  Equipment:
+    - IRON_SWORD HAND
+    - IRON_HELMET HEAD
+    - CHAINMAIL_CHESTPLATE CHEST
+  Drops:
+    - HuesoAntiguo 2-3 0.65
+    - FragmentoAlmaPerdida 1 0.30

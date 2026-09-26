@@ -1,0 +1,4 @@
+put creator/lab/lonja_venta.yml plugins/DeluxeMenus/gui_menus/menusIA/lonja_venta.yml
+put creator/lab/lonja_probabilidades.yml plugins/DeluxeMenus/gui_menus/menusIA/lonja_probabilidades.yml
+put creator/lab/deluxemenus_config.yml plugins/DeluxeMenus/config.yml
+bye

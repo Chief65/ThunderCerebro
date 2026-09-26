@@ -1,0 +1,74 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+    {% include 'layout.topbar.twig' %}
+
+    <main class="triplezone-main-content" style="max-width:1300px;margin:0 auto;padding:40px 24px;">
+
+        <div style="margin-bottom:32px;">
+            <h1 style="font-size:28px;font-weight:800;color:#facc15;margin:0 0 6px 0;">{{ category.name }}</h1>
+            {% if category.description %}
+                <div style="color:#94a3b8;font-size:14px;">{{ category.description|raw }}</div>
+            {% endif %}
+        </div>
+
+        {% if category.packages|length > 0 %}
+            <div class="tz-cards-grid" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:20px;">
+                {% for package in category.packages %}
+                    <div class="tz-card is-visible category__list--item" data-package-id="{{ package.id }}" data-remote="/package/{{ package.id }}">
+                        <div class="tz-card-image-wrap triplezone__toogle--modal" data-remote="/package/{{ package.id }}">
+                            {% if package.discount.applied %}
+                                <span class="tz-discount-pill">OFERTA</span>
+                            {% endif %}
+                            <button type="button" class="tz-card-quick-add tz-btn-add-cart" data-add-url="/checkout/packages/add/{{ package.id }}/single" title="Añadir al Carrito" style="position: absolute; top: 10px; right: 10px; width: 34px; height: 34px; border-radius: 9px; background: rgba(13, 18, 31, 0.85); border: 1px solid rgba(255, 255, 255, 0.15); backdrop-filter: blur(6px); color: #facc15; font-size: 16px; display: flex; align-items: center; justify-content: center; cursor: pointer; z-index: 10; transition: all 0.2s ease;">
+                                <i class="mdi mdi-cart-plus"></i>
+                            </button>
+                            {% if package.image.url %}
+                                <img src="{{ package.image.url }}" alt="{{ package.name }}">
+                            {% else %}
+                                <div style="font-size:48px;color:#facc15;display:flex;align-items:center;justify-content:center;height:100%;"><i class="mdi mdi-cube-outline"></i></div>
+                            {% endif %}
+                        </div>
+                        <div class="tz-card-info-box">
+                            <div class="tz-card-top-meta">
+                                <h3 class="tz-card-title tz-pkg-title">{{ package.name }}</h3>
+                                <p class="tz-card-desc-snippet">Haz clic para ver beneficios y detalles.</p>
+                            </div>
+                            <div class="tz-card-bottom-row">
+                                <div class="tz-card-price-box">
+                                    <span class="tz-price-tag-label">Precio</span>
+                                    <div class="tz-price-values">
+                                        {% if package.customPrice == false and package.price > 0 %}
+                                            {% if package.discount.applied %}
+                                                <span class="tz-price-old">{{ package.discount.original|money }} {{ basket.currency }}</span>
+                                                <span class="tz-price-current tz-pkg-price">{{ package.price|money }} {{ basket.currency }}</span>
+                                            {% else %}
+                                                <span class="tz-price-current tz-pkg-price">{{ package.price|money }} {{ basket.currency }}</span>
+                                            {% endif %}
+                                        {% elseif package.customPrice %}
+                                            <span class="tz-price-current tz-pkg-price">{{ lang.choosePrice }}</span>
+                                        {% else %}
+                                            <span class="tz-price-current tz-pkg-price" style="color:#4ade80;">{{ lang.item_is_free }}</span>
+                                        {% endif %}
+                                    </div>
+                                </div>
+                                <div class="tz-card-actions">
+                                    <button class="tz-btn-buy triplezone__toogle--modal" data-remote="/package/{{ package.id }}">
+                                        <i class="mdi mdi-eye-outline"></i> Ver paquete
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        {% else %}
+            <div style="padding:40px;text-align:center;color:#94a3b8;font-size:14px;">
+                No hay paquetes disponibles en esta categoría actualmente.
+            </div>
+        {% endif %}
+
+    </main>
+
+{% endblock %}

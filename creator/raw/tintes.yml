@@ -1,0 +1,291 @@
+﻿tintes:
+  name: "&0&l|&r &0Mercado ▶ &8Tintes &8(#59E91F$&8)"
+  size: 45
+  fillItem:
+    material: AIR
+    name: " "
+  buttons:
+    goBack:
+      slot: 40
+    previousPage:
+      slot: 39
+    nextPage:
+      slot: 41
+  items:
+    1:
+      type: item
+      item:
+        material: WHITE_DYE
+        name: "#FFF275White Dye"
+        quantity: 1
+      buyPrice: 20
+      sellPrice: -1
+      slot: 9
+    2:
+      type: item
+      item:
+        material: LIGHT_GRAY_DYE
+        name: "#FFF275Light Gray Dye"
+        quantity: 1
+      buyPrice: 20
+      sellPrice: -1
+      slot: 10
+    3:
+      type: item
+      item:
+        material: GRAY_DYE
+        name: "#FFF275Gray Dye"
+        quantity: 1
+      buyPrice: 20
+      sellPrice: -1
+      slot: 11
+    4:
+      type: item
+      item:
+        material: BLACK_DYE
+        name: "#FFF275Black Dye"
+        quantity: 1
+      buyPrice: 20
+      sellPrice: -1
+      slot: 12
+    5:
+      type: item
+      item:
+        material: BROWN_DYE
+        name: "#FFF275Brown Dye"
+        quantity: 1
+      buyPrice: 20
+      sellPrice: -1
+      slot: 13
+    6:
+      type: item
+      item:
+        material: RED_DYE
+        name: "#FFF275Red Dye"
+        quantity: 1
+      buyPrice: 20
+      sellPrice: -1
+      slot: 14
+    7:
+      type: item
+      item:
+        material: ORANGE_DYE
+        name: "#FFF275Orange Dye"
+        quantity: 1
+      buyPrice: 20
+      sellPrice: -1
+      slot: 15
+    8:
+      type: item
+      item:
+        material: YELLOW_DYE
+        name: "#FFF275Yellow Dye"
+        quantity: 1
+      buyPrice: 20
+      sellPrice: -1
+      slot: 16
+    9:
+      type: item
+      item:
+        material: LIME_DYE
+        name: "#FFF275Lime Dye"
+        quantity: 1
+      buyPrice: 20
+      sellPrice: -1
+      slot: 17
+    10:
+      type: item
+      item:
+        material: GREEN_DYE
+        name: "#FFF275Green Dye"
+        quantity: 1
+      buyPrice: 20
+      sellPrice: -1
+      slot: 18
+    11:
+      type: item
+      item:
+        material: CYAN_DYE
+        name: "#FFF275Cyan Dye"
+        quantity: 1
+      buyPrice: 20
+      sellPrice: -1
+      slot: 19
+    12:
+      type: item
+      item:
+        material: LIGHT_BLUE_DYE
+        name: "#FFF275Light Blue Dye"
+        quantity: 1
+      buyPrice: 20
+      sellPrice: -1
+      slot: 20
+    13:
+      type: item
+      item:
+        material: BLUE_DYE
+        name: "#FFF275Blue Dye"
+        quantity: 1
+      buyPrice: 20
+      sellPrice: -1
+      slot: 21
+    14:
+      type: item
+      item:
+        material: PURPLE_DYE
+        name: "#FFF275Purple Dye"
+        quantity: 1
+      buyPrice: 20
+      sellPrice: -1
+      slot: 22
+    15:
+      type: item
+      item:
+        material: MAGENTA_DYE
+        name: "#FFF275Magenta Dye"
+        quantity: 1
+      buyPrice: 20
+      sellPrice: -1
+      slot: 23
+    16:
+      type: item
+      item:
+        material: PINK_DYE
+        name: "#FFF275Pink Dye"
+        quantity: 1
+      buyPrice: 20
+      sellPrice: -1
+      slot: 24
+    17:
+      type: dummy
+      item:
+        material: COMPARATOR
+        quantity: 1
+        glow: true
+        name: "#FFF275Filtrar Categoría"
+        lore:
+        - "&8Elige categoría"
+        - ""
+        - " &7● Bloques"
+        - " &7● Farmeo"
+        - " &7● Comida"
+        - " &7● Mobs"
+        - " &7● Equipo"
+        - " &7● Redstone"
+        - " &7● Misceláneo"
+        - " #FFF275● Tintes"
+        - " &7● Banners"
+        - ""
+        - "&7▶ Click para cambiar"
+      commandsOnClick:
+        - "shop banners"
+      slot: 36
+    18:
+      type: special
+      special: balance
+      slot: 44
+    19:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 37
+    20:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 38
+    21:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 39
+    22:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 41
+    23:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 42
+    24:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 43
+    25:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 0
+    26:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 1
+    27:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 2
+    28:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 3
+    29:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 4
+    30:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 5
+    31:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 6
+    32:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 7
+    33:
+      type: dummy
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+        name: " "
+      slot: 8

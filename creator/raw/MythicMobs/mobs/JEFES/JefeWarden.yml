@@ -1,0 +1,91 @@
+JefeWarden:
+  Type: WARDEN
+  Display: '&cLvl 9 &8| &4ᴇʟ ɢᴜᴀʀᴅɪᴀɴ ᴅᴇ ʟᴀ ᴏꜱᴄᴜʀɪᴅᴀᴅ &8| <#ED1313><caster.hp{r=0}><&heart>'
+  Health: 3000
+  Damage: 20
+  Options:
+    Scale: 2
+    MovementSpeed: 0.2
+    KnockbackResistance: 1.0
+    PreventOtherDrops: true
+    Despawn: false
+    ReturnHome: true
+    LeashRange: 15
+    ReturnHomeRange: 15
+    Glowing: true
+    UseThreatTable: true
+  BossBar:
+    Enabled: true
+    Title: '&8┖&f☠&8┚ &4Warden &8| &fᴇʟ ɢᴜᴀʀᴅɪᴀɴ ᴅᴇ ʟᴀ ᴏꜱᴄᴜʀɪᴅᴀᴅ'
+    Range: 40
+    Color: BLUE
+    Style: SEGMENTED_10
+  Modules:
+    ThreatTable: true
+  AIGoalSelectors:
+    - 0 clear
+    - 1 meleeattack
+    - 2 randomstroll
+    - 3 lookatplayers
+    - 4 float
+  AITargetSelectors:
+    - 0 clear
+  DropOptions:
+    DropMethod: FANCY
+    ShowDeathChatMessage: false
+    ShowDeathHologram: false
+    PerPlayerDrops: true
+    ClientSideDrops: true
+    Lootsplosion: false
+    HologramItemNames: true
+    ItemGlowByDefault: true
+    ItemBeamByDefault: false
+    ItemVFXByDefault: false
+    ItemVFX:
+      Material: STONE
+      Model: 0
+    RequiredDamagePercent: 0.1
+    HologramTimeout: 6000
+    ChatMessage:
+    - '===================================='
+    - 'BOSS DEFEATED!'
+    - ''
+    - ''
+    - '1st Place »<#ffe259> <1.name> - <1.damage>'
+    - '2nd Place »<#D1FFFF> <2.name> - <2.damage>'
+    - '3rd Place »<#D1FFFF> <3.name> - <3.damage>'
+    - '4th Place »<#E57A00> <4.name> - <4.damage>'
+    - '5th Place »<#E57A00> <5.name> - <5.damage>'
+    - ''
+    - 'Your rank: #<player.rank> - <player.damage> (<pity> Pity)'
+    - '===================================='
+  Drops:
+    - ECHO_SHARD 1 1
+  Skills:
+    - particles{particle=soul_fire_flame;amount=20;speed=0.05;hSpread=1.5;vSpread=1.5} @self ~onTimer:10
+    - skill{s=Invocar75} @self ~onTimer:1
+    - skill{s=Invocar50} @self ~onTimer:1
+    - skill{s=Invocar25} @self ~onTimer:1
+    - skill{s=LevantamientoWarden} @trigger ~onDamaged
+    - skill{s=EnderBeamSkill} @trigger ~onDamaged
+    - skill{s=raging_tornado} @trigger ~onAttack
+    - skill{s=blue_flames_spread} @trigger ~onAttack
+    - effect:bloodyScreen{d=25} @PIR{r=15} ~onTimer:20
+    
+    
+
+    - skill{s=SonidoKill} @trigger ~onDeath
+    - setname{n=<caster.name>;delay=2} @self ~onDamaged
+    - particles{particle=SCULK_SOUL;amount=60;speed=0.1;hSpread=0.6;vSpread=0.6} @self ~onDeath
+    ####### RECOMPENSAS #######
+    - actionmessage{m="<#34B0F3>+50 <white>Almas <#34B0F3>🔥 &8| <#59E91F>+<#59E91F>&l$&r<#59E91F>1500"} @trigger ~onDeath  
+    - command{c="points give <trigger.name> 50 -s";sender=console} @self ~onDeath  
+    - command{c="economy give <trigger.name> 1500";sender=console} @self ~onDeath   
+    - command{c="si give fragmentosuper 1 <trigger.name> -s";sender=console} @self ~onDeath 0.02 
+    - command{c="si give fragmentorara 1 <trigger.name> -s";sender=console} @self ~onDeath 0.02 
+    - command{c="si give fragmentogadget 1 <trigger.name> -s";sender=console} @self ~onDeath 0.02 
+    - command{c="si give fragmentomitica 1 <trigger.name> -s";sender=console} @self ~onDeath 0.003 
+    ####### EXTRAS #######
+    - skill{s=DropFragmentoLimitedGeneral} @self ~onDeath 0.001
+    - skill{s=BoostAlmas} @self ~onDeath 
+    - setvariable{var=almas;value=50;scope=CASTER;type=INTEGER} @self ~onSpawn

@@ -1,0 +1,107 @@
+<script>
+
+    {# Get the server type #}
+    {% set serverType = config("serverType") %}
+
+    {# Functionability #}
+    {% include 'function.exportedFunctions.twig' %}
+
+    {% if category.id in theme_configuration.upgradePackageAddon.upgradeCategories and theme_configuration.upgradePackageAddon.enabled == true %}
+    $("#ranks-upgrades").iziModal({
+        title: '',
+        subtitle: '',
+        headerColor: '#88A0B9',
+        background: "null",
+        theme: '',  // light
+        icon: null,
+        iconText: null,
+        iconColor: '',
+        rtl: false,
+        width: 600,
+        top: null,
+        bottom: null,
+        borderBottom: false,
+        padding: 0,
+        radius: 0,
+        zindex: 999,
+        iframe: false,
+        iframeHeight: 400,
+        iframeURL: null,
+        focusInput: true,
+        group: '',
+        loop: false,
+        arrowKeys: false,
+        navigateCaption: false,
+        navigateArrows: false, // Boolean, 'closeToModal', 'closeScreenEdge'
+        history: false,
+        restoreDefaultContent: false,
+        autoOpen: 0, // Boolean, Number
+        bodyOverflow: false,
+        fullscreen: false,
+        openFullscreen: false,
+        closeOnEscape: true,
+        closeButton: true,
+        appendTo: 'body', // or false
+        appendToOverlay: 'body', // or false
+        overlay: true,
+        overlayClose: true,
+        overlayColor: 'rgba(0, 0, 0, 0.4)',
+        timeout: false,
+        timeoutProgressbar: false,
+        pauseOnHover: false,
+        timeoutProgressbarColor: 'rgba(255,255,255,0.5)',
+        transitionIn: 'comingIn',
+        transitionOut: 'comingOut',
+        transitionInOverlay: 'fadeIn',
+        transitionOutOverlay: 'fadeOut',
+        onFullscreen: function () { },
+        onResize: function () { },
+        onOpening: function () {
+            $(".__need--update").css("pointer-events", "unset")
+        },
+        onOpened: function () { },
+        onClosing: function () {
+            $(".__need--update").css("pointer-events", "none")
+        },
+        onClosed: function () { },
+        afterRender: function () { }
+    });
+    $(function () {
+        $(".__need--update").click(function(){
+
+            let data_clicked = $(this).attr("data-upgrade-to")
+            let all_upgrade = document.getElementsByClassName("__is--update")
+            let all_need_upgrade = document.getElementsByClassName("__need--update")
+            let update_package_image_src = $(this).attr("data-image-src")
+            let update_package_name = $(this).attr("data-package-name")
+
+            $(".change__data__upgrade--package .__item--title").text(update_package_name)
+            $(".change__data__upgrade--package img").attr("src", update_package_image_src);
+            
+            $(all_need_upgrade).removeClass("rank-selected")
+            $(this).addClass("rank-selected")
+
+            {% if developer_mode %}
+                console.log(data_clicked)
+                console.log(all_upgrade)
+                console.log(all_need_upgrade)
+            {% endif %}
+
+            // Hide all elements
+            $(all_upgrade).addClass("hided__upgrade")
+
+            $(".no__choosen--upgrade").css("display","none")
+            $(".change__data__upgrade--package").css("display","block")
+
+            // Remove hiding class from clicked item
+            $(`.__is--update[data-upgrade-id="${data_clicked}"]`).removeClass("hided__upgrade")
+            $(".upgrade--icon i").removeClass("hided__upgrade--icon")
+
+            // Enable upgrade button
+            $(".upgrade--btn").removeClass("upgrade__btn--disabled")
+            $(".upgrade--btn").attr("href", `/checkout/packages/add/${data_clicked}/single`)
+        })
+    })
+    {% endif %}
+    
+</script>

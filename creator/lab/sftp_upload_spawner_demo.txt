@@ -1,0 +1,5 @@
+put creator/lab/maqueta_spawner.yml plugins/DeluxeMenus/gui_menus/menusIA/maqueta_spawner.yml
+put creator/lab/maqueta_spawner_almacen.yml plugins/DeluxeMenus/gui_menus/menusIA/maqueta_spawner_almacen.yml
+put creator/lab/maqueta_spawner_apilar.yml plugins/DeluxeMenus/gui_menus/menusIA/maqueta_spawner_apilar.yml
+put creator/lab/deluxemenus_config.yml plugins/DeluxeMenus/config.yml
+bye

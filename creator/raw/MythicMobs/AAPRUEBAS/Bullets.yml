@@ -1,0 +1,983 @@
+# Lerfing's bullet pack. These are for magic attacks of anything you can think of. 
+# Includes ice, lightning, fire, earth, void, floating weapons, mist, and more. 
+# Meant to be used from a boss / mob casting a skill with the - summon mechanic. 
+# Basically a boss summons these bullet mobs in patterns to create any type of
+# Attack you can think of, and can manipulate their position too.
+# Check out this video for a huge showcase https://youtu.be/CEqFDDcC960?si=5PqzYExXjgO16g4B
+# Also check out my mythicmobs tutorial to see how to use these!
+
+#There are premade skills using these bullet mobs. If you are
+#not making your own skills, ignore this file.
+
+#To change damage values of the attack, type ctrl+f then search "- damage" and change the amount
+#to whatever you want.
+
+#The base for all bullets. Copy paste this code if you want to make your own bullet effects!
+Test_Bullet:
+  Type: SILVERFISH
+  Display: '&5Debug Bullet'
+  Health: 10
+  Damage: 0
+  DamageModifiers:
+  - FALL 0
+  Options:
+    FollowRange: 48
+    MovementSpeed: 0.1
+    KnockbackResistance: 1.0
+    Collidable: false
+    Invisible: true
+    PreventMobKillDrops: true
+    PreventOtherDrops: true
+    PreventRandomEquipment: true
+    PreventSunburn: true
+    NoGravity: true
+    Silent: true
+    Invincible: true
+  AIGoalSelectors:
+  - clear
+  - meleeattack
+  Skills:
+  - damage{a=2;pkb=true} @PIR{r=3} ~onTimer:5
+  - effect:particles{particle=block_crack;material=dirt;hs=0.5;vs=0.5;a=30} @self ~onTimer:2
+  - remove{delay=200} @self ~onSpawn
+
+#Dirt effect for earthquakes. Damages and knocks up anyone who touches it.
+dirt_wave:
+  Type: SILVERFISH
+  Display: '&5Earthquake'
+  Health: 10
+  Damage: 0
+  DamageModifiers:
+  - FALL 0
+  Options:
+    FollowRange: 48
+    MovementSpeed: 0.0
+    KnockbackResistance: 1.0
+    Collidable: false
+    Invisible: true
+    PreventMobKillDrops: true
+    PreventOtherDrops: true
+    PreventRandomEquipment: true
+    PreventSunburn: true
+    NoGravity: true
+    Silent: true
+    Invincible: true
+  AIGoalSelectors:
+  - clear
+  - meleeattack
+  Skills:
+  - jump{velocity=-10} @self ~onSpawn
+  - damage{a=8;pkb=true} @PIR{r=3} ~onTimer:5
+  - throw{velocity=3;velocityY=4} @PlayersInRadius{r=3} ~onTimer:5
+  - effect:particles{particle=block_crack;material=dirt;hs=1;vs=0.1;a=10} @self ~onTimer:2
+  - remove{delay=50} @self ~onSpawn
+
+#Ice block that slows and deals damaged to anyone inside of it. Has high DPS.
+ice_bullet:
+  Type: SILVERFISH
+  Display: '&5Magic Ice'
+  Health: 10
+  Damage: 0
+  Disguise: FALLING_BLOCK PACKED_ICE
+  DamageModifiers:
+  - FALL 0
+  Options:
+    FollowRange: 48
+    MovementSpeed: 0.0
+    KnockbackResistance: 1.0
+    Collidable: false
+    Invisible: true
+    PreventMobKillDrops: true
+    PreventOtherDrops: true
+    PreventRandomEquipment: true
+    PreventSunburn: true
+    NoGravity: true
+    Silent: true
+    Invincible: true
+  AIGoalSelectors:
+  - clear
+  - meleeattack
+  Skills:
+  - damage{a=5;pkb=true} @PIR{r=3} ~onTimer:5
+  - potion{type=SLOW;duration=30;level=4} @PIR{r=3} ~onTimer:5
+  - effect:particles{particle=block_crack;material=PACKED_ICE;hs=1;vs=0.1;a=10} @self ~onTimer:2
+  - remove{delay=90} @self ~onSpawn
+
+#jumps up a little bit than falls on the ground, dealing damage. Best used if the caster manipulates the motion.
+ruin_bullet:
+  Type: SILVERFISH
+  Display: '&5Ruin Bullet'
+  Health: 10
+  Damage: 0
+  Disguise: DROPPED_ITEM CHORUS_FLOWER
+  DamageModifiers:
+  - FALL 0
+  Options:
+    FollowRange: 48
+    MovementSpeed: 0.0
+    KnockbackResistance: 1.0
+    Collidable: false
+    Invisible: true
+    PreventMobKillDrops: true
+    PreventOtherDrops: true
+    PreventRandomEquipment: true
+    PreventSunburn: true
+    Silent: true
+    Invincible: true
+  AIGoalSelectors:
+  - clear
+  - meleeattack
+  Skills:
+  - potion{type=INVISIBILITY;duration=200;level=1;p=false} @self ~onSpawn
+  - potion{type=SLOW_FALLING;duration=200;level=1;p=false} @self ~onSpawn
+  - jump{velocity=0.45} @self ~onSpawn
+  - damage{a=4;pkb=true} @PIR{r=2} ~onTimer:5
+  - effect:particles{particle=reverse_portal;hs=0.1;vs=0.1;a=1} @self ~onTimer:4
+  - remove{delay=140} @self ~onSpawn
+
+#Create particles on the ground in a threatening area, after 2 seconds it strikes, dealing heavy damage.
+lightning_bullet:
+  Type: SILVERFISH
+  Display: '&5Magic Lightning'
+  Health: 10
+  Damage: 0
+  DamageModifiers:
+  - FALL 0
+  Options:
+    FollowRange: 48
+    MovementSpeed: 0.0
+    KnockbackResistance: 1.0
+    Collidable: false
+    Invisible: true
+    PreventMobKillDrops: true
+    PreventOtherDrops: true
+    PreventRandomEquipment: true
+    PreventSunburn: true
+    Silent: true
+    Invincible: true
+  AIGoalSelectors:
+  - clear
+  - meleeattack
+  Skills:
+  - jump{velocity=-15} @self ~onSpawn
+  - potion{type=INVISIBILITY;duration=200;level=1;p=false} @self ~onSpawn
+  - damage{a=11;pkb=true;delay=40} @PIR{r=4} ~onSpawn
+  - sound{s=entity.lightning_bolt.thunder;v=1;p=1;delay=40} @self ~onSpawn
+  - sound{s=entity.lightning_bolt.impact;v=1;p=1;delay=40} @self ~onSpawn
+  - effect:particles{particle=reddust;color=#ffff00;hs=1.2;vs=0.2;a=15} @self ~onTimer:4
+  - remove{delay=57} @self ~onSpawn
+  - effect:particles{particle=electric_spark;hs=0.1;vs=12;a=200;delay=40} @Self ~onSpawn
+  - effect:particles{particle=explosion_large;hs=0.5;vs=0.1;a=2;delay=44} @Self ~onSpawn
+  - effect:particles{particle=electric_spark;hs=0.5;vs=0.1;a=10;delay=44} @Ring{r=3;p=5} ~onSpawn
+  - effect:particles{particle=electric_spark;hs=0.5;vs=0.1;a=10;delay=48} @Ring{r=4;p=8} ~onSpawn
+  - effect:particles{particle=electric_spark;hs=0.5;vs=0.1;a=10;delay=52} @Ring{r=5;p=10} ~onSpawn
+  - effect:particles{particle=electric_spark;hs=0.5;vs=0.1;a=10;delay=56} @Ring{r=6;p=10} ~onSpawn
+  - effect:particles{particle=electric_spark;hs=0.5;vs=0.1;a=10;delay=44} @Ring{r=3;p=5} ~onSpawn
+
+#gold sword spawns in the sky, after a delay rockets into the ground, dealing damage. Can hit multiple times.
+sword_bullet:
+  Type: ZOMBIE
+  Display: '&5Dinnerbone'
+  Health: 10
+  Damage: 0
+  DamageModifiers:
+  - FALL 0
+  Equipment:
+  - GOLDEN_SWORD HAND
+  Options:
+    FollowRange: 48
+    MovementSpeed: 0.0
+    KnockbackResistance: 1.0
+    Collidable: false
+    Invisible: true
+    PreventMobKillDrops: true
+    PreventOtherDrops: true
+    PreventRandomEquipment: true
+    PreventSunburn: true
+    Silent: true
+    Invincible: true
+    PreventJockeyMounts: true
+    VisibleByDefault: false
+  AIGoalSelectors:
+  - 0 clear
+  - 1 meleeattack
+  Skills:
+  - potion{type=INVISIBILITY;duration=200;level=1;p=false} @self ~onSpawn
+  - potion{type=LEVITATION;duration=70;level=0;p=false} @self ~onSpawn
+  - jump{velocity=-5;delay=70} @self ~onSpawn
+  - damage{a=6;pkb=true;delay=30} @PIR{r=3} ~onTimer:10
+  - sound{s=block.amethyst_cluster.step;v=2;p=1} @self ~onSpawn
+  - sound{s=block.lantern.break;v=2;p=2;delay=75} @self ~onSpawn
+  - remove{delay=80} @self ~onSpawn
+
+#Dark sword rises into the sky, then rockets towards nearest player and damages. Can hit multiple times.
+demon_sword_bullet:
+  Type: ZOMBIE
+  Display: '&5Dinnerbone'
+  Health: 10
+  Damage: 0
+  DamageModifiers:
+  - FALL 0
+  Equipment:
+  - netherite_sword HAND
+  Options:
+    FollowRange: 48
+    MovementSpeed: 0.0
+    KnockbackResistance: 1.0
+    Collidable: false
+    Invisible: true
+    PreventMobKillDrops: true
+    PreventOtherDrops: true
+    PreventRandomEquipment: true
+    PreventSunburn: true
+    Silent: true
+    Invincible: true
+    PreventJockeyMounts: true
+    VisibleByDefault: false
+  AIGoalSelectors:
+  - clear
+  - meleeattack
+  Skills:
+  - potion{type=INVISIBILITY;duration=200;level=1;p=false} @self ~onSpawn
+  - potion{type=LEVITATION;duration=80;level=0;p=false} @self ~onSpawn
+  - potion{type=SLOW_FALLING;duration=115;level=10;p=false} @self ~onSpawn
+  - damage{a=5;pkb=true;delay=40} @PIR{r=2} ~onTimer:5
+  - sound{s=block.amethyst_cluster.step;v=2;p=0.5} @self ~onSpawn
+  - sound{s=block.lantern.break;v=2;p=0.5;delay=100} @self ~onSpawn
+  - leap{velocity=600;delay=90} @target ~onSpawn
+  - sound{s=entity.arrow.shoot;v=2;p=0.5;delay=90} @self ~onSpawn
+  - remove{delay=118} @self ~onSpawn
+
+#a long lasting cloud that deals damage
+cloud_bullet:
+  Type: SILVERFISH
+  Display: '&5Mist'
+  Health: 10
+  Damage: 0
+  DamageModifiers:
+  - FALL 0
+  Options:
+    FollowRange: 48
+    MovementSpeed: 0.0
+    KnockbackResistance: 1.0
+    Collidable: false
+    Invisible: true
+    PreventMobKillDrops: true
+    PreventOtherDrops: true
+    PreventRandomEquipment: true
+    PreventSunburn: true
+    Silent: true
+    Invincible: true
+  AIGoalSelectors:
+  - clear
+  - meleeattack
+  Skills:
+  - potion{type=INVISIBILITY;duration=400;level=1;p=false} @self ~onSpawn
+  - damage{a=3;pkb=true} @PIR{r=6} ~onTimer:20
+  - effect:particles{particle=cloud;speed=0.01;color=#eeeee4;hs=5;vs=2;a=20} @self ~onTimer:4
+  - remove{delay=400} @self ~onSpawn
+
+#a long lasting cloud that withers anyone inside and damages. 
+dark_cloud_bullet:
+  Type: SILVERFISH
+  Display: '&5Dark Clouds'
+  Health: 10
+  Damage: 0
+  DamageModifiers:
+  - FALL 0
+  Options:
+    FollowRange: 48
+    MovementSpeed: 0.0
+    KnockbackResistance: 1.0
+    Collidable: false
+    Invisible: true
+    PreventMobKillDrops: true
+    PreventOtherDrops: true
+    PreventRandomEquipment: true
+    PreventSunburn: true
+    Silent: true
+    Invincible: true
+  AIGoalSelectors:
+  - clear
+  - meleeattack
+  Skills:
+  - potion{type=INVISIBILITY;duration=400;level=1;p=false} @self ~onSpawn
+  - damage{a=2;pkb=true} @PIR{r=6} ~onTimer:20
+  - potion{type=WITHER;duration=40;level=0;p=true} @PIR{r=6} ~onTimer:20
+  - effect:particles{particle=redstone;color=#000000;speed=0.01;hs=2;vs=2;a=60} @self ~onTimer:8
+  - remove{delay=400} @self ~onSpawn
+
+#a wind attack that slowly moves toward the nearest player. If nearby, constantly deals damage. Has low gravity.
+#Increase or decrease the speed at which the bullet tracks the player by changing the velocity on the - leap mechanic.
+tornado_bullet:
+  Type: SILVERFISH
+  Display: '&5Tornado'
+  Health: 10
+  Damage: 0
+  DamageModifiers:
+  - FALL 0
+  Options:
+    FollowRange: 48
+    MovementSpeed: 0.1
+    KnockbackResistance: 1.0
+    Collidable: false
+    Invisible: true
+    PreventMobKillDrops: true
+    PreventOtherDrops: true
+    PreventRandomEquipment: true
+    PreventSunburn: true
+    Silent: true
+    Invincible: true
+  AIGoalSelectors:
+  - clear
+  - movetowardstarget
+  Skills:
+  - potion{type=INVISIBILITY;duration=400;level=1;p=false} @self ~onSpawn
+  - damage{a=2;pkb=true} @PIR{r=2} ~onTimer:10
+  - effect:particles{particle=sweep_attack;hs=0.2;vs=0.2;a=2} @self ~onTimer:4
+  - leap{velocity=20} @target ~onTimer:5
+  - remove{delay=400} @self ~onSpawn
+
+#a wind attack that stands still in place.
+tornado_slow_bullet:
+  Type: SILVERFISH
+  Display: '&5Tornado'
+  Health: 10
+  Damage: 0
+  DamageModifiers:
+  - FALL 0
+  Options:
+    FollowRange: 48
+    MovementSpeed: 0.05
+    KnockbackResistance: 1.0
+    Collidable: false
+    Invisible: true
+    PreventMobKillDrops: true
+    PreventOtherDrops: true
+    PreventRandomEquipment: true
+    PreventSunburn: true
+    Silent: true
+    Invincible: true
+  AIGoalSelectors:
+  - clear
+  - movetowardstarget
+  Skills:
+  - potion{type=INVISIBILITY;duration=500;level=1;p=false} @self ~onSpawn
+  - potion{type=SLOWNESS;duration=500;level=5;p=false} @self ~onSpawn
+  - damage{a=3;pkb=true} @PIR{r=2} ~onTimer:10
+  - effect:particles{particle=sweep_attack;hs=0.2;vs=0.2;a=2} @self ~onTimer:4
+  - remove{delay=500} @self ~onSpawn
+
+#wind attack specifically designed for the spell hurricane wave
+hurricane_wave_bullet:
+  Type: SILVERFISH
+  Display: '&5Hurricane Wave'
+  Health: 10
+  Damage: 0
+  DamageModifiers:
+  - FALL 0
+  Options:
+    FollowRange: 48
+    MovementSpeed: 0.05
+    KnockbackResistance: 1.0
+    Collidable: false
+    Invisible: true
+    PreventMobKillDrops: true
+    PreventOtherDrops: true
+    PreventRandomEquipment: true
+    PreventSunburn: true
+    Silent: true
+    Invincible: true
+  AIGoalSelectors:
+  - clear
+  - movetowardstarget
+  Skills:
+  - potion{type=INVISIBILITY;duration=500;level=1;p=false} @self ~onSpawn
+  - potion{type=SLOWNESS;duration=500;level=5;p=false} @self ~onSpawn
+  - damage{a=4;pkb=true} @PIR{r=3} ~onTimer:10
+  - effect:particles{particle=sweep_attack;hs=0.2;vs=0.2;a=2} @self ~onTimer:4
+  - remove{delay=200} @self ~onSpawn
+
+#A crystal standing in place, fires out snowballs in a shotgun spread at the nearest player every 3 seconds.
+totem_bullet:
+  Type: WITHER_SKELETON
+  Display: '&5Corrupted Crystal'
+  Health: 10
+  Damage: 0
+  DamageModifiers:
+  - FALL 0
+  Equipment:
+  - netherite_sword HAND
+  Disguise: ENDER_CRYSTAL
+  Options:
+    FollowRange: 48
+    MovementSpeed: 0.0
+    KnockbackResistance: 1.0
+    Collidable: false
+    Invisible: true
+    PreventMobKillDrops: true
+    PreventOtherDrops: true
+    PreventRandomEquipment: true
+    PreventSunburn: true
+    Silent: true
+    PreventJockeyMounts: true
+  AIGoalSelectors:
+  - clear
+  - lookatplayers
+  AITargetSelectors:
+  - clear
+  - players
+  Skills:
+  - shoot{type=snowball;velocity=0.5;damage=20;a=0.88;bounce=true} @Target ~onTimer:60 0.8
+  - shoot{type=snowball;velocity=0.5;damage=20;a=0.88;bounce=true} @Target ~onTimer:60 0.8
+  - shoot{type=snowball;velocity=0.5;damage=20;a=0.88;bounce=true} @Target ~onTimer:60 0.8
+  - shoot{type=snowball;velocity=0.5;damage=20;a=0.8;bounce=true} @Target ~onTimer:60 0.8
+  - shoot{type=snowball;velocity=0.5;damage=20;a=0.8;bounce=true} @Target ~onTimer:60 0.8
+  - sound{s=entity.egg.throw;v=2;p=0.5} @self ~onTimer:60
+  - sound{s=entity.wither.break_block;v=2;p=1} @self ~onDeath
+  - effect:particles{particle=block_break;hs=1;vs=1;a=50} @self ~onDeath
+
+#An evoker summons a laser that tracks nearby target, constantly damaging them until sight is broken.
+totem_laser:
+  Type: EVOKER
+  Display: '&5Laser Totem'
+  Health: 10
+  Damage: 0
+  DamageModifiers:
+  - FALL 0
+  Equipment:
+  - air HAND
+  Options:
+    FollowRange: 48
+    MovementSpeed: 0.0
+    KnockbackResistance: 1.0
+    Collidable: false
+    PreventMobKillDrops: true
+    PreventOtherDrops: true
+    PreventRandomEquipment: true
+    PreventSunburn: true
+    PreventJockeyMounts: true
+  AIGoalSelectors:
+  - clear
+  - lookatplayers
+  AITargetSelectors:
+  - clear
+  - players
+  Skills:
+  - sound{s=entity.wither.break_block;v=2;p=1} @self ~onDeath
+  - effect:particles{particle=block_break;hs=1;vs=1;a=50} @self ~onDeath
+  - effect:enderbeam{d=6;y=2} @target ~onTimer:5
+  - damage{amount=3} @target ~onTimer:40
+
+#Heals the mob that summoned it. Useless spawning on its own.
+totem_healing:
+  Type: WITCH
+  Display: '&5Shaman Healer'
+  Health: 10
+  Damage: 0
+  DamageModifiers:
+  - FALL 0
+  Equipment:
+  - air HAND
+  Options:
+    FollowRange: 48
+    MovementSpeed: 0.0
+    KnockbackResistance: 1.0
+    Collidable: false
+    PreventMobKillDrops: true
+    PreventOtherDrops: true
+    PreventRandomEquipment: true
+    PreventSunburn: true
+    PreventJockeyMounts: true
+  AIGoalSelectors:
+  - clear
+  - lookatplayers
+  AITargetSelectors:
+  - clear
+  - players
+  Skills:
+  - sound{s=entity.wither.break_block;v=2;p=1} @self ~onDeath
+  - effect:particles{particle=block_break;hs=1;vs=1;a=50} @self ~onDeath
+  - effect:enderbeam{d=62;y=2} @parent ~onTimer:60
+  - heal{amount=10} @parent ~onTimer:20
+
+#a hurricane that by itself deals no damage, but can cause heavy fall damage to all entities that get caught in it.
+#The pull gets stronger the closer to the center the player is. After 25 seconds, disappears.
+#You can increase or decrease the lifecycle of the hurricane by changing the health value. 100 health = 1 second
+harmless_hurricane:
+  Type: SILVERFISH
+  Display: 'Storm'
+  Health: 2500
+  Damage: 2
+  BossBar:
+    Enabled: true
+    Title: '&9Hurricane'
+    Range: 50
+    Color: GREEN
+    Style: SOLID
+  Options:
+    MovementSpeed: 0.01
+    Silent: true
+    PreventSunburn: true
+    Despawn: false
+  AIGoalSelectors:
+  - 0 clear
+  - 1 lookatplayers
+  - 2 float
+  Skills:
+  - damage{a=100;pkb=true} @self ~onTimer:20
+  - sound{s=entity.evoker.prepare_attack;p=0.5;v=3} @self ~onTimer:10
+  - effect:particlering{particle=sweep_attack;radius=3;points=4;amount=1;hS=1;vS=0;y=0} @Self ~onTimer:2
+  - effect:particlering{particle=sweep_attack;radius=5;points=8;amount=1;hS=1;vS=0;y=1} @Self ~onTimer:2
+  - effect:particlering{particle=sweep_attack;radius=5;points=12;amount=1;hS=1;vS=0;y=2} @Self ~onTimer:2
+  - effect:particlering{particle=sweep_attack;radius=7;points=16;amount=1;hS=1;vS=0;y=3} @Self ~onTimer:2
+  - effect:particlering{particle=sweep_attack;radius=7;points=20;amount=1;hS=1;vS=0;y=4} @Self ~onTimer:2
+  - effect:particlering{particle=sweep_attack;radius=9;points=24;amount=1;hS=1;vS=0;y=5} @Self ~onTimer:2
+  - effect:particlering{particle=sweep_attack;radius=9;points=24;amount=1;hS=1;vS=0;y=6} @Self ~onTimer:2
+  - effect:particlering{particle=sweep_attack;radius=11;points=24;amount=1;hS=1;vS=0;y=7} @Self ~onTimer:2
+  - effect:particlering{particle=sweep_attack;radius=11;points=24;amount=1;hS=1;vS=0;y=8} @Self ~onTimer:2
+  - effect:particlering{particle=sweep_attack;radius=11;points=24;amount=1;hS=1;vS=0;y=9} @Self ~onTimer:2
+  - effect:particlering{particle=sweep_attack;radius=11;points=24;amount=1;hS=1;vS=0;y=10} @Self ~onTimer:2
+  - effect:particlering{particle=sweep_attack;radius=11;points=24;amount=1;hS=1;vS=0;y=11} @Self ~onTimer:2
+  - pull{v=1;to=true} @LivingEntitiesInRadius{r=27} ~onTimer:4
+  - pull{v=2;to=true} @LivingEntitiesInRadius{r=20} ~onTimer:4
+  - throw{velocity=0;velocityY=4} @LivingEntitiesInRadius{r=20} ~onTimer:6
+  - pull{v=6;to=true} @LivingEntitiesInRadius{r=13} ~onTimer:8
+  - pull{v=20;to=true} @LivingEntitiesInRadius{r=6} ~onTimer:8
+  - throw{velocity=0;velocityY=4} @LivingEntitiesInRadius{r=10} ~onTimer:6
+  - throw{velocity=15;velocityY=5} @PlayersInRadius{r=6} ~onTimer:10
+  - lunge{velocity=0.5;velocityY=0.1} @Self ~onTimer:20
+
+#summons a deadly giant tornado that constantly damages and pulls in players near it. 
+#The pull gets stronger the closer to the center the player is. After 25 seconds, disappears.
+#You can increase or decrease the lifecycle of the hurricane by changing the health value. 100 health = 1 second
+hurricane_bullet:
+  Type: SILVERFISH
+  Display: 'Storm'
+  Health: 2500
+  Damage: 2
+  BossBar:
+    Enabled: true
+    Title: '&9Hurricane'
+    Range: 50
+    Color: GREEN
+    Style: SOLID
+  Options:
+    MovementSpeed: 0.01
+    Silent: true
+    PreventSunburn: true
+    Despawn: false
+  AIGoalSelectors:
+  - 0 clear
+  - 1 lookatplayers
+  - 2 float
+  Skills:
+  - damage{a=100;pkb=true} @self ~onTimer:20
+  - sound{s=entity.evoker.prepare_attack;p=0.5;v=3} @self ~onTimer:10
+  - effect:particlering{particle=sweep_attack;radius=3;points=4;amount=1;hS=1;vS=0;y=0} @Self ~onTimer:2
+  - effect:particlering{particle=sweep_attack;radius=5;points=8;amount=1;hS=1;vS=0;y=1} @Self ~onTimer:2
+  - effect:particlering{particle=sweep_attack;radius=5;points=12;amount=1;hS=1;vS=0;y=2} @Self ~onTimer:2
+  - effect:particlering{particle=sweep_attack;radius=7;points=16;amount=1;hS=1;vS=0;y=3} @Self ~onTimer:2
+  - effect:particlering{particle=sweep_attack;radius=7;points=20;amount=1;hS=1;vS=0;y=4} @Self ~onTimer:2
+  - effect:particlering{particle=sweep_attack;radius=9;points=24;amount=1;hS=1;vS=0;y=5} @Self ~onTimer:2
+  - effect:particlering{particle=sweep_attack;radius=9;points=24;amount=1;hS=1;vS=0;y=6} @Self ~onTimer:2
+  - effect:particlering{particle=sweep_attack;radius=11;points=24;amount=1;hS=1;vS=0;y=7} @Self ~onTimer:2
+  - effect:particlering{particle=sweep_attack;radius=11;points=24;amount=1;hS=1;vS=0;y=8} @Self ~onTimer:2
+  - effect:particlering{particle=sweep_attack;radius=11;points=24;amount=1;hS=1;vS=0;y=9} @Self ~onTimer:2
+  - effect:particlering{particle=sweep_attack;radius=11;points=24;amount=1;hS=1;vS=0;y=10} @Self ~onTimer:2
+  - effect:particlering{particle=sweep_attack;radius=11;points=24;amount=1;hS=1;vS=0;y=11} @Self ~onTimer:2
+  - pull{v=1;to=true} @PlayersInRadius{r=18} ~onTimer:8
+  - pull{v=2;to=true} @PlayersInRadius{r=13} ~onTimer:8
+  - throw{velocity=0;velocityY=2} @PlayersInRadius{r=15} ~onTimer:12
+  - pull{v=6;to=true} @PlayersInRadius{r=10} ~onTimer:16
+  - pull{v=20;to=true} @PlayersInRadius{r=6} ~onTimer:16
+  - throw{velocity=0;velocityY=2} @PlayersInRadius{r=6} ~onTimer:12
+  - throw{velocity=20;velocityY=2} @PlayersInRadius{r=6} ~onTimer:10
+  - damage{a=2;pkb=true} @PIR{r=7} ~onTimer:20
+
+#an invisible blaze that shoots periodically. Appears as floating fire and periodically shoots out fireballs
+blaze_bullet:
+  Type: BLAZE
+  Display: 'Floating Chaos'
+  Health: 25
+  Damage: 30
+  Options:
+    MovementSpeed: 0.01
+    Silent: true
+    NoGravity: false
+    PreventSunburn: true
+    Despawn: false
+    Invisible: true
+    VisibleByDefault: false
+  Skills:
+  - remove{delay=400} @self ~onSpawn
+
+#sitting tnt, after a delay, explodes but doesn't destroy blocks
+explosion_bullet:
+  Type: SILVERFISH
+  Display: '&5Explosion'
+  Health: 10
+  Damage: 0
+  Disguise: PRIMED_TNT
+  DamageModifiers:
+  - FALL 0
+  Options:
+    FollowRange: 48
+    MovementSpeed: 0.0
+    KnockbackResistance: 1.0
+    Collidable: false
+    Invisible: true
+    PreventMobKillDrops: true
+    PreventOtherDrops: true
+    PreventRandomEquipment: true
+    PreventSunburn: true
+    Silent: true
+    Invincible: true
+  AIGoalSelectors:
+  - clear
+  - meleeattack
+  Skills:
+  - potion{type=INVISIBILITY;duration=200;level=1;p=false} @self ~onSpawn
+  - potion{type=SLOW_FALLING;duration=500;level=1;p=false} @self ~onSpawn
+  - explosion{yield=2;delay=80} @Ring{r=2;p=5} ~onSpawn
+  - damage{a=16;pkb=true;delay=80} @PIR{r=2} ~onSpawn
+  - damage{a=8;pkb=true;delay=81} @PIR{r=4} ~onSpawn
+  - damage{a=4;pkb=true;delay=82} @PIR{r=6} ~onSpawn
+  - damage{a=2;pkb=true;delay=82} @PIR{r=7} ~onSpawn
+  - remove{delay=83} @self ~onSpawn
+
+#tnt spawns, and after a delay launches a tnt at the player that eventually explodes
+explosion_bullet_launch:
+  Type: ENDERMAN
+  Display: '&4Explosion'
+  Health: 100
+  Damage: 0
+  Disguise: PRIMED_TNT
+  DamageModifiers:
+  - FALL 0
+  Options:
+    FollowRange: 50
+    MovementSpeed: 0.0
+    KnockbackResistance: 1.0
+    PreventMobKillDrops: true
+    PreventOtherDrops: true
+    PreventSunburn: true
+    Silent: true
+    PreventTeleport: true
+  AITargetSelectors:
+  - clear
+  - players
+  Skills:
+  - potion{type=SLOW;duration=999999;level=6} @Self ~onSpawn
+  - skill{s=cannonlaunch} ~onTimer:40
+  - effect:spin{duration=100;velocity=3} @self ~onTimer:100
+  - effect:spin{duration=100;velocity=3} @self ~onSpawn
+  DamageModifiers:
+  - ENTITY_ATTACK 50
+
+#instantly flies towards the nearest player on spawn
+explosion_bullet_instant_launch:
+  Type: ENDERMAN
+  Display: '&4Explosion'
+  Health: 100
+  Damage: 0
+  Disguise: PRIMED_TNT
+  DamageModifiers:
+  - FALL 0
+  Options:
+    FollowRange: 50
+    MovementSpeed: 0.0
+    KnockbackResistance: 1.0
+    PreventMobKillDrops: true
+    PreventOtherDrops: true
+    PreventSunburn: true
+    Silent: true
+    PreventTeleport: true
+  AITargetSelectors:
+  - clear
+  - players
+  Skills:
+  - potion{type=SLOW;duration=999999;level=6} @Self ~onSpawn
+  - skill{s=cannonlaunch} ~onSpawn
+  DamageModifiers:
+  - ENTITY_ATTACK 50
+
+#long lasting deadly blue flames that damage and burn anyone near it
+blue_fire_bullet:
+  Type: SILVERFISH
+  Display: '&5Soul Flame'
+  Health: 10
+  Damage: 0
+  DamageModifiers:
+  - FALL 0
+  Options:
+    FollowRange: 48
+    MovementSpeed: 0.0
+    KnockbackResistance: 1.0
+    Collidable: false
+    Invisible: true
+    PreventMobKillDrops: true
+    PreventOtherDrops: true
+    PreventRandomEquipment: true
+    PreventSunburn: true
+    Silent: true
+    Invincible: true
+  AIGoalSelectors:
+  - clear
+  - meleeattack
+  Skills:
+  - sound{s=entity.blaze.shoot;v=3;p=0.5} @self ~onSpawn
+  - potion{type=INVISIBILITY;duration=400;level=1;p=false} @self ~onSpawn
+  - damage{a=3;pkb=true} @PIR{r=5} ~onTimer:20
+  - ignite{ticks=40} @PIR{r=5} ~onTimer:20
+  - effect:particles{particle=soul_fire_flame;speed=0.01;color=#eeeee4;hs=4;vs=0.1;a=20} @self ~onTimer:4
+  - remove{delay=400} @self ~onSpawn
+
+#long lasting white mist that deals high damage
+ghost_mist:
+  Type: SILVERFISH
+  Display: '&5Soul Flame'
+  Health: 10
+  Damage: 0
+  DamageModifiers:
+  - FALL 0
+  Options:
+    FollowRange: 48
+    MovementSpeed: 0.0
+    KnockbackResistance: 1.0
+    Collidable: false
+    Invisible: true
+    PreventMobKillDrops: true
+    PreventOtherDrops: true
+    PreventRandomEquipment: true
+    PreventSunburn: true
+    Silent: true
+    Invincible: true
+  AIGoalSelectors:
+  - clear
+  - meleeattack
+  Skills:
+  - sound{s=entity.blaze.shoot;v=3;p=0.5} @self ~onSpawn
+  - potion{type=INVISIBILITY;duration=400;level=1;p=false} @self ~onSpawn
+  - damage{a=5;pkb=true} @PIR{r=5} ~onTimer:15
+  - effect:particles{particle=sculk_soul;speed=0.01;color=#eeeee4;hs=4;vs=0.1;a=15} @self ~onTimer:4
+  - remove{delay=600} @self ~onSpawn
+
+#Pointed dripstone falls from the sky onto an area
+dripstone_bullet:
+  Type: SILVERFISH
+  Display: '&5Dripstone Bullet'
+  Health: 1
+  Damage: 0
+  DamageModifiers:
+  - FALL 10
+  Equipment:
+  - FALLING_BLOCK POINTED_DRIPSTONE
+  Options:
+    FollowRange: 48
+    MovementSpeed: 0.1
+    KnockbackResistance: 1.0
+    Collidable: false
+    PreventMobKillDrops: true
+    PreventOtherDrops: true
+    PreventRandomEquipment: true
+    PreventSunburn: true
+    Silent: true
+  AIGoalSelectors:
+  - clear
+  - movetowardstarget
+  Skills:
+  - teleportY{y=20} @self ~onSpawn
+  - damage{a=8;pkb=true} @PIR{r=3} ~onDeath
+  - effect:particles{particle=redstone;color=#000000;speed=0.01;hs=1;vs=1;a=60} @self ~onDeath
+  - effect:sound{s=entity.wither.break_block;volume=2;pitch=1} @self ~onDeath
+  - remove{delay=2} @self ~onDeath
+
+#Crystal shards levitate up from location spawned then crashes into the ground
+crystal_bullet:
+  Type: ZOMBIE
+  Display: '&5Dinnerbone'
+  Health: 10
+  Damage: 0
+  DamageModifiers:
+  - FALL 0
+  Equipment:
+  - amethyst_cluster HEAD
+  Options:
+    FollowRange: 48
+    MovementSpeed: 0.0
+    KnockbackResistance: 1.0
+    Collidable: false
+    Invisible: true
+    PreventMobKillDrops: true
+    PreventOtherDrops: true
+    PreventRandomEquipment: true
+    PreventSunburn: true
+    Silent: true
+    Invincible: true
+    PreventJockeyMounts: true
+    VisibleByDefault: false
+  AIGoalSelectors:
+  - clear
+  - meleeattack
+  Skills:
+  - potion{type=LEVITATION;duration=70;level=0;p=false} @self ~onSpawn
+  - jump{velocity=-5;delay=70} @self ~onSpawn
+  - damage{a=10;pkb=true;delay=30} @PIR{r=3} ~onTimer:10
+  - sound{s=block.amethyst_cluster.step;v=2;p=1} @self ~onSpawn
+  - sound{s=block.lantern.break;v=2;p=2;delay=75} @self ~onSpawn
+  - remove{delay=80} @self ~onSpawn
+
+#More deadly dirt wave, will knock up but has a bigger hitbox and sets the target on fire. Needs the caster to give a motion value to it.
+fire_dirt_wave:
+  Type: SILVERFISH
+  Display: '&4Flaming Earthquake'
+  Health: 10
+  Damage: 0
+  DamageModifiers:
+  - FALL 0
+  Options:
+    FollowRange: 48
+    MovementSpeed: 0.0
+    KnockbackResistance: 1.0
+    Collidable: false
+    VisibleByDefault: false
+    Invisible: true
+    PreventMobKillDrops: true
+    PreventOtherDrops: true
+    PreventRandomEquipment: true
+    PreventSunburn: true
+    NoGravity: true
+    Silent: true
+    Invincible: true
+  AIGoalSelectors:
+  - clear
+  - meleeattack
+  Skills:
+  - potion{type=INVISIBILITY;duration=200;level=1;p=false} @self ~onSpawn
+  - damage{a=8;pkb=true} @PIR{r=3} ~onTimer:5
+  - ignite{ticks=60} @PIR{r=3} ~onTimer:5
+  - throw{velocity=3;velocityY=4} @PlayersInRadius{r=3} ~onTimer:5
+  - effect:particles{particle=flame;hs=2;vs=2;a=4} @self ~onTimer:2
+  - remove{delay=30} @self ~onSpawn
+
+#gigantic ice is summoned, then launches at the nearest player.
+giant_ice_bullet:
+  Type: GIANT
+  Display: '&5Dinnerbone'
+  Health: 10
+  Damage: 0
+  DamageModifiers:
+  - FALL 0
+  Equipment:
+  - PACKED_ICE HAND
+  Options:
+    FollowRange: 48
+    MovementSpeed: 0.0
+    KnockbackResistance: 1.0
+    Collidable: false
+    Invisible: true
+    PreventMobKillDrops: true
+    PreventOtherDrops: true
+    PreventRandomEquipment: true
+    PreventSunburn: true
+    Silent: true
+    Invincible: true
+    PreventJockeyMounts: true
+    VisibleByDefault: false
+  AIGoalSelectors:
+  - clear
+  - meleeattack
+  AITargetSelectors:
+  - clear
+  - players
+  Skills:
+  - potion{type=INVISIBILITY;duration=200;level=1;p=false} @self ~onSpawn
+  - potion{type=LEVITATION;duration=100;level=3;p=false} @self ~onSpawn
+  - potion{type=SLOW_FALLING;duration=115;level=10;p=false} @self ~onSpawn
+  - sound{s=block.glass.break;v=2;p=0.5} @self ~onSpawn
+  - leap{velocity=600;delay=100} @NearestPlayer{r=100} ~onSpawn
+  - sound{s=entity.arrow.shoot;v=2;p=0.5;delay=100} @self ~onSpawn
+  - explosion{yield=6;delay=132} @self ~onSpawn
+  - damage{a=16;pkb=true;delay=132} @PIR{r=2} ~onSpawn
+  - damage{a=8;pkb=true;delay=132} @PIR{r=4} ~onSpawn
+  - damage{a=4;pkb=true;delay=132} @PIR{r=6} ~onSpawn
+  - damage{a=2;pkb=true;delay=132} @PIR{r=7} ~onSpawn
+  - throw{velocity=2;velocityY=2} @PlayersInRadius{r=5} ~onDeath
+  - remove{delay=134} @self ~onSpawn
+  - effect:particles{particle=block_crack;material=PACKED_ICE;hs=3;vs=3;a=30} @self ~onDeath
+
+#ice flies up from location then falls, dealing damage and slowing
+ice_rain:
+  Type: ZOMBIE
+  Display: '&5Dinnerbone'
+  Health: 5
+  Damage: 0
+  Equipment:
+  - ice HEAD
+  DamageModifiers:
+  - FALL 0
+  Options:
+    FollowRange: 48
+    MovementSpeed: 0.0
+    KnockbackResistance: 1.0
+    Collidable: false
+    VisibleByDefault: false
+    Invisible: true
+    PreventMobKillDrops: true
+    PreventOtherDrops: true
+    PreventRandomEquipment: true
+    PreventJockeyMounts: true
+    PreventSunburn: true
+    Silent: true
+  AIGoalSelectors:
+  - clear
+  - meleeattack
+  Skills:
+  - jump{velocity=2} @self ~onSpawn
+  - damage{a=5;pkb=true} @PIR{r=3} ~onDeath
+  - remove @self ~onDeath
+  - remove{delay=160} @self ~onSpawn
+  - potion{type=SLOW;duration=30;level=1} @PIR{r=3} ~onDeath
+  - sound{s=block.glass.break;v=3;p=1} @self ~onDeath
+  - sound{s=block.glass.break;v=3;p=1} @self ~onSpawn
+  - effect:particles{particle=block_crack;material=PACKED_ICE;hs=1;vs=0.1;a=5} @self ~onTimer:4
+
+#summons a giant sword that falls to the ground after a bit
+giant_sword_bullet:
+  Type: GIANT
+  Display: '&5Dinnerbone'
+  Health: 10
+  Damage: 0
+  DamageModifiers:
+  - FALL 0
+  Equipment:
+  - golden_sword HAND
+  Options:
+    FollowRange: 48
+    MovementSpeed: 0.0
+    KnockbackResistance: 1.0
+    Collidable: false
+    Invisible: true
+    PreventMobKillDrops: true
+    PreventOtherDrops: true
+    PreventRandomEquipment: true
+    PreventSunburn: true
+    Silent: true
+    Invincible: true
+    PreventJockeyMounts: true
+    VisibleByDefault: false
+  AITargetSelectors:
+  - clear
+  - players
+  AIGoalSelectors:
+  - clear
+  - meleeattack
+  Skills:
+  - potion{type=INVISIBILITY;duration=200;level=1;p=false} @self ~onSpawn
+  - potion{type=LEVITATION;duration=70;level=10;p=false} @self ~onSpawn
+  - jump{velocity=-4;delay=70} @self ~onSpawn
+  - damage{a=16;pkb=true;delay=30} @PIR{r=7} ~onTimer:2
+  - sound{s=block.amethyst_cluster.step;v=5;p=1} @self ~onSpawn
+  - sound{s=block.lantern.break;v=5;p=2;delay=95} @self ~onSpawn
+  - remove{delay=100} @self ~onSpawn

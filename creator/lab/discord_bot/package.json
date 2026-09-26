@@ -1,0 +1,12 @@
+{
+  "name": "thunder-discord-bot",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Sender de Components V2 para ThunderMC",
+  "scripts": {
+    "send": "node send.js"
+  },
+  "dependencies": {
+    "sharp": "^0.35.4"
+  }
+}

@@ -1,0 +1,1005 @@
+[16:06:03] [ServerMain/INFO]: [bootstrap] Running Java 21 (OpenJDK 64-Bit Server VM 21.0.11+10-LTS; Eclipse Adoptium Temurin-21.0.11+10) on Linux 6.12.57+deb13-amd64 (amd64)
+[16:06:03] [ServerMain/INFO]: [bootstrap] Loading Paper 1.21.11-126-main@3f5728e (2026-02-28T11:49:07Z) for Minecraft 1.21.11
+[16:06:03] [ServerMain/INFO]: [PluginInitializerManager] Initializing plugins...
+[16:06:04] [ServerMain/INFO]: [PluginInitializerManager] Initialized 44 plugins
+[16:06:04] [ServerMain/INFO]: [PluginInitializerManager] Paper plugins (2):
+ - CommandPanels (4.1.6), nightcore (2.14.0)
+[16:06:04] [ServerMain/INFO]: [PluginInitializerManager] Bukkit plugins (42):
+ - AdvancedPortals (2.7.1), AlonsoTags (2.3-BETA-PRO), CMILib (1.5.9.9), DailyRewardsPlus (1.4.8), DeluxeMenus (1.14.1-Release), EnderChestPlus (1.1), Essentials (2.22.1-dev+12-776f709), ExcellentCrates (6.6.1), FastAsyncWorldEdit (2.15.0+59372c5), Hider (1.0), ItemEdit (3.7.8), Jobs (5.2.6.6), LibsDisguises (11.0.18), LootChests (1.0), LuckPerms (5.5.42), Multiverse-Core (5.7.0), MythicLib (1.7.1-SNAPSHOT), MythicMobs (5.11.2-6a371d59), NBTAPI (2.15.7), PlaceholderAPI (2.12.3), ProtectionMenu (1.1), ProtectionStones (2.10.6), PvPManager (4.1.68), Quests (3.16.1-430c34a), RankUp (1.0), RewardCrates (1.0), ShopGUIPlus (1.113.0), SimpleVoice-Geyser (0.1.3), TAB (5.5.0), ThunderCurrencys (1.0), ValyrPlugin (1.0.0), ValyrTutorial (3.0), Vault (1.7.3-b131), ViaVersion (5.11.0), VoidGen (2.3.4), WorldGuard (7.0.15+2347-5fafea6), WorldGuardExtraFlags (4.2.4-SNAPSHOT), ZelChat (2.0.0-pre-18), floodgate (2.2.5-SNAPSHOT (b138-fc99cfc)), packetevents (2.13.0), voicechat (2.6.21), voicechat-discord (3.1.4)
+[16:06:06] [ServerMain/INFO]: Environment: Environment[sessionHost=https://sessionserver.mojang.com, servicesHost=https://api.minecraftservices.com, profilesHost=https://api.mojang.com, name=PROD]
+[16:06:07] [ServerMain/INFO]: Loaded 1470 recipes
+[16:06:07] [ServerMain/INFO]: Loaded 1584 advancements
+[16:06:07] [ServerMain/INFO]: [ca.spottedleaf.dataconverter.minecraft.datatypes.MCTypeRegistry] Initialising converters for DataConverter...
+[16:06:07] [ServerMain/INFO]: [ca.spottedleaf.dataconverter.minecraft.datatypes.MCTypeRegistry] Finished initialising converters for DataConverter in 329.9ms
+[16:06:07] [Server thread/INFO]: Starting minecraft server version 1.21.11
+[16:06:07] [Server thread/INFO]: Loading properties
+[16:06:07] [Server thread/INFO]: This server is running Paper version 1.21.11-126-main@3f5728e (2026-02-28T11:49:07Z) (Implementing API version 1.21.11-R0.1-SNAPSHOT)
+[16:06:07] [Server thread/INFO]: [spark] This server bundles the spark profiler. For more information please visit https://docs.papermc.io/paper/profiling
+[16:06:07] [Server thread/INFO]: Server Ping Player Sample Count: 12
+[16:06:07] [Server thread/INFO]: Using 4 threads for Netty based IO
+[16:06:07] [Server thread/INFO]: [MoonriseCommon] Paper is using 1 worker threads, 1 I/O threads
+[16:06:07] [Server thread/INFO]: Default game type: SURVIVAL
+[16:06:07] [Server thread/INFO]: Generating keypair
+[16:06:07] [Server thread/INFO]: Starting Minecraft server on 0.0.0.0:25566
+[16:06:07] [Server thread/INFO]: Paper: Using libdeflate (Linux x86_64) compression from Velocity.
+[16:06:07] [Server thread/INFO]: Paper: Using OpenSSL 3.x.x (Linux x86_64) cipher from Velocity.
+[16:06:08] [Server thread/INFO]: [SpigotLibraryLoader] [MythicMobs] Loading 4 libraries... please wait
+[16:06:08] [Server thread/INFO]: [SpigotLibraryLoader] [MythicMobs] Loaded library /home/container/libraries/net/kyori/adventure-api/4.16.0/adventure-api-4.16.0.jar
+[16:06:08] [Server thread/INFO]: [SpigotLibraryLoader] [MythicMobs] Loaded library /home/container/libraries/net/kyori/adventure-key/4.16.0/adventure-key-4.16.0.jar
+[16:06:08] [Server thread/INFO]: [SpigotLibraryLoader] [MythicMobs] Loaded library /home/container/libraries/net/kyori/examination-api/1.3.0/examination-api-1.3.0.jar
+[16:06:08] [Server thread/INFO]: [SpigotLibraryLoader] [MythicMobs] Loaded library /home/container/libraries/net/kyori/examination-string/1.3.0/examination-string-1.3.0.jar
+[16:06:08] [Server thread/INFO]: [SpigotLibraryLoader] [MythicMobs] Loaded library /home/container/libraries/org/jetbrains/annotations/24.1.0/annotations-24.1.0.jar
+[16:06:08] [Server thread/INFO]: [SpigotLibraryLoader] [MythicMobs] Loaded library /home/container/libraries/net/kyori/adventure-platform-bukkit/4.3.2/adventure-platform-bukkit-4.3.2.jar
+[16:06:08] [Server thread/INFO]: [SpigotLibraryLoader] [MythicMobs] Loaded library /home/container/libraries/net/kyori/adventure-platform-api/4.3.2/adventure-platform-api-4.3.2.jar
+[16:06:08] [Server thread/INFO]: [SpigotLibraryLoader] [MythicMobs] Loaded library /home/container/libraries/net/kyori/adventure-text-serializer-bungeecord/4.3.2/adventure-text-serializer-bungeecord-4.3.2.jar
+[16:06:08] [Server thread/INFO]: [SpigotLibraryLoader] [MythicMobs] Loaded library /home/container/libraries/net/kyori/adventure-text-serializer-legacy/4.13.1/adventure-text-serializer-legacy-4.13.1.jar
+[16:06:08] [Server thread/INFO]: [SpigotLibraryLoader] [MythicMobs] Loaded library /home/container/libraries/net/kyori/adventure-nbt/4.13.1/adventure-nbt-4.13.1.jar
+[16:06:08] [Server thread/INFO]: [SpigotLibraryLoader] [MythicMobs] Loaded library /home/container/libraries/net/kyori/adventure-text-serializer-gson-legacy-impl/4.13.1/adventure-text-serializer-gson-legacy-impl-4.13.1.jar
+[16:06:08] [Server thread/INFO]: [SpigotLibraryLoader] [MythicMobs] Loaded library /home/container/libraries/net/kyori/adventure-platform-facet/4.3.2/adventure-platform-facet-4.3.2.jar
+[16:06:08] [Server thread/INFO]: [SpigotLibraryLoader] [MythicMobs] Loaded library /home/container/libraries/net/kyori/adventure-platform-viaversion/4.3.2/adventure-platform-viaversion-4.3.2.jar
+[16:06:08] [Server thread/INFO]: [SpigotLibraryLoader] [MythicMobs] Loaded library /home/container/libraries/net/kyori/adventure-text-minimessage/4.16.0/adventure-text-minimessage-4.16.0.jar
+[16:06:08] [Server thread/INFO]: [SpigotLibraryLoader] [MythicMobs] Loaded library /home/container/libraries/net/kyori/adventure-text-serializer-gson/4.16.0/adventure-text-serializer-gson-4.16.0.jar
+[16:06:08] [Server thread/INFO]: [SpigotLibraryLoader] [MythicMobs] Loaded library /home/container/libraries/net/kyori/adventure-text-serializer-json/4.16.0/adventure-text-serializer-json-4.16.0.jar
+[16:06:08] [Server thread/INFO]: [SpigotLibraryLoader] [MythicMobs] Loaded library /home/container/libraries/net/kyori/option/1.0.0/option-1.0.0.jar
+[16:06:08] [Server thread/INFO]: [SpigotLibraryLoader] [MythicMobs] Loaded library /home/container/libraries/com/google/code/gson/gson/2.8.0/gson-2.8.0.jar
+[16:06:08] [Server thread/INFO]: [SpigotLibraryLoader] [ItemEdit] Loading 5 libraries... please wait
+[16:06:08] [Server thread/INFO]: [SpigotLibraryLoader] [ItemEdit] Loaded library /home/container/libraries/net/kyori/adventure-api/4.20.0/adventure-api-4.20.0.jar
+[16:06:08] [Server thread/INFO]: [SpigotLibraryLoader] [ItemEdit] Loaded library /home/container/libraries/net/kyori/adventure-key/4.20.0/adventure-key-4.20.0.jar
+[16:06:08] [Server thread/INFO]: [SpigotLibraryLoader] [ItemEdit] Loaded library /home/container/libraries/net/kyori/examination-api/1.3.0/examination-api-1.3.0.jar
+[16:06:08] [Server thread/INFO]: [SpigotLibraryLoader] [ItemEdit] Loaded library /home/container/libraries/net/kyori/examination-string/1.3.0/examination-string-1.3.0.jar
+[16:06:08] [Server thread/INFO]: [SpigotLibraryLoader] [ItemEdit] Loaded library /home/container/libraries/org/jetbrains/annotations/26.0.2/annotations-26.0.2.jar
+[16:06:08] [Server thread/INFO]: [SpigotLibraryLoader] [ItemEdit] Loaded library /home/container/libraries/net/kyori/adventure-platform-bukkit/4.3.4/adventure-platform-bukkit-4.3.4.jar
+[16:06:08] [Server thread/INFO]: [SpigotLibraryLoader] [ItemEdit] Loaded library /home/container/libraries/net/kyori/adventure-platform-api/4.3.4/adventure-platform-api-4.3.4.jar
+[16:06:08] [Server thread/INFO]: [SpigotLibraryLoader] [ItemEdit] Loaded library /home/container/libraries/net/kyori/adventure-text-serializer-bungeecord/4.3.4/adventure-text-serializer-bungeecord-4.3.4.jar
+[16:06:08] [Server thread/INFO]: [SpigotLibraryLoader] [ItemEdit] Loaded library /home/container/libraries/net/kyori/adventure-nbt/4.13.1/adventure-nbt-4.13.1.jar
+[16:06:08] [Server thread/INFO]: [SpigotLibraryLoader] [ItemEdit] Loaded library /home/container/libraries/net/kyori/adventure-text-serializer-gson-legacy-impl/4.13.1/adventure-text-serializer-gson-legacy-impl-4.13.1.jar
+[16:06:08] [Server thread/INFO]: [SpigotLibraryLoader] [ItemEdit] Loaded library /home/container/libraries/net/kyori/adventure-platform-facet/4.3.4/adventure-platform-facet-4.3.4.jar
+[16:06:08] [Server thread/INFO]: [SpigotLibraryLoader] [ItemEdit] Loaded library /home/container/libraries/net/kyori/adventure-platform-viaversion/4.3.4/adventure-platform-viaversion-4.3.4.jar
+[16:06:08] [Server thread/INFO]: [SpigotLibraryLoader] [ItemEdit] Loaded library /home/container/libraries/net/kyori/adventure-text-minimessage/4.20.0/adventure-text-minimessage-4.20.0.jar
+[16:06:08] [Server thread/INFO]: [SpigotLibraryLoader] [ItemEdit] Loaded library /home/container/libraries/net/kyori/adventure-text-serializer-gson/4.20.0/adventure-text-serializer-gson-4.20.0.jar
+[16:06:08] [Server thread/INFO]: [SpigotLibraryLoader] [ItemEdit] Loaded library /home/container/libraries/net/kyori/adventure-text-serializer-json/4.20.0/adventure-text-serializer-json-4.20.0.jar
+[16:06:08] [Server thread/INFO]: [SpigotLibraryLoader] [ItemEdit] Loaded library /home/container/libraries/net/kyori/option/1.1.0/option-1.1.0.jar
+[16:06:08] [Server thread/INFO]: [SpigotLibraryLoader] [ItemEdit] Loaded library /home/container/libraries/org/jspecify/jspecify/1.0.0/jspecify-1.0.0.jar
+[16:06:08] [Server thread/INFO]: [SpigotLibraryLoader] [ItemEdit] Loaded library /home/container/libraries/com/google/code/gson/gson/2.8.0/gson-2.8.0.jar
+[16:06:08] [Server thread/INFO]: [SpigotLibraryLoader] [ItemEdit] Loaded library /home/container/libraries/com/google/auto/service/auto-service-annotations/1.1.1/auto-service-annotations-1.1.1.jar
+[16:06:08] [Server thread/INFO]: [SpigotLibraryLoader] [ItemEdit] Loaded library /home/container/libraries/net/kyori/adventure-text-serializer-commons/4.20.0/adventure-text-serializer-commons-4.20.0.jar
+[16:06:08] [Server thread/INFO]: [SpigotLibraryLoader] [ItemEdit] Loaded library /home/container/libraries/net/kyori/adventure-text-serializer-legacy/4.20.0/adventure-text-serializer-legacy-4.20.0.jar
+[16:06:08] [Server thread/INFO]: [SpigotLibraryLoader] [PvPManager] Loading 3 libraries... please wait
+[16:06:08] [Server thread/INFO]: [SpigotLibraryLoader] [PvPManager] Loaded library /home/container/libraries/com/zaxxer/HikariCP/5.1.0/HikariCP-5.1.0.jar
+[16:06:08] [Server thread/INFO]: [SpigotLibraryLoader] [PvPManager] Loaded library /home/container/libraries/com/github/ben-manes/caffeine/caffeine/3.1.8/caffeine-3.1.8.jar
+[16:06:08] [Server thread/INFO]: [SpigotLibraryLoader] [PvPManager] Loaded library /home/container/libraries/org/checkerframework/checker-qual/3.37.0/checker-qual-3.37.0.jar
+[16:06:08] [Server thread/INFO]: [SpigotLibraryLoader] [PvPManager] Loaded library /home/container/libraries/com/google/errorprone/error_prone_annotations/2.21.1/error_prone_annotations-2.21.1.jar
+[16:06:08] [Server thread/INFO]: [SpigotLibraryLoader] [PvPManager] Loaded library /home/container/libraries/org/slf4j/slf4j-api/2.0.13/slf4j-api-2.0.13.jar
+[16:06:08] [Server thread/INFO]: [SpigotLibraryLoader] [ZelChat] Loading 4 libraries... please wait
+[16:06:08] [Server thread/INFO]: [SpigotLibraryLoader] [ZelChat] Loaded library /home/container/libraries/com/github/ben-manes/caffeine/caffeine/3.1.8/caffeine-3.1.8.jar
+[16:06:08] [Server thread/INFO]: [SpigotLibraryLoader] [ZelChat] Loaded library /home/container/libraries/org/checkerframework/checker-qual/3.37.0/checker-qual-3.37.0.jar
+[16:06:08] [Server thread/INFO]: [SpigotLibraryLoader] [ZelChat] Loaded library /home/container/libraries/com/google/errorprone/error_prone_annotations/2.21.1/error_prone_annotations-2.21.1.jar
+[16:06:08] [Server thread/INFO]: [SpigotLibraryLoader] [ZelChat] Loaded library /home/container/libraries/com/zaxxer/HikariCP/6.2.1/HikariCP-6.2.1.jar
+[16:06:08] [Server thread/INFO]: [SpigotLibraryLoader] [ZelChat] Loaded library /home/container/libraries/org/slf4j/slf4j-api/1.7.36/slf4j-api-1.7.36.jar
+[16:06:08] [Server thread/INFO]: [SpigotLibraryLoader] [ZelChat] Loaded library /home/container/libraries/org/mariadb/jdbc/mariadb-java-client/3.5.1/mariadb-java-client-3.5.1.jar
+[16:06:08] [Server thread/INFO]: [SpigotLibraryLoader] [ZelChat] Loaded library /home/container/libraries/com/github/waffle/waffle-jna/3.3.0/waffle-jna-3.3.0.jar
+[16:06:08] [Server thread/INFO]: [SpigotLibraryLoader] [ZelChat] Loaded library /home/container/libraries/net/java/dev/jna/jna/5.13.0/jna-5.13.0.jar
+[16:06:08] [Server thread/INFO]: [SpigotLibraryLoader] [ZelChat] Loaded library /home/container/libraries/net/java/dev/jna/jna-platform/5.13.0/jna-platform-5.13.0.jar
+[16:06:08] [Server thread/INFO]: [SpigotLibraryLoader] [ZelChat] Loaded library /home/container/libraries/org/slf4j/jcl-over-slf4j/2.0.7/jcl-over-slf4j-2.0.7.jar
+[16:06:08] [Server thread/INFO]: [SpigotLibraryLoader] [ZelChat] Loaded library /home/container/libraries/com/h2database/h2/2.3.232/h2-2.3.232.jar
+[16:06:08] [Server thread/INFO]: [ViaVersion] Loading server plugin ViaVersion v5.11.0
+[16:06:08] [Server thread/INFO]: [ViaVersion] ViaVersion 5.11.0 is now loaded. Registering protocol transformers and injecting...
+[16:06:09] [Server thread/INFO]: [LuckPerms] Loading server plugin LuckPerms v5.5.42
+[16:06:09] [Server thread/INFO]: [LuckPerms] Loading configuration...
+[16:06:09] [Server thread/INFO]: [Vault] Loading server plugin Vault v1.7.3-b131
+[16:06:09] [Server thread/INFO]: [FastAsyncWorldEdit] Loading server plugin FastAsyncWorldEdit v2.15.0+59372c5
+[16:06:10] [Server thread/INFO]: Got request to register class com.sk89q.worldedit.bukkit.BukkitServerInterface with WorldEdit [com.sk89q.worldedit.extension.platform.PlatformManager@2357fc1d]
+[16:06:10] [Server thread/INFO]: [PlaceholderAPI] Loading server plugin PlaceholderAPI v2.12.3
+[16:06:10] [Server thread/INFO]: [VoidGen] Loading server plugin VoidGen v2.3.4
+[16:06:10] [Server thread/INFO]: [packetevents] Loading server plugin packetevents v2.13.0
+[16:06:10] [Server thread/INFO]: [packetevents] Loading packetevents...
+[16:06:11] [Server thread/INFO]: [packetevents] Loaded packetevents v2.13.0
+[16:06:11] [Server thread/INFO]: [WorldGuard] Loading server plugin WorldGuard v7.0.15+2347-5fafea6
+[16:06:11] [Server thread/INFO]: [CoreLogging] Loading server plugin Multiverse-Core v5.7.0
+[16:06:11] [Server thread/INFO]: [LibsDisguises] Loading server plugin LibsDisguises v11.0.18
+[16:06:11] [Server thread/INFO]: [floodgate] Loading server plugin floodgate v2.2.5-SNAPSHOT (b138-fc99cfc)
+[16:06:12] [Server thread/INFO]: [floodgate] Took 401ms to boot Floodgate
+[16:06:12] [Server thread/INFO]: [MythicMobs] Loading server plugin MythicMobs v5.11.2-6a371d59
+[16:06:12] [Server thread/INFO]: [LumineUtils] (io.lumine.mythic.bukkit.utils.) is bound to plugin MythicMobs - io.lumine.mythic.bukkit.MythicBukkit
+[16:06:12] [Server thread/INFO]: [MythicMobs] §x§f§f§0§0§0§0M§x§f§f§6§6§0§0y§x§f§f§c§c§0§0t§x§c§b§f§f§0§0h§x§6§5§f§f§0§0i§x§0§0§f§f§0§0c§x§0§0§f§f§6§6 §x§0§0§f§f§c§bE§x§0§0§c§b§f§fn§x§0§0§6§5§f§fa§x§0§0§0§0§f§fb§x§6§6§0§0§f§fl§x§c§c§0§0§f§fe§x§f§f§0§0§c§cd§x§f§f§0§0§6§6!
+[16:06:12] [Server thread/INFO]: [ShopGUIPlus] Loading server plugin ShopGUIPlus v1.113.0
+[16:06:12] [Server thread/INFO]: [Essentials] Loading server plugin Essentials v2.22.1-dev+12-776f709
+[16:06:12] [Server thread/INFO]: [voicechat] Loading server plugin voicechat v2.6.21
+[16:06:12] [Server thread/INFO]: [ProtectionStones] Loading server plugin ProtectionStones v2.10.6
+[16:06:12] [Server thread/INFO]: [nightcore] Loading server plugin nightcore v2.14.0
+[16:06:12] [Server thread/INFO]: [NBTAPI] Loading server plugin NBTAPI v2.15.7
+[16:06:12] [Server thread/INFO]: [NBTAPI] [NBTAPI] Found Minecraft: 1.21.11! Trying to find NMS support
+[16:06:12] [Server thread/INFO]: [NBTAPI] [NBTAPI] NMS support 'MC1_21_R7' loaded!
+[16:06:12] [Server thread/INFO]: [NBTAPI] [NBTAPI] Using the plugin 'NBTAPI' to create a bStats instance!
+[16:06:12] [Server thread/INFO]: [TAB] Loading server plugin TAB v5.5.0
+[16:06:12] [Server thread/INFO]: [CMILib] Loading server plugin CMILib v1.5.9.9
+[16:06:12] [Server thread/INFO]: [RankUp] Loading server plugin RankUp v1.0
+[16:06:12] [Server thread/INFO]: [ItemEdit] Loading server plugin ItemEdit v3.7.8
+[16:06:12] [Server thread/INFO]: [Quests] Loading server plugin Quests v3.16.1-430c34a
+[16:06:12] [Server thread/INFO]: [WorldGuardExtraFlags] Loading server plugin WorldGuardExtraFlags v4.2.4-SNAPSHOT
+[16:06:12] [Server thread/INFO]: [SVG] Loading server plugin SimpleVoice-Geyser v0.1.3
+[16:06:12] [Server thread/INFO]: [ValyrTutorial] Loading server plugin ValyrTutorial v3.0
+[16:06:12] [Server thread/INFO]: [DailyRewardsPlus] Loading server plugin DailyRewardsPlus v1.4.8
+[16:06:12] [Server thread/INFO]: [EnderChestPlus] Loading server plugin EnderChestPlus v1.1
+[16:06:12] [Server thread/INFO]: [RewardCrates] Loading server plugin RewardCrates v1.0
+[16:06:12] [Server thread/INFO]: [ValyrPlugin] Loading server plugin ValyrPlugin v1.0.0
+[16:06:12] [Server thread/INFO]: [Hider] Loading server plugin Hider v1.0
+[16:06:12] [Server thread/INFO]: [CommandPanels] Loading server plugin CommandPanels v4.1.6
+[16:06:12] [Server thread/INFO]: [ExcellentCrates] Loading server plugin ExcellentCrates v6.6.1
+[16:06:12] [Server thread/INFO]: [ThunderCurrencys] Loading server plugin ThunderCurrencys v1.0
+[16:06:12] [Server thread/INFO]: [AlonsoTags] Loading server plugin AlonsoTags v2.3-BETA-PRO
+[16:06:12] [Server thread/INFO]: [PvPManager] Loading server plugin PvPManager v4.1.68
+[16:06:12] [Thread-6/INFO]: [NBTAPI] [NBTAPI] The NBT-API seems to be up-to-date!
+[16:06:12] [Server thread/INFO]: [PvPManager] Registering WorldGuard flags...
+[16:06:12] [Server thread/INFO]: [MythicLib] Loading server plugin MythicLib v1.7.1-SNAPSHOT
+[16:06:12] [Server thread/INFO]: [MythicLib] Plugin file is called 'MythicLib-dist-1.7.1-20260312.111127-87.jar'
+[16:06:12] [Server thread/INFO]: [MythicLib] Detected Bukkit Version: v1_21_R7
+[16:06:12] [Server thread/INFO]: [MythicLib] Hooked onto WorldGuard
+[16:06:12] [Server thread/INFO]: [AdvancedPortals] Loading server plugin AdvancedPortals v2.7.1
+[16:06:12] [Server thread/INFO]: [ProtectionMenu] Loading server plugin ProtectionMenu v1.1
+[16:06:12] [Server thread/INFO]: [LootChests] Loading server plugin LootChests v1.0
+[16:06:12] [Server thread/INFO]: [ZelChat] Loading server plugin ZelChat v2.0.0-pre-18
+[16:06:12] [Server thread/INFO]: [voicechat-discord] Loading server plugin voicechat-discord v3.1.4
+[16:06:12] [Server thread/INFO]: [DeluxeMenus] Loading server plugin DeluxeMenus v1.14.1-Release
+[16:06:12] [Server thread/WARN]: [DeluxeMenus] Could not setup a NMS hook for your server version! The following Item options will not work: nbt_int, nbt_ints, nbt_string and nbt_strings.
+[16:06:12] [Server thread/INFO]: [Jobs] Loading server plugin Jobs v5.2.6.6
+[16:06:12] [Server thread/INFO]: Server permissions file permissions.yml is empty, ignoring it
+[16:06:12] [Server thread/INFO]: [LuckPerms] Enabling LuckPerms v5.5.42
+[16:06:12] [ForkJoinPool.commonPool-worker-1/WARN]: [SVG] §7[§bSVG§7] §r:
+A new version of SimpleVoice-Geyser is available!
+   Current Version: 0.1.3+f5b91f7
+   Latest Version:  0.1.4
+   Download Here:   https://modrinth.com/plugin/simplevoice-geyser
+[16:06:12] [Server thread/INFO]:         __    
+[16:06:12] [Server thread/INFO]:   |    |__)   LuckPerms v5.5.42
+[16:06:12] [Server thread/INFO]:   |___ |      Running on Bukkit - Paper
+[16:06:12] [Server thread/INFO]: 
+[16:06:12] [Server thread/INFO]: [LuckPerms] Loading storage provider... [H2]
+[16:06:13] [Server thread/INFO]: [LuckPerms] Loading internal permission managers...
+[16:06:13] [Server thread/INFO]: [LuckPerms] Performing initial data load...
+[16:06:13] [Server thread/INFO]: [LuckPerms] Successfully enabled. (took 961ms)
+[16:06:13] [Server thread/INFO]: [Vault] Enabling Vault v1.7.3-b131
+[16:06:13] [Server thread/INFO]: [Vault] [Economy] Essentials Economy found: Waiting
+[16:06:13] [Server thread/INFO]: [Vault] [Permission] SuperPermissions loaded as backup permission system.
+[16:06:13] [Server thread/INFO]: [Vault] Enabled Version 1.7.3-b131
+[16:06:13] [Server thread/INFO]: [LuckPerms] Registered Vault permission & chat hook.
+[16:06:13] [Server thread/INFO]: [FastAsyncWorldEdit] Enabling FastAsyncWorldEdit v2.15.0+59372c5
+[16:06:13] [Server thread/INFO]: [com.fastasyncworldedit.core.Fawe] LZ4 Compression Binding loaded successfully
+[16:06:13] [Server thread/INFO]: [com.fastasyncworldedit.core.Fawe] ZSTD Compression Binding loaded successfully
+[16:06:13] [Server thread/INFO]: Registering commands with com.sk89q.worldedit.bukkit.BukkitServerInterface
+[16:06:13] [Server thread/INFO]: WEPIF: Vault detected! Using Vault for permissions
+[16:06:13] [Server thread/INFO]: Using com.sk89q.worldedit.bukkit.adapter.impl.fawe.v1_21_11.PaperweightFaweAdapter as the Bukkit adapter
+[16:06:14] [Server thread/INFO]: [VoidGen] Enabling VoidGen v2.3.4
+[16:06:14] [Server thread/INFO]: [VoidGen] Using VoidChunkGen: VERSION_1_21_3
+[16:06:14] [Server thread/INFO]: [nightcore] Enabling nightcore v2.14.0
+[16:06:14] [Server thread/INFO]: [nightcore] Server version detected as 1.21.11. Using paper-bridge.
+[16:06:14] [ForkJoinPool.commonPool-worker-1/WARN]: [com.fastasyncworldedit.core.util.UpdateNotification] A new release for FastAsyncWorldEdit is available: 2.15.4. You are currently on 2.15.0.
+Download from https://modrinth.com/plugin/fastasyncworldedit or https://hangar.papermc.io/IntellectualSites/FastAsyncWorldEdit
+[16:06:14] [Server thread/INFO]: [nightcore] Vault detected! Loading currency...
+[16:06:14] [Server thread/INFO]: [nightcore] Currency registered: 'vault'.
+[16:06:14] [Server thread/INFO]: [nightcore] Currency registered: 'xp_level'.
+[16:06:15] [Server thread/INFO]: [nightcore] Currency registered: 'gold'.
+[16:06:15] [Server thread/INFO]: [nightcore] Currency registered: 'emerald'.
+[16:06:15] [Server thread/INFO]: [nightcore] Currency registered: 'custom_diamond'.
+[16:06:15] [Server thread/INFO]: Environment: Environment[sessionHost=https://sessionserver.mojang.com, servicesHost=https://api.minecraftservices.com, profilesHost=https://api.mojang.com, name=PROD]
+[16:06:15] [Server thread/INFO]: [nightcore] Time zone set as UTC
+[16:06:15] [Server thread/INFO]: [nightcore] Loaded 2 color schemes.
+[16:06:15] [Server thread/INFO]: [nightcore] Using 'custom' color scheme.
+[16:06:15] [Server thread/INFO]: [nightcore] Registered permissions provider: LuckPerms
+[16:06:15] [Server thread/INFO]: [nightcore] Registered item provider: 'vanilla'.
+[16:06:15] [Server thread/INFO]: [nightcore] Registered item provider: 'excellentcrates'.
+[16:06:15] [Server thread/INFO]: [nightcore] Registered item provider: 'excellentcrates_crate'.
+[16:06:15] [Server thread/INFO]: [nightcore] Registered item provider: 'excellentcrates_key'.
+[16:06:15] [Server thread/INFO]: [nightcore] Plugin loaded in 268 ms!
+[16:06:15] [Server thread/INFO]: [Hider] Enabling Hider v1.0
+[16:06:15] [Server thread/INFO]: [Hider] Hider v1.0 habilitado — plugins ocultos y tab filtrado.
+[16:06:15] [Server thread/WARN]: **** SERVER IS RUNNING IN OFFLINE/INSECURE MODE!
+[16:06:15] [Server thread/WARN]: The server will make no attempt to authenticate usernames. Beware.
+[16:06:15] [Server thread/WARN]: Whilst this makes it possible to use Velocity, unless access to your server is properly restricted, it also opens up the ability for hackers to connect with any username they choose.
+[16:06:15] [Server thread/WARN]: Please see https://docs.papermc.io/velocity/security for further information.
+[16:06:15] [Server thread/WARN]: To change this, set "online-mode" to "true" in the server.properties file.
+[16:06:15] [Server thread/INFO]: Preparing level "world"
+[16:06:15] [Server thread/INFO]: Loading 0 persistent chunks for world 'minecraft:overworld'...
+[16:06:15] [Server thread/INFO]: Prepared spawn area in 1 ms
+[16:06:15] [Server thread/INFO]: Loading 0 persistent chunks for world 'minecraft:the_nether'...
+[16:06:15] [Server thread/INFO]: Preparing spawn area: 100%
+[16:06:15] [Server thread/INFO]: Prepared spawn area in 1 ms
+[16:06:15] [Server thread/INFO]: Loading 0 persistent chunks for world 'minecraft:the_end'...
+[16:06:15] [Server thread/INFO]: Preparing spawn area: 100%
+[16:06:15] [Server thread/INFO]: Prepared spawn area in 1 ms
+[16:06:15] [Server thread/INFO]: Done preparing level "world" (0.346s)
+[16:06:15] [Server thread/INFO]: [ViaVersion] Enabling ViaVersion v5.11.0
+[16:06:15] [Server thread/INFO]: [ViaVersion] ViaVersion detected server version: 1.21.11 (774)
+[16:06:15] [Server thread/INFO]: [PlaceholderAPI] Enabling PlaceholderAPI v2.12.3
+[16:06:15] [Server thread/INFO]: [PlaceholderAPI] Fetching available expansion information...
+[16:06:15] [Server thread/INFO]: [packetevents] Enabling packetevents v2.13.0
+[16:06:15] [packetevents-update-check-thread/INFO]: [packetevents] Checking for updates, please wait...
+[16:06:15] [Server thread/INFO]: [WorldGuard] Enabling WorldGuard v7.0.15+2347-5fafea6
+[16:06:16] [Server thread/INFO]: [WorldGuard] (world) TNT ignition is PERMITTED.
+[16:06:16] [Server thread/INFO]: [WorldGuard] (world) Lighters are PERMITTED.
+[16:06:16] [Server thread/INFO]: [WorldGuard] (world) Lava fire is PERMITTED.
+[16:06:16] [Server thread/INFO]: [WorldGuard] (world) Fire spread is UNRESTRICTED.
+[16:06:16] [Server thread/INFO]: [WorldGuard] Loaded configuration for world 'world'
+[16:06:16] [Server thread/INFO]: [WorldGuard] (world_nether) TNT ignition is PERMITTED.
+[16:06:16] [Server thread/INFO]: [WorldGuard] (world_nether) Lighters are PERMITTED.
+[16:06:16] [Server thread/INFO]: [WorldGuard] (world_nether) Lava fire is PERMITTED.
+[16:06:16] [Server thread/INFO]: [WorldGuard] (world_nether) Fire spread is UNRESTRICTED.
+[16:06:16] [Server thread/INFO]: [WorldGuard] Loaded configuration for world 'world_nether'
+[16:06:16] [Server thread/INFO]: [WorldGuard] (world_the_end) TNT ignition is PERMITTED.
+[16:06:16] [Server thread/INFO]: [WorldGuard] (world_the_end) Lighters are PERMITTED.
+[16:06:16] [Server thread/INFO]: [WorldGuard] (world_the_end) Lava fire is PERMITTED.
+[16:06:16] [Server thread/INFO]: [WorldGuard] (world_the_end) Fire spread is UNRESTRICTED.
+[16:06:16] [Server thread/INFO]: [WorldGuard] Loaded configuration for world 'world_the_end'
+[16:06:16] [packetevents-update-check-thread/INFO]: [packetevents] You are running the latest release: 2.13.0
+[16:06:16] [Server thread/INFO]: [WorldGuard] Loading region data...
+[16:06:16] [Server thread/INFO]: [Multiverse-Core] Enabling Multiverse-Core v5.7.0
+[16:06:16] [Server thread/INFO]: [VoidGen] 
+[16:06:16] [Server thread/INFO]: [VoidGen] > ——————————————————————[ world ]——————————————————————
+[16:06:16] [Server thread/INFO]: [VoidGen] > 
+[16:06:16] [Server thread/INFO]: [VoidGen] > Generator settings have not been set, we will use the default settings:
+[16:06:16] [Server thread/INFO]: [VoidGen] > {"biome":"the_void"}
+[16:06:16] [Server thread/INFO]: [VoidGen] > 
+[16:06:16] [Server thread/INFO]: [VoidGen] > ——————————————————————[ world ]——————————————————————
+[16:06:16] [Server thread/INFO]: [VoidGen] 
+[16:06:16] [Server thread/INFO]: Loading 0 persistent chunks for world 'minecraft:ayuda'...
+[16:06:16] [Server thread/INFO]: Prepared spawn area in 0 ms
+[16:06:16] [Server thread/INFO]: [WorldGuard] (ayuda) TNT ignition is PERMITTED.
+[16:06:16] [Server thread/INFO]: [WorldGuard] (ayuda) Lighters are PERMITTED.
+[16:06:16] [Server thread/INFO]: [WorldGuard] (ayuda) Lava fire is PERMITTED.
+[16:06:16] [Server thread/INFO]: [WorldGuard] (ayuda) Fire spread is UNRESTRICTED.
+[16:06:16] [Server thread/INFO]: [WorldGuard] Loaded configuration for world 'ayuda'
+[16:06:16] [Server thread/INFO]: [VoidGen] 
+[16:06:16] [Server thread/INFO]: [VoidGen] > ——————————————————————[ forja ]——————————————————————
+[16:06:16] [Server thread/INFO]: [VoidGen] > 
+[16:06:16] [Server thread/INFO]: [VoidGen] > Generator settings have not been set, we will use the default settings:
+[16:06:16] [Server thread/INFO]: [VoidGen] > {"biome":"the_void"}
+[16:06:16] [Server thread/INFO]: [VoidGen] > 
+[16:06:16] [Server thread/INFO]: [VoidGen] > ——————————————————————[ forja ]——————————————————————
+[16:06:16] [Server thread/INFO]: [VoidGen] 
+[16:06:16] [Server thread/INFO]: Loading 0 persistent chunks for world 'minecraft:forja'...
+[16:06:16] [Server thread/INFO]: Prepared spawn area in 0 ms
+[16:06:16] [Server thread/INFO]: [WorldGuard] (forja) TNT ignition is PERMITTED.
+[16:06:16] [Server thread/INFO]: [WorldGuard] (forja) Lighters are PERMITTED.
+[16:06:16] [Server thread/INFO]: [WorldGuard] (forja) Lava fire is PERMITTED.
+[16:06:16] [Server thread/INFO]: [WorldGuard] (forja) Fire spread is UNRESTRICTED.
+[16:06:16] [Server thread/INFO]: [WorldGuard] Loaded configuration for world 'forja'
+[16:06:16] [Server thread/INFO]: [PlaceholderAPI] Successfully registered internal expansion: multiverse-core [5.7.0]
+[16:06:16] [Server thread/INFO]: [Multiverse-Core] API service loaded!
+[16:06:16] [Server thread/INFO]: [Multiverse-Core] Version 5.7.0 (API v5.7) Enabled - By dumptruckman, Rigby, fernferret, lithium3141, main--, benwoo1110 and Zax71
+[16:06:16] [Server thread/INFO]: [Multiverse-Core] Loving Multiverse-Core? Please consider supporting the project with a small donation: https://github.com/sponsors/Multiverse
+[16:06:16] [Server thread/INFO]: [VoidGen] VoidGen hooked into Multiverse!
+[16:06:16] [Server thread/INFO]: [LibsDisguises] Enabling LibsDisguises v11.0.18
+[16:06:16] [Server thread/INFO]: [LibsDisguises] File Name: LibsDisguises-11.0.18-Premium.jar
+[16:06:16] [Server thread/INFO]: [LibsDisguises] Discovered nms version (LD: v1_21_R7) (MC: 1.21.11)
+[16:06:16] [Server thread/INFO]: [LibsDisguises] Jenkins Build: #1782
+[16:06:16] [Server thread/INFO]: [LibsDisguises] Build Date: 18/05/2026 21:41
+[16:06:16] [Server thread/INFO]: [LibsDisguises] Build Hash: ba73faa2~1
+[16:06:16] [Server thread/INFO]: [LibsDisguises] Registered to: 1463725 (28)
+[16:06:16] [Server thread/INFO]: [LibsDisguises] Premium enabled, thank you for supporting Lib's Disguises!
+[16:06:16] [Server thread/INFO]: [LibsDisguises] Config 'TallSelfDisguises' is set to 'SCALED', LD will scale down (when possible) oversized disguises from self disguise. https://www.spigotmc.org/wiki/lib-s-disguises-faq/#tall-disguises-self-disguises
+[16:06:17] [Server thread/INFO]: [packetevents] Loading block mappings for V_1_21_9/20...
+[16:06:17] [Server thread/INFO]: [packetevents] Finished loading block mappings for V_1_21_9/20 in 122.44437ms
+[16:06:18] [Server thread/INFO]: [LibsDisguises] Config is up to date!
+[16:06:18] [Server thread/INFO]: [PlaceholderAPI] Successfully registered internal expansion: libsdisguises [1.0.0]
+[16:06:18] [Server thread/INFO]: [LibsDisguises] PlaceholderAPI support enabled
+[16:06:18] [Server thread/INFO]: [floodgate] Enabling floodgate v2.2.5-SNAPSHOT (b138-fc99cfc)
+[16:06:18] [Server thread/INFO]: [MythicMobs] Enabling MythicMobs v5.11.2-6a371d59
+[16:06:18] [Server thread/INFO]: [MythicMobs] Loading MythicMobs for Paper (MC: 1.21.11)...
+[16:06:18] [Server thread/INFO]: [MythicMobs] The server is running Paper; enabled Paper exclusive functionality
+[16:06:19] [Server thread/INFO]: [MythicMobs] Mythic LibsDisguises Support has been enabled!
+[16:06:19] [Server thread/INFO]: [PlaceholderAPI] Successfully registered internal expansion: mythic [5.0.0]
+[16:06:19] [Server thread/INFO]: [MythicMobs] Mythic PlaceholderAPI Support has been enabled!
+[16:06:19] [Server thread/INFO]: [MythicMobs] Mythic Vault Support has been enabled!
+[16:06:19] [Server thread/INFO]: [MythicMobs] Mythic WorldGuard Support has been enabled!
+[16:06:19] [Server thread/INFO]: [MythicMobs] Mythic ShopGUIPlus Support has been enabled!
+[16:06:21] [Server thread/INFO]: [MythicMobs] Loading Packs...
+[16:06:22] [Server thread/INFO]: [MythicMobs] Loading Items...
+[16:06:22] [Server thread/INFO]: [MythicMobs] Loading Item Groups...
+[16:06:22] [Server thread/INFO]: [MythicMobs] All items loaded after 73ms!
+[16:06:22] [Server thread/INFO]: [MythicMobs] Loading Skills...
+[16:06:22] [Server thread/WARN]: [MythicMobs] ✗ Configuration Error: Particle 'sculk' is not supported by this version
+[16:06:22] [Server thread/WARN]: [MythicMobs] ✗ Configuration Error: Particle 'sculk' is not supported by this version
+[16:06:22] [Server thread/INFO]: [MythicMobs] Loading Drop Tables...
+[16:06:22] [Server thread/INFO]: [MythicMobs] Loading Random Spawns...
+[16:06:22] [Server thread/INFO]: [MythicMobs] Loading Spawn Blocks...
+[16:06:22] [Server thread/WARN]: [MythicMobs] ✗ Configuration Error in Mechanic summon
+[16:06:22] [Server thread/WARN]: [MythicMobs] --| Skill: SummonSkeletons | File: /home/container/plugins/MythicMobs/skills/ExampleSkills.yml
+[16:06:22] [Server thread/WARN]: [MythicMobs] --| Error Message: The 'type' attribute must be a valid MythicMob or MythicEntity type.
+[16:06:22] [Server thread/WARN]: [MythicMobs] --| Mechanic Line: summon{mob=SkeletalMinion;amount=2;noise=5}
+[16:06:22] [Server thread/WARN]: [MythicMobs] ✗ Configuration Error in Mechanic summon
+[16:06:22] [Server thread/WARN]: [MythicMobs] --| Skill: SummonSkeletons | File: /home/container/plugins/MythicMobs/skills/ExampleSkills.yml
+[16:06:22] [Server thread/WARN]: [MythicMobs] --| Error Message: The 'type' attribute must be a valid MythicMob or MythicEntity type.
+[16:06:22] [Server thread/WARN]: [MythicMobs] --| Mechanic Line: summon{mob=SkeletalMinion;amount=2;noise=5}
+[16:06:22] [Server thread/WARN]: [MythicMobs] ✗ Configuration Error in Mechanic summon
+[16:06:22] [Server thread/WARN]: [MythicMobs] --| Skill: SummonSkeletons | File: /home/container/plugins/MythicMobs/skills/ExampleSkills.yml
+[16:06:22] [Server thread/WARN]: [MythicMobs] --| Error Message: The 'type' attribute must be a valid MythicMob or MythicEntity type.
+[16:06:22] [Server thread/WARN]: [MythicMobs] --| Mechanic Line: summon{mob=SkeletalMinion;amount=2;noise=5}
+[16:06:22] [Server thread/INFO]: [MythicMobs] Second passes loaded after 34ms!
+[16:06:22] [Server thread/INFO]: [MythicMobs] ✓ Loaded 30 mobs.
+[16:06:22] [Server thread/INFO]: [MythicMobs] ✓ Loaded 3 vanilla mob overrides.
+[16:06:22] [Server thread/INFO]: [MythicMobs] ✓ Loaded 0 mob stacks.
+[16:06:22] [Server thread/INFO]: [MythicMobs] ✓ Loaded 28 skills.
+[16:06:22] [Server thread/INFO]: [MythicMobs] ✓ Loaded 2 random spawns.
+[16:06:22] [Server thread/INFO]: [MythicMobs] ✓ Loaded 9 mythic items.
+[16:06:22] [Server thread/INFO]: [MythicMobs] ✓ Loaded 2 drop tables.
+[16:06:22] [Server thread/INFO]: [MythicMobs] ✓ Loaded 37 mob spawners.
+[16:06:22] [Server thread/INFO]: [MythicMobs] MythicMobs configuration file loaded successfully.
+[16:06:22] [Server thread/INFO]: [MythicMobs] Started up bStats Metrics
+[16:06:22] [Server thread/INFO]: [MythicMobs] ✓ MythicMobs v5.11.2 ( build 6a371d59 ) has been successfully loaded!
+[16:06:22] [Server thread/INFO]: [ShopGUIPlus] Enabling ShopGUIPlus v1.113.0
+[16:06:22] [Server thread/INFO]: [Essentials] Enabling Essentials v2.22.1-dev+12-776f709
+[16:06:23] [Server thread/INFO]: [Essentials] Attempting to convert old kits in config.yml to new kits.yml
+[16:06:23] [Server thread/INFO]: [Essentials] No kits found to migrate.
+[16:06:23] [Server thread/INFO]: [Essentials] Selected 1.21.4+ Sync Commands Provider as the provider for SyncCommandsProvider
+[16:06:23] [Server thread/INFO]: [Essentials] Selected Paper Serialization Provider as the provider for SerializationProvider
+[16:06:23] [Server thread/INFO]: [Essentials] Selected Modern (Registry-based) PatternType Provider as the provider for PatternTypeProvider
+[16:06:23] [Server thread/INFO]: [Essentials] Selected 1.12.2+ Player Locale Provider as the provider for PlayerLocaleProvider
+[16:06:23] [Server thread/INFO]: [Essentials] Selected 1.20.6+ Potion Meta Provider as the provider for PotionMetaProvider
+[16:06:23] [Server thread/INFO]: [Essentials] Selected Paper 1.13+ Tile Entity Provider as the provider for TileEntityProvider
+[16:06:23] [Server thread/INFO]: [Essentials] Selected Paper Biome Key Provider as the provider for BiomeKeyProvider
+[16:06:23] [Server thread/INFO]: [Essentials] Selected 1.8.3+ Spawner Item Provider as the provider for SpawnerItemProvider
+[16:06:23] [Server thread/INFO]: [Essentials] Selected 1.17.1+ World Info Provider as the provider for WorldInfoProvider
+[16:06:23] [Server thread/INFO]: [Essentials] Selected 1.14.4+ Persistent Data Container Provider as the provider for PersistentDataProvider
+[16:06:23] [Server thread/INFO]: [Essentials] Selected 1.11+ Item Unbreakable Provider as the provider for ItemUnbreakableProvider
+[16:06:23] [Server thread/INFO]: [Essentials] Selected Reflection Formatted Command Alias Provider as the provider for FormattedCommandAliasProvider
+[16:06:23] [Server thread/INFO]: [Essentials] Selected Paper Known Commands Provider as the provider for KnownCommandsProvider
+[16:06:23] [Server thread/INFO]: [Essentials] Selected Reflection Online Mode Provider as the provider for OnlineModeProvider
+[16:06:23] [Server thread/INFO]: [Essentials] Selected 1.21+ InventoryView Interface ABI Provider as the provider for InventoryViewProvider
+[16:06:23] [Server thread/INFO]: [Essentials] Selected 1.20.4+ Damage Event Provider as the provider for DamageEventProvider
+[16:06:23] [Server thread/INFO]: [Essentials] Selected Paper Tick Count Provider as the provider for TickCountProvider
+[16:06:23] [Server thread/INFO]: [Essentials] Selected 1.14+ Sign Data Provider as the provider for SignDataProvider
+[16:06:23] [Server thread/INFO]: [Essentials] Selected 1.13+ Spawn Egg Provider as the provider for SpawnEggProvider
+[16:06:23] [Server thread/INFO]: [Essentials] Selected 1.12+ Spawner Block Provider as the provider for SpawnerBlockProvider
+[16:06:23] [Server thread/INFO]: [Essentials] Selected Legacy Biome Name Provider as the provider for BiomeNameProvider
+[16:06:23] [Server thread/INFO]: [Essentials] Selected Paper Material Tag Provider as the provider for MaterialTagProvider
+[16:06:23] [Server thread/INFO]: [Essentials] Selected Paper Server State Provider as the provider for ServerStateProvider
+[16:06:23] [Server thread/INFO]: [Essentials] Selected 1.20.5+ Banner Data Provider as the provider for BannerDataProvider
+[16:06:23] [Server thread/INFO]: [Essentials] Selected Paper Container Provider as the provider for ContainerProvider
+[16:06:23] [Server thread/INFO]: [Essentials] Loaded 46861 items from items.json.
+[16:06:23] [Server thread/INFO]: [Essentials] Using locale es
+[16:06:23] [Server thread/INFO]: [Essentials] ServerListPingEvent: Spigot iterator API
+[16:06:23] [Server thread/INFO]: [Essentials] Starting Metrics. Opt-out using the global bStats config.
+[16:06:23] [Server thread/INFO]: [Vault] [Economy] Essentials Economy hooked.
+[16:06:23] [Server thread/INFO]: [Essentials] Using Vault based permissions (LuckPerms)
+[16:06:23] [Server thread/INFO]: [voicechat] Enabling voicechat v2.6.21
+[16:06:23] [Server thread/INFO]: [voicechat] Initializing compatibility for version 1.21.11-R0.1
+[16:06:23] [Server thread/INFO]: [voicechat] Compatibility version 20
+[16:06:23] [Server thread/INFO]: [voicechat] Successfully initialized commodore command completion
+[16:06:23] [Server thread/INFO]: [PlaceholderAPI] Successfully registered internal expansion: voicechat [2.6.21]
+[16:06:23] [Server thread/INFO]: [voicechat] Successfully registered PlaceholderAPI expansion
+[16:06:23] [Server thread/INFO]: [voicechat] Successfully added ViaVersion mappings
+[16:06:23] [Server thread/INFO]: [ProtectionStones] Enabling ProtectionStones v2.10.6
+[16:06:23] [Server thread/INFO]: [WorldGuard] Registering session handler dev.espi.protectionstones.flags.GreetingFlagHandler
+[16:06:23] [Server thread/INFO]: [WorldGuard] Registering session handler dev.espi.protectionstones.flags.FarewellFlagHandler
+[16:06:23] [Server thread/INFO]: [ProtectionStones] PlaceholderAPI support enabled!
+[16:06:23] [Server thread/INFO]: [PlaceholderAPI] Successfully registered internal expansion: protectionstones [2.10.6]
+[16:06:23] [Server thread/INFO]: [ProtectionStones] LuckPerms support enabled!
+[16:06:23] [Server thread/INFO]: [ProtectionStones] Protection Stone Blocks:
+[16:06:23] [Server thread/INFO]: [ProtectionStones] - DIAMOND_ORE (128)
+[16:06:23] [Server thread/INFO]: [ProtectionStones] - COAL_ORE (8)
+[16:06:23] [Server thread/INFO]: [ProtectionStones] - IRON_ORE (16)
+[16:06:23] [Server thread/INFO]: [ProtectionStones] - EMERALD_ORE (64)
+[16:06:23] [Server thread/INFO]: [ProtectionStones] - ANCIENT_DEBRIS (256)
+[16:06:23] [Server thread/INFO]: [ProtectionStones] - GOLD_ORE (32)
+[16:06:23] [Server thread/INFO]: [ProtectionStones] Building region cache...
+[16:06:23] [Server thread/INFO]: [ProtectionStones] Building UUID cache... (if slow change async-load-uuid-cache in the config to true)
+[16:06:23] [Server thread/INFO]: [ProtectionStones] Checking if PS regions have been updated to UUIDs...
+[16:06:23] [Server thread/INFO]: [ProtectionStones] §fProtectionStones has successfully started!
+[16:06:23] [Server thread/INFO]: [NBTAPI] Enabling NBTAPI v2.15.7
+[16:06:23] [Server thread/INFO]: [NBTAPI] Checking bindings...
+[16:06:23] [Server thread/INFO]: [NBTAPI] All Classes were able to link!
+[16:06:23] [Server thread/INFO]: [NBTAPI] All Methods were able to link!
+[16:06:23] [Server thread/INFO]: [NBTAPI] Running NBT reflection test...
+[16:06:28] [Server thread/INFO]: [NBTAPI] Success! This version of NBT-API is compatible with your server.
+[16:06:28] [Server thread/INFO]: [TAB] Enabling TAB v5.5.0
+[16:06:29] [Server thread/INFO]: [TAB] [WARN] [config.yml] belowname-objective: Belowname value is set to be empty, but the configured value must evaluate to a number. Using 0.
+[16:06:29] [Server thread/INFO]: [TAB] [WARN] [config.yml] scoreboard.scoreboards.goty+: Configuration section "scoreboard.scoreboards.goty+" has unknown key "condition". Valid keys: [display-condition, title, lines]
+[16:06:29] [Server thread/INFO]: [TAB] [WARN] [config.yml] scoreboard: Scoreboard "scoreboard-1.20.3+" has no display condition set, however, there is another scoreboard in the chain (goty+). Scoreboards are checked from top to bottom until a scoreboard with meeting condition or no condition is found. Because of this, the scoreboard (goty+) after the no-condition scoreboard (scoreboard-1.20.3+) will never be displayed. Unless this is intentional to externally display the scoreboard (commands, API), this is a mistake.
+[16:06:29] [Server thread/INFO]: [TAB] [WARN] Found a total of 3 issues.
+[16:06:29] [Server thread/INFO]: [TAB] Enabled in 446ms
+[16:06:29] [Server thread/INFO]: [CMILib] Enabling CMILib v1.5.9.9
+[16:06:29] [Server thread/INFO]: Server version detection by new method: v1_21_R7 Legacy: true Mojang Mappings: true
+[16:06:29] [Server thread/INFO]: Server version: v1_21_R7 - 1.21.11 - paper  1.21.11-126-3f5728e (MC: 1.21.11)
+[16:06:30] [Server thread/INFO]: [PlaceholderAPI] Successfully registered internal expansion: cmil [1.5.9.9]
+[16:06:30] [Server thread/INFO]: PlaceholderAPI hooked.
+[16:06:30] [Server thread/INFO]: Updated (EN) language file. Took 19ms
+[16:06:30] [Server thread/INFO]: [RankUp] Enabling RankUp v1.0
+[16:06:30] [Server thread/INFO]: [RankUp] [DB] Conectado a SQLite local: rankup.db
+[16:06:30] [Server thread/INFO]: [RankUp] RankUp habilitado correctamente.
+[16:06:30] [Server thread/INFO]: [ItemEdit] Enabling ItemEdit v3.7.8
+[16:06:30] [Server thread/INFO]: [ItemEdit] Hooking into MiniMessageAPI see https://webui.advntr.dev/
+[16:06:30] [Server thread/INFO]: [ItemEdit] Selected Storage Type: YAML
+[16:06:30] [Server thread/INFO]: [ItemEdit] Hooking into Vault
+[16:06:30] [Server thread/INFO]: [ItemEdit] Hooking into PlaceHolderAPI
+[16:06:30] [Server thread/INFO]: [ItemEdit] placeholders:
+[16:06:30] [Server thread/INFO]: [ItemEdit]   %itemedit_amount_<{itemid}>_[{slot}]_[{player}]%
+[16:06:30] [Server thread/INFO]: [ItemEdit]     shows how many itemid player has on slot
+[16:06:30] [Server thread/INFO]: [ItemEdit]     <{itemid}> for item id on serveritem
+[16:06:30] [Server thread/INFO]: [ItemEdit]     [{slot}] for the slot where the item should be counted, by default inventory
+[16:06:30] [Server thread/INFO]: [ItemEdit]       Values: inventory (include offhand), equip (include offhand), inventoryandequip (include offhand), hand, offhand, head, chest, legs, feet
+[16:06:30] [Server thread/INFO]: [ItemEdit]     [{player}] for the player, by default self
+[16:06:30] [Server thread/INFO]: [ItemEdit]     example: %itemedit_amount_{my_item_id}_{hand}%
+[16:06:30] [Server thread/INFO]: [PlaceholderAPI] Successfully registered internal expansion: itemedit [1.0]
+[16:06:30] [Server thread/INFO]: [ItemEdit] Hooking into ShopGuiPlus
+[16:06:30] [Server thread/INFO]: [ShopGUIPlus] Registered item provider 'ServerItem'.
+[16:06:30] [Server thread/INFO]: [ItemEdit] Hooking into MythicMobs
+[16:06:30] [Server thread/INFO]: [ItemEdit] # Enabled (took 124 ms)
+[16:06:30] [Server thread/INFO]: [Quests] Enabling Quests v3.16.1-430c34a
+[16:06:30] [Server thread/INFO]: [Quests] Running server scheduler: FoliaServerScheduler
+[16:06:30] [Server thread/INFO]: [Quests] Initialising storage provider 'yaml'
+[16:06:30] [Server thread/INFO]: [Quests] Your server is running version 1.21
+[16:06:30] [Server thread/INFO]: [Quests] Metrics started. This can be disabled at /plugins/bStats/config.yml.
+[16:06:30] [Server thread/INFO]: [WorldGuardExtraFlags] Enabling WorldGuardExtraFlags v4.2.4-SNAPSHOT
+[16:06:30] [Server thread/INFO]: [WorldGuard] Registering session handler net.goldtreeservers.worldguardextraflags.wg.handlers.TeleportOnEntryFlagHandler
+[16:06:30] [Server thread/INFO]: [WorldGuard] Registering session handler net.goldtreeservers.worldguardextraflags.wg.handlers.TeleportOnExitFlagHandler
+[16:06:30] [Server thread/INFO]: [WorldGuard] Registering session handler net.goldtreeservers.worldguardextraflags.wg.handlers.WalkSpeedFlagHandler
+[16:06:30] [Server thread/INFO]: [WorldGuard] Registering session handler net.goldtreeservers.worldguardextraflags.wg.handlers.FlySpeedFlagHandler
+[16:06:30] [Server thread/INFO]: [WorldGuard] Registering session handler net.goldtreeservers.worldguardextraflags.wg.handlers.FlyFlagHandler
+[16:06:30] [Server thread/INFO]: [WorldGuard] Registering session handler net.goldtreeservers.worldguardextraflags.wg.handlers.GlideFlagHandler
+[16:06:30] [Server thread/INFO]: [WorldGuard] Registering session handler net.goldtreeservers.worldguardextraflags.wg.handlers.GodmodeFlagHandler
+[16:06:30] [Server thread/INFO]: [WorldGuard] Registering session handler net.goldtreeservers.worldguardextraflags.wg.handlers.PlaySoundsFlagHandler
+[16:06:30] [Server thread/INFO]: [WorldGuard] Registering session handler net.goldtreeservers.worldguardextraflags.wg.handlers.BlockedEffectsFlagHandler
+[16:06:30] [Server thread/INFO]: [WorldGuard] Registering session handler net.goldtreeservers.worldguardextraflags.wg.handlers.GiveEffectsFlagHandler
+[16:06:30] [Server thread/INFO]: [WorldGuard] Registering session handler net.goldtreeservers.worldguardextraflags.wg.handlers.CommandOnEntryFlagHandler
+[16:06:30] [Server thread/INFO]: [WorldGuard] Registering session handler net.goldtreeservers.worldguardextraflags.wg.handlers.CommandOnExitFlagHandler
+[16:06:30] [Server thread/INFO]: [WorldGuard] Registering session handler net.goldtreeservers.worldguardextraflags.wg.handlers.ConsoleCommandOnEntryFlagHandler
+[16:06:30] [Server thread/INFO]: [WorldGuard] Registering session handler net.goldtreeservers.worldguardextraflags.wg.handlers.ConsoleCommandOnExitFlagHandler
+[16:06:30] [Server thread/WARN]: [WorldGuardExtraFlags] "WorldGuardExtraFlags v4.2.4-SNAPSHOT" has registered a listener for org.spigotmc.event.player.PlayerSpawnLocationEvent on method "public void net.goldtreeservers.worldguardextraflags.listeners.PlayerListener.onPlayerSpawnLocationEvent(org.spigotmc.event.player.PlayerSpawnLocationEvent)", but the event is Deprecated. "Listening to this event causes the player to be created early. Using the player from this event will result in undefined behavior. Prefer AsyncPlayerSpawnLocationEvent."; please notify the authors [isokissa3].
+[16:06:30] [Server thread/INFO]: [SVG] Enabling SimpleVoice-Geyser v0.1.3
+[16:06:30] [Server thread/INFO]: [SVG] client.vctimeout is currently documented but inactive in this dev build.
+[16:06:30] [Server thread/WARN]: [SVG] Audio legacy fallback is enabled. This is recommended during svg-v2 transition only.
+[16:06:30] [Server thread/ERROR]: [SVG] [STDERR] SLF4J(W): No SLF4J providers were found.
+[16:06:30] [Server thread/WARN]: Nag author(s): '[TheodoreMeyer]' of 'SimpleVoice-Geyser v0.1.3' about their usage of System.out/err.print. Please use your plugin's logger instead (JavaPlugin#getLogger).
+[16:06:30] [Server thread/ERROR]: [SVG] [STDERR] SLF4J(W): Defaulting to no-operation (NOP) logger implementation
+[16:06:30] [Server thread/ERROR]: [SVG] [STDERR] SLF4J(W): See https://www.slf4j.org/codes.html#noProviders for further details.
+[16:06:30] [Server thread/INFO]: [SVG] Idle timeout: 2.0 minutes.
+[16:06:30] [Server thread/INFO]: [SVG] Started on: HTTP/1.1 0.0.0.0:24456
+[16:06:30] [Server thread/INFO]: [SVG] Jetty server started on port: 24456
+[16:06:30] [Server thread/INFO]: [SVG] Registered plugin with Simple Voice Chat.
+[16:06:30] [Server thread/WARN]: [SVG] Geyser is not installed. Skipping Bedrock events.
+[16:06:30] [Server thread/INFO]: [ValyrTutorial] Enabling ValyrTutorial v3.0
+[16:06:30] [Server thread/INFO]: [ValyrTutorial] [DB] Base de datos SQLite inicializada.
+[16:06:30] [Server thread/INFO]: [ValyrTutorial] [Missions] ProtectionStones detectado — misión place-protection activa.
+[16:06:30] [Server thread/INFO]: [ValyrTutorial] ValyrTutorial v3 habilitado. Base de datos SQLite activa.
+[16:06:30] [Server thread/INFO]: [DailyRewardsPlus] Enabling DailyRewardsPlus v1.4.8
+[16:06:30] [Server thread/INFO]: [DailyRewards+] Starting DailyRewards+!
+[16:06:30] [Server thread/INFO]: [PlaceholderAPI] Successfully registered internal expansion: daily [1.0.0]
+[16:06:30] [Server thread/INFO]: [DailyRewards+] Detected Placeholder API. Successfully enabled plugin support.
+[16:06:30] [Server thread/INFO]: [DailyRewards+] Cleaning up...
+[16:06:30] [Server thread/INFO]: [DailyRewards+] Accumulating player data for LeaderBoard placeholders, this task will run asynchronously.
+[16:06:30] [Server thread/INFO]: [DailyRewards+] Detected version group as V1.20.5+[12111]. Applying necessary settings.
+[16:06:30] [Server thread/INFO]: [DailyRewards+] Has started successfully!
+[16:06:30] [Server thread/INFO]: [EnderChestPlus] Enabling EnderChestPlus v1.1
+[16:06:30] [Server thread/INFO]: [EnderChestPlus] [DB] SQLite conectado: enderchest.db (WAL + 64MB cache)
+[16:06:30] [Server thread/INFO]: [EnderChestPlus] Integración de chat [enderchest] habilitada.
+[16:06:30] [Server thread/INFO]: [EnderChestPlus] EnderChestPlus v1.1 habilitado — Anti-dupe blindado + Admin tools
+[16:06:30] [Server thread/INFO]: [RewardCrates] Enabling RewardCrates v1.0
+[16:06:30] [Server thread/INFO]: [RewardCrates] Se cargaron 4 cajas de recompensas.
+[16:06:30] [Server thread/INFO]: [RewardCrates] Se cargaron 5 plantillas de efectos.
+[16:06:30] [Server thread/INFO]: [RewardCrates] RewardCrates ha sido habilitado!
+[16:06:30] [Server thread/INFO]: [ValyrPlugin] Enabling ValyrPlugin v1.0.0
+[16:06:30] [Server thread/INFO]: [ValyrPlugin] ValyrPlugin activado - Conexión con Discord lista.
+[16:06:30] [Server thread/INFO]: [CommandPanels] Enabling CommandPanels v4.1.6
+[16:06:30] [Server thread/INFO]: [CommandPanels] RockyHawk's CommandPanels v4.1.6 Plugin Loading...
+[16:06:31] [Server thread/INFO]: [CommandPanels] RockyHawk's CommandPanels v4.1.6 Plugin Loaded!
+[16:06:31] [Server thread/INFO]: [ExcellentCrates] Enabling ExcellentCrates v6.6.1
+[16:06:31] [Server thread/INFO]: [ExcellentCrates] Powered by nightcore
+[16:06:31] [Server thread/INFO]: [com.zaxxer.hikari.HikariDataSource] ExcellentCratesPool - Starting...
+[16:06:31] [Server thread/INFO]: [com.zaxxer.hikari.pool.HikariPool] ExcellentCratesPool - Added connection org.sqlite.jdbc4.JDBC4Connection@dd414aa
+[16:06:31] [Server thread/INFO]: [com.zaxxer.hikari.HikariDataSource] ExcellentCratesPool - Start completed.
+[16:06:31] [Server thread/INFO]: [ExcellentCrates] Loaded 8 crate openings.
+[16:06:31] [Server thread/INFO]: [ExcellentCrates] Loaded 5 crate keys.
+[16:06:31] [Server thread/INFO]: [ExcellentCrates] Loaded 3 rarities!
+[16:06:31] [Server thread/INFO]: [ExcellentCrates] Loaded 0 crates.
+[16:06:31] [Server thread/INFO]: [PlaceholderAPI] Successfully registered internal expansion: excellentcrates [6.6.1]
+[16:06:31] [Server thread/INFO]: [ExcellentCrates] Plugin loaded in 305 ms!
+[16:06:31] [Server thread/INFO]: [ThunderCurrencys] Enabling ThunderCurrencys v1.0
+[16:06:31] [Server thread/INFO]: [ThunderCurrencys] [DB] SQLite conectado (WAL mode)
+[16:06:31] [Server thread/INFO]: [ThunderCurrencys] [Economy] 4 economias cargadas.
+[16:06:31] [Server thread/INFO]: [ThunderCurrencys] [CMD] Registrado: /playerpoints:zafiros
+[16:06:31] [Server thread/INFO]: [ThunderCurrencys] [CMD] Registrado: /playerpoints:afk
+[16:06:31] [Server thread/INFO]: [ThunderCurrencys] [CMD] Registrado: /playerpoints:p
+[16:06:31] [Server thread/INFO]: [ThunderCurrencys] [CMD] Registrado: /playerpoints:cr
+[16:06:31] [Server thread/INFO]: [PlaceholderAPI] Successfully registered internal expansion: thundercurrencys [1.0]
+[16:06:31] [Server thread/INFO]: [ThunderCurrencys] [PAPI] PlaceholderAPI expansion registrada.
+[16:06:31] [Server thread/INFO]: [ThunderCurrencys] [ShopGUI+] Hook de economía 'almas' activado.
+[16:06:31] [Server thread/INFO]: [ThunderCurrencys] ThunderCurrencys habilitado! 4 economias activas.
+[16:06:31] [Server thread/INFO]: [AlonsoTags] Enabling AlonsoTags v2.3-BETA-PRO
+[16:06:31] [Server thread/INFO]: [AlonsoTags] Max health Attribute check found. Using it..
+[16:06:31] [Server thread/INFO]: [AlonsoTags] Inventory title with support for more than 32 characters. Skipping..
+[16:06:31] [Server thread/INFO]: [AlonsoTags] Hex colors are available! Ready for RGB..
+[16:06:31] [Server thread/INFO]: [AlonsoTags] Old constructor for HoverEvent found! Using it..
+[16:06:31] [Server thread/INFO]: [AlonsoTags] New sendTitle method found! Using it..
+[16:06:31] [Server thread/INFO]: [AlonsoTags] New setUnbreakable method found! Using it..
+[16:06:31] [Server thread/INFO]: [AlonsoTags] New isUnbreakable method found! Using it..
+[16:06:31] [Server thread/INFO]: Enabling HEX color fix for 1.8 - 1.15 players.. (This is an experimental feature
+[16:06:31] [Server thread/INFO]:     _   _                 _____             ___          Running v2.3-BETA-PRO
+[16:06:31] [Server thread/INFO]:    /_\ | |___ _ _  ___ __|_   _|_ _ __ _ __| _ \_ _ ___  Server Paper v1.21.11-126-3f5728e (MC: 1.21.11)
+[16:06:31] [Server thread/INFO]:   / _ \| / _ \ ' \(_-</ _ \| |/ _` / _` (_-<  _/ '_/ _ \ Discord for support: https://alonsoaliaga.com/discord
+[16:06:31] [Server thread/INFO]:  /_/ \_\_\___/_||_/__/\___/|_|\__,_\__, /__/_| |_| \___/ Thanks for using my plugin ❤ 1463725!
+[16:06:31] [Server thread/INFO]:          Developed by AlonsoAliaga |___/
+[16:06:31] [Server thread/INFO]: 
+[16:06:31] [Server thread/INFO]: ==============================================================================================
+[16:06:31] [Server thread/INFO]: [AlonsoTags] You are using a Paper fork (Paper), plugin should work fine!
+[16:06:31] [Server thread/INFO]: [AlonsoTags] If you have issues, join us on our official support server on alonsoaliaga.com/discord
+[16:06:31] [Server thread/INFO]: ==============================================================================================
+[16:06:31] [Server thread/INFO]: 
+[16:06:31] [Server thread/INFO]: [AlonsoTags] BungeeCord action bar available. Hooking..
+[16:06:31] [Server thread/INFO]: [AlonsoTags] ProtocolLib not found! Skipping..
+[16:06:31] [Server thread/INFO]: [Auto-update] Configuration is up-to-date!
+[16:06:31] [Server thread/INFO]: [AlonsoTags] [HikariCP] Using com.mysql.cj.jdbc.MysqlDataSource for source class name..
+[16:06:31] [Server thread/INFO]: [AlonsoTags] [SQLite] Attempting to create 'alonsotags' table..
+[16:06:31] [Server thread/INFO]: [SQLite] Connecting to database 'database-alonsotags.db'!
+[16:06:31] [Server thread/INFO]: [SQLite] Driver available: SQLite JDBC | 3.49.1
+[16:06:31] [Server thread/INFO]: [SQLite] Successfully connected to database!
+[16:06:31] [Server thread/INFO]: [AlonsoTags] [SQLite] Table 'alonsotags' has been created if didn't exist.
+[16:06:31] [Server thread/INFO]: [AlonsoTags] Column called 'purchased_tags' already exists. Skipping..
+[16:06:31] [Server thread/INFO]: [AlonsoTags] Column called 'selected_color' already exists. Skipping..
+[16:06:31] [Server thread/INFO]: [AlonsoTags] Column called 'selected_filter' already exists. Skipping..
+[16:06:31] [Server thread/INFO]: [AlonsoTags] Column called 'custom_tag' already exists. Skipping..
+[16:06:31] [Server thread/INFO]: [AlonsoTags] Column called 'custom_recognition_title' already exists. Skipping..
+[16:06:31] [Server thread/INFO]: [AlonsoTags] Successfully loaded 1 books!
+[16:06:31] [Server thread/INFO]: [AlonsoTags] Forced mode is not enabled. Players can choose the mode they want..
+[16:06:31] [Server thread/INFO]: [AlonsoTags] Old ItemStack constructor is available!
+[16:06:31] [Server thread/INFO]: [AlonsoTags] SkullMeta#setOwningPlayer method is available for heads.
+[16:06:31] [Server thread/INFO]: [AlonsoTags] SkullMeta#setOwner method is available for heads.
+[16:06:31] [Server thread/INFO]: [AlonsoTags] SkullMeta#setOwnerProfile method is available for heads. Using it for heads..
+[16:06:31] [Server thread/INFO]: [AlonsoTags] New setUnbreakable method found! Using it..
+[16:06:31] [Server thread/INFO]: [AlonsoTags] New setOwningPlayer method is available!
+[16:06:31] [Server thread/INFO]: [AlonsoTags] Old Bukkit#getOfflinePlayer(String name) method is available!
+[16:06:31] [Server thread/INFO]: [AlonsoTags] New isUnbreakable method found! Using it..
+[16:06:31] [Server thread/INFO]: [AlonsoTags] Currency LEVEL successfully loaded!
+[16:06:31] [Server thread/INFO]: [AlonsoTags] Vault found! Hooking..
+[16:06:31] [Server thread/INFO]: [AlonsoTags] Vault hooked correctly with plugin 'Essentials' because couldn't find preferred plugins!
+[16:06:31] [Server thread/INFO]: [AlonsoTags] Cost type 'VAULT' has been enabled!
+[16:06:31] [Server thread/INFO]: [AlonsoTags] Currency VAULT successfully loaded!
+[16:06:31] [Server thread/INFO]: [AlonsoTags] PlayerPoints is not available! Disabling economy support..
+[16:06:31] [Server thread/INFO]: [AlonsoTags] Currency PLAYER_POINTS not loaded!
+[16:06:31] [Server thread/INFO]: [AlonsoTags] TokenManager is not available! Disabling economy support..
+[16:06:31] [Server thread/INFO]: [AlonsoTags] Currency TOKEN_MANAGER not loaded!
+[16:06:31] [Server thread/INFO]: [AlonsoTags] Loading 'new-tag' tag...
+[16:06:31] [Server thread/INFO]: [AlonsoTags] Loading 'limited' tag...
+[16:06:31] [Server thread/INFO]: [AlonsoTags] Successfully loaded 2 tags!
+[16:06:31] [Server thread/INFO]: [AlonsoTags] [Start] Scheduling economy hooks..
+[16:06:31] [Server thread/INFO]: [AlonsoTags] Loading 'default' color..
+[16:06:31] [Server thread/INFO]: [AlonsoTags] Successfully loaded default color!
+[16:06:31] [Server thread/INFO]: [AlonsoTags] Loading 'red' color..
+[16:06:31] [Server thread/INFO]: [AlonsoTags] Successfully loaded red color!
+[16:06:31] [Server thread/INFO]: [AlonsoTags] Loading 'green' color..
+[16:06:31] [Server thread/INFO]: [AlonsoTags] Successfully loaded green color!
+[16:06:31] [Server thread/INFO]: [AlonsoTags] Loading 'dark-blue' color..
+[16:06:31] [Server thread/INFO]: [AlonsoTags] Successfully loaded dark-blue color!
+[16:06:31] [Server thread/INFO]: [AlonsoTags] Loading 'purple' color..
+[16:06:31] [Server thread/INFO]: [AlonsoTags] Successfully loaded purple color!
+[16:06:31] [Server thread/INFO]: [AlonsoTags] Loading 'cyan' color..
+[16:06:31] [Server thread/INFO]: [AlonsoTags] Successfully loaded cyan color!
+[16:06:31] [Server thread/INFO]: [AlonsoTags] Loading 'gray' color..
+[16:06:31] [Server thread/INFO]: [AlonsoTags] Successfully loaded gray color!
+[16:06:31] [Server thread/INFO]: [AlonsoTags] Loading 'pink' color..
+[16:06:31] [Server thread/INFO]: [AlonsoTags] Successfully loaded pink color!
+[16:06:31] [Server thread/INFO]: [AlonsoTags] Loading 'lime' color..
+[16:06:31] [Server thread/INFO]: [AlonsoTags] Successfully loaded lime color!
+[16:06:31] [Server thread/INFO]: [AlonsoTags] Loading 'yellow' color..
+[16:06:31] [Server thread/INFO]: [AlonsoTags] Successfully loaded yellow color!
+[16:06:31] [Server thread/INFO]: [AlonsoTags] Loading 'aqua' color..
+[16:06:31] [Server thread/INFO]: [AlonsoTags] Successfully loaded aqua color!
+[16:06:31] [Server thread/INFO]: [AlonsoTags] Loading 'gold' color..
+[16:06:31] [Server thread/INFO]: [AlonsoTags] Successfully loaded gold color!
+[16:06:31] [Server thread/INFO]: [AlonsoTags] Loading 'white' color..
+[16:06:31] [Server thread/INFO]: [AlonsoTags] Successfully loaded white color!
+[16:06:31] [Server thread/INFO]: [AlonsoTags] Loading 'dark-red' color..
+[16:06:31] [Server thread/INFO]: [AlonsoTags] Successfully loaded dark-red color!
+[16:06:31] [Server thread/INFO]: [AlonsoTags] Loading 'black' color..
+[16:06:31] [Server thread/INFO]: [AlonsoTags] Successfully loaded black color!
+[16:06:31] [Server thread/INFO]: [AlonsoTags] Loading 'blue' color..
+[16:06:31] [Server thread/INFO]: [AlonsoTags] Successfully loaded blue color!
+[16:06:31] [Server thread/INFO]: [AlonsoTags] Loading 'brown' color..
+[16:06:31] [Server thread/INFO]: [AlonsoTags] Successfully loaded brown color!
+[16:06:31] [Server thread/INFO]: [AlonsoTags] Successfully loaded 17 colors!
+[16:06:31] [Server thread/INFO]: [AlonsoTags] [Sound.class] Class Sound recognized as new type!
+[16:06:31] [Server thread/INFO]: [AlonsoTags] [Sound.class] Successfully loaded 1838 sounds for Sound.class!
+[16:06:31] [Server thread/INFO]: [AlonsoTags] [Attribute.class] Class Attribute recognized as new type!
+[16:06:31] [Server thread/INFO]: [AlonsoTags] [Attribute.class] Successfully loaded 35 attributes for Attribute.class!
+[16:06:31] [Server thread/INFO]: [AlonsoTags] [Attribute.class] Successfully loaded 70 attributes keys for Attribute.class!
+[16:06:31] [Server thread/INFO]: [AlonsoTags] PlaceholderAPI found! Hooking..
+[16:06:31] [Server thread/INFO]: [PlaceholderAPI] Successfully registered internal expansion: alonsotags [2.3-BETA-PRO]
+[16:06:31] [Server thread/INFO]: [AlonsoTags] Bungee messaging system is allowed in this server. Enabling..
+[16:06:31] [Server thread/INFO]: [PvPManager] Enabling PvPManager v4.1.68
+[16:06:31] [Server thread/INFO]: [PvPManager] Using player nametags: false
+[16:06:31] [Server thread/INFO]: [com.zaxxer.hikari.HikariDataSource] PvPManager - Starting...
+[16:06:31] [Server thread/INFO]: [com.zaxxer.hikari.pool.HikariPool] PvPManager - Added connection org.sqlite.jdbc4.JDBC4Connection@79d81e24
+[16:06:31] [Server thread/INFO]: [com.zaxxer.hikari.HikariDataSource] PvPManager - Start completed.
+[16:06:31] [Server thread/INFO]: [PvPManager] Connected to SQLITE database successfully
+[16:06:31] [Server thread/INFO]: [PvPManager] Players stored: 534
+[16:06:31] [Server thread/INFO]: [PvPManager] WorldGuard Found! Enabling Support For WorldGuard Regions
+[16:06:31] [Server thread/INFO]: [WorldGuard] Registering session handler me.chancesd.pvpmanager.dH
+[16:06:31] [Server thread/INFO]: [PvPManager] Essentials Found! Hooked successfully
+[16:06:31] [Server thread/INFO]: [PvPManager] Vault Found! Using it for currency related features
+[16:06:31] [Server thread/INFO]: [PvPManager] PlaceholderAPI Found! Hooked successfully
+[16:06:31] [Server thread/INFO]: [PlaceholderAPI] Successfully registered internal expansion: pvpmanager [4.1.68]
+[16:06:31] [Server thread/INFO]: [PvPManager] LibsDisguises Found! Using it to disable disguises
+[16:06:31] [Server thread/INFO]: [PvPManager] TAB Found! Using TAB to change nametags instead of scoreboards
+[16:06:31] [Server thread/INFO]: [PvPManager] Checking NPC support in this server version...
+[16:06:31] [Server thread/INFO]: [PvPManager] NPC spawning is supported in this version! (v1_21_R7)
+[16:06:31] [Server thread/INFO]: [PvPManager] Auto Respawn is supported in this version! Using 1.15+ gamerules
+[16:06:31] [Server thread/INFO]: [PvPManager] Starting border task with radius 6 and rate of 150ms
+[16:06:31] [Server thread/INFO]: [PvPManager] PvPManager v4.1.68 enabled (225 ms)
+[16:06:31] [Server thread/INFO]: [MythicLib] Enabling MythicLib v1.7.1-SNAPSHOT
+[16:06:31] [Server thread/INFO]: [MythicLib] Hooked onto TextDisplays (holograms)
+[16:06:31] [Server thread/INFO]: [MythicMobs] MMO Plugin Support has been enabled!
+[16:06:31] [Server thread/INFO]: [MythicLib] Hooked onto MythicMobs
+[16:06:31] [Server thread/INFO]: [PlaceholderAPI] Successfully registered internal expansion: mythiclib [1.7.1-SNAPSHOT]
+[16:06:31] [Server thread/INFO]: [MythicLib] Hooked onto PlaceholderAPI
+[16:06:31] [Server thread/WARN]: [MythicLib] Found a dependency cycle! Please make sure that the plugins involved load with no errors.
+[16:06:31] [Server thread/WARN]: [MythicLib] Plugin dependency cycle: [nightcore, ExcellentCrates, nightcore]
+[16:06:31] [Server thread/WARN]: [MythicLib] Could not load skill 'AMBERS' from file 'default_skills.yml': Could not find builtin skill with ID 'AMBERS'
+[16:06:31] [Server thread/WARN]: [MythicLib] Could not load skill 'NEPTUNE_GIFT' from file 'default_skills.yml': Could not find builtin skill with ID 'NEPTUNE_GIFT'
+[16:06:31] [Server thread/WARN]: [MythicLib] Could not load skill 'SNEAKY_PICKY' from file 'default_skills.yml': Could not find builtin skill with ID 'SNEAKY_PICKY'
+[16:06:31] [Server thread/INFO]: [AdvancedPortals] Enabling AdvancedPortals v2.7.1
+[16:06:32] [Server thread/INFO]: [AdvancedPortals] Loading Advanced Portals Core v2.7.1 for MC: 1.21.11
+[16:06:32] [Server thread/INFO]: [AdvancedPortals] Advanced portals have been enabled!
+[16:06:32] [Server thread/INFO]: [ProtectionMenu] Enabling ProtectionMenu v1.1
+[16:06:32] [Server thread/INFO]: [ProtectionMenu] ProtectionMenu v1.1 activado correctamente.
+[16:06:32] [Server thread/INFO]: [LootChests] Enabling LootChests v1.0
+[16:06:32] [Server thread/INFO]: [LootChests] LootChests has been enabled!
+[16:06:32] [Server thread/INFO]: [ZelChat] Enabling ZelChat v2.0.0-pre-18
+[16:06:32] [Server thread/INFO]: [ZelChat] -------------------------------------------------
+[16:06:32] [Server thread/INFO]: [ZelChat] |                  ZelChat
+[16:06:32] [Server thread/INFO]: [ZelChat] 
+[16:06:32] [Server thread/INFO]: [ZelChat] |   Supported Minecraft version: 1.20.X-1.21.X
+[16:06:32] [Server thread/INFO]: [ZelChat] |          Java Version: 21.0.11
+[16:06:32] [Server thread/INFO]: [ZelChat] |         Plugin version: 2.0.0-pre-18
+[16:06:32] [Server thread/INFO]: [ZelChat] |           Plugin author: PinoOG
+[16:06:32] [Server thread/INFO]: [ZelChat] |          Website: https://www.zeltuv.com
+[16:06:32] [Server thread/INFO]: [ZelChat] |          Discord: https://discord.gg/zeltuv
+[16:06:32] [Server thread/INFO]: [ZelChat] 
+[16:06:32] [Server thread/INFO]: [PlaceholderAPI] Successfully registered internal expansion: zelchat [2.0.0-pre-18]
+[16:06:32] [Server thread/INFO]: [com.zaxxer.hikari.HikariDataSource] ZelChat-HikariPool - Starting...
+[16:06:32] [Server thread/INFO]: [com.zaxxer.hikari.pool.HikariPool] ZelChat-HikariPool - Added connection conn0: url=jdbc:h2:/home/container/plugins/ZelChat/database/h2-storage user=
+[16:06:32] [Server thread/INFO]: [com.zaxxer.hikari.HikariDataSource] ZelChat-HikariPool - Start completed.
+[16:06:32] [Server thread/INFO]: [voicechat-discord] Enabling voicechat-discord v3.1.4
+[16:06:32] [Server thread/INFO]: [voicechat-discord] Original Minecraft version: 1.21.11
+[16:06:32] [Server thread/INFO]: [voicechat-discord] Parsed Minecraft version: 1.21.11
+[16:06:32] [Server thread/INFO]: [voicechat-discord] Server is >=1.20.6
+[16:06:32] [Server thread/INFO]: [voicechat-discord] Successfully registered voicechat discord plugin
+[16:06:32] [Server thread/INFO]: [voicechat-discord] Enabling voicechat-discord 3.1.4
+[16:06:33] [Server thread/INFO]: [voicechat-discord] Using 1 bot
+[16:06:33] [Server thread/INFO]: [voicechat-discord] Enabled voicechat-discord 3.1.4
+[16:06:33] [Server thread/INFO]: [DeluxeMenus] Enabling DeluxeMenus v1.14.1-Release
+[16:06:33] [Server thread/INFO]: [DeluxeMenus] Successfully hooked into PlaceholderAPI!
+[16:06:33] [Server thread/INFO]: [DeluxeMenus] Successfully hooked into Vault!
+[16:06:33] [Server thread/INFO]: [DeluxeMenus] Registered command: warps for menu: warps
+[16:06:33] [Server thread/INFO]: [DeluxeMenus] Registered command: minas for menu: warps_minas
+[16:06:33] [Server thread/INFO]: [DeluxeMenus] Registered command: dungeons for menu: warps_dungeons
+[16:06:33] [Server thread/INFO]: [DeluxeMenus] Registered command: rtpmenu for menu: warps_rtp
+[16:06:33] [Server thread/INFO]: [DeluxeMenus] Registered command: secretos for menu: secretos
+[16:06:33] [Server thread/WARN]: [DeluxeMenus] Option 'hide_attributes' of item 'Boton_Comprar' in menu 'tienda_principal' is deprecated and will be removed in the future. Replace it with item_flags: [HIDE_ATTRIBUTES].
+[16:06:33] [Server thread/WARN]: [DeluxeMenus] Option 'hide_enchantments' of item 'Boton_Comprar' in menu 'tienda_principal' is deprecated and will be removed in the future. Replace it with item_flags: [HIDE_ENCHANTS].
+[16:06:33] [Server thread/WARN]: [DeluxeMenus] Option 'hide_attributes' of item 'Boton_Vender' in menu 'tienda_principal' is deprecated and will be removed in the future. Replace it with item_flags: [HIDE_ATTRIBUTES].
+[16:06:33] [Server thread/WARN]: [DeluxeMenus] Option 'hide_enchantments' of item 'Boton_Vender' in menu 'tienda_principal' is deprecated and will be removed in the future. Replace it with item_flags: [HIDE_ENCHANTS].
+[16:06:33] [Server thread/WARN]: [DeluxeMenus] Option 'hide_attributes' of item 'Boton_Subastas' in menu 'tienda_principal' is deprecated and will be removed in the future. Replace it with item_flags: [HIDE_ATTRIBUTES].
+[16:06:33] [Server thread/WARN]: [DeluxeMenus] Option 'hide_attributes' of item 'Boton_Almas' in menu 'tienda_principal' is deprecated and will be removed in the future. Replace it with item_flags: [HIDE_ATTRIBUTES].
+[16:06:33] [Server thread/WARN]: [DeluxeMenus] Option 'hide_attributes' of item 'Boton_Cerrar' in menu 'tienda_principal' is deprecated and will be removed in the future. Replace it with item_flags: [HIDE_ATTRIBUTES].
+[16:06:33] [Server thread/WARN]: [DeluxeMenus] Option 'hide_attributes' of item 'Boton_SellGUI' in menu 'tienda_principal' is deprecated and will be removed in the future. Replace it with item_flags: [HIDE_ATTRIBUTES].
+[16:06:33] [Server thread/WARN]: [DeluxeMenus] Option 'hide_attributes' of item 'Info_Balance' in menu 'tienda_principal' is deprecated and will be removed in the future. Replace it with item_flags: [HIDE_ATTRIBUTES].
+[16:06:33] [Server thread/WARN]: [DeluxeMenus] Option 'hide_attributes' of item 'Tab_precios_farmeo' in menu 'tienda_vender' is deprecated and will be removed in the future. Replace it with item_flags: [HIDE_ATTRIBUTES].
+[16:06:33] [Server thread/WARN]: [DeluxeMenus] Option 'hide_enchantments' of item 'Tab_precios_farmeo' in menu 'tienda_vender' is deprecated and will be removed in the future. Replace it with item_flags: [HIDE_ENCHANTS].
+[16:06:33] [Server thread/WARN]: [DeluxeMenus] Option 'hide_attributes' of item 'Tab_precios_mobs' in menu 'tienda_vender' is deprecated and will be removed in the future. Replace it with item_flags: [HIDE_ATTRIBUTES].
+[16:06:33] [Server thread/WARN]: [DeluxeMenus] Option 'hide_attributes' of item 'Tab_precios_especiales' in menu 'tienda_vender' is deprecated and will be removed in the future. Replace it with item_flags: [HIDE_ATTRIBUTES].
+[16:06:33] [Server thread/WARN]: [DeluxeMenus] Option 'hide_attributes' of item 'item_1' in menu 'tienda_vender' is deprecated and will be removed in the future. Replace it with item_flags: [HIDE_ATTRIBUTES].
+[16:06:33] [Server thread/WARN]: [DeluxeMenus] Option 'hide_attributes' of item 'item_2' in menu 'tienda_vender' is deprecated and will be removed in the future. Replace it with item_flags: [HIDE_ATTRIBUTES].
+[16:06:33] [Server thread/WARN]: [DeluxeMenus] Option 'hide_attributes' of item 'item_3' in menu 'tienda_vender' is deprecated and will be removed in the future. Replace it with item_flags: [HIDE_ATTRIBUTES].
+[16:06:33] [Server thread/WARN]: [DeluxeMenus] Option 'hide_attributes' of item 'item_4' in menu 'tienda_vender' is deprecated and will be removed in the future. Replace it with item_flags: [HIDE_ATTRIBUTES].
+[16:06:33] [Server thread/WARN]: [DeluxeMenus] Option 'hide_attributes' of item 'item_5' in menu 'tienda_vender' is deprecated and will be removed in the future. Replace it with item_flags: [HIDE_ATTRIBUTES].
+[16:06:33] [Server thread/WARN]: [DeluxeMenus] Option 'hide_attributes' of item 'item_6' in menu 'tienda_vender' is deprecated and will be removed in the future. Replace it with item_flags: [HIDE_ATTRIBUTES].
+[16:06:33] [Server thread/WARN]: [DeluxeMenus] Option 'hide_attributes' of item 'item_7' in menu 'tienda_vender' is deprecated and will be removed in the future. Replace it with item_flags: [HIDE_ATTRIBUTES].
+[16:06:33] [Server thread/WARN]: [DeluxeMenus] Option 'hide_attributes' of item 'item_8' in menu 'tienda_vender' is deprecated and will be removed in the future. Replace it with item_flags: [HIDE_ATTRIBUTES].
+[16:06:33] [Server thread/WARN]: [DeluxeMenus] Option 'hide_attributes' of item 'item_9' in menu 'tienda_vender' is deprecated and will be removed in the future. Replace it with item_flags: [HIDE_ATTRIBUTES].
+[16:06:33] [Server thread/WARN]: [DeluxeMenus] Option 'hide_attributes' of item 'item_10' in menu 'tienda_vender' is deprecated and will be removed in the future. Replace it with item_flags: [HIDE_ATTRIBUTES].
+[16:06:33] [Server thread/WARN]: [DeluxeMenus] Option 'hide_attributes' of item 'item_11' in menu 'tienda_vender' is deprecated and will be removed in the future. Replace it with item_flags: [HIDE_ATTRIBUTES].
+[16:06:33] [Server thread/WARN]: [DeluxeMenus] Option 'hide_attributes' of item 'item_12' in menu 'tienda_vender' is deprecated and will be removed in the future. Replace it with item_flags: [HIDE_ATTRIBUTES].
+[16:06:33] [Server thread/WARN]: [DeluxeMenus] Option 'hide_attributes' of item 'item_13' in menu 'tienda_vender' is deprecated and will be removed in the future. Replace it with item_flags: [HIDE_ATTRIBUTES].
+[16:06:33] [Server thread/WARN]: [DeluxeMenus] Option 'hide_attributes' of item 'item_14' in menu 'tienda_vender' is deprecated and will be removed in the future. Replace it with item_flags: [HIDE_ATTRIBUTES].
+[16:06:33] [Server thread/WARN]: [DeluxeMenus] Option 'hide_attributes' of item 'item_15' in menu 'tienda_vender' is deprecated and will be removed in the future. Replace it with item_flags: [HIDE_ATTRIBUTES].
+[16:06:33] [Server thread/WARN]: [DeluxeMenus] Option 'hide_attributes' of item 'item_16' in menu 'tienda_vender' is deprecated and will be removed in the future. Replace it with item_flags: [HIDE_ATTRIBUTES].
+[16:06:33] [Server thread/WARN]: [DeluxeMenus] Option 'hide_attributes' of item 'item_17' in menu 'tienda_vender' is deprecated and will be removed in the future. Replace it with item_flags: [HIDE_ATTRIBUTES].
+[16:06:33] [Server thread/WARN]: [DeluxeMenus] Option 'hide_attributes' of item 'item_18' in menu 'tienda_vender' is deprecated and will be removed in the future. Replace it with item_flags: [HIDE_ATTRIBUTES].
+[16:06:33] [Server thread/WARN]: [DeluxeMenus] Option 'hide_attributes' of item 'item_19' in menu 'tienda_vender' is deprecated and will be removed in the future. Replace it with item_flags: [HIDE_ATTRIBUTES].
+[16:06:33] [Server thread/WARN]: [DeluxeMenus] Option 'hide_attributes' of item 'item_20' in menu 'tienda_vender' is deprecated and will be removed in the future. Replace it with item_flags: [HIDE_ATTRIBUTES].
+[16:06:33] [Server thread/WARN]: [DeluxeMenus] Option 'hide_attributes' of item 'item_21' in menu 'tienda_vender' is deprecated and will be removed in the future. Replace it with item_flags: [HIDE_ATTRIBUTES].
+[16:06:33] [Server thread/WARN]: [DeluxeMenus] Option 'hide_attributes' of item 'Boton_Volver' in menu 'tienda_vender' is deprecated and will be removed in the future. Replace it with item_flags: [HIDE_ATTRIBUTES].
+[16:06:33] [Server thread/WARN]: [DeluxeMenus] Option 'hide_attributes' of item 'Boton_SellGUI' in menu 'tienda_vender' is deprecated and will be removed in the future. Replace it with item_flags: [HIDE_ATTRIBUTES].
+[16:06:33] [Server thread/WARN]: [DeluxeMenus] Option 'hide_attributes' of item 'Info_Balance' in menu 'tienda_vender' is deprecated and will be removed in the future. Replace it with item_flags: [HIDE_ATTRIBUTES].
+[16:06:33] [Server thread/INFO]: [DeluxeMenus] Registered command: shopvender for menu: tienda_vender
+[16:06:33] [Server thread/WARN]: [DeluxeMenus] command: shopvender specified for menu: precios_farmeo already exists for another menu!
+Skipping command: shopvender in menu: precios_farmeo
+[16:06:33] [Server thread/WARN]: [DeluxeMenus] command: preciosvender specified for menu: precios_farmeo already exists for another menu!
+Skipping command: preciosvender in menu: precios_farmeo
+[16:06:33] [Server thread/WARN]: [DeluxeMenus] command: precios_farmeo specified for menu: precios_farmeo already exists for another menu!
+Skipping command: precios_farmeo in menu: precios_farmeo
+[16:06:33] [Server thread/WARN]: [DeluxeMenus] Option 'hide_attributes' of item 'Tab_precios_farmeo' in menu 'precios_farmeo' is deprecated and will be removed in the future. Replace it with item_flags: [HIDE_ATTRIBUTES].
+[16:06:33] [Server thread/WARN]: [DeluxeMenus] Option 'hide_enchantments' of item 'Tab_precios_farmeo' in menu 'precios_farmeo' is deprecated and will be removed in the future. Replace it with item_flags: [HIDE_ENCHANTS].
+[16:06:33] [Server thread/WARN]: [DeluxeMenus] Option 'hide_attributes' of item 'Tab_precios_mobs' in menu 'precios_farmeo' is deprecated and will be removed in the future. Replace it with item_flags: [HIDE_ATTRIBUTES].
+[16:06:33] [Server thread/WARN]: [DeluxeMenus] Option 'hide_attributes' of item 'Tab_precios_especiales' in menu 'precios_farmeo' is deprecated and will be removed in the future. Replace it with item_flags: [HIDE_ATTRIBUTES].
+[16:06:33] [Server thread/WARN]: [DeluxeMenus] Option 'hide_attributes' of item 'item_1' in menu 'precios_farmeo' is deprecated and will be removed in the future. Replace it with item_flags: [HIDE_ATTRIBUTES].
+[16:06:33] [Server thread/WARN]: [DeluxeMenus] Option 'hide_attributes' of item 'item_2' in menu 'precios_farmeo' is deprecated and will be removed in the future. Replace it with item_flags: [HIDE_ATTRIBUTES].
+[16:06:33] [Server thread/WARN]: [DeluxeMenus] Option 'hide_attributes' of item 'item_3' in menu 'precios_farmeo' is deprecated and will be removed in the future. Replace it with item_flags: [HIDE_ATTRIBUTES].
+[16:06:33] [Server thread/WARN]: [DeluxeMenus] Option 'hide_attributes' of item 'item_4' in menu 'precios_farmeo' is deprecated and will be removed in the future. Replace it with item_flags: [HIDE_ATTRIBUTES].
+[16:06:33] [Server thread/WARN]: [DeluxeMenus] Option 'hide_attributes' of item 'item_5' in menu 'precios_farmeo' is deprecated and will be removed in the future. Replace it with item_flags: [HIDE_ATTRIBUTES].
+[16:06:33] [Server thread/WARN]: [DeluxeMenus] Option 'hide_attributes' of item 'item_6' in menu 'precios_farmeo' is deprecated and will be removed in the future. Replace it with item_flags: [HIDE_ATTRIBUTES].
+[16:06:33] [Server thread/WARN]: [DeluxeMenus] Option 'hide_attributes' of item 'item_7' in menu 'precios_farmeo' is deprecated and will be removed in the future. Replace it with item_flags: [HIDE_ATTRIBUTES].
+[16:06:33] [Server thread/WARN]: [DeluxeMenus] Option 'hide_attributes' of item 'item_8' in menu 'precios_farmeo' is deprecated and will be removed in the future. Replace it with item_flags: [HIDE_ATTRIBUTES].
+[16:06:33] [Server thread/WARN]: [DeluxeMenus] Option 'hide_attributes' of item 'item_9' in menu 'precios_farmeo' is deprecated and will be removed in the future. Replace it with item_flags: [HIDE_ATTRIBUTES].
+[16:06:33] [Server thread/WARN]: [DeluxeMenus] Option 'hide_attributes' of item 'item_10' in menu 'precios_farmeo' is deprecated and will be removed in the future. Replace it with item_flags: [HIDE_ATTRIBUTES].
+[16:06:33] [Server thread/WARN]: [DeluxeMenus] Option 'hide_attributes' of item 'item_11' in menu 'precios_farmeo' is deprecated and will be removed in the future. Replace it with item_flags: [HIDE_ATTRIBUTES].
+[16:06:33] [Server thread/WARN]: [DeluxeMenus] Option 'hide_attributes' of item 'item_12' in menu 'precios_farmeo' is deprecated and will be removed in the future. Replace it with item_flags: [HIDE_ATTRIBUTES].
+[16:06:33] [Server thread/WARN]: [DeluxeMenus] Option 'hide_attributes' of item 'item_13' in menu 'precios_farmeo' is deprecated and will be removed in the future. Replace it with item_flags: [HIDE_ATTRIBUTES].
+[16:06:33] [Server thread/WARN]: [DeluxeMenus] Option 'hide_attributes' of item 'item_14' in menu 'precios_farmeo' is deprecated and will be removed in the future. Replace it with item_flags: [HIDE_ATTRIBUTES].
+[16:06:33] [Server thread/WARN]: [DeluxeMenus] Option 'hide_attributes' of item 'item_15' in menu 'precios_farmeo' is deprecated and will be removed in the future. Replace it with item_flags: [HIDE_ATTRIBUTES].
+[16:06:33] [Server thread/WARN]: [DeluxeMenus] Option 'hide_attributes' of item 'item_16' in menu 'precios_farmeo' is deprecated and will be removed in the future. Replace it with item_flags: [HIDE_ATTRIBUTES].
+[16:06:33] [Server thread/WARN]: [DeluxeMenus] Option 'hide_attributes' of item 'item_17' in menu 'precios_farmeo' is deprecated and will be removed in the future. Replace it with item_flags: [HIDE_ATTRIBUTES].
+[16:06:33] [Server thread/WARN]: [DeluxeMenus] Option 'hide_attributes' of item 'item_18' in menu 'precios_farmeo' is deprecated and will be removed in the future. Replace it with item_flags: [HIDE_ATTRIBUTES].
+[16:06:33] [Server thread/WARN]: [DeluxeMenus] Option 'hide_attributes' of item 'item_19' in menu 'precios_farmeo' is deprecated and will be removed in the future. Replace it with item_flags: [HIDE_ATTRIBUTES].
+[16:06:33] [Server thread/WARN]: [DeluxeMenus] Option 'hide_attributes' of item 'item_20' in menu 'precios_farmeo' is deprecated and will be removed in the future. Replace it with item_flags: [HIDE_ATTRIBUTES].
+[16:06:33] [Server thread/WARN]: [DeluxeMenus] Option 'hide_attributes' of item 'item_21' in menu 'precios_farmeo' is deprecated and will be removed in the future. Replace it with item_flags: [HIDE_ATTRIBUTES].
+[16:06:33] [Server thread/WARN]: [DeluxeMenus] Option 'hide_attributes' of item 'Boton_Volver' in menu 'precios_farmeo' is deprecated and will be removed in the future. Replace it with item_flags: [HIDE_ATTRIBUTES].
+[16:06:33] [Server thread/WARN]: [DeluxeMenus] Option 'hide_attributes' of item 'Boton_SellGUI' in menu 'precios_farmeo' is deprecated and will be removed in the future. Replace it with item_flags: [HIDE_ATTRIBUTES].
+[16:06:33] [Server thread/WARN]: [DeluxeMenus] Option 'hide_attributes' of item 'Info_Balance' in menu 'precios_farmeo' is deprecated and will be removed in the future. Replace it with item_flags: [HIDE_ATTRIBUTES].
+[16:06:33] [Server thread/WARN]: [DeluxeMenus] Option 'hide_attributes' of item 'Tab_precios_farmeo' in menu 'precios_mobs' is deprecated and will be removed in the future. Replace it with item_flags: [HIDE_ATTRIBUTES].
+[16:06:33] [Server thread/WARN]: [DeluxeMenus] Option 'hide_attributes' of item 'Tab_precios_mobs' in menu 'precios_mobs' is deprecated and will be removed in the future. Replace it with item_flags: [HIDE_ATTRIBUTES].
+[16:06:33] [Server thread/WARN]: [DeluxeMenus] Option 'hide_enchantments' of item 'Tab_precios_mobs' in menu 'precios_mobs' is deprecated and will be removed in the future. Replace it with item_flags: [HIDE_ENCHANTS].
+[16:06:33] [Server thread/WARN]: [DeluxeMenus] Option 'hide_attributes' of item 'Tab_precios_especiales' in menu 'precios_mobs' is deprecated and will be removed in the future. Replace it with item_flags: [HIDE_ATTRIBUTES].
+[16:06:33] [Server thread/WARN]: [DeluxeMenus] Option 'hide_attributes' of item 'item_1' in menu 'precios_mobs' is deprecated and will be removed in the future. Replace it with item_flags: [HIDE_ATTRIBUTES].
+[16:06:33] [Server thread/WARN]: [DeluxeMenus] Option 'hide_attributes' of item 'item_2' in menu 'precios_mobs' is deprecated and will be removed in the future. Replace it with item_flags: [HIDE_ATTRIBUTES].
+[16:06:33] [Server thread/WARN]: [DeluxeMenus] Option 'hide_attributes' of item 'item_3' in menu 'precios_mobs' is deprecated and will be removed in the future. Replace it with item_flags: [HIDE_ATTRIBUTES].
+[16:06:33] [Server thread/WARN]: [DeluxeMenus] Option 'hide_attributes' of item 'item_4' in menu 'precios_mobs' is deprecated and will be removed in the future. Replace it with item_flags: [HIDE_ATTRIBUTES].
+[16:06:33] [Server thread/WARN]: [DeluxeMenus] Option 'hide_attributes' of item 'item_5' in menu 'precios_mobs' is deprecated and will be removed in the future. Replace it with item_flags: [HIDE_ATTRIBUTES].
+[16:06:33] [Server thread/WARN]: [DeluxeMenus] Option 'hide_attributes' of item 'item_6' in menu 'precios_mobs' is deprecated and will be removed in the future. Replace it with item_flags: [HIDE_ATTRIBUTES].
+[16:06:33] [Server thread/WARN]: [DeluxeMenus] Option 'hide_attributes' of item 'item_7' in menu 'precios_mobs' is deprecated and will be removed in the future. Replace it with item_flags: [HIDE_ATTRIBUTES].
+[16:06:33] [Server thread/WARN]: [DeluxeMenus] Option 'hide_attributes' of item 'item_8' in menu 'precios_mobs' is deprecated and will be removed in the future. Replace it with item_flags: [HIDE_ATTRIBUTES].
+[16:06:33] [Server thread/WARN]: [DeluxeMenus] Option 'hide_attributes' of item 'item_9' in menu 'precios_mobs' is deprecated and will be removed in the future. Replace it with item_flags: [HIDE_ATTRIBUTES].
+[16:06:33] [Server thread/WARN]: [DeluxeMenus] Option 'hide_attributes' of item 'item_10' in menu 'precios_mobs' is deprecated and will be removed in the future. Replace it with item_flags: [HIDE_ATTRIBUTES].
+[16:06:33] [Server thread/WARN]: [DeluxeMenus] Option 'hide_attributes' of item 'item_11' in menu 'precios_mobs' is deprecated and will be removed in the future. Replace it with item_flags: [HIDE_ATTRIBUTES].
+[16:06:33] [Server thread/WARN]: [DeluxeMenus] Option 'hide_attributes' of item 'item_12' in menu 'precios_mobs' is deprecated and will be removed in the future. Replace it with item_flags: [HIDE_ATTRIBUTES].
+[16:06:33] [Server thread/WARN]: [DeluxeMenus] Option 'hide_attributes' of item 'item_13' in menu 'precios_mobs' is deprecated and will be removed in the future. Replace it with item_flags: [HIDE_ATTRIBUTES].
+[16:06:33] [Server thread/WARN]: [DeluxeMenus] Option 'hide_attributes' of item 'item_14' in menu 'precios_mobs' is deprecated and will be removed in the future. Replace it with item_flags: [HIDE_ATTRIBUTES].
+[16:06:33] [Server thread/WARN]: [DeluxeMenus] Option 'hide_attributes' of item 'item_15' in menu 'precios_mobs' is deprecated and will be removed in the future. Replace it with item_flags: [HIDE_ATTRIBUTES].
+[16:06:33] [Server thread/WARN]: [DeluxeMenus] Option 'hide_attributes' of item 'item_16' in menu 'precios_mobs' is deprecated and will be removed in the future. Replace it with item_flags: [HIDE_ATTRIBUTES].
+[16:06:33] [Server thread/WARN]: [DeluxeMenus] Option 'hide_attributes' of item 'item_17' in menu 'precios_mobs' is deprecated and will be removed in the future. Replace it with item_flags: [HIDE_ATTRIBUTES].
+[16:06:33] [Server thread/WARN]: [DeluxeMenus] Option 'hide_attributes' of item 'item_18' in menu 'precios_mobs' is deprecated and will be removed in the future. Replace it with item_flags: [HIDE_ATTRIBUTES].
+[16:06:33] [Server thread/WARN]: [DeluxeMenus] Option 'hide_attributes' of item 'item_19' in menu 'precios_mobs' is deprecated and will be removed in the future. Replace it with item_flags: [HIDE_ATTRIBUTES].
+[16:06:33] [Server thread/WARN]: [DeluxeMenus] Option 'hide_attributes' of item 'Boton_Volver' in menu 'precios_mobs' is deprecated and will be removed in the future. Replace it with item_flags: [HIDE_ATTRIBUTES].
+[16:06:33] [Server thread/WARN]: [DeluxeMenus] Option 'hide_attributes' of item 'Boton_SellGUI' in menu 'precios_mobs' is deprecated and will be removed in the future. Replace it with item_flags: [HIDE_ATTRIBUTES].
+[16:06:33] [Server thread/WARN]: [DeluxeMenus] Option 'hide_attributes' of item 'Info_Balance' in menu 'precios_mobs' is deprecated and will be removed in the future. Replace it with item_flags: [HIDE_ATTRIBUTES].
+[16:06:33] [Server thread/INFO]: [DeluxeMenus] Registered command: precios_mobs for menu: precios_mobs
+[16:06:33] [Server thread/WARN]: [DeluxeMenus] Option 'hide_attributes' of item 'Tab_precios_farmeo' in menu 'precios_especiales' is deprecated and will be removed in the future. Replace it with item_flags: [HIDE_ATTRIBUTES].
+[16:06:33] [Server thread/WARN]: [DeluxeMenus] Option 'hide_attributes' of item 'Tab_precios_mobs' in menu 'precios_especiales' is deprecated and will be removed in the future. Replace it with item_flags: [HIDE_ATTRIBUTES].
+[16:06:33] [Server thread/WARN]: [DeluxeMenus] Option 'hide_attributes' of item 'Tab_precios_especiales' in menu 'precios_especiales' is deprecated and will be removed in the future. Replace it with item_flags: [HIDE_ATTRIBUTES].
+[16:06:33] [Server thread/WARN]: [DeluxeMenus] Option 'hide_enchantments' of item 'Tab_precios_especiales' in menu 'precios_especiales' is deprecated and will be removed in the future. Replace it with item_flags: [HIDE_ENCHANTS].
+[16:06:33] [Server thread/WARN]: [DeluxeMenus] Option 'hide_attributes' of item 'item_1' in menu 'precios_especiales' is deprecated and will be removed in the future. Replace it with item_flags: [HIDE_ATTRIBUTES].
+[16:06:33] [Server thread/WARN]: [DeluxeMenus] Option 'hide_attributes' of item 'item_2' in menu 'precios_especiales' is deprecated and will be removed in the future. Replace it with item_flags: [HIDE_ATTRIBUTES].
+[16:06:33] [Server thread/WARN]: [DeluxeMenus] Option 'hide_attributes' of item 'Boton_Volver' in menu 'precios_especiales' is deprecated and will be removed in the future. Replace it with item_flags: [HIDE_ATTRIBUTES].
+[16:06:33] [Server thread/WARN]: [DeluxeMenus] Option 'hide_attributes' of item 'Boton_SellGUI' in menu 'precios_especiales' is deprecated and will be removed in the future. Replace it with item_flags: [HIDE_ATTRIBUTES].
+[16:06:33] [Server thread/WARN]: [DeluxeMenus] Option 'hide_attributes' of item 'Info_Balance' in menu 'precios_especiales' is deprecated and will be removed in the future. Replace it with item_flags: [HIDE_ATTRIBUTES].
+[16:06:33] [Server thread/INFO]: [DeluxeMenus] Registered command: precios_especiales for menu: precios_especiales
+[16:06:33] [Server thread/INFO]: [DeluxeMenus] 35 GUI menus loaded!
+[16:06:33] [Server thread/INFO]: [PlaceholderAPI] Successfully registered internal expansion: deluxemenus [1.14.1-Release]
+[16:06:33] [Server thread/INFO]: [DeluxeMenus] You are running the latest version of DeluxeMenus!
+[16:06:33] [Server thread/INFO]: [Jobs] Enabling Jobs v5.2.6.6
+[16:06:33] [Server thread/INFO]: ------------- Jobs -------------
+[16:06:33] [Server thread/INFO]: [PlaceholderAPI] Successfully registered internal expansion: jobsr [5.2.6.6]
+[16:06:33] [Server thread/INFO]: PlaceholderAPI hooked.
+[16:06:33] [Server thread/INFO]: Connected to database (SqLite)
+[16:06:33] [Server thread/INFO]: Loaded 8 titles
+[16:06:33] [Server thread/INFO]: Loaded 2 restricted areas!
+[16:06:33] [Server thread/INFO]: Loaded 53 protected blocks timers
+[16:06:33] [Server thread/INFO]: Loaded 1659 custom item names
+[16:06:33] [Server thread/INFO]: Loaded 92 custom entity names
+[16:06:33] [Server thread/INFO]: Loaded 2 custom MythicMobs names
+[16:06:33] [Server thread/INFO]: Loaded 43 custom enchant names
+[16:06:33] [Server thread/INFO]: Loaded 46 custom enchant names
+[16:06:33] [Server thread/INFO]: Loaded 16 custom color names
+[16:06:33] [Server thread/INFO]: Update shops items icon section and use 'ItemStack' instead
+[16:06:33] [Server thread/INFO]: Loaded 4 shop items
+[16:06:33] [Server thread/INFO]: Loaded 1 quests for Explorador
+[16:06:33] [Server thread/INFO]: Loaded 1 quests for Encantador
+[16:06:33] [Server thread/INFO]: Loaded 1 quests for Minero
+[16:06:33] [Server thread/INFO]: Loaded 1 quests for Excavador
+[16:06:33] [Server thread/INFO]: Loaded 1 quests for Hechizero
+[16:06:33] [Server thread/INFO]: Loaded 1 quests for Craftero
+[16:06:33] [Server thread/INFO]: Loaded 1 quests for Cazador
+[16:06:33] [Server thread/INFO]: Loaded 1 quests for Herrero
+[16:06:33] [Server thread/INFO]: Loaded 1 quests for Pescador
+[16:06:33] [Server thread/INFO]: Loaded 1 quests for Granjero
+[16:06:33] [Server thread/INFO]: Loaded 1 quests for Leñador
+[16:06:33] [Server thread/INFO]: Loaded 1 quests for Constructor
+[16:06:33] [Server thread/INFO]: Loaded 12 jobs
+[16:06:33] [Server thread/INFO]: Loaded 0 boosted items
+[16:06:33] [Server thread/INFO]: Loaded 2 furnace for reassigning.
+[16:06:33] [Jobs-DatabaseSaveTask/INFO]: Started database save task.
+[16:06:33] [Jobs-BufferedPaymentThread/INFO]: Started buffered payment thread.
+[16:06:33] [Server thread/INFO]: Preloaded 13 players data in 0.01
+[16:06:33] [Server thread/INFO]: WorldGuard detected.
+[16:06:33] [Server thread/INFO]: MythicMobs detected.
+[16:06:33] [Server thread/INFO]: Registering listeners...
+[16:06:33] [Server thread/INFO]: Registered MythicMobs listener.
+[16:06:33] [Server thread/INFO]: Listeners registered successfully
+[16:06:33] [Server thread/INFO]: Plugin has been enabled successfully.
+[16:06:33] [Server thread/INFO]: ------------------------------------
+[16:06:34] [Server thread/INFO]: [spark] Starting background profiler...
+[16:06:34] [PvPManager Worker Thread - 2/INFO]: PvP ➤ Update available: 4.1.71 Current version: 4.1.68
+[16:06:34] [PvPManager Worker Thread - 2/INFO]: PvP ➤ Follow the link to download: https://www.spigotmc.org/resources/pvpmanager.10610
+[16:06:37] [Server thread/INFO]: [PlaceholderAPI] Placeholder expansion registration initializing...
+[16:06:37] [Server thread/INFO]: Running delayed init tasks
+[16:06:37] [Craft Scheduler Thread - 0 - Essentials/INFO]: [Essentials] Obteniendo información de versión...
+[16:06:37] [Craft Scheduler Thread - 1 - ViaVersion/INFO]: [ViaVersion] Finished mapping loading, shutting down loader executor.
+[16:06:37] [Craft Scheduler Thread - 7 - DailyRewardsPlus/INFO]: [DailyRewards+] Successfully acquired all player data for LeaderBoard.
+[16:06:37] [Craft Scheduler Thread - 6 - ItemEdit/INFO]: [ItemEdit] NEW UPDATE (3.7.8 -> 3.7.10) available at https://modrinth.com/plugin/itemedit/version/latest
+[16:06:37] [Server thread/INFO]: [com.fastasyncworldedit.bukkit.regions.WorldGuardFeature] Plugin 'WorldGuard' found. Using it now.
+[16:06:37] [Server thread/INFO]: [com.fastasyncworldedit.bukkit.FaweBukkit] Attempting to use plugin 'WorldGuard'
+[16:06:37] [Server thread/INFO]: [Essentials] Essentials found a compatible payment resolution method: Vault Compatibility Layer (v1.7.3-b131)!
+[16:06:37] [Server thread/INFO]: [Jobs] Successfully linked with Vault. (Essentials)
+[16:06:37] [Server thread/INFO]: [Jobs] Successfully linked with Vault. (LuckPerms)
+[16:06:37] [Server thread/WARN]: [MythicMobs] ✗ Configuration Error in Mechanic CustomMechanic:NULL
+[16:06:37] [Server thread/WARN]: [MythicMobs] --| Skill: InvocarEspectro | File: /home/container/plugins/MythicMobs/skills/Zona4_Skills.yml
+[16:06:37] [Server thread/WARN]: [MythicMobs] --| Error Message: Failed to load custom mechanic SPAWN
+[16:06:37] [Server thread/WARN]: [MythicMobs] --| Mechanic Line: spawn{mob=EspectroCripta;amount=1}
+[16:06:37] [Server thread/WARN]: [MythicMobs] ✗ Config Error for Targeter line 'se': Failed to load custom targeter SE
+[16:06:37] [Server thread/WARN]: [MythicMobs] ✗ Configuration Error in Mechanic CustomMechanic:NULL
+[16:06:37] [Server thread/WARN]: [MythicMobs] --| Skill: InvocarRefuerzo | File: /home/container/plugins/MythicMobs/skills/Zona4_Skills.yml
+[16:06:37] [Server thread/WARN]: [MythicMobs] --| Error Message: Failed to load custom mechanic SPAWN
+[16:06:37] [Server thread/WARN]: [MythicMobs] --| Mechanic Line: spawn{mob=AcolitoSantuario;amount=1}
+[16:06:37] [Server thread/WARN]: [MythicMobs] ✗ Configuration Error in Mechanic CustomMechanic:NULL
+[16:06:37] [Server thread/WARN]: [MythicMobs] --| Skill: WardenHordaFase2 | File: /home/container/plugins/MythicMobs/skills/warden_skills.yml
+[16:06:37] [Server thread/WARN]: [MythicMobs] --| Error Message: Failed to load custom mechanic MYTH
+[16:06:37] [Server thread/WARN]: [MythicMobs] --| Mechanic Line: myth{m=ZombieCripta3;a=3}
+[16:06:37] [Server thread/WARN]: [MythicMobs] ✗ Configuration Error in Mechanic CustomMechanic:NULL
+[16:06:37] [Server thread/WARN]: [MythicMobs] --| Skill: WardenHordaFase2 | File: /home/container/plugins/MythicMobs/skills/warden_skills.yml
+[16:06:37] [Server thread/WARN]: [MythicMobs] --| Error Message: Failed to load custom mechanic MYTH
+[16:06:37] [Server thread/WARN]: [MythicMobs] --| Mechanic Line: myth{m=EsqueletoCripta2;a=2}
+[16:06:37] [Server thread/WARN]: [MythicMobs] ✗ Configuration Error in Mechanic CustomMechanic:NULL
+[16:06:37] [Server thread/WARN]: [MythicMobs] --| Skill: WardenHordaFase2 | File: /home/container/plugins/MythicMobs/skills/warden_skills.yml
+[16:06:37] [Server thread/WARN]: [MythicMobs] --| Error Message: Failed to load custom mechanic MYTH
+[16:06:37] [Server thread/WARN]: [MythicMobs] --| Mechanic Line: myth{m=CaballeroErrante1;a=1}
+[16:06:37] [Server thread/WARN]: [MythicMobs] ✗ Configuration Error in Mechanic CustomMechanic:NULL
+[16:06:37] [Server thread/WARN]: [MythicMobs] --| Skill: WardenHordaFase3 | File: /home/container/plugins/MythicMobs/skills/warden_skills.yml
+[16:06:37] [Server thread/WARN]: [MythicMobs] --| Error Message: Failed to load custom mechanic MYTH
+[16:06:37] [Server thread/WARN]: [MythicMobs] --| Mechanic Line: myth{m=CaballeroErrante2;a=2}
+[16:06:37] [Server thread/WARN]: [MythicMobs] ✗ Configuration Error in Mechanic CustomMechanic:NULL
+[16:06:37] [Server thread/WARN]: [MythicMobs] --| Skill: WardenHordaFase3 | File: /home/container/plugins/MythicMobs/skills/warden_skills.yml
+[16:06:37] [Server thread/WARN]: [MythicMobs] --| Error Message: Failed to load custom mechanic MYTH
+[16:06:37] [Server thread/WARN]: [MythicMobs] --| Mechanic Line: myth{m=EsqueletoCripta3;a=3}
+[16:06:37] [Server thread/WARN]: [MythicMobs] ✗ Configuration Error in Mechanic CustomMechanic:NULL
+[16:06:37] [Server thread/WARN]: [MythicMobs] --| Skill: WardenHordaFase3 | File: /home/container/plugins/MythicMobs/skills/warden_skills.yml
+[16:06:37] [Server thread/WARN]: [MythicMobs] --| Error Message: Failed to load custom mechanic MYTH
+[16:06:37] [Server thread/WARN]: [MythicMobs] --| Mechanic Line: myth{m=ZombieCripta3;a=2}
+[16:06:37] [Server thread/WARN]: [MythicMobs] ✗ Configuration Error in Mechanic CustomMechanic:NULL
+[16:06:37] [Server thread/WARN]: [MythicMobs] --| Mob: OvejaDash | File: /home/container/plugins/MythicMobs/mobs/ExampleMobs.yml
+[16:06:37] [Server thread/WARN]: [MythicMobs] --| Error Message: Failed to load custom mechanic DASH
+[16:06:37] [Server thread/WARN]: [MythicMobs] --| Mechanic Line: dash{speed=6.0;vertical=0.8}
+[16:06:37] [Server thread/WARN]: [MythicMobs] ✗ Configuration Error in Condition CustomCondition
+[16:06:37] [Server thread/WARN]: [MythicMobs] --| File: Unknown
+[16:06:37] [Server thread/WARN]: [MythicMobs] --| Error Message: Failed to load custom condition nighttime
+[16:06:37] [Server thread/WARN]: [MythicMobs] --| Mechanic Line: nighttime
+[16:06:37] [Server thread/WARN]: [MythicMobs] ✗ Configuration Error in Condition CustomCondition
+[16:06:37] [Server thread/WARN]: [MythicMobs] --| File: Unknown
+[16:06:37] [Server thread/WARN]: [MythicMobs] --| Error Message: Failed to load custom condition nighttime
+[16:06:37] [Server thread/WARN]: [MythicMobs] --| Mechanic Line: nighttime
+[16:06:37] [Server thread/INFO]: [ShopGUIPlus] Registered custom economy provider 'Almas'.
+[16:06:37] [Server thread/INFO]: [ThunderCurrencys] [ShopGUI+] Economía 'almas' registrada correctamente.
+[16:06:37] [Server thread/INFO]: [ShopGUIPlus] ================================[ ShopGUI+ 1.113.0 ]================================
+[16:06:37] [Server thread/INFO]: [ShopGUIPlus]  
+[16:06:37] [Server thread/INFO]: [ShopGUIPlus] Need help using ShopGUI+? Check out our Wiki or Join our Discord Support server!
+[16:06:37] [Server thread/INFO]: [ShopGUIPlus] https://docs.brcdev.net/ & https://discord.brcdev.net/
+[16:06:37] [Server thread/INFO]: [ShopGUIPlus]  
+[16:06:37] [Server thread/INFO]: [ShopGUIPlus] Vault economy registered.
+[16:06:37] [Server thread/INFO]: [ShopGUIPlus] Exp Levels economy registered.
+[16:06:37] [Server thread/INFO]: [ShopGUIPlus] Vault economy enabled.
+[16:06:37] [Server thread/INFO]: [ShopGUIPlus] Exp Levels economy enabled.
+[16:06:37] [Server thread/INFO]: [ShopGUIPlus] Using Vault as default economy provider.
+[16:06:37] [Server thread/INFO]: [ShopGUIPlus] Permissions support enabled.
+[16:06:37] [Server thread/INFO]: [ShopGUIPlus] Enabled item provider for MythicMobs.
+[16:06:37] [Server thread/INFO]: [ShopGUIPlus] Enabled item provider for ServerItem.
+[16:06:37] [Server thread/INFO]: [ShopGUIPlus] No external spawner plugins registered, using built-in spawners support.
+[16:06:37] [Server thread/INFO]: [ShopGUIPlus] Loaded 11 main menu items.
+[16:06:37] [Server thread/INFO]: [ShopGUIPlus] Loaded shop 'mobs' with 19 items.
+[16:06:37] [Server thread/INFO]: [ShopGUIPlus] Loaded shop 'farmeo' with 23 items.
+[16:06:37] [Server thread/INFO]: [ShopGUIPlus] Loaded shop 'venta' with 2 items.
+[16:06:37] [Server thread/INFO]: [ShopGUIPlus] Loaded shop 'tintes' with 16 items.
+[16:06:37] [Server thread/INFO]: [ShopGUIPlus] Loaded shop 'equipo' with 17 items.
+[16:06:37] [Server thread/INFO]: [ShopGUIPlus] Loaded shop 'trims' with 18 items.
+[16:06:37] [Server thread/INFO]: [ShopGUIPlus] Loaded shop 'bloques' with 307 items.
+[16:06:37] [Server thread/INFO]: [ShopGUIPlus] Loaded shop 'redstone' with 10 items.
+[16:06:37] [Server thread/INFO]: [ShopGUIPlus] Loaded shop 'almas' with 19 items.
+[16:06:37] [Server thread/INFO]: [ShopGUIPlus] Loaded shop 'comida' with 17 items.
+[16:06:37] [Server thread/INFO]: [ShopGUIPlus] Loaded shop 'encantamientos' with 9 items.
+[16:06:37] [Server thread/INFO]: [ShopGUIPlus] Loaded shop 'miscellaneo' with 20 items.
+[16:06:37] [Server thread/INFO]: [ShopGUIPlus] Loaded 12 shops with total of 477 items.
+[16:06:37] [Server thread/INFO]: [ShopGUIPlus] Loaded 0 permission-based price modifiers.
+[16:06:37] [Server thread/INFO]: [ShopGUIPlus] Loaded 10 sounds.
+[16:06:37] [Server thread/INFO]: [ShopGUIPlus]  
+[16:06:37] [Server thread/INFO]: [ShopGUIPlus] ====================================================================================
+[16:06:38] [Server thread/INFO]: Done (35.403s)! For help, type "help"
+[16:06:38] [Craft Scheduler Thread - 2 - Vault/INFO]: [Vault] Checking for Updates ... 
+[16:06:38] [Server thread/INFO]: [voicechat] Loading plugins
+[16:06:38] [Server thread/INFO]: [voicechat] Loaded 2 plugin(s)
+[16:06:38] [Server thread/INFO]: [voicechat] Initializing plugins
+[16:06:38] [Server thread/INFO]: [SVG] [VCBridge] VoiceChat API initialized
+[16:06:38] [Server thread/INFO]: [voicechat-discord] Successfully initialized Simple Voice Chat plugin
+[16:06:38] [Server thread/INFO]: [voicechat] Initialized 2 plugin(s)
+[16:06:38] [Server thread/INFO]: [voicechat] Registering events for 'SimpleVoice-Geyser'
+[16:06:38] [Server thread/WARN]: [SVG] [VCBridge] Registering events...
+[16:06:38] [Server thread/INFO]: [voicechat] Registering events for 'voicechat-discord'
+[16:06:38] [Craft Scheduler Thread - 2 - Vault/INFO]: [Vault] No new version available
+[16:06:38] [Server thread/WARN]: [voicechat] Running in offline mode - Voice chat encryption is not secure!
+[16:06:38] [VoiceChatServerThread/INFO]: [voicechat] Voice host is 'thundermc.es:24455'
+[16:06:38] [Server thread/INFO]: [SVG] [VCBridge] Voice chat server started: de.maxhenkel.voicechat.plugins.impl.VoicechatServerApiImpl@17556663
+[16:06:38] [VoiceChatServerThread/INFO]: [voicechat] Voice chat server started at 0.0.0.0:24455
+[16:06:38] [Server thread/INFO]: [PlaceholderAPI] Successfully registered internal expansion: quests [3.16.1-430c34a]
+[16:06:38] [Server thread/INFO]: [Quests] Successfully hooked into Essentials economy.
+[16:06:38] [Paper Async Task Handler Thread - 1/WARN]: *** You are running an outdated version of Minecraft, which is 4 release(s) and 6 build(s) behind!
+[16:06:38] [Paper Async Task Handler Thread - 1/WARN]: *** Please update to the latest stable version on https://papermc.io/downloads/paper ***
+[16:06:38] [Server thread/INFO]: [Quests] 50 task types have been registered.
+[16:06:38] [Server thread/INFO]: [Quests] 0 quest items have been registered.
+[16:06:38] [Server thread/INFO]: [Quests] 405 quests have been registered.
+[16:06:38] [Server thread/INFO]: [PlaceholderAPI] Successfully registered internal expansion: commandpanels [4.1.6]
+[16:06:38] [Server thread/INFO]: [PlaceholderAPI] Successfully registered external expansion: math [2.0.2]
+[16:06:38] [Server thread/INFO]: [PlaceholderAPI] Successfully registered external expansion: rng [1.4.0]
+[16:06:38] [Server thread/INFO]: [PlaceholderAPI] Successfully registered external expansion: player [2.0.9]
+[16:06:38] [Server thread/INFO]: [PlaceholderAPI] Successfully registered external expansion: bungee [2.3]
+[16:06:38] [Server thread/INFO]: [PlaceholderAPI] Successfully registered external expansion: changeoutput [1.2.2]
+[16:06:38] [Server thread/INFO]: [PlaceholderAPI] Successfully registered external expansion: statistic [2.0.2]
+[16:06:38] [Server thread/INFO]: [PlaceholderAPI] Successfully registered external expansion: vault [1.8.3]
+[16:06:38] [Server thread/INFO]: [PlaceholderAPI] Successfully registered external expansion: essentials [1.5.2]
+[16:06:38] [Server thread/INFO]: [PlaceholderAPI] Successfully registered external expansion: luckperms [5.4-R2]
+[16:06:38] [Server thread/INFO]: [PlaceholderAPI] Successfully registered external expansion: server [2.7.3]
+[16:06:38] [Server thread/INFO]: 10 placeholder hook(s) registered!
+[16:06:38] [Craft Scheduler Thread - 0 - Essentials/WARN]: [Essentials] ¡Estás a 11 compilación(es) de desactualización de EssentialsX!
+[16:06:38] [Craft Scheduler Thread - 0 - Essentials/WARN]: [Essentials] Descárgala aquí: https://essentialsx.net/downloads.html
+[16:06:39] [Craft Scheduler Thread - 0 - AlonsoTags/INFO]: [AlonsoTags] Checking for updates...
+[16:06:39] [Craft Scheduler Thread - 0 - AlonsoTags/INFO]: [AlonsoTags] Plugin up-to-date! You have the latest version!
+[16:06:41] [Server thread/INFO]: [AlonsoTags] [Scheduled] Loading economy hooks..
+[16:06:41] [Server thread/INFO]: [AlonsoTags] No vault hooks queued to be registered. Skipping..
+[16:06:57] [User Authenticator #0/INFO]: UUID of player Dragonmil65 is cabb6f6f-4441-4fce-9641-5be36950ef7f
+[16:06:57] [Server thread/INFO]: [HorriblePlayerLoginEventHack] You have plugins listening to the PlayerLoginEvent, this will cause re-configuration APIs to be unavailable: [LuckPerms, DeluxeMenus, MythicLib, WorldGuard]
+[16:06:59] [Server thread/INFO]: Dragonmil65 joined the game
+[16:06:59] [Server thread/INFO]: Dragonmil65[/87.221.56.83:50220] logged in with entity id 166 at ([world]144.93156367582117, 113.0, 106.81218837222288)
+[16:07:01] [Server thread/INFO]: Dragonmil65 issued server command: /shop reload
+[16:07:01] [Server thread/INFO]: [ShopGUIPlus] Registered custom economy provider 'Almas'.
+[16:07:01] [Server thread/INFO]: [ThunderCurrencys] [ShopGUI+] Economía 'almas' registrada correctamente.
+[16:07:01] [Server thread/INFO]: [ShopGUIPlus] ================================[ ShopGUI+ 1.113.0 ]================================
+[16:07:01] [Server thread/INFO]: [ShopGUIPlus]  
+[16:07:01] [Server thread/INFO]: [ShopGUIPlus] Need help using ShopGUI+? Check out our Wiki or Join our Discord Support server!
+[16:07:01] [Server thread/INFO]: [ShopGUIPlus] https://docs.brcdev.net/ & https://discord.brcdev.net/
+[16:07:01] [Server thread/INFO]: [ShopGUIPlus]  
+[16:07:01] [Server thread/INFO]: [ShopGUIPlus] Vault economy enabled.
+[16:07:01] [Server thread/INFO]: [ShopGUIPlus] Exp Levels economy enabled.
+[16:07:01] [Server thread/INFO]: [ShopGUIPlus] Using Vault as default economy provider.
+[16:07:01] [Server thread/INFO]: [ShopGUIPlus] Permissions support enabled.
+[16:07:01] [Server thread/INFO]: [ShopGUIPlus] Enabled item provider for MythicMobs.
+[16:07:01] [Server thread/INFO]: [ShopGUIPlus] Enabled item provider for ServerItem.
+[16:07:01] [Server thread/INFO]: [ShopGUIPlus] No external spawner plugins registered, using built-in spawners support.
+[16:07:01] [Server thread/INFO]: [ShopGUIPlus] Loaded 11 main menu items.
+[16:07:01] [Server thread/INFO]: [ShopGUIPlus] Loaded shop 'mobs' with 19 items.
+[16:07:01] [Server thread/INFO]: [ShopGUIPlus] Loaded shop 'farmeo' with 23 items.
+[16:07:01] [Server thread/INFO]: [ShopGUIPlus] Loaded shop 'venta' with 2 items.
+[16:07:01] [Server thread/INFO]: [ShopGUIPlus] Loaded shop 'tintes' with 16 items.
+[16:07:01] [Server thread/INFO]: [ShopGUIPlus] Loaded shop 'equipo' with 17 items.
+[16:07:01] [Server thread/INFO]: [ShopGUIPlus] Loaded shop 'trims' with 18 items.
+[16:07:01] [Server thread/INFO]: [ShopGUIPlus] Loaded shop 'bloques' with 307 items.
+[16:07:01] [Server thread/INFO]: [ShopGUIPlus] Loaded shop 'redstone' with 10 items.
+[16:07:01] [Server thread/INFO]: [ShopGUIPlus] Loaded shop 'almas' with 19 items.
+[16:07:01] [Server thread/INFO]: [ShopGUIPlus] Loaded shop 'comida' with 17 items.
+[16:07:01] [Server thread/INFO]: [ShopGUIPlus] Loaded shop 'encantamientos' with 9 items.
+[16:07:01] [Server thread/INFO]: [ShopGUIPlus] Loaded shop 'miscellaneo' with 20 items.
+[16:07:01] [Server thread/INFO]: [ShopGUIPlus] Loaded 12 shops with total of 477 items.
+[16:07:01] [Server thread/INFO]: [ShopGUIPlus] Loaded 0 permission-based price modifiers.
+[16:07:01] [Server thread/INFO]: [ShopGUIPlus] Loaded 10 sounds.
+[16:07:01] [Server thread/INFO]: [ShopGUIPlus]  
+[16:07:01] [Server thread/INFO]: [ShopGUIPlus] ====================================================================================
+[16:07:02] [Server thread/INFO]: Dragonmil65 issued server command: /shop
+[16:07:06] [Server thread/INFO]: Dragonmil65 issued server command: /shop
+[16:07:09] [Server thread/INFO]: Dragonmil65 issued server command: /tienda
+[16:07:11] [Server thread/INFO]: Dragonmil65 issued server command: /shopgui
+[16:07:16] [Server thread/INFO]: Dragonmil65 issued server command: /shop
+[16:07:22] [Server thread/INFO]: Dragonmil65 issued server command: /sellgui

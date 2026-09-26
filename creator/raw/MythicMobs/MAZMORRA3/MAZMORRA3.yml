@@ -1,0 +1,154 @@
+# ===== GUARDIÁN DE LA FORJA (MOB PESADO) =====
+GuardianForja:
+  Type: ZOMBIE
+  Display: '&cLvl 4 &8| &fᴄᴀᴍᴘᴇᴏɴ ᴄᴀɪᴅᴏ &8| <#ED1313><caster.hp{r=0}><&heart>'
+  Health: 35
+  Damage: 20
+  Equipment:
+    - GOLDEN_AXE HAND
+    - GOLDEN_HELMET HEAD
+    - IRON_CHESTPLATE CHEST
+    - DIAMOND_LEGGINGS LEGS
+    - DIAMOND_BOOTS FEET
+  Options:
+    Scale: 1.2
+    MovementSpeed: 0.22
+    PreventOtherDrops: true
+    LeashRange: 16
+    FollowRange: 10
+    Despawn: false
+    ReturnHome: true
+    Silent: false
+  AIGoalSelectors:
+    - 0 clear
+    - 1 meleeattack
+    - 2 randomstroll
+    - 3 lookatplayers
+  AITargetSelectors:
+    - 0 clear
+    - 1 players
+  Drops:
+    - IRON_INGOT 1-3 1
+    - GOLD_NUGGET 1-2 0.5
+  Skills:
+    ####### VISUAL #######
+    - skill{s=SonidoKill} @trigger ~onDeath
+    - setname{n=<caster.name>;delay=2} @self ~onDamaged
+    - particles{particle=SCULK_SOUL;amount=50;speed=0.1;hSpread=0.5;vSpread=0.5} @self ~onDeath
+    ####### RECOMPENSAS #######
+    - actionmessage{m="<#34B0F3>+5 <white>Almas <#34B0F3>🔥 &8| <#59E91F>+<#59E91F>&l$&r<#59E91F>60"} @trigger ~onDeath 
+    - particles{particle=FLAME;amount=60;speed=0.15;hSpread=0.8;vSpread=0.8} @self ~onDamaged ?health{h=<42} 
+    - command{c="points give <trigger.name> 5 -s";sender=console} @self ~onDeath 
+    - command{c="economy give <trigger.name> 60";sender=console} @self ~onDeath 
+    - command{c="si give fragmentosuper 1 <trigger.name> -s";sender=console} @self ~onDeath 0.02 
+    - command{c="si give fragmentorara 1 <trigger.name> -s";sender=console} @self ~onDeath 0.02 
+    - command{c="si give fragmentogadget 1 <trigger.name> -s";sender=console} @self ~onDeath 0.02 
+    - command{c="si give fragmentomitica 1 <trigger.name> -s";sender=console} @self ~onDeath 0.003 
+    ####### EXTRAS #######
+    # Primer umbral — al 60% HP golpe de tierra visual (partículas + slow al jugador)
+    - particles{particle=LAVA;amount=30;speed=0.2;hSpread=1.0;vSpread=0.5} @target ~onDamaged ?health{h=<84}
+    - potion{type=SLOWNESS;duration=60;level=1} @target ~onDamaged ?health{h=<84}
+    # Segundo umbral — al 30% HP el guardián se fortalece
+    - potion{type=STRENGTH;duration=100;level=1} @self ~onDamaged ?health{h=<42}
+    - skill{s=BoostAlmas} @self ~onDeath 
+    - setvariable{var=almas;value=5;scope=CASTER;type=INTEGER} @self ~onSpawn
+    
+# ===== EXPLORADOR ÍGNEO (MOB RÁPIDO) =====
+ExploradorIgneo:
+  Type: SKELETON
+  Display: '&6Lvl 3 &8| &fɴᴇᴄʀᴏᴀʀqᴜᴇʀᴏ &8| <#ED1313><caster.hp{r=0}><&heart>'
+  Health: 18
+  Damage: 12
+  Equipment:
+    - BOW HAND
+    - LEATHER_HELMET HEAD
+  Options:
+    MovementSpeed: 0.30
+    PreventOtherDrops: true
+    LeashRange: 18
+    FollowRange: 10
+    Despawn: false
+    ReturnHome: true
+    Silent: false
+  AIGoalSelectors:
+    - 0 clear
+    - 1 rangedattack
+    - 2 randomstroll
+    - 3 lookatplayers
+    - 4 float
+  AITargetSelectors:
+    - 0 clear
+    - 1 players
+  Drops:
+    - ARROW 2-5 1
+    - COAL 1-2 0.6
+  Skills:
+    ####### VISUAL #######
+    - skill{s=SonidoKill} @trigger ~onDeath
+    - setname{n=<caster.name>;delay=2} @self ~onDamaged
+    - particles{particle=SCULK_SOUL;amount=50;speed=0.1;hSpread=0.5;vSpread=0.5} @self ~onDeath
+    ####### RECOMPENSAS #######
+    - actionmessage{m="<#34B0F3>+3 <white>Almas <#34B0F3>🔥 &8| <#59E91F>+<#59E91F>&l$&r<#59E91F>25"} @trigger ~onDeath 
+    - command{c="points give <trigger.name> 3 -s";sender=console} @self ~onDeath 
+    - command{c="economy give <trigger.name> 25";sender=console} @self ~onDeath 
+    - command{c="si give fragmentosuper 1 <trigger.name> -s";sender=console} @self ~onDeath 0.02 
+    - command{c="si give fragmentorara 1 <trigger.name> -s";sender=console} @self ~onDeath 0.02 
+    - command{c="si give fragmentogadget 1 <trigger.name> -s";sender=console} @self ~onDeath 0.02 
+    - command{c="si give fragmentomitica 1 <trigger.name> -s";sender=console} @self ~onDeath 0.003 
+    ####### EXTRAS #######
+    # Salto cada 5 segundos — simula que se reposiciona entre plataformas
+    - leap{velocity=1.2} @self ~onTimer:100
+    # Al recibir daño huye brevemente para mantener distancia
+    - potion{type=SPEED;duration=40;level=2} @self ~onDamaged
+    - skill{s=BoostAlmas} @self ~onDeath 
+    - setvariable{var=almas;value=3;scope=CASTER;type=INTEGER} @self ~onSpawn
+    
+# ===== SOLDADO DE LAS RUINAS (MOB COMÚN) =====
+SoldadoRuinas:
+  Type: ZOMBIE
+  Display: '&6Lvl 3 &8| &fꜱᴏʟᴅᴀᴅᴏ ᴇʀʀᴀɴᴛᴇ &8| <#ED1313><caster.hp{r=0}><&heart>'
+  Health: 22
+  Damage: 15
+  Equipment:
+    - STONE_SWORD HAND
+    - CHAINMAIL_CHESTPLATE CHEST
+    - CHAINMAIL_HELMET HEAD
+    - IRON_LEGGINGS LEGS
+    - IRON_BOOTS FEET
+  Options:
+    MovementSpeed: 0.25
+    PreventOtherDrops: true
+    LeashRange: 14
+    FollowRange: 10
+    Despawn: false
+    ReturnHome: true
+    Silent: false
+  AIGoalSelectors:
+    - 0 clear
+    - 1 meleeattack
+    - 2 randomstroll
+    - 3 lookatplayers
+    - 4 float
+  AITargetSelectors:
+    - 0 clear
+    - 1 players
+  Drops:
+    - IRON_NUGGET 2-4 1
+    - GRAVEL 1-2 0.5
+  Skills:
+    ####### VISUAL #######
+      - skill{s=SonidoKill} @trigger ~onDeath
+      - setname{n=<caster.name>;delay=2} @self ~onDamaged
+      - particles{particle=SCULK_SOUL;amount=50;speed=0.1;hSpread=0.5;vSpread=0.5} @self ~onDeath
+    ####### RECOMPENSAS #######
+      - actionmessage{m="<#34B0F3>+3 <white>Almas <#34B0F3>🔥 &8| <#59E91F>+<#59E91F>&l$&r<#59E91F>30"} @trigger ~onDeath  
+      - command{c="points give <trigger.name> 3 -s";sender=console} @self ~onDeath  
+      - command{c="economy give <trigger.name> 30";sender=console} @self ~onDeath  
+      - command{c="si give fragmentosuper 1 <trigger.name> -s";sender=console} @self ~onDeath 0.02  
+      - command{c="si give fragmentorara 1 <trigger.name> -s";sender=console} @self ~onDeath 0.02  
+      - command{c="si give fragmentogadget 1 <trigger.name> -s";sender=console} @self ~onDeath 0.02  
+      - command{c="si give fragmentomitica 1 <trigger.name> -s";sender=console} @self ~onDeath 0.003  
+    ####### EXTRAS #######
+      - potion{type=SPEED;duration=60;level=1} @self ~onDamaged ?health{h=<26}
+      - skill{s=BoostAlmas} @self ~onDeath 
+      - setvariable{var=almas;value=3;scope=CASTER;type=INTEGER} @self ~onSpawn

@@ -1,0 +1,117 @@
+{
+  "flags": 0,
+  "embeds": [
+    {
+      "title": "⚡ BIENVENIDO A THUNDERMC NETWORK",
+      "description": "Tu portal de acceso oficial a la comunidad y a nuestros servidores de **Minecraft 1.21.11**.\nExplora una economía progresiva, mazmorras con jefes custom y sistemas de recompensas únicos.",
+      "color": 16706304,
+      "fields": [
+        {
+          "name": "🌐 Conexión al Servidor",
+          "value": "```yaml\nIP Java: play.thundermc.es\nIP Bedrock: bedrock.thundermc.es (Puerto: 19132)\nVersión: 1.21.x\n```",
+          "inline": false
+        },
+        {
+          "name": "📜 Reglas Esenciales",
+          "value": "> **1.** Respeto absoluto hacia la comunidad y el staff.\n> **2.** Prohibido el uso de clientes modificados, hacks o exploits.\n> **3.** El comercio ilegal con dinero real ajeno a la tienda está sancionado.\n> **4.** Reporta cualquier anomalía en el canal de soporte.",
+          "inline": false
+        },
+        {
+          "name": "🧭 Accesos Rápidos",
+          "value": "Utiliza los botones de navegación inferior para acceder a nuestra plataforma web, abrir consultas o consultar el estado de la red.",
+          "inline": false
+        }
+      ],
+      "footer": {
+        "text": "ThunderMC • thunderverse • 1.21.11 SMP"
+      }
+    }
+  ],
+  "components": [
+    {
+      "type": 1,
+      "components": [
+        {
+          "type": 2,
+          "style": 5,
+          "label": "Tienda Oficial",
+          "emoji": {
+            "name": "🛒"
+          },
+          "url": "https://tienda.thundermc.es"
+        },
+        {
+          "type": 2,
+          "style": 5,
+          "label": "Web & Rangos",
+          "emoji": {
+            "name": "🌐"
+          },
+          "url": "https://thundermc.es"
+        },
+        {
+          "type": 2,
+          "style": 1,
+          "custom_id": "btn_crear_ticket",
+          "label": "Abrir Ticket",
+          "emoji": {
+            "name": "🎫"
+          }
+        },
+        {
+          "type": 2,
+          "style": 2,
+          "custom_id": "btn_ver_reglas",
+          "label": "Reglamento Completo",
+          "emoji": {
+            "name": "📖"
+          }
+        }
+      ]
+    },
+    {
+      "type": 1,
+      "components": [
+        {
+          "type": 3,
+          "custom_id": "select_info_portal",
+          "placeholder": "🔍 Selecciona una sección para ver más información...",
+          "options": [
+            {
+              "label": "¿Cómo empezar a jugar?",
+              "value": "info_empezar",
+              "description": "Comandos básicos /spawn, /mina y sistema de trabajos",
+              "emoji": {
+                "name": "⛏"
+              }
+            },
+            {
+              "label": "Sistema de Mazmorras y Almas",
+              "value": "info_dungeons",
+              "description": "Guía sobre bosses, /warp dungeons y mercado negro",
+              "emoji": {
+                "name": "☠"
+              }
+            },
+            {
+              "label": "Rangos VIP y Ventajas",
+              "value": "info_vips",
+              "description": "Titan, Mythic, Legend, Heroe y Knight",
+              "emoji": {
+                "name": "⭐"
+              }
+            },
+            {
+              "label": "Soporte y Reportes",
+              "value": "info_soporte",
+              "description": "Tiempos de respuesta y canales oficiales",
+              "emoji": {
+                "name": "🛡"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

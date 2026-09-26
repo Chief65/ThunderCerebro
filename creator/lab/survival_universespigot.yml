@@ -1,0 +1,542 @@
+# The main configuration file for UniverseSpigot.
+
+asynchronous:
+  tracker:
+    # Enables Asynchronous Entity Tracker.
+    # Recommended value: true
+    enabled: true
+  pathfinding:
+    # Enables Asynchronous Entity Pathfinder.
+    # Recommended value: true
+    enabled: true
+    # Configure the maximum amount of threads for pathfinding.
+    # 0 = available processor / 4.
+    threads: 2
+  chunks-sending:
+    # Optimizes chunk packet sending through multiples threads.
+    # Recommended value: true
+    enabled: true
+  mob-spawning:
+    # Optimizes mob spawning through multiples threads.
+    # Recommended value: true
+    enabled: true
+  world-ticking:
+    # Spreads world ticking to multiple threads.
+    enabled: false
+    # Configure the maximum amount of threads for world-ticking.
+    # Recommended value: The amount of worlds in the server
+    threads: 6
+  data-saving:
+    # Optimizes world/player data saving through multiple threads.
+    # Recommended value: true
+    enabled: false
+  inventory-updates:
+    # Optimizes inventory updates through multiple threads.
+    # Recommended value: false
+    enabled: false
+  packet-sending:
+    # Optimizes packet sending through multiple threads.
+    # Recommended value: false
+    enabled: false
+behavior:
+  # Disables the usage of books.
+  disableBooks: false
+  # Disables block ticking.
+  disableBlockTicking: false
+  # Disables block events (i.e piston pushing).
+  disableBlockEvents: false
+  # Disables fluid ticking.
+  disableFluidTicking: false
+  # Disables chunk ticking.
+  disableChunkTicking: false
+  # Disables block survival checks (i.e cactus wont break by nearby blocks).
+  disableBlockSurvivalChecks: false
+  # Prevents cactus flowers from growing.
+  disableCactusFlowerGrow: false
+  # Removes players from being listed on tablist by default.
+  removePlayersFromTabList: false
+  # Uses an alternative system to Paper KeepAlive that doesn't kick the player by packet order.
+  alternativeKeepAlive: true
+  # Disables minecraft locator bar system.
+  disableLocatorBar: false
+  # Prevents sensitive mobs to water from getting damage.
+  disableMobWaterSensitivity: false
+  # Makes wind charges entities ignore the EXPLOSION_KNOCKBACK_RESISTANCE attribute.
+  windChargesIgnoreExplosionKnockbackResistanceAttribute: false
+  # Cancels projectile hits when the hit event is cancelled.
+  cancelProjectileHitsWhenEventIsCancelled: false
+  # Retains player motions when a relative teleport happens.
+  retainPlayerMotionOnRelativeTeleports: false
+  # Removes the inaccuracy on projectile movement.
+  alwaysAccurateProjectiles: false
+  # Disables 1.21.6 projectile margin expansion logic.
+  disableProjectileMarginExpansion: false
+  # Allows the Bukkit API to teleport entities with passengers.
+  allowTeleportationWithPassengers: false
+  # Prevents worlds from setting the player initial spawn point.
+  disableInitialWorldSpawn: false
+  # Disables world data saving.
+  disableWorldDataSaving: false
+  # Disables Minecraft Chat Signing to prevent player reporting
+  disableChatReporting: false
+  # Disables entity portal tick handling (Affects players).
+  disablePortalHandling: false
+  # Disables Spigot Activation Range System.
+  disableActivationRange: false
+  # Disables entity AI. Acts like Spigot's nerfSpawnerMobs but for all mobs.
+  disableEntityAI: false
+  # Disables entity brain.
+  disableEntityBrain: false
+  # Disables entity collisions.
+  disableEntityCollisions: false
+  # Disables turtle helmet ticking (Effects won't work).
+  disableTurtleHelmetTicking: false
+  # Makes items on death no longer spread far away from the death location.
+  oldDeathItemDropBehavior: true
+  # Reverts food regeneration to 1.8 version.
+  revertFoodRegeneration: false
+  # Makes the speed of cooking configurable
+  cookSpeedMultiplier: 1.0
+  # Makes entities only pushable by players.
+  onlyPlayersPushEntities: false
+  # Disables entity suffocation check.
+  disableEntitySuffocationCheck: false
+  # Disables entity world border damage check.
+  disableEntityWorldBorderDamageCheck: false
+  # Disables lava from catching others blocks on fire.
+  disableLavaCatchesBlocksOnFire: false
+  # Disables leaf decay.
+  disableLeafDecay: false
+  # Disables inside checks for big dripleaf block.
+  disableDripLeafInsideCheck: false
+  # Allows chests to open when solid block above.
+  openChestWithBlockOnTop: false
+  # Disables ender dragon respawning logic by ender crystals.
+  disableEndCrystalRespawn: false
+  # Disables ender dragon fight ticking.
+  disableDragonFightTicking: false
+  # Prevents warden player tracking.
+  disableWardenSpawnTracking: false
+  # Disables player sleep announcing.
+  disableSleepAnnounceStatus: false
+  # Disables player statistic updates.
+  disablePlayerStats: false
+  # Disables world weather cycle.
+  disableWeatherCycle: false
+  # Disables world sky brightness updates.
+  disableSkyBrightnessUpdates: false
+  # Disables dolphin treasure search goals.
+  disableDolphinTreasureGoal: true
+  # Makes entity tracking use the initial entity range.
+  useInitialEntityTrackingRange: false
+  structures:
+    # Disables trial chambers structure generation.
+    disableTrialChambersGeneration: false
+    # Disables ancient debris structure generation.
+    disableAncientDebrisGeneration: false
+    # Allows controlling the minimum y level for mineshaft structures.
+    mineshaftMinYLevel: -65
+    # Allows controlling the minimum y level for stronghold structures.
+    strongholdMinYLevel: -65
+    # Allows controlling the maximum y level for stronghold structures.
+    strongholdMaxYLevel: 321
+  effects:
+    strength:
+      # Modifies the default strength effect base modifier.
+      strengthBaseModifier: 3.0
+    speed:
+      # Modifies the default speed effect base modifier.
+      speedBaseModifier: 0.2
+      # Modifies the speed incremental modifier (Requires useSwiftnessCurveAlgorithm).
+      speedIncrementalModifier: 0.1
+      # Uses a swiftness curve algorithm to calculate speed effect modifiers.
+      useSwiftnessCurveAlgorithm: false
+    regeneration:
+      # Uses a custom regeneration algorithm that allows configuring the regeneration 1 tick rate.
+      useCustomRegenerationAlgorithm: false
+      # Configures the regeneration effect tick rate when using the custom regeneration algorithm.
+      goldenAppleRegenTicks: 100
+      # Configures the regeneration amplifier when using the custom regeneration algorithm for enchanted golden apples.
+      goldenAppleRegenAmplifier: 1
+      # Configures the regeneration effect tick rate when using the custom regeneration algorithm.
+      regenerationHealTicks: 50
+  player:
+    # Disables player swimming pose.
+    disableSwimmingPose: false
+  projectile-hit-box:
+    # Specify which projectile entities should have an alternative hit bounding box.
+    # Supported Format: `EntityType;X;Y;Z`
+    # - EntityType: the registry ID of the entity (e.g., minecraft:arrow)
+    # - X/Y/Z: inflation applied to the bounding box along each axis
+    entities:
+    - EXAMPLE;0.67;0.3;0.67
+  disable-goals:
+    # Specify which entities should have their goals disabled.
+    entities:
+    - EXAMPLE
+  load-chunks:
+    # Specify which entities should load chunks when moving.
+    entities:
+    - EXAMPLE
+  water-sensitive:
+    # Specify which entities should take damage from water.
+    entities:
+    - EXAMPLE
+  # Specify the entity tracking update interval of entities. Supported format: `EntityType:Number`.
+  entity-update-interval:
+  - PLAYER:2
+  # Specify the entity tracking range of entities. Supported format: `EntityType:Number`.
+  entity-tracking-range:
+  - EXAMPLE:48
+  # How many ticks should pass before a killer is reset after killing an entity.
+  ticksBeforeKillerReset: 100
+  # Disables vex entity collisions.
+  disableVexCollisions: false
+  # Disables block light updates (Might cause lighting issues).
+  disableBlockLightUpdates: false
+  # Disables grass light checks.
+  disableGrassLightChecks: true
+  # Disables snow light checks.
+  disableSnowLightChecks: true
+  # Disables spawner light checks.
+  disableSpawnerLightChecks: true
+  spawner:
+    # Configure the spawner minimum spawn delay.
+    minSpawnDelay: 300
+    # Configure the spawner maximum spawn delay.
+    maxSpawnDelay: 900
+    # Configure the amount of spawner spawn count.
+    spawnCount: 3
+    # Configure the maximum amount of nearby entities before cancelling spawners ticking.
+    maxNearbyEntities: 6
+    # Configure the required player range for spawners to work.
+    requiredPlayerRange: 16
+    # Configure the maximum position range for spawned entities.
+    spawnRange: 4
+    # Disables spawner max nearby entities check.
+    disableMaxNearbyEntitiesCheck: false
+    # Disables spawner checking for nearby players.
+    disableNearbyPlayersCheck: false
+    # Disables spawner collisions checks.
+    disableCollisionCheck: false
+    # Disables spawner spawn rules checks.
+    disableRulesCheck: false
+alternative-farms:
+  raids:
+    # Reverts raid behaviors to 1.20.
+    old-behavior: false
+    # Decides whether raiders should drop ominous bottles. Only works when old raid behavior is false.
+    drop-ominous-bottles: false
+combat:
+  mace:
+    # Limits mace fall distance calculations to mitigate infinite damage.
+    limit-fall-distance: 15.0
+    # Skips mace fall distance calculation to disable damage scaling.
+    ignore-fall-distance: false
+  # An alternative entity tracking order to have more consistent entity-tracking updates.
+  legacy-tracking-order: false
+  # Disables armor damage reduction limits.
+  disable-armor-reduction-limit: false
+  # Enabling this option makes players always take rising knockback.
+  disableKnockbackScaling: false
+  # Disables shield effectiveness.
+  disableShieldEffectiveness: false
+  # Enables 1.8 sword blocking.
+  enableSwordBlocking: false
+  # Reverts enchanted golden apple effects to 1.8 version.
+  oldEnchantedGappleEffects: false
+  # Reverts explosion blast protection knockback to 1.20.4 version.
+  oldBlastProtection: false
+  # Reverts armor protection to 1.8 version.
+  revertArmorProtection: false
+  # Disables Netherite Armor Knockback Resistance
+  disableNetheriteKnockbackResistance: false
+  # Reverts sharpness buff to 1.8 version.
+  oldSharpnessDamageBuff: false
+  # Disables criticals if player is sprinting.
+  preventCriticalsIfSprinting: true
+  # Disables 1.9+ hit delay.
+  disableHitDelay: false
+  # Enables 1.8 Bow Boosting.
+  enableBowBoosting: false
+  # This will cause projectiles to have old collision from 1.8.
+  oldCollisionsProjectile: false
+  # Disables the sweeping edge effect of swords.
+  disableSweepingEdge: false
+  # This will make fishing hooks knockback entities when struck.
+  fishingHooksDoKnockback: false
+  # This will make fishing hooks pull entities toward the player when reeling.
+  fishingHooksPullEntities: true
+  # This will make tools (axes, swords, pickaxes...) damage to be what it was in 1.8.
+  oldToolAttackDamage: false
+  # Configures the amount of damage modifier per critical hit.
+  criticalModifier: 1.5
+  knockback:
+    # This will make knockback to be what it was in 1.8.
+    oldKnockback: false
+    # Modifier for vertical knockback.
+    vertical: 0.4
+    # Modifier for horizontal knockback.
+    horizontal: 0.4
+    # Modifier for knockback friction.
+    friction: 2.0
+    # Vertical limit of applied knockback.
+    verticalLimit: 0.4000000059604645
+experimental:
+  # Optimizes player movement by reducing chunk source updates.
+  # Recommended value: true
+  reducePlayerChunkSourceUpdates: true
+  # Disables the Paper chunk load version check (This allows, for example, to load chunks from 1.20.2 to 1.20.1).
+  disableChunkNewerVersionLoadCheck: false
+  # Allows changing the transport type used by Netty.
+  # Options:
+  #   - IO_URING: High-performance Linux transport using io_uring for minimal syscalls and low latency (Linux kernel ≥ 5.4).
+  #   - KQUEUE: Event notification mechanism optimized for BSD/macOS systems.
+  #   - EPOLL: Scalable Linux transport using epoll for efficient I/O multiplexing.
+  #   - NIO: Java's built-in non-blocking I/O, works on all platforms but generally slower.
+  #
+  # Recommended value: EPOLL
+  netty-transport-type: EPOLL
+developer:
+  # Allows the recalculation of out of bounds region files to allow instantaneous region pasting.
+  recalculateChunksOutOfBounds: false
+  # Skips validation for vanilla enchantment levels.
+  allowInvalidEnchantLevels: false
+  # The minimum upward movement (in blocks) required to count as a jump.
+  # Vanilla uses > 0.0, meaning any tiny upward movement is treated as a jump.
+  # Raising this can reduce false positives from very small vertical changes
+  # caused by lag, slabs, carpets, or floating-point precision.
+  # Lowering it makes jump detection more sensitive.
+  minJumpVerticalDeltaThreshold: 0.0
+  # Disables Spigot AsyncCatcher to allow operations like world loading to happen async.
+  disableAsyncCatcher: false
+  # Skips world session.lock file validation
+  disableSessionLockFile: false
+  # Prevents reuse of world time packets.
+  disableWorldTimePacketReuse: false
+  # Allows dispatching ItemDamageEvent calls for zero-damage values.
+  callItemDamageEventForZeroDamage: false
+  # Prevents sending shoot sounds to the player when the shoot event is cancelled.
+  cancelArrowShootSoundWhenShootEventIsCancelled: false
+  # Prevents passengers from being dismounted from a player when teleporting.
+  retainPassengersForAPITeleports: false
+  # Adds the packet ID before compressing packet data for custom efficient decoding process.
+  # Recommended value: false (only compatible with custom proxy)
+  addPacketIdBeforeCompressedData: false
+misc:
+  # Skips sending particles feedback to sources that aren't a player (i.e server console)
+  sendParticleFeedbackToNonPlayers: true
+  # Unlocks all recipes for players when joining.
+  unlockAllRecipes: false
+  # Makes Paper's max-joins-per-tick setting work per second instead of per tick.
+  throttleLoginsPerSecond: false
+  # Disables the join/quit messages in chat.
+  disableJoinQuitMessage: false
+  log-cleaner:
+    # Clean old logs inside server's logs folder.
+    enabled: false
+    # Delete logs older than X days on server startup.
+    older-than: 30
+    # Retains only X number of log files on server startup.
+    # Recommended value: -1 (disabled)
+    max-count: -1
+  sentry:
+    # Sentry DSN for improved error logging
+    dsn: ''
+    # Defines Sentry tags for easier data filter and sorting.
+    tags: []
+fixes:
+  # Disables the unsupported post-processing warning that appears on server startup.
+  disableUnsupportedPostProcessingWarning: false
+  # Prevents tracking unacknowledged chat messages to avoid player kicks.
+  disableUnacknowledgedChatKick: false
+  # Prevents plugins from parsing placeholders in unintended ways.
+  fixPluginPlaceholderExploits: true
+  # Allows tripwire hook duplication to work again.
+  allowTripwireDisarmingExploit: false
+  # Fixes ghost blocks caused by offhand placement.
+  fixOffHandGhostBlocks: true
+  # Fixes right click actions/offhand swings resetting attack cooldown.
+  fixRightClickOffhandCooldown: false
+  # Fixes knockback being sent even when velocity is zero.
+  dontSendKnockbackIfZero: false
+  # Enables running secure seed logic.
+  useSecureSeedLogic: false
+  # Disables saving snowball entities. This patches certain lag machines.
+  # Recommended value: true
+  disableSavingSnowballs: true
+  # Disables saving firework entities. This patches certain lag machines.
+  # Recommended value: true
+  disableSavingFireworks: true
+  # Makes hoppers respect potions custom max stack size when hopper-amount > 1.
+  respectCustomPotionsMaxStackSizeOnHoppers: false
+  # Recovers the vanilla void rings generation that Paper patched.
+  vanillaEndVoidRings: false
+limiters:
+  projectile:
+    # Limits the amount of chunk loads per tick by projectiles.
+    maxProjectileLoadsPerTick: 10
+    # Limits the amount of chunk loads per projectile before getting removed.
+    maxProjectileLoadsPerProjectile: 10
+  remove-excess:
+    # Removes excess minecarts vehicles on collision.
+    removeExcessMinecarts: true
+    # Removes excess boats vehicles on collision.
+    removeExcessBoats: true
+    # Configures the limit of minecart per collision before removing them.
+    excessMinecartsLimit: 8
+    # Configures the limit of boat per collision before removing them.
+    excessBoatsLimit: 8
+  # Specify which entities should not be ticked.
+  non-tickable-entities:
+  - ENTITY_TYPE
+particles:
+  # Disables entity fall particles.
+  disableFallParticles: true
+  # Disables entity death particles.
+  disableDeathParticles: true
+  # Disables player block break particles.
+  disableBlockBreakParticles: false
+  # Disables effect particles.
+  disableEffectParticles: false
+  # Disables entity water splash particles.
+  disableWaterSplashParticles: true
+  # Disables bubble columns particles.
+  disableBubbleColumnParticles: true
+  # Disables mob spawner particles.
+  disableSpawnerParticles: true
+  # Disables new combat particles.
+  disableNewCombatParticles: false
+sounds:
+  # Disables shoulder entity ambient sound.
+  disableShoulderEntityAmbientSound: true
+  # Disables piglin angry sound.
+  disablePiglinAngerSound: false
+  # Disables entity footstep particle.
+  disableFootStepSounds: false
+  # Disables new combat sounds.
+  disableNewCombatSounds: false
+  # Disables shield sounds.
+  disableShieldSounds: false
+  # Disables piston sounds.
+  disablePistonSounds: false
+performance:
+  packet-reducer:
+    # Enables the packet reducer logic.
+    enabled: true
+    fire-packets:
+      # Prevents sending fire packets if entity has fire resistance.
+      # Recommended value: true
+      enabled: true
+      # Exempts invisible entities from fire packet reducing.
+      ignore-invisible: false
+  # Throttles AI goal selector in entity inactive ticks.
+  # Recommended value: true
+  throttleInactiveGoalSelector: true
+  # Optimises datapack operations.
+  # Recommended value: true
+  optimiseDataPacks: false
+  # Caches world configurations to reduce I/O operations.
+  cacheWorldConfigurations: true
+  # Disables server debug logging to improve performance.
+  # Recommended value: true
+  disableServerDebug: true
+  biome-seed:
+    # Optimises biome seed obfuscation by using a faster algorithm.
+    # Recommended value: true
+    enabled: false
+    # Defines the obfuscation key used for biome generation.
+    obfuscation-key: -4547053366403024764
+  dynamic-brain:
+    # Throttles entity brain logic based on the distance of the nearest player.
+    enabled: true
+    # Determines how far away an entity has to be from the player to start being throttled.
+    minimum-distance: 12
+    # Determines how often in ticks, the furthest entity will get their behavior and pathfinders ticked.
+    maximum-activation-priority: 20
+    # Determines how much distance modifies an entity tick frequency. F=(distanceToPlayer^2) / (2^value)
+    activation-distance-modifier: 9
+    # Determines which entities wont be affected by Dynamic Brain logic.
+    disabled-entities: 
+    - villager
+    - zombie_villager
+    - ender_dragon
+    - wither
+    - warden
+    - elder_guardian
+    - copper_golem
+  # Disables the light checks for monsters that are not moving or attacking.
+  # Recommended value: false
+  disableMonsterNoActionTimeLightChecks: false
+  # Disables the criterion trigger for achievements which can be heavier sometimes (Advancements will not work!).
+  # Recommended value: true (causes lazy recipe suggestion updates)
+  disableCriterionTrigger: false
+  # Optimises block entities operations.
+  # Recommended value: true
+  optimiseBlockEntities: true
+  virtual-threads:
+    # Enables the use of Java 21+ Virtual Threads.
+    enabled: false
+    # Uses virtual threads for the Bukkit scheduler.
+    bukkit-scheduler: false
+    # Uses virtual threads for the Chat scheduler.
+    chat-scheduler: false
+    # Uses virtual threads for the Authenticator scheduler.
+    authenticator-scheduler: false
+    # Uses virtual threads for logging commands.
+    command-logging: false
+    # Uses virtual threads for tab completing.
+    tab-completing: false
+  # Disables block entity ticking such as hoppers, campfires, furnaces...
+  disableBlockEntityTicking: false
+  # Disables moist checks for farmlands. This setting will cause farmland to never dry out
+  alwaysMoistFarmland: false
+  # Disables moist checks for sugarcane. This setting will cause sugarcane to never dry out
+  alwaysMoistSugarcane: false
+  # Check if cactus can survive before growing
+  checkIfCactusCanSurviveBeforeGrowth: true
+  hoppers:
+    # Optimises hoppers by using faster logic.
+    enabled: true
+    # Throttles the hopper for the specified amount of ticks if target container is full.
+    # Recommended value: 8
+    throttleFullTargetContainer: 5
+  # Prevents block snapshots from being created.
+  disableBlockSnapshotCreation: true
+  # Disables spawner chunk tick iteration to drastically improve performance in case this feature is not needed.
+  disableSpawnerChunkTickIteration: false
+  # Optimises player pickup (adds pickup delay).
+  # Recommended value: false
+  optimisePlayerPickup: false
+  # Optimises rails logic to improve minecart performance.
+  # Recommended value: true
+  optimiseRails: true
+  # Disables Bukkit Vanish API.
+  disableBukkitVanishAPI: false
+  ticking:
+    # Enables an efficient tick limiter that acts when the server performance is compromised.
+    # Recommended value: true
+    enableEfficientTickLimiter: true
+    entity:
+      # Configure the amount of ticks should pass before executing entity collisions.
+      # Recommended value: 5
+      ticksBetweenCollisions: 5
+      # Configure the amount of ticks should pass before updating entity line of sight.
+      # Recommended value: 10
+      ticksBetweenLineOfSightUpdate: 10
+      # Configure the amount of ticks should pass before checking for entities in water.
+      # Recommended value: 4-5
+      ticksBetweenWaterChecks: 4
+      # Configure the amount of ticks should pass before checking for entity equipment changes.
+      # Recommended value: 4
+      ticksBetweenEquipmentUpdate: 4
+      # Configure the amount of ticks should pass before updating fluids on entity eyes.
+      # Recommended value: 2
+      ticksBetweenFluidOnEyes: 2
+      # Configure the amount of ticks should pass before activating entities.
+      # Recommended value: 3
+      ticksBetweenActivationRangeDelay: 3
+    world:
+      # Configure the amount of ticks should pass before ticking raids.
+      # Recommended value: 1
+      ticksBetweenRaidTicking: 1

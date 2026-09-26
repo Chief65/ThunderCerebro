@@ -1,0 +1,1156 @@
+title: '&8⬆ Temporada 1 | &830d 12h 5min &8⬆'
+type: inventory
+rows: 6
+layout:
+  '0':
+  - item_lime_stained_glass_pane_0
+  '1':
+  - item_lime_stained_glass_pane_1
+  '2':
+  - item_lime_stained_glass_pane_2
+  '3':
+  - item_lime_stained_glass_pane_3
+  '4':
+  - item_lime_stained_glass_pane_4
+  '5':
+  - item_lime_stained_glass_pane_5
+  '6':
+  - item_lime_stained_glass_pane_6
+  '7':
+  - item_lime_stained_glass_pane_7
+  '8':
+  - item_lime_stained_glass_pane_8
+  '9':
+  - item_lime_stained_glass_pane_9
+  '10':
+  - item_lime_stained_glass_pane_10
+  '11':
+  - item_lime_stained_glass_pane_11
+  '12':
+  - item_lime_stained_glass_pane_12
+  '13':
+  - item_yellow_stained_glass_pane_13
+  '14':
+  - item_red_stained_glass_pane_14
+  '15':
+  - item_red_stained_glass_pane_15
+  '16':
+  - item_red_stained_glass_pane_16
+  '17':
+  - item_red_stained_glass_pane_17
+  '18':
+  - item_red_stained_glass_pane_18
+  '19':
+  - item_red_stained_glass_pane_19
+  '20':
+  - item_red_stained_glass_pane_20
+  '21':
+  - item_red_stained_glass_pane_21
+  '22':
+  - item_red_stained_glass_pane_22
+  '23':
+  - item_red_stained_glass_pane_23
+  '24':
+  - item_red_stained_glass_pane_24
+  '25':
+  - item_red_stained_glass_pane_25
+  '26':
+  - item_red_stained_glass_pane_26
+  '27':
+  - item_red_stained_glass_pane_27
+  '28':
+  - item_red_stained_glass_pane_28
+  '29':
+  - item_red_stained_glass_pane_29
+  '30':
+  - item_red_stained_glass_pane_30
+  '31':
+  - item_red_stained_glass_pane_31
+  '32':
+  - item_red_stained_glass_pane_32
+  '33':
+  - item_red_stained_glass_pane_33
+  '34':
+  - item_red_stained_glass_pane_34
+  '35':
+  - item_red_stained_glass_pane_35
+  '36':
+  - item_red_stained_glass_pane_36
+  '37':
+  - item_red_stained_glass_pane_37
+  '38':
+  - item_red_stained_glass_pane_38
+  '39':
+  - item_red_stained_glass_pane_39
+  '40':
+  - item_red_stained_glass_pane_40
+  '41':
+  - item_red_stained_glass_pane_41
+  '42':
+  - item_red_stained_glass_pane_42
+  '43':
+  - item_red_stained_glass_pane_43
+  '44':
+  - item_red_stained_glass_pane_44
+  '45':
+  - item_gray_stained_glass_pane_45
+  '46':
+  - premium
+  '47':
+  - misiones
+  '48':
+  - item_black_stained_glass_pane_48
+  '49':
+  - item_player_head_49
+  '50':
+  - item_black_stained_glass_pane_50
+  '51':
+  - item_gray_stained_glass_pane_51
+  '52':
+  - item_gray_stained_glass_pane_52
+  '53':
+  - item_arrow_53
+items:
+  item_lime_stained_glass_pane_0:
+    material: FIRE_CHARGE
+    name: '&a✔ &fNivel 1 &8| &aAlcanzado'
+    lore:
+    - '&8Objeto Informativo'
+    - ''
+    - ' &7¡Nivel completado!'
+    - ''
+    - ' &c🔒 ᴘʀᴇᴍɪᴜᴍ:'
+    - ' &c• &fLlaves OP &ex1'
+    - ' &c• &fSuperSkin &ex1'
+    - ''
+    - '  &eReclama todo con'
+    - '   &8[&#FFC400Pa&#FFCA00se&#FFD000 P&#FFD700re&#FFDD00mi&#FFE300um&8]'
+    - ''
+    - '&7⏵ &7Click para ver'                
+    stack: 2
+  item_lime_stained_glass_pane_1:
+    material: FIRE_CHARGE
+    name: '&a✔ &fNivel 2 &8| &aAlcanzado'
+    lore:
+    - '&8Objeto Informativo'
+    - ''
+    - ' &7¡Nivel completado!'
+    - ''
+    - ' &c🔒 ᴘʀᴇᴍɪᴜᴍ:'
+    - ' &c• &fLlaves OP &ex1'
+    - ' &c• &fSuperSkin &ex1'
+    - ''
+    - '  &eReclama todo con'
+    - '   &8[&#FFC400Pa&#FFCA00se&#FFD000 P&#FFD700re&#FFDD00mi&#FFE300um&8]'
+    - ''
+    - '&7⏵ &7Click para ver'                      
+    stack: 2
+  item_lime_stained_glass_pane_2:
+    material: FIRE_CHARGE
+    name: '&a✔ &fNivel 3 &8| &aAlcanzado'
+    lore:
+    - '&8Objeto Informativo'
+    - ''
+    - ' &7¡Nivel completado!'
+    - ''
+    - ' &c🔒 ᴘʀᴇᴍɪᴜᴍ:'
+    - ' &c• &fLlaves OP &ex1'
+    - ' &c• &fSuperSkin &ex1'
+    - ''
+    - '  &eReclama todo con'
+    - '   &8[&#FFC400Pa&#FFCA00se&#FFD000 P&#FFD700re&#FFDD00mi&#FFE300um&8]'
+    - ''
+    - '&7⏵ &7Click para ver'  
+    stack: 3
+  item_lime_stained_glass_pane_3:
+    material: FIRE_CHARGE
+    name: '&a✔ &fNivel 4 &8| &aAlcanzado'
+    lore:
+    - '&8Objeto Informativo'
+    - ''
+    - ' &7¡Nivel completado!'
+    - ''
+    - ' &c🔒 ᴘʀᴇᴍɪᴜᴍ:'
+    - ' &c• &fLlaves OP &ex1'
+    - ' &c• &fSuperSkin &ex1'
+    - ''
+    - '  &eReclama todo con'
+    - '   &8[&#FFC400Pa&#FFCA00se&#FFD000 P&#FFD700re&#FFDD00mi&#FFE300um&8]'
+    - ''
+    - '&7⏵ &7Click para ver'  
+    stack: 4
+  item_lime_stained_glass_pane_4:
+    material: FIRE_CHARGE
+    name: '&a✔ &fNivel 5 &8| &aAlcanzado'
+    lore:
+    - '&8Objeto Informativo'
+    - ''
+    - ' &7¡Nivel completado!'
+    - ''
+    - ' &c🔒 ᴘʀᴇᴍɪᴜᴍ:'
+    - ' &c• &fLlaves OP &ex1'
+    - ' &c• &fSuperSkin &ex1'
+    - ''
+    - '  &eReclama todo con'
+    - '   &8[&#FFC400Pa&#FFCA00se&#FFD000 P&#FFD700re&#FFDD00mi&#FFE300um&8]'
+    - ''
+    - '&7⏵ &7Click para ver'  
+    stack: 5
+  item_lime_stained_glass_pane_5:
+    material: FIRE_CHARGE
+    name: '&a✔ &fNivel 6 &8| &aAlcanzado'
+    lore:
+    - '&8Objeto Informativo'
+    - ''
+    - ' &7¡Nivel completado!'
+    - ''
+    - ' &c🔒 ᴘʀᴇᴍɪᴜᴍ:'
+    - ' &c• &fLlaves OP &ex1'
+    - ' &c• &fSuperSkin &ex1'
+    - ''
+    - '  &eReclama todo con'
+    - '   &8[&#FFC400Pa&#FFCA00se&#FFD000 P&#FFD700re&#FFDD00mi&#FFE300um&8]'
+    - ''
+    - '&7⏵ &7Click para ver'  
+    stack: 6
+  item_lime_stained_glass_pane_6:
+    material: FIRE_CHARGE
+    name: '&a✔ &fNivel 7 &8| &aAlcanzado'
+    lore:
+    - '&8Objeto Informativo'
+    - ''
+    - ' &7¡Nivel completado!'
+    - ''
+    - ' &c🔒 ᴘʀᴇᴍɪᴜᴍ:'
+    - ' &c• &fLlaves OP &ex1'
+    - ' &c• &fSuperSkin &ex1'
+    - ''
+    - '  &eReclama todo con'
+    - '   &8[&#FFC400Pa&#FFCA00se&#FFD000 P&#FFD700re&#FFDD00mi&#FFE300um&8]'
+    - ''
+    - '&7⏵ &7Click para ver'  
+    stack: 7
+  item_lime_stained_glass_pane_7:
+    material: FIRE_CHARGE
+    name: '&a✔ &fNivel 8 &8| &aAlcanzado'
+    lore:
+    - '&8Objeto Informativo'
+    - ''
+    - ' &7¡Nivel completado!'
+    - ''
+    - ' &c🔒 ᴘʀᴇᴍɪᴜᴍ:'
+    - ' &c• &fLlaves OP &ex1'
+    - ' &c• &fSuperSkin &ex1'
+    - ''
+    - '  &eReclama todo con'
+    - '   &8[&#FFC400Pa&#FFCA00se&#FFD000 P&#FFD700re&#FFDD00mi&#FFE300um&8]'
+    - ''
+    - '&7⏵ &7Click para ver'  
+    stack: 8
+  item_lime_stained_glass_pane_8:
+    material: FIRE_CHARGE
+    name: '&a✔ &fNivel 9 &8| &aAlcanzado'
+    lore:
+    - '&8Objeto Informativo'
+    - ''
+    - ' &7¡Nivel completado!'
+    - ''
+    - ' &c🔒 ᴘʀᴇᴍɪᴜᴍ:'
+    - ' &c• &fLlaves OP &ex1'
+    - ' &c• &fSuperSkin &ex1'
+    - ''
+    - '  &eReclama todo con'
+    - '   &8[&#FFC400Pa&#FFCA00se&#FFD000 P&#FFD700re&#FFDD00mi&#FFE300um&8]'
+    - ''
+    - '&7⏵ &7Click para ver'  
+    stack: 9
+  item_lime_stained_glass_pane_9:
+    material: FIRE_CHARGE
+    name: '&a✔ &fNivel 10 &8| &aAlcanzado'
+    lore:
+    - '&8Objeto Informativo'
+    - ''
+    - ' &7¡Nivel completado!'
+    - ''
+    - ' &c🔒 ᴘʀᴇᴍɪᴜᴍ:'
+    - ' &c• &fLlaves OP &ex1'
+    - ' &c• &fSuperSkin &ex1'
+    - ''
+    - '  &eReclama todo con'
+    - '   &8[&#FFC400Pa&#FFCA00se&#FFD000 P&#FFD700re&#FFDD00mi&#FFE300um&8]'
+    - ''
+    - '&7⏵ &7Click para ver'  
+    stack: 10
+  item_lime_stained_glass_pane_10:
+    material: FIRE_CHARGE
+    name: '&a✔ &fNivel 11 &8| &aAlcanzado'
+    lore:
+    - '&8Objeto Informativo'
+    - ''
+    - ' &7¡Nivel completado!'
+    - ''
+    - ' &c🔒 ᴘʀᴇᴍɪᴜᴍ:'
+    - ' &c• &fLlaves OP &ex1'
+    - ' &c• &fSuperSkin &ex1'
+    - ''
+    - '  &eReclama todo con'
+    - '   &8[&#FFC400Pa&#FFCA00se&#FFD000 P&#FFD700re&#FFDD00mi&#FFE300um&8]'
+    - ''
+    - '&7⏵ &7Click para ver'  
+    stack: 11
+  item_lime_stained_glass_pane_11:
+    material: FIRE_CHARGE
+    stack: 12
+    animate: animacion11
+    name: '&a✔ &fNivel 12 &8| &aAlcanzado'
+    lore:
+    - '&8Botón Interactivo'
+    - ''
+    - ' &7¡Nivel completado!'
+    - ''
+    - ' &a🔓 ʀᴇᴄᴏᴍᴘᴇɴꜱᴀꜱ:'
+    - ' &a• &fDinero &a+100$'
+    - ' &a• &fLlaves Magic &ex2'
+    - ' &a• &fObjeto OP &ex1'
+    - ''
+    - ' &c🔒 ᴘʀᴇᴍɪᴜᴍ:'
+    - ' &c• &fLlaves OP &ex1'
+    - ' &c• &fSuperSkin &ex1'
+    - ''
+    - '&8&l&m                       '
+    - ' &8⏵&a⏵     &a&l&nRECLAMAR&r    &a⏴&8⏴  '
+    - '&8&l&m                       '
+    enchantments:
+    - unbreaking 1
+  animacion11:
+    material: FIRE_CHARGE
+    stack: 12
+    name: '&a✔ &fNivel 12 &8| &aAlcanzado'
+    lore:
+    - '&8Botón Interactivo'
+    - ''
+    - ' &7¡Nivel completado!'
+    - ''
+    - ' &a🔓 ʀᴇᴄᴏᴍᴘᴇɴꜱᴀꜱ:'
+    - ' &a• &fDinero &a+100$'
+    - ' &a• &fLlaves Magic &ex2'
+    - ' &a• &fObjeto OP &ex1'
+    - ''
+    - ' &c🔒 ᴘʀᴇᴍɪᴜᴍ:'
+    - ' &c• &fLlaves OP &ex1'
+    - ' &c• &fSuperSkin &ex1'
+    - ''
+    - '&8&l&m                       '
+    - ' &a⏵&8⏵     &a&l&nRECLAMAR&r    &8⏴&a⏴  '
+    - '&8&l&m                       '
+    enchantments:
+    - unbreaking 1
+  item_lime_stained_glass_pane_12:
+    material: FIRE_CHARGE
+    stack: 13
+    animate: animacion12
+    name: '&a✔ &fNivel 13 &8| &aAlcanzado'
+    lore:
+    - '&8Botón Interactivo'
+    - ''
+    - ' &7¡Nivel completado!'
+    - ''
+    - ' &a🔓 ʀᴇᴄᴏᴍᴘᴇɴꜱᴀꜱ:'
+    - ' &a• &fDinero &a+100$'
+    - ' &a• &fLlaves Magic &ex2'
+    - ' &a• &fObjeto OP &ex1'
+    - ''
+    - ' &c🔒 ᴘʀᴇᴍɪᴜᴍ:'
+    - ' &c• &fLlaves OP &ex1'
+    - ' &c• &fSuperSkin &ex1'
+    - ''
+    - '&8&l&m                       '
+    - ' &8⏵&a⏵     &a&l&nRECLAMAR&r    &a⏴&8⏴  '
+    - '&8&l&m                       '
+    enchantments:
+    - unbreaking 1
+  animacion12:
+    material: FIRE_CHARGE
+    stack: 13
+    name: '&a✔ &fNivel 13 &8| &aAlcanzado'
+    lore:
+    - '&8Botón Interactivo'
+    - ''
+    - ' &7¡Nivel completado!'
+    - ''
+    - ' &a🔓 ʀᴇᴄᴏᴍᴘᴇɴꜱᴀꜱ:'
+    - ' &a• &fDinero &a+100$'
+    - ' &a• &fLlaves Magic &ex2'
+    - ' &a• &fObjeto OP &ex1'
+    - ''
+    - ' &c🔒 ᴘʀᴇᴍɪᴜᴍ:'
+    - ' &c• &fLlaves OP &ex1'
+    - ' &c• &fSuperSkin &ex1'
+    - ''
+    - '&8&l&m                       '
+    - ' &a⏵&8⏵     &a&l&nRECLAMAR&r    &8⏴&a⏴  '
+    - '&8&l&m                       '
+    enchantments:
+    - unbreaking 1
+  item_yellow_stained_glass_pane_13:
+    name: '&e⚑ &fNivel 14 &8| &eEn Progreso... '
+    material: CAMPFIRE
+    lore:
+    - '&8Objeto Informativo'
+    - ''
+    - ' &7Consigue &7XP&r &7para'
+    - ' &7alcanzar este nivel'
+    - ''
+    - '   &7450XP&8/&71500XP'
+    - ' &8[&e⬛⬛⬛⬛⬛⬛⬛&7⬛⬛⬛&8]'
+    - ''
+    - ' &c🔒 ʀᴇᴄᴏᴍᴘᴇɴꜱᴀꜱ:'
+    - ' &c• &fDinero &a+100$'
+    - ' &c• &fLlaves Magic &ex2'
+    - ' &c• &fObjeto OP &ex1'
+    - ''
+    - ' &c🔒 ᴘʀᴇᴍɪᴜᴍ:'
+    - ' &c• &fLlaves OP &ex1'
+    - ' &c• &fSuperSkin &ex1'
+    - ''
+    stack: 14
+  item_red_stained_glass_pane_14:
+    material: FIREWORK_STAR
+    name: '&c✘ &fNivel 15 &8| &cNo Alcanzado '
+    lore:
+    - '&8Objeto Informativo'
+    - ''
+    - ' &7Desbloquea antes los'
+    - ' &7niveles anteriores'
+    - ''
+    - ' &c🔒 ʀᴇᴄᴏᴍᴘᴇɴꜱᴀꜱ:'
+    - ' &c• &fDinero &a+100$'
+    - ' &c• &fLlaves Magic &ex2'
+    - ' &c• &fObjeto OP &ex1'
+    - ''
+    - ' &c🔒 ᴘʀᴇᴍɪᴜᴍ:'
+    - ' &c• &fLlaves OP &ex1'
+    - ' &c• &fSuperSkin &ex1'
+    - ''
+    stack: 15
+    actions:
+      commands:
+      - '[sound] block.chain.hit volume=1 pitch=0.7'
+  item_red_stained_glass_pane_15:
+    material: FIREWORK_STAR
+    name: '&c✘ &fNivel 16 &8| &cNo Alcanzado '
+    lore:
+    - '&8Objeto Informativo'
+    - ''
+    - ' &7Desbloquea antes los'
+    - ' &7niveles anteriores'
+    - ''
+    - ' &c🔒 ʀᴇᴄᴏᴍᴘᴇɴꜱᴀꜱ:'
+    - ' &c• &fDinero &a+100$'
+    - ' &c• &fLlaves Magic &ex2'
+    - ' &c• &fObjeto OP &ex1'
+    - ''
+    - ' &c🔒 ᴘʀᴇᴍɪᴜᴍ:'
+    - ' &c• &fLlaves OP &ex1'
+    - ' &c• &fSuperSkin &ex1'
+    - ''
+    stack: 16
+    actions:
+      commands:
+      - '[sound] block.chain.hit volume=1 pitch=0.7'
+  item_red_stained_glass_pane_16:
+    material: FIREWORK_STAR
+    name: '&c✘ &fNivel 17 &8| &cNo Alcanzado '
+    lore:
+    - '&8Objeto Informativo'
+    - ''
+    - ' &7Desbloquea antes los'
+    - ' &7niveles anteriores'
+    - ''
+    - ' &c🔒 ʀᴇᴄᴏᴍᴘᴇɴꜱᴀꜱ:'
+    - ' &c• &fDinero &a+100$'
+    - ' &c• &fLlaves Magic &ex2'
+    - ' &c• &fObjeto OP &ex1'
+    - ''
+    - ' &c🔒 ᴘʀᴇᴍɪᴜᴍ:'
+    - ' &c• &fLlaves OP &ex1'
+    - ' &c• &fSuperSkin &ex1'
+    - ''
+    stack: 17
+    actions:
+      commands:
+      - '[sound] block.chain.hit volume=1 pitch=0.7'
+  item_red_stained_glass_pane_17:
+    material: FIREWORK_STAR
+    name: '&c✘ &fNivel 18 &8| &cNo Alcanzado '
+    lore:
+    - '&8Objeto Informativo'
+    - ''
+    - ' &7Desbloquea antes los'
+    - ' &7niveles anteriores'
+    - ''
+    - ' &c🔒 ʀᴇᴄᴏᴍᴘᴇɴꜱᴀꜱ:'
+    - ' &c• &fDinero &a+100$'
+    - ' &c• &fLlaves Magic &ex2'
+    - ' &c• &fObjeto OP &ex1'
+    - ''
+    - ' &c🔒 ᴘʀᴇᴍɪᴜᴍ:'
+    - ' &c• &fLlaves OP &ex1'
+    - ' &c• &fSuperSkin &ex1'
+    - ''
+    stack: 18
+    actions:
+      commands:
+      - '[sound] block.chain.hit volume=1 pitch=0.7'
+  item_red_stained_glass_pane_18:
+    material: FIREWORK_STAR
+    name: '&c✘ &fNivel 19 &8| &cNo Alcanzado '
+    lore:
+    - '&8Objeto Informativo'
+    - ''
+    - ' &7Desbloquea antes los'
+    - ' &7niveles anteriores'
+    - ''
+    - ' &c🔒 ʀᴇᴄᴏᴍᴘᴇɴꜱᴀꜱ:'
+    - ' &c• &fDinero &a+100$'
+    - ' &c• &fLlaves Magic &ex2'
+    - ' &c• &fObjeto OP &ex1'
+    - ''
+    - ' &c🔒 ᴘʀᴇᴍɪᴜᴍ:'
+    - ' &c• &fLlaves OP &ex1'
+    - ' &c• &fSuperSkin &ex1'
+    - ''
+    stack: 19
+    actions:
+      commands:
+      - '[sound] block.chain.hit volume=1 pitch=0.7'
+  item_red_stained_glass_pane_19:
+    material: FIREWORK_STAR
+    name: '&c✘ &fNivel 20 &8| &cNo Alcanzado '
+    lore:
+    - '&8Objeto Informativo'
+    - ''
+    - ' &7Desbloquea antes los'
+    - ' &7niveles anteriores'
+    - ''
+    - ' &c🔒 ʀᴇᴄᴏᴍᴘᴇɴꜱᴀꜱ:'
+    - ' &c• &fDinero &a+100$'
+    - ' &c• &fLlaves Magic &ex2'
+    - ' &c• &fObjeto OP &ex1'
+    - ''
+    - ' &c🔒 ᴘʀᴇᴍɪᴜᴍ:'
+    - ' &c• &fLlaves OP &ex1'
+    - ' &c• &fSuperSkin &ex1'
+    - ''
+    stack: 20
+    actions:
+      commands:
+      - '[sound] block.chain.hit volume=1 pitch=0.7'
+  item_red_stained_glass_pane_20:
+    material: FIREWORK_STAR
+    name: '&c✘ &fNivel 21 &8| &cNo Alcanzado '
+    lore:
+    - '&8Objeto Informativo'
+    - ''
+    - ' &7Desbloquea antes los'
+    - ' &7niveles anteriores'
+    - ''
+    - ' &c🔒 ʀᴇᴄᴏᴍᴘᴇɴꜱᴀꜱ:'
+    - ' &c• &fDinero &a+100$'
+    - ' &c• &fLlaves Magic &ex2'
+    - ' &c• &fObjeto OP &ex1'
+    - ''
+    - ' &c🔒 ᴘʀᴇᴍɪᴜᴍ:'
+    - ' &c• &fLlaves OP &ex1'
+    - ' &c• &fSuperSkin &ex1'
+    - ''
+    stack: 21
+    actions:
+      commands:
+      - '[sound] block.chain.hit volume=1 pitch=0.7'
+  item_red_stained_glass_pane_21:
+    material: FIREWORK_STAR
+    name: '&c✘ &fNivel 22 &8| &cNo Alcanzado '
+    lore:
+    - '&8Objeto Informativo'
+    - ''
+    - ' &7Desbloquea antes los'
+    - ' &7niveles anteriores'
+    - ''
+    - ' &c🔒 ʀᴇᴄᴏᴍᴘᴇɴꜱᴀꜱ:'
+    - ' &c• &fDinero &a+100$'
+    - ' &c• &fLlaves Magic &ex2'
+    - ' &c• &fObjeto OP &ex1'
+    - ''
+    - ' &c🔒 ᴘʀᴇᴍɪᴜᴍ:'
+    - ' &c• &fLlaves OP &ex1'
+    - ' &c• &fSuperSkin &ex1'
+    - ''
+    stack: 22
+    actions:
+      commands:
+      - '[sound] block.chain.hit volume=1 pitch=0.7'
+  item_red_stained_glass_pane_22:
+    material: FIREWORK_STAR
+    name: '&c✘ &fNivel 23 &8| &cNo Alcanzado '
+    lore:
+    - '&8Objeto Informativo'
+    - ''
+    - ' &7Desbloquea antes los'
+    - ' &7niveles anteriores'
+    - ''
+    - ' &c🔒 ʀᴇᴄᴏᴍᴘᴇɴꜱᴀꜱ:'
+    - ' &c• &fDinero &a+100$'
+    - ' &c• &fLlaves Magic &ex2'
+    - ' &c• &fObjeto OP &ex1'
+    - ''
+    - ' &c🔒 ᴘʀᴇᴍɪᴜᴍ:'
+    - ' &c• &fLlaves OP &ex1'
+    - ' &c• &fSuperSkin &ex1'
+    - ''
+    stack: 23
+    actions:
+      commands:
+      - '[sound] block.chain.hit volume=1 pitch=0.7'
+  item_red_stained_glass_pane_23:
+    material: FIREWORK_STAR
+    name: '&c✘ &fNivel 24 &8| &cNo Alcanzado '
+    lore:
+    - '&8Objeto Informativo'
+    - ''
+    - ' &7Desbloquea antes los'
+    - ' &7niveles anteriores'
+    - ''
+    - ' &c🔒 ʀᴇᴄᴏᴍᴘᴇɴꜱᴀꜱ:'
+    - ' &c• &fDinero &a+100$'
+    - ' &c• &fLlaves Magic &ex2'
+    - ' &c• &fObjeto OP &ex1'
+    - ''
+    - ' &c🔒 ᴘʀᴇᴍɪᴜᴍ:'
+    - ' &c• &fLlaves OP &ex1'
+    - ' &c• &fSuperSkin &ex1'
+    - ''
+    stack: 24
+    actions:
+      commands:
+      - '[sound] block.chain.hit volume=1 pitch=0.7'
+  item_red_stained_glass_pane_24:
+    material: FIREWORK_STAR
+    name: '&c✘ &fNivel 25 &8| &cNo Alcanzado '
+    lore:
+    - '&8Objeto Informativo'
+    - ''
+    - ' &7Desbloquea antes los'
+    - ' &7niveles anteriores'
+    - ''
+    - ' &c🔒 ʀᴇᴄᴏᴍᴘᴇɴꜱᴀꜱ:'
+    - ' &c• &fDinero &a+100$'
+    - ' &c• &fLlaves Magic &ex2'
+    - ' &c• &fObjeto OP &ex1'
+    - ''
+    - ' &c🔒 ᴘʀᴇᴍɪᴜᴍ:'
+    - ' &c• &fLlaves OP &ex1'
+    - ' &c• &fSuperSkin &ex1'
+    - ''
+    stack: 25
+    actions:
+      commands:
+      - '[sound] block.chain.hit volume=1 pitch=0.7'
+  item_red_stained_glass_pane_25:
+    material: FIREWORK_STAR
+    name: '&c✘ &fNivel 26 &8| &cNo Alcanzado '
+    lore:
+    - '&8Objeto Informativo'
+    - ''
+    - ' &7Desbloquea antes los'
+    - ' &7niveles anteriores'
+    - ''
+    - ' &c🔒 ʀᴇᴄᴏᴍᴘᴇɴꜱᴀꜱ:'
+    - ' &c• &fDinero &a+100$'
+    - ' &c• &fLlaves Magic &ex2'
+    - ' &c• &fObjeto OP &ex1'
+    - ''
+    - ' &c🔒 ᴘʀᴇᴍɪᴜᴍ:'
+    - ' &c• &fLlaves OP &ex1'
+    - ' &c• &fSuperSkin &ex1'
+    - ''
+    stack: 26
+    actions:
+      commands:
+      - '[sound] block.chain.hit volume=1 pitch=0.7'
+  item_red_stained_glass_pane_26:
+    material: FIREWORK_STAR
+    name: '&c✘ &fNivel 27 &8| &cNo Alcanzado '
+    lore:
+    - '&8Objeto Informativo'
+    - ''
+    - ' &7Desbloquea antes los'
+    - ' &7niveles anteriores'
+    - ''
+    - ' &c🔒 ʀᴇᴄᴏᴍᴘᴇɴꜱᴀꜱ:'
+    - ' &c• &fDinero &a+100$'
+    - ' &c• &fLlaves Magic &ex2'
+    - ' &c• &fObjeto OP &ex1'
+    - ''
+    - ' &c🔒 ᴘʀᴇᴍɪᴜᴍ:'
+    - ' &c• &fLlaves OP &ex1'
+    - ' &c• &fSuperSkin &ex1'
+    - ''
+    stack: 27
+    actions:
+      commands:
+      - '[sound] block.chain.hit volume=1 pitch=0.7'
+  item_red_stained_glass_pane_27:
+    material: FIREWORK_STAR
+    name: '&c✘ &fNivel 28 &8| &cNo Alcanzado '
+    lore:
+    - '&8Objeto Informativo'
+    - ''
+    - ' &7Desbloquea antes los'
+    - ' &7niveles anteriores'
+    - ''
+    - ' &c🔒 ʀᴇᴄᴏᴍᴘᴇɴꜱᴀꜱ:'
+    - ' &c• &fDinero &a+100$'
+    - ' &c• &fLlaves Magic &ex2'
+    - ' &c• &fObjeto OP &ex1'
+    - ''
+    - ' &c🔒 ᴘʀᴇᴍɪᴜᴍ:'
+    - ' &c• &fLlaves OP &ex1'
+    - ' &c• &fSuperSkin &ex1'
+    - ''
+    stack: 28
+    actions:
+      commands:
+      - '[sound] block.chain.hit volume=1 pitch=0.7'
+  item_red_stained_glass_pane_28:
+    material: FIREWORK_STAR
+    name: '&c✘ &fNivel 29 &8| &cNo Alcanzado '
+    lore:
+    - '&8Objeto Informativo'
+    - ''
+    - ' &7Desbloquea antes los'
+    - ' &7niveles anteriores'
+    - ''
+    - ' &c🔒 ʀᴇᴄᴏᴍᴘᴇɴꜱᴀꜱ:'
+    - ' &c• &fDinero &a+100$'
+    - ' &c• &fLlaves Magic &ex2'
+    - ' &c• &fObjeto OP &ex1'
+    - ''
+    - ' &c🔒 ᴘʀᴇᴍɪᴜᴍ:'
+    - ' &c• &fLlaves OP &ex1'
+    - ' &c• &fSuperSkin &ex1'
+    - ''
+    stack: 29
+    actions:
+      commands:
+      - '[sound] block.chain.hit volume=1 pitch=0.7'
+  item_red_stained_glass_pane_29:
+    material: FIREWORK_STAR
+    name: '&c✘ &fNivel 30 &8| &cNo Alcanzado '
+    lore:
+    - '&8Objeto Informativo'
+    - ''
+    - ' &7Desbloquea antes los'
+    - ' &7niveles anteriores'
+    - ''
+    - ' &c🔒 ʀᴇᴄᴏᴍᴘᴇɴꜱᴀꜱ:'
+    - ' &c• &fDinero &a+100$'
+    - ' &c• &fLlaves Magic &ex2'
+    - ' &c• &fObjeto OP &ex1'
+    - ''
+    - ' &c🔒 ᴘʀᴇᴍɪᴜᴍ:'
+    - ' &c• &fLlaves OP &ex1'
+    - ' &c• &fSuperSkin &ex1'
+    - ''
+    stack: 30
+    actions:
+      commands:
+      - '[sound] block.chain.hit volume=1 pitch=0.7'
+  item_red_stained_glass_pane_30:
+    material: FIREWORK_STAR
+    name: '&c✘ &fNivel 31 &8| &cNo Alcanzado '
+    lore:
+    - '&8Objeto Informativo'
+    - ''
+    - ' &7Desbloquea antes los'
+    - ' &7niveles anteriores'
+    - ''
+    - ' &c🔒 ʀᴇᴄᴏᴍᴘᴇɴꜱᴀꜱ:'
+    - ' &c• &fDinero &a+100$'
+    - ' &c• &fLlaves Magic &ex2'
+    - ' &c• &fObjeto OP &ex1'
+    - ''
+    - ' &c🔒 ᴘʀᴇᴍɪᴜᴍ:'
+    - ' &c• &fLlaves OP &ex1'
+    - ' &c• &fSuperSkin &ex1'
+    - ''
+    stack: 31
+    actions:
+      commands:
+      - '[sound] block.chain.hit volume=1 pitch=0.7'
+  item_red_stained_glass_pane_31:
+    material: FIREWORK_STAR
+    name: '&c✘ &fNivel 32 &8| &cNo Alcanzado '
+    lore:
+    - '&8Objeto Informativo'
+    - ''
+    - ' &7Desbloquea antes los'
+    - ' &7niveles anteriores'
+    - ''
+    - ' &c🔒 ʀᴇᴄᴏᴍᴘᴇɴꜱᴀꜱ:'
+    - ' &c• &fDinero &a+100$'
+    - ' &c• &fLlaves Magic &ex2'
+    - ' &c• &fObjeto OP &ex1'
+    - ''
+    - ' &c🔒 ᴘʀᴇᴍɪᴜᴍ:'
+    - ' &c• &fLlaves OP &ex1'
+    - ' &c• &fSuperSkin &ex1'
+    - ''
+    stack: 32
+    actions:
+      commands:
+      - '[sound] block.chain.hit volume=1 pitch=0.7'
+  item_red_stained_glass_pane_32:
+    material: FIREWORK_STAR
+    name: '&c✘ &fNivel 33 &8| &cNo Alcanzado '
+    lore:
+    - '&8Objeto Informativo'
+    - ''
+    - ' &7Desbloquea antes los'
+    - ' &7niveles anteriores'
+    - ''
+    - ' &c🔒 ʀᴇᴄᴏᴍᴘᴇɴꜱᴀꜱ:'
+    - ' &c• &fDinero &a+100$'
+    - ' &c• &fLlaves Magic &ex2'
+    - ' &c• &fObjeto OP &ex1'
+    - ''
+    - ' &c🔒 ᴘʀᴇᴍɪᴜᴍ:'
+    - ' &c• &fLlaves OP &ex1'
+    - ' &c• &fSuperSkin &ex1'
+    - ''
+    stack: 33
+    actions:
+      commands:
+      - '[sound] block.chain.hit volume=1 pitch=0.7'
+  item_red_stained_glass_pane_33:
+    material: FIREWORK_STAR
+    name: '&c✘ &fNivel 34 &8| &cNo Alcanzado '
+    lore:
+    - '&8Objeto Informativo'
+    - ''
+    - ' &7Desbloquea antes los'
+    - ' &7niveles anteriores'
+    - ''
+    - ' &c🔒 ʀᴇᴄᴏᴍᴘᴇɴꜱᴀꜱ:'
+    - ' &c• &fDinero &a+100$'
+    - ' &c• &fLlaves Magic &ex2'
+    - ' &c• &fObjeto OP &ex1'
+    - ''
+    - ' &c🔒 ᴘʀᴇᴍɪᴜᴍ:'
+    - ' &c• &fLlaves OP &ex1'
+    - ' &c• &fSuperSkin &ex1'
+    - ''
+    stack: 34
+    actions:
+      commands:
+      - '[sound] block.chain.hit volume=1 pitch=0.7'
+  item_red_stained_glass_pane_34:
+    material: FIREWORK_STAR
+    name: '&c✘ &fNivel 35 &8| &cNo Alcanzado '
+    lore:
+    - '&8Objeto Informativo'
+    - ''
+    - ' &7Desbloquea antes los'
+    - ' &7niveles anteriores'
+    - ''
+    - ' &c🔒 ʀᴇᴄᴏᴍᴘᴇɴꜱᴀꜱ:'
+    - ' &c• &fDinero &a+100$'
+    - ' &c• &fLlaves Magic &ex2'
+    - ' &c• &fObjeto OP &ex1'
+    - ''
+    - ' &c🔒 ᴘʀᴇᴍɪᴜᴍ:'
+    - ' &c• &fLlaves OP &ex1'
+    - ' &c• &fSuperSkin &ex1'
+    - ''
+    stack: 35
+    actions:
+      commands:
+      - '[sound] block.chain.hit volume=1 pitch=0.7'
+  item_red_stained_glass_pane_35:
+    material: FIREWORK_STAR
+    name: '&c✘ &fNivel 36 &8| &cNo Alcanzado '
+    lore:
+    - '&8Objeto Informativo'
+    - ''
+    - ' &7Desbloquea antes los'
+    - ' &7niveles anteriores'
+    - ''
+    - ' &c🔒 ʀᴇᴄᴏᴍᴘᴇɴꜱᴀꜱ:'
+    - ' &c• &fDinero &a+100$'
+    - ' &c• &fLlaves Magic &ex2'
+    - ' &c• &fObjeto OP &ex1'
+    - ''
+    - ' &c🔒 ᴘʀᴇᴍɪᴜᴍ:'
+    - ' &c• &fLlaves OP &ex1'
+    - ' &c• &fSuperSkin &ex1'
+    - ''
+    stack: 36
+    actions:
+      commands:
+      - '[sound] block.chain.hit volume=1 pitch=0.7'
+  item_red_stained_glass_pane_36:
+    material: FIREWORK_STAR
+    name: '&c✘ &fNivel 37 &8| &cNo Alcanzado '
+    lore:
+    - '&8Objeto Informativo'
+    - ''
+    - ' &7Desbloquea antes los'
+    - ' &7niveles anteriores'
+    - ''
+    - ' &c🔒 ʀᴇᴄᴏᴍᴘᴇɴꜱᴀꜱ:'
+    - ' &c• &fDinero &a+100$'
+    - ' &c• &fLlaves Magic &ex2'
+    - ' &c• &fObjeto OP &ex1'
+    - ''
+    - ' &c🔒 ᴘʀᴇᴍɪᴜᴍ:'
+    - ' &c• &fLlaves OP &ex1'
+    - ' &c• &fSuperSkin &ex1'
+    - ''
+    stack: 37
+    actions:
+      commands:
+      - '[sound] block.chain.hit volume=1 pitch=0.7'
+  item_red_stained_glass_pane_37:
+    material: FIREWORK_STAR
+    name: '&c✘ &fNivel 38 &8| &cNo Alcanzado '
+    lore:
+    - '&8Objeto Informativo'
+    - ''
+    - ' &7Desbloquea antes los'
+    - ' &7niveles anteriores'
+    - ''
+    - ' &c🔒 ʀᴇᴄᴏᴍᴘᴇɴꜱᴀꜱ:'
+    - ' &c• &fDinero &a+100$'
+    - ' &c• &fLlaves Magic &ex2'
+    - ' &c• &fObjeto OP &ex1'
+    - ''
+    - ' &c🔒 ᴘʀᴇᴍɪᴜᴍ:'
+    - ' &c• &fLlaves OP &ex1'
+    - ' &c• &fSuperSkin &ex1'
+    - ''
+    stack: 38
+    actions:
+      commands:
+      - '[sound] block.chain.hit volume=1 pitch=0.7'
+  item_red_stained_glass_pane_38:
+    material: FIREWORK_STAR
+    name: '&c✘ &fNivel 39 &8| &cNo Alcanzado '
+    lore:
+    - '&8Objeto Informativo'
+    - ''
+    - ' &7Desbloquea antes los'
+    - ' &7niveles anteriores'
+    - ''
+    - ' &c🔒 ʀᴇᴄᴏᴍᴘᴇɴꜱᴀꜱ:'
+    - ' &c• &fDinero &a+100$'
+    - ' &c• &fLlaves Magic &ex2'
+    - ' &c• &fObjeto OP &ex1'
+    - ''
+    - ' &c🔒 ᴘʀᴇᴍɪᴜᴍ:'
+    - ' &c• &fLlaves OP &ex1'
+    - ' &c• &fSuperSkin &ex1'
+    - ''
+    stack: 39
+    actions:
+      commands:
+      - '[sound] block.chain.hit volume=1 pitch=0.7'
+  item_red_stained_glass_pane_39:
+    material: FIREWORK_STAR
+    name: '&c✘ &fNivel 40 &8| &cNo Alcanzado '
+    lore:
+    - '&8Objeto Informativo'
+    - ''
+    - ' &7Desbloquea antes los'
+    - ' &7niveles anteriores'
+    - ''
+    - ' &c🔒 ʀᴇᴄᴏᴍᴘᴇɴꜱᴀꜱ:'
+    - ' &c• &fDinero &a+100$'
+    - ' &c• &fLlaves Magic &ex2'
+    - ' &c• &fObjeto OP &ex1'
+    - ''
+    - ' &c🔒 ᴘʀᴇᴍɪᴜᴍ:'
+    - ' &c• &fLlaves OP &ex1'
+    - ' &c• &fSuperSkin &ex1'
+    - ''
+    stack: 40
+    actions:
+      commands:
+      - '[sound] block.chain.hit volume=1 pitch=0.7'
+  item_red_stained_glass_pane_40:
+    material: FIREWORK_STAR
+    name: '&c✘ &fNivel 41 &8| &cNo Alcanzado '
+    lore:
+    - '&8Objeto Informativo'
+    - ''
+    - ' &7Desbloquea antes los'
+    - ' &7niveles anteriores'
+    - ''
+    - ' &c🔒 ʀᴇᴄᴏᴍᴘᴇɴꜱᴀꜱ:'
+    - ' &c• &fDinero &a+100$'
+    - ' &c• &fLlaves Magic &ex2'
+    - ' &c• &fObjeto OP &ex1'
+    - ''
+    - ' &c🔒 ᴘʀᴇᴍɪᴜᴍ:'
+    - ' &c• &fLlaves OP &ex1'
+    - ' &c• &fSuperSkin &ex1'
+    - ''
+    stack: 41
+    actions:
+      commands:
+      - '[sound] block.chain.hit volume=1 pitch=0.7'
+  item_red_stained_glass_pane_41:
+    material: FIREWORK_STAR
+    name: '&c✘ &fNivel 42 &8| &cNo Alcanzado '
+    lore:
+    - '&8Objeto Informativo'
+    - ''
+    - ' &7Desbloquea antes los'
+    - ' &7niveles anteriores'
+    - ''
+    - ' &c🔒 ʀᴇᴄᴏᴍᴘᴇɴꜱᴀꜱ:'
+    - ' &c• &fDinero &a+100$'
+    - ' &c• &fLlaves Magic &ex2'
+    - ' &c• &fObjeto OP &ex1'
+    - ''
+    - ' &c🔒 ᴘʀᴇᴍɪᴜᴍ:'
+    - ' &c• &fLlaves OP &ex1'
+    - ' &c• &fSuperSkin &ex1'
+    - ''
+    stack: 42
+    actions:
+      commands:
+      - '[sound] block.chain.hit volume=1 pitch=0.7'
+  item_red_stained_glass_pane_42:
+    material: FIREWORK_STAR
+    name: '&c✘ &fNivel 43 &8| &cNo Alcanzado '
+    lore:
+    - '&8Objeto Informativo'
+    - ''
+    - ' &7Desbloquea antes los'
+    - ' &7niveles anteriores'
+    - ''
+    - ' &c🔒 ʀᴇᴄᴏᴍᴘᴇɴꜱᴀꜱ:'
+    - ' &c• &fDinero &a+100$'
+    - ' &c• &fLlaves Magic &ex2'
+    - ' &c• &fObjeto OP &ex1'
+    - ''
+    - ' &c🔒 ᴘʀᴇᴍɪᴜᴍ:'
+    - ' &c• &fLlaves OP &ex1'
+    - ' &c• &fSuperSkin &ex1'
+    - ''
+    stack: 43
+    actions:
+      commands:
+      - '[sound] block.chain.hit volume=1 pitch=0.7'
+  item_red_stained_glass_pane_43:
+    material: FIREWORK_STAR
+    name: '&c✘ &fNivel 44 &8| &cNo Alcanzado '
+    lore:
+    - '&8Objeto Informativo'
+    - ''
+    - ' &7Desbloquea antes los'
+    - ' &7niveles anteriores'
+    - ''
+    - ' &c🔒 ʀᴇᴄᴏᴍᴘᴇɴꜱᴀꜱ:'
+    - ' &c• &fDinero &a+100$'
+    - ' &c• &fLlaves Magic &ex2'
+    - ' &c• &fObjeto OP &ex1'
+    - ''
+    - ' &c🔒 ᴘʀᴇᴍɪᴜᴍ:'
+    - ' &c• &fLlaves OP &ex1'
+    - ' &c• &fSuperSkin &ex1'
+    - ''
+    stack: 44
+    actions:
+      commands:
+      - '[sound] block.chain.hit volume=1 pitch=0.7'
+  item_red_stained_glass_pane_44:
+    material: FIREWORK_STAR
+    name: '&c✘ &fNivel 45 &8| &cNo Alcanzado '
+    lore:
+    - '&8Objeto Informativo'
+    - ''
+    - ' &7Desbloquea antes los'
+    - ' &7niveles anteriores'
+    - ''
+    - ' &c🔒 ʀᴇᴄᴏᴍᴘᴇɴꜱᴀꜱ:'
+    - ' &c• &fDinero &a+100$'
+    - ' &c• &fLlaves Magic &ex2'
+    - ' &c• &fObjeto OP &ex1'
+    - ''
+    - ' &c🔒 ᴘʀᴇᴍɪᴜᴍ:'
+    - ' &c• &fLlaves OP &ex1'
+    - ' &c• &fSuperSkin &ex1'
+    - ''
+    stack: 45
+    actions:
+      commands:
+      - '[sound] block.chain.hit volume=1 pitch=0.7'
+  premium:
+    material: GOLD_INGOT
+    name: '&#FFC400Pa&#FFCA00se&#FFD000 P&#FFD700re&#FFDD00mi&#FFE300um'
+    lore:
+    - '&8Objeto Interactivo'
+    - ''
+    - '&f &6| &fDesbloquea todos '
+    - '&f &6| &flos beneficios'
+    - ''
+    - '&7⏵ Click para ver'      
+    enchantments:
+    - unbreaking 1
+    
+    stack: 1
+  misiones:
+    material: OAK_HANGING_SIGN
+    name: '&fMisiones Diarias'
+    lore:
+    - '&8Botón Interactivo'
+    - ''
+    - ' &7¡&e4 &7misiones disponibles! '
+    - ''
+    - '&7⏵ Click para ver'  
+    actions:
+      commands:
+        - '[open] misiones'
+        - '[sound] block.tripwire.click_on volume=0.5 pitch=1.5'    
+    stack: 4
+  item_gray_stained_glass_pane_45:
+    material: GRAY_STAINED_GLASS_PANE
+    stack: 1
+  item_black_stained_glass_pane_48:
+    material: BLACK_STAINED_GLASS_PANE
+    stack: 1
+  item_player_head_49:
+    material: EXPERIENCE_BOTTLE
+    stack: 1
+  item_black_stained_glass_pane_50:
+    material: BLACK_STAINED_GLASS_PANE
+    stack: 1
+  item_gray_stained_glass_pane_51:
+    material: GRAY_STAINED_GLASS_PANE
+    stack: 1
+  item_gray_stained_glass_pane_52:
+    material: GRAY_STAINED_GLASS_PANE
+    stack: 1
+  item_arrow_53:
+    material: ARROW
+    stack: 2
+    name: '&fSiguiente Página'
+    lore:
+    - '&8Botón Interactivo'
+    - ''
+    - '&7⏵ Click para ir '
+    actions:
+      commands:
+        - '[open] level2'
+        - '[sound] block.tripwire.click_on volume=0.5 pitch=1.5'

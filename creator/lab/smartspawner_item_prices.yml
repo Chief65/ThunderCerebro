@@ -1,0 +1,13 @@
+# ---------------------------------------------------
+#                  ITEM_PRICES.YML (ThunderMC Standard)
+# ---------------------------------------------------
+# Exclusivamente los 6 drops oficiales de SmartSpawners.
+# Precios idénticos 1:1 con la Lonja oficial.
+# ---------------------------------------------------
+
+ROTTEN_FLESH: 1.50       # Zombie (SUPER 🟢)
+SLIME_BALL: 6.50         # Slime (RARA 🔵)
+ENDER_PEARL: 14.00       # Enderman (ÉPICA 🟣)
+BLAZE_ROD: 22.00         # Blaze (LEGEND 🟡)
+MAGMA_CREAM: 32.00       # Magma Cube (MÍTICA 🔴)
+BREEZE_ROD: 45.00        # Breeze (LIMITED ⭐)

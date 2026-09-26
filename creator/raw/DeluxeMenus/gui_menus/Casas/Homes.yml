@@ -1,0 +1,873 @@
+open_command: homes
+size: 36
+menu_title: '&0&l|&r &0Casas ▶ &8Menu'
+update: true
+
+items:
+  'Filtro':
+    display_name: " "
+    material: GRAY_STAINED_GLASS_PANE
+    slots: [27-30,32-35]
+    
+  'Cerrar':
+    material: DARK_OAK_DOOR
+    slot: 31
+    display_name: "&cSalir"
+    left_click_commands:
+      - '[close]'
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  'Home1':
+    material: LIME_BED
+    slot: 0
+    priority: 1
+    display_name: '&a⌂ Hogar &8▶ &f%essentials_home_has_1%'
+    lore:
+      - '&8ᴇꜱᴛᴀʙʟᴇᴄɪᴅᴏ'
+      - ''
+      - '&7 Para eliminar este'
+      - '&7 hogar escribe:'
+      - '&c /delhome %essentials_home_has_1%'
+      - ''
+      - '&8 ᴜʙɪᴄᴀᴄɪᴏɴ'
+      - '&8 ● &fMundo: &7%essentials_home_1_w%'
+      - '&8 ● &fX: &7%math_0:0_{essentials_home_1_x}%'
+      - '&8 ● &fY: &7%math_0:0_{essentials_home_1_y}%'
+      - '&8 ● &fZ: &7%math_0:0_{essentials_home_1_z}%'
+      - ''
+      - '&a▶ Click izq. para ir'
+      - '&e▶ Click der. para eliminar'
+    left_click_commands:
+      - '[sound] ENTITY_ENDERMAN_TELEPORT'
+      - '[player] home %essentials_home_has_1%'
+      - '[refresh]'
+    right_click_commands:
+      - '[sound] UI_BUTTON_CLICK'
+      - '[openguimenu] Home1'
+    view_requirement:
+      requirements:
+        homes:
+          type: string equals
+          input: '%math_0:0_{essentials_homes_set}>=1%'
+          output: '1'
+
+  'Home1-NoOcupada':
+    material: LIGHT_GRAY_BED
+    slot: 0
+    priority: 2
+    display_name: '&e⌂ Hogar &8▶ &7Disponible'
+    lore:
+      - '&8ᴘᴏʀ ᴅᴇꜰɪɴɪʀ'
+      - ''
+      - '&7 Para establecer este'
+      - '&7 hogar escribe:'
+      - '&e /sethome <nombre>'
+      - ''
+      - '&a▶ Click establecer'
+    left_click_commands:
+      - '[sound] ENTITY_EXPERIENCE_ORB_PICKUP'
+      - '[player] sethome Home1'
+      - '[refresh]'
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  'Home2':
+    material: LIME_BED
+    slot: 1
+    priority: 1
+    display_name: '&a⌂ Hogar &8▶ &f%essentials_home_has_2%'
+    lore:
+      - '&8ᴇꜱᴛᴀʙʟᴇᴄɪᴅᴏ'
+      - ''
+      - '&7 Para eliminar este'
+      - '&7 hogar escribe:'
+      - '&c /delhome %essentials_home_has_2%'
+      - ''
+      - '&8 ᴜʙɪᴄᴀᴄɪᴏɴ'
+      - '&8 ● &fMundo: &7%essentials_home_2_w%'
+      - '&8 ● &fX: &7%math_0:0_{essentials_home_2_x}%'
+      - '&8 ● &fY: &7%math_0:0_{essentials_home_2_y}%'
+      - '&8 ● &fZ: &7%math_0:0_{essentials_home_2_z}%'
+      - ''
+      - '&a▶ Click izq. para ir'
+      - '&e▶ Click der. para eliminar'
+    left_click_commands:
+      - '[sound] ENTITY_ENDERMAN_TELEPORT'
+      - '[player] home %essentials_home_has_2%'
+      - '[refresh]'
+    right_click_commands:
+      - '[sound] UI_BUTTON_CLICK'
+      - '[openguimenu] Home2'
+    view_requirement:
+      requirements:
+        homes:
+          type: string equals
+          input: '%math_0:0_{essentials_homes_set}>=2%'
+          output: '1'
+
+  'Home2-NoOcupado':
+    material: LIGHT_GRAY_BED
+    slot: 1
+    priority: 2
+    display_name: '&e⌂ Hogar &8▶ &7Disponible'
+    lore:
+      - '&8ᴘᴏʀ ᴅᴇꜰɪɴɪʀ'
+      - ''
+      - '&7 Para establecer este'
+      - '&7 hogar escribe:'
+      - '&e /sethome <nombre>'
+      - ''
+      - '&a▶ Click establecer'
+    left_click_commands:
+      - '[sound] ENTITY_EXPERIENCE_ORB_PICKUP'
+      - '[player] sethome home%math_0:0_{essentials_homes_set}+1%'
+      - '[refresh]'
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  'Home3':
+    material: LIME_BED
+    slot: 2
+    priority: 1
+    display_name: '&a⌂ Hogar &8▶ &f%essentials_home_has_3%'
+    lore:
+      - '&8ᴇꜱᴛᴀʙʟᴇᴄɪᴅᴏ'
+      - ''
+      - '&7 Para eliminar este'
+      - '&7 hogar escribe:'
+      - '&c /delhome %essentials_home_has_3%'
+      - ''
+      - '&8 ᴜʙɪᴄᴀᴄɪᴏɴ'
+      - '&8 ● &fMundo: &7%essentials_home_3_w%'
+      - '&8 ● &fX: &7%math_0:0_{essentials_home_3_x}%'
+      - '&8 ● &fY: &7%math_0:0_{essentials_home_3_y}%'
+      - '&8 ● &fZ: &7%math_0:0_{essentials_home_3_z}%'
+      - ''
+      - '&a▶ Click izq. para ir'
+      - '&e▶ Click der. para eliminar'
+    left_click_commands:
+      - '[sound] ENTITY_ENDERMAN_TELEPORT'
+      - '[player] home %essentials_home_has_3%'
+      - '[refresh]'
+    right_click_commands:
+      - '[sound] UI_BUTTON_CLICK'
+      - '[openguimenu] Home3'
+    view_requirement:
+      requirements:
+        homes:
+          type: string equals
+          input: '%math_0:0_{essentials_homes_set}>=3%'
+          output: '1'
+
+  'Home3-NoOcupado':
+    material: LIGHT_GRAY_BED
+    slot: 2
+    priority: 2
+    display_name: '&e⌂ Hogar &8▶ &7Disponible'
+    lore:
+      - '&8ᴘᴏʀ ᴅᴇꜰɪɴɪʀ'
+      - ''
+      - '&7 Para establecer este'
+      - '&7 hogar escribe:'
+      - '&e /sethome <nombre>'
+      - ''
+      - '&a▶ Click establecer'
+    left_click_commands:
+      - '[sound] ENTITY_EXPERIENCE_ORB_PICKUP'
+      - '[player] sethome home%rng_3,10%'
+      - '[refresh]'
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  'HomeKnight':
+    material: LIME_BED
+    slot: 3
+    priority: 1
+    display_name: '&a⌂ Hogar &8▶ &f%essentials_home_has_4%'
+    lore:
+      - '&8ᴇꜱᴛᴀʙʟᴇᴄɪᴅᴏ'
+      - ''
+      - '&7 Para eliminar este'
+      - '&7 hogar escribe:'
+      - '&c /delhome %essentials_home_has_4%'
+      - ''
+      - '&8 ᴜʙɪᴄᴀᴄɪᴏɴ'
+      - '&8 ● &fMundo: &7%essentials_home_4_w%'
+      - '&8 ● &fX: &7%math_0:0_{essentials_home_4_x}%'
+      - '&8 ● &fY: &7%math_0:0_{essentials_home_4_y}%'
+      - '&8 ● &fZ: &7%math_0:0_{essentials_home_4_z}%'
+      - ''
+      - '&a▶ Click izq. para ir'
+      - '&e▶ Click der. para eliminar'
+    left_click_commands:
+      - '[sound] ENTITY_ENDERMAN_TELEPORT'
+      - '[player] home %essentials_home_has_4%'
+      - '[refresh]'
+    right_click_commands:
+      - '[sound] UI_BUTTON_CLICK'
+      - '[openguimenu] Home4'
+    view_requirement:
+      requirements:
+        homes:
+          type: string equals
+          input: '%math_0:0_{essentials_homes_set}>=4%'
+          output: '1'
+
+  'HomeKnight-NoOcupado':
+    material: LIGHT_GRAY_BED
+    slot: 3
+    priority: 2
+    display_name: '&e⌂ Hogar &8▶ &7Disponible'
+    lore:
+      - '&8ᴘᴏʀ ᴅᴇꜰɪɴɪʀ'
+      - ''
+      - '&7 Para establecer este'
+      - '&7 hogar escribe:'
+      - '&e /sethome <nombre>'
+      - ''
+      - '&a▶ Click establecer'
+    left_click_commands:
+      - '[sound] ENTITY_EXPERIENCE_ORB_PICKUP'
+      - '[player] sethome home%rng_4,100%'
+      - '[refresh]'
+    view_requirement:
+      requirements:
+        permiso:
+          type: has permission
+          permission: essentials.sethome.multiple.4
+
+  'HomeKnight-NoPermiso':
+    material: IRON_BARS
+    slot: 3
+    priority: 3
+    display_name: '&c🔒 Hogar &8▶ &#128CD2&lᴋ&#0E95DB&lɴ&#0B9DE4&lɪ&#07A6ED&lɢ&#04AEF6&lʜ&#00B7FF&lᴛ'
+    lore:
+      - '&8ʙʟᴏqᴜᴇᴀᴅᴏ'
+      - ''
+      - '&7 Necesitas rango ᴋɴɪɢʜᴛ'
+      - '&7 para poder desbloquear'
+      - '&7 este hogar.'
+      - ''
+    left_click_commands:
+      - '[sound] ENTITY_VILLAGER_NO'
+      - '[message] &#FFF000&lTHUNDERMC &c✘ Oof, Necesitas un rango más alto para usar este hogar.'
+      - '[refresh]'
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  'HomeHeroe':
+    material: LIME_BED
+    slot: 4
+    priority: 1
+    display_name: '&a⌂ Hogar &8▶ &f%essentials_home_has_5%'
+    lore:
+      - '&8ᴇꜱᴛᴀʙʟᴇᴄɪᴅᴏ'
+      - ''
+      - '&7 Para eliminar este'
+      - '&7 hogar escribe:'
+      - '&c /delhome %essentials_home_has_5%'
+      - ''
+      - '&8 ᴜʙɪᴄᴀᴄɪᴏɴ'
+      - '&8 ● &fMundo: &7%essentials_home_5_w%'
+      - '&8 ● &fX: &7%math_0:0_{essentials_home_5_x}%'
+      - '&8 ● &fY: &7%math_0:0_{essentials_home_5_y}%'
+      - '&8 ● &fZ: &7%math_0:0_{essentials_home_5_z}%'
+      - ''
+      - '&a▶ Click izq. para ir'
+      - '&e▶ Click der. para eliminar'
+    left_click_commands:
+      - '[sound] ENTITY_ENDERMAN_TELEPORT'
+      - '[player] home %essentials_home_has_5%'
+      - '[refresh]'
+    right_click_commands:
+      - '[sound] UI_BUTTON_CLICK'
+      - '[openguimenu] Home5'
+    view_requirement:
+      requirements:
+        homes:
+          type: string equals
+          input: '%math_0:0_{essentials_homes_set}>=5%'
+          output: '1'
+
+  'HomeHeroe-NoOcupado':
+    material: LIGHT_GRAY_BED
+    slot: 4
+    priority: 2
+    display_name: '&e⌂ Hogar &8▶ &7Disponible'
+    lore:
+      - '&8ᴘᴏʀ ᴅᴇꜰɪɴɪʀ'
+      - ''
+      - '&7 Para establecer este'
+      - '&7 hogar escribe:'
+      - '&e /sethome <nombre>'
+      - ''
+      - '&a▶ Click establecer'
+    left_click_commands:
+      - '[sound] ENTITY_EXPERIENCE_ORB_PICKUP'
+      - '[player] sethome home%rng_5,100%'
+      - '[refresh]'
+    view_requirement:
+      requirements:
+        permiso:
+          type: has permission
+          permission: essentials.sethome.multiple.5
+
+  'HomeHeroe-NoPermiso':
+    material: IRON_BARS
+    slot: 4
+    priority: 3
+    display_name: '&c🔒 Hogar &8▶ &#D212BD&lʜ&#DD0EBF&lᴇ&#E909C1&lʀ&#F405C2&lᴏ&#FF00C4&lᴇ'
+    lore:
+      - '&8ʙʟᴏqᴜᴇᴀᴅᴏ'
+      - ''
+      - '&7 Necesitas rango ʜᴇʀᴏᴇ'
+      - '&7 para poder desbloquear'
+      - '&7 este hogar.'
+      - ''
+    left_click_commands:
+      - '[sound] ENTITY_VILLAGER_NO'
+      - '[message] &#FFF000&lTHUNDERMC &c✘ Oof, Necesitas un rango más alto para usar este hogar.'
+      - '[refresh]'
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  'HomeLegend':
+    material: LIME_BED
+    slot: 5
+    priority: 1
+    display_name: '&a⌂ Hogar &8▶ &f%essentials_home_has_6%'
+    lore:
+      - '&8ᴇꜱᴛᴀʙʟᴇᴄɪᴅᴏ'
+      - ''
+      - '&7 Para eliminar este'
+      - '&7 hogar escribe:'
+      - '&c /delhome %essentials_home_has_6%'
+      - ''
+      - '&8 ᴜʙɪᴄᴀᴄɪᴏɴ'
+      - '&8 ● &fMundo: &7%essentials_home_6_w%'
+      - '&8 ● &fX: &7%math_0:0_{essentials_home_6_x}%'
+      - '&8 ● &fY: &7%math_0:0_{essentials_home_6_y}%'
+      - '&8 ● &fZ: &7%math_0:0_{essentials_home_6_z}%'
+      - ''
+      - '&a▶ Click izq. para ir'
+      - '&e▶ Click der. para eliminar'
+    left_click_commands:
+      - '[sound] ENTITY_ENDERMAN_TELEPORT'
+      - '[player] home %essentials_home_has_6%'
+      - '[refresh]'
+    right_click_commands:
+      - '[sound] UI_BUTTON_CLICK'
+      - '[openguimenu] Home6'
+    view_requirement:
+      requirements:
+        homes:
+          type: string equals
+          input: '%math_0:0_{essentials_homes_set}>=6%'
+          output: '1'
+
+  'HomeLegend-NoOcupado':
+    material: LIGHT_GRAY_BED
+    slot: 5
+    priority: 2
+    display_name: '&e⌂ Hogar &8▶ &7Disponible'
+    lore:
+      - '&8ᴘᴏʀ ᴅᴇꜰɪɴɪʀ'
+      - ''
+      - '&7 Para establecer este'
+      - '&7 hogar escribe:'
+      - '&e /sethome <nombre>'
+      - ''
+      - '&a▶ Click establecer'
+    left_click_commands:
+      - '[sound] ENTITY_EXPERIENCE_ORB_PICKUP'
+      - '[player] sethome home%rng_6,100%'
+      - '[refresh]'
+    view_requirement:
+      requirements:
+        permiso:
+          type: has permission
+          permission: essentials.sethome.multiple.6
+
+  'HomeLegend-NoPermiso':
+    material: IRON_BARS
+    slot: 5
+    priority: 3
+    display_name: '&c🔒 Hogar &8▶ &#F5A614&lʟ&#F7B210&lᴇ&#F9BE0C&lɢ&#FBCB08&lᴇ&#FDD704&lɴ&#FFE300&lᴅ'
+    lore:
+      - '&8ʙʟᴏqᴜᴇᴀᴅᴏ'
+      - ''
+      - '&7 Necesitas rango ʟᴇɢᴇɴᴅ'
+      - '&7 para poder desbloquear'
+      - '&7 este hogar.'
+      - ''
+    left_click_commands:
+      - '[sound] ENTITY_VILLAGER_NO'
+      - '[message] &#FFF000&lTHUNDERMC &c✘ Oof, Necesitas un rango más alto para usar este hogar.'
+      - '[refresh]'
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  'HomeMythic':
+    material: LIME_BED
+    slot: 6
+    priority: 1
+    display_name: '&a⌂ Hogar &8▶ &f%essentials_home_has_7%'
+    lore:
+      - '&8ᴇꜱᴛᴀʙʟᴇᴄɪᴅᴏ'
+      - ''
+      - '&7 Para eliminar este'
+      - '&7 hogar escribe:'
+      - '&c /delhome %essentials_home_has_7%'
+      - ''
+      - '&8 ᴜʙɪᴄᴀᴄɪᴏɴ'
+      - '&8 ● &fMundo: &7%essentials_home_7_w%'
+      - '&8 ● &fX: &7%math_0:0_{essentials_home_7_x}%'
+      - '&8 ● &fY: &7%math_0:0_{essentials_home_7_y}%'
+      - '&8 ● &fZ: &7%math_0:0_{essentials_home_7_z}%'
+      - ''
+      - '&a▶ Click izq. para ir'
+      - '&e▶ Click der. para eliminar'
+    left_click_commands:
+      - '[sound] ENTITY_ENDERMAN_TELEPORT'
+      - '[player] home %essentials_home_has_7%'
+      - '[refresh]'
+    right_click_commands:
+      - '[sound] UI_BUTTON_CLICK'
+      - '[openguimenu] Home7'
+    view_requirement:
+      requirements:
+        homes:
+          type: string equals
+          input: '%math_0:0_{essentials_homes_set}>=7%'
+          output: '1'
+
+  'HomeMythic-NoOcupado':
+    material: LIGHT_GRAY_BED
+    slot: 6
+    priority: 2
+    display_name: '&e⌂ Hogar &8▶ &7Disponible'
+    lore:
+      - '&8ᴘᴏʀ ᴅᴇꜰɪɴɪʀ'
+      - ''
+      - '&7 Para establecer este'
+      - '&7 hogar escribe:'
+      - '&e /sethome <nombre>'
+      - ''
+      - '&a▶ Click establecer'
+    left_click_commands:
+      - '[sound] ENTITY_EXPERIENCE_ORB_PICKUP'
+      - '[player] sethome home%rng_7,100%'
+      - '[refresh]'
+    view_requirement:
+      requirements:
+        permiso:
+          type: has permission
+          permission: essentials.sethome.multiple.7
+
+  'HomeMythic-NoPermiso':
+    material: IRON_BARS
+    slot: 6
+    priority: 3
+    display_name: '&c🔒 Hogar &8▶ &#F55414&lᴍ&#F76010&lʏ&#F96C0C&lᴛ&#FB7908&lʜ&#FD8504&lɪ&#FF9100&lᴄ'
+    lore:
+      - '&8ʙʟᴏqᴜᴇᴀᴅᴏ'
+      - ''
+      - '&7 Necesitas rango ᴍʏᴛʜɪᴄ'
+      - '&7 para poder desbloquear'
+      - '&7 este hogar.'
+      - ''
+    left_click_commands:
+      - '[sound] ENTITY_VILLAGER_NO'
+      - '[message] &#FFF000&lTHUNDERMC &c✘ Oof, Necesitas un rango más alto para usar este hogar.'
+      - '[refresh]'
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  'HomeTitan':
+    material: LIME_BED
+    slot: 7
+    priority: 1
+    display_name: '&a⌂ Hogar &8▶ &f%essentials_home_has_8%'
+    lore:
+      - '&8ᴇꜱᴛᴀʙʟᴇᴄɪᴅᴏ'
+      - ''
+      - '&7 Para eliminar este'
+      - '&7 hogar escribe:'
+      - '&c /delhome %essentials_home_has_8%'
+      - ''
+      - '&8 ᴜʙɪᴄᴀᴄɪᴏɴ'
+      - '&8 ● &fMundo: &7%essentials_home_8_w%'
+      - '&8 ● &fX: &7%math_0:0_{essentials_home_8_x}%'
+      - '&8 ● &fY: &7%math_0:0_{essentials_home_8_y}%'
+      - '&8 ● &fZ: &7%math_0:0_{essentials_home_8_z}%'
+      - ''
+      - '&a▶ Click izq. para ir'
+      - '&e▶ Click der. para eliminar'
+    left_click_commands:
+      - '[sound] ENTITY_ENDERMAN_TELEPORT'
+      - '[player] home %essentials_home_has_8%'
+      - '[refresh]'
+    right_click_commands:
+      - '[sound] UI_BUTTON_CLICK'
+      - '[openguimenu] Home4'
+    view_requirement:
+      requirements:
+        homes:
+          type: string equals
+          input: '%math_0:0_{essentials_homes_set}>=8%'
+          output: '1'
+
+  'HomeTitan-NoOcupado':
+    material: LIGHT_GRAY_BED
+    slot: 7
+    priority: 2
+    display_name: '&e⌂ Hogar &8▶ &7Disponible'
+    lore:
+      - '&8ᴘᴏʀ ᴅᴇꜰɪɴɪʀ'
+      - ''
+      - '&7 Para establecer este'
+      - '&7 hogar escribe:'
+      - '&e /sethome <nombre>'
+      - ''
+      - '&a▶ Click establecer'
+    left_click_commands:
+      - '[sound] ENTITY_EXPERIENCE_ORB_PICKUP'
+      - '[player] sethome home%rng_8,100%'
+      - '[refresh]'
+    view_requirement:
+      requirements:
+        permiso:
+          type: has permission
+          permission: essentials.sethome.multiple.8
+
+  'HomeTitan-NoPermiso':
+    material: IRON_BARS
+    slot: 7
+    priority: 3
+    display_name: '&c🔒 Hogar &8▶ &#CB0A0A&lᴛ&#D80A08&lɪ&#E50A05&lᴛ&#F20A03&lᴀ&#FF0A00&lɴ'
+    lore:
+      - '&8ʙʟᴏqᴜᴇᴀᴅᴏ'
+      - ''
+      - '&7 Necesitas rango ᴛɪᴛᴀɴ'
+      - '&7 para poder desbloquear'
+      - '&7 este hogar.'
+      - ''
+    left_click_commands:
+      - '[sound] ENTITY_VILLAGER_NO'
+      - '[message] &#FFF000&lTHUNDERMC &c✘ Oof, Necesitas un rango más alto para usar este hogar.'
+      - '[refresh]'
+
+
+
+
+
+
+
+
+
+
+  'HomeTitan2':
+    material: LIME_BED
+    slot: 8
+    priority: 1
+    display_name: '&a⌂ Hogar &8▶ &f%essentials_home_has_9%'
+    lore:
+      - '&8ᴇꜱᴛᴀʙʟᴇᴄɪᴅᴏ'
+      - ''
+      - '&7 Para eliminar este'
+      - '&7 hogar escribe:'
+      - '&c /delhome %essentials_home_has_9%'
+      - ''
+      - '&8 ᴜʙɪᴄᴀᴄɪᴏɴ'
+      - '&8 ● &fMundo: &7%essentials_home_9_w%'
+      - '&8 ● &fX: &7%math_0:0_{essentials_home_9_x}%'
+      - '&8 ● &fY: &7%math_0:0_{essentials_home_9_y}%'
+      - '&8 ● &fZ: &7%math_0:0_{essentials_home_9_z}%'
+      - ''
+      - '&a▶ Click izq. para ir'
+      - '&e▶ Click der. para eliminar'
+    left_click_commands:
+      - '[sound] ENTITY_ENDERMAN_TELEPORT'
+      - '[player] home %essentials_home_has_9%'
+      - '[refresh]'
+    right_click_commands:
+      - '[sound] UI_BUTTON_CLICK'
+      - '[openguimenu] Home9'
+    view_requirement:
+      requirements:
+        homes:
+          type: string equals
+          input: '%math_0:0_{essentials_homes_set}>=9%'
+          output: '1'
+
+  'HomeTitan2-NoOcupado':
+    material: LIGHT_GRAY_BED
+    slot: 8
+    priority: 2
+    display_name: '&e⌂ Hogar &8▶ &7Disponible'
+    lore:
+      - '&8ᴘᴏʀ ᴅᴇꜰɪɴɪʀ'
+      - ''
+      - '&7 Para establecer este'
+      - '&7 hogar escribe:'
+      - '&e /sethome <nombre>'
+      - ''
+      - '&a▶ Click establecer'
+    left_click_commands:
+      - '[sound] ENTITY_EXPERIENCE_ORB_PICKUP'
+      - '[player] sethome home%rng_9,100%'
+      - '[refresh]'
+    view_requirement:
+      requirements:
+        permiso:
+          type: has permission
+          permission: essentials.sethome.multiple.9
+
+  'HomeTitan2-NoPermiso':
+    material: IRON_BARS
+    slot: 8
+    priority: 3
+    display_name: '&c🔒 Hogar &8▶ &#CB0A0A&lᴛ&#D80A08&lɪ&#E50A05&lᴛ&#F20A03&lᴀ&#FF0A00&lɴ'
+    lore:
+      - '&8ʙʟᴏqᴜᴇᴀᴅᴏ'
+      - ''
+      - '&7 Necesitas rango ᴛɪᴛᴀɴ'
+      - '&7 para poder desbloquear'
+      - '&7 este hogar.'
+      - ''
+    left_click_commands:
+      - '[sound] ENTITY_VILLAGER_NO'
+      - '[message] &#FFF000&lTHUNDERMC &c✘ Oof, Necesitas un rango más alto para usar este hogar.'
+      - '[refresh]'

@@ -1,0 +1,312 @@
+header-footer:
+  enabled: true
+  designs:
+    world-world1:
+      display-condition: '%world%=world1'
+      header:
+      - an example of world with custom
+      footer:
+      - header/footer and prefix/suffix
+    world-world2;world3:
+      display-condition: '%world%=world2|%world%=world3'
+      header:
+      - This is a shared header for
+      - world2 and world3
+      footer: []
+    server-server1:
+      display-condition: '%server%=server1'
+      header:
+      - an example of server with custom header
+      footer: []
+    default:
+      display-condition: '%world%!=disabledworld'
+      header:
+      - '&8&l&m                                     '
+      - ''
+      - '&f &#FEEB00&lTHUNDERMC &f'
+      - '&f&7ᴛʜᴜɴᴅᴇʀᴍᴄ.ᴇꜱ &f'
+      - ''
+      footer:
+      - ''
+      - '&8&l&m                                     '
+tablist-name-formatting:
+  enabled: true
+  disable-condition: '%world%=disabledworld'
+scoreboard-teams:
+  enabled: true
+  enable-collision: true
+  invisible-nametags: false
+  sorting-types:
+  - GROUPS:admin,moderadorexperto,moderador,ayudante,media,titan,mythic,legend,heroe,knight,default
+  - PERMISSIONS:tab.sort.vip
+  - PLACEHOLDER_A_TO_Z:%player%
+  case-sensitive-sorting: true
+  can-see-friendly-invisibles: false
+  disable-condition: '%world%=disabledworld'
+playerlist-objective:
+  enabled: false
+  value: '%ping%'
+  fancy-value: '&7Ping: %ping%'
+  disable-condition: '%world%=disabledworld'
+  title: TAB
+  render-type: INTEGER
+belowname-objective:
+  enabled: true
+  value: ''
+  title: ''
+  fancy-value: '<shadow:#000000:1>&#59E91F&l$&r<shadow:#000000:1>&#59E91F%vault_eco_balance_formatted% &8| &#EB1717%health%❤ &8| &7%zelteams_name%</shadow>'
+  fancy-value-default: ''
+  disable-condition: '%world%=disabledworld'
+abovename:
+  enabled: false
+  text: '%rpgclasses_guild_relation_{viewer}%'
+  disable-condition: '%world%=disabledworld'
+prevent-spectator-effect:
+  enabled: false
+bossbar:
+  enabled: true
+  toggle-command: /bossbar
+  remember-toggle-choice: false
+  hidden-by-default: false
+  bars:
+    Grind:
+      style: PROGRESS
+      color: YELLOW
+      progress: '100'
+      text: '&e⛏ Zona de Mineria &8▶ &f¡Fly Activo!'
+      display-condition: "%world%=desactivado"
+    Dungeons:
+      style: PROGRESS
+      color: YELLOW
+      progress: '100'
+      text: '&e🗡 Zona Corrupta &8▶ &a✔ &f¡KeepInventory!'
+      display-condition: "%world%=desactivado"
+    Jefes:
+      style: PROGRESS
+      color: RED
+      progress: '100'
+      text: '&8┗&c☠&8┛ &cJefes &8▶ &f¡Aquí pierdes Objetos!'
+      display-condition: "%world%=desactivado"
+    Spawn:
+      style: PROGRESS
+      color: GREEN
+      progress: '100'
+      text: '&a🛡 Zona Segura &8▶ &fCiudad Thunder'
+      display-condition: "%world%=desactivado"
+######### MISIONES INICIALES ##########
+    EjemploTutorial:
+      style: PROGRESS
+      color: YELLOW
+      progress: '0'
+      text: '&e⚑ &fEncuentra la &eMina Comunitaria &8(&71&8/&75&8)'
+      display-condition: "%world%=Spawn"
+scoreboard:
+  enabled: true
+  toggle-command: /sb
+  remember-toggle-choice: false
+  hidden-by-default: false
+  delay-on-join-milliseconds: 0
+  scoreboards:
+######################################## BEDROCK ##############################################
+    SurvivalBedrock: ############################## SURVIVAL
+      display-condition: "%world%=world;%bedrock%=true"
+      title: '%animation:thundermc%'
+      lines:
+      - '  &7%localtime_time_dd/MM% &8| &7%server_online% Online'
+      - '&f'
+      - ' <shadow:#000000:1>&f%player_name%</shadow>'
+      - ' &8| %luckperms_prefix% %luckperms_suffix%'
+      - '' 
+      - ' <shadow:#000000:1>&#FEEB00| &fTeam: &#FEEB00%zelteams_name% </shadow>'
+      - ' &#59E91F| <shadow:#000000:1>&fDinero: &#59E91F&l$</shadow>&r<shadow:#000000:1>&#59E91F%vault_eco_balance_formatted%</shadow>'
+      - ' &#34B0F3| <shadow:#000000:1>&fAlmas: &#34B0F3%playerpoints_points_formatted%</shadow>'
+      - ' &#CF27F5| <shadow:#000000:1>&fJugado: &#CF27F5%statistic_hours_played%h</shadow>'
+      - ''
+      - ' &#FBE200Tierras:'
+      - ' &d%changeoutput_equals_input:_matcher:{protectionstones_currentregion_owners}_ifmatch:&7| Sin Dueño_else:&7| &f{protectionstones_currentregion_owners}%'
+      - '&f'
+      - ' &ethundermc.es '   
+    GeneralBedrock: ############################## GENERAL
+      display-condition: "%bedrock%=true"
+      title: '%animation:thundermc%'
+      lines:
+      - '  &7%localtime_time_dd/MM% &8| &7%server_online% Online'
+      - '&f'
+      - ' <shadow:#000000:1>&f%player_name%</shadow>'
+      - ' <shadow:#000000:1>&8| %luckperms_prefix% %luckperms_suffix%'
+      - '' 
+      - ' <shadow:#000000:1>&#FEEB00| &fTeam: &#FEEB00%zelteams_name%</shadow>'
+      - ' <shadow:#000000:1>&#59E91F| <shadow:#000000:1>&fDinero: &#59E91F&l$</shadow>&r<shadow:#000000:1>&#59E91F%vault_eco_balance_formatted%</shadow>'
+      - ' <shadow:#000000:1>&#34B0F3| <shadow:#000000:1>&fAlmas: &#34B0F3%playerpoints_points_formatted%</shadow>'
+      - ' <shadow:#000000:1>&#CF27F5| <shadow:#000000:1>&fJugado: &#CF27F5%statistic_hours_played%h</shadow> '
+      - ' <shadow:#000000:1>&#F58E27| <shadow:#000000:1>&fKills: &#F58E27%statistic_player_kills%'
+      - ' <shadow:#000000:1>&#F52727| <shadow:#000000:1>&fMuertes: &#F52727%statistic_deaths%'
+      - '&f' 
+      - ' &ethundermc.es '   
+    Survival: ############################## SURVIVAL
+      display-condition: "%world%=world"
+      title: '%animation:thundermc%'
+      lines:
+      - '  &7⌚ %localtime_time_dd/MM% &8| &7👥 %server_online% '
+      - '&f'
+      - ' <head:%player_name%> <shadow:#000000:1>&f%player_name%</shadow>'
+      - ' <shadow:#000000:1>&8▶ %luckperms_prefix% %luckperms_suffix%'
+      - '' 
+      - ' <shadow:#000000:1>&#FEEB00| &fTeam: &#FEEB00%zelteams_name% ⚔'
+      - ' <shadow:#000000:1>&#59E91F| &fDinero: &#59E91F&l$&r<shadow:#000000:1>&#59E91F%vault_eco_balance_formatted%'
+      - ' <shadow:#000000:1>&#34B0F3| &fAlmas: &#34B0F3%playerpoints_points_formatted%☠'
+      - ' <shadow:#000000:1>&#CF27F5| &fJugado: &#CF27F5%statistic_hours_played%h⌚ '
+      - ''
+      - ' &#FBE200Tierras:'
+      - ' &d%changeoutput_equals_input:_matcher:{protectionstones_currentregion_owners}_ifmatch:&7✘ Sin Dueño_else:&7👤 &f{protectionstones_currentregion_owners}%'
+      - '&f'
+      - '  &eᴛʜᴜɴᴅᴇʀᴍᴄ.ᴇꜱ ' 
+      - ' <gradient:#FEEB00:#FFC400:#F28C00:#FFC400:#FEEB00>&m                    </gradient>'
+    General: ############################## GENERAL
+      title: '%animation:thundermc%'
+      lines:
+      - '  &7⌚ %localtime_time_dd/MM% &8| &7👥 %server_online%'
+      - '&f'
+      - ' <head:%player_name%> <shadow:#000000:1>&f%player_name%</shadow>'
+      - ' <shadow:#000000:1>&8▶ %luckperms_prefix% %luckperms_suffix%'
+      - '' 
+      - ' <shadow:#000000:1>&#FEEB00| &fTeam: &#FEEB00%zelteams_name% ⚔'
+      - ' <shadow:#000000:1>&#59E91F| &fDinero: &#59E91F&l$&r<shadow:#000000:1>&#59E91F%vault_eco_balance_formatted%'
+      - ' <shadow:#000000:1>&#34B0F3| &fAlmas: &#34B0F3%playerpoints_points_formatted%☠'
+      - ' <shadow:#000000:1>&#CF27F5| &fJugado: &#CF27F5%statistic_hours_played%h⌚ '
+      - ' <shadow:#000000:1>&#F58E27| <shadow:#000000:1>&fKills: &#F58E27%statistic_player_kills%🗡'
+      - ' <shadow:#000000:1>&#F52727| <shadow:#000000:1>&fMuertes: &#F52727%statistic_deaths%☠'
+      - '&f' 
+      - '  &eᴛʜᴜɴᴅᴇʀᴍᴄ.ᴇꜱ '  
+      - ' <gradient:#FEEB00:#FFC400:#F28C00:#FFC400:#FEEB00>&m                    </gradient>'         
+ 
+    goty+:
+      condition: permission:tab.staff.op
+      title: '%animation:thundermc%'
+      lines:
+      - ' %luckperms_prefix% &8| &7%player_ping%ms'
+      - ''
+      - ' &#FFD700%player_name% '
+      - ' &#34B0F3💎 &fZafiros &#34B0F3%playerpoints_points_formatted%'
+      - ' &#59E91F&l$ &fDinero &#59E91F%vault_eco_balance_formatted% '
+      - ' &#E4080A🗡 &fKills &#E4080A%statistic_player_kills%'
+      - ' &#FE9900☠ &fMuertes &#FE9900%statistic_deaths%'
+      - ' &#CC6CE7⌚ &fJugado &#CC6CE7%statistic_hours_played%h'
+      - ' &#FBD333👥 &fTeam &7Eseba'
+      - ' &7| <shadow:#000000:1>&fMobs: &7%statistic_mob_kills%🔱</shadow>'
+      - ' &7| <shadow:#000000:1>&fKills: &7%statistic_player_kills%🗡</shadow>'
+      - ' &7| <shadow:#000000:1>&fMuertes: &7%statistic_deaths%☠</shadow>'
+      - ''
+      - ' &7ᴛʜᴜɴᴅᴇʀᴍᴄ.ᴇꜱ'
+layout:
+  enabled: false
+  direction: COLUMNS
+  default-skin: mineskin:383747683
+  enable-remaining-players-text: true
+  remaining-players-text: '... y %s más'
+  empty-slot-ping-value: 1000
+  layouts:
+    default:
+      fixed-slots: []
+      groups:
+        staff:
+          display-condition: "%luckperms_primary_group_name%=admin|%luckperms_primary_group_name%=moderadorexperto|%luckperms_primary_group_name%=moderador|%luckperms_primary_group_name%=ayudante|%luckperms_primary_group_name%=media"
+          slots:
+          - 1-20
+        players:
+          slots:
+          - 21-80
+ping-spoof:
+  enabled: false
+  value: 0
+placeholders:
+  date-format: dd.MM.yyyy
+  time-format: '[HH:mm:ss / h:mm a]'
+  time-offset: 0
+  register-tab-expansion: false
+placeholder-output-replacements:
+  '%essentials_vanished%':
+    'yes': '&7| Vanished'
+    'no': ''
+conditions:
+  nick:
+    conditions:
+    - '%player%=%essentials_nickname%'
+    true: '%player%'
+    false: ~%essentials_nickname%
+assign-groups-by-permissions: false
+primary-group-finding-list:
+- Admin
+- Helper
+- titan
+- mythic
+- legend
+- heroe
+- knight
+- default
+permission-refresh-interval: 1000
+debug: false
+mysql:
+  enabled: false
+  host: 127.0.0.1
+  port: 3306
+  database: tab
+  username: user
+  password: password
+  useSSL: true
+per-world-playerlist:
+  enabled: false
+  allow-bypass-permission: false
+  ignore-effect-in-worlds:
+  - ignoredworld
+  - build
+  shared-playerlist-world-groups:
+    lobby:
+    - lobby1
+    - lobby2
+    minigames:
+    - paintball
+    - bedwars
+compensate-for-packetevents-bug: false
+global-playerlist:
+  enabled: false
+  display-others-as-spectators: false
+  display-vanished-players-as-spectators: true
+  isolate-unlisted-servers: false
+  update-latency: false
+  spy-servers:
+  - spyserver1
+  - spyserver2
+  server-groups:
+    lobbies:
+    - lobby1
+    - lobby2
+    group2:
+    - server1
+    - server2
+use-bukkit-permissions-manager: false
+use-online-uuid-in-tablist: true
+proxy-support:
+  enabled: true
+  type: PLUGIN
+  plugin:
+    name: RedisBungee
+  redis:
+    url: redis://:password@localhost:6379/0
+  rabbitmq:
+    exchange: plugin
+    url: amqp://guest:guest@localhost:5672/%2F
+  channel-name-suffix: TAB
+placeholder-refresh-intervals:
+  default-refresh-interval: 500
+  '%server_uptime%': 1000
+  '%server_tps_1_colored%': 1000
+  '%server_unique_joins%': 5000
+  '%player_health%': 200
+  '%player_ping%': 1000
+  '%vault_prefix%': 1000
+  '%rel_factionsuuid_relation_color%': 1000
+config-version: 5
+components:
+  minimessage-support: true
+  disable-shadow-for-heads: true

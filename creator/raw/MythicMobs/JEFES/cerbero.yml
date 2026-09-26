@@ -1,0 +1,60 @@
+Cerbero:
+  Type: HOGLIN
+  Display: ''
+  Health: 2000
+  Damage: 25
+  Options:
+    Baby: false
+    Scale: 3.0
+    PreventOtherDrops: true
+    MovementSpeed: 0.3
+    Silent: false
+    ImmuneToZombification: true
+    UseThreatTable: true
+  AIGoalSelectors:
+    - 0 clear
+    - 1 meleeattack
+    - 2 randomstroll
+    - 3 lookatplayers
+    - 4 float
+  AITargetSelectors:
+    - 0 clear
+    - 1 players
+  BossBar:
+    Enabled: true
+    Title: '&8┖&f☠&8┚ &4Cerbero &8| &fEl Guardian'
+    Color: RED
+    Style: SEGMENTED_20
+    CreateFog: false
+  Skills:
+    # --- Fase 1 (100% → 66%) ---
+    - skill{s=WardenLanzarArriba_F} @target ~onTimer:320 ?health{h=<800}!
+    - skill{s=WardenEmbestida_F}    @target ~onTimer:280 ?health{h=<800}!
+    # --- Transición Fase 2 ---
+    - skill{s=WardenTransicion2}    @self   ~onTimer:20  ?health{h=<800} ?health{h=>400} ?hasaura{aura=fase2}!
+    # --- Fase 2 (66% → 33%) ---
+    - skill{s=WardenLanzarArriba_F} @target ~onTimer:260 ?health{h=<800} ?health{h=>400}
+    - skill{s=WardenEmbestida_F}    @target ~onTimer:220 ?health{h=800} ?health{h=>400}
+    # --- Transición Fase 3 ---
+    - skill{s=WardenTransicion3}    @self   ~onTimer:20  ?health{h=<1000} ?hasaura{aura=fase3}!
+    # --- Fase 3 (33% → 0%) ---
+    - skill{s=WardenLanzarArriba_F} @target ~onTimer:200 ?health{h=<400}
+    - skill{s=WardenEmbestida_F}    @target ~onTimer:180 ?health{h=<400}
+    # --- Muerte ---
+    - command{c="excellentcrates key give <trigger.name> vote 1 -s";sender=console} @self ~onDeath
+    - command{c="points give <trigger.name> 25 -s";sender=console} @self ~onDeath
+    - actionmessage{m="<#34B0F3>+25 <white>Alma <#34B0F3>🔥 &8| <#59E91F>+<#59E91F>&l$&r<#59E91F>600 &8| &a+1 &fLlave &aSuper"} @trigger ~onDeath
+    - command{c="economy give <trigger.name> 600 -s";sender=console} @self ~onDeath
+    - particles{particle=SCULK_SOUL;amount=50;speed=0.1;hSpread=0.5;vSpread=0.5} @self ~onDeath
+
+    - command{c="si give fragmentosuper 1 <trigger.name> -s";sender=console} @self ~onDeath 0.15
+    - command{c="si give fragmentorara 1 <trigger.name> -s";sender=console} @self ~onDeath 0.15
+    - command{c="si give fragmentogadget 1 <trigger.name> -s";sender=console} @self ~onDeath 0.15
+    - command{c="si give fragmentomitica 1 <trigger.name> -s";sender=console} @self ~onDeath 0.025
+    - skill{s=DropFragmentoLimitedGeneral} @self ~onDeath 0.001
+    - skill{s=BoostAlmas} @self ~onDeath
+    - setvariable{var=almas;value=25;scope=CASTER;type=INTEGER} @self ~onSpawn
+
+  Drops:
+    - DIAMOND 4-7 1
+    - GOLDEN_APPLE 1-2 0.7

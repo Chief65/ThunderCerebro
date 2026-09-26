@@ -1,0 +1,309 @@
+{% if config("store_theme") == "christmas" %}
+<div class="snowflakes" aria-hidden="true">
+    <div class="snowflake">❅</div><div class="snowflake">❅</div><div class="snowflake">❆</div><div class="snowflake">❄</div><div class="snowflake">❅</div><div class="snowflake">❆</div><div class="snowflake">❄</div><div class="snowflake">❅</div><div class="snowflake">❆</div><div class="snowflake">❄</div>
+</div>
+{% endif %}
+
+<style>
+  /* ══════════════════════════════════════════════════════════════════
+     THUNDERMC NAVBAR v2 — PHOENIXPLUGINS STYLE (DARK THEME)
+     ══════════════════════════════════════════════════════════════════ */
+  .tz-navbar-v2 {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: rgba(9, 13, 22, 0.95);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+  }
+  .tz-nav-inner {
+    max-width: 1380px;
+    margin: 0 auto;
+    padding: 0 24px;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    height: 64px;
+    gap: 24px;
+    box-sizing: border-box;
+  }
+  .tz-nav-logo a { display: flex; align-items: center; text-decoration: none; }
+  .tz-nav-logo img { height: 40px; max-width: 200px; object-fit: contain; }
+  .tz-nav-links {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    justify-content: center;
+  }
+  .tz-nav-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    font-family: 'Plus Jakarta Sans', 'Be Vietnam Pro', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    color: #cbd5e1;
+    text-decoration: none;
+    letter-spacing: 0.2px;
+    transition: color 0.15s ease;
+    position: relative;
+    padding-bottom: 2px;
+  }
+  .tz-nav-link i {
+    font-size: 16px;
+    color: inherit;
+    opacity: 0.85;
+    transition: opacity 0.15s ease;
+  }
+  .tz-nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -2px; left: 0; right: 0;
+    height: 2px;
+    background: #facc15;
+    transform: scaleX(0);
+    transition: transform 0.2s ease;
+    transform-origin: center;
+  }
+  .tz-nav-link:hover { color: #facc15; }
+  .tz-nav-link:hover i { opacity: 1; }
+  .tz-nav-link:hover::after { transform: scaleX(1); }
+  .tz-nav-right-v2 {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 8px;
+  }
+  .tz-nav-discord {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    padding: 7px 14px;
+    background: #5865F2;
+    border-radius: 8px;
+    color: #ffffff;
+    font-family: 'Be Vietnam Pro', 'Poppins', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: background 0.15s ease, transform 0.15s ease;
+    letter-spacing: 0.2px;
+  }
+  .tz-nav-discord:hover { background: #4752c4; transform: translateY(-1px); }
+  .tz-nav-discord i { font-size: 17px; }
+  .tz-nav-sep { width: 1px; height: 28px; background: rgba(255, 255, 255, 0.12); margin: 0 4px; flex-shrink: 0; }
+  .tz-nav-cart {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background 0.15s ease, border-color 0.15s ease;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1.5px solid rgba(255, 255, 255, 0.1);
+  }
+  .tz-nav-cart:hover { background: rgba(250, 204, 21, 0.12); border-color: #facc15; }
+  .tz-nav-cart-avatar { width: 24px; height: 24px; border-radius: 4px; image-rendering: pixelated; flex-shrink: 0; }
+  .tz-nav-cart-info { display: flex; flex-direction: column; line-height: 1.2; }
+  .tz-nav-cart-user { font-family: 'Be Vietnam Pro', sans-serif; font-size: 12px; font-weight: 700; color: #ffffff; }
+  .tz-nav-cart-price { font-family: 'Be Vietnam Pro', sans-serif; font-size: 11px; font-weight: 600; color: #94a3b8; }
+  .tz-nav-cart-price .tz-val { color: #facc15; font-weight: 800; }
+  .tz-nav-cart-icon { font-size: 20px; color: #cbd5e1; margin-left: 2px; }
+
+  /* ── ANNOUNCEMENT BAR (VIBRANT YELLOW ORIGINAL) ── */
+  .tz-announcement-bar {
+    width: 100%;
+    background: #facc15;
+    color: #0b0f19;
+    padding: 7px 20px;
+    border-bottom: 2px solid #eab308;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    min-height: 36px;
+    overflow: hidden;
+  }
+  .tz-announcement-content {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 24px;
+    overflow: hidden;
+    width: 100%;
+    max-width: 900px;
+  }
+  .tz-announcement-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    font-family: 'Be Vietnam Pro', 'Poppins', sans-serif;
+    font-size: 12.5px;
+    font-weight: 700;
+    letter-spacing: 0.3px;
+    text-transform: uppercase;
+    color: #0b0f19;
+    transform: translateY(-100%);
+    opacity: 0;
+    pointer-events: none;
+    transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1), opacity 0.35s ease;
+  }
+  .tz-announcement-slide.is-current {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
+  }
+  .tz-announcement-slide.is-leaving {
+    transform: translateY(100%);
+    opacity: 0;
+    pointer-events: none;
+  }
+  .tz-announcement-slide i { font-size: 15px; color: #0b0f19; }
+  .tz-timer-badge {
+    font-family: 'Be Vietnam Pro', 'Poppins', sans-serif;
+    font-weight: 800;
+    background: #0b0f19;
+    color: #facc15;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 11px;
+    letter-spacing: 0.5px;
+    margin-left: 2px;
+  }
+
+  @media (max-width: 900px) {
+    .tz-nav-links { display: none; }
+    .tz-nav-inner { grid-template-columns: 1fr auto; }
+    .tz-nav-right-v2 { gap: 6px; }
+    .tz-nav-discord span { display: none; }
+    .tz-nav-discord { padding: 7px 10px; }
+    .tz-nav-cart-info { display: none; }
+  }
+</style>
+
+<header>
+  <nav class="tz-navbar-v2" id="tz-navbar-v2">
+    <div class="tz-nav-inner">
+
+      <!-- Izquierda: Logo -->
+      <div class="tz-nav-logo">
+        <a href="/">
+          <img src="/Assets/thunder_full_logo.png" alt="ThunderMC">
+        </a>
+      </div>
+
+      <!-- Centro: 3 Nav Links -->
+      <nav class="tz-nav-links" aria-label="Navegación principal">
+        <a href="#store-catalog-section" class="tz-nav-link">
+          <i class="mdi mdi-shopping-outline"></i>
+          <span>Ver Productos</span>
+        </a>
+        <a href="/about" class="tz-nav-link">
+          <i class="mdi mdi-information-outline"></i>
+          <span>Sobre Thunder</span>
+        </a>
+        <a href="/help" class="tz-nav-link">
+          <i class="mdi mdi-help-circle-outline"></i>
+          <span>Soporte</span>
+        </a>
+      </nav>
+
+      <!-- Derecha: Discord + Carrito -->
+      <div class="tz-nav-right-v2">
+        <a href="https://discord.gg/thundermc" target="_blank" rel="noopener" class="tz-nav-discord">
+          <i class="mdi mdi-discord"></i>
+          <span>Discord</span>
+        </a>
+        <div class="tz-nav-sep"></div>
+        <div class="tz-nav-cart" data-izimodal-open="{% if basket.ign %}#modal{% else %}#modal-login{% endif %}" role="button" tabindex="0">
+          {% set ignWithoutPrefix = basket.ign %}
+          {% set minecraftSkinHead = "https://minotar.net/avatar/" ~ ignWithoutPrefix ~ "/24" %}
+          {% if basket.ign %}
+            <img class="tz-nav-cart-avatar" src="{{ minecraftSkinHead }}" alt="{{ basket.ign }}">
+          {% else %}
+            <img class="tz-nav-cart-avatar" src="https://minotar.net/avatar/MHF_Question/24" alt="Invitado">
+          {% endif %}
+          <div class="tz-nav-cart-info">
+            <span class="tz-nav-cart-user">{% if basket.ign %}{{ basket.ign }}{% else %}Iniciar Sesión{% endif %}</span>
+            <span class="tz-nav-cart-price">Carrito: <span class="tz-val">{{ basket.price|money }}€</span></span>
+          </div>
+          <i class="mdi mdi-cart-outline tz-nav-cart-icon"></i>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- ANNOUNCEMENT BAR -->
+    <div class="tz-announcement-bar">
+      <div class="tz-announcement-content">
+        <div class="tz-announcement-slide is-current" id="tzSlide1">
+          <i class="mdi mdi-fire"></i>
+          <span>OFERTAS DE TEMPORADA — Hasta 35% de descuento</span>
+        </div>
+        <div class="tz-announcement-slide" id="tzSlide2">
+          <i class="mdi mdi-clock-outline"></i>
+          <span>ACABA EN <span class="tz-timer-badge" id="tzCountdownDisplay">02d 14h 28m 45s</span></span>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<script>
+(function () {
+  var slide1 = document.getElementById('tzSlide1');
+  var slide2 = document.getElementById('tzSlide2');
+  var currentIdx = 0;
+  var slides = [slide1, slide2];
+
+  setInterval(function () {
+    if (!slides[0] || !slides[1]) return;
+
+    var current = slides[currentIdx];
+    var nextIdx = (currentIdx + 1) % slides.length;
+    var next = slides[nextIdx];
+
+    // Preparar el siguiente para entrar por arriba
+    next.style.transition = 'none';
+    next.className = 'tz-announcement-slide';
+    void next.offsetWidth; // Forzar reflow
+
+    // Reactivar transiciones y ejecutar slide vertical hacia abajo
+    next.style.transition = '';
+    current.className = 'tz-announcement-slide is-leaving';
+    next.className = 'tz-announcement-slide is-current';
+
+    currentIdx = nextIdx;
+  }, 4000);
+
+  // Live Countdown
+  var countdownEl = document.getElementById('tzCountdownDisplay');
+  var targetDate = new Date();
+  targetDate.setDate(targetDate.getDate() + 2);
+  targetDate.setHours(targetDate.getHours() + 14);
+  function updateCountdown() {
+    var now = new Date().getTime();
+    var diff = targetDate.getTime() - now;
+    if (diff <= 0) { if (countdownEl) countdownEl.innerText = '00d 00h 00m 00s'; return; }
+    var d = Math.floor(diff / (1000 * 60 * 60 * 24));
+    var h = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var m = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+    var s = Math.floor((diff % (1000 * 60)) / 1000);
+    function p(n) { return (n < 10 ? '0' : '') + n; }
+    if (countdownEl) countdownEl.innerText = p(d)+'d '+p(h)+'h '+p(m)+'m '+p(s)+'s';
+  }
+  setInterval(updateCountdown, 1000);
+  updateCountdown();
+})();
+</script>

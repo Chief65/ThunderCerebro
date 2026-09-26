@@ -1,0 +1,151 @@
+﻿# El nombre o nombre mostrado
+name: '&#00A896Vial de Almas &8[&#00A896IV&8]'
+# La descripción del objeto
+lore:
+- '&8ʀᴇᴄᴏᴍᴘᴇɴꜱᴀ'
+- ''
+- ' &7Vial con almas '
+- ' &7para el mercado.'
+- ''
+- ' &#00A896• &fPremio: &#00A896600-1.500 '
+- ''
+- ' &8⁂ &#B01111&lM&#B61515&lI&#BD1919&lT&#C31E1E&lI&#CA2222&lC&#D02626&lA &e⭐⭐⭐⭐&7⭐'
+- ''
+- '&7▶ ᴄʟɪᴄᴋ ᴅᴇʀ - ʟɪʙᴇʀᴀʀ'
+# El material
+material: OMINOUS_BOTTLE
+# Efecto de brillo del objeto
+glow: true
+# ¿Desactivar el apilado de objetos?
+disableStack: true
+# ¿Mantener el objeto al morir?
+keepItemOnDeath: false
+# Solo puede ser usado por el propietario
+canBeUsedOnlyByTheOwner: false
+# ¿Almacenar información del objeto?
+storeItemInfo: false
+# ¿Objeto irrompible?
+unbreakable: false
+usage: 0
+usageLimit: -1
+cancelEventIfNoPerm: false
+cancelEventIfNotOwner: false
+disabledWorlds: []
+config_5: true
+disableEnchantGlide: false
+onlyOwnerBlackListedActivators: []
+isDurabilityBasedOnUsage: false
+cancelEventIfNoPermission: false
+whitelistedWorlds: []
+glider: false
+keepDefaultAttributes: false
+hiders:
+  hideEnchantments: true
+  hideUnbreakable: true
+  hideAttributes: true
+  hidePotionEffects: true
+  hideAdditionalTooltip: true
+  hideTooltip: false
+  hideToolTip: false
+  hideUsage: true
+  hideDestroys: false
+  hidePlacedOn: false
+  hideDye: false
+  hideArmorTrim: false
+giveFirstJoinFeatures:
+  giveFirstJoin: false
+  giveFirstJoinAmount: 1
+  giveFirstJoinSlot: 0
+restrictions:
+  cancel-item-place: true
+  cancel-item-craft: true
+  cancel-anvil: true
+  locked-in-inventory: false
+variables: {}
+activators:
+  activator1:
+    name: '&eActivator'
+    option: PLAYER_RIGHT_CLICK
+    typeTarget: NO_TYPE_TARGET
+    usageModification: -1
+    cancelEvent: false
+    noActivatorRunIfTheEventIsCancelled: false
+    autoUpdateItem: false
+    cooldownFeatures:
+      cooldown: 2
+      cooldownMsg: '&cEspera &f%time_S%s &cpara abrir otro vial.'
+      cancelEventIfInCooldown: true
+      pausePlaceholdersConditions: {}
+    globalCooldownFeatures:
+      cooldown: 0
+      displayCooldownMessage: false
+    otherEICooldowns: {}
+    requiredItems: {}
+    requiredExecutableItems: {}
+    requiredMagics: {}
+    detailedSlots:
+    - -1
+    - 40
+    playerCommands:
+    - title %player% times 0 8 2
+    - title %player% subtitle "&f&oʟɪʙᴇʀᴀɴᴅᴏ..."
+    - title %player% title "&3&k||||"
+    - execute at %player% run playsound minecraft:block.amethyst_block.hit master %player% ~ ~ ~ 0.8 1.0
+    - DELAY_TICK 3
+    - title %player% title "&3&l&k||||||"
+    - execute at %player% run playsound minecraft:block.amethyst_block.hit master %player% ~ ~ ~ 0.8 1.2
+    - DELAY_TICK 3
+    - title %player% subtitle "&f&oʟɪʙᴇʀᴀɴᴅᴏ..."
+    - title %player% title "&3&k||||||"
+    - execute at %player% run playsound minecraft:block.amethyst_block.hit master %player% ~ ~ ~ 0.8 1.4
+    - DELAY_TICK 4
+    - title %player% title "&3&k||||||"
+    - execute at %player% run playsound minecraft:block.amethyst_block.hit master %player% ~ ~ ~ 0.8 1.7
+    - DELAY_TICK 4
+    - title %player% subtitle "&f&o¡ʟɪʙᴇʀᴀᴅᴏ!"
+    - title %player% title "&3&l&k||||"
+    - execute at %player% run playsound minecraft:block.note_block.pling master %player% ~ ~ ~ 0.8 2.0
+    - DELAY_TICK 5
+    - title %player% times 2 35 10
+    - 'RANDOM RUN: 1'
+    - 'playerpoints:p give %player% 600 +++ title %player% title "&3+600 Almas" +++ title %player% subtitle "&f¡ʀᴇᴄᴏᴍᴘᴇɴꜱᴀ ᴏʙᴛᴇɴɪᴅᴀ!" +++ execute at %player% run playsound minecraft:entity.zombie.break_wooden_door master %player% ~ ~ ~ 0.9 1.1 +++ execute at %player% run playsound minecraft:block.amethyst_cluster.hit master %player% ~ ~ ~ 1.1 2.0 +++ execute at %player% run playsound minecraft:entity.vex.death master %player% ~ ~ ~ 0.85 1.25 +++ PARTICLE VILLAGER_HAPPY 25 0.3 0.3 +++ SEND_MESSAGE &3&l✧ &8| &fHas liberado &3600 Almas &fen tu vial.'
+    - 'playerpoints:p give %player% 600 +++ title %player% title "&3+600 Almas" +++ title %player% subtitle "&f¡ʀᴇᴄᴏᴍᴘᴇɴꜱᴀ ᴏʙᴛᴇɴɪᴅᴀ!" +++ execute at %player% run playsound minecraft:entity.zombie.break_wooden_door master %player% ~ ~ ~ 0.9 1.1 +++ execute at %player% run playsound minecraft:block.amethyst_cluster.hit master %player% ~ ~ ~ 1.1 2.0 +++ execute at %player% run playsound minecraft:entity.vex.death master %player% ~ ~ ~ 0.85 1.25 +++ PARTICLE VILLAGER_HAPPY 25 0.3 0.3 +++ SEND_MESSAGE &3&l✧ &8| &fHas liberado &3600 Almas &fen tu vial.'
+    - 'playerpoints:p give %player% 700 +++ title %player% title "&3+700 Almas" +++ title %player% subtitle "&f¡ʀᴇᴄᴏᴍᴘᴇɴꜱᴀ ᴏʙᴛᴇɴɪᴅᴀ!" +++ execute at %player% run playsound minecraft:entity.zombie.break_wooden_door master %player% ~ ~ ~ 0.9 1.1 +++ execute at %player% run playsound minecraft:block.amethyst_cluster.hit master %player% ~ ~ ~ 1.1 2.0 +++ execute at %player% run playsound minecraft:entity.vex.death master %player% ~ ~ ~ 0.85 1.25 +++ PARTICLE VILLAGER_HAPPY 25 0.3 0.3 +++ SEND_MESSAGE &3&l✧ &8| &fHas liberado &3700 Almas &fen tu vial.'
+    - 'playerpoints:p give %player% 800 +++ title %player% title "&3+800 Almas" +++ title %player% subtitle "&f¡ʀᴇᴄᴏᴍᴘᴇɴꜱᴀ ᴏʙᴛᴇɴɪᴅᴀ!" +++ execute at %player% run playsound minecraft:entity.zombie.break_wooden_door master %player% ~ ~ ~ 0.9 1.1 +++ execute at %player% run playsound minecraft:block.amethyst_cluster.hit master %player% ~ ~ ~ 1.1 2.0 +++ execute at %player% run playsound minecraft:entity.vex.death master %player% ~ ~ ~ 0.85 1.25 +++ PARTICLE VILLAGER_HAPPY 25 0.3 0.3 +++ SEND_MESSAGE &3&l✧ &8| &fHas liberado &3800 Almas &fen tu vial.'
+    - 'playerpoints:p give %player% 900 +++ title %player% title "&3+900 Almas" +++ title %player% subtitle "&f¡ʀᴇᴄᴏᴍᴘᴇɴꜱᴀ ᴏʙᴛᴇɴɪᴅᴀ!" +++ execute at %player% run playsound minecraft:entity.zombie.break_wooden_door master %player% ~ ~ ~ 0.9 1.1 +++ execute at %player% run playsound minecraft:block.amethyst_cluster.hit master %player% ~ ~ ~ 1.1 2.0 +++ execute at %player% run playsound minecraft:entity.vex.death master %player% ~ ~ ~ 0.85 1.25 +++ PARTICLE VILLAGER_HAPPY 25 0.3 0.3 +++ SEND_MESSAGE &3&l✧ &8| &fHas liberado &3900 Almas &fen tu vial.'
+    - 'playerpoints:p give %player% 1000 +++ title %player% title "&3+1.000 Almas" +++ title %player% subtitle "&f¡ʀᴇᴄᴏᴍᴘᴇɴꜱᴀ ᴏʙᴛᴇɴɪᴅᴀ!" +++ execute at %player% run playsound minecraft:entity.zombie.break_wooden_door master %player% ~ ~ ~ 0.9 1.1 +++ execute at %player% run playsound minecraft:block.amethyst_cluster.hit master %player% ~ ~ ~ 1.1 2.0 +++ execute at %player% run playsound minecraft:entity.vex.death master %player% ~ ~ ~ 0.85 1.25 +++ PARTICLE VILLAGER_HAPPY 25 0.3 0.3 +++ SEND_MESSAGE &3&l✧ &8| &fHas liberado &31.000 Almas &fen tu vial.'
+    - 'playerpoints:p give %player% 1150 +++ title %player% title "&3+1.150 Almas" +++ title %player% subtitle "&f¡ʀᴇᴄᴏᴍᴘᴇɴꜱᴀ ᴏʙᴛᴇɴɪᴅᴀ!" +++ execute at %player% run playsound minecraft:entity.zombie.break_wooden_door master %player% ~ ~ ~ 0.9 1.1 +++ execute at %player% run playsound minecraft:block.amethyst_cluster.hit master %player% ~ ~ ~ 1.1 2.0 +++ execute at %player% run playsound minecraft:entity.vex.death master %player% ~ ~ ~ 0.85 1.25 +++ PARTICLE VILLAGER_HAPPY 25 0.3 0.3 +++ SEND_MESSAGE &3&l✧ &8| &fHas liberado &31.150 Almas &fen tu vial.'
+    - 'playerpoints:p give %player% 1300 +++ title %player% title "&3+1.300 Almas" +++ title %player% subtitle "&f¡ʀᴇᴄᴏᴍᴘᴇɴꜱᴀ ᴏʙᴛᴇɴɪᴅᴀ!" +++ execute at %player% run playsound minecraft:entity.zombie.break_wooden_door master %player% ~ ~ ~ 0.9 1.1 +++ execute at %player% run playsound minecraft:block.amethyst_cluster.hit master %player% ~ ~ ~ 1.1 2.0 +++ execute at %player% run playsound minecraft:entity.vex.death master %player% ~ ~ ~ 0.85 1.25 +++ PARTICLE VILLAGER_HAPPY 25 0.3 0.3 +++ SEND_MESSAGE &3&l✧ &8| &fHas liberado &31.300 Almas &fen tu vial.'
+    - 'playerpoints:p give %player% 1500 +++ title %player% title "&3★ &3+1.500 Almas &3★" +++ title %player% subtitle "&f¡ᴘʀᴇᴍɪᴏ ᴍᴀxɪᴍᴏ!" +++ execute at %player% run playsound minecraft:entity.zombie.break_wooden_door master %player% ~ ~ ~ 0.9 1.1 +++ execute at %player% run playsound minecraft:block.amethyst_cluster.hit master %player% ~ ~ ~ 1.1 2.0 +++ execute at %player% run playsound minecraft:entity.vex.death master %player% ~ ~ ~ 0.85 1.25 +++ execute at %player% run playsound minecraft:ui.toast.challenge_complete master %player% ~ ~ ~ 1 1.2 +++ PARTICLE TOTEM 40 0.5 0.5 +++ SEND_MESSAGE &3&l★ &8| &f¡Premio maximo de &31.500 Almas &fen tu vial!'
+    - RANDOM END
+    playerConditions: {}
+    worldConditions: {}
+    itemConditions: {}
+    customConditions: {}
+    placeholdersConditions: {}
+    variablesModification: {}
+displayConditions:
+  playerConditions: {}
+  worldConditions: {}
+  itemConditions: {}
+  placeholdersConditions: {}
+  enableFeature: false
+foodFeatures:
+  isMeat: false
+  nutrition: 1
+  saturation: 0.5
+  canAlwaysEat: false
+consumableFeatures:
+  isConsumable: false
+  animation: EAT
+  hasConsumableParticles: true
+  consumeSeconds: 3
+weaponFeatures:
+  cancelDefaultDamage: false
+  damagePerHit: 1
+  canUseOnlyDuringBlocking: false
+  cancelSwordBlockingDamage: false
+  swordBlockingDamageMultiplier: 1.0
+  customSwordBlockingTime: 0
+whitelistedWorlds: []
+recognitions: []

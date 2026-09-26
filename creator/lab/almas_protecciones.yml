@@ -1,0 +1,194 @@
+menu_title: '&0&l|&r &0Mercado ▶ &8Protecciones &8(&#34B0F3🔥&8)'
+open_command:
+  - almas_protecciones
+size: 45
+open_requirement:
+  requirements: {}
+register_command: true
+update: true
+
+items:
+  'Filtro_Top':
+    material: GRAY_STAINED_GLASS_PANE
+    display_name: ' '
+    slots:
+      - 0
+      - 1
+      - 2
+      - 3
+      - 4
+      - 5
+      - 6
+      - 7
+      - 8
+
+  'item_1':
+    material: COAL_ORE
+    slot: 10
+    item_flags:
+      - HIDE_ATTRIBUTES
+      - HIDE_ENCHANTS
+    enchantments:
+      - DURABILITY;1
+    display_name: '&#FFF275x1 Prote Carbón 8x8'
+    lore:
+      - '&8ᴘʀᴇᴄɪᴏ ᴅᴇ ᴄᴀɴᴊᴇ'
+      - ''
+      - ' &8| &fPrecio: &#34B0F310 Almas (🔥)'
+      - ''
+      - '&7▶ Click para comprar'
+    left_click_commands:
+      - '[sound] UI_BUTTON_CLICK'
+
+  'item_2':
+    material: IRON_ORE
+    slot: 11
+    item_flags:
+      - HIDE_ATTRIBUTES
+      - HIDE_ENCHANTS
+    enchantments:
+      - DURABILITY;1
+    display_name: '&#FFF275x1 Prote Hierro 16x16'
+    lore:
+      - '&8ᴘʀᴇᴄɪᴏ ᴅᴇ ᴄᴀɴᴊᴇ'
+      - ''
+      - ' &8| &fPrecio: &#34B0F3100 Almas (🔥)'
+      - ''
+      - '&7▶ Click para comprar'
+    left_click_commands:
+      - '[sound] UI_BUTTON_CLICK'
+
+  'item_3':
+    material: GOLD_ORE
+    slot: 12
+    item_flags:
+      - HIDE_ATTRIBUTES
+      - HIDE_ENCHANTS
+    enchantments:
+      - DURABILITY;1
+    display_name: '&#FFF275x1 Prote Oro 32x32'
+    lore:
+      - '&8ᴘʀᴇᴄɪᴏ ᴅᴇ ᴄᴀɴᴊᴇ'
+      - ''
+      - ' &8| &fPrecio: &#34B0F3200 Almas (🔥)'
+      - ''
+      - '&7▶ Click para comprar'
+    left_click_commands:
+      - '[sound] UI_BUTTON_CLICK'
+
+  'item_4':
+    material: EMERALD_ORE
+    slot: 13
+    item_flags:
+      - HIDE_ATTRIBUTES
+      - HIDE_ENCHANTS
+    enchantments:
+      - DURABILITY;1
+    display_name: '&#FFF275x1 Prote Esmeralda 64x64'
+    lore:
+      - '&8ᴘʀᴇᴄɪᴏ ᴅᴇ ᴄᴀɴᴊᴇ'
+      - ''
+      - ' &8| &fPrecio: &#34B0F3500 Almas (🔥)'
+      - ''
+      - '&7▶ Click para comprar'
+    left_click_commands:
+      - '[sound] UI_BUTTON_CLICK'
+
+  'item_5':
+    material: DIAMOND_ORE
+    slot: 14
+    item_flags:
+      - HIDE_ATTRIBUTES
+      - HIDE_ENCHANTS
+    enchantments:
+      - DURABILITY;1
+    display_name: '&#FFF275x1 Prote Diamante 128x128'
+    lore:
+      - '&8ᴘʀᴇᴄɪᴏ ᴅᴇ ᴄᴀɴᴊᴇ'
+      - ''
+      - ' &8| &fPrecio: &#34B0F31,000 Almas (🔥)'
+      - ''
+      - '&7▶ Click para comprar'
+    left_click_commands:
+      - '[sound] UI_BUTTON_CLICK'
+
+  'item_6':
+    material: ANCIENT_DEBRIS
+    slot: 15
+    item_flags:
+      - HIDE_ATTRIBUTES
+      - HIDE_ENCHANTS
+    enchantments:
+      - DURABILITY;1
+    display_name: '&#FFF275x1 Prote Netherite 256x256'
+    lore:
+      - '&8ᴘʀᴇᴄɪᴏ ᴅᴇ ᴄᴀɴᴊᴇ'
+      - ''
+      - ' &8| &fPrecio: &#34B0F315,000 Almas (🔥)'
+      - ''
+      - '&7▶ Click para comprar'
+    left_click_commands:
+      - '[sound] UI_BUTTON_CLICK'
+
+  'Boton_Filtro':
+    material: COMPARATOR
+    slot: 36
+    item_flags:
+      - HIDE_ATTRIBUTES
+      - HIDE_ENCHANTS
+    enchantments:
+      - DURABILITY;1
+    display_name: '&#FFF275Filtrar Categoría'
+    lore:
+      - '&8ᴇʟɪɢᴇ ᴄᴀᴛᴇɢᴏʀɪᴀ'
+      - ''
+      - ' &7● Spawners'
+      - ' &7● Llaves'
+      - ' &#FFF275● Protecciones'
+      - ''
+      - '&7▶ Click para cambiar'
+    left_click_commands:
+      - '[openguimenu] almas_spawners'
+      - '[sound] UI_BUTTON_CLICK'
+
+  'Filtro_Navbar':
+    material: GRAY_STAINED_GLASS_PANE
+    display_name: ' '
+    slots:
+      - 37
+      - 38
+      - 39
+      - 41
+      - 42
+      - 43
+
+  'Boton_Volver':
+    material: DARK_OAK_DOOR
+    slot: 40
+    item_flags:
+      - HIDE_ATTRIBUTES
+    display_name: '&cVolver Atrás'
+    lore:
+      - '&7Regresar a la selección de almas'
+    left_click_commands:
+      - '[openguimenu] tienda_almas_fija'
+      - '[sound] BLOCK_NOTE_BLOCK_BASS'
+
+  'Info_Balance':
+    material: head-%player_name%
+    slot: 44
+    item_flags:
+      - HIDE_ATTRIBUTES
+    display_name: '&#FFF275Tu Economía'
+    lore:
+      - '&8Tu Economía'
+      - ''
+      - ' &8| &fDinero: &#59E91F&l$&r&#59E91F%vault_eco_balance_formatted%'
+      - ' &8| &fAlmas: &#34B0F3%thundercurrencys_almas%🔥'
+      - ' &8| &fZafiros: &#1E6BFF%thundercurrencys_zafiros%💎'
+      - ' &8| &fXP: &#D48BFF%player_level% LVL'
+      - ''
+      - '&7▶ Click para más información'
+    left_click_commands:
+      - '[openguimenu] info_economia'
+      - '[sound] UI_BUTTON_CLICK'

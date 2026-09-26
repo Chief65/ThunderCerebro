@@ -1,0 +1,92 @@
+[
+  {
+    "user": {
+      "type": "player",
+      "name": "Dragonmil65",
+      "uniqueId": "cabb6f6f-4441-4fce-9641-5be36950ef7f"
+    },
+    "time": 1787831589494,
+    "type": "Profiler",
+    "data": {
+      "type": "url",
+      "value": "https://spark.lucko.me/Ogor4fkUDV"
+    }
+  },
+  {
+    "user": {
+      "type": "player",
+      "name": "Dragonmil65",
+      "uniqueId": "cabb6f6f-4441-4fce-9641-5be36950ef7f"
+    },
+    "time": 1787825357296,
+    "type": "Profiler",
+    "data": {
+      "type": "url",
+      "value": "https://spark.lucko.me/XqeFFFU6eC"
+    }
+  },
+  {
+    "user": {
+      "type": "other",
+      "name": "CONSOLE"
+    },
+    "time": 1787437609943,
+    "type": "Profiler",
+    "data": {
+      "type": "url",
+      "value": "https://spark.lucko.me/AF7wruSaz3"
+    }
+  },
+  {
+    "user": {
+      "type": "player",
+      "name": "Dragonmil65",
+      "uniqueId": "cabb6f6f-4441-4fce-9641-5be36950ef7f"
+    },
+    "time": 1787429034496,
+    "type": "Profiler",
+    "data": {
+      "type": "file",
+      "value": "plugins/spark/profile-2026-08-22_20.03.53.sparkprofile"
+    }
+  },
+  {
+    "user": {
+      "type": "player",
+      "name": "Dragonmil65",
+      "uniqueId": "cabb6f6f-4441-4fce-9641-5be36950ef7f"
+    },
+    "time": 1785615206912,
+    "type": "Profiler",
+    "data": {
+      "type": "url",
+      "value": "https://spark.lucko.me/yrWdChoHn7"
+    }
+  },
+  {
+    "user": {
+      "type": "player",
+      "name": "Dragonmil65",
+      "uniqueId": "cabb6f6f-4441-4fce-9641-5be36950ef7f"
+    },
+    "time": 1785614886040,
+    "type": "Profiler",
+    "data": {
+      "type": "url",
+      "value": "https://spark.lucko.me/MFKBurJezb"
+    }
+  },
+  {
+    "user": {
+      "type": "player",
+      "name": "TouchIm",
+      "uniqueId": "57cfd9e1-723f-4628-8c7b-d678c1a585de"
+    },
+    "time": 1785411595300,
+    "type": "Profiler (live)",
+    "data": {
+      "type": "url",
+      "value": "https://spark.lucko.me/PaRCFGe5Eu"
+    }
+  }
+]

@@ -1,0 +1,127 @@
+{
+  "flags": 32768,
+  "allowed_mentions": {
+    "parse": [
+      "everyone"
+    ]
+  },
+  "components": [
+    {
+      "type": 17,
+      "accent_color": 16706304,
+      "components": [
+        {
+          "type": 10,
+          "content": "# 📢 ¡Bienvenid@ a ThunderMC!"
+        },
+        {
+          "type": 12,
+          "items": [
+            {
+              "media": {
+                "url": "attachment://stampede_final.gif"
+              }
+            }
+          ]
+        },
+        {
+          "type": 10,
+          "content": "-# *Los jugadores de ThunderMC viendo que hay keyall*"
+        },
+        {
+          "type": 14,
+          "divider": true,
+          "spacing": 2
+        },
+        {
+          "type": 10,
+          "content": "## Conectate a jugar:\n# `🎮 thundermc.es` | `📱 19132`"
+        },
+        {
+          "type": 14,
+          "divider": true,
+          "spacing": 2
+        },
+        {
+          "type": 10,
+          "content": "## Te podria interesar:"
+        },
+        {
+          "type": 9,
+          "components": [
+            {
+              "type": 10,
+              "content": "**`📢` Anuncios Oficiales**\n-# Novedades, reinicios y parches."
+            }
+          ],
+          "accessory": {
+            "type": 2,
+            "style": 5,
+            "label": "Anuncios",
+            "url": "https://discord.com/channels/1552715004669726802/1552715006259232880"
+          }
+        },
+        {
+          "type": 14,
+          "divider": false,
+          "spacing": 1
+        },
+        {
+          "type": 9,
+          "components": [
+            {
+              "type": 10,
+              "content": "**`📜` Normativa y Reglas**\n-# Pautas y convivencia de la comunidad."
+            }
+          ],
+          "accessory": {
+            "type": 2,
+            "style": 5,
+            "label": "Reglas",
+            "url": "https://discord.com/channels/1552715004669726802/1552715006259232880"
+          }
+        },
+        {
+          "type": 14,
+          "divider": false,
+          "spacing": 1
+        },
+        {
+          "type": 9,
+          "components": [
+            {
+              "type": 10,
+              "content": "**`🎫` Soporte y Tickets**\n-# Ayuda técnica, reportes y compras."
+            }
+          ],
+          "accessory": {
+            "type": 2,
+            "style": 5,
+            "label": "Tickets",
+            "url": "https://discord.com/channels/1552715004669726802/1552715006259232880"
+          }
+        },
+        {
+          "type": 14,
+          "divider": true,
+          "spacing": 2
+        },
+        {
+          "type": 9,
+          "components": [
+            {
+              "type": 10,
+              "content": "# 🛒 Tienda Oficial de ThunderMC\n-# Rangos VIP, llaves y cosméticos."
+            }
+          ],
+          "accessory": {
+            "type": 2,
+            "style": 1,
+            "custom_id": "btn_tienda_azul",
+            "label": "Ir a la Tienda"
+          }
+        }
+      ]
+    }
+  ]
+}

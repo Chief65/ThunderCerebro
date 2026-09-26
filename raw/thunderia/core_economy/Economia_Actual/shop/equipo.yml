@@ -1,0 +1,172 @@
+equipo:
+  name: "&0&l| &0Tienda ▶ &8Equipo "
+  size: 45
+  fillItem:
+    material: GRAY_STAINED_GLASS_PANE
+    name: " "
+  buttons:
+    goBack:
+      slot: 40
+    previousPage:
+      slot: 39
+    nextPage:
+      slot: 41
+  items:
+    1:
+      type: item
+      item:
+        material: EXPERIENCE_BOTTLE
+        quantity: 1
+      buyPrice: 100
+      sellPrice: 3
+      slot: 9
+    2:
+      type: item
+      item:
+        material: GOLDEN_APPLE
+        quantity: 1
+      buyPrice: 350
+      sellPrice: 20
+      slot: 10
+    3:
+      type: item
+      item:
+        material: WIND_CHARGE
+        quantity: 1
+      buyPrice: 10
+      sellPrice: 1
+      slot: 11
+    4:
+      type: item
+      item:
+        material: ENDER_PEARL
+        quantity: 1
+      buyPrice: 50
+      sellPrice: 5
+      slot: 12
+    5:
+      type: item
+      item:
+        material: TIPPED_ARROW
+        potion:
+          type: SLOW_FALLING
+        quantity: 1
+      buyPrice: 100
+      sellPrice: 5
+      slot: 13
+    6:
+      type: item
+      item:
+        material: ARROW
+        quantity: 1
+      buyPrice: 5
+      sellPrice: 1
+      slot: 14
+    7:
+      type: item
+      item:
+        material: SPECTRAL_ARROW
+        quantity: 1
+      buyPrice: 100
+      sellPrice: 5
+      slot: 15
+    8:
+      type: item
+      item:
+        material: NETHERITE_UPGRADE_SMITHING_TEMPLATE
+        quantity: 1
+      buyPrice: 25000
+      sellPrice: 50
+      slot: 16
+    9:
+      type: item
+      item:
+        material: TOTEM_OF_UNDYING
+        quantity: 1
+      buyPrice: 2500
+      sellPrice: -1
+      slot: 17
+    10:
+      type: item
+      item:
+        material: MILK_BUCKET
+        quantity: 1
+      buyPrice: 5000
+      sellPrice: 10
+      slot: 18
+    11:
+      type: item
+      item:
+        material: SPLASH_POTION
+        potion:
+          type: STRONG_HEALING
+        quantity: 1
+      buyPrice: 420
+      sellPrice: 15
+      slot: 19
+    12:
+      type: item
+      item:
+        material: SPLASH_POTION
+        potion:
+          type: LONG_FIRE_RESISTANCE
+        quantity: 1
+      buyPrice: 500
+      sellPrice: -1
+      slot: 20
+    13:
+      type: item
+      item:
+        material: SPLASH_POTION
+        potion:
+          type: LONG_SWIFTNESS
+        quantity: 1
+      buyPrice: 500
+      sellPrice: -1
+      slot: 21
+    14:
+      type: item
+      item:
+        material: SPLASH_POTION
+        potion:
+          type: STRONG_SWIFTNESS
+        quantity: 1
+      buyPrice: 500
+      sellPrice: -1
+      slot: 22
+    15:
+      type: item
+      item:
+        material: SPLASH_POTION
+        potion:
+          type: LONG_STRENGTH
+        quantity: 1
+      buyPrice: 500
+      sellPrice: -1
+      slot: 23
+    16:
+      type: item
+      item:
+        material: SPLASH_POTION
+        potion:
+          type: STRONG_STRENGTH
+        quantity: 1
+      buyPrice: 500
+      sellPrice: -1
+      slot: 24
+    17:
+      type: command
+      item:
+        material: HONEY_BOTTLE
+        name: '&ePrisa Minera'
+        lore:
+        - '&8Pocion Util'
+        - ''
+        - ' &7Prisa Minero II'
+        - ' &710 Minutos'
+        - ''
+        quantity: 1
+      commands:
+        - "si give prisaminera 1 %PLAYER%"
+      buyPrice: 500
+      slot: 25  
