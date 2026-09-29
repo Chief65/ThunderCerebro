@@ -1,4 +1,4 @@
-# 🛡️ Auditoría Exhaustiva de Plugins — Servidor Survival ThunderMC (1.21.11)
+﻿# 🛡️ Auditoría Exhaustiva de Plugins — Servidor Survival ThunderMC (1.21.11)
 
 **Fecha de Ejecución**: 27 de Agosto de 2026  
 **Auditor**: Hanush (Cerebro Digital & Analista Técnico de ThunderStudios)  
@@ -17,6 +17,7 @@
 
 ---
 
+- **Parte de**: [[wiki/entities/thundermc/ecosistema-plugins|Ecosistema Plugins]] | [[wiki/synthesis/thundermc-master-synthesis|SÃ­ntesis Maestra]]
 ## 📦 2. Inventario Completo de Plugins Activos y Versiones
 
 | # | Archivo JAR | Plugin / Sistema | Versión Detectada | Categoría | Estado / Propósito |
@@ -162,3 +163,9 @@ Se ha estructurado la carpeta centralizada:
 - `world-protection/`: WorldGuard, ProtectionStones, CoreProtect, PvPManager.
 - `custom-plugins/`: EnderChestPlus, RankUp, ValyrTutorial.
 - `disabled-orphans/`: Registro de plugins `.dis` y plan de limpieza.
+
+---
+
+## Referencias Cruzadas
+- [[wiki/entities/thundermc/ecosistema-plugins|Ecosistema Plugins]]
+- [[wiki/synthesis/thundermc-master-synthesis|SÃ­ntesis Maestra ThunderMC]]

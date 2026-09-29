@@ -1,4 +1,4 @@
-# 🛡️ CoreProtect - Documentación Técnica
+﻿# 🛡️ CoreProtect - Documentación Técnica
 
 - **Categoría**: Registro de Auditoría / Rollback Anti-Grief / Inspección de Bloques
 - **Versión Core Soportada**: Minecraft 1.14.x - 1.21.x (Paper / Purpur)
@@ -29,6 +29,7 @@ flowchart TD
 
 ---
 
+- **Parte de**: [[wiki/entities/thundermc/ecosistema-plugins|Ecosistema Plugins]] | [[wiki/synthesis/thundermc-master-synthesis|SÃ­ntesis Maestra]]
 ## ⚙️ 2. Configuración Crítica (`config.yml`)
 
 ```yaml
@@ -99,3 +100,11 @@ Ejemplo de Rollback de Griefing:
 > **Colapso de Almacenamiento por Registro de Tolvas / Granjas Masivas**:
 > Si se habilita el registro de movimientos de tolvas (`log-hopper-transactions: true`), la base de datos puede registrar millones de inserciones por hora, saturando el disco.
 > **Mitigación**: Mantener desactivado el logging de tolvas salvo auditorías específicas y programar purgas periódicas (`/co purge 30d`).
+
+---
+
+## Referencias Cruzadas
+- [[wiki/entities/thundermc/core-infrastructure/luckperms|LuckPerms]]
+- [[wiki/entities/thundermc/world-protection/litebans|LiteBans]]
+- [[wiki/entities/thundermc/world-protection/inventoryrollbackplus|InventoryRollbackPlus]]
+- [[wiki/entities/thundermc/ecosistema-plugins|Ecosistema Plugins]]

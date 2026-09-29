@@ -11,6 +11,7 @@ Todas las minas están compuestas por una matriz de **Piedra (`stone`)** + **Blo
 
 ---
 
+- **Parte de**: [[wiki/entities/thundermc/ecosistema-plugins|Ecosistema Plugins]] | [[wiki/synthesis/thundermc-master-synthesis|SÃ­ntesis Maestra]]
 ### 1. Mina Inicial (`minainicialnew.yml`)
 - **Piedra (`stone`)**: `79.75%`
 - **Amatista Especial (`amethyst_block`)**: `20.25%`
@@ -84,3 +85,11 @@ Todas las minas están compuestas por una matriz de **Piedra (`stone`)** + **Blo
   - Drop raro: `1.5%`
   - Drop muy raro: `0.4%`
   - Drop ultra raro: `0.1%`
+
+---
+
+## Referencias Cruzadas
+- [[wiki/entities/catamines|CataMines]]
+- [[wiki/comparisons/minas-vs-dungeons-balance|Balance Minas vs Dungeons]]
+- [[wiki/concepts/economia-servidor-minecraft|EconomÃ­a Servidor Minecraft]]
+- [[wiki/entities/thundermc/ecosistema-plugins|Ecosistema Plugins]]

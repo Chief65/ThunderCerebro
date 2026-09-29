@@ -1,4 +1,4 @@
-# 👑 UltimateKoth - Documentación Técnica
+﻿# 👑 UltimateKoth - Documentación Técnica
 
 - **Categoría**: Eventos PvP Competitivos / King of the Hill (KOTH)
 - **Versión Core Soportada**: Minecraft 1.16.x - 1.21.x (Paper / Purpur)
@@ -36,6 +36,7 @@ flowchart TD
 
 ---
 
+- **Parte de**: [[wiki/entities/thundermc/ecosistema-plugins|Ecosistema Plugins]] | [[wiki/synthesis/thundermc-master-synthesis|SÃ­ntesis Maestra]]
 ## ⚙️ 2. Configuración Crítica (`koths/volcano_koth.yml`)
 
 ```yaml
@@ -113,3 +114,11 @@ schedule:
 > **Bloqueo de Recompensas si el Inventario está Lleno**:
 > Si el jugador vencedor tiene el inventario saturado, las llaves físicas o ítems dropeados al suelo pueden ser robados por rivales cercanos.
 > **Mitigación**: Usar cofres virtuales o ejecutar drop en el safe-spawn del jugador ganador.
+
+---
+
+## Referencias Cruzadas
+- [[wiki/entities/thundermc/world-protection/pvpmanager|PvPManager]]
+- [[wiki/entities/thundermc/world-protection/worldguard|WorldGuard]]
+- [[wiki/entities/thundermc/gameplay-mechanics/mythicmobs|MythicMobs]]
+- [[wiki/entities/thundermc/ecosistema-plugins|Ecosistema Plugins]]

@@ -1,4 +1,4 @@
-# 📖 ViaVersion (5.11.0+)
+﻿# 📖 ViaVersion (5.11.0+)
 
 - **Categoría**: Compatibilidad de Red / Multi-Version Protocol Translation
 - **Servidor**: ThunderMC Survival 1.21.11 (Paper build 126+)
@@ -14,6 +14,7 @@ Traduce IDs de bloques, entidades, partículas, sonidos, pantallas de interfaz (
 
 ---
 
+- **Parte de**: [[wiki/entities/thundermc/ecosistema-plugins|Ecosistema Plugins]] | [[wiki/synthesis/thundermc-master-synthesis|SÃ­ntesis Maestra]]
 ## 🏗️ 2. Arquitectura Interna & Pipeline de Netty
 
 ```mermaid
@@ -93,3 +94,9 @@ ViaVersion expone variables a través de la expansión de PAPI (o bridge interno
 ### Mitigaciones Críticas:
 - **Mantener ViaVersion Siempre Actualizado**: Cada actualización menor de Minecraft introduce cambios en los Data Components. Actualizar el JAR con cada nueva release para evitar caídas de clientes por paquetes malformados.
 - **Protección contra Paquetes Malformados de NBT**: ViaVersion valida el tamaño y profundidad de árboles NBT antes de entregarlos al motor de Paper, evitando exploits de congelación de clientes ("Book & Quill / Chunk Ban").
+
+---
+
+## Referencias Cruzadas
+- [[wiki/entities/thundermc/core-infrastructure/floodgate|Floodgate]]
+- [[wiki/entities/thundermc/ecosistema-plugins|Ecosistema Plugins]]

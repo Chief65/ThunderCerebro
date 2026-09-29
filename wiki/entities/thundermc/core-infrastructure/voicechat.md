@@ -1,4 +1,4 @@
-# 📖 Simple Voice Chat (2.6.21+)
+﻿# 📖 Simple Voice Chat (2.6.21+)
 
 - **Categoría**: Inmersión / Proximity Voice Chat & Red UDP
 - **Servidor**: ThunderMC Survival 1.21.11 (Paper build 126+)
@@ -13,6 +13,7 @@
 
 ---
 
+- **Parte de**: [[wiki/entities/thundermc/ecosistema-plugins|Ecosistema Plugins]] | [[wiki/synthesis/thundermc-master-synthesis|SÃ­ntesis Maestra]]
 ## 🏗️ 2. Arquitectura Interna & Protocolo de Red
 
 ```mermaid
@@ -105,3 +106,9 @@ graph TD
 ### Mitigaciones Críticas:
 - **Evasión de Mutes mediante Re-login**: La tabla de mutes de Simple Voice Chat se guarda por UUID en `mutes.json`. Integrar con sistemas de moderación centralizados (`LiteBans`) si se desea silenciar automáticamente a usuarios sancionados.
 - **Ataques de Flood UDP / DoS de Audio**: El servidor descarta automáticamente datagramas UDP que no incluyan un token AES válido o cuya tasa de frames supere 50 paquetes/segundo por cliente.
+
+---
+
+## Referencias Cruzadas
+- [[wiki/entities/thundermc/infraestructura-hardware|Infraestructura Hardware]]
+- [[wiki/entities/thundermc/ecosistema-plugins|Ecosistema Plugins]]

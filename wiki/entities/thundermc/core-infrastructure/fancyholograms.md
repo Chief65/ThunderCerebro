@@ -1,4 +1,4 @@
-# 📖 FancyHolograms (2.9.1+)
+﻿# 📖 FancyHolograms (2.9.1+)
 
 - **Categoría**: Display Entities / Hologramas de Alto Rendimiento
 - **Servidor**: ThunderMC Survival 1.21.11 (Paper build 126+)
@@ -15,6 +15,7 @@ Al delegar el renderizado, interpolación, escalado 3D, sombras y fondos semitra
 
 ---
 
+- **Parte de**: [[wiki/entities/thundermc/ecosistema-plugins|Ecosistema Plugins]] | [[wiki/synthesis/thundermc-master-synthesis|SÃ­ntesis Maestra]]
 ## 🏗️ 2. Arquitectura Interna & Funcionamiento
 
 ```mermaid
@@ -109,3 +110,10 @@ FancyHolograms soporta de manera nativa tanto el formato de color heredado (`&a`
 ### Mitigaciones Críticas:
 - **Sobrecarga por Placeholders Pesados**: Evitar el uso de placeholders que realicen consultas a bases de datos remotas en intervalos de menos de 1 segundo dentro de hologramas con muchos observadores.
 - **Persistencia en `holograms.json`**: Asegurar backups periódicos del archivo `holograms.json` antes de realizar migraciones masivas de mundos o cambios de coordenadas en el spawn.
+
+---
+
+## Referencias Cruzadas
+- [[wiki/entities/thundermc/core-infrastructure/placeholderapi|PlaceholderAPI]]
+- [[wiki/entities/thundermc/core-infrastructure/fancynpcs|FancyNpcs]]
+- [[wiki/entities/thundermc/ecosistema-plugins|Ecosistema Plugins]]

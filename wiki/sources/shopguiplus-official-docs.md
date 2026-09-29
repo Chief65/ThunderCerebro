@@ -1,4 +1,4 @@
-# Desglose de Fuente: Documentación Oficial de ShopGUIPlus
+﻿# Desglose de Fuente: Documentación Oficial de ShopGUIPlus
 
 **Fuente**: `https://docs.brcdev.net/#/shopgui/shops-items-setup` (brcdev documentation)  
 **Tipo**: Documentación Técnica / Especificación de Plugin Spigot  
@@ -107,3 +107,10 @@ items:
 - `itemBuyGUI`: Lore aplicado en la ventana modal de selección de cantidad (`amountSelectionGUI`).
 - `itemSellGUI`: Lore aplicado en la ventana de venta.
 - Placeholders nativos: `%buy%`, `%sell%`, `%amount%`, `%page%`, `%pages%`.
+
+---
+
+## Referencias Cruzadas
+- [[wiki/entities/thundermc/economy-progression/shopguiplus|ShopGUIPlus]]
+- [[wiki/entities/thundermc/core-infrastructure/vault|Vault]]
+- [[wiki/concepts/economia-servidor-minecraft|EconomÃ­a Servidor Minecraft]]

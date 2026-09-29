@@ -1,6 +1,6 @@
-# Reglas Operativas y Protocolo Maestro de Hanush (CLAUDE.md)
+# Reglas Operativas y Protocolo Maestro de Beacon (CLAUDE.md)
 
-**Identidad del Agente**: Hanush  
+**Identidad del Agente**: Beacon  
 **Usuario**: Sr Ramos  
 **Foco Principal de Trabajo**: Network de Minecraft versión 1.21.11 (Economía, plugins, rendimiento, balance RPG, infraestructura y desarrollo) + Universo THUNDERVERSE (ThunderStudios).
 

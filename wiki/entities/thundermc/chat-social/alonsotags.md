@@ -1,4 +1,4 @@
-# 🏷️ AlonsoTags - Documentación Técnica
+﻿# 🏷️ AlonsoTags - Documentación Técnica
 
 - **Categoría**: Cosméticos / Títulos & Tags Visuales de Chat/TAB
 - **Versión Core Soportada**: Minecraft 1.8.x - 1.21.x (Paper / Purpur)
@@ -32,6 +32,7 @@ flowchart LR
 
 ---
 
+- **Parte de**: [[wiki/entities/thundermc/ecosistema-plugins|Ecosistema Plugins]] | [[wiki/synthesis/thundermc-master-synthesis|SÃ­ntesis Maestra]]
 ## ⚙️ 2. Configuración Crítica (`tags.yml`)
 
 ```yaml
@@ -99,3 +100,11 @@ Tags:
 > # Ejemplo en TAB / ZelChat
 > format: "{#alonsotags_tag# != '' ? '%alonsotags_tag% ' : ''}%luckperms_prefix% %player%: %message%"
 > ```
+
+---
+
+## Referencias Cruzadas
+- [[wiki/entities/thundermc/core-infrastructure/tab|TAB]]
+- [[wiki/entities/thundermc/chat-social/zelchat|ZelChat]]
+- [[wiki/entities/thundermc/core-infrastructure/luckperms|LuckPerms]]
+- [[wiki/entities/thundermc/ecosistema-plugins|Ecosistema Plugins]]

@@ -13,6 +13,7 @@ Documentación de los plugins desarrollados a medida para la network de ThunderM
 
 ---
 
+- **Parte de**: [[wiki/entities/thundermc/ecosistema-plugins|Ecosistema Plugins]] | [[wiki/synthesis/thundermc-master-synthesis|SÃ­ntesis Maestra]]
 ## 2. RankUp / Ranks (RankUp-1.0.jar)
 - **Tipo**: Custom
 - **Propósito**: Progresión de rangos de supervivencia mediante pago de moneda (Vault) y cumplimiento de requisitos de estadísticas (tiempo jugado, bloques minados, etc.).
@@ -34,3 +35,11 @@ Documentación de los plugins desarrollados a medida para la network de ThunderM
 ## 4. ThunderMines (ThunderMines-1.9.dis)
 - **Estado**: Desactivado / Archivado.
 - **Motivo**: Reemplazado íntegramente por `CataMines-2.5.11` debido al rendimiento superior de reseteo asíncrono y soporte de zonas PvP/regiones WorldGuard.
+
+---
+
+## Referencias Cruzadas
+- [[wiki/entities/thundermc/core-infrastructure/luckperms|LuckPerms]]
+- [[wiki/entities/thundermc/core-infrastructure/vault|Vault]]
+- [[wiki/entities/thundermc/core-infrastructure/placeholderapi|PlaceholderAPI]]
+- [[wiki/entities/thundermc/ecosistema-plugins|Ecosistema Plugins]]

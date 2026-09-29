@@ -1,4 +1,4 @@
-# 🔗 Directorio Maestro de Documentación y Wikis Oficiales — Plugins Survival ThunderMC
+﻿# 🔗 Directorio Maestro de Documentación y Wikis Oficiales — Plugins Survival ThunderMC
 
 Lista de enlaces a las wikis, repositorios y fuentes oficiales de documentación para cada plugin activo de la network.
 
@@ -21,6 +21,7 @@ Lista de enlaces a las wikis, repositorios y fuentes oficiales de documentación
 
 ---
 
+- **Parte de**: [[wiki/entities/thundermc/ecosistema-plugins|Ecosistema Plugins]] | [[wiki/synthesis/thundermc-master-synthesis|SÃ­ntesis Maestra]]
 ## 💰 2. Economía, Tiendas y Comercio
 - **QuickShop-Hikari (6.2.0.11)**: [https://quickshop-community.github.io/QuickShop-Hikari-Documents/](https://quickshop-community.github.io/QuickShop-Hikari-Documents/)
 - **ShopGUIPlus (1.113.0)**: [https://docs.brcdev.net/#/shopgui/shops-items-setup](https://docs.brcdev.net/#/shopgui/shops-items-setup)
@@ -65,3 +66,9 @@ Lista de enlaces a las wikis, repositorios y fuentes oficiales de documentación
 - **AlonsoTagsPro**: [https://github.com/AlonsoAliaga/AlonsoTags/wiki](https://github.com/AlonsoAliaga/AlonsoTags/wiki)
 - **SkinsRestorer**: [https://skinsrestorer.net/docs/](https://skinsrestorer.net/docs/)
 - **DeluxeMenus (1.14.1)**: [https://wiki.helpch.at/clips-plugins/deluxemenus](https://wiki.helpch.at/clips-plugins/deluxemenus)
+
+---
+
+## Referencias Cruzadas
+- [[wiki/entities/thundermc/ecosistema-plugins|Ecosistema Plugins]]
+- [[wiki/synthesis/thundermc-master-synthesis|SÃ­ntesis Maestra ThunderMC]]

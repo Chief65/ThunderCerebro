@@ -1,4 +1,4 @@
-# 📖 Player Analytics (Plan - 5.8+)
+﻿# 📖 Player Analytics (Plan - 5.8+)
 
 - **Categoría**: Analítica de Rendimiento, Retención de Jugadores & Servidor Web Interno
 - **Servidor**: ThunderMC Survival 1.21.11 (Paper build 126+)
@@ -16,6 +16,7 @@
 
 ---
 
+- **Parte de**: [[wiki/entities/thundermc/ecosistema-plugins|Ecosistema Plugins]] | [[wiki/synthesis/thundermc-master-synthesis|SÃ­ntesis Maestra]]
 ## 🏗️ 2. Arquitectura Interna & Pipeline de Telemetría
 
 ```mermaid
@@ -108,3 +109,10 @@ Plan expone variables analíticas para ser utilizadas en menús de perfil, score
 ### Mitigaciones Críticas:
 - **Forzar Inicio de Sesión Obligatorio**: Mantener siempre `Require_login: true` en `config.yml`.
 - **Uso de HTTPS / Reverse Proxy**: Desplegar un proxy inverso Nginx/Cloudflare con certificado SSL o utilizar la integración SSL de Plan para cifrar las contraseñas del panel web en tránsito.
+
+---
+
+## Referencias Cruzadas
+- [[wiki/entities/thundermc/infraestructura-hardware|Infraestructura Hardware]]
+- [[wiki/synthesis/optimizacion-granjas-survival|OptimizaciÃ³n Granjas Survival]]
+- [[wiki/entities/thundermc/ecosistema-plugins|Ecosistema Plugins]]

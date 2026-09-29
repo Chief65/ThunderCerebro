@@ -1,4 +1,4 @@
-# 📖 Multiverse-Core (5.5.2+)
+﻿# 📖 Multiverse-Core (5.5.2+)
 
 - **Categoría**: Gestión y Aislamiento de Mundos Multi-Dimensión
 - **Servidor**: ThunderMC Survival 1.21.11 (Paper build 126+)
@@ -12,6 +12,7 @@
 
 ---
 
+- **Parte de**: [[wiki/entities/thundermc/ecosistema-plugins|Ecosistema Plugins]] | [[wiki/synthesis/thundermc-master-synthesis|SÃ­ntesis Maestra]]
 ## 🏗️ 2. Arquitectura Interna & Funcionamiento
 
 ```mermaid
@@ -113,3 +114,11 @@ graph TD
 ### Mitigaciones Críticas:
 - **Respawn Loops & Caída al Vacío**: Asegurar que `respawnWorld` apunte siempre a un mundo válido (`spawn` o `world`). Si un mundo es eliminado y jugadores tenían su cama allí, ocurrirá un NPE o caída continua en el vacío (`VoidSpawn` debe estar activo como red de seguridad).
 - **Consumo Excesivo de Memoria por Mundos Huérfanos**: Nunca dejar mundos temporales de eventos cargados en memoria. Descargar con `/mv unload <mundo>` tan pronto termine el evento.
+
+---
+
+## Referencias Cruzadas
+- [[wiki/entities/thundermc/core-infrastructure/fawe|FAWE]]
+- [[wiki/entities/thundermc/world-protection/worldguard|WorldGuard]]
+- [[wiki/entities/thundermc/gameplay-mechanics/betterrtp|BetterRTP]]
+- [[wiki/entities/thundermc/ecosistema-plugins|Ecosistema Plugins]]

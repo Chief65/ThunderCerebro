@@ -1,4 +1,4 @@
-# 📖 Jobs Reborn & Progresión Económica
+﻿# 📖 Jobs Reborn & Progresión Económica
 
 - **Categoría**: Profesiones, Economía de Actividades & Retención de Jugadores
 - **Servidor**: ThunderMC Survival (Paper/Purpur 1.21.11)
@@ -12,6 +12,7 @@
 
 ---
 
+- **Parte de**: [[wiki/entities/thundermc/ecosistema-plugins|Ecosistema Plugins]] | [[wiki/synthesis/thundermc-master-synthesis|SÃ­ntesis Maestra]]
 ## 🏗️ Arquitectura & Funcionamiento Interno
 1. **Block Ownership Tracking & CoreProtect/Internal Metadata**:
    - Para evitar que los jugadores coloquen y rompan repetidamente el mismo mineral o madera, el plugin registra metadatos en memoria y base de datos sobre los bloques colocados por usuarios, anulando el pago de dinero/XP para bloques no generados naturalmente por el mapa.
@@ -136,3 +137,12 @@ Miner:
    - Bloquear pagos por desplazamientos en botes automáticos sobre hielo o vagonetas continuas (`IgnoreRiding: true` e `IgnorePistonMoves: true`).
 4. **Inflación Desmedida de la Economía**:
    - Implementar techos de pago (`MoneyLimit`) por hora para que las cuentas de granjas o bots no desestabilicen el balance macroeconómico de ThunderMC.
+
+---
+
+## Referencias Cruzadas
+- [[wiki/entities/thundermc/core-infrastructure/vault|Vault]]
+- [[wiki/entities/thundermc/core-infrastructure/placeholderapi|PlaceholderAPI]]
+- [[wiki/concepts/mercadothunder|Mercado Thunder]]
+- [[wiki/concepts/economia-servidor-minecraft|EconomÃ­a Servidor Minecraft]]
+- [[wiki/entities/thundermc/ecosistema-plugins|Ecosistema Plugins]]

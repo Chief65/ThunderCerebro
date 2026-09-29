@@ -1,4 +1,4 @@
-# Estándares y Sintaxis de DeluxeMenus (1.14.x+)
+﻿# Estándares y Sintaxis de DeluxeMenus (1.14.x+)
 
 **Ámbito**: Servidor de Pruebas y Survival — Servidores Minecraft 1.21.11  
 **Objetivo**: Evitar advertencias (*deprecation warnings*) y garantizar compatibilidad futura.
@@ -99,4 +99,10 @@ Queda estrictamente prohibido el uso de claves booleanas obsoletas directas en i
 - **Corrección aplicada**: Homogeneizar todos los menús (principales, categorías de compra, intermediarios, lonja y pity) con el ícono unificado de la cabeza del jugador (`head-%player_name%`) y el lore multimoneda canónico completo (Dinero, Almas, Zafiros, XP), enlazado a `[openguimenu] info_economia`.
 - **Regla derivada**: En todos los menús del sistema de economía de ThunderMC, el botón `Info_Balance` SIEMPRE debe ser `head-%player_name%` con el bloque multimoneda completo, permitiendo consultar el balance global y acceder a `info_economia` desde cualquier pantalla.
 
+---
 
+## Referencias Cruzadas
+- [[wiki/entities/thundermc/estilo-menus-ui|Estilo MenÃºs UI]]
+- [[wiki/entities/thundermc/iconos-compatibles-ui|Iconos Compatibles UI]]
+- [[wiki/entities/thundermc/core-infrastructure/placeholderapi|PlaceholderAPI]]
+- [[wiki/entities/thundermc/ecosistema-plugins|Ecosistema Plugins]]

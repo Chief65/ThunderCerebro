@@ -1,4 +1,4 @@
-# 📖 TAB (5.5.0+)
+﻿# 📖 TAB (5.5.0+)
 
 - **Categoría**: Interfaz Visual / Tablist, Nametags, Scoreboard & BossBar
 - **Servidor**: ThunderMC Survival 1.21.11 (Paper build 126+)
@@ -15,6 +15,7 @@ A diferencia de plugins heredados que saturaban el sistema de equipos del marcad
 
 ---
 
+- **Parte de**: [[wiki/entities/thundermc/ecosistema-plugins|Ecosistema Plugins]] | [[wiki/synthesis/thundermc-master-synthesis|SÃ­ntesis Maestra]]
 ## 🏗️ 2. Arquitectura Interna & Pipeline de Paquetes
 
 ```mermaid
@@ -111,3 +112,12 @@ TAB expone variables internas optimizadas y consume todas las de PlaceholderAPI:
 ### Mitigaciones Críticas:
 - **Activar `compatibility-mode` en Nametags**: TAB cuenta con recorte inteligente de caracteres automático para clientes antiguos (`truncate-nametags-for-legacy-clients: true`).
 - **Conflictos con Otros Scoreboards**: Asegurar que ningún otro plugin (como EssentialsX o plugins de clanes) tenga activado su propio scoreboard para evitar parpadeos visuales en el cliente.
+
+---
+
+## Referencias Cruzadas
+- [[wiki/entities/thundermc/core-infrastructure/luckperms|LuckPerms]]
+- [[wiki/entities/thundermc/core-infrastructure/placeholderapi|PlaceholderAPI]]
+- [[wiki/entities/thundermc/chat-social/alonsotags|AlonsoTags]]
+- [[wiki/entities/thundermc/chat-social/zelchat|ZelChat]]
+- [[wiki/entities/thundermc/ecosistema-plugins|Ecosistema Plugins]]

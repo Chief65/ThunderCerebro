@@ -1,4 +1,4 @@
-# ⛏️ CataMines - Documentación Técnica
+﻿# ⛏️ CataMines - Documentación Técnica
 
 - **Categoría**: Minería Automatizada / Regeneración de Recursos
 - **Versión Core Soportada**: Minecraft 1.16.x - 1.21.x (Paper / Purpur)
@@ -35,6 +35,7 @@ flowchart TD
 
 ---
 
+- **Parte de**: [[wiki/entities/thundermc/ecosistema-plugins|Ecosistema Plugins]] | [[wiki/synthesis/thundermc-master-synthesis|SÃ­ntesis Maestra]]
 ## ⚙️ 2. Configuración Crítica (`mines/mina_publica.yml`)
 
 ```yaml
@@ -107,3 +108,12 @@ notifications:
 > **Pico de Lag por Fallo en Integración FAWE**:
 > Si FAWE no está presente o se produce un fallback al Bukkit Block Setter tradicional, el reseteo de minas grandes (> 100,000 bloques) congelará el hilo principal.
 > **Mitigación**: Asegurarse de que FAWE esté cargado como dependencia primaria en el servidor.
+
+---
+
+## Referencias Cruzadas
+- [[wiki/entities/thundermc/composicion-minas|ComposiciÃ³n de Minas]]
+- [[wiki/entities/thundermc/economy-progression/shopguiplus|ShopGUIPlus]]
+- [[wiki/entities/thundermc/world-protection/worldguard|WorldGuard]]
+- [[wiki/comparisons/minas-vs-dungeons-balance|Balance Minas vs Dungeons]]
+- [[wiki/entities/thundermc/ecosistema-plugins|Ecosistema Plugins]]

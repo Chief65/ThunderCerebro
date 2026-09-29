@@ -1,4 +1,4 @@
-# 📦 InventoryRollbackPlus - Documentación Técnica
+﻿# 📦 InventoryRollbackPlus - Documentación Técnica
 
 - **Categoría**: Recuperación de Datos de Jugador / Backups de Inventarios
 - **Versión Core Soportada**: Minecraft 1.13.x - 1.21.x (Paper / Purpur)
@@ -29,6 +29,7 @@ flowchart TD
 
 ---
 
+- **Parte de**: [[wiki/entities/thundermc/ecosistema-plugins|Ecosistema Plugins]] | [[wiki/synthesis/thundermc-master-synthesis|SÃ­ntesis Maestra]]
 ## ⚙️ 2. Configuración Crítica (`config.yml`)
 
 ```yaml
@@ -96,3 +97,10 @@ sounds:
 > **Crecimiento de la Base de Datos SQLite**:
 > En servidores con cientos de muertes diarias, el archivo `.db` puede alcanzar gigabytes rápidamente.
 > **Optimización**: Configurar `max-retention-days: 7` o migrar a MySQL con particionado mensual.
+
+---
+
+## Referencias Cruzadas
+- [[wiki/entities/thundermc/world-protection/coreprotect|CoreProtect]]
+- [[wiki/entities/thundermc/world-protection/pvpmanager|PvPManager]]
+- [[wiki/entities/thundermc/ecosistema-plugins|Ecosistema Plugins]]

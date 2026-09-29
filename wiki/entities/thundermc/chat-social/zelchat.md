@@ -3,8 +3,9 @@
 - **Categoría**: Gestión de Chat / Canales / Formato y Moderación
 - **Versión Core Soportada**: Minecraft 1.16.x - 1.21.x (Paper / Purpur)
 - **Desarrollador**: Zeltuv
-- **Dependencias**: PlaceholderAPI, Vault, LuckPerms, ProtocolLib (Opcional)
+- **Dependencias**: [[wiki/entities/thundermc/core-infrastructure/placeholderapi|PlaceholderAPI]], [[wiki/entities/thundermc/core-infrastructure/vault|Vault]], [[wiki/entities/thundermc/core-infrastructure/luckperms|LuckPerms]], ProtocolLib (Opcional)
 - **Ruta de Configuración**: `plugins/ZelChat/`
+- **Parte de**: [[wiki/entities/thundermc/ecosistema-plugins|Ecosistema de Plugins ThunderMC]] | [[wiki/synthesis/thundermc-master-synthesis|Síntesis Maestra]]
 
 ---
 
@@ -27,7 +28,7 @@ flowchart TD
    - **Global**: Transmisión a todo el servidor o red.
    - **Local**: Limitado por radio de bloques euclídeo (ej: 100 bloques).
    - **Staff Chat**: Canal privado para administradores con toggle (`/sc`).
-   - **Team/Clan Chat**: Integración directa con ZelTeams.
+   - **Team/Clan Chat**: Integración directa con [[wiki/entities/thundermc/chat-social/zelteams|ZelTeams]].
 2. **Interactividad Avanzada (Chat Components)**:
    - Soporte de tooltips emergentes (Hover Events) y acciones de clic (Run Command / Suggest Command / Open URL).
    - Menciones de jugadores (`@Nombre`) con notificación sonora y resaltado.
@@ -106,3 +107,13 @@ anti-spam:
 > **Lag por Parseo Masivo de PAPI en `AsyncChatEvent`**:
 > El uso excesivo de placeholders pesados (por ejemplo, aquellos que realizan consultas SQL por cada mensaje enviado) puede provocar retrasos en la entrega de paquetes de chat.
 > **Mitigación**: Usar placeholders basados en memoria local (LuckPerms caching) y evitar consultas asíncronas no cacheadas en el formato de chat.
+
+---
+
+## 🔗 Referencias Cruzadas
+- Hub Central: [[wiki/entities/thundermc/ecosistema-plugins|Ecosistema de Plugins ThunderMC]]
+- Permisos y Rangos: [[wiki/entities/thundermc/core-infrastructure/luckperms|LuckPerms]]
+- Variables: [[wiki/entities/thundermc/core-infrastructure/placeholderapi|PlaceholderAPI]]
+- API de Economía: [[wiki/entities/thundermc/core-infrastructure/vault|Vault]]
+- Clanes y Equipos: [[wiki/entities/thundermc/chat-social/zelteams|ZelTeams]]
+- Cosméticos de Chat: [[wiki/entities/thundermc/chat-social/alonsotags|AlonsoTagsPro]]

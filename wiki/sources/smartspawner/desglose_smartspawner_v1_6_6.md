@@ -1,4 +1,4 @@
-# Desglose de Fuente: SmartSpawner v1.6.6
+﻿# Desglose de Fuente: SmartSpawner v1.6.6
 
 **Fuente**: Documentación oficial (`https://docs.smartspawner.site/docs/`) y archivos de configuración extraídos del Sandbox (`plugins/SmartSpawner/`).  
 **Fecha de Ingesta**: 2026-09-13  
@@ -44,3 +44,10 @@ SmartSpawner sustituye el spawning y cálculo de entidades vivas de Minecraft va
   - `smartspawner.break`: Romper y recuperar el spawner.
   - `smartspawner.stack`: Apilar spawners con la mano o mediante GUI.
   - `smartspawner.sellall`: Vender drops directamente desde la interfaz.
+
+---
+
+## Referencias Cruzadas
+- [[wiki/synthesis/optimizacion-granjas-survival|OptimizaciÃ³n Granjas Survival]]
+- [[wiki/synthesis/thundermc-master-synthesis|SÃ­ntesis Maestra ThunderMC]]
+- [[wiki/entities/thundermc/ecosistema-plugins|Ecosistema Plugins]]

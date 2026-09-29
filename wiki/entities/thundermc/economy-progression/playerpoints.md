@@ -1,4 +1,4 @@
-# 📖 PlayerPoints
+﻿# 📖 PlayerPoints
 
 - **Categoría**: Moneda Secundaria Premium / Tokens
 - **Servidor**: ThunderMC Survival (Paper/Purpur 1.21.11)
@@ -12,6 +12,7 @@
 
 ---
 
+- **Parte de**: [[wiki/entities/thundermc/ecosistema-plugins|Ecosistema Plugins]] | [[wiki/synthesis/thundermc-master-synthesis|SÃ­ntesis Maestra]]
 ## 🏗️ Arquitectura & Funcionamiento Interno
 1. **Thread-Safe Point Transactions**:
    - Todas las operaciones de depósito, retiro y consulta de puntos utilizan llamadas concurrentes con semáforos en memoria y actualizaciones asíncronas en base de datos.
@@ -100,3 +101,11 @@ transaction:
    - **Solución**: Mantener `decimals: false` y configurar `maximum: 2000000000` en `config.yml` para rechazar cualquier suma fuera de rango.
 3. **Desconexión Forzada y Rollbacks de Servidor**:
    - Al estar conectado a MariaDB/MySQL, las operaciones ejecutan `COMMIT` inmediato. Los reinicios repentinos o crashes de Paper no revierten las transacciones de puntos ni compras web de la tienda.
+
+---
+
+## Referencias Cruzadas
+- [[wiki/concepts/monetizacion-modelo-negocio|Modelo MonetizaciÃ³n]]
+- [[wiki/entities/thundermc/economy-progression/excellentcrates|ExcellentCrates]]
+- [[wiki/entities/thundermc/core-infrastructure/vault|Vault]]
+- [[wiki/entities/thundermc/ecosistema-plugins|Ecosistema Plugins]]

@@ -1,4 +1,4 @@
-﻿---
+---
 name: startuppruebas
 description: >-
   Skill del servidor de Pruebas de ThunderStudios. Se activa con "pruebas",
@@ -20,18 +20,18 @@ Al activar este skill, adoptas el rol de **Ingeniero de Entorno de Pruebas**. Tu
 | **Host** | `MIA-251006.bloom.host` |
 | **Puerto** | `2022` |
 | **Usuario** | `ymykh9qy.274758bd` |
-| **Clave SSH** | `C:\Users\tecno\.ssh\id_rsa` (RSA Key de `tecno@LAB2`) |
+| **Clave SSH** | `C:\Users\PC\.ssh\id_ed25519` (ED25519 Key) |
 | **Protocolo** | SFTP / SSH |
 | **Panel** | Bloom.host (Pterodactyl - Split Pruebas) |
 
 ### Comando de conexión SFTP (PowerShell):
 ```powershell
-sftp -i "$env:USERPROFILE\.ssh\id_rsa" -P 2022 -o BatchMode=yes ymykh9qy.274758bd@MIA-251006.bloom.host
+sftp -i "$env:USERPROFILE\.ssh\id_ed25519" -P 2022 -o BatchMode=yes ymykh9qy.274758bd@MIA-251006.bloom.host
 ```
 
 ### Comando de listar raíz del servidor de pruebas:
 ```powershell
-echo "ls -la" | sftp -i "$env:USERPROFILE\.ssh\id_rsa" -P 2022 -o BatchMode=yes ymykh9qy.274758bd@MIA-251006.bloom.host
+echo "ls -la" | sftp -i "$env:USERPROFILE\.ssh\id_ed25519" -P 2022 -o BatchMode=yes ymykh9qy.274758bd@MIA-251006.bloom.host
 ```
 
 ---

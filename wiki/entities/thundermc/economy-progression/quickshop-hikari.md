@@ -1,4 +1,4 @@
-# 📖 QuickShop-Hikari
+﻿# 📖 QuickShop-Hikari
 
 - **Categoría**: Tiendas de Jugadores / Economía Descentralizada
 - **Servidor**: ThunderMC Survival (Paper/Purpur 1.21.11)
@@ -14,6 +14,7 @@ Incorpora soporte para componentes de Minecraft 1.20.5+ / 1.21.11, NBT avanzado,
 
 ---
 
+- **Parte de**: [[wiki/entities/thundermc/ecosistema-plugins|Ecosistema Plugins]] | [[wiki/synthesis/thundermc-master-synthesis|SÃ­ntesis Maestra]]
 ## 🏗️ Arquitectura & Funcionamiento Interno
 1. **Virtual Display Engine**:
    - Utiliza Minecraft 1.19.4+ `ItemDisplay` y `TextDisplay` entities gestionadas por paquetes hacia el cliente sin instanciar entidades pesadas en los chunks del servidor, reduciendo a cero la degradación de guardado de mundos y TPS.
@@ -138,3 +139,11 @@ interaction:
 - **HikariCP Pool**: Ajustar `maximum-pool-size: 10` y `minimum-idle: 2` para mitigar tiempos de espera en redes con alta concurrencia.
 - **Display Engine**: Utilizar `ITEM_DISPLAY` nativo de Minecraft 1.21+ en lugar de entidades `ARMOR_STAND` para evitar sobrecarga en el pipeline de render del servidor y del cliente.
 - **Mantenimiento**: Programar purgas automáticas con `/qs purge 60` para limpiar tiendas abandonadas de jugadores inactivos.
+
+---
+
+## Referencias Cruzadas
+- [[wiki/entities/thundermc/core-infrastructure/vault|Vault]]
+- [[wiki/entities/thundermc/economy-progression/shopguiplus|ShopGUIPlus]]
+- [[wiki/entities/thundermc/economy-progression/zelauction|ZelAuction]]
+- [[wiki/entities/thundermc/ecosistema-plugins|Ecosistema Plugins]]

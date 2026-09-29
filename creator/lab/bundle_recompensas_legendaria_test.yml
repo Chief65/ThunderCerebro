@@ -1,0 +1,158 @@
+# Nombre mostrado del objeto
+name: '#fab60f★ &fBundle de Recompensas &8▶ #fab60fLegendaria &8[#fab60fTEST&8]'
+# Lore del objeto
+lore:
+- '&8ʙᴜɴᴅʟᴇ ᴅᴇ ʀᴇᴄᴏᴍᴘᴇɴꜱᴀꜱ'
+- ''
+- ' &7Un fardo repleto de '
+- ' &7recompensas para aventureros.'
+- ''
+- ' #fab60f★ ¡ᴄᴀʟɪᴅᴀᴅ ᴍÁxɪᴍᴀ ᴀʟᴄᴀɴᴢᴀᴅᴀ! ★'
+- ' &7El tesoro supremo del reino.'
+- ''
+- '&7▶ ᴄʟɪᴄᴋ ᴅᴇʀ - ᴀʙʀɪʀ'
+material: YELLOW_BUNDLE
+glow: true
+disableStack: false
+keepItemOnDeath: true
+canBeUsedOnlyByTheOwner: false
+storeItemInfo: false
+unbreakable: false
+usage: 0
+usageLimit: -1
+cancelEventIfNoPerm: false
+cancelEventIfNotOwner: false
+disabledWorlds: []
+config_5: true
+disableEnchantGlide: false
+onlyOwnerBlackListedActivators: []
+isDurabilityBasedOnUsage: false
+cancelEventIfNoPermission: false
+whitelistedWorlds: []
+glider: false
+keepDefaultAttributes: true
+ignoreKeepDefaultAttributesFeature: true
+config_update: true
+usageFeatures:
+  usage: 1
+  isRefreshableClean: true
+  usageLimit: -1
+dropFeatures:
+  glowDrop: false
+  glowDropColor: WHITE
+hiders:
+  hideEnchantments: true
+  hideUnbreakable: true
+  hideAttributes: true
+  hidePotionEffects: true
+  hideUsage: true
+  hideDestroys: false
+  hidePlacedOn: false
+  hideDye: false
+  hideArmorTrim: false
+  hideAdditionalTooltip: false
+  hideToolTip: false
+giveFirstJoinFeatures:
+  giveFirstJoin: false
+  giveFirstJoinAmount: 1
+  giveFirstJoinSlot: 0
+restrictions:
+  cancel-item-place: true
+  cancel-item-craft: true
+  cancel-anvil: true
+  locked-in-inventory: false
+variables: {}
+activators:
+  activator1:
+    name: '&eActivator'
+    option: PLAYER_RIGHT_CLICK
+    typeTarget: NO_TYPE_TARGET
+    usageModification: -1
+    cancelEvent: true
+    noActivatorRunIfTheEventIsCancelled: false
+    autoUpdateItem: false
+    cooldownFeatures:
+      cooldown: 6
+      cooldownMsg: '&cEspera &f%time_S%s &cpara abrir otro bundle.'
+      cancelEventIfInCooldown: true
+      pausePlaceholdersConditions: {}
+    globalCooldownFeatures:
+      cooldown: 0
+      displayCooldownMessage: false
+    otherEICooldowns: {}
+    requiredItems: {}
+    requiredExecutableItems: {}
+    requiredMagics: {}
+    detailedSlots:
+    - -1
+    playerCommands:
+    - 'effect give %player% minecraft:darkness 4 0 true'
+    - 'title %player% times 0 20 5'
+    - 'title %player% title "&8[&7&k??&8] &7ᴅᴇꜱᴄɪꜰʀᴀɴᴅᴏ &8[&7&k??&8]"'
+    - 'title %player% subtitle "&a&m &8&m    &r"'
+    - 'execute at %player% run playsound minecraft:block.amethyst_block.hit master %player% ~ ~ ~ 0.8 0.8'
+    - 'execute at %player% run playsound minecraft:block.note_block.hat master %player% ~ ~ ~ 0.8 1.0'
+    - 'execute at %player% run particle minecraft:enchant ~ ~1 ~ 0.3 0.3 0.3 1 20'
+    - 'DELAY_TICK 10'
+    - 'title %player% title "&#0ccee8✦ &fᴅᴇꜱᴄɪꜰʀᴀɴᴅᴏ &8[&b.&8  ] &#0ccee8✦"'
+    - 'title %player% subtitle "&a&m  &8&m   &r"'
+    - 'execute at %player% run playsound minecraft:block.note_block.pling master %player% ~ ~ ~ 0.9 1.1'
+    - 'execute at %player% run playsound minecraft:item.bundle.drop_contents master %player% ~ ~ ~ 0.8 1.0'
+    - 'execute at %player% run particle minecraft:crit ~ ~1 ~ 0.3 0.3 0.3 0.2 15'
+    - 'DELAY_TICK 10'
+    - 'title %player% title "#63e80c▲ &a&lᴅᴇꜱᴄɪꜰʀᴀɴᴅᴏ &8[&a..&8 ] #63e80c▲"'
+    - 'title %player% subtitle "&a&m   &8&m  &r"'
+    - 'execute at %player% run playsound minecraft:block.note_block.pling master %player% ~ ~ ~ 0.9 1.3'
+    - 'execute at %player% run playsound minecraft:entity.experience_orb.pickup master %player% ~ ~ ~ 0.8 1.2'
+    - 'execute at %player% run particle minecraft:happy_villager ~ ~1 ~ 0.3 0.3 0.3 0 15'
+    - 'DELAY_TICK 10'
+    - 'title %player% title "#ba0ffa★ &d&lᴅᴇꜱᴄɪꜰʀᴀɴᴅᴏ &8[&d...&8] #ba0ffa★"'
+    - 'title %player% subtitle "&a&m    &8&m &r"'
+    - 'execute at %player% run playsound minecraft:block.note_block.pling master %player% ~ ~ ~ 0.9 1.55'
+    - 'execute at %player% run playsound minecraft:entity.experience_orb.pickup master %player% ~ ~ ~ 0.9 1.5'
+    - 'execute at %player% run particle minecraft:enchant ~ ~1 ~ 0.4 0.4 0.4 1 30'
+    - 'DELAY_TICK 10'
+    - 'title %player% title "#fab60f★ &e&l¡ꜱᴏʙʀᴇᴄᴀʀɢᴀ! &8[&e&k!!&8] #fab60f★"'
+    - 'title %player% subtitle "&a&m     &r"'
+    - 'execute at %player% run playsound minecraft:block.note_block.pling master %player% ~ ~ ~ 1.0 1.8'
+    - 'execute at %player% run playsound minecraft:block.amethyst_block.chime master %player% ~ ~ ~ 1.0 1.5'
+    - 'execute at %player% run particle minecraft:witch ~ ~1 ~ 0.4 0.4 0.4 0 20'
+    - 'DELAY_TICK 10'
+    - 'title %player% title "#fab60f★ &f&l¡ꜱᴇʟʟᴏ ʀᴏᴛᴏ! #fab60f★"'
+    - 'title %player% subtitle "&a&l✔ ᴅᴇꜱᴄɪꜰʀᴀᴅᴏ ✔"'
+    - 'execute at %player% run playsound minecraft:block.note_block.pling master %player% ~ ~ ~ 1.0 2.0'
+    - 'execute at %player% run playsound minecraft:ui.toast.challenge_complete master %player% ~ ~ ~ 0.7 1.5'
+    - 'execute at %player% run particle minecraft:totem_of_undying ~ ~1 ~ 0.4 0.4 0.4 0.1 35'
+    - 'DELAY_TICK 20'
+    - 'RANDOM RUN: 1'
+    - '60:LOOP START: 1 +++ title %player% times 2 50 15 +++ title %player% title "#fab60f★ ¡ʙᴜɴᴅʟᴇ ʟᴇɢᴇɴᴅᴀʀɪᴏ! ★" +++ title %player% subtitle "#fab60f+$75.000 &8| #fab60f2x Bloques Netherite &8+ #fab60f2x Totems" +++ eco give %player% 75000 +++ give %player% netherite_block 2 +++ give %player% totem_of_undying 2 +++ give %player% enchanted_golden_apple 2 +++ execute at %player% run playsound minecraft:entity.ender_dragon.growl master %player% ~ ~ ~ 1 1.2 +++ execute at %player% run playsound minecraft:ui.toast.challenge_complete master %player% ~ ~ ~ 1 1.5 +++ PARTICLE TOTEM 70 0.8 0.8 +++ SEND_MESSAGE #fab60f★ &8| &6¡LEGENDARIO! &fHas abierto un #fab60fBundle Legendario &fy recibido #fab60f$75.000&f, #fab60f2x Bloques Netherite&f, #fab60f2x Manzanas Notch &fy #fab60f2x Tótems&f. +++ LOOP END'
+    - '30:LOOP START: 1 +++ title %player% times 2 50 15 +++ title %player% title "#fab60f★ ¡ʙᴜɴᴅʟᴇ ʟᴇɢᴇɴᴅᴀʀɪᴏ! ★" +++ title %player% subtitle "#fab60f+$100.000 &8| #fab60f4x Bloques Netherite &8+ #fab60f3x Totems" +++ eco give %player% 100000 +++ give %player% netherite_block 4 +++ give %player% totem_of_undying 3 +++ give %player% enchanted_golden_apple 3 +++ execute at %player% run playsound minecraft:entity.ender_dragon.growl master %player% ~ ~ ~ 1 1.2 +++ execute at %player% run playsound minecraft:ui.toast.challenge_complete master %player% ~ ~ ~ 1 1.5 +++ PARTICLE TOTEM 80 0.8 0.8 +++ SEND_MESSAGE #fab60f★ &8| &6¡JACKPOT MAYOR! &fHas abierto un #fab60fBundle Legendario &fy recibido #fab60f$100.000&f, #fab60f4x Bloques Netherite&f, #fab60f3x Manzanas Notch &fy #fab60f3x Tótems&f. +++ LOOP END'
+    - '10:LOOP START: 1 +++ title %player% times 2 50 15 +++ title %player% title "#fab60f★ ¡¡JACKPOT ABSOLUTO!! ★" +++ title %player% subtitle "#fab60f+$150.000 &8| #fab60f8x Bloques Netherite &8+ #fab60f5x Totems" +++ eco give %player% 150000 +++ give %player% netherite_block 8 +++ give %player% totem_of_undying 5 +++ give %player% enchanted_golden_apple 5 +++ execute at %player% run playsound minecraft:entity.ender_dragon.death master %player% ~ ~ ~ 1 1.0 +++ execute at %player% run playsound minecraft:ui.toast.challenge_complete master %player% ~ ~ ~ 1 1.5 +++ PARTICLE TOTEM 100 1.0 1.0 +++ SEND_MESSAGE #fab60f★ &8| &4&l¡¡JACKPOT ABSOLUTO!! &fHas abierto el botín supremo: #fab60f$150.000&f, #fab60f8x Bloques Netherite&f, #fab60f5x Manzanas Notch &fy #fab60f5x Tótems&f. +++ LOOP END'
+    - RANDOM END
+    playerConditions: {}
+    worldConditions: {}
+    itemConditions: {}
+    customConditions: {}
+    placeholdersConditions: {}
+    variablesModification: {}
+displayConditions:
+  playerConditions: {}
+  worldConditions: {}
+  itemConditions: {}
+  placeholdersConditions: {}
+  enableFeature: false
+foodFeatures:
+  isMeat: false
+  nutrition: 1
+  saturation: 1
+  canAlwaysEat: false
+consumableFeatures:
+  enable: false
+weaponFeatures:
+  enable: false
+blockAttacksFeatures:
+  enable: false
+repairableFeatures:
+  enable: false
+itemRarity:
+  enableRarity: false

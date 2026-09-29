@@ -1,4 +1,4 @@
-# 🛡️ Diagnóstico Técnico y Plan de Optimización Survival (Minecraft 1.21.11)
+﻿# 🛡️ Diagnóstico Técnico y Plan de Optimización Survival (Minecraft 1.21.11)
 **Fecha**: 2 de septiembre de 2026  
 **Servidor**: ThunderMC Survival (`MIA-251006.bloom.host:2022`)  
 **Objetivo**: Resolver colapso de MSPT (13ms → 33ms) y sobrecarga de entidades generadas por macro-granjas de spawners.
@@ -97,3 +97,12 @@ player-idle-timeout=30
 - [ ] Aplicar configuraciones en `paper-world-defaults.yml`, `spigot.yml` y `server.properties` en el Survival.
 - [ ] Decidir plugin de Stacking (RoseStacker vs StackMob) e instalar.
 - [ ] Auditar in-game las granjas de los jugadores top kills (`jackp121`, `davidg4mer99H`, `ThunggThungg`).
+
+---
+
+## Referencias Cruzadas
+- [[wiki/synthesis/thundermc-master-synthesis|SÃ­ntesis Maestra ThunderMC]]
+- [[wiki/entities/thundermc/infraestructura-hardware|Infraestructura Hardware]]
+- [[wiki/entities/thundermc/core-infrastructure/plan|Plan (Player Analytics)]]
+- [[wiki/sources/smartspawner/desglose_smartspawner_v1_6_6|Desglose SmartSpawner]]
+- [[wiki/concepts/mercadothunder|Mercado Thunder]]

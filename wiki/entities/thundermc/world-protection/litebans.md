@@ -1,4 +1,4 @@
-# ⚖️ LiteBans - Documentación Técnica
+﻿# ⚖️ LiteBans - Documentación Técnica
 
 - **Categoría**: Moderación / Sanciones de Seguridad Globales (Bans, Mutes, Kicks, Warns)
 - **Versión Core Soportada**: Spigot / Paper / Purpur / Velocity / BungeeCord (1.8.x - 1.21.x)
@@ -33,6 +33,7 @@ flowchart TD
 
 ---
 
+- **Parte de**: [[wiki/entities/thundermc/ecosistema-plugins|Ecosistema Plugins]] | [[wiki/synthesis/thundermc-master-synthesis|SÃ­ntesis Maestra]]
 ## ⚙️ 2. Configuración Crítica (`config.yml`)
 
 ```yaml
@@ -99,3 +100,11 @@ warn_actions:
 > **Falso Positivo de DupeIP por Proxies Inseguros / Floodgate**:
 > Si se usa Velocity / Bungee / Floodgate sin `player-info-forwarding-mode: MODERN` (Velocity) o `bungeecord: true`, todos los jugadores pueden compartir la IP interna del proxy (`127.0.0.1`), provocando que un `/banip` banee a todo el servidor.
 > **Mitigación**: Verificar siempre el reenvío seguro de IPs reales en el proxy y configurar `ignored_ips: ["127.0.0.1"]` en LiteBans.
+
+---
+
+## Referencias Cruzadas
+- [[wiki/entities/thundermc/core-infrastructure/luckperms|LuckPerms]]
+- [[wiki/entities/thundermc/world-protection/coreprotect|CoreProtect]]
+- [[wiki/entities/thundermc/chat-social/zelchat|ZelChat]]
+- [[wiki/entities/thundermc/ecosistema-plugins|Ecosistema Plugins]]

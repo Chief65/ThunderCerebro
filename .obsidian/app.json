@@ -1,1 +1,14 @@
-{}
+{
+  "userIgnoreFilters": [
+    "skills",
+    ".agents",
+    "raw",
+    "creator",
+    "thunder-dashboard",
+    "skills/",
+    ".agents/",
+    "raw/",
+    "creator/",
+    "thunder-dashboard/"
+  ]
+}

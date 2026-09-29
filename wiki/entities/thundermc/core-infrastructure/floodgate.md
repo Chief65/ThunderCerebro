@@ -1,4 +1,4 @@
-# 📖 Floodgate (2.2.3+)
+﻿# 📖 Floodgate (2.2.3+)
 
 - **Categoría**: Crossplay Authentication / Geyser Bedrock Bridge
 - **Servidor**: ThunderMC Survival 1.21.11 (Paper build 126+)
@@ -15,6 +15,7 @@ Floodgate genera un UUID determinista v0/v4 basado en el XUID (Xbox User ID) ún
 
 ---
 
+- **Parte de**: [[wiki/entities/thundermc/ecosistema-plugins|Ecosistema Plugins]] | [[wiki/synthesis/thundermc-master-synthesis|SÃ­ntesis Maestra]]
 ## 🏗️ 2. Arquitectura Interna & Proceso de Autenticación
 
 ```mermaid
@@ -98,3 +99,9 @@ Floodgate proporciona variables específicas para detectar clientes Bedrock y pe
 ### Mitigaciones Críticas:
 - **Protección de Permisos en `key.pem`**: Asegurar que solo el usuario del sistema host tenga acceso de lectura a la carpeta de configuración.
 - **Nombres de Jugador con Caracteres Inválidos**: Floodgate sanea automáticamente caracteres que no son legales en el protocolo Java (espacios en nombres de Xbox Gamertags son reemplazados por guiones bajos `_` o prefijos definidos).
+
+---
+
+## Referencias Cruzadas
+- [[wiki/entities/thundermc/core-infrastructure/viaversion|ViaVersion]]
+- [[wiki/entities/thundermc/ecosistema-plugins|Ecosistema Plugins]]

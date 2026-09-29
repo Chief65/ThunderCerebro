@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Monetizacion ThunderMC — Modelo de Negocio"
 type: concept
 created: 2026-08-28
@@ -86,10 +86,11 @@ F2P entra -> Retencion (CataMines/pase/misiones) -> FOMO
 
 ## Enlaces Relacionados
 
-- Plan completo: Plan de Monetizacion/plan-monetizacion-thundermc.md
-- Economia base: wiki/concepts/economia-servidor-minecraft.md
-- Sintesis maestra: wiki/synthesis/thundermc-master-synthesis.md
-- LuckPerms (rangos): wiki/entities/thundermc/core-infrastructure/luckperms.md
-- PlayerPoints (Zafiros): wiki/entities/thundermc/economy-progression/playerpoints.md
-- ExcellentCrates (llaves): wiki/entities/thundermc/economy-progression/excellentcrates.md
-- Tienda web: Instalacion Tebex/
+- Plan completo: [[Plan de Monetizacion/plan-monetizacion-thundermc|Plan de Monetización ThunderMC]]
+- Economía base: [[wiki/concepts/economia-servidor-minecraft|Economía Servidor Minecraft]]
+- Síntesis maestra: [[wiki/synthesis/thundermc-master-synthesis|Síntesis Maestra ThunderMC]]
+- Rangos y Permisos: [[wiki/entities/thundermc/core-infrastructure/luckperms|LuckPerms]]
+- Moneda Premium: [[wiki/entities/thundermc/economy-progression/playerpoints|PlayerPoints (Zafiros)]]
+- Cajas de Recompensas: [[wiki/entities/thundermc/economy-progression/excellentcrates|ExcellentCrates]]
+- Ecosistema: [[wiki/entities/thundermc/ecosistema-plugins|Ecosistema de Plugins]]
+

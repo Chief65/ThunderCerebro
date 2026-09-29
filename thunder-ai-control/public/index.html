@@ -1,0 +1,769 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Beacon // ThunderCerebro Control Center</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="app-container">
+    <!-- Left Navigation Sidebar -->
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <div class="logo-badge">⚡</div>
+        <div class="logo-text">
+          <h1>Beacon</h1>
+          <span>ThunderCerebro</span>
+        </div>
+      </div>
+
+      <nav class="nav-menu">
+        <div class="nav-section-title">Principal</div>
+        <a class="nav-item active" data-view="chat">
+          <span class="icon">💬</span>
+          <span>Chat Beacon</span>
+          <span class="nav-badge highlight">GPT</span>
+        </a>
+        <a class="nav-item" data-view="performance">
+          <span class="icon">📊</span>
+          <span>Rendimiento</span>
+          <span class="nav-badge" id="perfNavBadge">0.1%</span>
+        </a>
+        <a class="nav-item" data-view="launcher">
+          <span class="icon">⚡</span>
+          <span>Centro de Mando</span>
+          <span class="nav-badge">Start</span>
+        </a>
+        <a class="nav-item" data-view="graph">
+          <span class="icon">🕸️</span>
+          <span>Grafo Obsidian</span>
+          <span class="nav-badge" id="graphCountBadge">75</span>
+        </a>
+        <a class="nav-item" data-view="skills">
+          <span class="icon">🧩</span>
+          <span>Habilidades (Skills)</span>
+          <span class="nav-badge" id="skillsCountBadge">--</span>
+        </a>
+        <a class="nav-item" data-view="subagents">
+          <span class="icon">👥</span>
+          <span>Subagentes Studio</span>
+          <span class="nav-badge">7</span>
+        </a>
+        
+        <div class="nav-section-title">Infraestructura</div>
+        <a class="nav-item" data-view="servers">
+          <span class="icon">🖥️</span>
+          <span>Servidores & Red</span>
+          <span class="nav-badge">2</span>
+        </a>
+        <a class="nav-item" data-view="logs">
+          <span class="icon">📜</span>
+          <span>Bitácora (log.md)</span>
+        </a>
+        <a class="nav-item" data-view="terminal">
+          <span class="icon">💻</span>
+          <span>Terminal Antigravity</span>
+        </a>
+      </nav>
+
+      <div class="sidebar-footer">
+        <div class="operator-card">
+          <div class="operator-avatar">👑</div>
+          <div class="operator-info">
+            <div class="operator-name">Sr Ramos</div>
+            <div class="operator-role">
+              <span class="status-dot"></span>
+              <span>Beacon 1.21.11 Ready</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Main Wrapper -->
+    <main class="main-wrapper">
+      <!-- Top Navigation Bar -->
+      <header class="top-bar">
+        <div class="top-bar-left">
+          <div class="view-breadcrumb">
+            <span>ThunderCerebro</span>
+            <span>/</span>
+            <span class="current" id="viewTitleBreadcrumb">Chat Beacon</span>
+          </div>
+        </div>
+
+        <div class="top-model-controls" id="topModelControls">
+          <div class="model-select-wrapper">
+            <span class="model-select-icon">🧠</span>
+            <select id="chatModelSelect" class="chat-model-select">
+              <option value="gemini-3.8-flash" selected>Gemini 3.8 Flash (1.0M)</option>
+              <option value="gemini-3.8-pro">Gemini 3.8 Pro (2.0M)</option>
+              <option value="gemini-3.8-flash-lite">Gemini Flash-Lite (1.0M)</option>
+              <option value="claude-3.7-sonnet">Claude 3.7 Sonnet (200k)</option>
+            </select>
+          </div>
+          <div class="model-usage-pill" id="modelUsagePill" title="Consumo en tiempo real de la ventana de contexto">
+            <span class="usage-dot" id="usageDot"></span>
+            <span class="usage-pct" id="usagePercentText">0.14% uso</span>
+            <span class="usage-tokens-counter" id="usageTokensCounter">(1.5k / 1.0M tok)</span>
+          </div>
+        </div>
+
+        <div class="top-actions">
+          <button class="btn-top-clear" id="btnTopClearChat" title="Limpiar conversación activa">
+            <span>🧹</span>
+            <span>Limpiar</span>
+          </button>
+          <button class="btn-quick-launch" id="btnTopLaunch">
+            <span>⚡</span>
+            <span>Terminal Externa</span>
+          </button>
+        </div>
+      </header>
+
+      <!-- View 0: Chat Beacon (ChatGPT Clean Style) -->
+      <section class="view-content chat-view active" id="view-chat">
+        <div class="chat-wrapper">
+          <!-- Scrollable messages container -->
+          <div class="chat-messages-container" id="chatScrollContainer">
+            <div class="chat-messages-inner" id="chatMessagesInner">
+              
+              <!-- Welcome / Zero State Screen -->
+              <div class="chat-welcome-state" id="chatWelcomeState">
+                <div class="beacon-hero-emblem">⚡</div>
+                <h2 class="welcome-title">Beacon // ThunderCerebro</h2>
+                <p class="welcome-subtitle">
+                  Asistente clínico de desarrollo para el Sr Ramos. Especializado en economía de Minecraft 1.21.11, plugins custom, Obsidian y THUNDERVERSE.
+                </p>
+
+                <div class="chat-prompt-suggestions">
+                  <div class="suggestion-card" data-prompt="¿Cómo está balanceada la economía de ThunderMC Survival entre ShopGUI+, QuickShop y Jobs Reborn?">
+                    <span class="card-icon">⚖️</span>
+                    <div class="card-text">
+                      <strong>Auditoría de Economía 1.21.11</strong>
+                      <span>Analizar equilibrio de precios y prevención de inflación.</span>
+                    </div>
+                  </div>
+
+                  <div class="suggestion-card" data-prompt="Crea la configuración YAML de un menú interactivo DeluxeMenus para la tienda de Rangos VIP del servidor con paleta estandarizada.">
+                    <span class="card-icon">🧩</span>
+                    <div class="card-text">
+                      <strong>Generar Menú DeluxeMenus</strong>
+                      <span>Estructura YAML lista para desplegar en Sandbox.</span>
+                    </div>
+                  </div>
+
+                  <div class="suggestion-card" data-prompt="Explícame qué plugins custom tenemos desarrollados (RankUp, EnderChestPlus) y cómo están documentados en la wiki de Obsidian.">
+                    <span class="card-icon">🧠</span>
+                    <div class="card-text">
+                      <strong>Plugins Custom y Vault</strong>
+                      <span>Consultar conexiones atómicas en ThunderCerebro.</span>
+                    </div>
+                  </div>
+
+                  <div class="suggestion-card" data-prompt="Haz un diagnóstico de rendimiento del contexto: ¿qué archivos consumen más tokens y qué recomendaciones de optimización aplicamos?">
+                    <span class="card-icon">📊</span>
+                    <div class="card-text">
+                      <strong>Diagnóstico de Rendimiento</strong>
+                      <span>Revisar archivos pesados y mejores prácticas de tokens.</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Message Stream -->
+              <div class="messages-stream" id="messagesStream">
+                <!-- User and Assistant messages injected dynamically -->
+              </div>
+
+              <!-- Thinking / Typing Indicator with Minimalist Progress Bar & Time Estimate -->
+              <div class="chat-typing-indicator" id="chatTypingIndicator" style="display: none;">
+                <div class="avatar-badge beacon-avatar">⚡</div>
+                <div class="typing-bubble typing-bubble-expanded">
+                  <div class="typing-top-row">
+                    <div class="typing-status-left">
+                      <div class="typing-dots">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                      </div>
+                      <span class="typing-text" id="typingStatusText">Beacon está analizando y ejecutando...</span>
+                    </div>
+                    <div class="typing-estimate-pill" id="typingEstimatePill" title="Tiempo estimado dinámico calculado por BeaconLatencyEstimator">
+                      <span class="est-icon">⏱️</span>
+                      <span class="est-text" id="typingTimeText">~9.5s</span>
+                    </div>
+                  </div>
+                  <!-- Minimalist Progress Bar -->
+                  <div class="typing-progress-track">
+                    <div class="typing-progress-fill" id="typingProgressFill" style="width: 0%;"></div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Floating Chat Input Dock (ChatGPT Style) -->
+          <div class="chat-input-container">
+            <div class="chat-input-dock">
+              <textarea 
+                id="chatInputText" 
+                class="chat-textarea" 
+                placeholder="Envía un mensaje a Beacon... (Shift+Enter para nueva línea)" 
+                rows="1"
+              ></textarea>
+              <div class="dock-actions">
+                <button class="btn-send-message" id="btnSendMessage" title="Enviar mensaje (Enter)">
+                  <svg viewBox="0 0 24 24" width="18" height="18" fill="none">
+                    <path d="M12 19V5M12 5L5 12M12 5L19 12" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <div class="chat-options-bar">
+              <label class="safety-toggle-label" title="Solicita confirmación explícita antes de ejecutar órdenes que modifiquen archivos o ejecuten comandos con permisos elevados">
+                <input type="checkbox" id="checkRequireConfirm" checked>
+                <span class="toggle-text">🛡️ Confirmar cambios delicados antes de ejecutar</span>
+              </label>
+            </div>
+            <div class="chat-disclaimer">
+              Beacon puede cometer errores técnicos. Revise siempre configuraciones antes de aplicarlas en Survival (solo lectura).
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- View 1: Rendimiento & Tokens -->
+      <section class="view-content" id="view-performance">
+        <div class="panel-header">
+          <div class="panel-header-left">
+            <h2 class="panel-title">📊 Rendimiento, Tokens y Optimización</h2>
+            <p class="panel-desc">Monitor en tiempo real del uso de la ventana de contexto, balance de procesos y auditoría de archivos de alto consumo.</p>
+          </div>
+          <div class="panel-header-actions">
+            <button class="btn-panel-action" id="btnRefreshPerf">
+              <span>🔄</span>
+              <span>Actualizar Métricas</span>
+            </button>
+            <button class="btn-panel-action danger" id="btnPurgePerf">
+              <span>🧹</span>
+              <span>Purgar Historial</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- 4 KPI Cards -->
+        <div class="kpi-grid">
+          <div class="kpi-card">
+            <div class="kpi-icon">⚡</div>
+            <div class="kpi-body">
+              <span class="kpi-label">Tokens Totales (Sesión)</span>
+              <div class="kpi-value" id="kpiTotalTokens">1,500</div>
+              <div class="kpi-sub" id="kpiTokensSub">1,500 prompt / 0 salida</div>
+            </div>
+          </div>
+
+          <div class="kpi-card">
+            <div class="kpi-icon">🎯</div>
+            <div class="kpi-body">
+              <span class="kpi-label">Ventana de Contexto</span>
+              <div class="kpi-value" id="kpiUsagePct">0.14%</div>
+              <div class="kpi-sub" id="kpiContextSub">De 1,048,576 tokens (Flash)</div>
+            </div>
+          </div>
+
+          <div class="kpi-card">
+            <div class="kpi-icon">⚖️</div>
+            <div class="kpi-body">
+              <span class="kpi-label">Ratio Entrada / Salida</span>
+              <div class="kpi-value" id="kpiRatio">100% / 0%</div>
+              <div class="kpi-sub">Prompt base vs Respuestas</div>
+            </div>
+          </div>
+
+          <div class="kpi-card">
+            <div class="kpi-icon">🛡️</div>
+            <div class="kpi-body">
+              <span class="kpi-label">Salud del Contexto</span>
+              <div class="kpi-value status-optimal" id="kpiHealth">Óptimo</div>
+              <div class="kpi-sub">Zona segura (&lt;30% ocupado)</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Main Middle Grid -->
+        <div class="perf-middle-grid">
+          <!-- Process Breakdown -->
+          <div class="perf-card">
+            <div class="perf-card-header">
+              <h3><span>📊</span> Desglose de Consumo por Proceso</h3>
+              <span class="badge-mini">Estimación en Tiempo Real</span>
+            </div>
+            <p class="perf-card-desc">Distribución proporcional de tokens consumidos en el espacio de trabajo.</p>
+            
+            <div class="process-bars-list" id="processBarsList">
+              <div class="process-bar-item">
+                <div class="process-meta">
+                  <span class="process-name">Lectura de Volcados y Archivos Extensos (view_file)</span>
+                  <span class="process-pct" id="barPctFiles">42%</span>
+                </div>
+                <div class="bar-track">
+                  <div class="bar-fill fill-amber" id="barFillFiles" style="width: 42%"></div>
+                </div>
+              </div>
+
+              <div class="process-bar-item">
+                <div class="process-meta">
+                  <span class="process-name">Historial Acumulativo de Conversación</span>
+                  <span class="process-pct" id="barPctHist">25%</span>
+                </div>
+                <div class="bar-track">
+                  <div class="bar-fill fill-blue" id="barFillHist" style="width: 25%"></div>
+                </div>
+              </div>
+
+              <div class="process-bar-item">
+                <div class="process-meta">
+                  <span class="process-name">Salidas de Consola y Comandos (run_command)</span>
+                  <span class="process-pct" id="barPctShell">16%</span>
+                </div>
+                <div class="bar-track">
+                  <div class="bar-fill fill-purple" id="barFillShell" style="width: 16%"></div>
+                </div>
+              </div>
+
+              <div class="process-bar-item">
+                <div class="process-meta">
+                  <span class="process-name">Generación de Código y Respuestas del Modelo</span>
+                  <span class="process-pct" id="barPctOutput">11%</span>
+                </div>
+                <div class="bar-track">
+                  <div class="bar-fill fill-green" id="barFillOutput" style="width: 11%"></div>
+                </div>
+              </div>
+
+              <div class="process-bar-item">
+                <div class="process-meta">
+                  <span class="process-name">Reglas del Agente y System Prompt (AGENTS.md)</span>
+                  <span class="process-pct" id="barPctSys">6%</span>
+                </div>
+                <div class="bar-track">
+                  <div class="bar-fill fill-cyan" id="barFillSys" style="width: 6%"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Optimization & Red Teaming -->
+          <div class="perf-card">
+            <div class="perf-card-header">
+              <h3><span>🛡️</span> Recomendaciones de Red Teaming & Ahorro</h3>
+              <span class="badge-mini danger">Prevención de Bloqueos</span>
+            </div>
+            <p class="perf-card-desc">Protocolos técnicos para evitar saturación de memoria y alucinaciones por ventana llena.</p>
+
+            <div class="recommendations-list" id="recommendationsList">
+              <div class="rec-item">
+                <div class="rec-icon">⚠️</div>
+                <div class="rec-content">
+                  <strong>Peligro de Lectura Total en log.md y Bases de Datos</strong>
+                  <p>Archivos como log.md (~42k tokens) o server-database.yml (~96k tokens) saturan la ventana si se leen íntegros. Utilice lecturas por corte con StartLine y EndLine.</p>
+                </div>
+              </div>
+
+              <div class="rec-item">
+                <div class="rec-icon">🛑</div>
+                <div class="rec-content">
+                  <strong>Exclusión de Volcados Spark (.sparkprofile)</strong>
+                  <p>Existen perfiles binarios de hasta 44 MB (~11 Millones de tokens) en raw/. Bloquee explícitamente su lectura en prompts de IA.</p>
+                </div>
+              </div>
+
+              <div class="rec-item">
+                <div class="rec-icon">💡</div>
+                <div class="rec-content">
+                  <strong>Segmentación Atómica en Obsidian</strong>
+                  <p>Mantenga notas de conceptos por debajo de 150 líneas para permitir ingestas hiper-específicas sin saturar la atención del modelo.</p>
+                </div>
+              </div>
+
+              <div class="rec-item">
+                <div class="rec-icon">🧹</div>
+                <div class="rec-content">
+                  <strong>Purgar Contexto antes del 40% de Ocupación</strong>
+                  <p>Al superar el 40% de la ventana, la latencia se duplica y surge degradación de razonamiento. Limpie el chat tras resolver cada hito.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Heavy Files Table -->
+        <div class="section-box" style="margin-top: 24px;">
+          <div class="section-header">
+            <h3><span>📁</span> Auditoría de Archivos Más Pesados del Repositorio</h3>
+            <span class="step-badge">Escaneo en Vivo</span>
+          </div>
+          <p style="font-size: 13px; color: var(--text-muted); margin-bottom: 16px;">
+            Archivos con mayor cantidad de tokens potenciales en ThunderCerebro. Su lectura completa debe evitarse o restringirse a rangos específicos.
+          </p>
+
+          <div class="table-responsive">
+            <table class="data-table" id="heavyFilesTable">
+              <thead>
+                <tr>
+                  <th>Archivo</th>
+                  <th>Ruta Relativa</th>
+                  <th>Tamaño</th>
+                  <th>Tokens Estimados</th>
+                  <th>Nivel de Carga</th>
+                  <th>Directiva Operativa</th>
+                </tr>
+              </thead>
+              <tbody id="heavyFilesTableBody">
+                <tr>
+                  <td colspan="6" style="text-align: center; color: var(--text-dim); padding: 24px;">Cargando archivos del repositorio...</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- View 2: Centro de Mando / Launcher -->
+      <section class="view-content" id="view-launcher">
+        <div class="panel-header">
+          <h2 class="panel-title">⚡ Centro de Mando & Lanzador de Sesión</h2>
+          <p class="panel-desc">Configure el contexto de trabajo, seleccione el modelo de IA y lance directamente una sesión guiada en Antigravity.</p>
+        </div>
+
+        <div class="launcher-grid">
+          <div class="launcher-main">
+            <!-- Step 1: Topic Selection -->
+            <div class="section-box">
+              <div class="section-header">
+                <h3><span>🎯</span> 1. Tema de la Sesión</h3>
+                <span class="step-badge">Paso 1</span>
+              </div>
+              <div class="topic-cards-grid">
+                <div class="topic-card selected" data-topic="minecraft">
+                  <div class="topic-header">
+                    <span class="topic-icon">⛏️</span>
+                    <span class="topic-title">Minecraft Survival</span>
+                  </div>
+                  <p class="topic-desc">Economía 1.21.11, tiendas ShopGUI+, menús DeluxeMenus, mazmorras y optimización.</p>
+                  <span class="topic-skills-badge">Skills: deluxemenus, startupsurvival</span>
+                </div>
+
+                <div class="topic-card" data-topic="obsidian">
+                  <div class="topic-header">
+                    <span class="topic-icon">🧠</span>
+                    <span class="topic-title">Cerebro Digital</span>
+                  </div>
+                  <p class="topic-desc">Gestión del Vault de Obsidian, notas atómicas, conexiones del grafo e inbox.</p>
+                  <span class="topic-skills-badge">Skills: cerebro-digital, obsidian-syntax</span>
+                </div>
+
+                <div class="topic-card" data-topic="studio">
+                  <div class="topic-header">
+                    <span class="topic-icon">🎬</span>
+                    <span class="topic-title">ThunderStudios</span>
+                  </div>
+                  <p class="topic-desc">Narrativa y lore del THUNDERVERSE, arcos de personajes y diálogos cinematográficos.</p>
+                  <span class="topic-skills-badge">Subagentes: LoreKeeper, Narrative</span>
+                </div>
+
+                <div class="topic-card" data-topic="negocio">
+                  <div class="topic-header">
+                    <span class="topic-icon">💰</span>
+                    <span class="topic-title">Monetización & Tebex</span>
+                  </div>
+                  <p class="topic-desc">Estrategia de 4 pilares: Rangos VIP, Zafiros, Pase de Batalla y Bundles.</p>
+                  <span class="topic-skills-badge">Skills: lanzamiento-producto</span>
+                </div>
+
+                <div class="topic-card" data-topic="dev">
+                  <div class="topic-header">
+                    <span class="topic-icon">🛠️</span>
+                    <span class="topic-title">Desarrollo & Plugins</span>
+                  </div>
+                  <p class="topic-desc">Plugins custom (EnderChestPlus, RankUp), FAWE, APIs de Paper y automatizaciones.</p>
+                  <span class="topic-skills-badge">Skills: arquitectura-datos, scaffolding</span>
+                </div>
+
+                <div class="topic-card" data-topic="libre">
+                  <div class="topic-header">
+                    <span class="topic-icon">⚡</span>
+                    <span class="topic-title">Modo Libre</span>
+                  </div>
+                  <p class="topic-desc">Sesión general de trabajo abierta sin restricciones contextuales.</p>
+                  <span class="topic-skills-badge">Capacidades completas de Beacon</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Step 2: AI Engine Config -->
+            <div class="section-box">
+              <div class="section-header">
+                <h3><span>🤖</span> 2. Motor de Inteligencia Artificial</h3>
+                <span class="step-badge">Paso 2</span>
+              </div>
+              <div class="engine-options-grid">
+                <div class="form-group">
+                  <label for="selectModel">Modelo de Lenguaje</label>
+                  <select id="selectModel" class="custom-select">
+                    <option value="" selected>Gemini 3.8 Flash (Recomendado - Alta Velocidad)</option>
+                    <option value="gemini-2.5-pro">Gemini Pro (Razonamiento Complejo)</option>
+                    <option value="gemini-2.5-flash-lite">Gemini Flash-Lite (Económico / Rápido)</option>
+                  </select>
+                </div>
+
+                <div class="form-group">
+                  <label for="selectEffort">Esfuerzo de Razonamiento (Effort)</label>
+                  <select id="selectEffort" class="custom-select">
+                    <option value="high" selected>High (Profundo y Analítico)</option>
+                    <option value="max">Max (Máxima Verificación & Red Teaming)</option>
+                    <option value="medium">Medium (Balanceado)</option>
+                    <option value="low">Low (Inmediato)</option>
+                  </select>
+                </div>
+
+                <div class="form-group">
+                  <label for="selectMode">Modo de Ejecución</label>
+                  <select id="selectMode" class="custom-select">
+                    <option value="default" selected>Interactiva Estándar</option>
+                    <option value="plan">Modo Planificación (/plan)</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+
+            <!-- Step 3: Directive / Prompt -->
+            <div class="section-box">
+              <div class="section-header">
+                <h3><span>💬</span> 3. Directriz Inicial de la Sesión (Prompt)</h3>
+                <span class="step-badge">Paso 3</span>
+              </div>
+              
+              <div class="prompt-chips">
+                <span class="prompt-chip" data-chip="Auditar balance de precios en ShopGUIPlus y lonja MercadoThunder">📊 Auditar economía</span>
+                <span class="prompt-chip" data-chip="Crear nuevo menú en DeluxeMenus con diseño ergonómico">📦 Nuevo menú DeluxeMenus</span>
+                <span class="prompt-chip" data-chip="Sincronizar nuevas notas y conexiones en el Vault de Obsidian">🧠 Sincronizar Obsidian</span>
+                <span class="prompt-chip" data-chip="Configurar un nuevo jefe y habilidades en MythicMobs">🐉 Nuevo Boss MythicMobs</span>
+                <span class="prompt-chip" data-chip="Diagnóstico de rendimiento y tiempos de tick (MSPT/TPS)">⚡ Optimizar MSPT / Lag</span>
+              </div>
+
+              <textarea id="inputPrompt" class="prompt-textarea" placeholder="Escriba aquí la instrucción o directriz para Beacon al iniciar la terminal..."></textarea>
+            </div>
+          </div>
+
+          <!-- Launcher Summary Sidebar -->
+          <div class="launcher-sidebar">
+            <div class="launch-summary-card">
+              <div class="launch-summary-header">
+                <span>⚡</span>
+                <span>Configuración de Despliegue</span>
+              </div>
+
+              <div class="summary-item">
+                <span class="summary-label">Contexto</span>
+                <span class="summary-val" id="summaryTopic">Minecraft Survival</span>
+              </div>
+              <div class="summary-item">
+                <span class="summary-label">Modelo</span>
+                <span class="summary-val" id="summaryModel">Gemini 3.8 Flash</span>
+              </div>
+              <div class="summary-item">
+                <span class="summary-label">Razonamiento</span>
+                <span class="summary-val" id="summaryEffort">High</span>
+              </div>
+              <div class="summary-item">
+                <span class="summary-label">Terminal</span>
+                <span class="summary-val">Windows Terminal</span>
+              </div>
+
+              <div class="cmd-preview-box" id="cmdPreview">
+                agy --dangerously-skip-permissions --effort high -i "..."
+              </div>
+
+              <button class="btn-launch-hero" id="btnLaunchHero">
+                <span>🚀</span>
+                <span>Iniciar Antigravity</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- View 2: Interactive Obsidian Graph -->
+      <section class="view-content" id="view-graph">
+        <div class="panel-header">
+          <h2 class="panel-title">🕸️ Grafo Interactivo de ThunderCerebro</h2>
+          <p class="panel-desc">Visualizador de la red neuronal de conocimientos de Obsidian en tiempo real. 100% interconectado.</p>
+        </div>
+
+        <div class="graph-view-container">
+          <div class="graph-controls">
+            <button class="graph-btn" id="btnGraphReset">Centrar</button>
+            <button class="graph-btn" id="btnGraphZoomIn">+</button>
+            <button class="graph-btn" id="btnGraphZoomOut">-</button>
+            <input type="text" id="inputGraphSearch" class="custom-input" style="width: 180px; padding: 6px 10px;" placeholder="Buscar nota...">
+          </div>
+
+          <div class="graph-legend">
+            <div class="legend-item"><div class="legend-color" style="background: #18181b;"></div><span>Core Infra</span></div>
+            <div class="legend-item"><div class="legend-color" style="background: #27272a;"></div><span>Economía</span></div>
+            <div class="legend-item"><div class="legend-color" style="background: #3f3f46;"></div><span>Gameplay / RPG</span></div>
+            <div class="legend-item"><div class="legend-color" style="background: #52525b;"></div><span>Protección</span></div>
+            <div class="legend-item"><div class="legend-color" style="background: #71717a;"></div><span>Social / Chat</span></div>
+            <div class="legend-item"><div class="legend-color" style="background: #94a3b8;"></div><span>Conceptos</span></div>
+            <div class="legend-item"><div class="legend-color" style="background: #64748b;"></div><span>Síntesis</span></div>
+            <div class="legend-item"><div class="legend-color" style="background: var(--accent-yellow);"></div><span>Activo / Seleccionado</span></div>
+          </div>
+
+          <div class="graph-inspector" id="graphInspector">
+            <h4 id="inspectorNodeTitle" style="color: var(--text-main); margin-bottom: 6px;">Nombre</h4>
+            <p id="inspectorCategory" style="color: var(--text-dim); margin-bottom: 8px;">Categoría</p>
+            <p id="inspectorStats" style="color: var(--text-muted); margin-bottom: 10px;">Conexiones: --</p>
+            <p id="inspectorFile" style="font-family: var(--font-mono); font-size: 10px; color: var(--text-muted); word-break: break-all;">wiki/...</p>
+          </div>
+
+          <canvas id="graphCanvas"></canvas>
+        </div>
+      </section>
+
+      <!-- View 3: Skills Catalog -->
+      <section class="view-content" id="view-skills">
+        <div class="panel-header">
+          <h2 class="panel-title">🧩 Catálogo de Habilidades y Protocolos</h2>
+          <p class="panel-desc">Roles, herramientas y metodologías operativas disponibles para invocación directa.</p>
+        </div>
+        <div class="cards-catalog-grid" id="skillsGrid">
+          <!-- Loaded dynamically -->
+        </div>
+      </section>
+
+      <!-- View 4: Subagents -->
+      <section class="view-content" id="view-subagents">
+        <div class="panel-header">
+          <h2 class="panel-title">👥 Subagentes Especializados</h2>
+          <p class="panel-desc">Agentes autónomos para delegación de tareas concurrentes y desarrollo de ThunderStudios.</p>
+        </div>
+        <div class="cards-catalog-grid" id="subagentsGrid">
+          <!-- Loaded dynamically -->
+        </div>
+      </section>
+
+      <!-- View 5: Servers & Infrastructure -->
+      <section class="view-content" id="view-servers">
+        <div class="panel-header">
+          <h2 class="panel-title">🖥️ Infraestructura y Servidores Remotos</h2>
+          <p class="panel-desc">Topología de los entornos de Minecraft 1.21.11 y directivas de seguridad de acceso.</p>
+        </div>
+
+        <div class="servers-grid">
+          <!-- Sandbox Server -->
+          <div class="server-card sandbox">
+            <h3 class="server-title">🧪 Servidor Sandbox / Pruebas</h3>
+            <p class="server-sub">ID: ymykh9qy.274758bd | Minecraft 1.21.11 Paper</p>
+            <span class="policy-badge unrestricted">Permiso de Escritura Habilitado</span>
+            <p style="font-size: 13px; color: var(--text-muted); line-height: 1.5; margin-bottom: 16px;">
+              Entorno aislado para despliegue de prototipos de ExecutableItems, pruebas de configs en DeluxeMenus y stress tests de entidades sin riesgo operativo.
+            </p>
+            <div style="font-family: var(--font-mono); font-size: 11px; color: var(--text-muted);">
+              Directiva: Creación, subida y testeo autónomo autorizado.
+            </div>
+          </div>
+
+          <!-- Survival Server -->
+          <div class="server-card survival">
+            <h3 class="server-title">🛡️ Servidor Survival / Producción</h3>
+            <p class="server-sub">ID: ymykh9qy.575c7473 | Minecraft 1.21.11 Paper</p>
+            <span class="policy-badge readonly">SOLO LECTURA POR DEFECTO</span>
+            <p style="font-size: 13px; color: var(--text-muted); line-height: 1.5; margin-bottom: 16px;">
+              Servidor principal de jugadores. Contiene la base de datos de economía, parcelas y progreso de usuarios.
+            </p>
+            <div style="font-family: var(--font-mono); font-size: 11px; color: var(--status-danger);">
+              Directiva: Prohibido modificar archivos directamente sin confirmación explícita previa del Sr Ramos.
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- View 6: Chronological Logs -->
+      <section class="view-content" id="view-logs">
+        <div class="panel-header">
+          <h2 class="panel-title">📜 Registro Histórico y Auditoría (log.md)</h2>
+          <p class="panel-desc">Historial incremental de intervenciones técnicas, parches y balances en ThunderCerebro.</p>
+        </div>
+        <div class="timeline-container" id="logsTimeline">
+          <!-- Loaded dynamically -->
+        </div>
+      </section>
+
+      <!-- View 7: Terminal / Console Info -->
+      <section class="view-content" id="view-terminal">
+        <div class="panel-header">
+          <h2 class="panel-title">💻 Terminal Antigravity CLI</h2>
+          <p class="panel-desc">Estado de la interfaz de consola de Antigravity (agy) y atajos de comandos.</p>
+        </div>
+
+        <div class="section-box" style="margin-bottom: 20px;">
+          <h3 style="margin-bottom: 12px;">Comandos Útiles en Antigravity CLI</h3>
+          <table style="width: 100%; font-size: 13px; border-collapse: collapse;">
+            <tr style="border-bottom: 1px solid var(--border-color); text-align: left;">
+              <th style="padding: 8px 0; color: var(--text-main);">Comando</th>
+              <th style="padding: 8px 0; color: var(--text-muted);">Acción</th>
+            </tr>
+            <tr style="border-bottom: 1px solid var(--border-color);">
+              <td style="padding: 8px 0; font-family: var(--font-mono); color: var(--text-main); font-weight: 600;">/config</td>
+              <td style="padding: 8px 0; color: var(--text-muted);">Abre el menú interactivo de preferencias y temas de color.</td>
+            </tr>
+            <tr style="border-bottom: 1px solid var(--border-color);">
+              <td style="padding: 8px 0; font-family: var(--font-mono); color: var(--text-main); font-weight: 600;">/plan</td>
+              <td style="padding: 8px 0; color: var(--text-muted);">Activa el modo de diseño y revisión de pasos antes de ejecutar.</td>
+            </tr>
+            <tr style="border-bottom: 1px solid var(--border-color);">
+              <td style="padding: 8px 0; font-family: var(--font-mono); color: var(--text-main); font-weight: 600;">/help</td>
+              <td style="padding: 8px 0; color: var(--text-muted);">Muestra la lista de atajos, herramientas y comandos slash.</td>
+            </tr>
+            <tr style="border-bottom: 1px solid var(--border-color);">
+              <td style="padding: 8px 0; font-family: var(--font-mono); color: var(--text-main); font-weight: 600;">/exit</td>
+              <td style="padding: 8px 0; color: var(--text-muted);">Cierra la sesión activa de la terminal.</td>
+            </tr>
+          </table>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <!-- Modal de Confirmación para Acciones Delicadas -->
+  <div class="modal-overlay" id="confirmActionModal" style="display: none;">
+    <div class="modal-card">
+      <div class="modal-header">
+        <div class="modal-icon-badge">⚠️</div>
+        <div>
+          <h3 class="modal-title" id="confirmModalTitle">Confirmar Acción Delicada</h3>
+          <p class="modal-subtitle">Permisos autónomos activos (--dangerously-skip-permissions)</p>
+        </div>
+      </div>
+      <div class="modal-body" id="confirmModalBody">
+        Esta acción ejecutará cambios directos con permisos autónomos. ¿Desea confirmar la operación?
+      </div>
+      <div class="modal-preview-box" id="confirmModalPreview" style="display: none;"></div>
+      <div class="modal-actions">
+        <button type="button" class="btn-modal-cancel" id="btnConfirmCancel">Cancelar</button>
+        <button type="button" class="btn-modal-confirm" id="btnConfirmExecute">Confirmar y Proceder</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="latency-estimator.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

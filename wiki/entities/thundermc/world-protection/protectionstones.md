@@ -1,4 +1,4 @@
-# 💎 ProtectionStones (PS) - Documentación Técnica
+﻿# 💎 ProtectionStones (PS) - Documentación Técnica
 
 - **Categoría**: Protección de Terrenos / Claims Basados en Bloques
 - **Versión Core Soportada**: Minecraft 1.13.x - 1.21.x (Paper / Purpur)
@@ -33,6 +33,7 @@ flowchart TD
 
 ---
 
+- **Parte de**: [[wiki/entities/thundermc/ecosistema-plugins|Ecosistema Plugins]] | [[wiki/synthesis/thundermc-master-synthesis|SÃ­ntesis Maestra]]
 ## ⚙️ 2. Configuración Crítica (`blocks/block_diamond.toml`)
 
 ```toml
@@ -119,3 +120,10 @@ tax_period = 0 # 0 = sin impuestos periódicos
 > **Pérdida de Rendimiento por Visualización Masiva de Partículas (`/ps view`)**:
 > Spamear partículas de borde en regiones gigantes (100x100) puede causar lag de red en clientes modestos.
 > **Mitigación**: Limitar la densidad de partículas y tiempo de render en `config.toml` (`view_time: 15`).
+
+---
+
+## Referencias Cruzadas
+- [[wiki/entities/thundermc/world-protection/worldguard|WorldGuard]]
+- [[wiki/entities/thundermc/core-infrastructure/vault|Vault]]
+- [[wiki/entities/thundermc/ecosistema-plugins|Ecosistema Plugins]]

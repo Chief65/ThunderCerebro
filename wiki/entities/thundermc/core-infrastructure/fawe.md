@@ -1,4 +1,4 @@
-# 📖 FastAsyncWorldEdit (FAWE - 2.15.0+)
+﻿# 📖 FastAsyncWorldEdit (FAWE - 2.15.0+)
 
 - **Categoría**: Edición Masiva de Bloques, Administración & Generación Asíncrona
 - **Servidor**: ThunderMC Survival 1.21.11 (Paper build 126+)
@@ -15,6 +15,7 @@ Permite pegar esquemáticas masivas (`.schem`), rellenar millones de bloques (`/
 
 ---
 
+- **Parte de**: [[wiki/entities/thundermc/ecosistema-plugins|Ecosistema Plugins]] | [[wiki/synthesis/thundermc-master-synthesis|SÃ­ntesis Maestra]]
 ## 🏗️ 2. Arquitectura Interna & Pipeline Asíncrono
 
 ```mermaid
@@ -101,3 +102,10 @@ graph TD
 ### Mitigaciones Críticas:
 - **Restricción de Comandos de Cálculo Pesado**: Desactivar o restringir con LuckPerms comandos como `//calc`, `//eval`, `//solve` (pueden ejecutar expresiones matemáticas no seguras en JVM).
 - **Control de Permisos a Jugadores No-Staff**: Garantizar que ningún usuario normal posea permisos de WorldEdit en el mundo de supervivencia, ya que permitiría traspasar protecciones de cofres y reclamos.
+
+---
+
+## Referencias Cruzadas
+- [[wiki/entities/thundermc/world-protection/worldguard|WorldGuard]]
+- [[wiki/entities/thundermc/core-infrastructure/multiverse-core|Multiverse-Core]]
+- [[wiki/entities/thundermc/ecosistema-plugins|Ecosistema Plugins]]

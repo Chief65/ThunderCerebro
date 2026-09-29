@@ -11,6 +11,7 @@ Este catálogo documenta la estructura de enemigos y jefes de las Mazmorras extr
 
 ---
 
+- **Parte de**: [[wiki/entities/thundermc/ecosistema-plugins|Ecosistema Plugins]] | [[wiki/synthesis/thundermc-master-synthesis|SÃ­ntesis Maestra]]
 ### 🟡 Mazmorra II (Nivel 5 - 10)
 - **Temática**: Minas y Galerías Olvidadas
 - **Enemigos**: Minero Corrupto (`MineroCorrupto`), Explorador de Galerías (`ExploradorGalerias`), Capataz de la Mina (`CapatazMina`).
@@ -71,3 +72,12 @@ Este catálogo documenta la estructura de enemigos y jefes de las Mazmorras extr
 - **Temática**: Trono del Vacío y Sculk Primordial
 - **Enemigos**: Guardianes del Silencio, Espectros Primordiales.
 - **Jefe**: Jefe Warden / Rey Titán de las Sombras (`JefeWarden`).
+
+---
+
+## Referencias Cruzadas
+- [[wiki/entities/thundermc/gameplay-mechanics/mythicmobs|MythicMobs]]
+- [[wiki/concepts/dungeons-y-jefes|Dungeons y Jefes]]
+- [[wiki/comparisons/minas-vs-dungeons-balance|Balance Minas vs Dungeons]]
+- [[wiki/entities/thundermc/gameplay-mechanics/executableitems|ExecutableItems]]
+- [[wiki/entities/thundermc/ecosistema-plugins|Ecosistema Plugins]]

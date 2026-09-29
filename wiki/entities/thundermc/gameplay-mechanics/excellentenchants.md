@@ -1,4 +1,4 @@
-# 🌟 ExcellentEnchants - Documentación Técnica
+﻿# 🌟 ExcellentEnchants - Documentación Técnica
 
 - **Categoría**: Mecánicas RPG / Encantamientos Personalizados
 - **Versión Core Soportada**: Minecraft 1.20.x - 1.21.x (Paper / Purpur)
@@ -37,6 +37,7 @@ flowchart TD
 
 ---
 
+- **Parte de**: [[wiki/entities/thundermc/ecosistema-plugins|Ecosistema Plugins]] | [[wiki/synthesis/thundermc-master-synthesis|SÃ­ntesis Maestra]]
 ## ⚙️ 2. Configuración Crítica
 
 ### Ejemplo de Configuración de Encantamiento (`enchants/telepathy.yml`):
@@ -104,3 +105,11 @@ loot:
 > [!TIP]
 > **Optimización de Desencantado en Grindstones**:
 > Asegurar que la opción `clean-empty-lore` esté habilitada para evitar desincronizaciones visuales de Lore en clientes Bedrock (vía Floodgate).
+
+---
+
+## Referencias Cruzadas
+- [[wiki/entities/thundermc/gameplay-mechanics/executableitems|ExecutableItems]]
+- [[wiki/entities/thundermc/gameplay-mechanics/itemedit|ItemEdit]]
+- [[wiki/entities/thundermc/gameplay-mechanics/mythicmobs|MythicMobs]]
+- [[wiki/entities/thundermc/ecosistema-plugins|Ecosistema Plugins]]

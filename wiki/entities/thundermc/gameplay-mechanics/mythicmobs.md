@@ -1,4 +1,4 @@
-# 🐉 MythicMobs - Documentación Técnica
+﻿# 🐉 MythicMobs - Documentación Técnica
 
 - **Categoría**: Mecánicas RPG / Entidades, Jefes y Habilidades Personalizadas
 - **Versión Core Soportada**: Minecraft 1.20.x - 1.21.x (Paper / Purpur)
@@ -35,6 +35,7 @@ flowchart TD
 
 ---
 
+- **Parte de**: [[wiki/entities/thundermc/ecosistema-plugins|Ecosistema Plugins]] | [[wiki/synthesis/thundermc-master-synthesis|SÃ­ntesis Maestra]]
 ## ⚙️ 2. Configuración Crítica (`Mobs/Boss_Trueno.yml`)
 
 ```yaml
@@ -108,3 +109,12 @@ ReyDelTrueno:
 > **Lag por Partículas Masivas en Habilidades `~onTimer`**:
 > Habilidades periódicas con intervalos reducidos (`~onTimer:1`) que invocan cientos de partículas por tick saturan el ancho de banda del cliente y aumentan el tick time del servidor.
 > **Optimización**: Usar intervalos mayores a 10 ticks y condensar partículas mediante librerías de render eficientes.
+
+---
+
+## Referencias Cruzadas
+- [[wiki/entities/thundermc/mobs-mazmorras|Mobs de Mazmorras]]
+- [[wiki/concepts/dungeons-y-jefes|Dungeons y Jefes]]
+- [[wiki/entities/thundermc/gameplay-mechanics/executableitems|ExecutableItems]]
+- [[wiki/entities/thundermc/world-protection/worldguard|WorldGuard]]
+- [[wiki/entities/thundermc/ecosistema-plugins|Ecosistema Plugins]]

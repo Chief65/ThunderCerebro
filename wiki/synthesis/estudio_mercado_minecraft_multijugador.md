@@ -1,4 +1,4 @@
-# Síntesis Maestra: Estudio de Mercado de Minecraft y Ecosistema Multijugador
+﻿# Síntesis Maestra: Estudio de Mercado de Minecraft y Ecosistema Multijugador
 
 **Destinatario**: Sr Ramos  
 **Fecha de Publicación**: Septiembre 2026  
@@ -66,3 +66,11 @@
 * **Multiplicador de ARPU**: Entre 4x y 5x superior al mercado hispanohablante (ticket promedio de 12$ a 30$, conversión del 3.5% al 6.0%).
 * **Condición de entrada**: Cero ventajas Pay-to-Win para evitar denuncias al EULA de Mojang; enfoque 90% cosmético.
 * **Arquitectura recomendada**: Red unificada multilenguaje (i18n) sobre el proxy Velocity con servidores y lobbies adaptados al locale del jugador.
+
+---
+
+## Referencias Cruzadas
+- [[wiki/concepts/monetizacion-modelo-negocio|Modelo MonetizaciÃ³n]]
+- [[wiki/synthesis/thundermc-master-synthesis|SÃ­ntesis Maestra ThunderMC]]
+- [[wiki/entities/thundermc|ThunderMC]]
+- [[Plan de Monetizacion/plan-monetizacion-thundermc|Plan Maestro de MonetizaciÃ³n]]

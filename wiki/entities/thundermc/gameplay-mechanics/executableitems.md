@@ -1,4 +1,4 @@
-# ⚔️ ExecutableItems (EI) - Documentación Técnica
+﻿# ⚔️ ExecutableItems (EI) - Documentación Técnica
 
 - **Categoría**: Jugabilidad / RPG / Custom Items
 - **Versión Core Soportada**: Minecraft 1.21.x (Paper / Purpur)
@@ -37,6 +37,7 @@ flowchart TD
 
 ---
 
+- **Parte de**: [[wiki/entities/thundermc/ecosistema-plugins|Ecosistema Plugins]] | [[wiki/synthesis/thundermc-master-synthesis|SÃ­ntesis Maestra]]
 ## ⚙️ 2. Configuración Crítica y Sintaxis YAML
 
 Ejemplo de ítem avanzado configurado bajo estándares de producción para 1.21.x:
@@ -131,3 +132,12 @@ activators:
 > **Optimización**:
 > 1. Configurar intervalos de `delay` en loops no menores a 20 ticks (1 segundo).
 > 2. Evitar comprobaciones complejas de `WorldGuard` o raytracing dentro del listener de movimiento.
+
+---
+
+## Referencias Cruzadas
+- [[wiki/concepts/calidades-y-lore-items|Calidades y Lore de Ãtems]]
+- [[wiki/entities/thundermc/gameplay-mechanics/itemedit|ItemEdit]]
+- [[wiki/entities/thundermc/gameplay-mechanics/mythicmobs|MythicMobs]]
+- [[wiki/entities/thundermc/gameplay-mechanics/excellentenchants|ExcellentEnchants]]
+- [[wiki/entities/thundermc/ecosistema-plugins|Ecosistema Plugins]]

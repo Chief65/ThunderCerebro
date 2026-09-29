@@ -1,4 +1,4 @@
-# 📍 PlayerWarps - Documentación Técnica
+﻿# 📍 PlayerWarps - Documentación Técnica
 
 - **Categoría**: Teletransporte Social / Tiendas de Jugadores / Warps Públicos
 - **Versión Core Soportada**: Minecraft 1.16.x - 1.21.x (Paper / Purpur)
@@ -34,6 +34,7 @@ flowchart TD
 
 ---
 
+- **Parte de**: [[wiki/entities/thundermc/ecosistema-plugins|Ecosistema Plugins]] | [[wiki/synthesis/thundermc-master-synthesis|SÃ­ntesis Maestra]]
 ## ⚙️ 2. Configuración Crítica (`config.yml`)
 
 ```yaml
@@ -102,3 +103,10 @@ limits-by-permission:
 > 1. Mantener `safety-checks.prevent-unsafe-teleports: true`.
 > 2. Activar la invulnerabilidad temporal post-teletransporte (`teleport-invulnerability-seconds: 3`).
 > 3. Implementar un comando de reporte rápido (`/pw report <nombre>`).
+
+---
+
+## Referencias Cruzadas
+- [[wiki/entities/thundermc/core-infrastructure/vault|Vault]]
+- [[wiki/entities/thundermc/gameplay-mechanics/betterrtp|BetterRTP]]
+- [[wiki/entities/thundermc/ecosistema-plugins|Ecosistema Plugins]]

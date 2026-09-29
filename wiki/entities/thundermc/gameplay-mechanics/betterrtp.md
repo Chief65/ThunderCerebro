@@ -1,4 +1,4 @@
-# 🌀 BetterRTP - Documentación Técnica
+﻿# 🌀 BetterRTP - Documentación Técnica
 
 - **Categoría**: Teletransporte Aleatorio & Exploración de Mundos
 - **Versión Core Soportada**: Minecraft 1.8.x - 1.21.x (Paper / Purpur)
@@ -34,6 +34,7 @@ flowchart TD
 
 ---
 
+- **Parte de**: [[wiki/entities/thundermc/ecosistema-plugins|Ecosistema Plugins]] | [[wiki/synthesis/thundermc-master-synthesis|SÃ­ntesis Maestra]]
 ## ⚙️ 2. Configuración Crítica (`config.yml`)
 
 ```yaml
@@ -122,3 +123,10 @@ BlacklistedBlocks:
 > **Exploit de Asfixia en Nether / Techo de Nether**:
 > En mundos del Nether, búsquedas no calibradas pueden colocar al jugador sobre el techo de bedrock (Y > 127).
 > **Mitigación**: Definir `MaxY: 120` y `MinY: 30` en la configuración específica de `world_nether`.
+
+---
+
+## Referencias Cruzadas
+- [[wiki/entities/thundermc/world-protection/worldguard|WorldGuard]]
+- [[wiki/entities/thundermc/core-infrastructure/multiverse-core|Multiverse-Core]]
+- [[wiki/entities/thundermc/ecosistema-plugins|Ecosistema Plugins]]

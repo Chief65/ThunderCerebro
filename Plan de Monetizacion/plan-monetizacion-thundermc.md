@@ -331,7 +331,13 @@ STAR debe estar marcado como "Mas Popular" / "Recomendado"
 
 ---
 
-Documento creado: 2026-08-28
-Fuente: Estrategia_Monetizacion_Servidor_Minecraft.md + Ecosistema ThunderMC real
-Proxima revision: Al inicio de cada temporada del pase de batalla
+## Referencias Cruzadas
+- Índice General: [[index|Índice Maestro ThunderCerebro]]
+- Concepto Base: [[wiki/concepts/monetizacion-modelo-negocio|Modelo de Negocio & Monetización]]
+- Macro-Arquitectura: [[wiki/synthesis/thundermc-master-synthesis|Síntesis Maestra ThunderMC]]
+- Estudio Económico: [[wiki/synthesis/estudio_mercado_minecraft_multijugador|Estudio de Mercado Multijugador]]
+- Ecosistema Completo: [[wiki/entities/thundermc/ecosistema-plugins|Ecosistema de Plugins]]
+- Gestión de Rangos: [[wiki/entities/thundermc/core-infrastructure/luckperms|LuckPerms]]
+- Moneda Premium: [[wiki/entities/thundermc/economy-progression/playerpoints|PlayerPoints]]
+- Cajas de Recompensas: [[wiki/entities/thundermc/economy-progression/excellentcrates|ExcellentCrates]]
 

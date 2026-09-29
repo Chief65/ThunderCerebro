@@ -1,9 +1,10 @@
 # 📖 VaultUnlocked / Vault (1.7.3+ / 2.x)
 
 - **Categoría**: Core API / Abstraction Layer & Service Provider Interface (SPI)
-- **Servidor**: ThunderMC Survival 1.21.11 (Paper build 126+)
+- **Servidor**: [[wiki/entities/thundermc|ThunderMC Survival 1.21.11]]
+- **Parte de**: [[wiki/entities/thundermc/ecosistema-plugins|Ecosistema de Plugins ThunderMC]] | [[wiki/synthesis/thundermc-master-synthesis|Síntesis Maestra]]
 - **Dependencias**: Ninguna (Core Provider)
-- **Implementaciones Integradas**: EssentialsX (Economy/Chat), LuckPerms (Permission/Chat), ShopGUI+, QuickShop-Hikari, PlayerPoints (via Vault bridge), ZelTeams, ZelAuction
+- **Implementaciones Integradas**: [[wiki/entities/thundermc/core-infrastructure/luckperms|LuckPerms]], [[wiki/entities/thundermc/economy-progression/shopguiplus|ShopGUIPlus]], [[wiki/entities/thundermc/economy-progression/quickshop-hikari|QuickShop-Hikari]], [[wiki/entities/thundermc/economy-progression/playerpoints|PlayerPoints]], [[wiki/entities/thundermc/chat-social/zelteams|ZelTeams]], [[wiki/entities/thundermc/economy-progression/zelauction|ZelAuction]], [[wiki/entities/thundermc/chat-social/zelchat|ZelChat]]
 
 ---
 

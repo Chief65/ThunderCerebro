@@ -1,4 +1,4 @@
-# 📖 FancyNpcs (2.9.2.349+)
+﻿# 📖 FancyNpcs (2.9.2.349+)
 
 - **Categoría**: NPC Engine / Interactividad Basada en Paquetes
 - **Servidor**: ThunderMC Survival 1.21.11 (Paper build 126+)
@@ -15,6 +15,7 @@ Al no existir como entidades vivas persistentes registradas en el `WorldServer` 
 
 ---
 
+- **Parte de**: [[wiki/entities/thundermc/ecosistema-plugins|Ecosistema Plugins]] | [[wiki/synthesis/thundermc-master-synthesis|SÃ­ntesis Maestra]]
 ## 🏗️ 2. Arquitectura Interna & Funcionamiento
 
 ```mermaid
@@ -122,3 +123,10 @@ npcs:
 ### Mitigaciones Críticas:
 - **Validación de Parámetros**: Solo usar `%player%` para sustituir el nombre de usuario limpio (`player.getName()`).
 - **Spam Click Protection**: FancyNpcs incorpora un cooldown interno anti-spam de interacción (`interaction_cooldown: 0.5s`) para evitar que jugadores con macros saturen los menús GUI o sobrecarguen la consola con ejecuciones repetitivas.
+
+---
+
+## Referencias Cruzadas
+- [[wiki/entities/thundermc/core-infrastructure/fancyholograms|FancyHolograms]]
+- [[wiki/concepts/deluxemenus_standards|EstÃ¡ndares DeluxeMenus]]
+- [[wiki/entities/thundermc/ecosistema-plugins|Ecosistema Plugins]]

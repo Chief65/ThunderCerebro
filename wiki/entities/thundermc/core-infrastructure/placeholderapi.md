@@ -1,10 +1,11 @@
 # 📖 PlaceholderAPI (2.12.2+)
 
 - **Categoría**: Core Bridge / Universal String & Variable Interpolation Engine
-- **Servidor**: ThunderMC Survival 1.21.11 (Paper build 126+)
+- **Servidor**: [[wiki/entities/thundermc|ThunderMC Survival 1.21.11]]
+- **Parte de**: [[wiki/entities/thundermc/ecosistema-plugins|Ecosistema de Plugins ThunderMC]] | [[wiki/synthesis/thundermc-master-synthesis|Síntesis Maestra]]
 - **Desarrollador**: HelpChat (ExtendedClip / Glare)
 - **Dependencias**: Ninguna (Bridge Core Universal)
-- **Integraciones Clave**: TAB, DeluxeMenus, ConditionalEvents, FancyHolograms, ZelChat, ShopGUI+, BetterRTP, Topper
+- **Integraciones Clave**: [[wiki/entities/thundermc/core-infrastructure/tab|TAB]], [[wiki/concepts/deluxemenus_standards|DeluxeMenus]], [[wiki/entities/thundermc/core-infrastructure/fancyholograms|FancyHolograms]], [[wiki/entities/thundermc/chat-social/zelchat|ZelChat]], [[wiki/entities/thundermc/economy-progression/shopguiplus|ShopGUIPlus]], [[wiki/entities/thundermc/gameplay-mechanics/betterrtp|BetterRTP]]
 
 ---
 

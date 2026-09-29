@@ -23,6 +23,8 @@ Catálogo unificado y centralizado de la base de conocimiento de **ThunderCerebr
 - **[[wiki/concepts/calidades-y-lore-items|Calidades y Lore de Ítems]]**: Jerarquía de armamento desde rango Básico hasta Titán con lore personalizado.
 - **[[wiki/concepts/estandar-calidades-items|Estándar Oficial de Calidades]]**: Sistema canónico de calidades (SUPER, RARA, EPICA, MITICA, DIVINA, LIMITADA) con estrellas y gradientes.
 - **[[wiki/concepts/dungeons-y-jefes|Dungeons y Jefes]]**: Mecánicas de combate por fases para Araña Reina, Cérbero, Jinete Helado y Rey Forja.
+- **[[wiki/concepts/monetizacion-modelo-negocio|Modelo de Negocio & Monetización]]**: Estrategia de monetización en 4 pilares (VIPs, Zafiros, Pase de Batalla, Bundles).
+- **[[wiki/concepts/deluxemenus_standards|Estándares DeluxeMenus]]**: Reglas de diseño UX/UI, slots, paletas y ergonomía en inventarios de cofres.
 - **[[wiki/concepts/framework-cognitivo-operativo|Framework Cognitivo Operativo]]**: Primeros principios, active recall y sesiones con cierre riguroso.
 
 ## 🏢 Entidades, Herramientas & Sistemas
@@ -30,8 +32,12 @@ Catálogo unificado y centralizado de la base de conocimiento de **ThunderCerebr
 - **[[wiki/entities/thunderstudios|ThunderStudios]]**: Estudio de producción narrativa y creador del universo THUNDERVERSE.
 - **[[wiki/entities/thundermc|ThunderMC]]**: Servidor de Minecraft con progresión RPG y economía personalizada.
 - **[[wiki/entities/thundermc/ecosistema-plugins|Ecosistema Plugins ThunderMC]]**: Mapeo completo de los 74 plugins activos clasificados por subsistemas técnicos.
+- **[[wiki/entities/thundermc/infraestructura-hardware|Infraestructura Hardware]]**: Especificaciones del servidor dedicado, asignación de RAM y configuración de JVM flags.
+- **[[wiki/entities/thundermc/mobs-mazmorras|Mobs y Jefes de Mazmorras]]**: Catálogo técnico y habilidades de los jefes en MythicMobs.
+- **[[wiki/entities/thundermc/composicion-minas|Composición de Minas]]**: Distribución de minerales por rangos y porcentajes de regeneración.
 - **[[wiki/entities/thundermc/custom-plugins/plugins-custom|Plugins Custom ThunderMC]]**: Especificación técnica de EnderChestPlus, RankUp y ValyrTutorial.
 - **[[wiki/entities/catamines|Catamines]]**: Motor y plugin de minería progresiva por rangos y zona PvP.
+- **[[Plan de Monetizacion/plan-monetizacion-thundermc|Plan Maestro de Monetización]]**: Documento maestro operativo de comercialización y Tebex.
 
 ## 📚 Desgloses de Fuentes
 - **[[wiki/sources/shopguiplus-official-docs|Documentación Oficial ShopGUIPlus]]**: Especificación técnica de tiendas, ítems, metadatos, formatos y hooks de comandos.

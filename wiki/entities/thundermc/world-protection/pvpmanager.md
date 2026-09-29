@@ -1,4 +1,4 @@
-# ⚔️ PvPManager - Documentación Técnica
+﻿# ⚔️ PvPManager - Documentación Técnica
 
 - **Categoría**: Gestión de Combate / Anti-CombatLog / PvP Toggle & Protección de Novatos
 - **Versión Core Soportada**: Minecraft 1.8.x - 1.21.x (Paper / Purpur)
@@ -34,6 +34,7 @@ flowchart TD
 
 ---
 
+- **Parte de**: [[wiki/entities/thundermc/ecosistema-plugins|Ecosistema Plugins]] | [[wiki/synthesis/thundermc-master-synthesis|SÃ­ntesis Maestra]]
 ## ⚙️ 2. Configuración Crítica (`config.yml`)
 
 ```yaml
@@ -108,3 +109,11 @@ Newbie-Protection:
 > WorldGuard:
 >   Prevent-Entering-SafeZone-In-Combat: true
 > ```
+
+---
+
+## Referencias Cruzadas
+- [[wiki/entities/thundermc/world-protection/worldguard|WorldGuard]]
+- [[wiki/entities/thundermc/gameplay-mechanics/ultimatekoth|UltimateKoth]]
+- [[wiki/entities/thundermc/world-protection/litebans|LiteBans]]
+- [[wiki/entities/thundermc/ecosistema-plugins|Ecosistema Plugins]]

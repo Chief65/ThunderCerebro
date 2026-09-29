@@ -14,6 +14,7 @@ El estándar visual de títulos utiliza separadores sobrios en negro/gris oscuro
 
 ---
 
+- **Parte de**: [[wiki/entities/thundermc/ecosistema-plugins|Ecosistema Plugins]] | [[wiki/synthesis/thundermc-master-synthesis|SÃ­ntesis Maestra]]
 ## 💎 2. Paleta de Colores y Formato
 - **Títulos de Ítem / Encabezados**:
   - Acentos de Color Principal: `&#FEEB00` (Amarillo Thunder), `&#59E91F` (Verde Esmeralda/Dinero), `&#34B0F3` (Azul Zafiro/Almas), `&#FF0000` o `&#EB1717` (Rojo Alerta/Cancelar), `&#00FC00` (Verde Confirmar).
@@ -49,3 +50,10 @@ El estándar visual de títulos utiliza separadores sobrios en negro/gris oscuro
 - **Error / Cancelar**: `[sound] BLOCK_NOTE_BLOCK_BASS`
 - **Éxito / Compra**: `[sound] ENTITY_PLAYER_LEVELUP` o `[sound] BLOCK_NOTE_BLOCK_PLING`
 - **Transición de Menú**: `[openguimenu] <NombreMenu>`
+
+---
+
+## Referencias Cruzadas
+- [[wiki/concepts/deluxemenus_standards|EstÃ¡ndares DeluxeMenus]]
+- [[wiki/entities/thundermc/iconos-compatibles-ui|Iconos Compatibles UI]]
+- [[wiki/entities/thundermc/ecosistema-plugins|Ecosistema Plugins]]

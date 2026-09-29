@@ -1,4 +1,4 @@
-# Especificación y Arquitectura del Sistema: Mercado Thunder (Lonja Bursátil Diaria)
+﻿# Especificación y Arquitectura del Sistema: Mercado Thunder (Lonja Bursátil Diaria)
 
 **Módulo**: Economía y Especulación de Recursos — Servidor Minecraft 1.21.11  
 **Inspiración**: Modelo Bursátil de LaLiga Fantasy DAZN (Mercado de Ciclos con Flotación Regulada)  
@@ -99,3 +99,12 @@ Para evitar monocultivos y canalizar la liquidez del servidor:
 1. **Persistencia de Datos**: Almacenamiento en SQLite (`mercadothunder.db`) del historial de los últimos 7 días por ítem, los contadores de días sin salir (pity) y el volumen diario vendido.
 2. **Cron Diaria / Tarea Asíncrona**: Ejecución a las 00:00 para calcular $\Delta P$ (tope ±20%), actualizar historial de flechas, calcular probabilidades con pity y seleccionar los 5 cupos.
 3. **Temporizador Dinámico**: PlaceholderAPI `%mercadothunder_cierre%` inyectado en el lore de cada ítem.
+
+---
+
+## Referencias Cruzadas
+- [[wiki/concepts/economia-servidor-minecraft|EconomÃ­a Servidor Minecraft]]
+- [[wiki/entities/thundermc/economy-progression/shopguiplus|ShopGUIPlus]]
+- [[wiki/entities/thundermc/economy-progression/quickshop-hikari|QuickShop-Hikari]]
+- [[wiki/synthesis/thundermc-master-synthesis|SÃ­ntesis Maestra ThunderMC]]
+- [[wiki/synthesis/optimizacion-granjas-survival|OptimizaciÃ³n Granjas Survival]]

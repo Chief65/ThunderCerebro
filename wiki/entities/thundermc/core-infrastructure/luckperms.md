@@ -1,9 +1,10 @@
 # 📖 LuckPerms (5.5.42+)
 
 - **Categoría**: Permisos, Jerarquías de Rangos & Seguridad Centralizada
-- **Servidor**: ThunderMC Survival 1.21.11 (Paper build 126+)
+- **Servidor**: [[wiki/entities/thundermc|ThunderMC Survival 1.21.11]]
+- **Parte de**: [[wiki/entities/thundermc/ecosistema-plugins|Ecosistema de Plugins ThunderMC]] | [[wiki/synthesis/thundermc-master-synthesis|Síntesis Maestra]]
 - **Almacenamiento**: H2 Local / MySQL Remoto (HikariCP Connection Pool)
-- **Integraciones Clave**: Vault, PlaceholderAPI, TAB, ZelChat, EssentialsX, CoreProtect
+- **Integraciones Clave**: [[wiki/entities/thundermc/core-infrastructure/vault|Vault]], [[wiki/entities/thundermc/core-infrastructure/placeholderapi|PlaceholderAPI]], [[wiki/entities/thundermc/core-infrastructure/tab|TAB]], [[wiki/entities/thundermc/chat-social/zelchat|ZelChat]], [[wiki/entities/thundermc/world-protection/coreprotect|CoreProtect]]
 
 ---
 

@@ -1,4 +1,4 @@
-# 🛡️ WorldGuard - Documentación Técnica
+﻿# 🛡️ WorldGuard - Documentación Técnica
 
 - **Categoría**: Protección Espacial / Motor de Regiones y Flags
 - **Versión Core Soportada**: Minecraft 1.20.x - 1.21.x (Paper / Purpur)
@@ -34,6 +34,7 @@ flowchart TD
 
 ---
 
+- **Parte de**: [[wiki/entities/thundermc/ecosistema-plugins|Ecosistema Plugins]] | [[wiki/synthesis/thundermc-master-synthesis|SÃ­ntesis Maestra]]
 ## ⚙️ 2. Configuración Crítica (`worlds/world/regions.yml`)
 
 Ejemplo de configuración de región de Spawn:
@@ -106,3 +107,12 @@ regions:
 > [!TIP]
 > **Optimización del Spatial Index**:
 > Evitar crear miles de regiones individuales sin indexación espacial optimizada; delegar claims de jugadores a plugins como ProtectionStones que optimizan el ciclo de vida de las regiones.
+
+---
+
+## Referencias Cruzadas
+- [[wiki/entities/thundermc/world-protection/protectionstones|ProtectionStones]]
+- [[wiki/entities/thundermc/core-infrastructure/fawe|FAWE]]
+- [[wiki/entities/thundermc/world-protection/pvpmanager|PvPManager]]
+- [[wiki/entities/catamines|CataMines]]
+- [[wiki/entities/thundermc/ecosistema-plugins|Ecosistema Plugins]]

@@ -1,4 +1,4 @@
-# 📖 Plugins de Minijuegos y Recompensas de Retención
+﻿# 📖 Plugins de Minijuegos y Recompensas de Retención
 
 - **Categoría**: Retención AFK, Apuestas y Minijuegos Económicos
 - **Servidor**: ThunderMC Survival (Paper/Purpur 1.21.11)
@@ -39,6 +39,7 @@ rewards:
 
 ---
 
+- **Parte de**: [[wiki/entities/thundermc/ecosistema-plugins|Ecosistema Plugins]] | [[wiki/synthesis/thundermc-master-synthesis|SÃ­ntesis Maestra]]
 ## 2. 🪙 DeluxeCoinflip (Lanzamiento de Monedas PvP)
 
 ### 🎯 Propósito & Arquitectura
@@ -102,3 +103,10 @@ drinks:
    - Para evitar que los jugadores ejecuten scripts de movimiento fuera de la zona para saltarse el detector AFK vanilla, la zona se delimita rígidamente con WorldGuard y flags de entrada.
 3. **Inflación por Minijuegos de Apuestas**:
    - Las apuestas del servidor (GambleBarPro) deben tener un RTP (Return to Player) del 80%-90% (ventaja matemática para la casa) para actuar como filtros de absorción y destrucción de moneda circulante.
+
+---
+
+## Referencias Cruzadas
+- [[wiki/entities/thundermc/core-infrastructure/vault|Vault]]
+- [[wiki/entities/thundermc/economy-progression/playerpoints|PlayerPoints]]
+- [[wiki/entities/thundermc/ecosistema-plugins|Ecosistema Plugins]]

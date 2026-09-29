@@ -1,4 +1,4 @@
-# 🪑 GSit - Documentación Técnica
+﻿# 🪑 GSit - Documentación Técnica
 
 - **Categoría**: Animaciones de Jugador / Posturas / Calidad de Vida (QoL)
 - **Versión Core Soportada**: Minecraft 1.13.x - 1.21.x (Paper / Purpur)
@@ -34,6 +34,7 @@ flowchart TD
 
 ---
 
+- **Parte de**: [[wiki/entities/thundermc/ecosistema-plugins|Ecosistema Plugins]] | [[wiki/synthesis/thundermc-master-synthesis|SÃ­ntesis Maestra]]
 ## ⚙️ 2. Configuración Crítica (`config.yml`)
 
 ```yaml
@@ -94,3 +95,9 @@ Options:
 > **Mitigación**:
 > 1. Asegurar la integración activa con `WorldGuard` y `ProtectionStones`.
 > 2. Mantener `Sit-In-Combat: false` para evitar que los jugadores evadan flechas o combos de espada sentándose en el suelo.
+
+---
+
+## Referencias Cruzadas
+- [[wiki/entities/thundermc/core-infrastructure/luckperms|LuckPerms]]
+- [[wiki/entities/thundermc/ecosistema-plugins|Ecosistema Plugins]]

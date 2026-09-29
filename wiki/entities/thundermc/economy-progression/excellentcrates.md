@@ -1,4 +1,4 @@
-# 📖 ExcellentCrates
+﻿# 📖 ExcellentCrates
 
 - **Categoría**: Cajas de Recompensas (Crates) & Gacha
 - **Servidor**: ThunderMC Survival (Paper/Purpur 1.21.11)
@@ -12,6 +12,7 @@
 
 ---
 
+- **Parte de**: [[wiki/entities/thundermc/ecosistema-plugins|Ecosistema Plugins]] | [[wiki/synthesis/thundermc-master-synthesis|SÃ­ntesis Maestra]]
 ## 🏗️ Arquitectura & Funcionamiento Interno
 1. **Core Integration (NightCore Engine)**:
    - Basado en el framework modular `NightCore`, que centraliza el manejo de menús GUI, parsing de componentes de texto moderno (MiniMessage/Adventure) y llamadas asíncronas seguras.
@@ -109,3 +110,11 @@ rewards:
    - Si un jugador sufre un desync o desconexión durante la ruleta, el plugin procesa y entrega el premio directamente al inventario persistente o al buzón de recompensas sin perder la llave.
 4. **Comandos de Recompensa con Caracteres Peligrosos**:
    - Excelente sanitización de `%player%` en la ejecución de comandos de consola evitando inyecciones de comandos maliciosos.
+
+---
+
+## Referencias Cruzadas
+- [[wiki/entities/thundermc/economy-progression/playerpoints|PlayerPoints]]
+- [[wiki/concepts/monetizacion-modelo-negocio|Modelo MonetizaciÃ³n]]
+- [[wiki/entities/thundermc/gameplay-mechanics/executableitems|ExecutableItems]]
+- [[wiki/entities/thundermc/ecosistema-plugins|Ecosistema Plugins]]

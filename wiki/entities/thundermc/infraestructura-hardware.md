@@ -14,6 +14,7 @@ Documento maestro de especificaciones de hardware, asignación de recursos y top
 
 ---
 
+- **Parte de**: [[wiki/entities/thundermc/ecosistema-plugins|Ecosistema Plugins]] | [[wiki/synthesis/thundermc-master-synthesis|SÃ­ntesis Maestra]]
 ## 🌐 2. Topología y Distribución Actual de Splits (RAM / Disco)
 
 | Servidor / Split | ID Pterodactyl | Tipo | RAM Asignada | Almacenamiento NVMe | IP : Puerto | Función en la Network |
@@ -26,3 +27,11 @@ Documento maestro de especificaciones de hardware, asignación de recursos y top
 
 - **Total RAM Asignada**: 20,000 MB / 20,480 MB (Quedan 480 MB libres de margen de seguridad para evitar OOM a nivel de host).
 - **Total Almacenamiento**: 375,000 MB (375 GB NVMe).
+
+---
+
+## Referencias Cruzadas
+- [[wiki/synthesis/thundermc-master-synthesis|SÃ­ntesis Maestra ThunderMC]]
+- [[wiki/synthesis/optimizacion-granjas-survival|OptimizaciÃ³n Granjas Survival]]
+- [[wiki/entities/thundermc/core-infrastructure/plan|Plan]]
+- [[wiki/entities/thundermc/ecosistema-plugins|Ecosistema Plugins]]

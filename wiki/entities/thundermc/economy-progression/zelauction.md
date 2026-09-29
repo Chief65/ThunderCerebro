@@ -1,4 +1,4 @@
-# 📖 ZelAuction
+﻿# 📖 ZelAuction
 
 - **Categoría**: Casa de Subastas / Mercado Global P2P
 - **Servidor**: ThunderMC Survival (Paper/Purpur 1.21.11)
@@ -12,6 +12,7 @@
 
 ---
 
+- **Parte de**: [[wiki/entities/thundermc/ecosistema-plugins|Ecosistema Plugins]] | [[wiki/synthesis/thundermc-master-synthesis|SÃ­ntesis Maestra]]
 ## 🏗️ Arquitectura & Funcionamiento Interno
 1. **Asynchronous Auction Indexer**:
    - Mantiene un índice en memoria RAM de todos los ítems subastados activos para renderizar GUIs a 60+ FPS sin bloquear el hilo principal de Paper.
@@ -104,3 +105,11 @@ storage:
    - La tasa de publicación (`listing-tax-percent: 2.0`) disuade a los usuarios de usar `/ah` como almacenamiento infinito temporal.
 4. **Pérdida de Ítems por Inventario Lleno**:
    - Si el jugador compra un ítem o recoge un expirado con el inventario lleno, el plugin no lo arroja al suelo (donde un clearlag podría borrarlo); lo mantiene seguro en `/ah expired`.
+
+---
+
+## Referencias Cruzadas
+- [[wiki/entities/thundermc/core-infrastructure/vault|Vault]]
+- [[wiki/entities/thundermc/economy-progression/quickshop-hikari|QuickShop-Hikari]]
+- [[wiki/entities/thundermc/economy-progression/shopguiplus|ShopGUIPlus]]
+- [[wiki/entities/thundermc/ecosistema-plugins|Ecosistema Plugins]]

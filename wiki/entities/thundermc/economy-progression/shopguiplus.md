@@ -1,4 +1,4 @@
-# 📖 ShopGUIPlus & SellGUI
+﻿# 📖 ShopGUIPlus & SellGUI
 
 - **Categoría**: Tienda Administrativa Global & Menús GUI de Venta
 - **Servidor**: ThunderMC Survival (Paper/Purpur 1.21.11)
@@ -14,6 +14,7 @@
 
 ---
 
+- **Parte de**: [[wiki/entities/thundermc/ecosistema-plugins|Ecosistema Plugins]] | [[wiki/synthesis/thundermc-master-synthesis|SÃ­ntesis Maestra]]
 ## 🏗️ Arquitectura & Funcionamiento Interno
 1. **Estructura Modular por Secciones (`shops/*.yml`)**:
    - Cada categoría de la tienda se define en un archivo YAML individual (`blocks.yml`, `farming.yml`, `ores.yml`, `spawners.yml`). La clave raíz dentro del archivo debe coincidir exactamente con el nombre del archivo.
@@ -132,3 +133,13 @@ priceModifiers:
 ## ⚡ Optimización & Mejores Prácticas
 - **Separación de Archivos**: Mantener las categorías divididas en archivos YAML pequeños de no más de 100 ítems para reducir el tiempo de parseo en memoria durante `/shop reload`.
 - **Caché de Materiales**: ShopGUI+ cachea las estructuras de inventario pre-renderizadas; evitar activar debuggers innecesarios en producción para no saturar los logs de consola.
+
+---
+
+## Referencias Cruzadas
+- [[wiki/entities/thundermc/core-infrastructure/vault|Vault]]
+- [[wiki/concepts/mercadothunder|Mercado Thunder]]
+- [[wiki/entities/thundermc/economy-progression/quickshop-hikari|QuickShop-Hikari]]
+- [[wiki/entities/catamines|CataMines]]
+- [[wiki/concepts/economia-servidor-minecraft|EconomÃ­a Servidor Minecraft]]
+- [[wiki/entities/thundermc/ecosistema-plugins|Ecosistema Plugins]]

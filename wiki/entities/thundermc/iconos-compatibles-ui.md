@@ -14,6 +14,7 @@ Catálogo oficial de caracteres Unicode estándar y seguros para interfaces UI/U
 
 ---
 
+- **Parte de**: [[wiki/entities/thundermc/ecosistema-plugins|Ecosistema Plugins]] | [[wiki/synthesis/thundermc-master-synthesis|SÃ­ntesis Maestra]]
 ## ⚔️ 2. Combate, Estado y Seguridad
 - `⚔` (U+2694) — Combate / PvP / Armas
 - `🛡` (U+1F6E1) / `⚓` — Protección / Zonas seguras
@@ -32,3 +33,10 @@ Catálogo oficial de caracteres Unicode estándar y seguros para interfaces UI/U
 - `👑` — Rango VIP / Liderazgo / Corona
 - `💎` — Minerales / Economía / Diamante
 - `⚡` — Energía / Rayo / Habilidad
+
+---
+
+## Referencias Cruzadas
+- [[wiki/entities/thundermc/estilo-menus-ui|Estilo MenÃºs UI]]
+- [[wiki/concepts/deluxemenus_standards|EstÃ¡ndares DeluxeMenus]]
+- [[wiki/entities/thundermc/ecosistema-plugins|Ecosistema Plugins]]

@@ -1,4 +1,4 @@
-# 🛠️ ItemEdit - Documentación Técnica
+﻿# 🛠️ ItemEdit - Documentación Técnica
 
 - **Categoría**: Herramientas de Administración / Modificación de NBT & Meta
 - **Versión Core Soportada**: Minecraft 1.8.x - 1.21.x (Paper / Purpur)
@@ -31,6 +31,7 @@ flowchart LR
 
 ---
 
+- **Parte de**: [[wiki/entities/thundermc/ecosistema-plugins|Ecosistema Plugins]] | [[wiki/synthesis/thundermc-master-synthesis|SÃ­ntesis Maestra]]
 ## ⚙️ 2. Configuración Crítica (`config.yml`)
 
 ```yaml
@@ -101,3 +102,11 @@ ItemEdit soporta parseo de Placeholders en tiempo de ejecución al aplicar nombr
 > **Exploit de Falsificación de Nombres de Ranks o Cajas**:
 > Los jugadores con permisos de `/ie rename` pueden intentar falsificar ítems de llaves de cajas o vouchers de rango.
 > **Mitigación**: Los plugins receptores de llaves (CrazyCrates, ExcellentCrates) deben validar tags NBT/PDC personalizados y no confiar únicamente en el `DisplayName`.
+
+---
+
+## Referencias Cruzadas
+- [[wiki/concepts/calidades-y-lore-items|Calidades y Lore de Ãtems]]
+- [[wiki/concepts/estandar-calidades-items|EstÃ¡ndar Oficial de Calidades]]
+- [[wiki/entities/thundermc/gameplay-mechanics/executableitems|ExecutableItems]]
+- [[wiki/entities/thundermc/ecosistema-plugins|Ecosistema Plugins]]

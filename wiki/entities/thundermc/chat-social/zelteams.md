@@ -1,4 +1,4 @@
-# 🛡️ ZelTeams - Documentación Técnica
+﻿# 🛡️ ZelTeams - Documentación Técnica
 
 - **Categoría**: Clanes / Equipos / Alianzas & PvP Social
 - **Versión Core Soportada**: Minecraft 1.16.x - 1.21.x (Paper / Purpur)
@@ -32,6 +32,7 @@ flowchart TD
 
 ---
 
+- **Parte de**: [[wiki/entities/thundermc/ecosistema-plugins|Ecosistema Plugins]] | [[wiki/synthesis/thundermc-master-synthesis|SÃ­ntesis Maestra]]
 ## ⚙️ 2. Configuración Crítica (`config.yml`)
 
 ```yaml
@@ -105,3 +106,12 @@ database:
 > **Exploit de Evasión de Combate con `/team home`**:
 > Jugadores intentando huir de zonas de combate o eventos KOTH mediante el teletransporte a la base de clan.
 > **Mitigación**: Configurar un retardo de teletransporte (Warmup de 5 segundos) y vincularlo con `PvPManager` para cancelar `/team home` si el jugador está en combate (`in-combat: cancel`).
+
+---
+
+## Referencias Cruzadas
+- [[wiki/entities/thundermc/chat-social/zelchat|ZelChat]]
+- [[wiki/entities/thundermc/core-infrastructure/vault|Vault]]
+- [[wiki/entities/thundermc/chat-social/alonsotags|AlonsoTags]]
+- [[wiki/entities/thundermc/world-protection/pvpmanager|PvPManager]]
+- [[wiki/entities/thundermc/ecosistema-plugins|Ecosistema Plugins]]
