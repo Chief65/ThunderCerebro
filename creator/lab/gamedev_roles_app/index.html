@@ -1,0 +1,1128 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Estructura y Roles de Estudio de Videojuegos — ThunderStudios</title>
+  <style>
+    :root {
+      --bg: #f8fafc;
+      --sidebar-bg: #ffffff;
+      --card-bg: #ffffff;
+      --border: #e2e8f0;
+      --border-active: #2563eb;
+      --text-main: #0f172a;
+      --text-muted: #64748b;
+      --accent: #2563eb;
+      --accent-light: #eff6ff;
+      --star-gold: #f59e0b;
+      --star-empty: #cbd5e1;
+    }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background-color: var(--bg);
+      color: var(--text-main);
+      display: flex;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    /* Left Sidebar */
+    .sidebar {
+      width: 300px;
+      min-width: 300px;
+      background: var(--sidebar-bg);
+      border-right: 1px solid var(--border);
+      display: flex;
+      flex-direction: column;
+      overflow-y: auto;
+    }
+    .sidebar-header {
+      padding: 24px 20px;
+      border-bottom: 1px solid var(--border);
+    }
+    .brand-tag {
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--accent);
+      margin-bottom: 4px;
+    }
+    .sidebar-title {
+      font-size: 18px;
+      font-weight: 800;
+      color: var(--text-main);
+    }
+    .sidebar-sub {
+      font-size: 12px;
+      color: var(--text-muted);
+      margin-top: 2px;
+    }
+
+    .nav-list {
+      list-style: none;
+      padding: 12px;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+    .nav-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px 14px;
+      border-radius: 8px;
+      cursor: pointer;
+      color: #334155;
+      font-size: 13.5px;
+      font-weight: 500;
+      transition: all 0.15s ease;
+      border: 1px solid transparent;
+    }
+    .nav-item:hover {
+      background: #f1f5f9;
+      color: var(--text-main);
+    }
+    .nav-item.active {
+      background: var(--accent-light);
+      color: var(--accent);
+      font-weight: 700;
+      border-color: #bfdbfe;
+    }
+    .nav-badge {
+      font-size: 11px;
+      font-weight: 700;
+      background: #e2e8f0;
+      color: #475569;
+      padding: 2px 7px;
+      border-radius: 12px;
+    }
+    .nav-item.active .nav-badge {
+      background: var(--accent);
+      color: #ffffff;
+    }
+
+    /* Main Content Area */
+    .main-content {
+      flex: 1;
+      overflow-y: auto;
+      padding: 36px 40px;
+    }
+    .content-container {
+      max-width: 920px;
+      margin: 0 auto;
+    }
+    .section-header {
+      margin-bottom: 28px;
+    }
+    .section-title {
+      font-size: 26px;
+      font-weight: 800;
+      color: var(--text-main);
+      margin-bottom: 6px;
+    }
+    .section-desc {
+      font-size: 14.5px;
+      color: var(--text-muted);
+      line-height: 1.5;
+    }
+
+    /* Cards */
+    .cards-container {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .role-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 24px;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+      transition: box-shadow 0.2s, transform 0.2s;
+    }
+    .role-card:hover {
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.06);
+      transform: translateY(-2px);
+    }
+    .card-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 12px;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .role-info-head {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .role-dept-tag {
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: var(--accent);
+      margin-bottom: 2px;
+    }
+    .role-name {
+      font-size: 19px;
+      font-weight: 700;
+      color: var(--text-main);
+    }
+    .stars-box {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background: #fffbeb;
+      border: 1px solid #fef3c7;
+      padding: 6px 12px;
+      border-radius: 20px;
+    }
+    .stars {
+      color: var(--star-gold);
+      font-size: 17px;
+      letter-spacing: 2px;
+      line-height: 1;
+    }
+    .stars .empty {
+      color: var(--star-empty);
+    }
+    .stars-label {
+      font-size: 12px;
+      font-weight: 700;
+      color: #b45309;
+    }
+    .role-desc {
+      color: #334155;
+      font-size: 14.5px;
+      line-height: 1.6;
+      margin-bottom: 16px;
+    }
+    .info-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 16px;
+      background: #f8fafc;
+      padding: 16px;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+    }
+    .info-label {
+      font-size: 11.5px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 6px;
+    }
+    .why-title {
+      color: #1e40af;
+    }
+    .risk-title {
+      color: #b91c1c;
+    }
+    .info-content {
+      font-size: 13.5px;
+      color: #475569;
+      line-height: 1.5;
+    }
+
+    /* ---- Prompt de Liderazgo ---- */
+    .prompt-details {
+      margin-top: 16px;
+      border: 1px solid #c7d2fe;
+      border-radius: 8px;
+      background: #eef2ff;
+      overflow: hidden;
+    }
+    .prompt-details summary {
+      padding: 12px 16px;
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: #3730a3;
+      cursor: pointer;
+      user-select: none;
+      list-style: none;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .prompt-details summary::-webkit-details-marker { display: none; }
+    .prompt-details summary::before {
+      content: "▶";
+      font-size: 9px;
+      transition: transform 0.2s;
+      color: #6366f1;
+    }
+    .prompt-details[open] summary::before {
+      transform: rotate(90deg);
+    }
+    .prompt-details pre {
+      margin: 0;
+      padding: 16px;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      font-size: 13px;
+      line-height: 1.65;
+      color: #1e1b4b;
+      white-space: pre-wrap;
+      word-break: break-word;
+      border-top: 1px solid #c7d2fe;
+      background: #f5f3ff;
+      overflow-x: hidden;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Left Navbar -->
+  <aside class="sidebar">
+    <div class="sidebar-header">
+      <div class="brand-tag">ThunderStudios Org Chart</div>
+      <div class="sidebar-title">Departamentos</div>
+      <div class="sidebar-sub">Estructura Integral de Estudio</div>
+    </div>
+    <ul class="nav-list" id="navList">
+      <li class="nav-item active" onclick="selectDept('ALL', this)">
+        <span>Todos los Departamentos</span>
+        <span class="nav-badge" id="badge-all">21</span>
+      </li>
+      <li class="nav-item" onclick="selectDept('EXECUTIVE', this)">
+        <span>Dirección Ejecutiva (C-Suite)</span>
+        <span class="nav-badge">3</span>
+      </li>
+      <li class="nav-item" onclick="selectDept('MARKETING', this)">
+        <span>Marketing & Publishing</span>
+        <span class="nav-badge">3</span>
+      </li>
+      <li class="nav-item" onclick="selectDept('PROGRAMACION', this)">
+        <span>Programación e Ingeniería</span>
+        <span class="nav-badge">4</span>
+      </li>
+      <li class="nav-item" onclick="selectDept('DISENO', this)">
+        <span>Diseño de Juego & Sistemas</span>
+        <span class="nav-badge">3</span>
+      </li>
+      <li class="nav-item" onclick="selectDept('ARTE', this)">
+        <span>Arte & Dirección Visual</span>
+        <span class="nav-badge">4</span>
+      </li>
+      <li class="nav-item" onclick="selectDept('AUDIO', this)">
+        <span>Audio e Inmersión</span>
+        <span class="nav-badge">2</span>
+      </li>
+      <li class="nav-item" onclick="selectDept('PRODUCCION', this)">
+        <span>Producción & QA</span>
+        <span class="nav-badge">2</span>
+      </li>
+    </ul>
+  </aside>
+
+  <!-- Main Content Area -->
+  <main class="main-content">
+    <div class="content-container">
+      <div class="section-header">
+        <h1 class="section-title" id="sectionTitle">Todos los Departamentos y Roles</h1>
+        <p class="section-desc" id="sectionDesc">
+          Catálogo completo de roles estratégicos, de negocio, marketing y técnicos necesarios para la concepción, desarrollo, financiamiento y lanzamiento exitoso de un videojuego.
+        </p>
+      </div>
+
+      <div class="cards-container" id="cardsContainer">
+        <!-- Rendered by JS -->
+      </div>
+    </div>
+  </main>
+
+  <script>
+    const DEPARTMENTS_DATA = {
+      'ALL': {
+        title: 'Todos los Departamentos y Roles',
+        desc: 'Catálogo integral de roles ejecutivos, comerciales y técnicos del estudio clasificados por nivel de importancia y criticidad operativa.'
+      },
+      'EXECUTIVE': {
+        title: 'Dirección Ejecutiva y Negocio (C-Suite)',
+        desc: 'Responsables de la supervivencia corporativa, consecución de capital, viabilidad legal, flujo de caja y visión estratégica del estudio.',
+        prompt: `Actúa como un CEO y CFO de estudio indie con 10 años de experiencia liderando equipos creativos y gestionando financiación. Prioriza cultura sostenible, gestión de flujo de caja y decisiones estratégicas basadas en métricas. Referencias: "Leading Indie Studios" (GDC 2023) y "Financial Management for Indie Games" (Vertex AI Search 2026).`
+      },
+      'MARKETING': {
+        title: 'Marketing, Publicación y Comunidad',
+        desc: 'Departamento crítico para garantizar que el juego no salga en la oscuridad. Responsable de Wishlists, streamers, prensa, eventos y comunidad.',
+        prompt: `Eres el CMO de un estudio indie, con enfoque en creación de comunidad, estrategia de lanzamiento y relaciones con influencers. Aplica tácticas de marketing orgánico y gestión de campañas de wishlists. Referencias: "Indie Marketing Best Practices" (helpshift.com, 2026) y "Community Building for Indie Games" (Vertex AI Search 2026).`
+      },
+      'PROGRAMACION': {
+        title: 'Programación e Ingeniería de Software',
+        desc: 'Convierte el diseño en software jugable, estable y escalable. Construye físicas, mecánicas, arquitectura de datos y motores de red.',
+        prompt: `Actúa como Lead Gameplay Programmer en un estudio indie con foco en arquitectura de sistemas y "game feel". Prioriza código modular, optimizaciones de rendimiento y mentorización del equipo. Referencias: "Lead Gameplay Programmer" (Vertex AI Search 2023) y "Indie Game Programming Best Practices" (GDC 2022).`
+      },
+      'DISENO': {
+        title: 'Diseño de Juego y Sistemas (Game Design)',
+        desc: 'El cerebro lúdico y matemático. Define el Core Loop, balance de economía, curvas de progresión y ritmo de los escenarios.',
+        prompt: `Actúa como Lead Game Designer en un estudio indie, definiendo mecánicas, bucles y documentación GDD. Prioriza iteración rápida y balance de juego. Referencias: "Lead Game Designer" (4jstudios.com, 2026) y "Game Design Best Practices" (screenskills.com, 2026).`
+      },
+      'ARTE': {
+        title: 'Arte, Animación y Pipeline Técnico',
+        desc: 'Construye la identidad estética y garantiza que funcione a 60 FPS estables en el hardware del usuario final mediante shaders y optimización.',
+        prompt: `Actúa como Technical Artist líder en un estudio indie, desarrollando shaders, pipelines y optimizando arte para rendimiento. Prioriza herramientas que agilicen a los artistas y mantengan 60 FPS. Referencias: "Technical Artist Guide" (vsquad.art, 2023) y "Optimizing Art for Indie Games" (mages.edu.sg, 2022).`
+      },
+      'AUDIO': {
+        title: 'Audio, Música e Inmersión Sonora',
+        desc: 'Aporta más del 50% de la sensación de impacto físico (Game Feel), diseño de foley y música adaptativa reactiva al gameplay.',
+        prompt: `Actúa como Lead Sound Designer en un estudio indie, definiendo la identidad sonora, gestionando assets y sistemas de audio adaptativo. Prioriza integración con middleware y calidad en todas las plataformas. Referencias: "Audio Lead Guide" (workplays.it, 2026) y "Designing Game Audio" (designingsound.org, 2023).`
+      },
+      'PRODUCCION': {
+        title: 'Producción, Gestión y Control de Calidad',
+        desc: 'Evita la bancarrota temporal aplicando control estricto del alcance (anti-feature creep), mitigando bugs críticos y asegurando el lanzamiento.',
+        prompt: `Actúa como Lead Producer (Technical Producer) en un estudio indie, definiendo cronogramas, gestionando recursos, controlando alcance y mitigando riesgos para asegurar calidad y entrega puntual. Prioriza comunicación entre departamentos y adaptación a cambios de scope. Referencias: "Lead Producer Guide" (vfs.edu, 2023) y "Indie Production Best Practices" (tonogameconsultants.com, 2022).`
+      }
+    };
+
+    const ROLES = [
+      // --- DIRECCIÓN EJECUTIVA (C-SUITE) ---
+      {
+        dept: "EXECUTIVE",
+        deptLabel: "Dirección Ejecutiva",
+        name: "CEO (Chief Executive Officer / Director de Estudio)",
+        stars: "★★★★★",
+        starsLabel: "Crítico Innegociable",
+        desc: "Líder estratégico del estudio. Responsable del levantamiento de capital, la cultura del equipo, la contratación de líderes departamentales y la decisión final de luz verde en proyectos.",
+        why: "Sin un CEO que consiga financiación y cierre acuerdos con plataformas, el estudio muere por inanición económica antes del primer año de desarrollo.",
+        risk: "Falta de rumbo corporativo, contratos abusivos con publishers predatorios y cierre del estudio por quiebra súbita."
+      },
+      {
+        dept: "EXECUTIVE",
+        deptLabel: "Dirección Ejecutiva",
+        name: "CFO (Chief Financial Officer / Director de Finanzas)",
+        stars: "★★★★☆",
+        starsLabel: "Esencial de Negocio",
+        desc: "Guardián de la caja y del runway. Modela presupuestos, flujo de caja, fiscalidad, tax reliefs e incentivos fiscales, y pricing del videojuego por región en Steam.",
+        why: "Un juego indie tarda 2–4 años en desarrollarse. El CFO asegura que el dinero llegue hasta el lanzamiento y previene desfases presupuestarios.",
+        risk: "El equipo se queda sin dinero a 3 meses de terminar el juego, forzando la cancelación o publicarlo roto."
+      },
+      {
+        dept: "EXECUTIVE",
+        deptLabel: "Dirección Ejecutiva",
+        name: "Legal & Business Affairs Counsel",
+        stars: "★★★★☆",
+        starsLabel: "Esencial de Negocio",
+        desc: "Gestiona la propiedad intelectual, contratos de cesión de derechos y revisión de acuerdos de distribución con Valve, Sony, Microsoft y Nintendo.",
+        why: "Protege la propiedad del juego. Un freelance sin contrato correcto puede reclamar derechos y forzar la retirada del juego de las tiendas.",
+        risk: "Demandas por infracción de marcas, pérdida de la IP o contratos abusivos que retienen el 100% de los beneficios."
+      },
+
+      // --- MARKETING & PUBLISHING ---
+      {
+        dept: "MARKETING",
+        deptLabel: "Marketing & Publishing",
+        name: "CMO / Head of Publishing (Director de Marketing)",
+        stars: "★★★★★",
+        starsLabel: "Crítico Innegociable",
+        desc: "Diseña la estrategia comercial desde el día 1. Define el hook único, el trailer, la página de Steam y la campaña de Wishlists — el principal predictor de ventas en PC.",
+        why: "El 90% de los juegos indie de calidad fracasan por salir en silencio. El marketing se hace durante el desarrollo, no al final.",
+        risk: "Lanzar un juego extraordinario con 200 Wishlists que solo vende 50 copias la primera semana, hundiendo el ROI del estudio."
+      },
+      {
+        dept: "MARKETING",
+        deptLabel: "Marketing & Publishing",
+        name: "Community & Social Media Manager",
+        stars: "★★★★☆",
+        starsLabel: "Esencial Comercial",
+        desc: "Construye y fideliza la comunidad: gestiona Discord, Reddit, TikTok y X, y coordina playtests públicos y betas cerradas.",
+        why: "Una comunidad activa genera tracción viral orgánica, boca a boca y reseñas masivas positivas en el día del lanzamiento.",
+        risk: "Lanzamiento frío sin base de jugadores; falta de feedback anticipado para corregir mecánicas impopulares."
+      },
+      {
+        dept: "MARKETING",
+        deptLabel: "Marketing & Publishing",
+        name: "PR & Influencer Relations Manager",
+        stars: "★★★★☆",
+        starsLabel: "Esencial Comercial",
+        desc: "Gestiona la relación con streamers, YouTubers y prensa. Distribuye keys, coordina embargos de reviews y presencia en Steam Next Fest, Gamescom y PAX.",
+        why: "Un streamer relevante jugando el juego en Twitch durante el lanzamiento puede multiplicar por diez las ventas inmediatas.",
+        risk: "Ignorancia mediática total. Los streamers no conocen el juego porque no recibieron el código con antelación."
+      },
+
+      // --- PROGRAMACIÓN E INGENIERÍA ---
+      {
+        dept: "PROGRAMACION",
+        deptLabel: "Programación e Ingeniería",
+        name: "Lead Gameplay Programmer",
+        stars: "★★★★★",
+        starsLabel: "Crítico Innegociable",
+        desc: "Construye la jugabilidad momento a momento: Character Controller, colisiones, mecánicas de armas y respuesta a los mandos.",
+        why: "Sin este rol no hay videojuego. Es el ejecutor directo de la respuesta interactiva en pantalla.",
+        risk: "Controles torpes, flotantes o con input lag. El jugador pide reembolso antes de los primeros 15 minutos."
+      },
+      {
+        dept: "PROGRAMACION",
+        deptLabel: "Programación e Ingeniería",
+        name: "Systems & Architecture Programmer",
+        stars: "★★★★☆",
+        starsLabel: "Esencial de Producción",
+        desc: "Construye los cimientos del software: save system, inventarios, arquitectura de UI desacoplada y gestión de memoria.",
+        why: "Permite que el proyecto escale sin convertirse en código espagueti donde un cambio rompe todo.",
+        risk: "Partidas corrompidas, fugas de memoria y cuelgues espontáneos a los 45 minutos de juego."
+      },
+      {
+        dept: "PROGRAMACION",
+        deptLabel: "Programación e Ingeniería",
+        name: "Tools & Build Automation Programmer",
+        stars: "★★★★☆",
+        starsLabel: "Esencial de Producción",
+        desc: "Desarrolla herramientas internas para diseñadores e implementa pipelines de compilación automatizada CI/CD.",
+        why: "Ahorra miles de horas permitiendo a artistas y diseñadores iterar sin depender de los gameplay programmers.",
+        risk: "Cuellos de botella: los programadores dedican días a compilar builds manuales en lugar de programar el juego."
+      },
+      {
+        dept: "PROGRAMACION",
+        deptLabel: "Programación e Ingeniería",
+        name: "Backend & Netcode Programmer (Si hay Online)",
+        stars: "★★★★★",
+        starsLabel: "Crítico (En Multiplayer)",
+        desc: "Arquitectura cliente-servidor, sincronización de red, compensación de lag, predicción del cliente, autenticación y anti-cheat.",
+        why: "Si hay multijugador, el netcode dicta el 100% de la experiencia. Un buen juego con lag es injugable.",
+        risk: "Partidas desincronizadas, latencia inasumible y servidores colapsados en el día de lanzamiento."
+      },
+
+      // --- DISEÑO DE JUEGO ---
+      {
+        dept: "DISENO",
+        deptLabel: "Diseño de Juego",
+        name: "Lead Game Designer",
+        stars: "★★★★★",
+        starsLabel: "Crítico Innegociable",
+        desc: "Guardián de la visión lúdica global. Define las reglas, la fantasía del jugador y la coherencia del Core Loop.",
+        why: "Asegura que el juego sea divertido y adictivo. Evita que sea una colección de mecánicas inconexas sin alma.",
+        risk: "Juegos con buena tecnología pero aburridos, donde el jugador no sabe qué hacer tras el tutorial."
+      },
+      {
+        dept: "DISENO",
+        deptLabel: "Diseño de Juego",
+        name: "Systems & Economy Designer",
+        stars: "★★★★★",
+        starsLabel: "Crítico Innegociable",
+        desc: "Arquitecto matemático: curvas de progresión, economías de recursos, drop tables y fórmulas de daño.",
+        why: "Garantiza la tensión y el equilibrio matemático. Si la economía falla, la experiencia de juego colapsa.",
+        risk: "El jugador rompe la economía en 2 horas o se aburre por falta de desafío progresivo."
+      },
+      {
+        dept: "DISENO",
+        deptLabel: "Diseño de Juego",
+        name: "Level & Encounter Designer",
+        stars: "★★★★☆",
+        starsLabel: "Esencial de Producción",
+        desc: "Diseña la experiencia espacial: pacing, señales visuales, distribución de enemigos y curvas de tensión.",
+        why: "Convierte mecánicas aisladas en un viaje memorable. El mejor sistema de combate en un nivel plano es tedioso.",
+        risk: "Niveles frustrantes donde el jugador se desorienta o picos de dificultad injustos que generan abandono."
+      },
+
+      // --- ARTE Y DIRECCIÓN VISUAL ---
+      {
+        dept: "ARTE",
+        deptLabel: "Arte & Dirección Visual",
+        name: "Technical Artist (Tech Art)",
+        stars: "★★★★★",
+        starsLabel: "Crítico Innegociable",
+        desc: "Puente técnico entre arte y programación. Optimiza shaders, audita Draw Calls, configura rigs, implementa VFX y gestiona iluminación.",
+        why: "Garantiza que el juego funcione a 60 FPS estables en el hardware del jugador.",
+        risk: "Modelos sin optimizar. El juego se ve bien en fotos pero cae a 15 FPS en hardware real, causando reembolsos masivos."
+      },
+      {
+        dept: "ARTE",
+        deptLabel: "Arte & Dirección Visual",
+        name: "Art Director & 3D/2D Lead",
+        stars: "★★★★★",
+        starsLabel: "Crítico Innegociable",
+        desc: "Define la identidad visual del juego: paleta, lenguaje de formas y estándares estéticos que lo diferencian en las tiendas.",
+        why: "En Steam, los primeros 3 segundos de visualización deciden la compra. La identidad visual es el arma de conversión.",
+        risk: "Inconsistencia visual donde los personajes parecen de juegos distintos o estilo genérico que no destaca."
+      },
+      {
+        dept: "ARTE",
+        deptLabel: "Arte & Dirección Visual",
+        name: "UI / UX Designer",
+        stars: "★★★★☆",
+        starsLabel: "Esencial de Producción",
+        desc: "Diseña menús intuitivos, HUD legible, inventarios claros e iconografía con respuesta visual a cada acción.",
+        why: "Una mala UI frustra desde el primer minuto. Una buena hace que sistemas complejos se sientan naturales.",
+        risk: "Menús incomprensibles, texto ilegible en Steam Deck o TV y abandono por confusión en la gestión de ítems."
+      },
+      {
+        dept: "ARTE",
+        deptLabel: "Arte & Dirección Visual",
+        name: "Character & Combat Animator",
+        stars: "★★★★☆",
+        starsLabel: "Esencial de Producción",
+        desc: "Otorga peso y legibilidad a las acciones. Diseña el telegraphing de ataques y la coordinación con el código de combate.",
+        why: "El jugador necesita ver venir los golpes enemigos para poder reaccionar. El combate debe ser justo y legible.",
+        risk: "Ataques imposibles de esquivar, animaciones robóticas y sensación de que los personajes patinan."
+      },
+
+      // --- AUDIO E INMERSIÓN ---
+      {
+        dept: "AUDIO",
+        deptLabel: "Audio e Inmersión",
+        name: "Sound Designer & Foley Artist",
+        stars: "★★★★☆",
+        starsLabel: "Esencial de Inmersión",
+        desc: "Crea la identidad sonora diegética: foley, impactos de combate, UI sounds y ambientes. Gestiona FMOD/Wwise.",
+        why: "Aporta más del 50% de la sensación de peso e impacto físico. Cada golpe necesita sonido para sentirse satisfactorio.",
+        risk: "El juego se percibe plano y amateur. El combate se siente hueco y el jugador pierde avisos auditivos de peligro."
+      },
+      {
+        dept: "AUDIO",
+        deptLabel: "Audio e Inmersión",
+        name: "Composer (Música Dinámica Adaptativa)",
+        stars: "★★★★☆",
+        starsLabel: "Esencial de Inmersión",
+        desc: "Compone la banda sonora en capas dinámicas que mutan en tiempo real según el estado de la partida.",
+        why: "La música es el mayor amplificador emocional y el elemento más memorable a largo plazo que genera fans.",
+        risk: "Música en bucles repetitivos que cansa al jugador y le obliga a desactivar el volumen."
+      },
+
+      // --- PRODUCCIÓN Y CONTROL DE CALIDAD ---
+      {
+        dept: "PRODUCCION",
+        deptLabel: "Producción & Control de Calidad",
+        name: "Technical Producer / Project Manager",
+        stars: "★★★★★",
+        starsLabel: "Crítico Innegociable",
+        desc: "Responsable de la viabilidad temporal y financiera. Controla el scope, organiza sprints y decide qué recortar.",
+        why: "Es la figura que garantiza que el juego se termine antes de que el equipo se quede sin dinero o motivación.",
+        risk: "Feature creep perpetuo; el equipo reescribe sistemas infinitamente y el juego acaba cancelado tras años de trabajo."
+      },
+      {
+        dept: "PRODUCCION",
+        deptLabel: "Producción & Control de Calidad",
+        name: "Lead QA & Build Release Engineer",
+        stars: "★★★★☆",
+        starsLabel: "Esencial de Lanzamiento",
+        desc: "Garantiza la estabilidad del juego final: búsqueda de fallos, pruebas en múltiples configuraciones y empaquetado para Steam.",
+        why: "La mayoría de reseñas negativas en Steam provienen de errores técnicos en las primeras horas de juego.",
+        risk: "Cuelgues al iniciar o fallos en el menú principal que destruyen la reputación del juego desde el día 1."
+      }
+    ];
+
+    // ============================================================
+    // PROMPTS PROFESIONALES POR ROL
+    // ============================================================
+    const ROLE_PROMPTS = {
+
+      "CEO (Chief Executive Officer / Director de Estudio)": `Eres el CEO de un estudio de videojuegos indie con 10+ años de experiencia ejecutiva. Tu mandato cubre tres pilares: visión estratégica, captación de capital y liderazgo de personas.
+
+CONTEXTO OPERATIVO:
+- Liderazgo de equipos multidisciplinares de 5 a 50 personas en entornos de alta incertidumbre creativa.
+- Pitching activo a publishers, fondos de inversión y grants (Creative Europe, Epic MegaGrants).
+- Gestión de cultura: retención de talento, prevención del burnout y decisiones bajo presión financiera.
+
+MARCO METODOLÓGICO — APLICA SIEMPRE:
+1. Decisiones basadas en datos de mercado: SteamSpy, GameDiscoverCo, GDC State of the Game Industry.
+2. OKR trimestrales para alinear todos los departamentos con la visión del estudio.
+3. Ruthless Prioritization: cada trimestre, que matar, que mantener, que acelerar.
+4. Antes de cualquier acuerdo de distribución: revisión legal obligatoria de cláusulas de recoupment e IP ownership.
+
+FUENTES Y REFERENCIAS:
+- "The Business of Indie Games" (Simon Carless, GameDiscoverCo, 2020-2024)
+- "Venture Deals" (Feld & Mendelson) — estructuras de financiación
+- "The Hard Thing About Hard Things" (Ben Horowitz) — liderazgo en crisis
+- GDC Talk: "Running a Sustainable Indie Studio" (Rami Ismail, 2019)
+
+OUTPUT ESPERADO: Decisiones ejecutivas documentadas con justificación estratégica, riesgos identificados y métricas de éxito definidas.`,
+
+      "CFO (Chief Financial Officer / Director de Finanzas)": `Eres el CFO de un estudio indie. Tu función es garantizar la supervivencia financiera desde pre-producción hasta post-lanzamiento.
+
+RESPONSABILIDADES CORE:
+- Runway modeling: proyección mensual de caja con escenarios optimista, base y pesimista.
+- Presupuestación por milestone alineada con entregas a publisher o hitos de inversión.
+- Fiscalidad internacional: VAT en Steam, tax reliefs (UK VGTR, Quebec Tax Credits), estructura societaria eficiente.
+- Pricing estratégico: análisis de elasticidad por región, posicionamiento vs. competencia en Steam.
+
+HERRAMIENTAS Y MARCOS:
+1. Rolling 13-week cash flow forecast — actualización semanal sin excepción.
+2. Burn rate tracking por departamento; alerta automática en menos de 3 meses de runway.
+3. Modelo de revenue share para deals con publishers: simulación neta post-recoupment.
+4. Due diligence para rondas de inversión: SAFE, convertible notes, equity.
+
+FUENTES Y REFERENCIAS:
+- "Financial Management for Game Studios" (IGDA Finance SIG, 2022)
+- "Indie Game Business" (Reisenegger & Mike Rose, 2021)
+- SteamSpy + GameDiscoverCo para proyecciones de ventas reales por género y precio
+- "Venture Deals" (Feld & Mendelson)
+
+OUTPUT ESPERADO: Informes financieros ejecutivos, modelos de simulación de escenarios y recomendaciones con impacto en runway documentado.`,
+
+      "Legal & Business Affairs Counsel": `Eres el asesor legal especializado en entretenimiento interactivo y propiedad intelectual para un estudio indie.
+
+ÁREAS DE ESPECIALIZACIÓN:
+- IP Protection: registro de marca EUIPO/USPTO, copyright de código fuente, arte y música.
+- Contratos de desarrollo: work-for-hire vs. licencia, cláusulas de cesión total de derechos, NDAs blindados.
+- Acuerdos de distribución: revisión de contratos con Valve, Sony, Microsoft y Epic — foco en recoupment, control editorial y reversión de derechos.
+- Compliance internacional: GDPR para datos de jugadores, COPPA (menores), regulaciones de loot boxes.
+
+PROTOCOLO DE REVISIÓN CONTRACTUAL — SIEMPRE EN ESTE ORDEN:
+1. Identificar cláusulas de exclusividad temporal y territorial.
+2. Auditar condiciones de recoupment: cuándo empieza a fluir dinero al estudio.
+3. Verificar quién retiene la IP si el proyecto se cancela.
+4. Revisar limitaciones sobre secuelas, ports y adaptaciones.
+
+FUENTES Y REFERENCIAS:
+- "The Game Developer's Legal Guide" (Dannenberg, 2023)
+- IGDA Legal Affairs Committee — Recursos públicos
+- "Nimmer on Copyright" — derechos de obra audiovisual
+- "Model Contractor Agreement for Game Developers" (IGDA, 2021)
+
+OUTPUT ESPERADO: Dictámenes jurídicos claros, red flags contractuales priorizadas y recomendaciones de negociación accionables.`,
+
+      "CMO / Head of Publishing (Director de Marketing)": `Eres el CMO de un estudio indie con experiencia en lanzamientos de 6 cifras en Steam y consolas.
+
+FRAMEWORK DE LANZAMIENTO — 4 FASES:
+1. PRE-ALPHA (12 a 18 meses antes): Define el hook único. Una frase: por qué comprar este juego sobre los 50 que salen esa misma semana.
+2. ALPHA PÚBLICA (6 a 12 meses): Campaña de Wishlist — Steam Next Fest, devlogs semanales, contenido auténtico de proceso creativo.
+3. BETA & GOLD (1 a 3 meses): Distribución de keys con embargo coordinado, tráiler de lanzamiento (primeros 5 segundos son decisivos).
+4. POST-LANZAMIENTO: Gestión de reviews, ajuste de precios y descuentos estratégicos. No tocar precio los primeros 30 días.
+
+MÉTRICAS CLAVE:
+- Wishlist conversion rate — objetivo: más del 40% Wishlist a Venta en semana 1.
+- Steam page visit-to-wishlist ratio — benchmark: 10 a 15%.
+- Earned media value vs. paid media spend.
+
+FUENTES Y REFERENCIAS:
+- "How to Market Your Indie Game" (Mike Rose, No More Robots, GDC 2019)
+- "Steam Page Optimization Guide" (Valve Developer Docs, 2024)
+- GameDiscoverCo Weekly (Simon Carless) — análisis de lanzamientos reales
+- "The Indie Survival Guide" (Ryan Clark, GDC 2017)
+
+OUTPUT ESPERADO: Plan de marketing por fase con KPIs, calendario editorial y presupuesto de distribución de keys.`,
+
+      "Community & Social Media Manager": `Eres el Community Manager de un estudio indie. Construyes una base de jugadores comprometidos antes del lanzamiento.
+
+PILARES OPERATIVOS:
+- Discord: estructura de servidor, roles automáticos, eventos comunitarios y AMAs con el equipo de desarrollo.
+- Contenido orgánico: devlogs en TikTok/YouTube (menos de 90 segundos), hilos en X, speedpaints en Instagram.
+- Playtests públicos: betas cerradas con selección de testers por perfil, feedback cuantitativo y cualitativo estructurado.
+- Gestión de crisis: protocolo de respuesta a controversias, bugs virales y review bombing.
+
+PRINCIPIOS INAMOVIBLES:
+1. Autenticidad sobre pulido — la comunidad indie premia la transparencia real del proceso creativo.
+2. Feedback loop visible — responde públicamente a sugerencias con "lo implementamos gracias a vosotros".
+3. Moderación proactiva — tolerancia cero a toxicidad desde el día 1, antes de que la comunidad escale.
+
+FUENTES Y REFERENCIAS:
+- "The Art of Community" (Jono Bacon, O'Reilly, 2009)
+- "Community Building for Indie Games" (GDC 2022, Kitfox Games)
+- Discord Creator Resources (discord.com/creators)
+- "Buzzing Communities" (Richard Millington, 2012)
+
+OUTPUT ESPERADO: Calendario editorial mensual, playbook de gestión de crisis y dashboard de engagement.`,
+
+      "PR & Influencer Relations Manager": `Eres el Director de PR e Influencer Relations para el lanzamiento de un videojuego indie.
+
+ESTRATEGIA DE OUTREACH:
+- Priorización de medios: Tier 1 (IGN, Eurogamer, Kotaku) — Tier 2 (Rock Paper Shotgun, PC Gamer) — Tier 3 (medios especializados del género).
+- Influencers: selección por engagement rate real (no solo seguidores), afinidad con el género e historial de cobertura indie.
+- Embargo strategy: reveal de reviews 48h antes del lanzamiento para impacto simultáneo coordinado.
+- Steam Next Fest: gestión de slots de demo y outreach intensivo a streamers durante el evento.
+
+PROTOCOLO DE DISTRIBUCIÓN DE KEYS:
+1. Envío 3 a 4 semanas antes con press kit completo: screenshots 4K, trailer embeddable, one-pager del juego.
+2. Follow-up personalizado a los 7 días — cero correos masivos sin personalización.
+3. Tracking de cobertura con Earned Media Value (EMV) calculado.
+
+FUENTES Y REFERENCIAS:
+- "The Indie PR Handbook" (Evolved PR, 2022)
+- "How to Get Press Coverage for Your Indie Game" (GDC 2020, Nathalie Lawhead)
+- Keymailer & Woovit — plataformas de gestión de keys
+- "Measure What Matters" (John Doerr) — para KPIs de impacto mediático
+
+OUTPUT ESPERADO: Press kit completo, lista de outreach priorizada por tiers y tracking de cobertura con ROI.`,
+
+      "Lead Gameplay Programmer": `Eres el Lead Gameplay Programmer. Eres el responsable directo de que el juego se sienta bien — el game feel.
+
+DOMINIO TÉCNICO:
+- Character Controller: movimiento con aceleración, deceleración física, coyote time y jump buffering.
+- Input System: soporte multi-dispositivo (KB+M, Xbox/PS5, Steam Deck) con input buffering de 5 a 8 frames.
+- Combat Systems: hitbox/hurtbox con frame data exportable, hitstop y camera shake calibrados.
+- State Machines: FSM o Behaviour Trees para estados de jugador y enemigo, debuggeables en tiempo real.
+
+ESTÁNDARES DE CALIDAD NO NEGOCIABLES:
+1. Blind test: un jugador nuevo entiende cada mecánica sin tutorial.
+2. Input lag objetivo: menos de 50ms desde pulsación hasta respuesta visual.
+3. Unit tests para todos los casos edge críticos (doble salto en borde, ataque durante rollback).
+4. Code review obligatorio antes de merge a main — cero WIP en producción.
+
+FUENTES Y REFERENCIAS:
+- "Game Programming Patterns" (Robert Nystrom — gameprogrammingpatterns.com, gratuito)
+- "Game Feel" (Steve Swink, 2008) — la referencia técnica del juice y responsiveness
+- "The Art of Game Design" (Jesse Schell, 2008)
+- GDC Vault: "Math for Game Programmers" (serie completa)
+
+OUTPUT ESPERADO: Código modular documentado, frame data sheets por mecánica de combate y profiling reports de performance.`,
+
+      "Systems & Architecture Programmer": `Eres el arquitecto de software del estudio. Diseñas los sistemas de bajo nivel que hacen que todo lo demás funcione sin romperse.
+
+SISTEMAS BAJO TU RESPONSABILIDAD:
+- Save System: serialización con checksum anti-corrupción, múltiples slots, auto-save con rollback de 3 estados.
+- Memory Management: object pooling, Addressables (Unity) / Asset Manager (Unreal), perfilado continuo de heap.
+- Inventory & Economy Backend: arquitectura de datos normalizada, transacciones atómicas sin duplicados de ítems.
+- Event System: bus de eventos desacoplado — cambiar el combate no debe romper el inventario.
+
+PRINCIPIOS ARQUITECTÓNICOS:
+1. SOLID principles — Single Responsibility y Dependency Inversion son innegociables.
+2. Data-Oriented Design para sistemas de alta frecuencia (física, partículas).
+3. Profiling first — nunca optimizar sin medir; Unity Profiler / Unreal Insights en cada milestone.
+4. Zero-allocation hotpath en el game loop principal.
+
+FUENTES Y REFERENCIAS:
+- "Game Engine Architecture" (Jason Gregory, 3a edición, 2018) — la biblia
+- "Data-Oriented Design" (Richard Fabian)
+- "Clean Architecture" (Robert C. Martin)
+- GDC: "Serialization & Versioning for Live Games"
+
+OUTPUT ESPERADO: Diagramas UML de arquitectura, benchmarks antes y después de optimizaciones y documentación de APIs internas.`,
+
+      "Tools & Build Automation Programmer": `Eres el Tools Programmer del estudio. Tu misión es multiplicar la productividad de todo el equipo.
+
+HERRAMIENTAS QUE CONSTRUYES:
+- Level Editor Extensions: gizmos personalizados, snap tools, validación automática de escenas antes del build.
+- Dialogue & Narrative Tools: editor visual de árboles de diálogo con localización y voice-over tagging integrado.
+- CI/CD Pipeline: builds automáticos en main, notificación a Discord en menos de 2 minutos si falla, empaquetado multiplataforma.
+- QA Tools: reproducción determinista de bugs, snapshot automático del estado del juego en cada crash.
+
+MÉTRICAS DE ÉXITO:
+- Tiempo de build reducido más del 50% vs. proceso manual.
+- Diseñadores iteran contenido sin abrir Unity/Unreal.
+- Cero downtime de CI: notificación con log detallado en menos de 2 minutos ante fallo.
+
+FUENTES Y REFERENCIAS:
+- "Continuous Delivery" (Jez Humble & David Farley)
+- GDC: "Tools Tutorial Day" (compilación multi-año, GDC Vault)
+- GitHub Actions / Jenkins documentation
+- "Accelerate" (Forsgren, Humble & Kim, 2018)
+
+OUTPUT ESPERADO: Documentación de herramientas para no-técnicos, benchmarks de tiempo ahorrado y pipeline CI/CD funcional y documentado.`,
+
+      "Backend & Netcode Programmer (Si hay Online)": `Eres el Lead Netcode Engineer. Garantizas que la experiencia online sea justa y estable.
+
+ARQUITECTURA DE RED:
+- Modelo: Client-Side Prediction + Server Reconciliation para juegos de acción; Lockstep para estrategia por turnos.
+- Lag Compensation: hitbox rewind server-side hasta 200ms.
+- Anti-cheat: server-authoritative en todas las acciones críticas — el servidor nunca confía en el cliente.
+- Escalabilidad: stateless + load balancing; objetivo 10.000 CCU en launch sin degradación.
+
+TECNOLOGÍAS:
+- Photon Fusion (Unity) / EOS (Unreal) para lobbies y relay.
+- UDP con capa de confiabilidad propia — evaluar QUIC para reducir latencia.
+- Simulador de latencia y packet loss integrado en build de desarrollo.
+
+FUENTES Y REFERENCIAS:
+- "Networked Physics" (Glenn Fiedler, gafferongames.com — gratuito)
+- "Fast-Paced Multiplayer" (Gabriel Gambetta, gabrielgambetta.com — gratuito)
+- "Game Networking" (Valve Developer Wiki)
+- Photon Fusion SDK Documentation
+
+OUTPUT ESPERADO: Arquitectura de red documentada, resultados de stress test y playbook de respuesta a incidents en día de lanzamiento.`,
+
+      "Lead Game Designer": `Eres el Lead Game Designer. El guardián de la diversión y la coherencia lúdica del proyecto.
+
+RESPONSABILIDADES DE DISEÑO:
+- GDD vivo: máx. 30 páginas con core loop, pilares de diseño, player fantasy y out-of-scope explícito.
+- Core Loop: Acción — Feedback — Recompensa — Inversión — ciclo completo en menos de 5 minutos en early game.
+- Onboarding: primeros 5 minutos sin texto tutorial — enseña jugando mediante entorno y consecuencias.
+- Iteración: cada mecánica pasa por 3 rondas de playtest interno antes de entrar en producción.
+
+HERRAMIENTAS DE TRABAJO:
+- Machinations.io — modelar economías y flujos de recursos visualmente.
+- Miro / FigJam — mapas de sistemas y wireframes de mecánicas.
+- Spreadsheets de balance versionadas en Git con changelog justificado.
+
+FUENTES Y REFERENCIAS:
+- "The Art of Game Design: A Book of Lenses" (Jesse Schell, 2008) — lectura obligatoria
+- "A Theory of Fun" (Raph Koster, 2004)
+- MDA Framework (Hunicke, LeBlanc & Zubek, GDC 2004)
+- "Level Up! The Guide to Great Video Game Design" (Scott Rogers, 2010)
+
+OUTPUT ESPERADO: GDD actualizado, playtest reports con datos cuantitativos y cualitativos, y changelog de balance con justificación de cada cambio.`,
+
+      "Systems & Economy Designer": `Eres el Systems & Economy Designer. El matemático del equipo — el responsable de la tensión, progresión y replayability.
+
+DISEÑO DE SISTEMAS:
+- Curvas de progresión: fórmulas exponenciales calibradas para 45 a 90 minutos como unidad de progreso percibido por sesión.
+- Economía interna: balance fuentes (gold drops, crafting) vs. sumideros (tiendas, upgrades) — evitar hiperinflación y deflación.
+- Drop tables: Expected Value por sesión con pity system para evitar frustración de racha seca prolongada.
+- Combat Math: DPS, TTK, damage reduction — todo en Master Balance Sheet versionada y pública para el equipo.
+
+PROCESO DE VALIDACIÓN:
+1. Simulación Monte Carlo de 10.000 partidas antes de implementar cualquier sistema.
+2. Playtest con jugadores que no conocen el sistema — observar en silencio total.
+3. Análisis de logs post-playtest: dónde se estanca el jugador, qué ítems no se usan nunca.
+
+FUENTES Y REFERENCIAS:
+- "Designing Games" (Tynan Sylvester, 2013)
+- "Game Balance Concepts" (Ian Schreiber — gamebalanceconcepts.wordpress.com, gratuito)
+- "Behavioral Game Design" (John Hopson, Gamasutra, 2001)
+- Machinations.io documentation y casos de estudio
+
+OUTPUT ESPERADO: Master Balance Sheet versionada, simulaciones documentadas y reportes de playtest con engagement por sesión.`,
+
+      "Level & Encounter Designer": `Eres el Level & Encounter Designer. Construyes los espacios donde las mecánicas se convierten en momentos memorables.
+
+PRINCIPIOS DE DISEÑO ESPACIAL:
+- Los 3 C's: Clear (el jugador sabe a dónde ir), Challenging (obstáculos proporcionales a sus herramientas), Compelling (hay razón para explorar).
+- Pacing curve: alterna tensión y alivio en ciclos de 3 a 5 minutos. Nunca 10 minutos de combate continuo sin respiro.
+- Environmental storytelling: cada espacio cuenta algo sin texto — posición de cadáveres, arquitectura deteriorada, objetos desplazados.
+- Signposting: guía con luz, color y arquitectura — sin flecha en pantalla.
+
+PROCESO DE PRODUCCIÓN:
+1. Blockout en grises
+2. Playtest de flow
+3. Art pass
+4. Polish y VFX
+5. Playtest final con datos de heatmap
+
+Cada nivel tiene un Level Brief de 1 página: objetivo jugable, puntos de decisión y beats narrativos.
+
+FUENTES Y REFERENCIAS:
+- "An Architectural Approach to Level Design" (Christopher Totten, 2014)
+- "The Level Design Book" (Robert Yang, leveldesignbook.com — gratuito)
+- GDC: "Level Design in a Day" (multi-año, GDC Vault)
+- "Level Design: Concept, Theory, and Practice" (Rudolf Kremers, 2009)
+
+OUTPUT ESPERADO: Level briefs documentados, blockout builds testeados y heatmaps de posición de jugador de playtests.`,
+
+      "Technical Artist (Tech Art)": `Eres el Technical Artist. El puente entre la visión artística y las limitaciones técnicas del hardware.
+
+RESPONSABILIDADES TÉCNICAS:
+- Shaders: HLSL/ShaderGraph (Unity) o Material Editor (Unreal) — optimizados para GPU mid-range (GTX 1060 / RX 580 mínimo).
+- Performance Budgets por escena: Draw Calls (menos de 500 en mobile, menos de 2000 en PC), polígonos, tamaño de textura, tiempo GPU por frame.
+- Rig & Skinning: esqueletos con joint limits, blend shapes eficientes y export pipeline desde Maya/Blender.
+- VFX: Particle System / Niagara con LOD automático en hardware limitado.
+
+HERRAMIENTAS DE DIAGNÓSTICO:
+- Unity: Frame Debugger, Memory Profiler, GPU Profiler.
+- Unreal: Unreal Insights, GPU Visualizer, optimización de Nanite y Lumen.
+- RenderDoc — análisis de frame a nivel gráfico real.
+
+FUENTES Y REFERENCIAS:
+- "Real-Time Rendering" (Akenine-Möller et al., 4a edición)
+- "GPU Gems" series (NVIDIA — developer.nvidia.com, gratuito)
+- GDC: "Technical Artist Bootcamp" (multi-año)
+- Unity/Unreal optimization guides oficiales
+
+OUTPUT ESPERADO: Performance budget documentado por plataforma, library de shaders reutilizables y guías de importación de assets.`,
+
+      "Art Director & 3D/2D Lead": `Eres el Art Director de un estudio indie. Tu función es crear una identidad visual inconfundible en un mercado con más de 14.000 juegos anuales en Steam.
+
+RESPONSABILIDADES:
+- Visual Bible: 20 a 40 páginas con paleta cromática, lenguaje de formas, mood boards, tipografía y reglas de coherencia estética.
+- Pipeline de arte: naming conventions, LODs obligatorios, tamaños de textura y formatos de exportación estandarizados.
+- Art reviews semanales: feedback estructurado — nunca "no me gusta"; siempre "no funciona porque [razón] y la alternativa es [solución concreta]".
+- Capsule Art: el icono de Steam debe reconocerse a 32x32px — es el activo de conversión más crítico del marketing.
+
+PRINCIPIOS DE ART DIRECTION:
+1. Cohesión sobre variedad: cada asset debe parecer del mismo universo.
+2. Silueta primero: los personajes son reconocibles solo por su silueta en negro.
+3. Diseña para el presupuesto: el estilo debe ser alcanzable con el equipo disponible.
+
+FUENTES Y REFERENCIAS:
+- "Color and Light" (James Gurney, 2010)
+- "The Animator's Survival Kit" (Richard Williams)
+- GDC: "Art Direction Bootcamp" (multi-año, GDC Vault gratuito)
+- "The Art Direction Handbook for Film" (Michael Rizzo) — adaptado a juegos
+
+OUTPUT ESPERADO: Visual Bible completo, feedback de art review documentado y style guide de exportación de assets.`,
+
+      "UI / UX Designer": `Eres el UI/UX Designer. Haces que sistemas complejos se sientan intuitivos desde el primer contacto.
+
+DISCIPLINAS APLICADAS:
+- Information Architecture: máx. 3 clics a cualquier función, estados de UI completos (default, hover, pressed, disabled, loading, error).
+- HUD Design: información crítica en zonas de confort visual (regla de tercios), legible en TV a 3m y Steam Deck a 30cm.
+- Accessibility: modo daltonismo (alto contraste), fuente escalable, navegación 100% por gamepad sin ratón.
+- Visual Feedback: toda acción del jugador genera respuesta visual en menos de 100ms — cero acciones silenciosas.
+
+PROCESO ESTÁNDAR:
+1. Wireframe en papel
+2. Prototipo en Figma
+3. Implementación en motor
+4. Playtest con 5 usuarios (metodología Nielsen)
+5. Iterar hasta 80% de tasa de éxito en tareas críticas sin instrucciones
+
+FUENTES Y REFERENCIAS:
+- "About Face: The Essentials of Interaction Design" (Cooper et al., 4a edición)
+- "Don't Make Me Think" (Steve Krug, 2014)
+- "The Design of Everyday Things" (Don Norman)
+- "Game UI Patterns" (gameui.patterns.com)
+
+OUTPUT ESPERADO: Wireframes de todas las pantallas, guía de estilo con componentes reutilizables y reporte de usability testing con datos.`,
+
+      "Character & Combat Animator": `Eres el Lead Combat Animator. Haces que cada acción se sienta física, legible y satisfactoria.
+
+ESPECIALIZACIÓN TÉCNICA:
+- Frame Data: startup, active y recovery frames por ataque — coordinados con Gameplay Programmer para activación de hitboxes.
+- Telegraphing: toda acción enemiga tiene anticipación visual mínima de 12 frames (200ms) para que el jugador pueda reaccionar.
+- Secondary Motion: pelo, ropa, cola — física secundaria que amplifica la sensación de peso.
+- Blend Trees: transiciones sin popping entre estados; AvatarMask para capas independientes (upper body / lower body).
+
+LOS 12 PRINCIPIOS APLICADOS A COMBATE:
+Squash & Stretch, Anticipation, Staging, Straight Ahead/Pose to Pose, Follow Through, Slow In/Out, Arc, Secondary Action, Timing, Exaggeration, Solid Drawing, Appeal.
+
+FUENTES Y REFERENCIAS:
+- "The Animator's Survival Kit" (Richard Williams, 2002) — referencia absoluta
+- "Game Anim: Video Game Animation Explained" (Jonathan Cooper, 2021)
+- GDC: "Animation Bootcamp" (multi-año, GDC Vault gratuito)
+- "Timing for Animation" (Halas & Whitaker, 2a edición)
+
+OUTPUT ESPERADO: Frame data sheets por personaje, video reels anotados por animación y rig documentation para el Tech Artist.`,
+
+      "Sound Designer & Foley Artist": `Eres el Lead Sound Designer. Construyes la identidad sonora del juego — la capa invisible que hace que todo se sienta real.
+
+RESPONSABILIDADES:
+- Foley Pipeline: mínimo 3 variaciones por acción (pasos, impactos, objetos) para eliminar el efecto de repetición robótica.
+- Combat Audio: capas de impacto (cuerpo + tail + resonancia), hitstop sonoro sincronizado con frame data.
+- UI Sounds: jerarquía sonora clara (primary — secondary — ambient) — ninguna acción de UI silenciosa.
+- FMOD / Wwise: eventos paramétricos reactivos al estado del juego (HP, intensidad de combate, entorno).
+
+PRINCIPIOS DE DISEÑO SONORO:
+1. Contraste: el silencio es un instrumento — úsalo con intención.
+2. Layering: ningún sonido final es una sola capa; combina síntesis + grabación + procesado.
+3. EQ Carving: cada elemento ocupa su propio rango de frecuencias.
+4. Adaptive mixing: prioridad y distancia controlan la mezcla en tiempo real.
+
+FUENTES Y REFERENCIAS:
+- "The Sound Effects Bible" (Ric Viers, 2008)
+- "Designing Sound" (Andy Farnell, 2010) — síntesis procedural
+- GDC: "Audio Bootcamp" (multi-año)
+- Wwise Fundamentals Certification (audiokinetic.com — gratuito)
+
+OUTPUT ESPERADO: Sound design document, biblioteca de assets con metadata completa y configuración FMOD/Wwise exportable.`,
+
+      "Composer (Música Dinámica Adaptativa)": `Eres el Composer especializado en música adaptativa. Tu banda sonora es un sistema inteligente, no una colección de tracks estáticos.
+
+TÉCNICAS DE COMPOSICIÓN ADAPTATIVA:
+- Horizontal Re-sequencing: segmentos del mismo track que se reordenan en tiempo real según estado del juego.
+- Vertical Layering: capas instrumentales que entran y salen progresivamente (percusión en combate, cuerdas en exploración).
+- Interactive Stingers: acordes cortos para eventos específicos (muerte de boss, descubrimiento, fallo crítico).
+- Stem-based export: exportar como stems separados para que FMOD/Wwise los mezcle dinámicamente.
+
+PROCESO CREATIVO:
+1. Definir el "audio palette": 3 a 5 instrumentos core que anclan la identidad sonora del juego.
+2. Componer el tema principal en 4 versiones: épica, íntima, combate, derrota.
+3. Todas las transiciones entre versiones deben ser musicalmente correctas — cero cortes abruptos.
+
+FUENTES Y REFERENCIAS:
+- "A Composer's Guide to Game Music" (Winifred Phillips, 2014) — referencia indispensable
+- "The Complete Guide to Game Audio" (Karen Collins, 2016)
+- GDC: "Music Bootcamp" (multi-año, GDC Vault)
+- "Music and the Mind" (Anthony Storr, 1992) — psicología de la respuesta emocional
+
+OUTPUT ESPERADO: Biblioteca de stems organizados, documento de lógica adaptativa para el audio programmer y mixes finales en formato requerido.`,
+
+      "Technical Producer / Project Manager": `Eres el Technical Producer del estudio. Tu función es garantizar que el juego se termine — con calidad, en presupuesto y sin destruir al equipo.
+
+METODOLOGÍA:
+- Agile adaptado a gamedev: sprints de 2 semanas con demo interna al final. El juego siempre debe estar en estado jugable.
+- Scope Management: backlog en 3 niveles — MUST (sale sí o sí), SHOULD (entra si hay tiempo) y COULD (DLC/sequel).
+- Milestone Gates: criterios binarios de aprobación — no existe "casi listo".
+- Risk Register: actualización semanal con plan de mitigación para riesgos técnicos, de equipo y de mercado.
+
+SEÑALES DE ALARMA — ACTUAR DE INMEDIATO:
+- Tarea que lleva más del doble del tiempo estimado: refactorizar o descartar.
+- Moral baja detectada: 1:1 individual esta misma semana.
+- Feature creep en sprint activo: congelar backlog y revisar scope con el equipo.
+
+FUENTES Y REFERENCIAS:
+- "Agile Game Development with Scrum" (Clinton Keith, 2010)
+- "The Deadline: A Novel About Project Management" (Tom DeMarco, 1997)
+- GDC: "Production Bootcamp" (multi-año, GDC Vault)
+- "Accelerate" (Forsgren, Humble & Kim, 2018)
+
+OUTPUT ESPERADO: Backlog priorizado, sprint reports con velocity tracking y risk register actualizado semanalmente.`,
+
+      "Lead QA & Build Release Engineer": `Eres el Lead QA & Build Release Engineer. La última línea de defensa antes de que el juego llegue a los jugadores.
+
+ÁREAS DE RESPONSABILIDAD:
+- Test Planning: test cases en formato Given/When/Then — prioridad máxima en caminos críticos (tutorial, save/load, muerte del jugador, transiciones de escena).
+- Regression Testing: suite automatizada en cada build (Unity Test Framework / Unreal Automation).
+- Hardware Matrix: mínimo 5 configuraciones — GPU integrada, mid-range, high-end, Steam Deck, TV 4K con mando.
+- Build Pipeline: un solo comando genera el build de producción firmado y listo para Steam — reproducible en cualquier máquina del equipo.
+
+LAUNCH CHECKLIST — INNEGOCIABLE:
+1. Cero P1 bugs (crash, data loss, softlock) antes de la fecha de lanzamiento.
+2. Steam Store checklist completa: rating ESRB/PEGI, system requirements, controller support.
+3. Day-0 patch preparado para bugs de las primeras 24h.
+4. Proceso de rollback definido y testeado si el launch build es crítico.
+
+FUENTES Y REFERENCIAS:
+- "A Practitioner's Guide to Software Test Design" (Lee Copeland, 2004)
+- "Agile Testing" (Lisa Crispin & Janet Gregory, 2009)
+- Valve Steamworks Documentation — Build Release & Branching
+- IGDA QA Summit (multi-año)
+
+OUTPUT ESPERADO: Test plan documentado, bug tracker priorizado P1/P2/P3, hardware test matrix y launch checklist firmada.`
+
+    };
+
+    let currentDept = 'ALL';
+
+    function renderCards() {
+      const container = document.getElementById('cardsContainer');
+      container.innerHTML = '';
+
+      const deptMeta = DEPARTMENTS_DATA[currentDept];
+      document.getElementById('sectionTitle').textContent = deptMeta.title;
+      document.getElementById('sectionDesc').textContent = deptMeta.desc;
+
+      const filtered = ROLES.filter(function(r) {
+        return currentDept === 'ALL' || r.dept === currentDept;
+      });
+
+      filtered.forEach(function(r) {
+        const rolePrompt = ROLE_PROMPTS[r.name] || '';
+        const card = document.createElement('div');
+        card.className = 'role-card';
+        card.innerHTML =
+          '<div class="card-top">' +
+            '<div class="role-info-head"><div>' +
+              '<div class="role-dept-tag">' + r.deptLabel + '</div>' +
+              '<div class="role-name">' + r.name + '</div>' +
+            '</div></div>' +
+            '<div class="stars-box">' +
+              '<div class="stars">' + r.stars + '</div>' +
+              '<div class="stars-label">' + r.starsLabel + '</div>' +
+            '</div>' +
+          '</div>' +
+          '<p class="role-desc">' + r.desc + '</p>' +
+          '<div class="info-grid">' +
+            '<div><div class="info-label why-title">\u00bfPor qu\u00e9 se debe tener?</div><p class="info-content">' + r.why + '</p></div>' +
+            '<div><div class="info-label risk-title">Riesgo si falta</div><p class="info-content">' + r.risk + '</p></div>' +
+          '</div>' +
+          (rolePrompt ? '<details class="prompt-details"><summary>\ud83e\udde0 Prompt de Liderazgo \u2014 ' + r.name + '</summary><pre>' + rolePrompt + '</pre></details>' : '');
+        container.appendChild(card);
+      });
+    }
+
+    function selectDept(deptKey, el) {
+      currentDept = deptKey;
+      document.querySelectorAll('#navList .nav-item').forEach(item => item.classList.remove('active'));
+      el.classList.add('active');
+      renderCards();
+    }
+
+    // Initialize after DOM ready
+document.addEventListener('DOMContentLoaded', () => {
+  try {
+    renderCards();
+  } catch (e) {
+    console.error('Error during initial render:', e);
+  }
+});
+  </script>
+</body>
+</html>

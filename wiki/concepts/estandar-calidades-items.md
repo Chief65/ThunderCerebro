@@ -44,12 +44,12 @@ Cada calidad cuenta con su símbolo de apertura (`&8⁂`), gradiente/color hexad
 &8⁂ &#B01111&lM&#B61515&lI&#BD1919&lT&#C31E1E&lI&#CA2222&lC&#D02626&lA &e⭐⭐⭐⭐&7⭐
 ```
 
-### 5. DIVINA (5 Estrellas)
+### 5. LEGEND (5 Estrellas)
 ```text
-&8⁂ &#FD9A00&lD&#FAAE00&lI&#F7C200&lV&#F5D700&lI&#F2EB00&lN&#EFFF00&lA &e⭐⭐⭐⭐⭐
+&8⁂ &#FD9A00&lL&#FAAE00&lE&#F7C200&lG&#F5D700&lE&#F2EB00&lN&#EFFF00&lD &e⭐⭐⭐⭐⭐
 ```
 
-### 6. LIMITADA (Edición Especial)
+### 6. LIMITED (Jackpot / Edición Especial)
 ```text
 &8⁂ &#FF4B4B&l¡&#FF8B2D&lL&#FFD031&lI&#DCFF39&lM&#A5FF3F&lI&#6DFF45&lT&#3BFFC7&lE&#58D0FF&lD&#5489FF&l! &#FD9A00&m⭐&#FAB300&m⭐&#F6CD00&m⭐&#F3E600&m⭐&#EFFF00&m⭐
 ```
@@ -64,8 +64,8 @@ Cada calidad cuenta con su símbolo de apertura (`&8⁂`), gradiente/color hexad
    - **RARA**: `&#1DC8FF`
    - **EPICA**: `&#732AE2`
    - **MITICA**: `&#D02626`
-   - **DIVINA**: `&#EFFF00`
-   - **LIMITADA**: `&#5489FF`
+   - **LEGEND**: `&#EFFF00`
+   - **LIMITED**: `&#5489FF`
 
 ## Enlaces Relacionados
 - **[[wiki/concepts/calidades-y-lore-items|Calidades y Lore de Ítems]]**

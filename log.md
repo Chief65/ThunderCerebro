@@ -2,6 +2,25 @@
 
 Registro cronológico e incremental de todas las operaciones realizadas en **ThunderCerebro**.
 
+## [2026-09-29] items & standards | Estandarización Final: Nomenclatura 'Bolsita de Premios', Progresión Tachada y Despliegue SFTP
+- **Módulos Optimizados y Desplegados (Suite de 6 Bolsitas de Premios)**:
+  1. [`creator/lab/bundle_recompensas_super_test.yml`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/lab/bundle_recompensas_super_test.yml) (`bundle_recompensas_super_test`) ▶ Tier I: Súper (`&#3CDB10Bolsita de Premios`, `LIME_BUNDLE`)
+  2. [`creator/lab/bundle_recompensas_rara_test.yml`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/lab/bundle_recompensas_rara_test.yml) (`bundle_recompensas_rara_test`) ▶ Tier II: Rara (`&#1DC8FFBolsita de Premios`, `LIGHT_BLUE_BUNDLE`)
+  3. [`creator/lab/bundle_recompensas_epica_test.yml`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/lab/bundle_recompensas_epica_test.yml) (`bundle_recompensas_epica_test`) ▶ Tier III: Épica (`&#732AE2Bolsita de Premios`, `PURPLE_BUNDLE`)
+  4. [`creator/lab/bundle_recompensas_mitica_test.yml`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/lab/bundle_recompensas_mitica_test.yml) (`bundle_recompensas_mitica_test`) ▶ Tier IV: Mítica (`&#D02626Bolsita de Premios`, `RED_BUNDLE`)
+  5. [`creator/lab/bundle_recompensas_legend_test.yml`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/lab/bundle_recompensas_legend_test.yml) (`bundle_recompensas_legend_test`) ▶ Tier V: Legend (`&#EFFF00Bolsita de Premios`, `YELLOW_BUNDLE`)
+  6. [`creator/lab/bundle_recompensas_limited_test.yml`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/lab/bundle_recompensas_limited_test.yml) (`bundle_recompensas_limited_test`) ▶ Tier VI: Limited (`WHITE_BUNDLE`, degradado Rainbow completo en display name y tag)
+- **Alineación con Estándar Canónico de ThunderMC**:
+  - Nombre oficial establecido: **`Bolsita de Premios`** con el color de su respectiva calidad (o espectro Rainbow para Limited).
+  - Conservación de calidades superadas tachadas (`&7&m<Calidad> (XX%)`): visible en el lore para reflejar visualmente la escala de progresión alcanzada, manteniendo al mismo tiempo un ancho horizontal compacto (< 20 caracteres por línea).
+  - En Tier VI Limited se exponen todos los tiers previos tachados bajo la cabecera `★ ¡ᴄᴀʟɪᴅᴀᴅ ᴍÁxɪᴍᴀ! ★`.
+  - Reubicación de la etiqueta formal de rareza (`&8⁂ <GRADIENTE> <ESTRELLAS>`) inmediatamente previa a la interacción de apertura `&7▶ ᴄʟɪᴄᴋ ᴅᴇʀ - ᴀʙʀɪʀ`.
+  - Ocultación sistemática de tooltips vanilla (`Can hold mixed items` / `Fullness`) en las 6 bolsitas (`hideAdditionalTooltip: true`).
+- **Despliegue y Sincronización Remota**:
+  - Sincronizados los 6 archivos YAML vía SFTP en `plugins/ExecutableItems/items/ThunderMC/` del servidor Sandbox (`ymykh9qy.274758bd`). Verificación de integridad completada.
+
+---
+
 ## [2026-09-28] items & mechanics | Suite Completa de Bundles de Recompensas de Prueba (Tiers I al VI)
 - **Módulos Creados y Desplegados**:
   1. [`creator/lab/bundle_recompensas_test.yml`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/lab/bundle_recompensas_test.yml) (`bundle_recompensas_test`) ▶ Tier I: Común (`&#CECECE`, `BUNDLE`)
