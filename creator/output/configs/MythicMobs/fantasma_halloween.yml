@@ -1,0 +1,92 @@
+# ==============================================================================
+# PROYECTO: ThunderMC 1.21.11 - Mob Evento Halloween: Fantasma Slimer
+# ARCHIVO PRODUCCIÓN: creator/output/configs/MythicMobs/fantasma_halloween.yml
+# MOTOR: MythicMobs (Paper/Purpur)
+# DESTINO SERVIDOR: plugins/MythicMobs/mobs/fantasma.yml
+# ==============================================================================
+
+# ------------------------------------------------------------------------------
+# 1. ENTIDAD PRINCIPAL: Fantasma (Bebé Zombie con Torso Flotante)
+# ------------------------------------------------------------------------------
+Fantasma:
+  Type: ZOMBIE
+  Display: '<#7ED957>👻 <#A8F065>&lFantasma Viscoso'
+  Health: 35
+  Damage: 6
+  Armor: 2
+  Options:
+    Baby: true
+    Scale: 1.0 # Proporción estándar de bebé zombie
+    PreventSunburn: true
+    PreventOtherDrops: true
+    AlwaysShowName: false
+    Silent: true
+    MovementSpeed: 0.28
+    KnockbackResistance: 0.8
+    Despawn: true
+    FollowRange: 24
+  Equipment:
+    - PLAYER_HEAD{skullTexture=eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNTllODg5MWM0YTYyYjZhYjdjM2I4YmYwMDUzNDA2YTExMzI0Zjk1NDljMjcwMzNhMzQ5MWE1MDFlOTJmYzE5NyJ9fX0=} HEAD
+    - LEATHER_CHESTPLATE{color=120,205,35;unbreakable=true} CHEST
+    - AIR LEGS
+    - AIR FEET
+    - AIR HAND
+    - AIR OFFHAND
+  AIGoalSelectors:
+    - 0 clear
+    - 1 meleeattack
+  AITargetSelectors:
+    - 0 clear
+    - 1 players
+  Skills:
+    # 1. Montar inmediatamente el motor de vuelo Allay
+    - mount{type=Fantasma_Vuelo} @self ~onSpawn
+
+    # 2. Forzar NBT nativo de bebé zombie
+    - command{c="data merge entity <caster.uuid> {IsBaby:1b}";sender=console} @self ~onSpawn
+
+    # 3. Invisibilidad del cuerpo zombie (el torso flota y las piernas son invisibles)
+    - potion{type=INVISIBILITY;duration=999999;level=1;ambient=true;hasParticles=false} @self ~onSpawn
+
+    # 4. Eliminar el Allay al morir el fantasma (vía @Children y orden de consola sincronizada)
+    - remove @Children ~onDeath
+    - command{c="execute at <caster.uuid> run kill @e[type=allay,distance=..3,limit=1]";sender=console} @self ~onDeath
+
+    # 5. Audio viscoso y espectral
+    - sound{s=entity.slime.squish;p=1.2;v=0.8} @self ~onTimer:40 0.7
+    - sound{s=entity.zombie.ambient;p=1.7;v=0.5} @self ~onTimer:70 0.4
+    - sound{s=entity.slime.hurt;p=1.1;v=0.8} @self ~onDamaged
+    - sound{s=entity.slime.death;p=0.9;v=1.0} @self ~onDeath
+    - sound{s=entity.slime.attack;p=1.0;v=0.9} @self ~onAttack
+
+    # 6. Partículas sutiles de slime/moco
+    - particles{particle=ITEM_SLIME;amount=3;hSpread=0.12;vSpread=0.12;speed=0.01} @self ~onTimer:8
+    - particles{particle=SNEEZE;amount=1;hSpread=0.08;vSpread=0.08;speed=0.01} @self ~onTimer:20
+
+    # 7. Salpicadura de moco al morir
+    - particles{particle=ITEM_SLIME;amount=25;hSpread=0.35;vSpread=0.35;speed=0.08} @self ~onDeath
+    - sound{s=entity.slime.squish;p=0.7;v=1.2} @self ~onDeath
+
+# ------------------------------------------------------------------------------
+# 2. MOTOR DE VUELO: Allay Invisible e Invulnerable
+# ------------------------------------------------------------------------------
+Fantasma_Vuelo:
+  Type: ALLAY
+  Options:
+    Silent: true
+    Collidable: false
+    Invulnerable: true
+    Despawn: true
+    PreventOtherDrops: true
+    MovementSpeed: 0.30
+  AIGoalSelectors:
+    - 0 clear
+    - 1 movetowardstarget
+    - 2 meleeattack
+    - 3 randomfly
+    - 4 lookatplayers
+  AITargetSelectors:
+    - 0 clear
+    - 1 players
+  Skills:
+    - potion{type=INVISIBILITY;duration=999999;level=1;ambient=true;hasParticles=false} @self ~onSpawn

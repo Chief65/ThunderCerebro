@@ -14,3 +14,4 @@ Desktop.ini
 # Credenciales y entornos
 .env
 *.session
+*.log

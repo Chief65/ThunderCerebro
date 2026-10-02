@@ -1,0 +1,32 @@
+# ==============================================================================
+# PROYECTO: ThunderMC 1.21.11 - Ítems del Fantasma Slimer
+# ARCHIVO: plugins/MythicMobs/items/fantasma_items.yml
+# MOTOR: MythicMobs (Paper/Purpur)
+# ==============================================================================
+
+Fantasma_Cabeza:
+  Id: PLAYER_HEAD
+  Display: '&aCráneo de Slime (105231)'
+  Options:
+    SkullTexture: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNTllODg5MWM0YTYyYjZhYjdjM2I4YmYwMDUzNDA2YTExMzI0Zjk1NDljMjcwMzNhMzQ5MWE1MDFlOTJmYzE5NyJ9fX0=
+
+Fantasma_Peto:
+  Id: LEATHER_CHESTPLATE
+  Display: '&aTúnica de Ectoplasma'
+  Options:
+    Color: 120,205,35
+    Unbreakable: true
+
+Fantasma_Pantalones:
+  Id: LEATHER_LEGGINGS
+  Display: '&aManto de Moco'
+  Options:
+    Color: 120,205,35
+    Unbreakable: true
+
+Fantasma_Botas:
+  Id: LEATHER_BOOTS
+  Display: '&aResiduo Viscoso'
+  Options:
+    Color: 120,205,35
+    Unbreakable: true

@@ -34,6 +34,7 @@ Catálogo unificado y centralizado de la base de conocimiento de **ThunderCerebr
 - **[[wiki/entities/thundermc/ecosistema-plugins|Ecosistema Plugins ThunderMC]]**: Mapeo completo de los 74 plugins activos clasificados por subsistemas técnicos.
 - **[[wiki/entities/thundermc/infraestructura-hardware|Infraestructura Hardware]]**: Especificaciones del servidor dedicado, asignación de RAM y configuración de JVM flags.
 - **[[wiki/entities/thundermc/mobs-mazmorras|Mobs y Jefes de Mazmorras]]**: Catálogo técnico y habilidades de los jefes en MythicMobs.
+- **[[wiki/entities/thundermc/evento-halloween-mobs|Mobs Evento Halloween]]**: Diseño, cinemática Allay y configuración de producción del Fantasma Slimer en MythicMobs.
 - **[[wiki/entities/thundermc/composicion-minas|Composición de Minas]]**: Distribución de minerales por rangos y porcentajes de regeneración.
 - **[[wiki/entities/thundermc/custom-plugins/plugins-custom|Plugins Custom ThunderMC]]**: Especificación técnica de EnderChestPlus, RankUp y ValyrTutorial.
 - **[[wiki/entities/catamines|Catamines]]**: Motor y plugin de minería progresiva por rangos y zona PvP.

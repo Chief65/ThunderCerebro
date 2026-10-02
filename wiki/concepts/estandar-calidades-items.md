@@ -44,9 +44,9 @@ Cada calidad cuenta con su símbolo de apertura (`&8⁂`), gradiente/color hexad
 &8⁂ &#B01111&lM&#B61515&lI&#BD1919&lT&#C31E1E&lI&#CA2222&lC&#D02626&lA &e⭐⭐⭐⭐&7⭐
 ```
 
-### 5. LEGEND (5 Estrellas)
+### 5. DIVINA (5 Estrellas)
 ```text
-&8⁂ &#FD9A00&lL&#FAAE00&lE&#F7C200&lG&#F5D700&lE&#F2EB00&lN&#EFFF00&lD &e⭐⭐⭐⭐⭐
+&8⁂ &#FD9A00&lD&#FAAE00&lI&#F7C200&lV&#F5D700&lI&#F2EB00&lN&#EFFF00&lA &e⭐⭐⭐⭐⭐
 ```
 
 ### 6. LIMITED (Jackpot / Edición Especial)
@@ -64,7 +64,7 @@ Cada calidad cuenta con su símbolo de apertura (`&8⁂`), gradiente/color hexad
    - **RARA**: `&#1DC8FF`
    - **EPICA**: `&#732AE2`
    - **MITICA**: `&#D02626`
-   - **LEGEND**: `&#EFFF00`
+   - **DIVINA**: `&#EFFF00`
    - **LIMITED**: `&#5489FF`
 
 ## Enlaces Relacionados

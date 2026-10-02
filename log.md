@@ -2,7 +2,212 @@
 
 Registro cronológico e incremental de todas las operaciones realizadas en **ThunderCerebro**.
 
+## [2026-10-01] items & balance | Eliminación de Bolsa Limited y Adaptación Cromática de '¡Bolsita Abierta!' por Calidad
+- **Eliminación Canónica de Tier Limited**:
+  - Eliminado localmente y en servidor Sandbox: `bundle_recompensas_limited_test.yml`.
+  - Purgadas todas las referencias de mejora y lores a Limited (`&#5489FF➠ &fLimited (2%)`) en los 5 módulos restantes.
+  - Purgados los triggers de jackpot correspondientes (`2:LOOP START: ... ei give %player% bundle_recompensas_limited_test 1 ...`).
+  - **Bolsa Divina** formalizada como la cúspide de progresión: encabezado de lore actualizado a `&8★ ¡ᴄᴀʟɪᴅᴀᴅ ᴍÁxɪᴍᴀ! ★` con lista completa de calidades superadas en tachado.
+- **Adaptación Cromática de Títulos al Abrir (Códigos Vanilla Legacy)**:
+  - El comando `/title` de Minecraft vanilla no procesa colores en formato HEX (`&#HEX`), por lo que se ajustaron a códigos de color legacy correspondientes a cada tier:
+    - Súper: `&a¡Bolsita Abierta!`
+    - Rara: `&b¡Bolsita Abierta!`
+    - Épica: `&d¡Bolsita Abierta!`
+    - Mítica: `&4¡Bolsita Abierta!`
+    - Divina: `&e¡Bolsita Abierta!`
+- **Sincronización Remota**: Archivo limited eliminado vía SFTP y los 5 módulos actualizados (`super`, `rara`, `epica`, `mitica`, `legend`) desplegados en `plugins/ExecutableItems/items/ThunderMC/` en Sandbox (`ymykh9qy.274758bd`). Verificación exitosa.
+
+## [2026-10-01] items & ui | Estandarización de Subtítulo de Título 'ᴘʀᴇᴍɪᴏꜱ ʀᴇᴄɪʙɪᴅᴏꜱ' y Partículas de Tótem al Abrir
+- **Módulos YAML Actualizados (Suite de 6 Bolsitas)**:
+  1. [`creator/lab/bundle_recompensas_super_test.yml`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/lab/bundle_recompensas_super_test.yml)
+  2. [`creator/lab/bundle_recompensas_rara_test.yml`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/lab/bundle_recompensas_rara_test.yml)
+  3. [`creator/lab/bundle_recompensas_epica_test.yml`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/lab/bundle_recompensas_epica_test.yml)
+  4. [`creator/lab/bundle_recompensas_mitica_test.yml`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/lab/bundle_recompensas_mitica_test.yml)
+  5. [`creator/lab/bundle_recompensas_legend_test.yml`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/lab/bundle_recompensas_legend_test.yml)
+  6. [`creator/lab/bundle_recompensas_limited_test.yml`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/lab/bundle_recompensas_limited_test.yml)
+- **Modificaciones de Feedback Visual**:
+  - Subtítulo unificado al momento de apertura: `title %player% subtitle "&fᴘʀᴇᴍɪᴏꜱ ʀᴇᴄɪʙɪᴅᴏꜱ"` propagado a todos los outcomes estándar (reemplaza la lista redundante en el subtitle).
+  - Partículas de apertura: agregado `PARTICLE TOTEM 25 0.4 0.4` sincronizado con las partículas existentes al revelar el botín.
+- **Sincronización Remota**: Subidos los 6 archivos a `plugins/ExecutableItems/items/ThunderMC/` en Sandbox (`ymykh9qy.274758bd`). Verificación exitosa.
+
+## [2026-10-01] mythicmobs & eventos | Mob de Evento Halloween: Fantasma Viscoso (Slimer) con Vuelo Allay
+- **Módulos Creados y Promocionados a Producción**:
+  - Mob definitivo: [`creator/output/configs/MythicMobs/fantasma_halloween.yml`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/output/configs/MythicMobs/fantasma_halloween.yml)
+  - Ítems definitivos: [`creator/output/configs/MythicMobs/fantasma_items_halloween.yml`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/output/configs/MythicMobs/fantasma_items_halloween.yml)
+  - Desplegado en Sandbox: `plugins/MythicMobs/mobs/fantasma.yml` y `plugins/MythicMobs/items/fantasma_items.yml`.
+- **Documentación Wiki y Memoria**:
+  - Creada documentación oficial: [`wiki/entities/thundermc/evento-halloween-mobs.md`](file:///C:/Users/PC/Desktop/ThunderCerebro/wiki/entities/thundermc/evento-halloween-mobs.md).
+  - Vinculación permanente de término operativo: la expresión *"evento de halloween mobs"* queda indexada formalmente para referirse a este mob y su arquitectura técnica.
+  - Actualizado [`index.md`](file:///C:/Users/PC/Desktop/ThunderCerebro/index.md).
+- **Especificaciones Técnicas Validadas**:
+  - Arquitectura bi-entidad: Bebé Zombie jinete con invisibilidad en cuerpo montado sobre un Allay invisible/invulnerable (`Fantasma_Vuelo`).
+  - Vuelo tridimensional nativo a altura de ojos/cabeza del jugador (~1.8 - 2.2 bloques) sin rozar el suelo ni atascar pathfinding.
+  - Equipamiento: Cabeza de Slime oficial (#105231) + Peto de cuero verde lima ectoplasma (`RGB: 120, 205, 35`), sin pantalones ni botas (`AIR`) para crear efecto de torso flotante.
+  - Sincronización de muerte: Destrucción instantánea del Allay al morir el fantasma mediante `@Children` y comando console `execute at <caster.uuid> run kill @e[type=allay,distance=..3,limit=1]`.
+
+
+## [2026-10-01] items & essentials | Desvinculación de Negrita en Estrella y Silenciamiento de Notificación de Saldo EssentialsX
+- **Módulos YAML Actualizados (Suite de 6 Bolsas)**:
+  - Eliminado el formato `&l` de la estrella en los títulos de chat, pasando de `&#HEX&l⭐ BOLSA...` a `&#HEX⭐ &lBOLSA...` en los 6 tiers:
+    1. [`creator/lab/bundle_recompensas_super_test.yml`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/lab/bundle_recompensas_super_test.yml) ▶ `&#3CDB10⭐ &lBOLSA SUPER`
+    2. [`creator/lab/bundle_recompensas_rara_test.yml`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/lab/bundle_recompensas_rara_test.yml) ▶ `&#1DC8FF⭐ &lBOLSA RARA`
+    3. [`creator/lab/bundle_recompensas_epica_test.yml`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/lab/bundle_recompensas_epica_test.yml) ▶ `&#732AE2⭐ &lBOLSA EPICA`
+    4. [`creator/lab/bundle_recompensas_mitica_test.yml`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/lab/bundle_recompensas_mitica_test.yml) ▶ `&#D02626⭐ &lBOLSA MITICA`
+    5. [`creator/lab/bundle_recompensas_legend_test.yml`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/lab/bundle_recompensas_legend_test.yml) ▶ `&#EFFF00⭐ &lBOLSA DIVINA`
+    6. [`creator/lab/bundle_recompensas_limited_test.yml`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/lab/bundle_recompensas_limited_test.yml) ▶ `&#5489FF⭐ &lBOLSA &#FF4B4B&lL...`
+- **Configuración de EssentialsX Modificada**:
+  - Silenciada la clave `addedToAccount=` (dejada en blanco) tanto en `plugins/Essentials/messages/messages_es.properties` como en `plugins/Essentials/messages/messages.properties`.
+  - Evita la notificación redundante `THUNDERMC ✔ Se añadieron X a tu cuenta` al abrir bolsitas o recibir ingresos vía `/eco give`.
+- **Sincronización Remota**: Subidos los 6 archivos de ExecutableItems y los 2 archivos de propiedades de Essentials al Sandbox (`ymykh9qy.274758bd`). Verificación completada.
+
+## [2026-10-01] items & ui | Propagación de Formato de Mensaje de Chat en Apertura a Toda la Suite (Tiers I a VI)
+- **Módulos Actualizados y Desplegados**:
+  1. [`creator/lab/bundle_recompensas_super_test.yml`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/lab/bundle_recompensas_super_test.yml) ▶ Cabecera: `&r  &#3CDB10&l⭐ BOLSA SUPER`
+  2. [`creator/lab/bundle_recompensas_rara_test.yml`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/lab/bundle_recompensas_rara_test.yml) ▶ Cabecera: `&r  &#1DC8FF&l⭐ BOLSA RARA`
+  3. [`creator/lab/bundle_recompensas_epica_test.yml`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/lab/bundle_recompensas_epica_test.yml) ▶ Cabecera: `&r  &#732AE2&l⭐ BOLSA EPICA`
+  4. [`creator/lab/bundle_recompensas_mitica_test.yml`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/lab/bundle_recompensas_mitica_test.yml) ▶ Cabecera: `&r  &#D02626&l⭐ BOLSA MITICA`
+  5. [`creator/lab/bundle_recompensas_legend_test.yml`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/lab/bundle_recompensas_legend_test.yml) ▶ Cabecera: `&r  &#EFFF00&l⭐ BOLSA DIVINA`
+  6. [`creator/lab/bundle_recompensas_limited_test.yml`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/lab/bundle_recompensas_limited_test.yml) ▶ Cabecera: `&r  &#5489FF&l⭐ BOLSA &#FF4B4B&lL&#FF8B2D&lI&#FFD031&lM&#DCFF39&lI&#6DFF45&lT&#3BFFC7&lE&#5489FF&lD`
+- **Diseño Unificado en los 6 Tiers**:
+  - Margen superior e inferior vacío (`SEND_MESSAGE &r`).
+  - Margen izquierdo de 2 espacios (`&r  `) en todas las líneas.
+  - Subtítulo uniforme: `&r  &7ʀᴇᴄᴏᴍᴘᴇɴꜱᴀꜱ`.
+  - Recompensas individuales con viñeta oscura `&8•` y texto en color blanco vanilla `&f`.
+- **Sincronización Remota**: Subidos los 5 archivos restantes vía SFTP por lote a `plugins/ExecutableItems/items/ThunderMC/` en Sandbox (`ymykh9qy.274758bd`). Verificación exitosa.
+
+## [2026-10-01] items & ui | Ajuste de Mensaje de Chat en Apertura de Bolsa Épica (Indentación, Negrita, Mayúsculas y Premios en Blanco)
+- **Módulo Actualizado**: [`creator/lab/bundle_recompensas_epica_test.yml`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/lab/bundle_recompensas_epica_test.yml)
+- **Cambios de Formato Implementados**:
+  1. **Margen Izquierdo**: Agregada indentación de 2 espacios (`&r  `) al inicio de cada línea del bloque informativo.
+  2. **Cabecera**: Texto en negrita y mayúsculas completas: `&r  &#732AE2&l⭐ BOLSA EPICA`.
+  3. **Recompensas**: Texto de los premios entregados en blanco vanilla (`&f$5.000`, `&f12x Diamantes`, `&f$6.500`, `&f4x Bloques de Hierro`, `&f$8.000`, `&f4x Bloques de Oro`) manteniendo viñetas oscuras `&8•`.
+- **Sincronización**: Desplegado en Sandbox (`plugins/ExecutableItems/items/ThunderMC/bundle_recompensas_epica_test.yml`).
+
+## [2026-10-01] items & mechanics | Migración de Calidad a DIVINA y Propagación de Animación de Apertura 5s con Cuenta Regresiva
+- **Módulos Actualizados y Desplegados (Suite de 6 Bolsitas)**:
+  1. [`creator/lab/bundle_recompensas_super_test.yml`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/lab/bundle_recompensas_super_test.yml) ▶ Tier I: Súper (`&#3CDB10⭐ &fBolsita &8▶ &#3CDB10Super`)
+  2. [`creator/lab/bundle_recompensas_rara_test.yml`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/lab/bundle_recompensas_rara_test.yml) ▶ Tier II: Rara (`&#1DC8FF⭐ &fBolsita &8▶ &#1DC8FFRara`)
+  3. [`creator/lab/bundle_recompensas_epica_test.yml`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/lab/bundle_recompensas_epica_test.yml) ▶ Tier III: Épica (`&#732AE2⭐ &fBolsita &8▶ &#732AE2Epica`)
+  4. [`creator/lab/bundle_recompensas_mitica_test.yml`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/lab/bundle_recompensas_mitica_test.yml) ▶ Tier IV: Mítica (`&#D02626⭐ &fBolsita &8▶ &#D02626Mitica`)
+  5. [`creator/lab/bundle_recompensas_legend_test.yml`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/lab/bundle_recompensas_legend_test.yml) ▶ Tier V: Divina (`&#EFFF00⭐ &fBolsita &8▶ &#EFFF00Divina`, tag `&8⁂ &#FD9A00&lD&#FAAE00&lI&#F7C200&lV&#F5D700&lI&#F2EB00&lN&#EFFF00&lA &e⭐⭐⭐⭐⭐`)
+  6. [`creator/lab/bundle_recompensas_limited_test.yml`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/lab/bundle_recompensas_limited_test.yml) ▶ Tier VI: Limited (`&#5489FF⭐ &fBolsita &8▶ &#FF4B4BL&#FF8B2Di&#FFD031m&#DCFF39i&#6DFF45t&#3BFFC7e&#5489FFd`)
+- **Implementaciones Clave**:
+  1. **Transición Canónica Legend $\to$ Divina**: Reemplazada la denominación Legend por **Divina** en toda la jerarquía de lore (`➠ &fDivina (75%)` / `➠ &7&mDivina (5%)`), tag formal `&8⁂ DIVINA &e⭐⭐⭐⭐⭐`, broadcasts y comandos de upgrade. Actualizado el estándar canónico en [`wiki/concepts/estandar-calidades-items.md`](file:///C:/Users/PC/Desktop/ThunderCerebro/wiki/concepts/estandar-calidades-items.md).
+  2. **Propagación del Motor de Animación Diseñado por el Sr Ramos**:
+     - Estructura limpia de 5 segundos con fotogramas de 10 ticks:
+       - `title %player% title "<Color>Bolsita <Tier>"`
+       - `title %player% subtitle "&8▪ &fᴀʙʀɪᴇɴᴅᴏ &8[&a&m ... &r&8] &7Xs"` (cuenta regresiva 5s $\to$ 1s con barra segmentada).
+       - Efectos acústicos sincrónicos: `playsound minecraft:item.bundle.drop_contents` + `minecraft:block.note_block.hat`.
+       - Resolución con títulos estandarizados: `&a¡Bolsita Abierta!` para recompensas base y títulos con formato canónico en mejoras de tier.
+- **Sincronización Remota**:
+  - Subidos los 6 módulos YAML vía SFTP a `plugins/ExecutableItems/items/ThunderMC/` en Sandbox (`ymykh9qy.274758bd`). Verificación de integridad completada.
+
+## [2026-10-01] items & ui | Propagación de Diseño Oficial de Nombre y Lore en Suite de Bolsitas de Premios (Tiers I a VI)
+- **Módulos Actualizados y Desplegados**:
+  1. [`creator/lab/bundle_recompensas_super_test.yml`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/lab/bundle_recompensas_super_test.yml) ▶ Tier I: Súper (`&#3CDB10⭐ &fBolsita &8▶ &#3CDB10Super`)
+  2. [`creator/lab/bundle_recompensas_rara_test.yml`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/lab/bundle_recompensas_rara_test.yml) ▶ Tier II: Rara (`&#1DC8FF⭐ &fBolsita &8▶ &#1DC8FFRara`)
+  3. [`creator/lab/bundle_recompensas_epica_test.yml`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/lab/bundle_recompensas_epica_test.yml) ▶ Tier III: Épica (`&#732AE2⭐ &fBolsita &8▶ &#732AE2Epica`)
+  4. [`creator/lab/bundle_recompensas_mitica_test.yml`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/lab/bundle_recompensas_mitica_test.yml) ▶ Tier IV: Mítica (`&#D02626⭐ &fBolsita &8▶ &#D02626Mitica`)
+  5. [`creator/lab/bundle_recompensas_legend_test.yml`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/lab/bundle_recompensas_legend_test.yml) ▶ Tier V: Legend (`&#EFFF00⭐ &fBolsita &8▶ &#EFFF00Legend`)
+  6. [`creator/lab/bundle_recompensas_limited_test.yml`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/lab/bundle_recompensas_limited_test.yml) ▶ Tier VI: Limited (`&#5489FF⭐ &fBolsita &8▶ &#FF4B4BL&#FF8B2Di&#FFD031m&#DCFF39i&#6DFF45t&#3BFFC7e&#5489FFd`)
+- **Alineación Visual implementada**:
+  - Propagado el patrón de nomenclatura canónico del Sr Ramos: `&#<HEX>⭐ &fBolsita &8▶ &#<HEX><Calidad>` (con degradado Rainbow completo para Limited).
+  - Unificado el encabezado de progresión a `&8ᴘʀᴏʙ ᴅᴇ ᴍᴇᴊᴏʀᴀʀ:` en small-caps para Tiers I-V y `&8★ ¡ᴄᴀʟɪᴅᴀᴅ ᴍÁxɪᴍᴀ! ★` para Tier VI.
+- **Sincronización Remota**:
+  - Sincronizados los 6 archivos vía SFTP en `plugins/ExecutableItems/items/ThunderMC/` del servidor Sandbox (`ymykh9qy.274758bd`). Verificación exitosa.
+
+## [2026-09-30] brand & renders | Iconos Discord con Fondo Flat Amarillo Corporativo (#FEEB00)
+- **Entregables creados**:
+  - **Variante Cerdo Rey con Corona**:
+    - PNG Oficial Discord 512x512: [`creator/output/renders/logo_rey/logo_rey_flat_yellow_discord.png`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/output/renders/logo_rey/logo_rey_flat_yellow_discord.png)
+    - Simulación de Tamaños Discord: [`creator/output/renders/logo_rey/preview_rey_flat_yellow_discord.png`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/output/renders/logo_rey/preview_rey_flat_yellow_discord.png)
+  - **Variante Caballero Medieval**:
+    - PNG Oficial Discord 512x512: [`creator/output/renders/logo_caballero/logo_caballero_flat_yellow_discord.png`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/output/renders/logo_caballero/logo_caballero_flat_yellow_discord.png)
+    - Simulación de Tamaños Discord: [`creator/output/renders/logo_caballero/preview_caballero_flat_yellow_discord.png`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/output/renders/logo_caballero/preview_caballero_flat_yellow_discord.png)
+- **Aspectos técnicos**:
+  1. Extracción exacta del color corporativo del embed provisto: `accent_color: 16706304` = `#FEEB00` (RGB: 254, 235, 0).
+  2. Sustitución de fondos escénicos por un color plano *flat* puro sin texturas ni degradados.
+  3. Contraste de alto impacto en Discord: el trazo perimetral burdeos `#4A1010` delimita con máxima nitidez la silueta contra el fondo amarillo eléctrico, garantizando 100% de reconocimiento visual en la barra lateral reducida a 32x32 y 48x48 px.
+
+## [2026-09-30] brand & renders | Cerdo Rey con Corona + Fondo Dungeon Cinemático (Estilo Shaders/Chimenea)
+- **Entregables creados**:
+  - PNG Oficial Discord 512x512: [`creator/output/renders/logo_rey/logo_rey_cinematic_dungeon_discord.png`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/output/renders/logo_rey/logo_rey_cinematic_dungeon_discord.png)
+  - Simulación de Tamaños Discord: [`creator/output/renders/logo_rey/preview_rey_cinematic_dungeon_discord.png`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/output/renders/logo_rey/preview_rey_cinematic_dungeon_discord.png)
+  - Fondo Base Dungeon Cinemático 1024x1024: [`creator/output/renders/logo_rey/dungeon_cinematic_bg.jpg`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/output/renders/logo_rey/dungeon_cinematic_bg.jpg)
+  - Imagen de Referencia de Usuario Persistida: [`creator/raw/references/render_estilo_referencia_chimenea.jpg`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/raw/references/render_estilo_referencia_chimenea.jpg)
+- **Aspectos técnicos**:
+  1. Alineación estética con la referencia provista: iluminación volumétrica global, fuego cúbico resplandeciente en el hogar central, velas en repisas de piedra y sombras en azul pizarra/carbón.
+  2. Arquitectura de mazmorra simétrica: chimenea/hoguera monumental de ladrillos de piedra con arco gótico y textura de bloques nítida sin ruido visual.
+  3. Integración con el cerdo rey canónico de `THUNDER_ICON_LOGO.png` al 82% de cobertura, logrando un balance cromático entre el resplandor ámbar cálido de las llamas y la corona dorada.
+
+## [2026-09-30] brand & renders | Cerdo Rey con Corona Oficial + Fondo Mazmorra Minecraft Vanilla
+- **Entregables creados**:
+  - PNG Oficial Discord 512x512: [`creator/output/renders/logo_rey/logo_rey_mc_vanilla_discord.png`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/output/renders/logo_rey/logo_rey_mc_vanilla_discord.png)
+  - Simulación de Tamaños Discord: [`creator/output/renders/logo_rey/preview_rey_mc_vanilla_discord.png`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/output/renders/logo_rey/preview_rey_mc_vanilla_discord.png)
+  - Render Base Mazmorra Vanilla 1024x1024: [`creator/output/renders/logo_rey/mc_vanilla_dungeon_bg.jpg`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/output/renders/logo_rey/mc_vanilla_dungeon_bg.jpg)
+- **Aspectos técnicos**:
+  1. Fidelidad estricta a texturas oficiales de Minecraft Vanilla: bloques reconocibles de adoquín (*cobblestone*), adoquín musgoso (*mossy cobblestone*), ladrillos de piedra (*stone bricks*) y antorcha vanilla con textura pixel-art de fuego/humo.
+  2. Atmósfera de mazmorra clásica: iluminación natural de antorcha en nivel de luz 7-8 sobre bloques cúbicos 3D, barrotes de hierro y cofre de madera en penumbra.
+  3. Contraste de identidad: el cerdo rey con corona original de `THUNDER_ICON_LOGO.png` domina el 82% del círculo en primer plano, integrándose orgánicamente en el entorno de juego real sin generar ruido visual.
+
+## [2026-09-30] brand & renders | Cerdo Rey con Corona Oficial + Fondo Dungeon Tenue
+- **Entregables creados**:
+  - PNG Oficial Discord 512x512: [`creator/output/renders/logo_rey/logo_rey_dungeon_discord.png`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/output/renders/logo_rey/logo_rey_dungeon_discord.png)
+  - Simulación de Tamaños Discord: [`creator/output/renders/logo_rey/preview_rey_dungeon_discord.png`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/output/renders/logo_rey/preview_rey_dungeon_discord.png)
+  - Fondo Base Dungeon Tenue: [`creator/output/renders/logo_rey/dungeon_tenue_bg.jpg`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/output/renders/logo_rey/dungeon_tenue_bg.jpg)
+- **Aspectos técnicos**:
+  1. Supresión total del ruido visual: sustitución del castillo complejo por una cámara de mazmorra oscura con bloques geométricos de piedra cúbica en planos vectoriales planos (*cel-shading* estricto).
+  2. Atmósfera tenue y minimalista: reja de calabozo al fondo, pilares limpios de pizarra y una única antorcha tenue con resplandor ámbar suave.
+  3. Contraste óptimo del personaje: el cerdo rey con corona original de `THUNDER_ICON_LOGO.png` se sitúa en primer plano absoluto sin interferencias ni competencia gráfica.
+
+## [2026-09-30] brand & renders | Cerdo Rey con Corona Oficial + Fondo Medieval de Castillo
+- **Entregables creados**:
+  - PNG Oficial Discord 512x512: [`creator/output/renders/logo_rey/logo_rey_castillo_discord.png`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/output/renders/logo_rey/logo_rey_castillo_discord.png)
+  - Simulación de Tamaños Discord: [`creator/output/renders/logo_rey/preview_rey_castillo_discord.png`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/output/renders/logo_rey/preview_rey_castillo_discord.png)
+  - Render Base 1024x1024: [`creator/output/renders/logo_rey/logo_rey_castillo_raw.jpg`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/output/renders/logo_rey/logo_rey_castillo_raw.jpg)
+  - Ficha técnica: [`creator/lab/renders/logo_rey/logo_rey_castillo.md`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/lab/renders/logo_rey/logo_rey_castillo.md)
+- **Aspectos técnicos**:
+  1. Integración del cerdo rey con corona de oro de `THUNDER_ICON_LOGO.png` en un entorno de fortaleza medieval con el mismo estándar `estilo_logo`.
+  2. Elementos arquitectónicos vivos: torres de sillar con almenas, estandartes heráldicos, portal ojival con rastrillo, antorchas encendidas y cielo nocturno con luna.
+  3. Formateado en medallón circular de 512x512 px con esquinas transparentes, optimizado para máxima micro-lectura en la barra lateral de Discord (32x32 y 48x48 px).
+
+## [2026-09-30] brand & renders | Logo Caballero Prueba 6: Alta Definición, Matting Alfa y Defringing
+- **Entregables creados**:
+  - Ficha técnica: [`creator/lab/renders/logo_caballero/logo_caballero_6.md`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/lab/renders/logo_caballero/logo_caballero_6.md)
+  - Render estándar: [`creator/output/renders/logo_caballero/logo_caballero_6.jpg`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/output/renders/logo_caballero/logo_caballero_6.jpg)
+  - Versión transparente ARGB refinada: [`creator/output/renders/logo_caballero/logo_caballero_6.png`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/output/renders/logo_caballero/logo_caballero_6.png)
+  - Validación fondo oscuro (#18191C): [`creator/output/renders/logo_caballero/logo_caballero_6_test_dark.png`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/output/renders/logo_caballero/logo_caballero_6_test_dark.png)
+  - **Pack Optimizado Discord (512x512)**:
+    - Transparente con encuadre circular estricto (0 px recortados): [`creator/output/renders/logo_caballero/logo_caballero_discord_transparente.png`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/output/renders/logo_caballero/logo_caballero_discord_transparente.png)
+    - Emblema con disco Thunder y aro dorado: [`creator/output/renders/logo_caballero/logo_caballero_discord_emblema.png`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/output/renders/logo_caballero/logo_caballero_discord_emblema.png)
+    - **Fondo Castillo V2 Iluminado (Torres, Almenas, Antorchas y Luna)**: [`creator/output/renders/logo_caballero/logo_caballero_discord_castillo_v2.png`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/output/renders/logo_caballero/logo_caballero_discord_castillo_v2.png) (Simulación: [`creator/output/renders/logo_caballero/preview_discord_castillo_v2.png`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/output/renders/logo_caballero/preview_discord_castillo_v2.png))
+- **Refinamiento técnico**:
+  1. Depuración perimetral profunda: eliminación total del halo residual claro mediante penetración directa hasta el trazo oscuro `#4A1010`.
+  2. Auditoría perimetral certificada: 2.765 píxeles perimetrales oscuros vs. 0 píxeles residuales claros en la frontera con la transparencia.
+  3. Suavizado subpixel continuo y libre de halos sobre cualquier fondo (blanco, oscuro o transparente).
+  4. Mayor definición en degradados del penacho amarillo y facetas de acero con biseles nítidos.
+
+## [2026-09-30] brand & renders | Logo Caballero Prueba 5: Coleta Amarilla Corporativa y Desgaste Sutil
+- **Entregables creados**:
+  - Ficha técnica: [`creator/lab/renders/logo_caballero/logo_caballero_5.md`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/lab/renders/logo_caballero/logo_caballero_5.md)
+  - Render estándar: [`creator/output/renders/logo_caballero/logo_caballero_5.jpg`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/output/renders/logo_caballero/logo_caballero_5.jpg)
+  - Versión transparente ARGB: [`creator/output/renders/logo_caballero/logo_caballero_5.png`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/output/renders/logo_caballero/logo_caballero_5.png)
+- **Modificaciones aplicadas sobre Modelo 3**:
+  1. Penacho/coleta superior transformado a amarillo oro corporativo Thunder (`#FFD700`), unificando la identidad cromática de la corona original.
+  2. Moderación de magulladuras y eliminación de abolladuras invasivas; incorporación de desgaste sutil y pulido en biseles de acero manteniendo cel-shading estricto.
+  3. Conversión de fondo a canal alfa transparente para uso directo en plataformas web y Tebex.
+
+
+## [2026-09-29] gamedev-roles-app | App de Roles de Estudio Indie con Prompts Profesionales
+- **Entregable creado**: [`creator/lab/gamedev_roles_app/index.html`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/lab/gamedev_roles_app/index.html) — SPA HTML/CSS/JS sin dependencias externas.
+- **Funcionalidad**: Navbar lateral con 7 departamentos (EXECUTIVE, MARKETING, PROGRAMACION, DISENO, ARTE, AUDIO, PRODUCCION) + vista "Todos". Cada rol muestra: descripción, ¿Por qué se debe tener?, Riesgo si falta, y Prompt de Liderazgo colapsable.
+- **Prompts profesionales**: 21 prompts individuales por rol — cada uno con contexto operativo, marco metodológico, herramientas específicas, referencias reales (GDC, libros de industria) y output esperado accionable.
+- **Bugs resueltos**: función `renderCards` mal declarada (código fuera de función), botón de prompt duplicado por lógica redundante de dept-level, caracteres corruptos por doble codificación Latin-1252/UTF-8 en heredoc PowerShell (solucionado con ensamblado de bytes crudos), fuente monospace y overflow del bloque `<pre>` (CSS `white-space: pre-wrap` + font stack del sistema).
+- **Renders ThunderStudios**: series caballero_portal (4), caballero_fogata (1+final), barco_pirata (4), logo_caballero (4) + THUNDER_ICON_LOGO — persistidos en `creator/output/renders/` con fichas técnicas en `creator/lab/renders/`.
+- **Commit**: `b8aec13` — 44 files changed, 2163 insertions, 280 deletions.
+
 ## [2026-09-29] items & standards | Estandarización Final: Nomenclatura 'Bolsita de Premios', Progresión Tachada y Despliegue SFTP
+
 - **Módulos Optimizados y Desplegados (Suite de 6 Bolsitas de Premios)**:
   1. [`creator/lab/bundle_recompensas_super_test.yml`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/lab/bundle_recompensas_super_test.yml) (`bundle_recompensas_super_test`) ▶ Tier I: Súper (`&#3CDB10Bolsita de Premios`, `LIME_BUNDLE`)
   2. [`creator/lab/bundle_recompensas_rara_test.yml`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/lab/bundle_recompensas_rara_test.yml) (`bundle_recompensas_rara_test`) ▶ Tier II: Rara (`&#1DC8FFBolsita de Premios`, `LIGHT_BLUE_BUNDLE`)
