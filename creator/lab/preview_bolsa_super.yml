@@ -1,0 +1,130 @@
+menu_title: '&0&l|&r &8Recompensas ▶ &#3CDB10Bolsita Súper'
+open_command:
+  - preview_bolsa_super
+size: 27
+register_command: false
+update: false
+
+items:
+  # ── BORDES DECORATIVOS ──
+  'Panel_Borde':
+    material: GRAY_STAINED_GLASS_PANE
+    slots:
+      - 0
+      - 1
+      - 2
+      - 3
+      - 4
+      - 5
+      - 6
+      - 7
+      - 8
+      - 9
+      - 17
+      - 18
+      - 19
+      - 20
+      - 21
+      - 23
+      - 24
+      - 25
+      - 26
+    display_name: '&7'
+    item_flags:
+      - HIDE_ATTRIBUTES
+
+  # ── MEJORAS DE CALIDAD ──
+  'Mejora_Calidad':
+    material: NETHER_STAR
+    slot: 10
+    display_name: '&#FFB300⭐ &lMejora de Calidad'
+    item_flags:
+      - HIDE_ATTRIBUTES
+      - HIDE_ENCHANTS
+    enchantments:
+      - UNBREAKING;1
+    lore:
+      - '&8ᴘʀᴏʙᴀʙɪʟɪᴅᴀᴅ ᴅᴇ ᴍᴜᴛᴀᴄɪóɴ'
+      - ''
+      - ' &7Al abrir, la bolsa puede mutar'
+      - ' &7directamente a una calidad superior:'
+      - ''
+      - ' &#1DC8FF• &fCalidad Rara: &#1DC8FF50.0%'
+      - ' &#732AE2• &fCalidad Épica: &#732AE228.0%'
+      - ' &#D02626• &fCalidad Mítica: &#D0262615.0%'
+      - ' &#EFFF00• &fCalidad Divina: &#EFFF005.0%'
+      - ''
+      - ' &8▸ &7Si mejora, recibes la nueva bolsita'
+      - '   &7sin quemar recompensas de este tier.'
+
+  # ── FASE I: DINERO ──
+  'Fase1_Dinero':
+    material: SUNFLOWER
+    slot: 12
+    display_name: '&#2ECC71💵 &lFase I &8· &fEfectivo'
+    item_flags:
+      - HIDE_ATTRIBUTES
+    lore:
+      - '&8ʀᴇᴄᴏᴍᴘᴇɴꜱᴀ ᴇᴄᴏɴóᴍɪᴄᴀ'
+      - ''
+      - ' &7Dinero inyectado a tu cuenta'
+      - ' &7al abrir la bolsa exitosamente:'
+      - ''
+      - ' &#2ECC71• &f$800: &#2ECC7150.0%'
+      - ' &#2ECC71• &f$1.200: &#2ECC7135.0%'
+      - ' &#2ECC71• &f$1.500: &#2ECC7115.0%'
+      - ''
+      - ' &8▸ &aRecompensa garantizada.'
+
+  # ── FASE II: CONSUMIBLES ──
+  'Fase2_Consumibles':
+    material: CHEST
+    slot: 14
+    display_name: '&#3498DB📦 &lFase II &8· &fConsumibles'
+    item_flags:
+      - HIDE_ATTRIBUTES
+    lore:
+      - '&8ᴏʙᴊᴇᴛᴏꜱ ʏ ʀᴇᴄᴜʀꜱᴏꜱ'
+      - ''
+      - ' &7Un recurso útil seleccionado'
+      - ' &7al abrir tu bolsita:'
+      - ''
+      - ' &#00A896• &fVial de Almas: &a40.0%'
+      - ' &#E67E22• &fKit Súper: &e35.0%'
+      - ' &#F1C40F• &f4x Manzana de Oro: &625.0%'
+      - ''
+      - ' &8▸ &aRecompensa garantizada.'
+
+  # ── JACKPOT: LLAVE CRATE ──
+  'Jackpot_Crate':
+    material: TRIPWIRE_HOOK
+    slot: 16
+    display_name: '&#FFD700★ &lPremio Jackpot &8· &fLlave Crate'
+    item_flags:
+      - HIDE_ATTRIBUTES
+      - HIDE_ENCHANTS
+    enchantments:
+      - UNBREAKING;1
+    lore:
+      - '&8ʙᴏᴛíɴ ᴇxᴄʟᴜꜱɪᴠᴏ'
+      - ''
+      - ' &7Premio extraordinario que puede'
+      - ' &7caer adicionalmente al abrir:'
+      - ''
+      - ' &#FFD700• &fLlave Crate Súper: &#FFD7002.0%'
+      - ''
+      - ' &8▸ &e¡Roll independiente adicional!'
+
+  # ── BOTÓN CERRAR ──
+  'Boton_Cerrar':
+    material: BARRIER
+    slot: 22
+    display_name: '&c&lCerrar'
+    lore:
+      - '&7Click para cerrar la vista previa.'
+    left_click_commands:
+      - '[sound] UI_BUTTON_CLICK'
+      - '[close]'
+    right_click_commands:
+      - '[sound] UI_BUTTON_CLICK'
+      - '[close]'

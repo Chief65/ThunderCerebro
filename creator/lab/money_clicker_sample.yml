@@ -1,0 +1,16 @@
+file_name: money_clicker_simple.yml
+id: MONEY_CLICKER_SIMPLE
+material: EMERALD
+display_name: "&aMoney Pouch"
+lore:
+  - "&7Right-click for &a500-1000 &7coins!"
+quantity: 1
+activators:
+  rightClick:
+    act: PLAYER_RIGHT_CLICK
+    cooldownFeatures:
+      cooldown: 4
+      isCooldownInTicks: true
+    playerCommands:
+      - "eco give %player% %rand:500|2000%"
+      - "SEND_MESSAGE &a¡Has recibido dinero!"

@@ -1,21 +1,25 @@
-# Nombre mostrado del objeto
-name: '&#D02626⭐ &fBolsita &8▶ &#D02626Mitica'
-# Lore del objeto
+# ══════════════════════════════════════════════════════════════════
+#  BOLSITA MÍTICA — v1.0 (Arquitectura MEGA-RANDOM)
+#  MEGA-RANDOM (1000 pesos): Upgrades(50) + Apertura(950)
+#  Upgrades: Divina=50
+#  Phase I: $20.000(50%) | $30.000(35%) | $35.000(15%)
+#  Phase II: Fly 1h(40%) | Manzana Notch x2(35%) | Kit Mítica(25%)
+#  Jackpot: 5% → crate_mitica
+# ══════════════════════════════════════════════════════════════════
+name: '&#D02626⭐ &fBolsita &8▶ &#D02626Mítica'
 lore:
 - '&8ʀᴇᴄᴏᴍᴘᴇɴꜱᴀ'
 - ''
 - ' &7Bolsita con premios'
-- ' &7para aventureros.'
+- ' &7para campeones.'
 - ''
 - ' &8ᴘʀᴏʙ ᴅᴇ ᴍᴇᴊᴏʀᴀʀ:'
-- ' &#1DC8FF➠ &7&mRara (50%)'
-- ' &#732AE2➠ &7&mÉpica (28%)'
-- ' &#D02626➠ &7&mMítica (15%)'
-- ' &#EFFF00➠ &fDivina &8(&75%&8)'
+- ' &#EFFF00➠ &fDivina &8(&750%&8)'
 - ''
-- ' &8⁂ &#B01111&lM&#B61515&lI&#BD1919&lT&#C31E1E&lI&#CA2222&lC&#D02626&lA &e⭐⭐⭐⭐&7⭐'
+- ' &8⁂ &#C82020&lM&#CE2828&lI&#D43030&lT&#DA3838&lI&#E04040&lC&#E64848&lA &e⭐⭐⭐⭐&7⭐'
 - ''
 - '&7▶ ᴄʟɪᴄᴋ ᴅᴇʀ - ᴀʙʀɪʀ'
+- '&8▶ ꜱʜɪꜰᴛ+ᴄʟɪᴄᴋ - ᴠᴇʀ ʟᴏᴏᴛ'
 material: RED_BUNDLE
 glow: true
 disableStack: false
@@ -69,7 +73,7 @@ restrictions:
 variables: {}
 activators:
   activator1:
-    name: '&eActivator'
+    name: '&eAbrir Bolsita'
     option: PLAYER_RIGHT_CLICK
     typeTarget: NO_TYPE_TARGET
     usageModification: -1
@@ -93,42 +97,116 @@ activators:
     playerCommands:
     - 'effect give %player% minecraft:darkness 4 0 true'
     - 'title %player% times 0 20 5'
-    - 'title %player% title "&cBolsita Mitica"'
-    - 'title %player% subtitle "&8▪ &fᴀʙʀɪᴇɴᴅᴏ &8[&a&m &8&m &8&m &8&m &8&m &r&8] &75s"'
+    - 'title %player% title "&4Bolsita Mítica"'
+    - 'title %player% subtitle "&8▪ &fᴀʙʀɪᴇɴᴅᴏ &8[&4&m &8&m &8&m &8&m &8&m &r&8] &75s"'
     - 'execute at %player% run playsound minecraft:item.bundle.drop_contents master %player% ~ ~ ~ 0.8 1.0'
     - 'execute at %player% run playsound minecraft:block.note_block.hat master %player% ~ ~ ~ 0.8 1.0'
     - 'DELAY_TICK 10'
-    - 'title %player% title "&cBolsita Mitica"'
-    - 'title %player% subtitle "&8▪ &fᴀʙʀɪᴇɴᴅᴏ &8[&a&m &a&m &8&m &8&m &8&m &r&8] &74s"'
-    - 'execute at %player% run playsound minecraft:item.bundle.drop_contents master %player% ~ ~ ~ 0.8 1.0'
-    - 'execute at %player% run playsound minecraft:block.note_block.hat master %player% ~ ~ ~ 0.8 1.0'
+    - 'title %player% title "&4Bolsita Mítica"'
+    - 'title %player% subtitle "&8▪ &fᴀʙʀɪᴇɴᴅᴏ &8[&4&m &4&m &8&m &8&m &8&m &r&8] &74s"'
+    - 'execute at %player% run playsound minecraft:item.bundle.drop_contents master %player% ~ ~ ~ 0.8 1.1'
+    - 'execute at %player% run playsound minecraft:block.note_block.hat master %player% ~ ~ ~ 0.8 1.1'
     - 'DELAY_TICK 10'
-    - 'title %player% title "&cBolsita Mitica"'
-    - 'title %player% subtitle "&8▪ &fᴀʙʀɪᴇɴᴅᴏ &8[&a&m &a&m &a&m &8&m &8&m &r&8] &73s"'
-    - 'execute at %player% run playsound minecraft:item.bundle.drop_contents master %player% ~ ~ ~ 0.8 1.0'
-    - 'execute at %player% run playsound minecraft:block.note_block.hat master %player% ~ ~ ~ 0.8 1.0'
+    - 'title %player% title "&4Bolsita Mítica"'
+    - 'title %player% subtitle "&8▪ &fᴀʙʀɪᴇɴᴅᴏ &8[&4&m &4&m &4&m &8&m &8&m &r&8] &73s"'
+    - 'execute at %player% run playsound minecraft:item.bundle.drop_contents master %player% ~ ~ ~ 0.8 1.2'
+    - 'execute at %player% run playsound minecraft:block.note_block.hat master %player% ~ ~ ~ 0.8 1.2'
     - 'DELAY_TICK 10'
-    - 'title %player% title "&cBolsita Mitica"'
-    - 'title %player% subtitle "&8▪ &fᴀʙʀɪᴇɴᴅᴏ &8[&a&m &a&m &a&m &a&m &8&m &r&8] &72s"'
-    - 'execute at %player% run playsound minecraft:item.bundle.drop_contents master %player% ~ ~ ~ 0.8 1.0'
-    - 'execute at %player% run playsound minecraft:block.note_block.hat master %player% ~ ~ ~ 0.8 1.0'
+    - 'title %player% title "&4Bolsita Mítica"'
+    - 'title %player% subtitle "&8▪ &fᴀʙʀɪᴇɴᴅᴏ &8[&4&m &4&m &4&m &4&m &8&m &r&8] &72s"'
+    - 'execute at %player% run playsound minecraft:item.bundle.drop_contents master %player% ~ ~ ~ 0.8 1.3'
+    - 'execute at %player% run playsound minecraft:block.note_block.hat master %player% ~ ~ ~ 0.8 1.3'
     - 'DELAY_TICK 10'
-    - 'title %player% title "&cBolsita Mitica"'
-    - 'title %player% subtitle "&8▪ &fᴀʙʀɪᴇɴᴅᴏ &8[&a&m &a&m &a&m &a&m &a&m &r&8] &71s"'
-    - 'execute at %player% run playsound minecraft:item.bundle.drop_contents master %player% ~ ~ ~ 0.8 1.0'
-    - 'execute at %player% run playsound minecraft:block.note_block.hat master %player% ~ ~ ~ 0.8 1.0'
+    - 'title %player% title "&4Bolsita Mítica"'
+    - 'title %player% subtitle "&8▪ &fᴀʙʀɪᴇɴᴅᴏ &8[&4&m &4&m &4&m &4&m &4&m &r&8] &71s"'
+    - 'execute at %player% run playsound minecraft:item.bundle.drop_contents master %player% ~ ~ ~ 0.8 1.4'
+    - 'execute at %player% run playsound minecraft:block.note_block.hat master %player% ~ ~ ~ 0.8 1.4'
     - 'DELAY_TICK 10'
     - 'RANDOM RUN: 1'
-    - '80:LOOP START: 1 +++ title %player% times 2 40 10 +++ title %player% title "&4¡Bolsita Abierta!" +++ title %player% subtitle "&fᴘʀᴇᴍɪᴏꜱ ʀᴇᴄɪʙɪᴅᴏꜱ" +++ eco give %player% 12000 +++ give %player% netherite_scrap 2 +++ give %player% golden_apple 8 +++ execute at %player% run playsound minecraft:entity.player.levelup master %player% ~ ~ ~ 1 1.5 +++ execute at %player% run playsound minecraft:item.bundle.remove_one master %player% ~ ~ ~ 0.9 1.1 +++ PARTICLE VILLAGER_HAPPY 25 0.3 0.3 +++ PARTICLE TOTEM 25 0.4 0.4 +++ SEND_MESSAGE &r +++ SEND_MESSAGE &r  &#D02626⭐ &lBOLSA MITICA +++ SEND_MESSAGE &r  &7ʀᴇᴄᴏᴍᴘᴇɴꜱᴀꜱ +++ SEND_MESSAGE &r  &8• &f$12.000 +++ SEND_MESSAGE &r  &8• &f2x Fragmentos de Netherite +++ SEND_MESSAGE &r  &8• &f8x Manzanas Doradas +++ SEND_MESSAGE &r +++ LOOP END'
-    - '80:LOOP START: 1 +++ title %player% times 2 40 10 +++ title %player% title "&4¡Bolsita Abierta!" +++ title %player% subtitle "&fᴘʀᴇᴍɪᴏꜱ ʀᴇᴄɪʙɪᴅᴏꜱ" +++ eco give %player% 15000 +++ give %player% netherite_ingot 1 +++ give %player% diamond_block 2 +++ execute at %player% run playsound minecraft:entity.player.levelup master %player% ~ ~ ~ 1 1.5 +++ execute at %player% run playsound minecraft:item.bundle.remove_one master %player% ~ ~ ~ 0.9 1.1 +++ PARTICLE VILLAGER_HAPPY 25 0.3 0.3 +++ PARTICLE TOTEM 25 0.4 0.4 +++ SEND_MESSAGE &r +++ SEND_MESSAGE &r  &#D02626⭐ &lBOLSA MITICA +++ SEND_MESSAGE &r  &7ʀᴇᴄᴏᴍᴘᴇɴꜱᴀꜱ +++ SEND_MESSAGE &r  &8• &f$15.000 +++ SEND_MESSAGE &r  &8• &f1x Lingote de Netherite +++ SEND_MESSAGE &r  &8• &f2x Bloques de Diamante +++ SEND_MESSAGE &r +++ LOOP END'
-    - '80:LOOP START: 1 +++ title %player% times 2 40 10 +++ title %player% title "&4¡Bolsita Abierta!" +++ title %player% subtitle "&fᴘʀᴇᴍɪᴏꜱ ʀᴇᴄɪʙɪᴅᴏꜱ" +++ eco give %player% 20000 +++ give %player% diamond_block 4 +++ give %player% golden_apple 16 +++ execute at %player% run playsound minecraft:entity.player.levelup master %player% ~ ~ ~ 1 1.5 +++ execute at %player% run playsound minecraft:item.bundle.remove_one master %player% ~ ~ ~ 0.9 1.1 +++ PARTICLE VILLAGER_HAPPY 25 0.3 0.3 +++ PARTICLE TOTEM 25 0.4 0.4 +++ SEND_MESSAGE &r +++ SEND_MESSAGE &r  &#D02626⭐ &lBOLSA MITICA +++ SEND_MESSAGE &r  &7ʀᴇᴄᴏᴍᴘᴇɴꜱᴀꜱ +++ SEND_MESSAGE &r  &8• &f$20.000 +++ SEND_MESSAGE &r  &8• &f4x Bloques de Diamante +++ SEND_MESSAGE &r  &8• &f16x Manzanas Doradas +++ SEND_MESSAGE &r +++ LOOP END'
-    - '5:LOOP START: 1 +++ title %player% times 2 40 10 +++ title %player% title "&e¡Bolsita Divina!" +++ title %player% subtitle "&e⬆ &fCalidad &eDivina &e⭐⭐⭐⭐⭐ &e⬆" +++ ei give %player% bundle_recompensas_legend_test 1 +++ execute at %player% run playsound minecraft:entity.wither.death master %player% ~ ~ ~ 1 1.1 +++ execute at %player% run playsound minecraft:ui.toast.challenge_complete master %player% ~ ~ ~ 1 1.3 +++ PARTICLE TOTEM 50 0.6 0.6 +++ SEND_MESSAGE &#EFFF00★ &8| &a¡Increíble! &fTu bolsita ha mutado a calidad &#EFFF00Divina&f. +++ LOOP END'
-    - RANDOM END
+    # MEJORA
+    - '50:LOOP START: 1 +++ title %player% times 2 40 10 +++ title %player% title "&e¡Bolsita Divina!" +++ title %player% subtitle "&e⬆ &fCalidad &eDivina &e⭐⭐⭐⭐⭐ &e⬆" +++ ei give %player% bundle_recompensas_legend_test 1 +++ execute at %player% run playsound minecraft:entity.wither.death master %player% ~ ~ ~ 1 1.1 +++ execute at %player% run playsound minecraft:ui.toast.challenge_complete master %player% ~ ~ ~ 1 1.3 +++ PARTICLE TOTEM 50 0.6 0.6 +++ SEND_MESSAGE &#EFFF00★ &8| &a¡Increíble! &fTu bolsita ha mutado a calidad &#EFFF00Divina&f. +++ LOOP END'
+    # APERTURA $20.000 (475 pesos)
+    - '190:LOOP START: 1 +++ execute at %player% run playsound minecraft:entity.zombie.break_wooden_door master %player% ~ ~ ~ 1 1.0 +++ title %player% times 0 25 5 +++ title %player% title "&4¡Bolsita Abierta!" +++ title %player% subtitle "&fᴘʀᴇᴍɪᴏꜱ ʀᴇᴄɪʙɪᴅᴏꜱ" +++ execute at %player% run playsound minecraft:entity.player.levelup master %player% ~ ~ ~ 1 1.5 +++ execute at %player% run playsound minecraft:item.bundle.remove_one master %player% ~ ~ ~ 0.9 1.1 +++ PARTICLE VILLAGER_HAPPY 30 0.3 0.3 +++ PARTICLE TOTEM 35 0.5 0.5 +++ DELAY_TICK 20 +++ eco give %player% 20000 +++ title %player% times 0 30 10 +++ title %player% title "&4¡Bolsita Abierta!" +++ title %player% subtitle "&f$20.000" +++ execute at %player% run playsound minecraft:entity.experience_orb.pickup master %player% ~ ~ ~ 1 1.2 +++ DELAY_TICK 25 +++ ei give %player% consumable_fly_1h 1 +++ title %player% times 0 30 10 +++ title %player% title "&4¡Bolsita Abierta!" +++ title %player% subtitle "&7⬡ &fᴠᴜᴇʟᴏ 1ʜ" +++ execute at %player% run playsound minecraft:block.chest.open master %player% ~ ~ ~ 1 1.1 +++ DELAY_TICK 10 +++ SEND_MESSAGE &r +++ SEND_MESSAGE &r  &#D02626⭐ &lBOLSA MÍTICA +++ SEND_MESSAGE &r  &7ʀᴇᴄᴏᴍᴘᴇɴꜱᴀꜱ +++ SEND_MESSAGE &r  &8• &f$20.000 +++ SEND_MESSAGE &r  &8• &fVuelo 1h +++ SEND_MESSAGE &r +++ LOOP END'
+    - '166:LOOP START: 1 +++ execute at %player% run playsound minecraft:entity.zombie.break_wooden_door master %player% ~ ~ ~ 1 1.0 +++ title %player% times 0 25 5 +++ title %player% title "&4¡Bolsita Abierta!" +++ title %player% subtitle "&fᴘʀᴇᴍɪᴏꜱ ʀᴇᴄɪʙɪᴅᴏꜱ" +++ execute at %player% run playsound minecraft:entity.player.levelup master %player% ~ ~ ~ 1 1.5 +++ execute at %player% run playsound minecraft:item.bundle.remove_one master %player% ~ ~ ~ 0.9 1.1 +++ PARTICLE VILLAGER_HAPPY 30 0.3 0.3 +++ PARTICLE TOTEM 35 0.5 0.5 +++ DELAY_TICK 20 +++ eco give %player% 20000 +++ title %player% times 0 30 10 +++ title %player% title "&4¡Bolsita Abierta!" +++ title %player% subtitle "&f$20.000" +++ execute at %player% run playsound minecraft:entity.experience_orb.pickup master %player% ~ ~ ~ 1 1.2 +++ DELAY_TICK 25 +++ give %player% enchanted_golden_apple 2 +++ title %player% times 0 30 10 +++ title %player% title "&4¡Bolsita Abierta!" +++ title %player% subtitle "&7⬡ &f2x ᴍᴀɴᴢᴀɴᴀ ɴᴏᴛᴄʜ" +++ execute at %player% run playsound minecraft:block.chest.open master %player% ~ ~ ~ 1 1.1 +++ DELAY_TICK 10 +++ SEND_MESSAGE &r +++ SEND_MESSAGE &r  &#D02626⭐ &lBOLSA MÍTICA +++ SEND_MESSAGE &r  &7ʀᴇᴄᴏᴍᴘᴇɴꜱᴀꜱ +++ SEND_MESSAGE &r  &8• &f$20.000 +++ SEND_MESSAGE &r  &8• &f2x Manzana Notch +++ SEND_MESSAGE &r +++ LOOP END'
+    - '119:LOOP START: 1 +++ execute at %player% run playsound minecraft:entity.zombie.break_wooden_door master %player% ~ ~ ~ 1 1.0 +++ title %player% times 0 25 5 +++ title %player% title "&4¡Bolsita Abierta!" +++ title %player% subtitle "&fᴘʀᴇᴍɪᴏꜱ ʀᴇᴄɪʙɪᴅᴏꜱ" +++ execute at %player% run playsound minecraft:entity.player.levelup master %player% ~ ~ ~ 1 1.5 +++ execute at %player% run playsound minecraft:item.bundle.remove_one master %player% ~ ~ ~ 0.9 1.1 +++ PARTICLE VILLAGER_HAPPY 30 0.3 0.3 +++ PARTICLE TOTEM 35 0.5 0.5 +++ DELAY_TICK 20 +++ eco give %player% 20000 +++ title %player% times 0 30 10 +++ title %player% title "&4¡Bolsita Abierta!" +++ title %player% subtitle "&f$20.000" +++ execute at %player% run playsound minecraft:entity.experience_orb.pickup master %player% ~ ~ ~ 1 1.2 +++ DELAY_TICK 25 +++ ei give %player% kit_mitica 1 +++ title %player% times 0 30 10 +++ title %player% title "&4¡Bolsita Abierta!" +++ title %player% subtitle "&7⬡ &fᴋɪᴛ ᴍíᴛɪᴄᴀ" +++ execute at %player% run playsound minecraft:block.chest.open master %player% ~ ~ ~ 1 1.1 +++ DELAY_TICK 10 +++ SEND_MESSAGE &r +++ SEND_MESSAGE &r  &#D02626⭐ &lBOLSA MÍTICA +++ SEND_MESSAGE &r  &7ʀᴇᴄᴏᴍᴘᴇɴꜱᴀꜱ +++ SEND_MESSAGE &r  &8• &f$20.000 +++ SEND_MESSAGE &r  &8• &fKit Mítica +++ SEND_MESSAGE &r +++ LOOP END'
+    # APERTURA $30.000 (332 pesos)
+    - '133:LOOP START: 1 +++ execute at %player% run playsound minecraft:entity.zombie.break_wooden_door master %player% ~ ~ ~ 1 1.0 +++ title %player% times 0 25 5 +++ title %player% title "&4¡Bolsita Abierta!" +++ title %player% subtitle "&fᴘʀᴇᴍɪᴏꜱ ʀᴇᴄɪʙɪᴅᴏꜱ" +++ execute at %player% run playsound minecraft:entity.player.levelup master %player% ~ ~ ~ 1 1.5 +++ execute at %player% run playsound minecraft:item.bundle.remove_one master %player% ~ ~ ~ 0.9 1.1 +++ PARTICLE VILLAGER_HAPPY 30 0.3 0.3 +++ PARTICLE TOTEM 35 0.5 0.5 +++ DELAY_TICK 20 +++ eco give %player% 30000 +++ title %player% times 0 30 10 +++ title %player% title "&4¡Bolsita Abierta!" +++ title %player% subtitle "&f$30.000" +++ execute at %player% run playsound minecraft:entity.experience_orb.pickup master %player% ~ ~ ~ 1 1.2 +++ DELAY_TICK 25 +++ ei give %player% consumable_fly_1h 1 +++ title %player% times 0 30 10 +++ title %player% title "&4¡Bolsita Abierta!" +++ title %player% subtitle "&7⬡ &fᴠᴜᴇʟᴏ 1ʜ" +++ execute at %player% run playsound minecraft:block.chest.open master %player% ~ ~ ~ 1 1.1 +++ DELAY_TICK 10 +++ SEND_MESSAGE &r +++ SEND_MESSAGE &r  &#D02626⭐ &lBOLSA MÍTICA +++ SEND_MESSAGE &r  &7ʀᴇᴄᴏᴍᴘᴇɴꜱᴀꜱ +++ SEND_MESSAGE &r  &8• &f$30.000 +++ SEND_MESSAGE &r  &8• &fVuelo 1h +++ SEND_MESSAGE &r +++ LOOP END'
+    - '116:LOOP START: 1 +++ execute at %player% run playsound minecraft:entity.zombie.break_wooden_door master %player% ~ ~ ~ 1 1.0 +++ title %player% times 0 25 5 +++ title %player% title "&4¡Bolsita Abierta!" +++ title %player% subtitle "&fᴘʀᴇᴍɪᴏꜱ ʀᴇᴄɪʙɪᴅᴏꜱ" +++ execute at %player% run playsound minecraft:entity.player.levelup master %player% ~ ~ ~ 1 1.5 +++ execute at %player% run playsound minecraft:item.bundle.remove_one master %player% ~ ~ ~ 0.9 1.1 +++ PARTICLE VILLAGER_HAPPY 30 0.3 0.3 +++ PARTICLE TOTEM 35 0.5 0.5 +++ DELAY_TICK 20 +++ eco give %player% 30000 +++ title %player% times 0 30 10 +++ title %player% title "&4¡Bolsita Abierta!" +++ title %player% subtitle "&f$30.000" +++ execute at %player% run playsound minecraft:entity.experience_orb.pickup master %player% ~ ~ ~ 1 1.2 +++ DELAY_TICK 25 +++ give %player% enchanted_golden_apple 2 +++ title %player% times 0 30 10 +++ title %player% title "&4¡Bolsita Abierta!" +++ title %player% subtitle "&7⬡ &f2x ᴍᴀɴᴢᴀɴᴀ ɴᴏᴛᴄʜ" +++ execute at %player% run playsound minecraft:block.chest.open master %player% ~ ~ ~ 1 1.1 +++ DELAY_TICK 10 +++ SEND_MESSAGE &r +++ SEND_MESSAGE &r  &#D02626⭐ &lBOLSA MÍTICA +++ SEND_MESSAGE &r  &7ʀᴇᴄᴏᴍᴘᴇɴꜱᴀꜱ +++ SEND_MESSAGE &r  &8• &f$30.000 +++ SEND_MESSAGE &r  &8• &f2x Manzana Notch +++ SEND_MESSAGE &r +++ LOOP END'
+    - '83:LOOP START: 1 +++ execute at %player% run playsound minecraft:entity.zombie.break_wooden_door master %player% ~ ~ ~ 1 1.0 +++ title %player% times 0 25 5 +++ title %player% title "&4¡Bolsita Abierta!" +++ title %player% subtitle "&fᴘʀᴇᴍɪᴏꜱ ʀᴇᴄɪʙɪᴅᴏꜱ" +++ execute at %player% run playsound minecraft:entity.player.levelup master %player% ~ ~ ~ 1 1.5 +++ execute at %player% run playsound minecraft:item.bundle.remove_one master %player% ~ ~ ~ 0.9 1.1 +++ PARTICLE VILLAGER_HAPPY 30 0.3 0.3 +++ PARTICLE TOTEM 35 0.5 0.5 +++ DELAY_TICK 20 +++ eco give %player% 30000 +++ title %player% times 0 30 10 +++ title %player% title "&4¡Bolsita Abierta!" +++ title %player% subtitle "&f$30.000" +++ execute at %player% run playsound minecraft:entity.experience_orb.pickup master %player% ~ ~ ~ 1 1.2 +++ DELAY_TICK 25 +++ ei give %player% kit_mitica 1 +++ title %player% times 0 30 10 +++ title %player% title "&4¡Bolsita Abierta!" +++ title %player% subtitle "&7⬡ &fᴋɪᴛ ᴍíᴛɪᴄᴀ" +++ execute at %player% run playsound minecraft:block.chest.open master %player% ~ ~ ~ 1 1.1 +++ DELAY_TICK 10 +++ SEND_MESSAGE &r +++ SEND_MESSAGE &r  &#D02626⭐ &lBOLSA MÍTICA +++ SEND_MESSAGE &r  &7ʀᴇᴄᴏᴍᴘᴇɴꜱᴀꜱ +++ SEND_MESSAGE &r  &8• &f$30.000 +++ SEND_MESSAGE &r  &8• &fKit Mítica +++ SEND_MESSAGE &r +++ LOOP END'
+    # APERTURA $35.000 (143 pesos)
+    - '57:LOOP START: 1 +++ execute at %player% run playsound minecraft:entity.zombie.break_wooden_door master %player% ~ ~ ~ 1 1.0 +++ title %player% times 0 25 5 +++ title %player% title "&4¡Bolsita Abierta!" +++ title %player% subtitle "&fᴘʀᴇᴍɪᴏꜱ ʀᴇᴄɪʙɪᴅᴏꜱ" +++ execute at %player% run playsound minecraft:entity.player.levelup master %player% ~ ~ ~ 1 1.5 +++ execute at %player% run playsound minecraft:item.bundle.remove_one master %player% ~ ~ ~ 0.9 1.1 +++ PARTICLE VILLAGER_HAPPY 30 0.3 0.3 +++ PARTICLE TOTEM 35 0.5 0.5 +++ DELAY_TICK 20 +++ eco give %player% 35000 +++ title %player% times 0 30 10 +++ title %player% title "&4¡Bolsita Abierta!" +++ title %player% subtitle "&f$35.000" +++ execute at %player% run playsound minecraft:entity.experience_orb.pickup master %player% ~ ~ ~ 1 1.2 +++ DELAY_TICK 25 +++ ei give %player% consumable_fly_1h 1 +++ title %player% times 0 30 10 +++ title %player% title "&4¡Bolsita Abierta!" +++ title %player% subtitle "&7⬡ &fᴠᴜᴇʟᴏ 1ʜ" +++ execute at %player% run playsound minecraft:block.chest.open master %player% ~ ~ ~ 1 1.1 +++ DELAY_TICK 10 +++ SEND_MESSAGE &r +++ SEND_MESSAGE &r  &#D02626⭐ &lBOLSA MÍTICA +++ SEND_MESSAGE &r  &7ʀᴇᴄᴏᴍᴘᴇɴꜱᴀꜱ +++ SEND_MESSAGE &r  &8• &f$35.000 +++ SEND_MESSAGE &r  &8• &fVuelo 1h +++ SEND_MESSAGE &r +++ LOOP END'
+    - '50:LOOP START: 1 +++ execute at %player% run playsound minecraft:entity.zombie.break_wooden_door master %player% ~ ~ ~ 1 1.0 +++ title %player% times 0 25 5 +++ title %player% title "&4¡Bolsita Abierta!" +++ title %player% subtitle "&fᴘʀᴇᴍɪᴏꜱ ʀᴇᴄɪʙɪᴅᴏꜱ" +++ execute at %player% run playsound minecraft:entity.player.levelup master %player% ~ ~ ~ 1 1.5 +++ execute at %player% run playsound minecraft:item.bundle.remove_one master %player% ~ ~ ~ 0.9 1.1 +++ PARTICLE VILLAGER_HAPPY 30 0.3 0.3 +++ PARTICLE TOTEM 35 0.5 0.5 +++ DELAY_TICK 20 +++ eco give %player% 35000 +++ title %player% times 0 30 10 +++ title %player% title "&4¡Bolsita Abierta!" +++ title %player% subtitle "&f$35.000" +++ execute at %player% run playsound minecraft:entity.experience_orb.pickup master %player% ~ ~ ~ 1 1.2 +++ DELAY_TICK 25 +++ give %player% enchanted_golden_apple 2 +++ title %player% times 0 30 10 +++ title %player% title "&4¡Bolsita Abierta!" +++ title %player% subtitle "&7⬡ &f2x ᴍᴀɴᴢᴀɴᴀ ɴᴏᴛᴄʜ" +++ execute at %player% run playsound minecraft:block.chest.open master %player% ~ ~ ~ 1 1.1 +++ DELAY_TICK 10 +++ SEND_MESSAGE &r +++ SEND_MESSAGE &r  &#D02626⭐ &lBOLSA MÍTICA +++ SEND_MESSAGE &r  &7ʀᴇᴄᴏᴍᴘᴇɴꜱᴀꜱ +++ SEND_MESSAGE &r  &8• &f$35.000 +++ SEND_MESSAGE &r  &8• &f2x Manzana Notch +++ SEND_MESSAGE &r +++ LOOP END'
+    - '36:LOOP START: 1 +++ execute at %player% run playsound minecraft:entity.zombie.break_wooden_door master %player% ~ ~ ~ 1 1.0 +++ title %player% times 0 25 5 +++ title %player% title "&4¡Bolsita Abierta!" +++ title %player% subtitle "&fᴘʀᴇᴍɪᴏꜱ ʀᴇᴄɪʙɪᴅᴏꜱ" +++ execute at %player% run playsound minecraft:entity.player.levelup master %player% ~ ~ ~ 1 1.5 +++ execute at %player% run playsound minecraft:item.bundle.remove_one master %player% ~ ~ ~ 0.9 1.1 +++ PARTICLE VILLAGER_HAPPY 30 0.3 0.3 +++ PARTICLE TOTEM 35 0.5 0.5 +++ DELAY_TICK 20 +++ eco give %player% 35000 +++ title %player% times 0 30 10 +++ title %player% title "&4¡Bolsita Abierta!" +++ title %player% subtitle "&f$35.000" +++ execute at %player% run playsound minecraft:entity.experience_orb.pickup master %player% ~ ~ ~ 1 1.2 +++ DELAY_TICK 25 +++ ei give %player% kit_mitica 1 +++ title %player% times 0 30 10 +++ title %player% title "&4¡Bolsita Abierta!" +++ title %player% subtitle "&7⬡ &fᴋɪᴛ ᴍíᴛɪᴄᴀ" +++ execute at %player% run playsound minecraft:block.chest.open master %player% ~ ~ ~ 1 1.1 +++ DELAY_TICK 10 +++ SEND_MESSAGE &r +++ SEND_MESSAGE &r  &#D02626⭐ &lBOLSA MÍTICA +++ SEND_MESSAGE &r  &7ʀᴇᴄᴏᴍᴘᴇɴꜱᴀꜱ +++ SEND_MESSAGE &r  &8• &f$35.000 +++ SEND_MESSAGE &r  &8• &fKit Mítica +++ SEND_MESSAGE &r +++ LOOP END'
+    - 'RANDOM END'
+    - 'RANDOM RUN: 1'
+    - '5:LOOP START: 1 +++ crates key give crate_mitica %player% 1 +++ title %player% times 0 80 20 +++ title %player% title "&#FFD700★ JACKPOT ★" +++ title %player% subtitle "&f¡Llave de Crate Mítica!" +++ execute at %player% run playsound minecraft:ui.toast.challenge_complete master %player% ~ ~ ~ 1 1.2 +++ execute at %player% run playsound minecraft:entity.wither.spawn master %player% ~ ~ ~ 0.6 1.8 +++ PARTICLE TOTEM 70 0.8 0.8 +++ SEND_MESSAGE &#FFD700★ &8| &6¡JACKPOT! &fHas obtenido una &#FFD700Llave Crate Mítica&f. +++ LOOP END'
+    - '95:LOOP START: 1 +++ LOOP END'
+    - 'RANDOM END'
     playerConditions: {}
     worldConditions: {}
     itemConditions: {}
     customConditions: {}
-    placeholdersConditions: {}
+    placeholdersConditions:
+      notSneaking:
+        placeholder: '%player_sneaking%'
+        comparator: EQUALS
+        value: 'false'
+        messageIfNotValid: ''
+        cancelEventIfNotValid: false
+    variablesModification: {}
+  activator2:
+    name: '&eVer Tabla de Botín'
+    option: PLAYER_RIGHT_CLICK
+    typeTarget: NO_TYPE_TARGET
+    usageModification: 0
+    cancelEvent: true
+    noActivatorRunIfTheEventIsCancelled: false
+    autoUpdateItem: false
+    cooldownFeatures:
+      cooldown: 1
+      cooldownMsg: ''
+      cancelEventIfInCooldown: true
+      pausePlaceholdersConditions: {}
+    globalCooldownFeatures:
+      cooldown: 0
+      displayCooldownMessage: false
+    otherEICooldowns: {}
+    requiredItems: {}
+    requiredExecutableItems: {}
+    requiredMagics: {}
+    detailedSlots:
+    - -1
+    playerCommands:
+    - 'SEND_MESSAGE &r'
+    - 'SEND_MESSAGE &r  &#D02626⭐ &lBOLSITA MÍTICA &8— &fTabla de Botín'
+    - 'SEND_MESSAGE &r  &8▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+    - 'SEND_MESSAGE &r  &7⬡ MEJORA &8(sucede antes de abrir)'
+    - 'SEND_MESSAGE &r  &8• &#EFFF00Divina &8(&750%&8)'
+    - 'SEND_MESSAGE &r  &8▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+    - 'SEND_MESSAGE &r  &7⬡ FASE I &8· &fDinero &8(si no mejora)'
+    - 'SEND_MESSAGE &r  &8• &f$20.000 &8(&750%&8)'
+    - 'SEND_MESSAGE &r  &8• &f$30.000 &8(&735%&8)'
+    - 'SEND_MESSAGE &r  &8• &f$35.000 &8(&715%&8)'
+    - 'SEND_MESSAGE &r  &8▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+    - 'SEND_MESSAGE &r  &7⬡ FASE II &8· &fConsuible &8(si no mejora)'
+    - 'SEND_MESSAGE &r  &8• &fVuelo 1h &8(&740%&8)'
+    - 'SEND_MESSAGE &r  &8• &f2x Manzana Notch &8(&735%&8)'
+    - 'SEND_MESSAGE &r  &8• &fKit Mítica &8(&725%&8)'
+    - 'SEND_MESSAGE &r  &8▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+    - 'SEND_MESSAGE &r  &#FFD700★ &fJACKPOT &8(&75%&8) — extra al abrir'
+    - 'SEND_MESSAGE &r  &8• &fLlave Crate Mítica'
+    - 'SEND_MESSAGE &r'
+    playerConditions: {}
+    worldConditions: {}
+    itemConditions: {}
+    customConditions: {}
+    placeholdersConditions:
+      isSneaking:
+        placeholder: '%player_sneaking%'
+        comparator: EQUALS
+        value: 'true'
+        messageIfNotValid: ''
+        cancelEventIfNotValid: false
     variablesModification: {}
 displayConditions:
   playerConditions: {}

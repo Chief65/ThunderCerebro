@@ -1,0 +1,264 @@
+# El nombre o nombre mostrado
+name: '&eDefault name'
+# La descripción del objeto
+lore:
+- '&b&oDefault lore'
+# El material
+material: SHIELD
+# Efecto de brillo del objeto
+glow: false
+# Desactivar el efecto de brillo de encantamiento
+disableEnchantGlide: false
+# ¿Desactivar el apilado de objetos?
+disableStack: false
+# ¿Mantener el objeto al morir?
+keepItemOnDeath: false
+# Solo puede ser usado por el propietario
+# ⚠ Requiere Almacenar información del objeto en true
+canBeUsedOnlyByTheOwner: false
+# Cancelar evento si no es propietario
+cancelEventIfNotOwner: false
+# Activadores en Lista Negra
+# (pueden ser usados por todos incluso si
+# la característica de solo propietario está activada)
+onlyOwnerBlackListedActivators: []
+# ¿Almacenar información del objeto?
+# Almacenar la información del objeto como el propietario
+storeItemInfo: false
+# ¿Objeto irrompible?
+unbreakable: false
+# La característica de durabilidad
+# será ignorada, y el uso
+# será usado como durabilidad
+isDurabilityBasedOnUsage: false
+# Cancelar el evento si el jugador no tiene permiso
+cancelEventIfNoPermission: false
+# Las características de mundos en lista blanca
+whitelistedWorlds: []
+# El planeador
+glider: false
+# Mantener los atributos predeterminados
+# Solo para 1.19+
+keepDefaultAttributes: false
+# Para nuevo objeto DÉJALO FALSO POR FAVOR
+# De lo contrario puedes dejarlo verdadero
+# si quieres actualizar tus objetos antiguos ponlo en FALSO
+# Pero ten cuidado, las etiquetas del objeto pueden cambiar
+# puede afectar a shopkeeper o recetas de crafteo personalizadas
+# Solo para 1.19+
+ignoreKeepDefaultAttributesFeature: true
+config_5: true
+config_update: true
+# Las características de uso
+# Incrementar o Disminuir este uso con
+# UsageModification en tus activadores
+usageFeatures:
+  # El uso del objeto
+  # -1 = Infinito
+  # Incrementar o Disminuir este uso con
+  # UsageModification en tus activadores
+  usage: 1
+  # Es limpieza actualizable
+  isRefreshableClean: true
+  # El límite de uso del objeto
+  # El uso no puede incrementarse por encima de este valor
+  usageLimit: -1
+# Las características de drop
+dropFeatures:
+  # Brillo al soltar
+  glowDrop: false
+  # El color del brillo
+  glowDropColor: WHITE
+  # Mostrar nombre personalizado sobre el objeto
+  displayNameDrop: false
+# Los encantamientos del objeto
+enchantments: {}
+# Las características de ocultación
+# Ocultadores para ocultar:
+# Atributos, Encantamientos, ...
+hiders:
+  # Ocultar encantamientos
+  hideEnchantments: false
+  # Ocultar irrompible
+  hideUnbreakable: false
+  # Ocultar atributos
+  hideAttributes: false
+  # Ocultar uso
+  hideUsage: false
+  # Ocultar destruye
+  hideDestroys: false
+  # Ocultar colocado en
+  hidePlacedOn: false
+  # Ocultar tinte
+  hideDye: false
+  # Ocultar decoración de armadura
+  hideArmorTrim: false
+  # Ocultar información adicional
+  hideAdditionalTooltip: false
+  # Ocultar información emergente
+  hideToolTip: false
+# Las características de dar al primer ingreso
+giveFirstJoinFeatures:
+  # Activar la característica
+  giveFirstJoin: false
+  # La cantidad a dar
+  giveFirstJoinAmount: 1
+  # Ranura entre 0 y 8 inclusive
+  giveFirstJoinSlot: 0
+# Las características de restricciones
+restrictions:
+  # El objeto no puede ser
+  # movido del inventario
+  locked-in-inventory: false
+# Las variables
+# Las variables se usan para almacenar datos como muertes/asesinatos...
+variables: {}
+# Los activadores / disparadores
+activators:
+  activator0:
+    # El nombre o nombre mostrado
+    name: '&eActivator'
+    option: PLAYER_BEFORE_DEATH
+    # Modificación de uso
+    usageModification: -1
+    # Cancelar el evento vanilla
+    cancelEvent: true
+    # Si otro plugin cancela el evento que
+    # activa el activador y has activado esta característica
+    # el activador no será activado
+    noActivatorRunIfTheEventIsCancelled: true
+    # Actualizar automáticamente el objeto
+    autoUpdateItem: true
+    # El enfriamiento
+    cooldownFeatures:
+      # El tiempo de reutilización
+      cooldown: 0
+      # Las condiciones de placeholders para pausar el enfriamiento
+      pausePlaceholdersConditions: {}
+    # El enfriamiento global
+    # (Para TODOS los jugadores y entidades)
+    globalCooldownFeatures:
+      # El tiempo de reutilización
+      cooldown: 0
+    # Para añadir enfriamiento
+    # a otro EI
+    otherEICooldowns: {}
+    # Los objetos requeridos
+    requiredItems: {}
+    # Los ExecutableItems requeridos
+    requiredExecutableItems: {}
+    # Las magias requeridas
+    # (de EcoSkills)
+    requiredMagics: {}
+    # Las ranuras donde el
+    # activador funcionará
+    detailedSlots:
+    - -1
+    - 40
+    playerCommands:
+    - SET_HEALTH 6
+    - TOTEM_ANIMATION
+    - "minecraft:effect give %player% minecraft:resistance 5 4"
+    - "minecraft:effect give %player% minecraft:regeneration 45 1"
+    - "minecraft:effect give %player% minecraft:absorption 5 1"
+    - "minecraft:effect give %player% minecraft:fire_resistance 40 0"
+    #
+    playerConditions: {}
+    #
+    worldConditions: {}
+    #
+    itemConditions: {}
+    #
+    customConditions: {}
+    # Las condiciones de placeholders
+    placeholdersConditions: {}
+    # Parte para modificar tus variables
+    variablesModification: {}
+# Mostrar condiciones en la descripción
+displayConditions:
+  #
+  playerConditions: {}
+  #
+  worldConditions: {}
+  #
+  itemConditions: {}
+  # Las condiciones de placeholders
+  placeholdersConditions: {}
+  # Activar o desactivar esta característica
+  enableFeature: false
+# Características de comida
+foodFeatures:
+  # ¿Es el alimento carne?
+  isMeat: false
+  # La nutrición del alimento
+  nutrition: 1
+  # La saturación del alimento
+  saturation: 1
+  # ¿Puede el jugador comer siempre este alimento?
+  canAlwaysEat: false
+# Características Consumibles
+consumableFeatures:
+  # Enable this features
+  enable: false
+  # La animación
+  animation: EAT
+  # Tiene partículas de consumo
+  hasConsumeParticles: false
+  # Los segundos de consumo
+  consumeSeconds: 3
+# Las características del arma
+weaponFeatures:
+  # Enable this features
+  enable: false
+  # El tiempo para desactivar el bloqueo
+  # en ticks
+  disableBlockingTime: 0
+  # El daño por ataque
+  damagePerAttack: 5
+# The block attacks features
+blockAttacksFeatures:
+  # Enable this features
+  enable: false
+  # The block delay in seconds
+  blockDelay: 0
+  disableCooldownScale: 1.0
+  # The damage reductions
+  damageReductions: {}
+# Las características de reparación
+repairableFeatures:
+  # Enable this features
+  enable: false
+  # El costo de reparación
+  repairCost: 2
+  # Ítems que pueden reparar este ítem en un yunque
+  # (Solo Paper 1.21.4+)
+  repairableItems: []
+# La rareza del objeto
+itemRarity:
+  # Activar o desactivar la característica de rareza
+  enableRarity: false
+  # La rareza del objeto
+  rarity: COMMON
+# Las características equipables
+equippableFeatures:
+  # Enable this features
+  enable: false
+  # La ranura
+  slot: BODY
+  # Activar el sonido
+  enableSound: false
+  # El sonido
+  sound: ITEM.ARMOR.EQUIP_DIAMOND
+  # El objeto tomará daño cuando el jugador sea herido
+  damageableOnHurt: false
+  # El objeto puede ser dispensado
+  dispensable: true
+  # El objeto puede ser intercambiado
+  swappable: true
+  # Las entidades permitidas
+  allowedEntities:
+  - PLAYER
+bannerSettings:
+  patterns: {}
+# Los atributos
+attributes: {}

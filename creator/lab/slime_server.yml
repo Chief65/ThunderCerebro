@@ -1,0 +1,39 @@
+Name: Slime Crate
+Description: []
+ItemProvider:
+  Provider: vanilla
+  Data:
+    Value: '{components:{"minecraft:custom_name":{bold:0b,extra:[{bold:0b,italic:0b,obfuscated:0b,strikethrough:0b,text:"Slime Crate",underlined:0b}],italic:0b,obfuscated:0b,strikethrough:0b,text:"",underlined:0b},"minecraft:tooltip_display":{hidden_components:["minecraft:kinetic_weapon","minecraft:sheep/color","minecraft:lock","minecraft:bees","minecraft:fox/variant","minecraft:shulker/color","minecraft:tropical_fish/base_color","minecraft:wolf/collar","minecraft:suspicious_stew_effects","minecraft:can_place_on","minecraft:fireworks","minecraft:firework_explosion","minecraft:minimum_attack_charge","minecraft:damage","minecraft:damage_resistant","minecraft:jukebox_playable","minecraft:pot_decorations","minecraft:cat/collar","minecraft:block_entity_data","minecraft:can_break","minecraft:intangible_projectile","minecraft:zombie_nautilus/variant","minecraft:profile","minecraft:cow/variant","minecraft:tropical_fish/pattern_color","minecraft:instrument","minecraft:cat/variant","minecraft:container","minecraft:blocks_attacks","minecraft:tropical_fish/pattern","minecraft:wolf/sound_variant","minecraft:use_cooldown","minecraft:base_color","minecraft:lodestone_tracker","minecraft:horse/variant","minecraft:weapon","minecraft:banner_patterns","minecraft:map_color","minecraft:food","minecraft:use_remainder","minecraft:damage_type","minecraft:axolotl/variant","minecraft:container_loot","minecraft:creative_slot_lock","minecraft:provides_banner_patterns","minecraft:map_post_processing","minecraft:tool","minecraft:custom_data","minecraft:repair_cost","minecraft:glider","minecraft:rarity","minecraft:map_decorations","minecraft:villager/variant","minecraft:block_state","minecraft:written_book_content","minecraft:piercing_weapon","minecraft:mooshroom/variant","minecraft:potion_contents","minecraft:rabbit/variant","minecraft:provides_trim_material","minecraft:note_block_sound","minecraft:death_protection","minecraft:unbreakable","minecraft:potion_duration_scale","minecraft:enchantments","minecraft:use_effects","minecraft:dyed_color","minecraft:llama/variant","minecraft:pig/variant","minecraft:stored_enchantments","minecraft:writable_book_content","minecraft:attribute_modifiers","minecraft:trim","minecraft:recipes","minecraft:wolf/variant","minecraft:ominous_bottle_amplifier","minecraft:repairable","minecraft:bundle_contents","minecraft:max_stack_size","minecraft:charged_projectiles","minecraft:entity_data","minecraft:parrot/variant","minecraft:bucket_entity_data","minecraft:debug_stick_state","minecraft:map_id","minecraft:chicken/variant","minecraft:max_damage","minecraft:consumable","minecraft:attack_range","minecraft:salmon/size","minecraft:frog/variant","minecraft:enchantment_glint_override","minecraft:equippable","minecraft:break_sound","minecraft:swing_animation","minecraft:enchantable","minecraft:painting/variant"]}},count:1,id:"minecraft:chest"}'
+    DataVersion: 4671
+ItemStackable: false
+Permission_Required: false
+Preview:
+  Enabled: true
+  Id: slime
+Animation:
+  Enabled: true
+  Id: default
+OpeningCooldown:
+  Enabled: false
+  Value: 0
+OpeningLimits:
+  Amount: 1
+Block:
+  Positions:
+  - -226,22,-133,builds
+  Pushback:
+    Enabled: true
+  Hologram:
+    Enabled: false
+    Template: default
+    Y_Offset: 0.0
+  Effect:
+    Enabled: true
+    Model: spiral
+    Particle:
+      Name: ITEM_SLIME
+Milestones:
+  Repeatable: false
+_dataver: 600
+Post-Open:
+  Commands: []

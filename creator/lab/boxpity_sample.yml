@@ -1,0 +1,7 @@
+type: NUMBER
+for: PLAYER
+# El valor predeterminado de la variable
+default: '0'
+icon: PAPER
+values:
+  cabb6f6f-4441-4fce-9641-5be36950ef7f: '0'

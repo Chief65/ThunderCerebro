@@ -2,6 +2,103 @@
 
 Registro cronológico e incremental de todas las operaciones realizadas en **ThunderCerebro**.
 
+## [2026-10-02] crates & ui | Unificación de Previews para Todas las Calidades de ExcellentCrates (Estándar Mítico)
+- **Archivos Diseñados y Desplegados**:
+  1. [`creator/output/previews/super.yml`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/output/previews/super.yml) / [`vote.yml`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/output/previews/vote.yml) ▶ Tier Super / Vote (`minecraft:lime_stained_glass_pane`, `&0&l|&r &0Preview &0▶ &8Super &e⭐&7⭐⭐⭐⭐`).
+  2. [`creator/output/previews/rara.yml`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/output/previews/rara.yml) ▶ Tier Rara (`minecraft:light_blue_stained_glass_pane`, `&0&l|&r &0Preview &0▶ &8Rara &e⭐⭐&7⭐⭐⭐`).
+  3. [`creator/output/previews/epica.yml`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/output/previews/epica.yml) / [`consumibles.yml`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/output/previews/consumibles.yml) ▶ Tier Épica / Consumibles (`minecraft:purple_stained_glass_pane`, `&0&l|&r &0Preview &0▶ &8Epica &e⭐⭐⭐&7⭐⭐`).
+  4. [`creator/output/previews/mitica.yml`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/output/previews/mitica.yml) ▶ Tier Mítica (`minecraft:red_stained_glass_pane`, `&0&l|&r &0Preview &0▶ &8Mitica &e⭐⭐⭐⭐&7⭐`).
+  5. [`creator/output/previews/divina.yml`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/output/previews/divina.yml) / [`limitada.yml`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/output/previews/limitada.yml) ▶ Tier Divina / Limitada (`minecraft:yellow_stained_glass_pane`, `&0&l|&r &0Preview &0▶ &8Divina &e⭐⭐⭐⭐⭐`).
+  6. [`creator/output/previews/slime.yml`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/output/previews/slime.yml) ▶ Crate Temática Slime (`minecraft:green_stained_glass_pane`, `&0&l|&r &0Preview &0▶ &8Slime`).
+- **Implementación Técnica**:
+  - Propagada la arquitectura gráfica de 54 slots (9x6) tomada de la preview mítica diseñada por el Sr Ramos: 20 slots centrales para recompensas, 8 cristales teñidos de calidad flanqueando los premios en slots `10,16,19,25,28,34,37,43`, marco perimetral gris exterior y controles de navegación en fila 6.
+  - Actualizados los archivos de caja en Sandbox (`rara.yml`, `vote.yml`, `consumibles.yml`, `limitada.yml`, `slime.yml`) para vincular sus respectivos `Preview.Id`.
+- **Despliegue Remoto**:
+  - Sincronizados todos los archivos YAML en `plugins/ExcellentCrates/previews/` y `plugins/ExcellentCrates/crates/` del servidor Sandbox (`ymykh9qy.274758bd`) vía SFTP. Servidor Survival mantenido intacto.
+
+## [2026-10-02] items & mechanics | Bolsita Súper v5.1 — Fix Definitivo con Condición Nativa ifSneaking (Bukkit API)
+- **Diagnóstico Comparativo con Cajitas Existentes (`cajitacomun.yml`)**:
+  - Se auditó la configuración de las cajitas del servidor (`cajitacomun`, `cajitaepica`, `cajitalegendaria`) y se constató que la detección de agachado en ExecutableItems se implementa nativamente en `playerConditions:` mediante `ifSneaking: false` e `ifSneaking: true`.
+  - El uso de `placeholdersConditions:` con `%player_sneaking%` fallaba al comparar cadenas o al evaluar condiciones de tipo asíncrono en Folia/Paper, provocando que el evento de clic no disparara ningún activador.
+- **Implementación Aplicada en [`bundle_recompensas_super_test.yml`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/lab/bundle_recompensas_super_test.yml)**:
+  - `activator1` (Apertura ordinaria): `playerConditions.ifSneaking: false`. Ejecuta sin intermediarios la animación de 5s y el MEGA-RANDOM de exclusividad mutua.
+  - `activator2` (Preview DeluxeMenus): `playerConditions.ifSneaking: true`. Ejecuta `dm open preview_bolsa_super %player%` con `usageModification: 0`.
+  - Eliminado por completo el bloque `placeholdersConditions: {}`.
+- **Sincronización Remota**: Subido y verificado en Sandbox (`ymykh9qy.274758bd`).
+
+## [2026-10-02] items & deluxemenus | Bolsita Súper v5.0 — Restauración de Apertura Robusta + Preview en DeluxeMenus GUI
+- **Causa Raíz de Bloqueo Previo**:
+  - Las condiciones de piedad matemática en `activator_pity` y `activator_normal` fallaban cuando la variable no estaba instanciada en memoria con un número válido, bloqueando simultáneamente ambos activadores y dejando el ítem inoperativo.
+- **Solución y Mejoras Aplicadas**:
+  1. **Apertura Robusta Restablecida (`activator1`)**:
+     - Eliminada la bifurcación condicional frágil.
+     - Se mantiene el sistema **MEGA-RANDOM de exclusividad mutua** (98 pesos para Mejoras de calidad + 902 pesos para Aperturas ordinarias + 2% Jackpot independiente).
+     - Comando de llave corregido a `/crates key give %player% super 1`.
+  2. **Preview vía DeluxeMenus (`activator2` — Shift + Clic)**:
+     - Creado menú GUI: [`creator/lab/preview_bolsa_super.yml`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/lab/preview_bolsa_super.yml) desplegado en `plugins/DeluxeMenus/gui_menus/menusIA/preview_bolsa_super.yml`.
+     - Registrado en `plugins/DeluxeMenus/config.yml` bajo la clave `preview_bolsa_super`.
+     - Diseño limpio de 27 slots: Nether Star (Mejoras de calidad con % exactos), Girasol (Fase I Efectivo), Cofre (Fase II Consumibles), Gancho brillante (Jackpot Crate Súper) y Barrera para cerrar con sonido de clic.
+     - Cero spam en el chat; el ítem ejecuta directamente `dm open preview_bolsa_super %player%` con `usageModification: 0`.
+- **Sincronización Remota**: Subidos y verificados vía SFTP los 3 archivos en el Sandbox (`ymykh9qy.274758bd`).
+
+## [2026-10-02] items & mechanics | Bolsita Súper v4.1 — Pity System 100% Silencioso e Interno (Bugfixes de Sintaxis)
+- **Diagnóstico en Logs (`logs/latest.log`)**:
+  1. *Fallo de Comparadores*: `GREATER_OR_EQUALS` no es un comparador válido en ExecutableItems (requiere `SUPERIOR_OR_EQUALS` / `INFERIOR`) y faltaba `type: PLAYER_NUMBER` / `type: PLAYER_STRING`. Esto provocaba que `activator_pity` se ejecutase siempre.
+  2. *Fallo de Comando SCore*: El comando `/score variable-modification` no existe en esta versión de SCore; el comando soportado es `/score variables-define <variable> <player> <value>`.
+  3. *Fallo de Sintaxis en Crates*: `crates key give crate_super %player% 1` intentaba otorgar a un jugador inexistente; la sintaxis de ExcellentCrates es `/crates key give %player% super 1`.
+- **Modificaciones Aplicadas en [`bundle_recompensas_super_test.yml`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/lab/bundle_recompensas_super_test.yml)**:
+  - **100% Invisible**: Eliminadas todas las menciones a piedad en títulos, subtítulos, chat y visor de loot (`Shift+Clic`). La piedad se camufla como un Jackpot ordinario al 100%.
+  - **Reinicio Garantizado**: `/score variables-define pity_bundle_super %player% 0` al saltar Jackpot (natural o por piedad).
+  - **Incremento Matemático PAPI**: `/score variables-define pity_bundle_super %player% %math_0_{score_variables_pity_bundle_super}+1%` en cada apertura sin Jackpot.
+- **Sincronización Remota**: Subido y verificado en Sandbox (`ymykh9qy.274758bd`).
+
+## [2026-10-02] items & mechanics | Bolsita Súper v4.0 — Implementación del Sistema de Piedad (Pity System 25x)
+- **Módulos y Variables Creados/Desplegados**:
+  - Variable SCore: [`creator/lab/pity_bundle_super.yml`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/lab/pity_bundle_super.yml) desplegada en `plugins/SCore/variables/pity_bundle_super.yml`.
+  - Módulo EI: [`creator/lab/bundle_recompensas_super_test.yml`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/lab/bundle_recompensas_super_test.yml) desplegado en `plugins/ExecutableItems/items/ThunderMC/`.
+- **Mecánica del Pity System (25 aperturas)**:
+  1. **Contador Persistente**: `%score_variables_pity_bundle_super%` almacena los intentos fallidos sin Jackpot por jugador.
+  2. **Activador Condicional de Piedad (`activator_pity`)**: Se dispara si el contador alcanza `>= 24`. Otorga animación completa, dinero garantizado (\$1.200), consumible garantizado (`vialdealmas`), **Llave Crate Súper garantizada (100%)** y resetea el contador a `0`.
+  3. **Activador Estándar (`activator_normal`)**: Opera si el contador es `< 24`. Si toca el 2% de Jackpot natural, entrega la llave y resetea a `0`. Si falla (98%), suma `+1` a la variable del jugador.
+  4. **Visor de Loot Dinámico (`activator_loot`)**: Muestra en tiempo real el progreso exacto del jugador (`%score_variables_pity_bundle_super%/25`).
+  5. **Corrección de ID Real**: `vial_de_almas` actualizado a `vialdealmas` tras auditar los ítems reales del servidor.
+- **Sincronización Remota**: Ambos archivos subidos y validados vía SFTP en el Sandbox (`ymykh9qy.274758bd`). Verificación exitosa.
+
+## [2026-10-02] items & mechanics | Propagación Suite Completa: MEGA-RANDOM, 2 Fases, Jackpot y Visor de Loot
+- **Módulos Actualizados**:
+  - [`creator/lab/bundle_recompensas_rara_test.yml`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/lab/bundle_recompensas_rara_test.yml)
+  - [`creator/lab/bundle_recompensas_epica_test.yml`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/lab/bundle_recompensas_epica_test.yml)
+  - [`creator/lab/bundle_recompensas_mitica_test.yml`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/lab/bundle_recompensas_mitica_test.yml)
+  - [`creator/lab/bundle_recompensas_legend_test.yml`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/lab/bundle_recompensas_legend_test.yml)
+- **Implementación Arquitectural en los 4 Tiers**:
+  1. **Mutua Exclusión (Mejora vs Recompensas)**: La mejora de calidad opera como outcome exclusivo antes de abrir, resolviendo en entrega de bolsa superior sin quemar fases de recompensa.
+  2. **Secuencia de Subtítulos de Apertura**:
+     - `t=0s`: Sonido `entity.zombie.break_wooden_door` + Título "¡Bolsita Abierta!" + Subtítulo "ᴘʀᴇᴍɪᴏꜱ ʀᴇᴄɪʙɪᴅᴏꜱ".
+     - `t=1s`: Subtítulo se actualiza con monto en efectivo + sonido `experience_orb.pickup`.
+     - `t=2.2s`: Subtítulo se actualiza con consumible en small-caps + sonido `block.chest.open`.
+     - `t=2.7s`: Bloque `SEND_MESSAGE` con resumen integral de botín impreso al final en el chat.
+  3. **Jackpot Independiente**: Ejecución posterior con porcentajes escalados: Rara (3%), Épica (4%), Mítica (5%), Divina (7%).
+  4. **Visor de Loot In-Game (Activador 2)**: Shift + Clic derecho (`%player_sneaking% = true`), `usageModification: 0` y tabla descriptiva completa en chat.
+- **Sincronización Remota**: Los 4 archivos fueron transferidos vía SFTP al Sandbox (`ymykh9qy.274758bd`) bajo `plugins/ExecutableItems/items/ThunderMC/`. Verificación exitosa.
+
+## [2026-10-02] items & mechanics | Bolsita Súper v3.0 — Arquitectura 2 Fases + Jackpot + Visor de Loot
+- **Módulo Actualizado**: [`creator/lab/bundle_recompensas_super_test.yml`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/lab/bundle_recompensas_super_test.yml)
+- **Nueva Arquitectura (3 bloques RANDOM RUN secuenciales)**:
+  1. **Fase I — Dinero** (garantizado): `$800` (50%) / `$1.200` (35%) / `$1.500` (15%)
+  2. **Fase II — Consumible** (garantizado): `Vial de Almas` (40%) / `Kit Súper` (35%) / `4x Manzana de Oro` (25%)
+  3. **Jackpot** (2%): `Llave Crate Súper` — bloque independiente 2/98
+  4. **Mejora de Calidad** (preservado): Rara/Épica/Mítica/Divina según pesos originales (50/28/15/5/902)
+- **Visor de Loot (Activador 2 — Shift+Clic)**:
+  - Condición: `%player_sneaking% = true` vía PAPI
+  - `usageModification: 0` — no consume el ítem
+  - Muestra tabla completa en chat con todas las fases, porcentajes y nota informativa
+  - Cooldown de 1s para evitar spam
+- **Lore Actualizado**: Añadida línea `&8▶ ꜱʜɪꜰᴛ+ᴄʟɪᴄᴋ - ᴠᴇʀ ʟᴏᴏᴛ`
+- **IDs de Ejemplo** (reemplazar con IDs reales): `vial_de_almas`, `kit_super`, `crate_super`
+- **Sincronización Remota**: Desplegado en `plugins/ExecutableItems/items/ThunderMC/bundle_recompensas_super_test.yml` en Sandbox (`ymykh9qy.274758bd`). Verificación exitosa.
+
+
+
 ## [2026-10-01] items & balance | Eliminación de Bolsa Limited y Adaptación Cromática de '¡Bolsita Abierta!' por Calidad
 - **Eliminación Canónica de Tier Limited**:
   - Eliminado localmente y en servidor Sandbox: `bundle_recompensas_limited_test.yml`.

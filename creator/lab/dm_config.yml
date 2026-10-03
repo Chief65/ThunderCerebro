@@ -39,8 +39,8 @@ gui_menus:
     file: Trabajos/Niveles/Cazador.yml
   Herrero:
     file: Trabajos/Niveles/Herrero.yml
-  LeÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â±ador:
-    file: Trabajos/Niveles/LeÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â±ador.yml
+  LeÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â±ador:
+    file: Trabajos/Niveles/LeÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â±ador.yml
   Explorador:
     file: Trabajos/Niveles/Explorador.yml
   Minero:
@@ -90,8 +90,14 @@ gui_menus:
     file: menusIA/mercado_xp.yml
   mercado_almas:
     file: menusIA/mercado_almas.yml
-  tienda_vender:
-    file: menusIA/precios_todos.yml
+  mercado_zafiros:
+    file: menusIA/mercado_zafiros.yml
+  maqueta_spawner:
+    file: menusIA/maqueta_spawner.yml
+  maqueta_spawner_almacen:
+    file: menusIA/maqueta_spawner_almacen.yml
+  maqueta_spawner_apilar:
+    file: menusIA/maqueta_spawner_apilar.yml
   precios_todos:
     file: menusIA/precios_todos.yml
   precios_todos_2:
@@ -180,3 +186,59 @@ gui_menus:
     file: menusIA/compra_encantamientos.yml
   compra_almas:
     file: menusIA/compra_almas.yml
+  mercado_comercio:
+    file: menusIA/mercado_comercio.yml
+  lonja_venta:
+    file: menusIA/lonja_venta.yml
+  lonja_probabilidades:
+    file: menusIA/lonja_probabilidades.yml
+  mercado_dinero:
+    file: menusIA/mercado_dinero.yml
+  
+  lonja_venta_2:
+    file: menusIA/lonja_venta_2.yml
+  
+  compra_banners:
+    file: menusIA/compra_banners.yml
+  compra_banners_2:
+    file: menusIA/compra_banners_2.yml
+  compra_banners_3:
+    file: menusIA/compra_banners_3.yml
+  compra_banners_4:
+    file: menusIA/compra_banners_4.yml
+  compra_cantidad:
+    file: menusIA/compra_cantidad.yml
+  compra_stacks:
+    file: menusIA/compra_stacks.yml
+  tienda_almas_fija:
+    file: menusIA/tienda_almas_fija.yml
+  tienda_xp_fija:
+    file: menusIA/tienda_xp_fija.yml
+  night_market:
+    file: menusIA/night_market.yml
+  nightmarket_premios:
+    file: menusIA/nightmarket_premios.yml
+  almas_spawners:
+    file: menusIA/almas_spawners.yml
+  almas_llaves:
+    file: menusIA/almas_llaves.yml
+  almas_protecciones:
+    file: menusIA/almas_protecciones.yml
+  xp_trims:
+    file: menusIA/xp_trims.yml
+  xp_encantamientos:
+    file: menusIA/xp_encantamientos.yml
+  objetosdeventa:
+    file: menusIA/objetosdeventa.yml
+  objetosdeventa_2:
+    file: menusIA/objetosdeventa_2.yml
+  lootpools_dungeon:
+    file: menusIA/lootpools_dungeon.yml
+  lootpool_calidad_1:
+    file: menusIA/lootpool_calidad_1.yml
+  lootpool_calidad_2:
+    file: menusIA/lootpool_calidad_2.yml
+  lootpool_calidad_3:
+    file: menusIA/lootpool_calidad_3.yml
+  preview_bolsa_super:
+    file: menusIA/preview_bolsa_super.yml

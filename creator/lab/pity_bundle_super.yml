@@ -1,0 +1,5 @@
+type: NUMBER
+for: PLAYER
+default: '0'
+icon: PAPER
+values: {}

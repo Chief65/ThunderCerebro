@@ -1,0 +1,58 @@
+Name: Caja Epica
+Description: []
+ItemProvider:
+  Provider: vanilla
+  Data:
+    Value: '{components:{"minecraft:custom_name":{bold:0b,extra:[{bold:0b,italic:0b,obfuscated:0b,strikethrough:0b,text:"Caja Epica",underlined:0b}],italic:0b,obfuscated:0b,strikethrough:0b,text:"",underlined:0b},"minecraft:tooltip_display":{hidden_components:["minecraft:glider","minecraft:swing_animation","minecraft:cat/collar","minecraft:kinetic_weapon","minecraft:lodestone_tracker","minecraft:recipes","minecraft:potion_contents","minecraft:entity_data","minecraft:villager/variant","minecraft:intangible_projectile","minecraft:chicken/variant","minecraft:sheep/color","minecraft:zombie_nautilus/variant","minecraft:minimum_attack_charge","minecraft:mooshroom/variant","minecraft:tool","minecraft:death_protection","minecraft:profile","minecraft:weapon","minecraft:bucket_entity_data","minecraft:map_id","minecraft:provides_banner_patterns","minecraft:blocks_attacks","minecraft:use_effects","minecraft:container","minecraft:bees","minecraft:enchantment_glint_override","minecraft:piercing_weapon","minecraft:pot_decorations","minecraft:base_color","minecraft:damage_type","minecraft:attack_range","minecraft:charged_projectiles","minecraft:frog/variant","minecraft:repairable","minecraft:cow/variant","minecraft:max_damage","minecraft:firework_explosion","minecraft:can_place_on","minecraft:lock","minecraft:can_break","minecraft:writable_book_content","minecraft:map_post_processing","minecraft:container_loot","minecraft:tropical_fish/base_color","minecraft:rarity","minecraft:instrument","minecraft:equippable","minecraft:map_color","minecraft:damage","minecraft:trim","minecraft:axolotl/variant","minecraft:creative_slot_lock","minecraft:pig/variant","minecraft:tropical_fish/pattern_color","minecraft:fox/variant","minecraft:wolf/variant","minecraft:llama/variant","minecraft:repair_cost","minecraft:cat/variant","minecraft:jukebox_playable","minecraft:parrot/variant","minecraft:enchantments","minecraft:tropical_fish/pattern","minecraft:dyed_color","minecraft:break_sound","minecraft:suspicious_stew_effects","minecraft:consumable","minecraft:wolf/sound_variant","minecraft:debug_stick_state","minecraft:use_cooldown","minecraft:ominous_bottle_amplifier","minecraft:block_state","minecraft:attribute_modifiers","minecraft:salmon/size","minecraft:painting/variant","minecraft:use_remainder","minecraft:stored_enchantments","minecraft:banner_patterns","minecraft:block_entity_data","minecraft:food","minecraft:max_stack_size","minecraft:shulker/color","minecraft:map_decorations","minecraft:damage_resistant","minecraft:rabbit/variant","minecraft:fireworks","minecraft:wolf/collar","minecraft:enchantable","minecraft:bundle_contents","minecraft:provides_trim_material","minecraft:horse/variant","minecraft:custom_data","minecraft:note_block_sound","minecraft:unbreakable","minecraft:written_book_content","minecraft:potion_duration_scale"]}},count:1,id:"minecraft:chest"}'
+    DataVersion: 4671
+ItemStackable: true
+Permission_Required: false
+Preview:
+  Enabled: true
+  Id: epica
+Animation:
+  Enabled: true
+  Id: csgo
+OpeningCooldown:
+  Enabled: false
+  Value: 0
+OpeningLimits:
+  Amount: 1
+Block:
+  Positions:
+  - -233,22,-155,builds
+  Pushback:
+    Enabled: true
+  Hologram:
+    Enabled: false
+    Template: default
+    Y_Offset: 0.0
+  Effect:
+    Enabled: false
+    Model: helix
+    Particle:
+      Name: CLOUD
+Milestones:
+  Repeatable: false
+  List:
+    '0':
+      Reward_Id: spawner_8
+      Openings: 5
+_dataver: 600
+Post-Open:
+  Commands: []
+Rewards: {}
+CostOptions:
+  rara:
+    Enabled: true
+    Name: Rara
+    Icon:
+      Provider: vanilla
+      Data:
+        Value: '{count:1,id:"minecraft:trial_key"}'
+        DataVersion: 4671
+    Entries:
+      '0':
+        Type: key
+        Key: gadgets
+        Amount: 1
