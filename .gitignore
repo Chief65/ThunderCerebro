@@ -15,3 +15,7 @@ Desktop.ini
 .env
 *.session
 *.log
+
+# Build artifacts temporales
+creator/lab/head_animator/bin/
+

@@ -1,0 +1,16 @@
+name: HeadAnimator
+version: '1.2.0'
+main: com.thunderstudios.headanimator.HeadAnimatorPlugin
+api-version: '1.21'
+author: ThunderStudios
+description: Motor de animacion de cabezas en Paper 1.21.11 via PacketEvents
+depend: [packetevents]
+commands:
+  headanimator:
+    description: Control de cabezas animadas
+    permission: headanimator.admin
+    aliases: [ha, animatedheads]
+permissions:
+  headanimator.admin:
+    description: Acceso de administrador a HeadAnimator
+    default: op

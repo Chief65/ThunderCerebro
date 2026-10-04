@@ -2,6 +2,40 @@
 
 Registro cronológico e incremental de todas las operaciones realizadas en **ThunderCerebro**.
 
+## [2026-10-03] dev & packet-anim | HeadAnimator v1.2.0 — Arquitectura Híbrida PacketEvents + Interceptor de Movimiento (Sandbox)
+- **Módulo**: `creator/lab/head_animator/`, `creator/output/plugins/HeadAnimator-1.0.0.jar`, Servidor Sandbox (`ymykh9qy.274758bd`).
+- **Diagnóstico y Corrección de Causa Raíz**:
+  1. **Enfoque Exclusivo en Ranura de Casco (`HELMET`)**: Según la especificación directa del Sr Ramos, el sistema se enfoca al 100% en la cabeza equipada como casco (vista externa y F5), eliminando la sobrecarga y mutaciones innecesarias del inventario local.
+  2. **Interceptor de Salida PacketEvents (`PacketListenerAbstract`)**: En Paper 1.21, cada movimiento, salto o giro del jugador fuerza al `EntityTrackerEntry` del servidor a despachar un paquete `ENTITY_EQUIPMENT` con el ítem real del inventario. El listener intercepta en tiempo real estos paquetes y sobreescribe de forma transparente el slot `HELMET` con el fotograma animado activo (`SpigotConversionUtil.fromBukkitItemStack`). Esto elimina por completo el bug de congelación o desincronización al caminar.
+  3. **Caché Determinista en OpenGL**: Cada fotograma precalcula un `PlayerProfile` con UUID y nombre fijos (`Bukkit.createProfile(uuid, name)`). El cliente de Minecraft descarga la textura una sola vez y conmuta los fotogramas en memoria GPU instantáneamente sin saturar la caché ni invocar Mojang CDN.
+  4. **Emisión Periódica Dual (F5 y Espectadores)**: Tarea programada a **10 ticks** (0.5s / 2 FPS) con ciclo Ping-Pong suave (`0 ➔ 1 ➔ 2 ➔ 1 ➔ 0`). Despacha `sendEquipmentChange` tanto al propio jugador (render en F5) como a todos los observadores en un radio de 48 bloques.
+  5. **Comando `/ha debug`**: Telemetría in-game mejorada que muestra el estado en vivo del casco, el registro en `activeWearers` y el fotograma actual que se está emitiendo.
+- **Despliegue Remoto**:
+  - Compilado nativamente en Java 21 contra Paper 1.21.11 y PacketEvents 2.13.0.
+  - Subido JAR y `config.yml` vía SFTP a Sandbox.
+
+
+## [2026-10-03] dev & packet-anim | Creación, Compilación y Despliegue de HeadAnimator v1.0.0 (Sandbox)
+- **Módulo**: `creator/lab/head_animator/`, `creator/output/plugins/HeadAnimator-1.0.0.jar`, Servidor Sandbox (`ymykh9qy.274758bd`).
+- **Arquitectura Técnica Implementada (Hypixel Stop-Motion Pattern)**:
+  - **Zero Database / Zero Heap Alloc**: Las texturas Base64 se pre-generan en memoria al arrancar; el bucle de ticks no asigna objetos nuevos.
+  - **Zero Cursor Glitch**: El inventario real del jugador no se modifica jamás. El cambio de textura se despacha virtualmente vía `player.sendEquipmentChange(EquipmentSlot.HEAD)` a observadores en un radio configurable de 24 bloques y al propio jugador (render F5 en tercera persona).
+  - **Cráneo de Slimer Animado (`slimer`)**: 4 fotogramas Base64 secuenciales a 5 ticks (4 FPS) con lore y estética oficial de la temporada Ecto-Alien.
+- **Despliegue Remoto**:
+  - Compilado nativamente en Java 21 contra Paper 1.21.11 API.
+  - Subido `HeadAnimator-1.0.0.jar` a `/plugins` en el servidor Sandbox vía SFTP. Servidor Survival mantenido en solo lectura intacto.
+
+## [2026-10-03] crates & effects | Configuración Cromática y Escala de Partículas Espirales (Tiers Super a Divina) (Sandbox)
+- **Módulo**: `plugins/ExcellentCrates/crates/` (`vote.yml`, `rara.yml`, `consumibles.yml`, `mitica.yml`, `limitada.yml`), Servidor Sandbox (`ymykh9qy.274758bd`).
+- **Implementación Técnica Directa (NightCore UniParticle / DUST)**:
+  - **Caja Super (`vote.yml`)**: `Model: spiral`, `Particle: DUST`, `Color: 75, 253, 0` (Verde lima fino, `Size: 0.6`, `Enabled: true`).
+  - **Caja Rara (`rara.yml`)**: `Model: spiral`, `Particle: DUST`, `Color: 0, 141, 255` (Azul fino, `Size: 0.6`, `Enabled: true`).
+  - **Caja Épica (`consumibles.yml`)**: `Model: spiral`, `Particle: DUST`, `Color: 168, 78, 222` (Morado fino, `Size: 0.6`, `Enabled: true`).
+  - **Caja Mítica (`mitica.yml`)**: `Model: spiral`, `Particle: DUST`, `Color: 208, 38, 38` (Rojo medio, `Size: 1.0`, `Enabled: true`).
+  - **Caja Divina (`limitada.yml`)**: `Model: spiral`, `Particle: DUST`, `Color: 255, 230, 0` (Amarillo oro grueso, `Size: 1.5`, `Enabled: true`).
+- **Despliegue Remoto**:
+  - Actualizados localmente y subidos vía SFTP al servidor Sandbox. Servidor Survival mantenido en solo lectura intacto.
+
 ## [2026-10-02] crates & ui | Unificación de Previews para Todas las Calidades de ExcellentCrates (Estándar Mítico)
 - **Archivos Diseñados y Desplegados**:
   1. [`creator/output/previews/super.yml`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/output/previews/super.yml) / [`vote.yml`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/output/previews/vote.yml) ▶ Tier Super / Vote (`minecraft:lime_stained_glass_pane`, `&0&l|&r &0Preview &0▶ &8Super &e⭐&7⭐⭐⭐⭐`).

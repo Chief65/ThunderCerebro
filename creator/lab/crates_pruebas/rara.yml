@@ -1,0 +1,1117 @@
+Name: Caja Rara
+Description: []
+ItemProvider:
+  Provider: vanilla
+  Data:
+    Value: '{components:{"minecraft:custom_name":{bold:0b,extra:[{bold:0b,italic:0b,obfuscated:0b,strikethrough:0b,text:"Rara Crate",underlined:0b}],italic:0b,obfuscated:0b,strikethrough:0b,text:"",underlined:0b},"minecraft:tooltip_display":{hidden_components:["minecraft:glider","minecraft:swing_animation","minecraft:cat/collar","minecraft:kinetic_weapon","minecraft:lodestone_tracker","minecraft:recipes","minecraft:potion_contents","minecraft:entity_data","minecraft:villager/variant","minecraft:intangible_projectile","minecraft:chicken/variant","minecraft:sheep/color","minecraft:zombie_nautilus/variant","minecraft:minimum_attack_charge","minecraft:mooshroom/variant","minecraft:tool","minecraft:death_protection","minecraft:profile","minecraft:weapon","minecraft:bucket_entity_data","minecraft:map_id","minecraft:provides_banner_patterns","minecraft:blocks_attacks","minecraft:use_effects","minecraft:container","minecraft:bees","minecraft:enchantment_glint_override","minecraft:piercing_weapon","minecraft:pot_decorations","minecraft:base_color","minecraft:damage_type","minecraft:attack_range","minecraft:charged_projectiles","minecraft:frog/variant","minecraft:repairable","minecraft:cow/variant","minecraft:max_damage","minecraft:firework_explosion","minecraft:can_place_on","minecraft:lock","minecraft:can_break","minecraft:writable_book_content","minecraft:map_post_processing","minecraft:container_loot","minecraft:tropical_fish/base_color","minecraft:rarity","minecraft:instrument","minecraft:equippable","minecraft:map_color","minecraft:damage","minecraft:trim","minecraft:axolotl/variant","minecraft:creative_slot_lock","minecraft:pig/variant","minecraft:tropical_fish/pattern_color","minecraft:fox/variant","minecraft:wolf/variant","minecraft:llama/variant","minecraft:repair_cost","minecraft:cat/variant","minecraft:jukebox_playable","minecraft:parrot/variant","minecraft:enchantments","minecraft:tropical_fish/pattern","minecraft:dyed_color","minecraft:break_sound","minecraft:suspicious_stew_effects","minecraft:consumable","minecraft:wolf/sound_variant","minecraft:debug_stick_state","minecraft:use_cooldown","minecraft:ominous_bottle_amplifier","minecraft:block_state","minecraft:attribute_modifiers","minecraft:salmon/size","minecraft:painting/variant","minecraft:use_remainder","minecraft:stored_enchantments","minecraft:banner_patterns","minecraft:block_entity_data","minecraft:food","minecraft:max_stack_size","minecraft:shulker/color","minecraft:map_decorations","minecraft:damage_resistant","minecraft:rabbit/variant","minecraft:fireworks","minecraft:wolf/collar","minecraft:enchantable","minecraft:bundle_contents","minecraft:provides_trim_material","minecraft:horse/variant","minecraft:custom_data","minecraft:note_block_sound","minecraft:unbreakable","minecraft:written_book_content","minecraft:potion_duration_scale"]}},count:1,id:"minecraft:chest"}'
+    DataVersion: 4671
+ItemStackable: true
+Permission_Required: false
+Preview:
+  Enabled: true
+  Id: rara
+Animation:
+  Enabled: true
+  Id: csgo
+OpeningCooldown:
+  Enabled: false
+  Value: 0
+OpeningLimits:
+  Amount: 1
+Block:
+  Positions:
+  - -233,22,-152,builds
+  Pushback:
+    Enabled: true
+  Hologram:
+    Enabled: false
+    Template: default
+    Y_Offset: 0.0
+  Effect:
+    Enabled: true
+    Model: spiral
+    Particle:
+      Name: DUST
+      Color: 0, 141, 255
+      Size: 0.6
+Milestones:
+  Repeatable: false
+_dataver: 600
+Post-Open:
+  Commands: []
+Rewards:
+  List:
+    _casco_flash_:
+      Type: ITEM
+      PreviewData:
+        Provider: vanilla
+        Data:
+          Value: '{components:{"minecraft:profile":{id:[I;-527290097,-1329448586,-1246138032,-1018989882],name:"2705fd94a0c43192",properties:[{name:"textures",value:"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMjcwNWZkOTRhMGM0MzE5MjdmYjRlNjM5YjBmY2ZiNDk3MTdlNDEyMjg1YTAyYjQzOWUwMTEyZGEyMmIyZTJlYyJ9fX0="}]},"minecraft:tooltip_display":{hidden_components:["minecraft:zombie_nautilus/variant","minecraft:tool","minecraft:repair_cost","minecraft:dyed_color","minecraft:axolotl/variant","minecraft:use_cooldown","minecraft:use_effects","minecraft:piercing_weapon","minecraft:base_color","minecraft:bucket_entity_data","minecraft:fox/variant","minecraft:recipes","minecraft:cat/variant","minecraft:pig/variant","minecraft:tropical_fish/pattern_color","minecraft:rabbit/variant","minecraft:use_remainder","minecraft:weapon","minecraft:wolf/collar","minecraft:minimum_attack_charge","minecraft:consumable","minecraft:death_protection","minecraft:trim","minecraft:block_entity_data","minecraft:painting/variant","minecraft:unbreakable","minecraft:can_place_on","minecraft:break_sound","minecraft:salmon/size","minecraft:map_color","minecraft:map_id","minecraft:potion_contents","minecraft:container","minecraft:damage","minecraft:intangible_projectile","minecraft:repairable","minecraft:enchantments","minecraft:sheep/color","minecraft:entity_data","minecraft:blocks_attacks","minecraft:custom_data","minecraft:enchantment_glint_override","minecraft:wolf/sound_variant","minecraft:lodestone_tracker","minecraft:max_stack_size","minecraft:potion_duration_scale","minecraft:parrot/variant","minecraft:enchantable","minecraft:glider","minecraft:provides_banner_patterns","minecraft:food","minecraft:firework_explosion","minecraft:tropical_fish/base_color","minecraft:damage_resistant","minecraft:kinetic_weapon","minecraft:cow/variant","minecraft:ominous_bottle_amplifier","minecraft:wolf/variant","minecraft:block_state","minecraft:mooshroom/variant","minecraft:frog/variant","minecraft:lock","minecraft:stored_enchantments","minecraft:llama/variant","minecraft:map_post_processing","minecraft:container_loot","minecraft:villager/variant","minecraft:cat/collar","minecraft:attribute_modifiers","minecraft:suspicious_stew_effects","minecraft:swing_animation","minecraft:provides_trim_material","minecraft:damage_type","minecraft:fireworks","minecraft:note_block_sound","minecraft:creative_slot_lock","minecraft:bundle_contents","minecraft:horse/variant","minecraft:debug_stick_state","minecraft:profile","minecraft:max_damage","minecraft:attack_range","minecraft:rarity","minecraft:tropical_fish/pattern","minecraft:shulker/color","minecraft:chicken/variant","minecraft:banner_patterns","minecraft:writable_book_content","minecraft:jukebox_playable","minecraft:can_break","minecraft:charged_projectiles","minecraft:written_book_content","minecraft:instrument","minecraft:equippable","minecraft:map_decorations","minecraft:pot_decorations","minecraft:bees"]}},count:1,id:"minecraft:player_head"}'
+          DataVersion: 4671
+      Weight: 10.0
+      Rarity: super
+      Broadcast: false
+      Limits:
+        Enabled: false
+        CooldownType: DAILY
+        GlobalAmount: -1
+        PlayerAmount: -1
+        GlobalCooldown: 0
+        PlayerCooldown: 0
+      Ignored_For_Permissions: []
+      Required_Permissions: []
+      Custom_Preview: false
+      Placeholder_Apply: false
+      ItemsData:
+        '0':
+          Provider: vanilla
+          Data:
+            Value: '{components:{"minecraft:attribute_modifiers":[{amount:0.03d,id:"minecraft:ebc01e13-9e29-4a0f-8c76-dd4053f3e0c6",operation:"add_multiplied_total",slot:"head",type:"minecraft:movement_speed"},{amount:3.0d,id:"minecraft:07382318-e90a-4634-9a09-723067b4bb93",operation:"add_value",slot:"head",type:"minecraft:armor"},{amount:2.0d,id:"minecraft:cd12ca62-f3c9-4427-8d04-ce6086df55b0",operation:"add_value",slot:"head",type:"minecraft:armor_toughness"}],"minecraft:custom_name":{extra:[{bold:0b,color:"#FFE658",italic:0b,obfuscated:0b,strikethrough:0b,text:"🛡
+              Casco ",underlined:0b},{bold:0b,color:"#FFE658",italic:0b,obfuscated:0b,strikethrough:0b,text:"Flash ",underlined:0b},{bold:0b,color:"#FFE658",italic:0b,obfuscated:0b,strikethrough:0b,text:"🛡",underlined:0b}],text:""},"minecraft:enchantments":{"minecraft:protection":2},"minecraft:lore":["",{extra:[{bold:0b,color:"white",italic:0b,obfuscated:0b,strikethrough:0b,text:" ",underlined:0b},{color:"dark_gray",italic:0b,text:"Efectos:"}],text:""},{extra:[{bold:0b,color:"gray",italic:0b,obfuscated:0b,strikethrough:0b,text:"
+              ",underlined:0b},{color:"green",italic:0b,text:"+"},{color:"green",italic:0b,text:"3% de Velocidad"}],text:""},"",{extra:[{bold:0b,color:"dark_gray",italic:0b,obfuscated:0b,strikethrough:0b,text:"⁂ ",underlined:0b},{bold:1b,color:"#008DFF",italic:0b,obfuscated:0b,strikethrough:0b,text:"R",underlined:0b},{bold:1b,color:"#0AA1FF",italic:0b,obfuscated:0b,strikethrough:0b,text:"A",underlined:0b},{bold:1b,color:"#13B4FF",italic:0b,obfuscated:0b,strikethrough:0b,text:"R",underlined:0b},{bold:1b,color:"#1DC8FF",italic:0b,obfuscated:0b,strikethrough:0b,text:"A
+              ",underlined:0b},{bold:0b,color:"yellow",italic:0b,text:"⭐⭐"},{color:"gray",italic:0b,text:"⭐⭐⭐"}],text:""}]},count:1,id:"minecraft:diamond_helmet"}'
+            DataVersion: 4671
+    _pechera_flash_:
+      Type: ITEM
+      PreviewData:
+        Provider: vanilla
+        Data:
+          Value: '{components:{"minecraft:profile":{id:[I;-527290097,-1329448586,-1246138032,-1018989882],name:"2705fd94a0c43192",properties:[{name:"textures",value:"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMjcwNWZkOTRhMGM0MzE5MjdmYjRlNjM5YjBmY2ZiNDk3MTdlNDEyMjg1YTAyYjQzOWUwMTEyZGEyMmIyZTJlYyJ9fX0="}]},"minecraft:tooltip_display":{hidden_components:["minecraft:zombie_nautilus/variant","minecraft:tool","minecraft:repair_cost","minecraft:dyed_color","minecraft:axolotl/variant","minecraft:use_cooldown","minecraft:use_effects","minecraft:piercing_weapon","minecraft:base_color","minecraft:bucket_entity_data","minecraft:fox/variant","minecraft:recipes","minecraft:cat/variant","minecraft:pig/variant","minecraft:tropical_fish/pattern_color","minecraft:rabbit/variant","minecraft:use_remainder","minecraft:weapon","minecraft:wolf/collar","minecraft:minimum_attack_charge","minecraft:consumable","minecraft:death_protection","minecraft:trim","minecraft:block_entity_data","minecraft:painting/variant","minecraft:unbreakable","minecraft:can_place_on","minecraft:break_sound","minecraft:salmon/size","minecraft:map_color","minecraft:map_id","minecraft:potion_contents","minecraft:container","minecraft:damage","minecraft:intangible_projectile","minecraft:repairable","minecraft:enchantments","minecraft:sheep/color","minecraft:entity_data","minecraft:blocks_attacks","minecraft:custom_data","minecraft:enchantment_glint_override","minecraft:wolf/sound_variant","minecraft:lodestone_tracker","minecraft:max_stack_size","minecraft:potion_duration_scale","minecraft:parrot/variant","minecraft:enchantable","minecraft:glider","minecraft:provides_banner_patterns","minecraft:food","minecraft:firework_explosion","minecraft:tropical_fish/base_color","minecraft:damage_resistant","minecraft:kinetic_weapon","minecraft:cow/variant","minecraft:ominous_bottle_amplifier","minecraft:wolf/variant","minecraft:block_state","minecraft:mooshroom/variant","minecraft:frog/variant","minecraft:lock","minecraft:stored_enchantments","minecraft:llama/variant","minecraft:map_post_processing","minecraft:container_loot","minecraft:villager/variant","minecraft:cat/collar","minecraft:attribute_modifiers","minecraft:suspicious_stew_effects","minecraft:swing_animation","minecraft:provides_trim_material","minecraft:damage_type","minecraft:fireworks","minecraft:note_block_sound","minecraft:creative_slot_lock","minecraft:bundle_contents","minecraft:horse/variant","minecraft:debug_stick_state","minecraft:profile","minecraft:max_damage","minecraft:attack_range","minecraft:rarity","minecraft:tropical_fish/pattern","minecraft:shulker/color","minecraft:chicken/variant","minecraft:banner_patterns","minecraft:writable_book_content","minecraft:jukebox_playable","minecraft:can_break","minecraft:charged_projectiles","minecraft:written_book_content","minecraft:instrument","minecraft:equippable","minecraft:map_decorations","minecraft:pot_decorations","minecraft:bees"]}},count:1,id:"minecraft:player_head"}'
+          DataVersion: 4671
+      Weight: 10.0
+      Rarity: super
+      Broadcast: false
+      Limits:
+        Enabled: false
+        CooldownType: DAILY
+        GlobalAmount: -1
+        PlayerAmount: -1
+        GlobalCooldown: 0
+        PlayerCooldown: 0
+      Ignored_For_Permissions: []
+      Required_Permissions: []
+      Custom_Preview: false
+      Placeholder_Apply: false
+      ItemsData:
+        '0':
+          Provider: vanilla
+          Data:
+            Value: '{components:{"minecraft:attribute_modifiers":[{amount:0.03d,id:"minecraft:2083e6be-5096-4a7f-9a17-f8a1bd51189f",operation:"add_multiplied_total",slot:"chest",type:"minecraft:movement_speed"},{amount:8.0d,id:"minecraft:71804049-9f7b-434e-8b24-9639d2acd884",operation:"add_value",slot:"chest",type:"minecraft:armor"},{amount:2.0d,id:"minecraft:ea0b4f69-bc7e-43e9-af6a-3defaef4e5df",operation:"add_value",slot:"chest",type:"minecraft:armor_toughness"}],"minecraft:custom_name":{extra:[{bold:0b,color:"#FFE658",italic:0b,obfuscated:0b,strikethrough:0b,text:"🛡
+              Pechera ",underlined:0b},{bold:0b,color:"#FFE658",italic:0b,obfuscated:0b,strikethrough:0b,text:"Flash ",underlined:0b},{bold:0b,color:"#FFE658",italic:0b,obfuscated:0b,strikethrough:0b,text:"🛡",underlined:0b}],text:""},"minecraft:enchantments":{"minecraft:protection":2},"minecraft:lore":["",{extra:[{bold:0b,color:"white",italic:0b,obfuscated:0b,strikethrough:0b,text:" ",underlined:0b},{color:"dark_gray",italic:0b,text:"Efectos:"}],text:""},{extra:[{bold:0b,color:"gray",italic:0b,obfuscated:0b,strikethrough:0b,text:"
+              ",underlined:0b},{color:"green",italic:0b,text:"+"},{color:"green",italic:0b,text:"3% de Velocidad"}],text:""},"",{extra:[{bold:0b,color:"dark_gray",italic:0b,obfuscated:0b,strikethrough:0b,text:"⁂ ",underlined:0b},{bold:1b,color:"#008DFF",italic:0b,obfuscated:0b,strikethrough:0b,text:"R",underlined:0b},{bold:1b,color:"#0AA1FF",italic:0b,obfuscated:0b,strikethrough:0b,text:"A",underlined:0b},{bold:1b,color:"#13B4FF",italic:0b,obfuscated:0b,strikethrough:0b,text:"R",underlined:0b},{bold:1b,color:"#1DC8FF",italic:0b,obfuscated:0b,strikethrough:0b,text:"A
+              ",underlined:0b},{bold:0b,color:"yellow",italic:0b,text:"⭐⭐"},{color:"gray",italic:0b,text:"⭐⭐⭐"}],text:""}]},count:1,id:"minecraft:diamond_chestplate"}'
+            DataVersion: 4671
+    _pantalones_flash_:
+      Type: ITEM
+      PreviewData:
+        Provider: vanilla
+        Data:
+          Value: '{components:{"minecraft:profile":{id:[I;-527290097,-1329448586,-1246138032,-1018989882],name:"2705fd94a0c43192",properties:[{name:"textures",value:"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMjcwNWZkOTRhMGM0MzE5MjdmYjRlNjM5YjBmY2ZiNDk3MTdlNDEyMjg1YTAyYjQzOWUwMTEyZGEyMmIyZTJlYyJ9fX0="}]},"minecraft:tooltip_display":{hidden_components:["minecraft:zombie_nautilus/variant","minecraft:tool","minecraft:repair_cost","minecraft:dyed_color","minecraft:axolotl/variant","minecraft:use_cooldown","minecraft:use_effects","minecraft:piercing_weapon","minecraft:base_color","minecraft:bucket_entity_data","minecraft:fox/variant","minecraft:recipes","minecraft:cat/variant","minecraft:pig/variant","minecraft:tropical_fish/pattern_color","minecraft:rabbit/variant","minecraft:use_remainder","minecraft:weapon","minecraft:wolf/collar","minecraft:minimum_attack_charge","minecraft:consumable","minecraft:death_protection","minecraft:trim","minecraft:block_entity_data","minecraft:painting/variant","minecraft:unbreakable","minecraft:can_place_on","minecraft:break_sound","minecraft:salmon/size","minecraft:map_color","minecraft:map_id","minecraft:potion_contents","minecraft:container","minecraft:damage","minecraft:intangible_projectile","minecraft:repairable","minecraft:enchantments","minecraft:sheep/color","minecraft:entity_data","minecraft:blocks_attacks","minecraft:custom_data","minecraft:enchantment_glint_override","minecraft:wolf/sound_variant","minecraft:lodestone_tracker","minecraft:max_stack_size","minecraft:potion_duration_scale","minecraft:parrot/variant","minecraft:enchantable","minecraft:glider","minecraft:provides_banner_patterns","minecraft:food","minecraft:firework_explosion","minecraft:tropical_fish/base_color","minecraft:damage_resistant","minecraft:kinetic_weapon","minecraft:cow/variant","minecraft:ominous_bottle_amplifier","minecraft:wolf/variant","minecraft:block_state","minecraft:mooshroom/variant","minecraft:frog/variant","minecraft:lock","minecraft:stored_enchantments","minecraft:llama/variant","minecraft:map_post_processing","minecraft:container_loot","minecraft:villager/variant","minecraft:cat/collar","minecraft:attribute_modifiers","minecraft:suspicious_stew_effects","minecraft:swing_animation","minecraft:provides_trim_material","minecraft:damage_type","minecraft:fireworks","minecraft:note_block_sound","minecraft:creative_slot_lock","minecraft:bundle_contents","minecraft:horse/variant","minecraft:debug_stick_state","minecraft:profile","minecraft:max_damage","minecraft:attack_range","minecraft:rarity","minecraft:tropical_fish/pattern","minecraft:shulker/color","minecraft:chicken/variant","minecraft:banner_patterns","minecraft:writable_book_content","minecraft:jukebox_playable","minecraft:can_break","minecraft:charged_projectiles","minecraft:written_book_content","minecraft:instrument","minecraft:equippable","minecraft:map_decorations","minecraft:pot_decorations","minecraft:bees"]}},count:1,id:"minecraft:player_head"}'
+          DataVersion: 4671
+      Weight: 10.0
+      Rarity: super
+      Broadcast: false
+      Limits:
+        Enabled: false
+        CooldownType: DAILY
+        GlobalAmount: -1
+        PlayerAmount: -1
+        GlobalCooldown: 0
+        PlayerCooldown: 0
+      Ignored_For_Permissions: []
+      Required_Permissions: []
+      Custom_Preview: false
+      Placeholder_Apply: false
+      ItemsData:
+        '0':
+          Provider: vanilla
+          Data:
+            Value: '{components:{"minecraft:attribute_modifiers":[{amount:0.03d,id:"minecraft:e179424b-d1f9-4c91-946f-a5a5b30fcaee",operation:"add_multiplied_total",slot:"legs",type:"minecraft:movement_speed"},{amount:6.0d,id:"minecraft:dc0912ab-5aae-4ee8-a9c8-0fbe942c8f76",operation:"add_value",slot:"legs",type:"minecraft:armor"},{amount:2.0d,id:"minecraft:589571c9-fdf1-489f-964f-be48d017c431",operation:"add_value",slot:"legs",type:"minecraft:armor_toughness"}],"minecraft:custom_name":{extra:[{bold:0b,color:"#FFE658",italic:0b,obfuscated:0b,strikethrough:0b,text:"🛡
+              Pantalones ",underlined:0b},{bold:0b,color:"#FFE658",italic:0b,obfuscated:0b,strikethrough:0b,text:"Flash ",underlined:0b},{bold:0b,color:"#FFE658",italic:0b,obfuscated:0b,strikethrough:0b,text:"🛡",underlined:0b}],text:""},"minecraft:enchantments":{"minecraft:protection":2},"minecraft:lore":["",{extra:[{bold:0b,color:"white",italic:0b,obfuscated:0b,strikethrough:0b,text:" ",underlined:0b},{color:"dark_gray",italic:0b,text:"Efectos:"}],text:""},{extra:[{bold:0b,color:"gray",italic:0b,obfuscated:0b,strikethrough:0b,text:"
+              ",underlined:0b},{color:"green",italic:0b,text:"+"},{color:"green",italic:0b,text:"3% de Velocidad"}],text:""},"",{extra:[{bold:0b,color:"dark_gray",italic:0b,obfuscated:0b,strikethrough:0b,text:"⁂ ",underlined:0b},{bold:1b,color:"#008DFF",italic:0b,obfuscated:0b,strikethrough:0b,text:"R",underlined:0b},{bold:1b,color:"#0AA1FF",italic:0b,obfuscated:0b,strikethrough:0b,text:"A",underlined:0b},{bold:1b,color:"#13B4FF",italic:0b,obfuscated:0b,strikethrough:0b,text:"R",underlined:0b},{bold:1b,color:"#1DC8FF",italic:0b,obfuscated:0b,strikethrough:0b,text:"A
+              ",underlined:0b},{bold:0b,color:"yellow",italic:0b,text:"⭐⭐"},{color:"gray",italic:0b,text:"⭐⭐⭐"}],text:""}]},count:1,id:"minecraft:diamond_leggings"}'
+            DataVersion: 4671
+    _botas_flash_:
+      Type: ITEM
+      PreviewData:
+        Provider: vanilla
+        Data:
+          Value: '{components:{"minecraft:profile":{id:[I;-527290097,-1329448586,-1246138032,-1018989882],name:"2705fd94a0c43192",properties:[{name:"textures",value:"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMjcwNWZkOTRhMGM0MzE5MjdmYjRlNjM5YjBmY2ZiNDk3MTdlNDEyMjg1YTAyYjQzOWUwMTEyZGEyMmIyZTJlYyJ9fX0="}]},"minecraft:tooltip_display":{hidden_components:["minecraft:zombie_nautilus/variant","minecraft:tool","minecraft:repair_cost","minecraft:dyed_color","minecraft:axolotl/variant","minecraft:use_cooldown","minecraft:use_effects","minecraft:piercing_weapon","minecraft:base_color","minecraft:bucket_entity_data","minecraft:fox/variant","minecraft:recipes","minecraft:cat/variant","minecraft:pig/variant","minecraft:tropical_fish/pattern_color","minecraft:rabbit/variant","minecraft:use_remainder","minecraft:weapon","minecraft:wolf/collar","minecraft:minimum_attack_charge","minecraft:consumable","minecraft:death_protection","minecraft:trim","minecraft:block_entity_data","minecraft:painting/variant","minecraft:unbreakable","minecraft:can_place_on","minecraft:break_sound","minecraft:salmon/size","minecraft:map_color","minecraft:map_id","minecraft:potion_contents","minecraft:container","minecraft:damage","minecraft:intangible_projectile","minecraft:repairable","minecraft:enchantments","minecraft:sheep/color","minecraft:entity_data","minecraft:blocks_attacks","minecraft:custom_data","minecraft:enchantment_glint_override","minecraft:wolf/sound_variant","minecraft:lodestone_tracker","minecraft:max_stack_size","minecraft:potion_duration_scale","minecraft:parrot/variant","minecraft:enchantable","minecraft:glider","minecraft:provides_banner_patterns","minecraft:food","minecraft:firework_explosion","minecraft:tropical_fish/base_color","minecraft:damage_resistant","minecraft:kinetic_weapon","minecraft:cow/variant","minecraft:ominous_bottle_amplifier","minecraft:wolf/variant","minecraft:block_state","minecraft:mooshroom/variant","minecraft:frog/variant","minecraft:lock","minecraft:stored_enchantments","minecraft:llama/variant","minecraft:map_post_processing","minecraft:container_loot","minecraft:villager/variant","minecraft:cat/collar","minecraft:attribute_modifiers","minecraft:suspicious_stew_effects","minecraft:swing_animation","minecraft:provides_trim_material","minecraft:damage_type","minecraft:fireworks","minecraft:note_block_sound","minecraft:creative_slot_lock","minecraft:bundle_contents","minecraft:horse/variant","minecraft:debug_stick_state","minecraft:profile","minecraft:max_damage","minecraft:attack_range","minecraft:rarity","minecraft:tropical_fish/pattern","minecraft:shulker/color","minecraft:chicken/variant","minecraft:banner_patterns","minecraft:writable_book_content","minecraft:jukebox_playable","minecraft:can_break","minecraft:charged_projectiles","minecraft:written_book_content","minecraft:instrument","minecraft:equippable","minecraft:map_decorations","minecraft:pot_decorations","minecraft:bees"]}},count:1,id:"minecraft:player_head"}'
+          DataVersion: 4671
+      Weight: 10.0
+      Rarity: super
+      Broadcast: false
+      Limits:
+        Enabled: false
+        CooldownType: DAILY
+        GlobalAmount: -1
+        PlayerAmount: -1
+        GlobalCooldown: 0
+        PlayerCooldown: 0
+      Ignored_For_Permissions: []
+      Required_Permissions: []
+      Custom_Preview: false
+      Placeholder_Apply: false
+      ItemsData:
+        '0':
+          Provider: vanilla
+          Data:
+            Value: '{components:{"minecraft:attribute_modifiers":[{amount:0.03d,id:"minecraft:83067120-2965-45ea-8385-c926c1e89320",operation:"add_multiplied_total",slot:"feet",type:"minecraft:movement_speed"},{amount:3.0d,id:"minecraft:bf6da258-14a2-490f-8693-102e2e7c7f41",operation:"add_value",slot:"feet",type:"minecraft:armor"},{amount:2.0d,id:"minecraft:76b33da7-244d-4147-af8d-17babfed4fb3",operation:"add_value",slot:"feet",type:"minecraft:armor_toughness"}],"minecraft:custom_name":{extra:[{bold:0b,color:"#FFE658",italic:0b,obfuscated:0b,strikethrough:0b,text:"🛡
+              Botas ",underlined:0b},{bold:0b,color:"#FFE658",italic:0b,obfuscated:0b,strikethrough:0b,text:"Flash ",underlined:0b},{bold:0b,color:"#FFE658",italic:0b,obfuscated:0b,strikethrough:0b,text:"🛡",underlined:0b}],text:""},"minecraft:enchantments":{"minecraft:protection":2},"minecraft:lore":["",{extra:[{bold:0b,color:"white",italic:0b,obfuscated:0b,strikethrough:0b,text:" ",underlined:0b},{color:"dark_gray",italic:0b,text:"Efectos:"}],text:""},{extra:[{bold:0b,color:"gray",italic:0b,obfuscated:0b,strikethrough:0b,text:"
+              ",underlined:0b},{color:"green",italic:0b,text:"+"},{color:"green",italic:0b,text:"3% de Velocidad"}],text:""},"",{extra:[{bold:0b,color:"dark_gray",italic:0b,obfuscated:0b,strikethrough:0b,text:"⁂ ",underlined:0b},{bold:1b,color:"#008DFF",italic:0b,obfuscated:0b,strikethrough:0b,text:"R",underlined:0b},{bold:1b,color:"#0AA1FF",italic:0b,obfuscated:0b,strikethrough:0b,text:"A",underlined:0b},{bold:1b,color:"#13B4FF",italic:0b,obfuscated:0b,strikethrough:0b,text:"R",underlined:0b},{bold:1b,color:"#1DC8FF",italic:0b,obfuscated:0b,strikethrough:0b,text:"A
+              ",underlined:0b},{bold:0b,color:"yellow",italic:0b,text:"⭐⭐"},{color:"gray",italic:0b,text:"⭐⭐⭐"}],text:""}]},count:1,id:"minecraft:diamond_boots"}'
+            DataVersion: 4671
+    _casco_tortuga_:
+      Type: ITEM
+      PreviewData:
+        Provider: vanilla
+        Data:
+          Value: '{components:{"minecraft:profile":{id:[I;-527290097,-1329448586,-1246138032,-1018989882],name:"2705fd94a0c43192",properties:[{name:"textures",value:"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMjcwNWZkOTRhMGM0MzE5MjdmYjRlNjM5YjBmY2ZiNDk3MTdlNDEyMjg1YTAyYjQzOWUwMTEyZGEyMmIyZTJlYyJ9fX0="}]},"minecraft:tooltip_display":{hidden_components:["minecraft:zombie_nautilus/variant","minecraft:tool","minecraft:repair_cost","minecraft:dyed_color","minecraft:axolotl/variant","minecraft:use_cooldown","minecraft:use_effects","minecraft:piercing_weapon","minecraft:base_color","minecraft:bucket_entity_data","minecraft:fox/variant","minecraft:recipes","minecraft:cat/variant","minecraft:pig/variant","minecraft:tropical_fish/pattern_color","minecraft:rabbit/variant","minecraft:use_remainder","minecraft:weapon","minecraft:wolf/collar","minecraft:minimum_attack_charge","minecraft:consumable","minecraft:death_protection","minecraft:trim","minecraft:block_entity_data","minecraft:painting/variant","minecraft:unbreakable","minecraft:can_place_on","minecraft:break_sound","minecraft:salmon/size","minecraft:map_color","minecraft:map_id","minecraft:potion_contents","minecraft:container","minecraft:damage","minecraft:intangible_projectile","minecraft:repairable","minecraft:enchantments","minecraft:sheep/color","minecraft:entity_data","minecraft:blocks_attacks","minecraft:custom_data","minecraft:enchantment_glint_override","minecraft:wolf/sound_variant","minecraft:lodestone_tracker","minecraft:max_stack_size","minecraft:potion_duration_scale","minecraft:parrot/variant","minecraft:enchantable","minecraft:glider","minecraft:provides_banner_patterns","minecraft:food","minecraft:firework_explosion","minecraft:tropical_fish/base_color","minecraft:damage_resistant","minecraft:kinetic_weapon","minecraft:cow/variant","minecraft:ominous_bottle_amplifier","minecraft:wolf/variant","minecraft:block_state","minecraft:mooshroom/variant","minecraft:frog/variant","minecraft:lock","minecraft:stored_enchantments","minecraft:llama/variant","minecraft:map_post_processing","minecraft:container_loot","minecraft:villager/variant","minecraft:cat/collar","minecraft:attribute_modifiers","minecraft:suspicious_stew_effects","minecraft:swing_animation","minecraft:provides_trim_material","minecraft:damage_type","minecraft:fireworks","minecraft:note_block_sound","minecraft:creative_slot_lock","minecraft:bundle_contents","minecraft:horse/variant","minecraft:debug_stick_state","minecraft:profile","minecraft:max_damage","minecraft:attack_range","minecraft:rarity","minecraft:tropical_fish/pattern","minecraft:shulker/color","minecraft:chicken/variant","minecraft:banner_patterns","minecraft:writable_book_content","minecraft:jukebox_playable","minecraft:can_break","minecraft:charged_projectiles","minecraft:written_book_content","minecraft:instrument","minecraft:equippable","minecraft:map_decorations","minecraft:pot_decorations","minecraft:bees"]}},count:1,id:"minecraft:player_head"}'
+          DataVersion: 4671
+      Weight: 10.0
+      Rarity: super
+      Broadcast: false
+      Limits:
+        Enabled: false
+        CooldownType: DAILY
+        GlobalAmount: -1
+        PlayerAmount: -1
+        GlobalCooldown: 0
+        PlayerCooldown: 0
+      Ignored_For_Permissions: []
+      Required_Permissions: []
+      Custom_Preview: false
+      Placeholder_Apply: false
+      ItemsData:
+        '0':
+          Provider: vanilla
+          Data:
+            Value: '{components:{"minecraft:custom_name":{extra:[{bold:0b,color:"#00F6A6",italic:0b,obfuscated:0b,strikethrough:0b,text:"🛡 Casco ",underlined:0b},{bold:0b,color:"#00F6A6",italic:0b,obfuscated:0b,strikethrough:0b,text:"Tortuga ",underlined:0b},{bold:0b,color:"#00F6A6",italic:0b,obfuscated:0b,strikethrough:0b,text:"🛡",underlined:0b}],text:""},"minecraft:enchantments":{"minecraft:protection":2},"minecraft:lore":["",{extra:[{bold:0b,color:"white",italic:0b,obfuscated:0b,strikethrough:0b,text:" ",underlined:0b},{color:"dark_gray",italic:0b,text:"Efectos:"}],text:""},{extra:[{bold:0b,color:"gray",italic:0b,obfuscated:0b,strikethrough:0b,text:"
+              ",underlined:0b},{color:"green",italic:0b,text:"x2 Durabilidad"}],text:""},"",{extra:[{bold:0b,color:"dark_gray",italic:0b,obfuscated:0b,strikethrough:0b,text:"⁂ ",underlined:0b},{bold:1b,color:"#008DFF",italic:0b,obfuscated:0b,strikethrough:0b,text:"R",underlined:0b},{bold:1b,color:"#0AA1FF",italic:0b,obfuscated:0b,strikethrough:0b,text:"A",underlined:0b},{bold:1b,color:"#13B4FF",italic:0b,obfuscated:0b,strikethrough:0b,text:"R",underlined:0b},{bold:1b,color:"#1DC8FF",italic:0b,obfuscated:0b,strikethrough:0b,text:"A
+              ",underlined:0b},{bold:0b,color:"yellow",italic:0b,text:"⭐⭐"},{color:"gray",italic:0b,text:"⭐⭐⭐"}],text:""}],"minecraft:max_damage":726},count:1,id:"minecraft:diamond_helmet"}'
+            DataVersion: 4671
+    _pechera_tortuga_:
+      Type: ITEM
+      PreviewData:
+        Provider: vanilla
+        Data:
+          Value: '{components:{"minecraft:profile":{id:[I;-527290097,-1329448586,-1246138032,-1018989882],name:"2705fd94a0c43192",properties:[{name:"textures",value:"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMjcwNWZkOTRhMGM0MzE5MjdmYjRlNjM5YjBmY2ZiNDk3MTdlNDEyMjg1YTAyYjQzOWUwMTEyZGEyMmIyZTJlYyJ9fX0="}]},"minecraft:tooltip_display":{hidden_components:["minecraft:zombie_nautilus/variant","minecraft:tool","minecraft:repair_cost","minecraft:dyed_color","minecraft:axolotl/variant","minecraft:use_cooldown","minecraft:use_effects","minecraft:piercing_weapon","minecraft:base_color","minecraft:bucket_entity_data","minecraft:fox/variant","minecraft:recipes","minecraft:cat/variant","minecraft:pig/variant","minecraft:tropical_fish/pattern_color","minecraft:rabbit/variant","minecraft:use_remainder","minecraft:weapon","minecraft:wolf/collar","minecraft:minimum_attack_charge","minecraft:consumable","minecraft:death_protection","minecraft:trim","minecraft:block_entity_data","minecraft:painting/variant","minecraft:unbreakable","minecraft:can_place_on","minecraft:break_sound","minecraft:salmon/size","minecraft:map_color","minecraft:map_id","minecraft:potion_contents","minecraft:container","minecraft:damage","minecraft:intangible_projectile","minecraft:repairable","minecraft:enchantments","minecraft:sheep/color","minecraft:entity_data","minecraft:blocks_attacks","minecraft:custom_data","minecraft:enchantment_glint_override","minecraft:wolf/sound_variant","minecraft:lodestone_tracker","minecraft:max_stack_size","minecraft:potion_duration_scale","minecraft:parrot/variant","minecraft:enchantable","minecraft:glider","minecraft:provides_banner_patterns","minecraft:food","minecraft:firework_explosion","minecraft:tropical_fish/base_color","minecraft:damage_resistant","minecraft:kinetic_weapon","minecraft:cow/variant","minecraft:ominous_bottle_amplifier","minecraft:wolf/variant","minecraft:block_state","minecraft:mooshroom/variant","minecraft:frog/variant","minecraft:lock","minecraft:stored_enchantments","minecraft:llama/variant","minecraft:map_post_processing","minecraft:container_loot","minecraft:villager/variant","minecraft:cat/collar","minecraft:attribute_modifiers","minecraft:suspicious_stew_effects","minecraft:swing_animation","minecraft:provides_trim_material","minecraft:damage_type","minecraft:fireworks","minecraft:note_block_sound","minecraft:creative_slot_lock","minecraft:bundle_contents","minecraft:horse/variant","minecraft:debug_stick_state","minecraft:profile","minecraft:max_damage","minecraft:attack_range","minecraft:rarity","minecraft:tropical_fish/pattern","minecraft:shulker/color","minecraft:chicken/variant","minecraft:banner_patterns","minecraft:writable_book_content","minecraft:jukebox_playable","minecraft:can_break","minecraft:charged_projectiles","minecraft:written_book_content","minecraft:instrument","minecraft:equippable","minecraft:map_decorations","minecraft:pot_decorations","minecraft:bees"]}},count:1,id:"minecraft:player_head"}'
+          DataVersion: 4671
+      Weight: 10.0
+      Rarity: super
+      Broadcast: false
+      Limits:
+        Enabled: false
+        CooldownType: DAILY
+        GlobalAmount: -1
+        PlayerAmount: -1
+        GlobalCooldown: 0
+        PlayerCooldown: 0
+      Ignored_For_Permissions: []
+      Required_Permissions: []
+      Custom_Preview: false
+      Placeholder_Apply: false
+      ItemsData:
+        '0':
+          Provider: vanilla
+          Data:
+            Value: '{components:{"minecraft:custom_name":{extra:[{bold:0b,color:"#00F6A6",italic:0b,obfuscated:0b,strikethrough:0b,text:"🛡 Pechera ",underlined:0b},{bold:0b,color:"#00F6A6",italic:0b,obfuscated:0b,strikethrough:0b,text:"Tortuga ",underlined:0b},{bold:0b,color:"#00F6A6",italic:0b,obfuscated:0b,strikethrough:0b,text:"🛡",underlined:0b}],text:""},"minecraft:enchantments":{"minecraft:protection":2},"minecraft:lore":["",{extra:[{bold:0b,color:"white",italic:0b,obfuscated:0b,strikethrough:0b,text:"
+              ",underlined:0b},{color:"dark_gray",italic:0b,text:"Efectos:"}],text:""},{extra:[{bold:0b,color:"gray",italic:0b,obfuscated:0b,strikethrough:0b,text:" ",underlined:0b},{color:"green",italic:0b,text:"x2 Durabilidad"}],text:""},"",{extra:[{bold:0b,color:"dark_gray",italic:0b,obfuscated:0b,strikethrough:0b,text:"⁂ ",underlined:0b},{bold:1b,color:"#008DFF",italic:0b,obfuscated:0b,strikethrough:0b,text:"R",underlined:0b},{bold:1b,color:"#0AA1FF",italic:0b,obfuscated:0b,strikethrough:0b,text:"A",underlined:0b},{bold:1b,color:"#13B4FF",italic:0b,obfuscated:0b,strikethrough:0b,text:"R",underlined:0b},{bold:1b,color:"#1DC8FF",italic:0b,obfuscated:0b,strikethrough:0b,text:"A
+              ",underlined:0b},{bold:0b,color:"yellow",italic:0b,text:"⭐⭐"},{color:"gray",italic:0b,text:"⭐⭐⭐"}],text:""}],"minecraft:max_damage":1056},count:1,id:"minecraft:diamond_chestplate"}'
+            DataVersion: 4671
+    _pantalones_tortuga_:
+      Type: ITEM
+      PreviewData:
+        Provider: vanilla
+        Data:
+          Value: '{components:{"minecraft:profile":{id:[I;-527290097,-1329448586,-1246138032,-1018989882],name:"2705fd94a0c43192",properties:[{name:"textures",value:"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMjcwNWZkOTRhMGM0MzE5MjdmYjRlNjM5YjBmY2ZiNDk3MTdlNDEyMjg1YTAyYjQzOWUwMTEyZGEyMmIyZTJlYyJ9fX0="}]},"minecraft:tooltip_display":{hidden_components:["minecraft:zombie_nautilus/variant","minecraft:tool","minecraft:repair_cost","minecraft:dyed_color","minecraft:axolotl/variant","minecraft:use_cooldown","minecraft:use_effects","minecraft:piercing_weapon","minecraft:base_color","minecraft:bucket_entity_data","minecraft:fox/variant","minecraft:recipes","minecraft:cat/variant","minecraft:pig/variant","minecraft:tropical_fish/pattern_color","minecraft:rabbit/variant","minecraft:use_remainder","minecraft:weapon","minecraft:wolf/collar","minecraft:minimum_attack_charge","minecraft:consumable","minecraft:death_protection","minecraft:trim","minecraft:block_entity_data","minecraft:painting/variant","minecraft:unbreakable","minecraft:can_place_on","minecraft:break_sound","minecraft:salmon/size","minecraft:map_color","minecraft:map_id","minecraft:potion_contents","minecraft:container","minecraft:damage","minecraft:intangible_projectile","minecraft:repairable","minecraft:enchantments","minecraft:sheep/color","minecraft:entity_data","minecraft:blocks_attacks","minecraft:custom_data","minecraft:enchantment_glint_override","minecraft:wolf/sound_variant","minecraft:lodestone_tracker","minecraft:max_stack_size","minecraft:potion_duration_scale","minecraft:parrot/variant","minecraft:enchantable","minecraft:glider","minecraft:provides_banner_patterns","minecraft:food","minecraft:firework_explosion","minecraft:tropical_fish/base_color","minecraft:damage_resistant","minecraft:kinetic_weapon","minecraft:cow/variant","minecraft:ominous_bottle_amplifier","minecraft:wolf/variant","minecraft:block_state","minecraft:mooshroom/variant","minecraft:frog/variant","minecraft:lock","minecraft:stored_enchantments","minecraft:llama/variant","minecraft:map_post_processing","minecraft:container_loot","minecraft:villager/variant","minecraft:cat/collar","minecraft:attribute_modifiers","minecraft:suspicious_stew_effects","minecraft:swing_animation","minecraft:provides_trim_material","minecraft:damage_type","minecraft:fireworks","minecraft:note_block_sound","minecraft:creative_slot_lock","minecraft:bundle_contents","minecraft:horse/variant","minecraft:debug_stick_state","minecraft:profile","minecraft:max_damage","minecraft:attack_range","minecraft:rarity","minecraft:tropical_fish/pattern","minecraft:shulker/color","minecraft:chicken/variant","minecraft:banner_patterns","minecraft:writable_book_content","minecraft:jukebox_playable","minecraft:can_break","minecraft:charged_projectiles","minecraft:written_book_content","minecraft:instrument","minecraft:equippable","minecraft:map_decorations","minecraft:pot_decorations","minecraft:bees"]}},count:1,id:"minecraft:player_head"}'
+          DataVersion: 4671
+      Weight: 10.0
+      Rarity: super
+      Broadcast: false
+      Limits:
+        Enabled: false
+        CooldownType: DAILY
+        GlobalAmount: -1
+        PlayerAmount: -1
+        GlobalCooldown: 0
+        PlayerCooldown: 0
+      Ignored_For_Permissions: []
+      Required_Permissions: []
+      Custom_Preview: false
+      Placeholder_Apply: false
+      ItemsData:
+        '0':
+          Provider: vanilla
+          Data:
+            Value: '{components:{"minecraft:custom_name":{extra:[{bold:0b,color:"#00F6A6",italic:0b,obfuscated:0b,strikethrough:0b,text:"🛡 Pantalones ",underlined:0b},{bold:0b,color:"#00F6A6",italic:0b,obfuscated:0b,strikethrough:0b,text:"Tortuga ",underlined:0b},{bold:0b,color:"#00F6A6",italic:0b,obfuscated:0b,strikethrough:0b,text:"🛡",underlined:0b}],text:""},"minecraft:enchantments":{"minecraft:protection":2},"minecraft:lore":["",{extra:[{bold:0b,color:"white",italic:0b,obfuscated:0b,strikethrough:0b,text:"
+              ",underlined:0b},{color:"dark_gray",italic:0b,text:"Efectos:"}],text:""},{extra:[{bold:0b,color:"gray",italic:0b,obfuscated:0b,strikethrough:0b,text:" ",underlined:0b},{color:"green",italic:0b,text:"x2 Durabilidad"}],text:""},"",{extra:[{bold:0b,color:"dark_gray",italic:0b,obfuscated:0b,strikethrough:0b,text:"⁂ ",underlined:0b},{bold:1b,color:"#008DFF",italic:0b,obfuscated:0b,strikethrough:0b,text:"R",underlined:0b},{bold:1b,color:"#0AA1FF",italic:0b,obfuscated:0b,strikethrough:0b,text:"A",underlined:0b},{bold:1b,color:"#13B4FF",italic:0b,obfuscated:0b,strikethrough:0b,text:"R",underlined:0b},{bold:1b,color:"#1DC8FF",italic:0b,obfuscated:0b,strikethrough:0b,text:"A
+              ",underlined:0b},{bold:0b,color:"yellow",italic:0b,text:"⭐⭐"},{color:"gray",italic:0b,text:"⭐⭐⭐"}],text:""}],"minecraft:max_damage":990},count:1,id:"minecraft:diamond_leggings"}'
+            DataVersion: 4671
+    _botas_tortuga_:
+      Type: ITEM
+      PreviewData:
+        Provider: vanilla
+        Data:
+          Value: '{components:{"minecraft:profile":{id:[I;-527290097,-1329448586,-1246138032,-1018989882],name:"2705fd94a0c43192",properties:[{name:"textures",value:"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMjcwNWZkOTRhMGM0MzE5MjdmYjRlNjM5YjBmY2ZiNDk3MTdlNDEyMjg1YTAyYjQzOWUwMTEyZGEyMmIyZTJlYyJ9fX0="}]},"minecraft:tooltip_display":{hidden_components:["minecraft:zombie_nautilus/variant","minecraft:tool","minecraft:repair_cost","minecraft:dyed_color","minecraft:axolotl/variant","minecraft:use_cooldown","minecraft:use_effects","minecraft:piercing_weapon","minecraft:base_color","minecraft:bucket_entity_data","minecraft:fox/variant","minecraft:recipes","minecraft:cat/variant","minecraft:pig/variant","minecraft:tropical_fish/pattern_color","minecraft:rabbit/variant","minecraft:use_remainder","minecraft:weapon","minecraft:wolf/collar","minecraft:minimum_attack_charge","minecraft:consumable","minecraft:death_protection","minecraft:trim","minecraft:block_entity_data","minecraft:painting/variant","minecraft:unbreakable","minecraft:can_place_on","minecraft:break_sound","minecraft:salmon/size","minecraft:map_color","minecraft:map_id","minecraft:potion_contents","minecraft:container","minecraft:damage","minecraft:intangible_projectile","minecraft:repairable","minecraft:enchantments","minecraft:sheep/color","minecraft:entity_data","minecraft:blocks_attacks","minecraft:custom_data","minecraft:enchantment_glint_override","minecraft:wolf/sound_variant","minecraft:lodestone_tracker","minecraft:max_stack_size","minecraft:potion_duration_scale","minecraft:parrot/variant","minecraft:enchantable","minecraft:glider","minecraft:provides_banner_patterns","minecraft:food","minecraft:firework_explosion","minecraft:tropical_fish/base_color","minecraft:damage_resistant","minecraft:kinetic_weapon","minecraft:cow/variant","minecraft:ominous_bottle_amplifier","minecraft:wolf/variant","minecraft:block_state","minecraft:mooshroom/variant","minecraft:frog/variant","minecraft:lock","minecraft:stored_enchantments","minecraft:llama/variant","minecraft:map_post_processing","minecraft:container_loot","minecraft:villager/variant","minecraft:cat/collar","minecraft:attribute_modifiers","minecraft:suspicious_stew_effects","minecraft:swing_animation","minecraft:provides_trim_material","minecraft:damage_type","minecraft:fireworks","minecraft:note_block_sound","minecraft:creative_slot_lock","minecraft:bundle_contents","minecraft:horse/variant","minecraft:debug_stick_state","minecraft:profile","minecraft:max_damage","minecraft:attack_range","minecraft:rarity","minecraft:tropical_fish/pattern","minecraft:shulker/color","minecraft:chicken/variant","minecraft:banner_patterns","minecraft:writable_book_content","minecraft:jukebox_playable","minecraft:can_break","minecraft:charged_projectiles","minecraft:written_book_content","minecraft:instrument","minecraft:equippable","minecraft:map_decorations","minecraft:pot_decorations","minecraft:bees"]}},count:1,id:"minecraft:player_head"}'
+          DataVersion: 4671
+      Weight: 10.0
+      Rarity: super
+      Broadcast: false
+      Limits:
+        Enabled: false
+        CooldownType: DAILY
+        GlobalAmount: -1
+        PlayerAmount: -1
+        GlobalCooldown: 0
+        PlayerCooldown: 0
+      Ignored_For_Permissions: []
+      Required_Permissions: []
+      Custom_Preview: false
+      Placeholder_Apply: false
+      ItemsData:
+        '0':
+          Provider: vanilla
+          Data:
+            Value: '{components:{"minecraft:custom_name":{extra:[{bold:0b,color:"#00F6A6",italic:0b,obfuscated:0b,strikethrough:0b,text:"🛡 Botas ",underlined:0b},{bold:0b,color:"#00F6A6",italic:0b,obfuscated:0b,strikethrough:0b,text:"Tortuga ",underlined:0b},{bold:0b,color:"#00F6A6",italic:0b,obfuscated:0b,strikethrough:0b,text:"🛡",underlined:0b}],text:""},"minecraft:enchantments":{"minecraft:protection":2},"minecraft:lore":["",{extra:[{bold:0b,color:"white",italic:0b,obfuscated:0b,strikethrough:0b,text:" ",underlined:0b},{color:"dark_gray",italic:0b,text:"Efectos:"}],text:""},{extra:[{bold:0b,color:"gray",italic:0b,obfuscated:0b,strikethrough:0b,text:"
+              ",underlined:0b},{color:"green",italic:0b,text:"x2 Durabilidad"}],text:""},"",{extra:[{bold:0b,color:"dark_gray",italic:0b,obfuscated:0b,strikethrough:0b,text:"⁂ ",underlined:0b},{bold:1b,color:"#008DFF",italic:0b,obfuscated:0b,strikethrough:0b,text:"R",underlined:0b},{bold:1b,color:"#0AA1FF",italic:0b,obfuscated:0b,strikethrough:0b,text:"A",underlined:0b},{bold:1b,color:"#13B4FF",italic:0b,obfuscated:0b,strikethrough:0b,text:"R",underlined:0b},{bold:1b,color:"#1DC8FF",italic:0b,obfuscated:0b,strikethrough:0b,text:"A
+              ",underlined:0b},{bold:0b,color:"yellow",italic:0b,text:"⭐⭐"},{color:"gray",italic:0b,text:"⭐⭐⭐"}],text:""}],"minecraft:max_damage":858},count:1,id:"minecraft:diamond_boots"}'
+            DataVersion: 4671
+    _casco_boxeador_:
+      Type: ITEM
+      PreviewData:
+        Provider: vanilla
+        Data:
+          Value: '{components:{"minecraft:profile":{id:[I;-527290097,-1329448586,-1246138032,-1018989882],name:"2705fd94a0c43192",properties:[{name:"textures",value:"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMjcwNWZkOTRhMGM0MzE5MjdmYjRlNjM5YjBmY2ZiNDk3MTdlNDEyMjg1YTAyYjQzOWUwMTEyZGEyMmIyZTJlYyJ9fX0="}]},"minecraft:tooltip_display":{hidden_components:["minecraft:zombie_nautilus/variant","minecraft:tool","minecraft:repair_cost","minecraft:dyed_color","minecraft:axolotl/variant","minecraft:use_cooldown","minecraft:use_effects","minecraft:piercing_weapon","minecraft:base_color","minecraft:bucket_entity_data","minecraft:fox/variant","minecraft:recipes","minecraft:cat/variant","minecraft:pig/variant","minecraft:tropical_fish/pattern_color","minecraft:rabbit/variant","minecraft:use_remainder","minecraft:weapon","minecraft:wolf/collar","minecraft:minimum_attack_charge","minecraft:consumable","minecraft:death_protection","minecraft:trim","minecraft:block_entity_data","minecraft:painting/variant","minecraft:unbreakable","minecraft:can_place_on","minecraft:break_sound","minecraft:salmon/size","minecraft:map_color","minecraft:map_id","minecraft:potion_contents","minecraft:container","minecraft:damage","minecraft:intangible_projectile","minecraft:repairable","minecraft:enchantments","minecraft:sheep/color","minecraft:entity_data","minecraft:blocks_attacks","minecraft:custom_data","minecraft:enchantment_glint_override","minecraft:wolf/sound_variant","minecraft:lodestone_tracker","minecraft:max_stack_size","minecraft:potion_duration_scale","minecraft:parrot/variant","minecraft:enchantable","minecraft:glider","minecraft:provides_banner_patterns","minecraft:food","minecraft:firework_explosion","minecraft:tropical_fish/base_color","minecraft:damage_resistant","minecraft:kinetic_weapon","minecraft:cow/variant","minecraft:ominous_bottle_amplifier","minecraft:wolf/variant","minecraft:block_state","minecraft:mooshroom/variant","minecraft:frog/variant","minecraft:lock","minecraft:stored_enchantments","minecraft:llama/variant","minecraft:map_post_processing","minecraft:container_loot","minecraft:villager/variant","minecraft:cat/collar","minecraft:attribute_modifiers","minecraft:suspicious_stew_effects","minecraft:swing_animation","minecraft:provides_trim_material","minecraft:damage_type","minecraft:fireworks","minecraft:note_block_sound","minecraft:creative_slot_lock","minecraft:bundle_contents","minecraft:horse/variant","minecraft:debug_stick_state","minecraft:profile","minecraft:max_damage","minecraft:attack_range","minecraft:rarity","minecraft:tropical_fish/pattern","minecraft:shulker/color","minecraft:chicken/variant","minecraft:banner_patterns","minecraft:writable_book_content","minecraft:jukebox_playable","minecraft:can_break","minecraft:charged_projectiles","minecraft:written_book_content","minecraft:instrument","minecraft:equippable","minecraft:map_decorations","minecraft:pot_decorations","minecraft:bees"]}},count:1,id:"minecraft:player_head"}'
+          DataVersion: 4671
+      Weight: 10.0
+      Rarity: super
+      Broadcast: false
+      Limits:
+        Enabled: false
+        CooldownType: DAILY
+        GlobalAmount: -1
+        PlayerAmount: -1
+        GlobalCooldown: 0
+        PlayerCooldown: 0
+      Ignored_For_Permissions: []
+      Required_Permissions: []
+      Custom_Preview: false
+      Placeholder_Apply: false
+      ItemsData:
+        '0':
+          Provider: vanilla
+          Data:
+            Value: '{components:{"minecraft:attribute_modifiers":[{amount:0.04d,id:"minecraft:e4815e4b-fbe4-451d-bbcf-5ce2074861dc",operation:"add_multiplied_total",slot:"head",type:"minecraft:attack_speed"},{amount:3.0d,id:"minecraft:5d48e24d-940d-4d0c-80ed-953c33ca1958",operation:"add_value",slot:"head",type:"minecraft:armor"},{amount:2.0d,id:"minecraft:9dafa268-d89e-46c4-b67e-2bed89dcb362",operation:"add_value",slot:"head",type:"minecraft:armor_toughness"}],"minecraft:custom_name":{extra:[{bold:0b,color:"#FF5858",italic:0b,obfuscated:0b,strikethrough:0b,text:"🛡
+              Casco ",underlined:0b},{bold:0b,color:"#FF5858",italic:0b,obfuscated:0b,strikethrough:0b,text:"Boxeador ",underlined:0b},{bold:0b,color:"#FF5858",italic:0b,obfuscated:0b,strikethrough:0b,text:"🛡",underlined:0b}],text:""},"minecraft:enchantments":{"minecraft:protection":2},"minecraft:lore":["",{extra:[{bold:0b,color:"white",italic:0b,obfuscated:0b,strikethrough:0b,text:" ",underlined:0b},{color:"dark_gray",italic:0b,text:"Efectos:"}],text:""},{extra:[{bold:0b,color:"gray",italic:0b,obfuscated:0b,strikethrough:0b,text:"
+              ",underlined:0b},{color:"green",italic:0b,text:"+4% Vel. de Ataque"}],text:""},"",{extra:[{bold:0b,color:"dark_gray",italic:0b,obfuscated:0b,strikethrough:0b,text:"⁂ ",underlined:0b},{bold:1b,color:"#008DFF",italic:0b,obfuscated:0b,strikethrough:0b,text:"R",underlined:0b},{bold:1b,color:"#0AA1FF",italic:0b,obfuscated:0b,strikethrough:0b,text:"A",underlined:0b},{bold:1b,color:"#13B4FF",italic:0b,obfuscated:0b,strikethrough:0b,text:"R",underlined:0b},{bold:1b,color:"#1DC8FF",italic:0b,obfuscated:0b,strikethrough:0b,text:"A
+              ",underlined:0b},{bold:0b,color:"yellow",italic:0b,text:"⭐⭐"},{color:"gray",italic:0b,text:"⭐⭐⭐"}],text:""}]},count:1,id:"minecraft:diamond_helmet"}'
+            DataVersion: 4671
+    _pechera_boxeador_:
+      Type: ITEM
+      PreviewData:
+        Provider: vanilla
+        Data:
+          Value: '{components:{"minecraft:profile":{id:[I;-527290097,-1329448586,-1246138032,-1018989882],name:"2705fd94a0c43192",properties:[{name:"textures",value:"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMjcwNWZkOTRhMGM0MzE5MjdmYjRlNjM5YjBmY2ZiNDk3MTdlNDEyMjg1YTAyYjQzOWUwMTEyZGEyMmIyZTJlYyJ9fX0="}]},"minecraft:tooltip_display":{hidden_components:["minecraft:zombie_nautilus/variant","minecraft:tool","minecraft:repair_cost","minecraft:dyed_color","minecraft:axolotl/variant","minecraft:use_cooldown","minecraft:use_effects","minecraft:piercing_weapon","minecraft:base_color","minecraft:bucket_entity_data","minecraft:fox/variant","minecraft:recipes","minecraft:cat/variant","minecraft:pig/variant","minecraft:tropical_fish/pattern_color","minecraft:rabbit/variant","minecraft:use_remainder","minecraft:weapon","minecraft:wolf/collar","minecraft:minimum_attack_charge","minecraft:consumable","minecraft:death_protection","minecraft:trim","minecraft:block_entity_data","minecraft:painting/variant","minecraft:unbreakable","minecraft:can_place_on","minecraft:break_sound","minecraft:salmon/size","minecraft:map_color","minecraft:map_id","minecraft:potion_contents","minecraft:container","minecraft:damage","minecraft:intangible_projectile","minecraft:repairable","minecraft:enchantments","minecraft:sheep/color","minecraft:entity_data","minecraft:blocks_attacks","minecraft:custom_data","minecraft:enchantment_glint_override","minecraft:wolf/sound_variant","minecraft:lodestone_tracker","minecraft:max_stack_size","minecraft:potion_duration_scale","minecraft:parrot/variant","minecraft:enchantable","minecraft:glider","minecraft:provides_banner_patterns","minecraft:food","minecraft:firework_explosion","minecraft:tropical_fish/base_color","minecraft:damage_resistant","minecraft:kinetic_weapon","minecraft:cow/variant","minecraft:ominous_bottle_amplifier","minecraft:wolf/variant","minecraft:block_state","minecraft:mooshroom/variant","minecraft:frog/variant","minecraft:lock","minecraft:stored_enchantments","minecraft:llama/variant","minecraft:map_post_processing","minecraft:container_loot","minecraft:villager/variant","minecraft:cat/collar","minecraft:attribute_modifiers","minecraft:suspicious_stew_effects","minecraft:swing_animation","minecraft:provides_trim_material","minecraft:damage_type","minecraft:fireworks","minecraft:note_block_sound","minecraft:creative_slot_lock","minecraft:bundle_contents","minecraft:horse/variant","minecraft:debug_stick_state","minecraft:profile","minecraft:max_damage","minecraft:attack_range","minecraft:rarity","minecraft:tropical_fish/pattern","minecraft:shulker/color","minecraft:chicken/variant","minecraft:banner_patterns","minecraft:writable_book_content","minecraft:jukebox_playable","minecraft:can_break","minecraft:charged_projectiles","minecraft:written_book_content","minecraft:instrument","minecraft:equippable","minecraft:map_decorations","minecraft:pot_decorations","minecraft:bees"]}},count:1,id:"minecraft:player_head"}'
+          DataVersion: 4671
+      Weight: 10.0
+      Rarity: super
+      Broadcast: false
+      Limits:
+        Enabled: false
+        CooldownType: DAILY
+        GlobalAmount: -1
+        PlayerAmount: -1
+        GlobalCooldown: 0
+        PlayerCooldown: 0
+      Ignored_For_Permissions: []
+      Required_Permissions: []
+      Custom_Preview: false
+      Placeholder_Apply: false
+      ItemsData:
+        '0':
+          Provider: vanilla
+          Data:
+            Value: '{components:{"minecraft:attribute_modifiers":[{amount:0.04d,id:"minecraft:6b1e5b1e-ebc1-49ea-b6c3-4bcfa9062432",operation:"add_multiplied_total",slot:"chest",type:"minecraft:attack_speed"},{amount:8.0d,id:"minecraft:013def50-272b-49ad-bd6b-80021459be2f",operation:"add_value",slot:"chest",type:"minecraft:armor"},{amount:2.0d,id:"minecraft:ec5be3e8-1bf2-4c4a-895a-2383299b3f40",operation:"add_value",slot:"chest",type:"minecraft:armor_toughness"}],"minecraft:custom_name":{extra:[{bold:0b,color:"#FF5858",italic:0b,obfuscated:0b,strikethrough:0b,text:"🛡
+              Pechera ",underlined:0b},{bold:0b,color:"#FF5858",italic:0b,obfuscated:0b,strikethrough:0b,text:"Boxeador ",underlined:0b},{bold:0b,color:"#FF5858",italic:0b,obfuscated:0b,strikethrough:0b,text:"🛡",underlined:0b}],text:""},"minecraft:enchantments":{"minecraft:protection":2},"minecraft:lore":["",{extra:[{bold:0b,color:"white",italic:0b,obfuscated:0b,strikethrough:0b,text:" ",underlined:0b},{color:"dark_gray",italic:0b,text:"Efectos:"}],text:""},{extra:[{bold:0b,color:"gray",italic:0b,obfuscated:0b,strikethrough:0b,text:"
+              ",underlined:0b},{color:"green",italic:0b,text:"+4% Vel. de Ataque"}],text:""},"",{extra:[{bold:0b,color:"dark_gray",italic:0b,obfuscated:0b,strikethrough:0b,text:"⁂ ",underlined:0b},{bold:1b,color:"#008DFF",italic:0b,obfuscated:0b,strikethrough:0b,text:"R",underlined:0b},{bold:1b,color:"#0AA1FF",italic:0b,obfuscated:0b,strikethrough:0b,text:"A",underlined:0b},{bold:1b,color:"#13B4FF",italic:0b,obfuscated:0b,strikethrough:0b,text:"R",underlined:0b},{bold:1b,color:"#1DC8FF",italic:0b,obfuscated:0b,strikethrough:0b,text:"A
+              ",underlined:0b},{bold:0b,color:"yellow",italic:0b,text:"⭐⭐"},{color:"gray",italic:0b,text:"⭐⭐⭐"}],text:""}]},count:1,id:"minecraft:diamond_chestplate"}'
+            DataVersion: 4671
+    _pantalones_boxeador_:
+      Type: ITEM
+      PreviewData:
+        Provider: vanilla
+        Data:
+          Value: '{components:{"minecraft:profile":{id:[I;-527290097,-1329448586,-1246138032,-1018989882],name:"2705fd94a0c43192",properties:[{name:"textures",value:"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMjcwNWZkOTRhMGM0MzE5MjdmYjRlNjM5YjBmY2ZiNDk3MTdlNDEyMjg1YTAyYjQzOWUwMTEyZGEyMmIyZTJlYyJ9fX0="}]},"minecraft:tooltip_display":{hidden_components:["minecraft:zombie_nautilus/variant","minecraft:tool","minecraft:repair_cost","minecraft:dyed_color","minecraft:axolotl/variant","minecraft:use_cooldown","minecraft:use_effects","minecraft:piercing_weapon","minecraft:base_color","minecraft:bucket_entity_data","minecraft:fox/variant","minecraft:recipes","minecraft:cat/variant","minecraft:pig/variant","minecraft:tropical_fish/pattern_color","minecraft:rabbit/variant","minecraft:use_remainder","minecraft:weapon","minecraft:wolf/collar","minecraft:minimum_attack_charge","minecraft:consumable","minecraft:death_protection","minecraft:trim","minecraft:block_entity_data","minecraft:painting/variant","minecraft:unbreakable","minecraft:can_place_on","minecraft:break_sound","minecraft:salmon/size","minecraft:map_color","minecraft:map_id","minecraft:potion_contents","minecraft:container","minecraft:damage","minecraft:intangible_projectile","minecraft:repairable","minecraft:enchantments","minecraft:sheep/color","minecraft:entity_data","minecraft:blocks_attacks","minecraft:custom_data","minecraft:enchantment_glint_override","minecraft:wolf/sound_variant","minecraft:lodestone_tracker","minecraft:max_stack_size","minecraft:potion_duration_scale","minecraft:parrot/variant","minecraft:enchantable","minecraft:glider","minecraft:provides_banner_patterns","minecraft:food","minecraft:firework_explosion","minecraft:tropical_fish/base_color","minecraft:damage_resistant","minecraft:kinetic_weapon","minecraft:cow/variant","minecraft:ominous_bottle_amplifier","minecraft:wolf/variant","minecraft:block_state","minecraft:mooshroom/variant","minecraft:frog/variant","minecraft:lock","minecraft:stored_enchantments","minecraft:llama/variant","minecraft:map_post_processing","minecraft:container_loot","minecraft:villager/variant","minecraft:cat/collar","minecraft:attribute_modifiers","minecraft:suspicious_stew_effects","minecraft:swing_animation","minecraft:provides_trim_material","minecraft:damage_type","minecraft:fireworks","minecraft:note_block_sound","minecraft:creative_slot_lock","minecraft:bundle_contents","minecraft:horse/variant","minecraft:debug_stick_state","minecraft:profile","minecraft:max_damage","minecraft:attack_range","minecraft:rarity","minecraft:tropical_fish/pattern","minecraft:shulker/color","minecraft:chicken/variant","minecraft:banner_patterns","minecraft:writable_book_content","minecraft:jukebox_playable","minecraft:can_break","minecraft:charged_projectiles","minecraft:written_book_content","minecraft:instrument","minecraft:equippable","minecraft:map_decorations","minecraft:pot_decorations","minecraft:bees"]}},count:1,id:"minecraft:player_head"}'
+          DataVersion: 4671
+      Weight: 10.0
+      Rarity: super
+      Broadcast: false
+      Limits:
+        Enabled: false
+        CooldownType: DAILY
+        GlobalAmount: -1
+        PlayerAmount: -1
+        GlobalCooldown: 0
+        PlayerCooldown: 0
+      Ignored_For_Permissions: []
+      Required_Permissions: []
+      Custom_Preview: false
+      Placeholder_Apply: false
+      ItemsData:
+        '0':
+          Provider: vanilla
+          Data:
+            Value: '{components:{"minecraft:attribute_modifiers":[{amount:0.04d,id:"minecraft:3e65dc77-5c37-462c-bd82-e78c2ccb1d4b",operation:"add_multiplied_total",slot:"legs",type:"minecraft:attack_speed"},{amount:6.0d,id:"minecraft:b937166d-acc8-446e-9989-6fe7cab3e377",operation:"add_value",slot:"legs",type:"minecraft:armor"},{amount:2.0d,id:"minecraft:9029fac0-0d19-4e6b-a276-fa4314032a8d",operation:"add_value",slot:"legs",type:"minecraft:armor_toughness"}],"minecraft:custom_name":{extra:[{bold:0b,color:"#FF5858",italic:0b,obfuscated:0b,strikethrough:0b,text:"🛡
+              Pantalones ",underlined:0b},{bold:0b,color:"#FF5858",italic:0b,obfuscated:0b,strikethrough:0b,text:"Boxeador ",underlined:0b},{bold:0b,color:"#FF5858",italic:0b,obfuscated:0b,strikethrough:0b,text:"🛡",underlined:0b}],text:""},"minecraft:enchantments":{"minecraft:protection":2},"minecraft:lore":["",{extra:[{bold:0b,color:"white",italic:0b,obfuscated:0b,strikethrough:0b,text:" ",underlined:0b},{color:"dark_gray",italic:0b,text:"Efectos:"}],text:""},{extra:[{bold:0b,color:"gray",italic:0b,obfuscated:0b,strikethrough:0b,text:"
+              ",underlined:0b},{color:"green",italic:0b,text:"+4% Vel. de Ataque"}],text:""},"",{extra:[{bold:0b,color:"dark_gray",italic:0b,obfuscated:0b,strikethrough:0b,text:"⁂ ",underlined:0b},{bold:1b,color:"#008DFF",italic:0b,obfuscated:0b,strikethrough:0b,text:"R",underlined:0b},{bold:1b,color:"#0AA1FF",italic:0b,obfuscated:0b,strikethrough:0b,text:"A",underlined:0b},{bold:1b,color:"#13B4FF",italic:0b,obfuscated:0b,strikethrough:0b,text:"R",underlined:0b},{bold:1b,color:"#1DC8FF",italic:0b,obfuscated:0b,strikethrough:0b,text:"A
+              ",underlined:0b},{bold:0b,color:"yellow",italic:0b,text:"⭐⭐"},{color:"gray",italic:0b,text:"⭐⭐⭐"}],text:""}]},count:1,id:"minecraft:diamond_leggings"}'
+            DataVersion: 4671
+    _botas_boxeador_:
+      Type: ITEM
+      PreviewData:
+        Provider: vanilla
+        Data:
+          Value: '{components:{"minecraft:profile":{id:[I;-527290097,-1329448586,-1246138032,-1018989882],name:"2705fd94a0c43192",properties:[{name:"textures",value:"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMjcwNWZkOTRhMGM0MzE5MjdmYjRlNjM5YjBmY2ZiNDk3MTdlNDEyMjg1YTAyYjQzOWUwMTEyZGEyMmIyZTJlYyJ9fX0="}]},"minecraft:tooltip_display":{hidden_components:["minecraft:zombie_nautilus/variant","minecraft:tool","minecraft:repair_cost","minecraft:dyed_color","minecraft:axolotl/variant","minecraft:use_cooldown","minecraft:use_effects","minecraft:piercing_weapon","minecraft:base_color","minecraft:bucket_entity_data","minecraft:fox/variant","minecraft:recipes","minecraft:cat/variant","minecraft:pig/variant","minecraft:tropical_fish/pattern_color","minecraft:rabbit/variant","minecraft:use_remainder","minecraft:weapon","minecraft:wolf/collar","minecraft:minimum_attack_charge","minecraft:consumable","minecraft:death_protection","minecraft:trim","minecraft:block_entity_data","minecraft:painting/variant","minecraft:unbreakable","minecraft:can_place_on","minecraft:break_sound","minecraft:salmon/size","minecraft:map_color","minecraft:map_id","minecraft:potion_contents","minecraft:container","minecraft:damage","minecraft:intangible_projectile","minecraft:repairable","minecraft:enchantments","minecraft:sheep/color","minecraft:entity_data","minecraft:blocks_attacks","minecraft:custom_data","minecraft:enchantment_glint_override","minecraft:wolf/sound_variant","minecraft:lodestone_tracker","minecraft:max_stack_size","minecraft:potion_duration_scale","minecraft:parrot/variant","minecraft:enchantable","minecraft:glider","minecraft:provides_banner_patterns","minecraft:food","minecraft:firework_explosion","minecraft:tropical_fish/base_color","minecraft:damage_resistant","minecraft:kinetic_weapon","minecraft:cow/variant","minecraft:ominous_bottle_amplifier","minecraft:wolf/variant","minecraft:block_state","minecraft:mooshroom/variant","minecraft:frog/variant","minecraft:lock","minecraft:stored_enchantments","minecraft:llama/variant","minecraft:map_post_processing","minecraft:container_loot","minecraft:villager/variant","minecraft:cat/collar","minecraft:attribute_modifiers","minecraft:suspicious_stew_effects","minecraft:swing_animation","minecraft:provides_trim_material","minecraft:damage_type","minecraft:fireworks","minecraft:note_block_sound","minecraft:creative_slot_lock","minecraft:bundle_contents","minecraft:horse/variant","minecraft:debug_stick_state","minecraft:profile","minecraft:max_damage","minecraft:attack_range","minecraft:rarity","minecraft:tropical_fish/pattern","minecraft:shulker/color","minecraft:chicken/variant","minecraft:banner_patterns","minecraft:writable_book_content","minecraft:jukebox_playable","minecraft:can_break","minecraft:charged_projectiles","minecraft:written_book_content","minecraft:instrument","minecraft:equippable","minecraft:map_decorations","minecraft:pot_decorations","minecraft:bees"]}},count:1,id:"minecraft:player_head"}'
+          DataVersion: 4671
+      Weight: 10.0
+      Rarity: super
+      Broadcast: false
+      Limits:
+        Enabled: false
+        CooldownType: DAILY
+        GlobalAmount: -1
+        PlayerAmount: -1
+        GlobalCooldown: 0
+        PlayerCooldown: 0
+      Ignored_For_Permissions: []
+      Required_Permissions: []
+      Custom_Preview: false
+      Placeholder_Apply: false
+      ItemsData:
+        '0':
+          Provider: vanilla
+          Data:
+            Value: '{components:{"minecraft:attribute_modifiers":[{amount:0.04d,id:"minecraft:96e652b9-2a50-4941-9c91-5992566e8c91",operation:"add_multiplied_total",slot:"feet",type:"minecraft:attack_speed"},{amount:3.0d,id:"minecraft:c57843e3-1ac4-4abb-a509-c0582f2dd8e0",operation:"add_value",slot:"feet",type:"minecraft:armor"},{amount:2.0d,id:"minecraft:9502c96b-ef2c-4d78-ac13-b8298da303aa",operation:"add_value",slot:"feet",type:"minecraft:armor_toughness"}],"minecraft:custom_name":{extra:[{bold:0b,color:"#FF5858",italic:0b,obfuscated:0b,strikethrough:0b,text:"🛡
+              Botas ",underlined:0b},{bold:0b,color:"#FF5858",italic:0b,obfuscated:0b,strikethrough:0b,text:"Boxeador ",underlined:0b},{bold:0b,color:"#FF5858",italic:0b,obfuscated:0b,strikethrough:0b,text:"🛡",underlined:0b}],text:""},"minecraft:enchantments":{"minecraft:protection":2},"minecraft:lore":["",{extra:[{bold:0b,color:"white",italic:0b,obfuscated:0b,strikethrough:0b,text:" ",underlined:0b},{color:"dark_gray",italic:0b,text:"Efectos:"}],text:""},{extra:[{bold:0b,color:"gray",italic:0b,obfuscated:0b,strikethrough:0b,text:"
+              ",underlined:0b},{color:"green",italic:0b,text:"+4% Vel. de Ataque"}],text:""},"",{extra:[{bold:0b,color:"dark_gray",italic:0b,obfuscated:0b,strikethrough:0b,text:"⁂ ",underlined:0b},{bold:1b,color:"#008DFF",italic:0b,obfuscated:0b,strikethrough:0b,text:"R",underlined:0b},{bold:1b,color:"#0AA1FF",italic:0b,obfuscated:0b,strikethrough:0b,text:"A",underlined:0b},{bold:1b,color:"#13B4FF",italic:0b,obfuscated:0b,strikethrough:0b,text:"R",underlined:0b},{bold:1b,color:"#1DC8FF",italic:0b,obfuscated:0b,strikethrough:0b,text:"A
+              ",underlined:0b},{bold:0b,color:"yellow",italic:0b,text:"⭐⭐"},{color:"gray",italic:0b,text:"⭐⭐⭐"}],text:""}]},count:1,id:"minecraft:diamond_boots"}'
+            DataVersion: 4671
+    _casco_acorazado_:
+      Type: ITEM
+      PreviewData:
+        Provider: vanilla
+        Data:
+          Value: '{components:{"minecraft:profile":{id:[I;-527290097,-1329448586,-1246138032,-1018989882],name:"2705fd94a0c43192",properties:[{name:"textures",value:"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMjcwNWZkOTRhMGM0MzE5MjdmYjRlNjM5YjBmY2ZiNDk3MTdlNDEyMjg1YTAyYjQzOWUwMTEyZGEyMmIyZTJlYyJ9fX0="}]},"minecraft:tooltip_display":{hidden_components:["minecraft:zombie_nautilus/variant","minecraft:tool","minecraft:repair_cost","minecraft:dyed_color","minecraft:axolotl/variant","minecraft:use_cooldown","minecraft:use_effects","minecraft:piercing_weapon","minecraft:base_color","minecraft:bucket_entity_data","minecraft:fox/variant","minecraft:recipes","minecraft:cat/variant","minecraft:pig/variant","minecraft:tropical_fish/pattern_color","minecraft:rabbit/variant","minecraft:use_remainder","minecraft:weapon","minecraft:wolf/collar","minecraft:minimum_attack_charge","minecraft:consumable","minecraft:death_protection","minecraft:trim","minecraft:block_entity_data","minecraft:painting/variant","minecraft:unbreakable","minecraft:can_place_on","minecraft:break_sound","minecraft:salmon/size","minecraft:map_color","minecraft:map_id","minecraft:potion_contents","minecraft:container","minecraft:damage","minecraft:intangible_projectile","minecraft:repairable","minecraft:enchantments","minecraft:sheep/color","minecraft:entity_data","minecraft:blocks_attacks","minecraft:custom_data","minecraft:enchantment_glint_override","minecraft:wolf/sound_variant","minecraft:lodestone_tracker","minecraft:max_stack_size","minecraft:potion_duration_scale","minecraft:parrot/variant","minecraft:enchantable","minecraft:glider","minecraft:provides_banner_patterns","minecraft:food","minecraft:firework_explosion","minecraft:tropical_fish/base_color","minecraft:damage_resistant","minecraft:kinetic_weapon","minecraft:cow/variant","minecraft:ominous_bottle_amplifier","minecraft:wolf/variant","minecraft:block_state","minecraft:mooshroom/variant","minecraft:frog/variant","minecraft:lock","minecraft:stored_enchantments","minecraft:llama/variant","minecraft:map_post_processing","minecraft:container_loot","minecraft:villager/variant","minecraft:cat/collar","minecraft:attribute_modifiers","minecraft:suspicious_stew_effects","minecraft:swing_animation","minecraft:provides_trim_material","minecraft:damage_type","minecraft:fireworks","minecraft:note_block_sound","minecraft:creative_slot_lock","minecraft:bundle_contents","minecraft:horse/variant","minecraft:debug_stick_state","minecraft:profile","minecraft:max_damage","minecraft:attack_range","minecraft:rarity","minecraft:tropical_fish/pattern","minecraft:shulker/color","minecraft:chicken/variant","minecraft:banner_patterns","minecraft:writable_book_content","minecraft:jukebox_playable","minecraft:can_break","minecraft:charged_projectiles","minecraft:written_book_content","minecraft:instrument","minecraft:equippable","minecraft:map_decorations","minecraft:pot_decorations","minecraft:bees"]}},count:1,id:"minecraft:player_head"}'
+          DataVersion: 4671
+      Weight: 10.0
+      Rarity: super
+      Broadcast: false
+      Limits:
+        Enabled: false
+        CooldownType: DAILY
+        GlobalAmount: -1
+        PlayerAmount: -1
+        GlobalCooldown: 0
+        PlayerCooldown: 0
+      Ignored_For_Permissions: []
+      Required_Permissions: []
+      Custom_Preview: false
+      Placeholder_Apply: false
+      ItemsData:
+        '0':
+          Provider: vanilla
+          Data:
+            Value: '{components:{"minecraft:attribute_modifiers":[{amount:2.0d,id:"minecraft:c364daa1-2873-4141-843e-9357c9a79ffc",operation:"add_value",slot:"head",type:"minecraft:max_health"},{amount:3.0d,id:"minecraft:daa1005f-cdef-4f04-84b4-375a6899d3be",operation:"add_value",slot:"head",type:"minecraft:armor"},{amount:2.0d,id:"minecraft:7423a2cd-f9a1-4cac-b0b2-797e4046cdb9",operation:"add_value",slot:"head",type:"minecraft:armor_toughness"}],"minecraft:custom_name":{extra:[{bold:0b,color:"#FF58C4",italic:0b,obfuscated:0b,strikethrough:0b,text:"🛡
+              Casco ",underlined:0b},{bold:0b,color:"#FF58C4",italic:0b,obfuscated:0b,strikethrough:0b,text:"Acorazado ",underlined:0b},{bold:0b,color:"#FF58C4",italic:0b,obfuscated:0b,strikethrough:0b,text:"🛡",underlined:0b}],text:""},"minecraft:enchantments":{"minecraft:protection":2},"minecraft:lore":["",{extra:[{bold:0b,color:"white",italic:0b,obfuscated:0b,strikethrough:0b,text:" ",underlined:0b},{color:"dark_gray",italic:0b,text:"Efectos:"}],text:""},{extra:[{bold:0b,color:"gray",italic:0b,obfuscated:0b,strikethrough:0b,text:"
+              ",underlined:0b},{color:"green",italic:0b,text:"+1❤ Corazón"}],text:""},"",{extra:[{bold:0b,color:"dark_gray",italic:0b,obfuscated:0b,strikethrough:0b,text:"⁂ ",underlined:0b},{bold:1b,color:"#008DFF",italic:0b,obfuscated:0b,strikethrough:0b,text:"R",underlined:0b},{bold:1b,color:"#0AA1FF",italic:0b,obfuscated:0b,strikethrough:0b,text:"A",underlined:0b},{bold:1b,color:"#13B4FF",italic:0b,obfuscated:0b,strikethrough:0b,text:"R",underlined:0b},{bold:1b,color:"#1DC8FF",italic:0b,obfuscated:0b,strikethrough:0b,text:"A
+              ",underlined:0b},{bold:0b,color:"yellow",italic:0b,text:"⭐⭐"},{color:"gray",italic:0b,text:"⭐⭐⭐"}],text:""}]},count:1,id:"minecraft:diamond_helmet"}'
+            DataVersion: 4671
+    _pechera_acorazada_:
+      Type: ITEM
+      PreviewData:
+        Provider: vanilla
+        Data:
+          Value: '{components:{"minecraft:profile":{id:[I;-527290097,-1329448586,-1246138032,-1018989882],name:"2705fd94a0c43192",properties:[{name:"textures",value:"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMjcwNWZkOTRhMGM0MzE5MjdmYjRlNjM5YjBmY2ZiNDk3MTdlNDEyMjg1YTAyYjQzOWUwMTEyZGEyMmIyZTJlYyJ9fX0="}]},"minecraft:tooltip_display":{hidden_components:["minecraft:zombie_nautilus/variant","minecraft:tool","minecraft:repair_cost","minecraft:dyed_color","minecraft:axolotl/variant","minecraft:use_cooldown","minecraft:use_effects","minecraft:piercing_weapon","minecraft:base_color","minecraft:bucket_entity_data","minecraft:fox/variant","minecraft:recipes","minecraft:cat/variant","minecraft:pig/variant","minecraft:tropical_fish/pattern_color","minecraft:rabbit/variant","minecraft:use_remainder","minecraft:weapon","minecraft:wolf/collar","minecraft:minimum_attack_charge","minecraft:consumable","minecraft:death_protection","minecraft:trim","minecraft:block_entity_data","minecraft:painting/variant","minecraft:unbreakable","minecraft:can_place_on","minecraft:break_sound","minecraft:salmon/size","minecraft:map_color","minecraft:map_id","minecraft:potion_contents","minecraft:container","minecraft:damage","minecraft:intangible_projectile","minecraft:repairable","minecraft:enchantments","minecraft:sheep/color","minecraft:entity_data","minecraft:blocks_attacks","minecraft:custom_data","minecraft:enchantment_glint_override","minecraft:wolf/sound_variant","minecraft:lodestone_tracker","minecraft:max_stack_size","minecraft:potion_duration_scale","minecraft:parrot/variant","minecraft:enchantable","minecraft:glider","minecraft:provides_banner_patterns","minecraft:food","minecraft:firework_explosion","minecraft:tropical_fish/base_color","minecraft:damage_resistant","minecraft:kinetic_weapon","minecraft:cow/variant","minecraft:ominous_bottle_amplifier","minecraft:wolf/variant","minecraft:block_state","minecraft:mooshroom/variant","minecraft:frog/variant","minecraft:lock","minecraft:stored_enchantments","minecraft:llama/variant","minecraft:map_post_processing","minecraft:container_loot","minecraft:villager/variant","minecraft:cat/collar","minecraft:attribute_modifiers","minecraft:suspicious_stew_effects","minecraft:swing_animation","minecraft:provides_trim_material","minecraft:damage_type","minecraft:fireworks","minecraft:note_block_sound","minecraft:creative_slot_lock","minecraft:bundle_contents","minecraft:horse/variant","minecraft:debug_stick_state","minecraft:profile","minecraft:max_damage","minecraft:attack_range","minecraft:rarity","minecraft:tropical_fish/pattern","minecraft:shulker/color","minecraft:chicken/variant","minecraft:banner_patterns","minecraft:writable_book_content","minecraft:jukebox_playable","minecraft:can_break","minecraft:charged_projectiles","minecraft:written_book_content","minecraft:instrument","minecraft:equippable","minecraft:map_decorations","minecraft:pot_decorations","minecraft:bees"]}},count:1,id:"minecraft:player_head"}'
+          DataVersion: 4671
+      Weight: 10.0
+      Rarity: super
+      Broadcast: false
+      Limits:
+        Enabled: false
+        CooldownType: DAILY
+        GlobalAmount: -1
+        PlayerAmount: -1
+        GlobalCooldown: 0
+        PlayerCooldown: 0
+      Ignored_For_Permissions: []
+      Required_Permissions: []
+      Custom_Preview: false
+      Placeholder_Apply: false
+      ItemsData:
+        '0':
+          Provider: vanilla
+          Data:
+            Value: '{components:{"minecraft:attribute_modifiers":[{amount:2.0d,id:"minecraft:7f0c2086-a2e1-4c00-be27-2bbef1e7105a",operation:"add_value",slot:"chest",type:"minecraft:max_health"},{amount:8.0d,id:"minecraft:cbee27ef-1e13-44ce-9d7a-eb7ab3e626a9",operation:"add_value",slot:"chest",type:"minecraft:armor"},{amount:2.0d,id:"minecraft:f8204f6b-f76f-4c40-9586-63c776548869",operation:"add_value",slot:"chest",type:"minecraft:armor_toughness"}],"minecraft:custom_name":{extra:[{bold:0b,color:"#FF58C4",italic:0b,obfuscated:0b,strikethrough:0b,text:"🛡
+              Pechera ",underlined:0b},{bold:0b,color:"#FF58C4",italic:0b,obfuscated:0b,strikethrough:0b,text:"Acorazada ",underlined:0b},{bold:0b,color:"#FF58C4",italic:0b,obfuscated:0b,strikethrough:0b,text:"🛡",underlined:0b}],text:""},"minecraft:enchantments":{"minecraft:protection":2},"minecraft:lore":["",{extra:[{bold:0b,color:"white",italic:0b,obfuscated:0b,strikethrough:0b,text:" ",underlined:0b},{color:"dark_gray",italic:0b,text:"Efectos:"}],text:""},{extra:[{bold:0b,color:"gray",italic:0b,obfuscated:0b,strikethrough:0b,text:"
+              ",underlined:0b},{color:"green",italic:0b,text:"+1❤ Corazón"}],text:""},"",{extra:[{bold:0b,color:"dark_gray",italic:0b,obfuscated:0b,strikethrough:0b,text:"⁂ ",underlined:0b},{bold:1b,color:"#008DFF",italic:0b,obfuscated:0b,strikethrough:0b,text:"R",underlined:0b},{bold:1b,color:"#0AA1FF",italic:0b,obfuscated:0b,strikethrough:0b,text:"A",underlined:0b},{bold:1b,color:"#13B4FF",italic:0b,obfuscated:0b,strikethrough:0b,text:"R",underlined:0b},{bold:1b,color:"#1DC8FF",italic:0b,obfuscated:0b,strikethrough:0b,text:"A
+              ",underlined:0b},{bold:0b,color:"yellow",italic:0b,text:"⭐⭐"},{color:"gray",italic:0b,text:"⭐⭐⭐"}],text:""}]},count:1,id:"minecraft:diamond_chestplate"}'
+            DataVersion: 4671
+    _pantalones_acorazados_:
+      Type: ITEM
+      PreviewData:
+        Provider: vanilla
+        Data:
+          Value: '{components:{"minecraft:profile":{id:[I;-527290097,-1329448586,-1246138032,-1018989882],name:"2705fd94a0c43192",properties:[{name:"textures",value:"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMjcwNWZkOTRhMGM0MzE5MjdmYjRlNjM5YjBmY2ZiNDk3MTdlNDEyMjg1YTAyYjQzOWUwMTEyZGEyMmIyZTJlYyJ9fX0="}]},"minecraft:tooltip_display":{hidden_components:["minecraft:zombie_nautilus/variant","minecraft:tool","minecraft:repair_cost","minecraft:dyed_color","minecraft:axolotl/variant","minecraft:use_cooldown","minecraft:use_effects","minecraft:piercing_weapon","minecraft:base_color","minecraft:bucket_entity_data","minecraft:fox/variant","minecraft:recipes","minecraft:cat/variant","minecraft:pig/variant","minecraft:tropical_fish/pattern_color","minecraft:rabbit/variant","minecraft:use_remainder","minecraft:weapon","minecraft:wolf/collar","minecraft:minimum_attack_charge","minecraft:consumable","minecraft:death_protection","minecraft:trim","minecraft:block_entity_data","minecraft:painting/variant","minecraft:unbreakable","minecraft:can_place_on","minecraft:break_sound","minecraft:salmon/size","minecraft:map_color","minecraft:map_id","minecraft:potion_contents","minecraft:container","minecraft:damage","minecraft:intangible_projectile","minecraft:repairable","minecraft:enchantments","minecraft:sheep/color","minecraft:entity_data","minecraft:blocks_attacks","minecraft:custom_data","minecraft:enchantment_glint_override","minecraft:wolf/sound_variant","minecraft:lodestone_tracker","minecraft:max_stack_size","minecraft:potion_duration_scale","minecraft:parrot/variant","minecraft:enchantable","minecraft:glider","minecraft:provides_banner_patterns","minecraft:food","minecraft:firework_explosion","minecraft:tropical_fish/base_color","minecraft:damage_resistant","minecraft:kinetic_weapon","minecraft:cow/variant","minecraft:ominous_bottle_amplifier","minecraft:wolf/variant","minecraft:block_state","minecraft:mooshroom/variant","minecraft:frog/variant","minecraft:lock","minecraft:stored_enchantments","minecraft:llama/variant","minecraft:map_post_processing","minecraft:container_loot","minecraft:villager/variant","minecraft:cat/collar","minecraft:attribute_modifiers","minecraft:suspicious_stew_effects","minecraft:swing_animation","minecraft:provides_trim_material","minecraft:damage_type","minecraft:fireworks","minecraft:note_block_sound","minecraft:creative_slot_lock","minecraft:bundle_contents","minecraft:horse/variant","minecraft:debug_stick_state","minecraft:profile","minecraft:max_damage","minecraft:attack_range","minecraft:rarity","minecraft:tropical_fish/pattern","minecraft:shulker/color","minecraft:chicken/variant","minecraft:banner_patterns","minecraft:writable_book_content","minecraft:jukebox_playable","minecraft:can_break","minecraft:charged_projectiles","minecraft:written_book_content","minecraft:instrument","minecraft:equippable","minecraft:map_decorations","minecraft:pot_decorations","minecraft:bees"]}},count:1,id:"minecraft:player_head"}'
+          DataVersion: 4671
+      Weight: 10.0
+      Rarity: super
+      Broadcast: false
+      Limits:
+        Enabled: false
+        CooldownType: DAILY
+        GlobalAmount: -1
+        PlayerAmount: -1
+        GlobalCooldown: 0
+        PlayerCooldown: 0
+      Ignored_For_Permissions: []
+      Required_Permissions: []
+      Custom_Preview: false
+      Placeholder_Apply: false
+      ItemsData:
+        '0':
+          Provider: vanilla
+          Data:
+            Value: '{components:{"minecraft:attribute_modifiers":[{amount:2.0d,id:"minecraft:149731d2-481c-4385-ae55-8e9dca55cb9f",operation:"add_value",slot:"legs",type:"minecraft:max_health"},{amount:6.0d,id:"minecraft:eb4b0083-e615-420f-b9ff-7bde9013f966",operation:"add_value",slot:"legs",type:"minecraft:armor"},{amount:2.0d,id:"minecraft:59639576-8a32-45ad-939d-c5ff677b4657",operation:"add_value",slot:"legs",type:"minecraft:armor_toughness"}],"minecraft:custom_name":{extra:[{bold:0b,color:"#FF58C4",italic:0b,obfuscated:0b,strikethrough:0b,text:"🛡
+              Pantalones ",underlined:0b},{bold:0b,color:"#FF58C4",italic:0b,obfuscated:0b,strikethrough:0b,text:"Acorazados ",underlined:0b},{bold:0b,color:"#FF58C4",italic:0b,obfuscated:0b,strikethrough:0b,text:"🛡",underlined:0b}],text:""},"minecraft:enchantments":{"minecraft:protection":2},"minecraft:lore":["",{extra:[{bold:0b,color:"white",italic:0b,obfuscated:0b,strikethrough:0b,text:" ",underlined:0b},{color:"dark_gray",italic:0b,text:"Efectos:"}],text:""},{extra:[{bold:0b,color:"gray",italic:0b,obfuscated:0b,strikethrough:0b,text:"
+              ",underlined:0b},{color:"green",italic:0b,text:"+1❤ Corazón"}],text:""},"",{extra:[{bold:0b,color:"dark_gray",italic:0b,obfuscated:0b,strikethrough:0b,text:"⁂ ",underlined:0b},{bold:1b,color:"#008DFF",italic:0b,obfuscated:0b,strikethrough:0b,text:"R",underlined:0b},{bold:1b,color:"#0AA1FF",italic:0b,obfuscated:0b,strikethrough:0b,text:"A",underlined:0b},{bold:1b,color:"#13B4FF",italic:0b,obfuscated:0b,strikethrough:0b,text:"R",underlined:0b},{bold:1b,color:"#1DC8FF",italic:0b,obfuscated:0b,strikethrough:0b,text:"A
+              ",underlined:0b},{bold:0b,color:"yellow",italic:0b,text:"⭐⭐"},{color:"gray",italic:0b,text:"⭐⭐⭐"}],text:""}]},count:1,id:"minecraft:diamond_leggings"}'
+            DataVersion: 4671
+    _botas_acorazadas_:
+      Type: ITEM
+      PreviewData:
+        Provider: vanilla
+        Data:
+          Value: '{components:{"minecraft:profile":{id:[I;-527290097,-1329448586,-1246138032,-1018989882],name:"2705fd94a0c43192",properties:[{name:"textures",value:"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMjcwNWZkOTRhMGM0MzE5MjdmYjRlNjM5YjBmY2ZiNDk3MTdlNDEyMjg1YTAyYjQzOWUwMTEyZGEyMmIyZTJlYyJ9fX0="}]},"minecraft:tooltip_display":{hidden_components:["minecraft:zombie_nautilus/variant","minecraft:tool","minecraft:repair_cost","minecraft:dyed_color","minecraft:axolotl/variant","minecraft:use_cooldown","minecraft:use_effects","minecraft:piercing_weapon","minecraft:base_color","minecraft:bucket_entity_data","minecraft:fox/variant","minecraft:recipes","minecraft:cat/variant","minecraft:pig/variant","minecraft:tropical_fish/pattern_color","minecraft:rabbit/variant","minecraft:use_remainder","minecraft:weapon","minecraft:wolf/collar","minecraft:minimum_attack_charge","minecraft:consumable","minecraft:death_protection","minecraft:trim","minecraft:block_entity_data","minecraft:painting/variant","minecraft:unbreakable","minecraft:can_place_on","minecraft:break_sound","minecraft:salmon/size","minecraft:map_color","minecraft:map_id","minecraft:potion_contents","minecraft:container","minecraft:damage","minecraft:intangible_projectile","minecraft:repairable","minecraft:enchantments","minecraft:sheep/color","minecraft:entity_data","minecraft:blocks_attacks","minecraft:custom_data","minecraft:enchantment_glint_override","minecraft:wolf/sound_variant","minecraft:lodestone_tracker","minecraft:max_stack_size","minecraft:potion_duration_scale","minecraft:parrot/variant","minecraft:enchantable","minecraft:glider","minecraft:provides_banner_patterns","minecraft:food","minecraft:firework_explosion","minecraft:tropical_fish/base_color","minecraft:damage_resistant","minecraft:kinetic_weapon","minecraft:cow/variant","minecraft:ominous_bottle_amplifier","minecraft:wolf/variant","minecraft:block_state","minecraft:mooshroom/variant","minecraft:frog/variant","minecraft:lock","minecraft:stored_enchantments","minecraft:llama/variant","minecraft:map_post_processing","minecraft:container_loot","minecraft:villager/variant","minecraft:cat/collar","minecraft:attribute_modifiers","minecraft:suspicious_stew_effects","minecraft:swing_animation","minecraft:provides_trim_material","minecraft:damage_type","minecraft:fireworks","minecraft:note_block_sound","minecraft:creative_slot_lock","minecraft:bundle_contents","minecraft:horse/variant","minecraft:debug_stick_state","minecraft:profile","minecraft:max_damage","minecraft:attack_range","minecraft:rarity","minecraft:tropical_fish/pattern","minecraft:shulker/color","minecraft:chicken/variant","minecraft:banner_patterns","minecraft:writable_book_content","minecraft:jukebox_playable","minecraft:can_break","minecraft:charged_projectiles","minecraft:written_book_content","minecraft:instrument","minecraft:equippable","minecraft:map_decorations","minecraft:pot_decorations","minecraft:bees"]}},count:1,id:"minecraft:player_head"}'
+          DataVersion: 4671
+      Weight: 10.0
+      Rarity: super
+      Broadcast: false
+      Limits:
+        Enabled: false
+        CooldownType: DAILY
+        GlobalAmount: -1
+        PlayerAmount: -1
+        GlobalCooldown: 0
+        PlayerCooldown: 0
+      Ignored_For_Permissions: []
+      Required_Permissions: []
+      Custom_Preview: false
+      Placeholder_Apply: false
+      ItemsData:
+        '0':
+          Provider: vanilla
+          Data:
+            Value: '{components:{"minecraft:attribute_modifiers":[{amount:2.0d,id:"minecraft:61154efa-6f0c-4e74-aea9-caad126435c6",operation:"add_value",slot:"feet",type:"minecraft:max_health"},{amount:3.0d,id:"minecraft:f078f03b-c6fd-48bf-b8e2-306c16ddb6d8",operation:"add_value",slot:"feet",type:"minecraft:armor"},{amount:2.0d,id:"minecraft:e2559c5b-19b3-4f76-979a-5f52ff247b3e",operation:"add_value",slot:"feet",type:"minecraft:armor_toughness"}],"minecraft:custom_name":{extra:[{bold:0b,color:"#FF58C4",italic:0b,obfuscated:0b,strikethrough:0b,text:"🛡
+              Botas ",underlined:0b},{bold:0b,color:"#FF58C4",italic:0b,obfuscated:0b,strikethrough:0b,text:"Acorazadas ",underlined:0b},{bold:0b,color:"#FF58C4",italic:0b,obfuscated:0b,strikethrough:0b,text:"🛡",underlined:0b}],text:""},"minecraft:enchantments":{"minecraft:protection":2},"minecraft:lore":["",{extra:[{bold:0b,color:"white",italic:0b,obfuscated:0b,strikethrough:0b,text:" ",underlined:0b},{color:"dark_gray",italic:0b,text:"Efectos:"}],text:""},{extra:[{bold:0b,color:"gray",italic:0b,obfuscated:0b,strikethrough:0b,text:"
+              ",underlined:0b},{color:"green",italic:0b,text:"+1❤ Corazón"}],text:""},"",{extra:[{bold:0b,color:"dark_gray",italic:0b,obfuscated:0b,strikethrough:0b,text:"⁂ ",underlined:0b},{bold:1b,color:"#008DFF",italic:0b,obfuscated:0b,strikethrough:0b,text:"R",underlined:0b},{bold:1b,color:"#0AA1FF",italic:0b,obfuscated:0b,strikethrough:0b,text:"A",underlined:0b},{bold:1b,color:"#13B4FF",italic:0b,obfuscated:0b,strikethrough:0b,text:"R",underlined:0b},{bold:1b,color:"#1DC8FF",italic:0b,obfuscated:0b,strikethrough:0b,text:"A
+              ",underlined:0b},{bold:0b,color:"yellow",italic:0b,text:"⭐⭐"},{color:"gray",italic:0b,text:"⭐⭐⭐"}],text:""}]},count:1,id:"minecraft:diamond_boots"}'
+            DataVersion: 4671
+    _espada_carnicera_:
+      Type: ITEM
+      PreviewData:
+        Provider: vanilla
+        Data:
+          Value: '{components:{"minecraft:profile":{id:[I;-527290097,-1329448586,-1246138032,-1018989882],name:"2705fd94a0c43192",properties:[{name:"textures",value:"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMjcwNWZkOTRhMGM0MzE5MjdmYjRlNjM5YjBmY2ZiNDk3MTdlNDEyMjg1YTAyYjQzOWUwMTEyZGEyMmIyZTJlYyJ9fX0="}]},"minecraft:tooltip_display":{hidden_components:["minecraft:zombie_nautilus/variant","minecraft:tool","minecraft:repair_cost","minecraft:dyed_color","minecraft:axolotl/variant","minecraft:use_cooldown","minecraft:use_effects","minecraft:piercing_weapon","minecraft:base_color","minecraft:bucket_entity_data","minecraft:fox/variant","minecraft:recipes","minecraft:cat/variant","minecraft:pig/variant","minecraft:tropical_fish/pattern_color","minecraft:rabbit/variant","minecraft:use_remainder","minecraft:weapon","minecraft:wolf/collar","minecraft:minimum_attack_charge","minecraft:consumable","minecraft:death_protection","minecraft:trim","minecraft:block_entity_data","minecraft:painting/variant","minecraft:unbreakable","minecraft:can_place_on","minecraft:break_sound","minecraft:salmon/size","minecraft:map_color","minecraft:map_id","minecraft:potion_contents","minecraft:container","minecraft:damage","minecraft:intangible_projectile","minecraft:repairable","minecraft:enchantments","minecraft:sheep/color","minecraft:entity_data","minecraft:blocks_attacks","minecraft:custom_data","minecraft:enchantment_glint_override","minecraft:wolf/sound_variant","minecraft:lodestone_tracker","minecraft:max_stack_size","minecraft:potion_duration_scale","minecraft:parrot/variant","minecraft:enchantable","minecraft:glider","minecraft:provides_banner_patterns","minecraft:food","minecraft:firework_explosion","minecraft:tropical_fish/base_color","minecraft:damage_resistant","minecraft:kinetic_weapon","minecraft:cow/variant","minecraft:ominous_bottle_amplifier","minecraft:wolf/variant","minecraft:block_state","minecraft:mooshroom/variant","minecraft:frog/variant","minecraft:lock","minecraft:stored_enchantments","minecraft:llama/variant","minecraft:map_post_processing","minecraft:container_loot","minecraft:villager/variant","minecraft:cat/collar","minecraft:attribute_modifiers","minecraft:suspicious_stew_effects","minecraft:swing_animation","minecraft:provides_trim_material","minecraft:damage_type","minecraft:fireworks","minecraft:note_block_sound","minecraft:creative_slot_lock","minecraft:bundle_contents","minecraft:horse/variant","minecraft:debug_stick_state","minecraft:profile","minecraft:max_damage","minecraft:attack_range","minecraft:rarity","minecraft:tropical_fish/pattern","minecraft:shulker/color","minecraft:chicken/variant","minecraft:banner_patterns","minecraft:writable_book_content","minecraft:jukebox_playable","minecraft:can_break","minecraft:charged_projectiles","minecraft:written_book_content","minecraft:instrument","minecraft:equippable","minecraft:map_decorations","minecraft:pot_decorations","minecraft:bees"]}},count:1,id:"minecraft:player_head"}'
+          DataVersion: 4671
+      Weight: 10.0
+      Rarity: super
+      Broadcast: false
+      Limits:
+        Enabled: false
+        CooldownType: DAILY
+        GlobalAmount: -1
+        PlayerAmount: -1
+        GlobalCooldown: 0
+        PlayerCooldown: 0
+      Ignored_For_Permissions: []
+      Required_Permissions: []
+      Custom_Preview: false
+      Placeholder_Apply: false
+      ItemsData:
+        '0':
+          Provider: vanilla
+          Data:
+            Value: '{components:{"minecraft:custom_name":{extra:[{bold:0b,color:"yellow",italic:0b,obfuscated:0b,strikethrough:0b,text:"🗡 Espada Carnicera 🗡",underlined:0b}],text:""},"minecraft:enchantments":{"minecraft:sharpness":6},"minecraft:lore":["",{extra:[{bold:0b,color:"white",italic:0b,obfuscated:0b,strikethrough:0b,text:" ",underlined:0b},{color:"dark_gray",italic:0b,text:"Efectos:"}],text:""},{extra:[{bold:0b,color:"white",italic:0b,obfuscated:0b,strikethrough:0b,text:" ",underlined:0b},{color:"green",italic:0b,text:"✔
+              Filo 6"}],text:""},"",{extra:[{bold:0b,color:"dark_gray",italic:0b,obfuscated:0b,strikethrough:0b,text:"⁂ ",underlined:0b},{bold:1b,color:"#008DFF",italic:0b,obfuscated:0b,strikethrough:0b,text:"R",underlined:0b},{bold:1b,color:"#0AA1FF",italic:0b,obfuscated:0b,strikethrough:0b,text:"A",underlined:0b},{bold:1b,color:"#13B4FF",italic:0b,obfuscated:0b,strikethrough:0b,text:"R",underlined:0b},{bold:1b,color:"#1DC8FF",italic:0b,obfuscated:0b,strikethrough:0b,text:"A ",underlined:0b},{bold:0b,color:"yellow",italic:0b,text:"⭐⭐"},{color:"gray",italic:0b,text:"⭐⭐⭐"}],text:""}]},count:1,id:"minecraft:diamond_sword"}'
+            DataVersion: 4671
+    _hacha_carnicera_:
+      Type: ITEM
+      PreviewData:
+        Provider: vanilla
+        Data:
+          Value: '{components:{"minecraft:profile":{id:[I;-527290097,-1329448586,-1246138032,-1018989882],name:"2705fd94a0c43192",properties:[{name:"textures",value:"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMjcwNWZkOTRhMGM0MzE5MjdmYjRlNjM5YjBmY2ZiNDk3MTdlNDEyMjg1YTAyYjQzOWUwMTEyZGEyMmIyZTJlYyJ9fX0="}]},"minecraft:tooltip_display":{hidden_components:["minecraft:zombie_nautilus/variant","minecraft:tool","minecraft:repair_cost","minecraft:dyed_color","minecraft:axolotl/variant","minecraft:use_cooldown","minecraft:use_effects","minecraft:piercing_weapon","minecraft:base_color","minecraft:bucket_entity_data","minecraft:fox/variant","minecraft:recipes","minecraft:cat/variant","minecraft:pig/variant","minecraft:tropical_fish/pattern_color","minecraft:rabbit/variant","minecraft:use_remainder","minecraft:weapon","minecraft:wolf/collar","minecraft:minimum_attack_charge","minecraft:consumable","minecraft:death_protection","minecraft:trim","minecraft:block_entity_data","minecraft:painting/variant","minecraft:unbreakable","minecraft:can_place_on","minecraft:break_sound","minecraft:salmon/size","minecraft:map_color","minecraft:map_id","minecraft:potion_contents","minecraft:container","minecraft:damage","minecraft:intangible_projectile","minecraft:repairable","minecraft:enchantments","minecraft:sheep/color","minecraft:entity_data","minecraft:blocks_attacks","minecraft:custom_data","minecraft:enchantment_glint_override","minecraft:wolf/sound_variant","minecraft:lodestone_tracker","minecraft:max_stack_size","minecraft:potion_duration_scale","minecraft:parrot/variant","minecraft:enchantable","minecraft:glider","minecraft:provides_banner_patterns","minecraft:food","minecraft:firework_explosion","minecraft:tropical_fish/base_color","minecraft:damage_resistant","minecraft:kinetic_weapon","minecraft:cow/variant","minecraft:ominous_bottle_amplifier","minecraft:wolf/variant","minecraft:block_state","minecraft:mooshroom/variant","minecraft:frog/variant","minecraft:lock","minecraft:stored_enchantments","minecraft:llama/variant","minecraft:map_post_processing","minecraft:container_loot","minecraft:villager/variant","minecraft:cat/collar","minecraft:attribute_modifiers","minecraft:suspicious_stew_effects","minecraft:swing_animation","minecraft:provides_trim_material","minecraft:damage_type","minecraft:fireworks","minecraft:note_block_sound","minecraft:creative_slot_lock","minecraft:bundle_contents","minecraft:horse/variant","minecraft:debug_stick_state","minecraft:profile","minecraft:max_damage","minecraft:attack_range","minecraft:rarity","minecraft:tropical_fish/pattern","minecraft:shulker/color","minecraft:chicken/variant","minecraft:banner_patterns","minecraft:writable_book_content","minecraft:jukebox_playable","minecraft:can_break","minecraft:charged_projectiles","minecraft:written_book_content","minecraft:instrument","minecraft:equippable","minecraft:map_decorations","minecraft:pot_decorations","minecraft:bees"]}},count:1,id:"minecraft:player_head"}'
+          DataVersion: 4671
+      Weight: 10.0
+      Rarity: super
+      Broadcast: false
+      Limits:
+        Enabled: false
+        CooldownType: DAILY
+        GlobalAmount: -1
+        PlayerAmount: -1
+        GlobalCooldown: 0
+        PlayerCooldown: 0
+      Ignored_For_Permissions: []
+      Required_Permissions: []
+      Custom_Preview: false
+      Placeholder_Apply: false
+      ItemsData:
+        '0':
+          Provider: vanilla
+          Data:
+            Value: '{components:{"minecraft:custom_name":{extra:[{bold:0b,color:"red",italic:0b,obfuscated:0b,strikethrough:0b,text:"🪓 Hacha Carnicera 🪓",underlined:0b}],text:""},"minecraft:enchantments":{"minecraft:sharpness":6},"minecraft:lore":["",{extra:[{bold:0b,color:"white",italic:0b,obfuscated:0b,strikethrough:0b,text:" ",underlined:0b},{color:"dark_gray",italic:0b,text:"Efectos:"}],text:""},{extra:[{bold:0b,color:"white",italic:0b,obfuscated:0b,strikethrough:0b,text:" ",underlined:0b},{color:"green",italic:0b,text:"✔
+              Filo 6"}],text:""},"",{extra:[{bold:0b,color:"dark_gray",italic:0b,obfuscated:0b,strikethrough:0b,text:"⁂ ",underlined:0b},{bold:1b,color:"#008DFF",italic:0b,obfuscated:0b,strikethrough:0b,text:"R",underlined:0b},{bold:1b,color:"#0AA1FF",italic:0b,obfuscated:0b,strikethrough:0b,text:"A",underlined:0b},{bold:1b,color:"#13B4FF",italic:0b,obfuscated:0b,strikethrough:0b,text:"R",underlined:0b},{bold:1b,color:"#1DC8FF",italic:0b,obfuscated:0b,strikethrough:0b,text:"A ",underlined:0b},{bold:0b,color:"yellow",italic:0b,text:"⭐⭐"},{color:"gray",italic:0b,text:"⭐⭐⭐"}],text:""}]},count:1,id:"minecraft:diamond_axe"}'
+            DataVersion: 4671
+    _ballesta_perforadora_:
+      Type: ITEM
+      PreviewData:
+        Provider: vanilla
+        Data:
+          Value: '{components:{"minecraft:profile":{id:[I;-527290097,-1329448586,-1246138032,-1018989882],name:"2705fd94a0c43192",properties:[{name:"textures",value:"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMjcwNWZkOTRhMGM0MzE5MjdmYjRlNjM5YjBmY2ZiNDk3MTdlNDEyMjg1YTAyYjQzOWUwMTEyZGEyMmIyZTJlYyJ9fX0="}]},"minecraft:tooltip_display":{hidden_components:["minecraft:zombie_nautilus/variant","minecraft:tool","minecraft:repair_cost","minecraft:dyed_color","minecraft:axolotl/variant","minecraft:use_cooldown","minecraft:use_effects","minecraft:piercing_weapon","minecraft:base_color","minecraft:bucket_entity_data","minecraft:fox/variant","minecraft:recipes","minecraft:cat/variant","minecraft:pig/variant","minecraft:tropical_fish/pattern_color","minecraft:rabbit/variant","minecraft:use_remainder","minecraft:weapon","minecraft:wolf/collar","minecraft:minimum_attack_charge","minecraft:consumable","minecraft:death_protection","minecraft:trim","minecraft:block_entity_data","minecraft:painting/variant","minecraft:unbreakable","minecraft:can_place_on","minecraft:break_sound","minecraft:salmon/size","minecraft:map_color","minecraft:map_id","minecraft:potion_contents","minecraft:container","minecraft:damage","minecraft:intangible_projectile","minecraft:repairable","minecraft:enchantments","minecraft:sheep/color","minecraft:entity_data","minecraft:blocks_attacks","minecraft:custom_data","minecraft:enchantment_glint_override","minecraft:wolf/sound_variant","minecraft:lodestone_tracker","minecraft:max_stack_size","minecraft:potion_duration_scale","minecraft:parrot/variant","minecraft:enchantable","minecraft:glider","minecraft:provides_banner_patterns","minecraft:food","minecraft:firework_explosion","minecraft:tropical_fish/base_color","minecraft:damage_resistant","minecraft:kinetic_weapon","minecraft:cow/variant","minecraft:ominous_bottle_amplifier","minecraft:wolf/variant","minecraft:block_state","minecraft:mooshroom/variant","minecraft:frog/variant","minecraft:lock","minecraft:stored_enchantments","minecraft:llama/variant","minecraft:map_post_processing","minecraft:container_loot","minecraft:villager/variant","minecraft:cat/collar","minecraft:attribute_modifiers","minecraft:suspicious_stew_effects","minecraft:swing_animation","minecraft:provides_trim_material","minecraft:damage_type","minecraft:fireworks","minecraft:note_block_sound","minecraft:creative_slot_lock","minecraft:bundle_contents","minecraft:horse/variant","minecraft:debug_stick_state","minecraft:profile","minecraft:max_damage","minecraft:attack_range","minecraft:rarity","minecraft:tropical_fish/pattern","minecraft:shulker/color","minecraft:chicken/variant","minecraft:banner_patterns","minecraft:writable_book_content","minecraft:jukebox_playable","minecraft:can_break","minecraft:charged_projectiles","minecraft:written_book_content","minecraft:instrument","minecraft:equippable","minecraft:map_decorations","minecraft:pot_decorations","minecraft:bees"]}},count:1,id:"minecraft:player_head"}'
+          DataVersion: 4671
+      Weight: 10.0
+      Rarity: super
+      Broadcast: false
+      Limits:
+        Enabled: false
+        CooldownType: DAILY
+        GlobalAmount: -1
+        PlayerAmount: -1
+        GlobalCooldown: 0
+        PlayerCooldown: 0
+      Ignored_For_Permissions: []
+      Required_Permissions: []
+      Custom_Preview: false
+      Placeholder_Apply: false
+      ItemsData:
+        '0':
+          Provider: vanilla
+          Data:
+            Value: '{components:{"minecraft:custom_name":{extra:[{bold:0b,color:"yellow",italic:0b,obfuscated:0b,strikethrough:0b,text:"➶ Ballesta Perforadora ➶",underlined:0b}],text:""},"minecraft:enchantments":{"minecraft:mending":1,"minecraft:piercing":4,"minecraft:quick_charge":3,"minecraft:unbreaking":3},"minecraft:lore":["",{extra:[{bold:0b,color:"dark_gray",italic:0b,obfuscated:0b,strikethrough:0b,text:"⁂ ",underlined:0b},{bold:1b,color:"#008DFF",italic:0b,obfuscated:0b,strikethrough:0b,text:"R",underlined:0b},{bold:1b,color:"#0AA1FF",italic:0b,obfuscated:0b,strikethrough:0b,text:"A",underlined:0b},{bold:1b,color:"#13B4FF",italic:0b,obfuscated:0b,strikethrough:0b,text:"R",underlined:0b},{bold:1b,color:"#1DC8FF",italic:0b,obfuscated:0b,strikethrough:0b,text:"A
+              ",underlined:0b},{bold:0b,color:"yellow",italic:0b,text:"⭐⭐"},{color:"gray",italic:0b,text:"⭐⭐⭐"}],text:""}]},count:1,id:"minecraft:crossbow"}'
+            DataVersion: 4671
+    _arco_ígneo_:
+      Type: ITEM
+      PreviewData:
+        Provider: vanilla
+        Data:
+          Value: '{components:{"minecraft:profile":{id:[I;-527290097,-1329448586,-1246138032,-1018989882],name:"2705fd94a0c43192",properties:[{name:"textures",value:"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMjcwNWZkOTRhMGM0MzE5MjdmYjRlNjM5YjBmY2ZiNDk3MTdlNDEyMjg1YTAyYjQzOWUwMTEyZGEyMmIyZTJlYyJ9fX0="}]},"minecraft:tooltip_display":{hidden_components:["minecraft:zombie_nautilus/variant","minecraft:tool","minecraft:repair_cost","minecraft:dyed_color","minecraft:axolotl/variant","minecraft:use_cooldown","minecraft:use_effects","minecraft:piercing_weapon","minecraft:base_color","minecraft:bucket_entity_data","minecraft:fox/variant","minecraft:recipes","minecraft:cat/variant","minecraft:pig/variant","minecraft:tropical_fish/pattern_color","minecraft:rabbit/variant","minecraft:use_remainder","minecraft:weapon","minecraft:wolf/collar","minecraft:minimum_attack_charge","minecraft:consumable","minecraft:death_protection","minecraft:trim","minecraft:block_entity_data","minecraft:painting/variant","minecraft:unbreakable","minecraft:can_place_on","minecraft:break_sound","minecraft:salmon/size","minecraft:map_color","minecraft:map_id","minecraft:potion_contents","minecraft:container","minecraft:damage","minecraft:intangible_projectile","minecraft:repairable","minecraft:enchantments","minecraft:sheep/color","minecraft:entity_data","minecraft:blocks_attacks","minecraft:custom_data","minecraft:enchantment_glint_override","minecraft:wolf/sound_variant","minecraft:lodestone_tracker","minecraft:max_stack_size","minecraft:potion_duration_scale","minecraft:parrot/variant","minecraft:enchantable","minecraft:glider","minecraft:provides_banner_patterns","minecraft:food","minecraft:firework_explosion","minecraft:tropical_fish/base_color","minecraft:damage_resistant","minecraft:kinetic_weapon","minecraft:cow/variant","minecraft:ominous_bottle_amplifier","minecraft:wolf/variant","minecraft:block_state","minecraft:mooshroom/variant","minecraft:frog/variant","minecraft:lock","minecraft:stored_enchantments","minecraft:llama/variant","minecraft:map_post_processing","minecraft:container_loot","minecraft:villager/variant","minecraft:cat/collar","minecraft:attribute_modifiers","minecraft:suspicious_stew_effects","minecraft:swing_animation","minecraft:provides_trim_material","minecraft:damage_type","minecraft:fireworks","minecraft:note_block_sound","minecraft:creative_slot_lock","minecraft:bundle_contents","minecraft:horse/variant","minecraft:debug_stick_state","minecraft:profile","minecraft:max_damage","minecraft:attack_range","minecraft:rarity","minecraft:tropical_fish/pattern","minecraft:shulker/color","minecraft:chicken/variant","minecraft:banner_patterns","minecraft:writable_book_content","minecraft:jukebox_playable","minecraft:can_break","minecraft:charged_projectiles","minecraft:written_book_content","minecraft:instrument","minecraft:equippable","minecraft:map_decorations","minecraft:pot_decorations","minecraft:bees"]}},count:1,id:"minecraft:player_head"}'
+          DataVersion: 4671
+      Weight: 10.0
+      Rarity: super
+      Broadcast: false
+      Limits:
+        Enabled: false
+        CooldownType: DAILY
+        GlobalAmount: -1
+        PlayerAmount: -1
+        GlobalCooldown: 0
+        PlayerCooldown: 0
+      Ignored_For_Permissions: []
+      Required_Permissions: []
+      Custom_Preview: false
+      Placeholder_Apply: false
+      ItemsData:
+        '0':
+          Provider: vanilla
+          Data:
+            Value: '{components:{"minecraft:custom_name":{extra:[{bold:0b,color:"red",italic:0b,obfuscated:0b,strikethrough:0b,text:"➶ Arco ígneo ➶",underlined:0b}],text:""},"minecraft:enchantments":{"minecraft:flame":2,"minecraft:power":5,"minecraft:unbreaking":3},"minecraft:lore":["",{extra:[{bold:0b,color:"dark_gray",italic:0b,obfuscated:0b,strikethrough:0b,text:"⁂ ",underlined:0b},{bold:1b,color:"#008DFF",italic:0b,obfuscated:0b,strikethrough:0b,text:"R",underlined:0b},{bold:1b,color:"#0AA1FF",italic:0b,obfuscated:0b,strikethrough:0b,text:"A",underlined:0b},{bold:1b,color:"#13B4FF",italic:0b,obfuscated:0b,strikethrough:0b,text:"R",underlined:0b},{bold:1b,color:"#1DC8FF",italic:0b,obfuscated:0b,strikethrough:0b,text:"A
+              ",underlined:0b},{bold:0b,color:"yellow",italic:0b,text:"⭐⭐"},{color:"gray",italic:0b,text:"⭐⭐⭐"}],text:""}]},count:1,id:"minecraft:bow"}'
+            DataVersion: 4671
+    _lanza_colmillo_:
+      Type: ITEM
+      PreviewData:
+        Provider: vanilla
+        Data:
+          Value: '{components:{"minecraft:profile":{id:[I;-527290097,-1329448586,-1246138032,-1018989882],name:"2705fd94a0c43192",properties:[{name:"textures",value:"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMjcwNWZkOTRhMGM0MzE5MjdmYjRlNjM5YjBmY2ZiNDk3MTdlNDEyMjg1YTAyYjQzOWUwMTEyZGEyMmIyZTJlYyJ9fX0="}]},"minecraft:tooltip_display":{hidden_components:["minecraft:zombie_nautilus/variant","minecraft:tool","minecraft:repair_cost","minecraft:dyed_color","minecraft:axolotl/variant","minecraft:use_cooldown","minecraft:use_effects","minecraft:piercing_weapon","minecraft:base_color","minecraft:bucket_entity_data","minecraft:fox/variant","minecraft:recipes","minecraft:cat/variant","minecraft:pig/variant","minecraft:tropical_fish/pattern_color","minecraft:rabbit/variant","minecraft:use_remainder","minecraft:weapon","minecraft:wolf/collar","minecraft:minimum_attack_charge","minecraft:consumable","minecraft:death_protection","minecraft:trim","minecraft:block_entity_data","minecraft:painting/variant","minecraft:unbreakable","minecraft:can_place_on","minecraft:break_sound","minecraft:salmon/size","minecraft:map_color","minecraft:map_id","minecraft:potion_contents","minecraft:container","minecraft:damage","minecraft:intangible_projectile","minecraft:repairable","minecraft:enchantments","minecraft:sheep/color","minecraft:entity_data","minecraft:blocks_attacks","minecraft:custom_data","minecraft:enchantment_glint_override","minecraft:wolf/sound_variant","minecraft:lodestone_tracker","minecraft:max_stack_size","minecraft:potion_duration_scale","minecraft:parrot/variant","minecraft:enchantable","minecraft:glider","minecraft:provides_banner_patterns","minecraft:food","minecraft:firework_explosion","minecraft:tropical_fish/base_color","minecraft:damage_resistant","minecraft:kinetic_weapon","minecraft:cow/variant","minecraft:ominous_bottle_amplifier","minecraft:wolf/variant","minecraft:block_state","minecraft:mooshroom/variant","minecraft:frog/variant","minecraft:lock","minecraft:stored_enchantments","minecraft:llama/variant","minecraft:map_post_processing","minecraft:container_loot","minecraft:villager/variant","minecraft:cat/collar","minecraft:attribute_modifiers","minecraft:suspicious_stew_effects","minecraft:swing_animation","minecraft:provides_trim_material","minecraft:damage_type","minecraft:fireworks","minecraft:note_block_sound","minecraft:creative_slot_lock","minecraft:bundle_contents","minecraft:horse/variant","minecraft:debug_stick_state","minecraft:profile","minecraft:max_damage","minecraft:attack_range","minecraft:rarity","minecraft:tropical_fish/pattern","minecraft:shulker/color","minecraft:chicken/variant","minecraft:banner_patterns","minecraft:writable_book_content","minecraft:jukebox_playable","minecraft:can_break","minecraft:charged_projectiles","minecraft:written_book_content","minecraft:instrument","minecraft:equippable","minecraft:map_decorations","minecraft:pot_decorations","minecraft:bees"]}},count:1,id:"minecraft:player_head"}'
+          DataVersion: 4671
+      Weight: 10.0
+      Rarity: super
+      Broadcast: false
+      Limits:
+        Enabled: false
+        CooldownType: DAILY
+        GlobalAmount: -1
+        PlayerAmount: -1
+        GlobalCooldown: 0
+        PlayerCooldown: 0
+      Ignored_For_Permissions: []
+      Required_Permissions: []
+      Custom_Preview: false
+      Placeholder_Apply: false
+      ItemsData:
+        '0':
+          Provider: vanilla
+          Data:
+            Value: '{components:{"minecraft:custom_name":{extra:[{bold:0b,color:"blue",italic:0b,obfuscated:0b,strikethrough:0b,text:"⚚ Lanza Colmillo ⚚",underlined:0b}],text:""},"minecraft:enchantments":{"minecraft:lunge":3,"minecraft:mending":1,"minecraft:sharpness":5,"minecraft:unbreaking":3},"minecraft:lore":["",{extra:[{bold:0b,color:"dark_gray",italic:0b,obfuscated:0b,strikethrough:0b,text:"⁂ ",underlined:0b},{bold:1b,color:"#008DFF",italic:0b,obfuscated:0b,strikethrough:0b,text:"R",underlined:0b},{bold:1b,color:"#0AA1FF",italic:0b,obfuscated:0b,strikethrough:0b,text:"A",underlined:0b},{bold:1b,color:"#13B4FF",italic:0b,obfuscated:0b,strikethrough:0b,text:"R",underlined:0b},{bold:1b,color:"#1DC8FF",italic:0b,obfuscated:0b,strikethrough:0b,text:"A
+              ",underlined:0b},{bold:0b,color:"yellow",italic:0b,text:"⭐⭐"},{color:"gray",italic:0b,text:"⭐⭐⭐"}],text:""}]},count:1,id:"minecraft:diamond_spear"}'
+            DataVersion: 4671
+    _pico_terciopelo_:
+      Type: ITEM
+      PreviewData:
+        Provider: vanilla
+        Data:
+          Value: '{components:{"minecraft:profile":{id:[I;-527290097,-1329448586,-1246138032,-1018989882],name:"2705fd94a0c43192",properties:[{name:"textures",value:"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMjcwNWZkOTRhMGM0MzE5MjdmYjRlNjM5YjBmY2ZiNDk3MTdlNDEyMjg1YTAyYjQzOWUwMTEyZGEyMmIyZTJlYyJ9fX0="}]},"minecraft:tooltip_display":{hidden_components:["minecraft:zombie_nautilus/variant","minecraft:tool","minecraft:repair_cost","minecraft:dyed_color","minecraft:axolotl/variant","minecraft:use_cooldown","minecraft:use_effects","minecraft:piercing_weapon","minecraft:base_color","minecraft:bucket_entity_data","minecraft:fox/variant","minecraft:recipes","minecraft:cat/variant","minecraft:pig/variant","minecraft:tropical_fish/pattern_color","minecraft:rabbit/variant","minecraft:use_remainder","minecraft:weapon","minecraft:wolf/collar","minecraft:minimum_attack_charge","minecraft:consumable","minecraft:death_protection","minecraft:trim","minecraft:block_entity_data","minecraft:painting/variant","minecraft:unbreakable","minecraft:can_place_on","minecraft:break_sound","minecraft:salmon/size","minecraft:map_color","minecraft:map_id","minecraft:potion_contents","minecraft:container","minecraft:damage","minecraft:intangible_projectile","minecraft:repairable","minecraft:enchantments","minecraft:sheep/color","minecraft:entity_data","minecraft:blocks_attacks","minecraft:custom_data","minecraft:enchantment_glint_override","minecraft:wolf/sound_variant","minecraft:lodestone_tracker","minecraft:max_stack_size","minecraft:potion_duration_scale","minecraft:parrot/variant","minecraft:enchantable","minecraft:glider","minecraft:provides_banner_patterns","minecraft:food","minecraft:firework_explosion","minecraft:tropical_fish/base_color","minecraft:damage_resistant","minecraft:kinetic_weapon","minecraft:cow/variant","minecraft:ominous_bottle_amplifier","minecraft:wolf/variant","minecraft:block_state","minecraft:mooshroom/variant","minecraft:frog/variant","minecraft:lock","minecraft:stored_enchantments","minecraft:llama/variant","minecraft:map_post_processing","minecraft:container_loot","minecraft:villager/variant","minecraft:cat/collar","minecraft:attribute_modifiers","minecraft:suspicious_stew_effects","minecraft:swing_animation","minecraft:provides_trim_material","minecraft:damage_type","minecraft:fireworks","minecraft:note_block_sound","minecraft:creative_slot_lock","minecraft:bundle_contents","minecraft:horse/variant","minecraft:debug_stick_state","minecraft:profile","minecraft:max_damage","minecraft:attack_range","minecraft:rarity","minecraft:tropical_fish/pattern","minecraft:shulker/color","minecraft:chicken/variant","minecraft:banner_patterns","minecraft:writable_book_content","minecraft:jukebox_playable","minecraft:can_break","minecraft:charged_projectiles","minecraft:written_book_content","minecraft:instrument","minecraft:equippable","minecraft:map_decorations","minecraft:pot_decorations","minecraft:bees"]}},count:1,id:"minecraft:player_head"}'
+          DataVersion: 4671
+      Weight: 10.0
+      Rarity: super
+      Broadcast: false
+      Limits:
+        Enabled: false
+        CooldownType: DAILY
+        GlobalAmount: -1
+        PlayerAmount: -1
+        GlobalCooldown: 0
+        PlayerCooldown: 0
+      Ignored_For_Permissions: []
+      Required_Permissions: []
+      Custom_Preview: false
+      Placeholder_Apply: false
+      ItemsData:
+        '0':
+          Provider: vanilla
+          Data:
+            Value: '{components:{"minecraft:custom_name":{extra:[{bold:0b,color:"red",italic:0b,obfuscated:0b,strikethrough:0b,text:"⛏ Pico Terciopelo ⛏",underlined:0b}],text:""},"minecraft:enchantments":{"minecraft:efficiency":5,"minecraft:mending":1,"minecraft:silk_touch":1,"minecraft:unbreaking":3},"minecraft:lore":["",{extra:[{bold:0b,color:"dark_gray",italic:0b,obfuscated:0b,strikethrough:0b,text:"⁂ ",underlined:0b},{bold:1b,color:"#008DFF",italic:0b,obfuscated:0b,strikethrough:0b,text:"R",underlined:0b},{bold:1b,color:"#0AA1FF",italic:0b,obfuscated:0b,strikethrough:0b,text:"A",underlined:0b},{bold:1b,color:"#13B4FF",italic:0b,obfuscated:0b,strikethrough:0b,text:"R",underlined:0b},{bold:1b,color:"#1DC8FF",italic:0b,obfuscated:0b,strikethrough:0b,text:"A
+              ",underlined:0b},{bold:0b,color:"yellow",italic:0b,text:"⭐⭐"},{color:"gray",italic:0b,text:"⭐⭐⭐"}],text:""}]},count:1,id:"minecraft:diamond_pickaxe"}'
+            DataVersion: 4671
+    _escudo_redentor_:
+      Type: ITEM
+      PreviewData:
+        Provider: vanilla
+        Data:
+          Value: '{components:{"minecraft:profile":{id:[I;-527290097,-1329448586,-1246138032,-1018989882],name:"2705fd94a0c43192",properties:[{name:"textures",value:"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMjcwNWZkOTRhMGM0MzE5MjdmYjRlNjM5YjBmY2ZiNDk3MTdlNDEyMjg1YTAyYjQzOWUwMTEyZGEyMmIyZTJlYyJ9fX0="}]},"minecraft:tooltip_display":{hidden_components:["minecraft:zombie_nautilus/variant","minecraft:tool","minecraft:repair_cost","minecraft:dyed_color","minecraft:axolotl/variant","minecraft:use_cooldown","minecraft:use_effects","minecraft:piercing_weapon","minecraft:base_color","minecraft:bucket_entity_data","minecraft:fox/variant","minecraft:recipes","minecraft:cat/variant","minecraft:pig/variant","minecraft:tropical_fish/pattern_color","minecraft:rabbit/variant","minecraft:use_remainder","minecraft:weapon","minecraft:wolf/collar","minecraft:minimum_attack_charge","minecraft:consumable","minecraft:death_protection","minecraft:trim","minecraft:block_entity_data","minecraft:painting/variant","minecraft:unbreakable","minecraft:can_place_on","minecraft:break_sound","minecraft:salmon/size","minecraft:map_color","minecraft:map_id","minecraft:potion_contents","minecraft:container","minecraft:damage","minecraft:intangible_projectile","minecraft:repairable","minecraft:enchantments","minecraft:sheep/color","minecraft:entity_data","minecraft:blocks_attacks","minecraft:custom_data","minecraft:enchantment_glint_override","minecraft:wolf/sound_variant","minecraft:lodestone_tracker","minecraft:max_stack_size","minecraft:potion_duration_scale","minecraft:parrot/variant","minecraft:enchantable","minecraft:glider","minecraft:provides_banner_patterns","minecraft:food","minecraft:firework_explosion","minecraft:tropical_fish/base_color","minecraft:damage_resistant","minecraft:kinetic_weapon","minecraft:cow/variant","minecraft:ominous_bottle_amplifier","minecraft:wolf/variant","minecraft:block_state","minecraft:mooshroom/variant","minecraft:frog/variant","minecraft:lock","minecraft:stored_enchantments","minecraft:llama/variant","minecraft:map_post_processing","minecraft:container_loot","minecraft:villager/variant","minecraft:cat/collar","minecraft:attribute_modifiers","minecraft:suspicious_stew_effects","minecraft:swing_animation","minecraft:provides_trim_material","minecraft:damage_type","minecraft:fireworks","minecraft:note_block_sound","minecraft:creative_slot_lock","minecraft:bundle_contents","minecraft:horse/variant","minecraft:debug_stick_state","minecraft:profile","minecraft:max_damage","minecraft:attack_range","minecraft:rarity","minecraft:tropical_fish/pattern","minecraft:shulker/color","minecraft:chicken/variant","minecraft:banner_patterns","minecraft:writable_book_content","minecraft:jukebox_playable","minecraft:can_break","minecraft:charged_projectiles","minecraft:written_book_content","minecraft:instrument","minecraft:equippable","minecraft:map_decorations","minecraft:pot_decorations","minecraft:bees"]}},count:1,id:"minecraft:player_head"}'
+          DataVersion: 4671
+      Weight: 10.0
+      Rarity: super
+      Broadcast: false
+      Limits:
+        Enabled: false
+        CooldownType: DAILY
+        GlobalAmount: -1
+        PlayerAmount: -1
+        GlobalCooldown: 0
+        PlayerCooldown: 0
+      Ignored_For_Permissions: []
+      Required_Permissions: []
+      Custom_Preview: false
+      Placeholder_Apply: false
+      ItemsData:
+        '0':
+          Provider: vanilla
+          Data:
+            Value: '{components:{"minecraft:attribute_modifiers":[{amount:6.0d,id:"minecraft:3602e3a4-c6a2-4dfd-9c9b-d41a8692a9ff",operation:"add_value",slot:"offhand",type:"minecraft:max_health"}],"minecraft:custom_data":{PublicBukkitValues:{"executableitems:ei-id":"totemturco","score:usage":1}},"minecraft:custom_name":{extra:[{bold:0b,color:"light_purple",italic:0b,obfuscated:0b,strikethrough:0b,text:"⛊ Escudo Redentor ⛊",underlined:0b}],text:""},"minecraft:lore":["",{extra:[{bold:0b,color:"white",italic:0b,obfuscated:0b,strikethrough:0b,text:"
+              ",underlined:0b},{color:"dark_gray",italic:0b,text:"Efectos:"}],text:""},{extra:[{bold:0b,color:"gray",italic:0b,obfuscated:0b,strikethrough:0b,text:" ",underlined:0b},{color:"green",italic:0b,text:"+3❤ Corazones"}],text:""},{extra:[{bold:0b,color:"white",italic:0b,obfuscated:0b,strikethrough:0b,text:" ",underlined:0b},{color:"yellow",italic:0b,text:"✔ "},{color:"yellow",italic:0b,text:"Efecto Tótem"}],text:""},{extra:[{bold:0b,color:"white",italic:0b,obfuscated:0b,strikethrough:0b,text:" ",underlined:0b},{color:"gray",italic:0b,text:"(En
+              Offhand)"}],text:""},"",{extra:[{bold:0b,color:"dark_gray",italic:0b,obfuscated:0b,strikethrough:0b,text:"⁂ ",underlined:0b},{bold:1b,color:"#008DFF",italic:0b,obfuscated:0b,strikethrough:0b,text:"R",underlined:0b},{bold:1b,color:"#0AA1FF",italic:0b,obfuscated:0b,strikethrough:0b,text:"A",underlined:0b},{bold:1b,color:"#13B4FF",italic:0b,obfuscated:0b,strikethrough:0b,text:"R",underlined:0b},{bold:1b,color:"#1DC8FF",italic:0b,obfuscated:0b,strikethrough:0b,text:"A ",underlined:0b},{bold:0b,color:"yellow",italic:0b,text:"⭐⭐"},{color:"gray",italic:0b,text:"⭐⭐⭐"}],text:""}]},count:1,id:"minecraft:shield"}'
+            DataVersion: 4671
+    _escudo_móvil_:
+      Type: ITEM
+      PreviewData:
+        Provider: vanilla
+        Data:
+          Value: '{components:{"minecraft:profile":{id:[I;-527290097,-1329448586,-1246138032,-1018989882],name:"2705fd94a0c43192",properties:[{name:"textures",value:"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMjcwNWZkOTRhMGM0MzE5MjdmYjRlNjM5YjBmY2ZiNDk3MTdlNDEyMjg1YTAyYjQzOWUwMTEyZGEyMmIyZTJlYyJ9fX0="}]},"minecraft:tooltip_display":{hidden_components:["minecraft:zombie_nautilus/variant","minecraft:tool","minecraft:repair_cost","minecraft:dyed_color","minecraft:axolotl/variant","minecraft:use_cooldown","minecraft:use_effects","minecraft:piercing_weapon","minecraft:base_color","minecraft:bucket_entity_data","minecraft:fox/variant","minecraft:recipes","minecraft:cat/variant","minecraft:pig/variant","minecraft:tropical_fish/pattern_color","minecraft:rabbit/variant","minecraft:use_remainder","minecraft:weapon","minecraft:wolf/collar","minecraft:minimum_attack_charge","minecraft:consumable","minecraft:death_protection","minecraft:trim","minecraft:block_entity_data","minecraft:painting/variant","minecraft:unbreakable","minecraft:can_place_on","minecraft:break_sound","minecraft:salmon/size","minecraft:map_color","minecraft:map_id","minecraft:potion_contents","minecraft:container","minecraft:damage","minecraft:intangible_projectile","minecraft:repairable","minecraft:enchantments","minecraft:sheep/color","minecraft:entity_data","minecraft:blocks_attacks","minecraft:custom_data","minecraft:enchantment_glint_override","minecraft:wolf/sound_variant","minecraft:lodestone_tracker","minecraft:max_stack_size","minecraft:potion_duration_scale","minecraft:parrot/variant","minecraft:enchantable","minecraft:glider","minecraft:provides_banner_patterns","minecraft:food","minecraft:firework_explosion","minecraft:tropical_fish/base_color","minecraft:damage_resistant","minecraft:kinetic_weapon","minecraft:cow/variant","minecraft:ominous_bottle_amplifier","minecraft:wolf/variant","minecraft:block_state","minecraft:mooshroom/variant","minecraft:frog/variant","minecraft:lock","minecraft:stored_enchantments","minecraft:llama/variant","minecraft:map_post_processing","minecraft:container_loot","minecraft:villager/variant","minecraft:cat/collar","minecraft:attribute_modifiers","minecraft:suspicious_stew_effects","minecraft:swing_animation","minecraft:provides_trim_material","minecraft:damage_type","minecraft:fireworks","minecraft:note_block_sound","minecraft:creative_slot_lock","minecraft:bundle_contents","minecraft:horse/variant","minecraft:debug_stick_state","minecraft:profile","minecraft:max_damage","minecraft:attack_range","minecraft:rarity","minecraft:tropical_fish/pattern","minecraft:shulker/color","minecraft:chicken/variant","minecraft:banner_patterns","minecraft:writable_book_content","minecraft:jukebox_playable","minecraft:can_break","minecraft:charged_projectiles","minecraft:written_book_content","minecraft:instrument","minecraft:equippable","minecraft:map_decorations","minecraft:pot_decorations","minecraft:bees"]}},count:1,id:"minecraft:player_head"}'
+          DataVersion: 4671
+      Weight: 10.0
+      Rarity: super
+      Broadcast: false
+      Limits:
+        Enabled: false
+        CooldownType: DAILY
+        GlobalAmount: -1
+        PlayerAmount: -1
+        GlobalCooldown: 0
+        PlayerCooldown: 0
+      Ignored_For_Permissions: []
+      Required_Permissions: []
+      Custom_Preview: false
+      Placeholder_Apply: false
+      ItemsData:
+        '0':
+          Provider: vanilla
+          Data:
+            Value: '{components:{"minecraft:attribute_modifiers":[{amount:0.1d,id:"minecraft:82464852-cf33-4424-8006-cb559b7c3678",operation:"add_multiplied_total",slot:"offhand",type:"minecraft:movement_speed"}],"minecraft:custom_data":{PublicBukkitValues:{"executableitems:ei-id":"totemturco","score:usage":1}},"minecraft:custom_name":{extra:[{bold:0b,color:"yellow",italic:0b,obfuscated:0b,strikethrough:0b,text:"⛊ Escudo Móvil ⛊",underlined:0b}],text:""},"minecraft:lore":["",{extra:[{bold:0b,color:"white",italic:0b,obfuscated:0b,strikethrough:0b,text:"
+              ",underlined:0b},{color:"dark_gray",italic:0b,text:"Efectos:"}],text:""},{extra:[{bold:0b,color:"gray",italic:0b,obfuscated:0b,strikethrough:0b,text:" ",underlined:0b},{color:"green",italic:0b,text:"+10% de Velocidad"}],text:""},{extra:[{bold:0b,color:"white",italic:0b,obfuscated:0b,strikethrough:0b,text:" ",underlined:0b},{color:"yellow",italic:0b,text:"✔ "},{color:"yellow",italic:0b,text:"Efecto Tótem"}],text:""},{extra:[{bold:0b,color:"white",italic:0b,obfuscated:0b,strikethrough:0b,text:" ",underlined:0b},{color:"gray",italic:0b,text:"(En
+              Offhand)"}],text:""},"",{extra:[{bold:0b,color:"dark_gray",italic:0b,obfuscated:0b,strikethrough:0b,text:"⁂ ",underlined:0b},{bold:1b,color:"#008DFF",italic:0b,obfuscated:0b,strikethrough:0b,text:"R",underlined:0b},{bold:1b,color:"#0AA1FF",italic:0b,obfuscated:0b,strikethrough:0b,text:"A",underlined:0b},{bold:1b,color:"#13B4FF",italic:0b,obfuscated:0b,strikethrough:0b,text:"R",underlined:0b},{bold:1b,color:"#1DC8FF",italic:0b,obfuscated:0b,strikethrough:0b,text:"A ",underlined:0b},{bold:0b,color:"yellow",italic:0b,text:"⭐⭐"},{color:"gray",italic:0b,text:"⭐⭐⭐"}],text:""}]},count:1,id:"minecraft:shield"}'
+            DataVersion: 4671
+    _escudo_atacante_:
+      Type: ITEM
+      PreviewData:
+        Provider: vanilla
+        Data:
+          Value: '{components:{"minecraft:profile":{id:[I;-527290097,-1329448586,-1246138032,-1018989882],name:"2705fd94a0c43192",properties:[{name:"textures",value:"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMjcwNWZkOTRhMGM0MzE5MjdmYjRlNjM5YjBmY2ZiNDk3MTdlNDEyMjg1YTAyYjQzOWUwMTEyZGEyMmIyZTJlYyJ9fX0="}]},"minecraft:tooltip_display":{hidden_components:["minecraft:zombie_nautilus/variant","minecraft:tool","minecraft:repair_cost","minecraft:dyed_color","minecraft:axolotl/variant","minecraft:use_cooldown","minecraft:use_effects","minecraft:piercing_weapon","minecraft:base_color","minecraft:bucket_entity_data","minecraft:fox/variant","minecraft:recipes","minecraft:cat/variant","minecraft:pig/variant","minecraft:tropical_fish/pattern_color","minecraft:rabbit/variant","minecraft:use_remainder","minecraft:weapon","minecraft:wolf/collar","minecraft:minimum_attack_charge","minecraft:consumable","minecraft:death_protection","minecraft:trim","minecraft:block_entity_data","minecraft:painting/variant","minecraft:unbreakable","minecraft:can_place_on","minecraft:break_sound","minecraft:salmon/size","minecraft:map_color","minecraft:map_id","minecraft:potion_contents","minecraft:container","minecraft:damage","minecraft:intangible_projectile","minecraft:repairable","minecraft:enchantments","minecraft:sheep/color","minecraft:entity_data","minecraft:blocks_attacks","minecraft:custom_data","minecraft:enchantment_glint_override","minecraft:wolf/sound_variant","minecraft:lodestone_tracker","minecraft:max_stack_size","minecraft:potion_duration_scale","minecraft:parrot/variant","minecraft:enchantable","minecraft:glider","minecraft:provides_banner_patterns","minecraft:food","minecraft:firework_explosion","minecraft:tropical_fish/base_color","minecraft:damage_resistant","minecraft:kinetic_weapon","minecraft:cow/variant","minecraft:ominous_bottle_amplifier","minecraft:wolf/variant","minecraft:block_state","minecraft:mooshroom/variant","minecraft:frog/variant","minecraft:lock","minecraft:stored_enchantments","minecraft:llama/variant","minecraft:map_post_processing","minecraft:container_loot","minecraft:villager/variant","minecraft:cat/collar","minecraft:attribute_modifiers","minecraft:suspicious_stew_effects","minecraft:swing_animation","minecraft:provides_trim_material","minecraft:damage_type","minecraft:fireworks","minecraft:note_block_sound","minecraft:creative_slot_lock","minecraft:bundle_contents","minecraft:horse/variant","minecraft:debug_stick_state","minecraft:profile","minecraft:max_damage","minecraft:attack_range","minecraft:rarity","minecraft:tropical_fish/pattern","minecraft:shulker/color","minecraft:chicken/variant","minecraft:banner_patterns","minecraft:writable_book_content","minecraft:jukebox_playable","minecraft:can_break","minecraft:charged_projectiles","minecraft:written_book_content","minecraft:instrument","minecraft:equippable","minecraft:map_decorations","minecraft:pot_decorations","minecraft:bees"]}},count:1,id:"minecraft:player_head"}'
+          DataVersion: 4671
+      Weight: 10.0
+      Rarity: super
+      Broadcast: false
+      Limits:
+        Enabled: false
+        CooldownType: DAILY
+        GlobalAmount: -1
+        PlayerAmount: -1
+        GlobalCooldown: 0
+        PlayerCooldown: 0
+      Ignored_For_Permissions: []
+      Required_Permissions: []
+      Custom_Preview: false
+      Placeholder_Apply: false
+      ItemsData:
+        '0':
+          Provider: vanilla
+          Data:
+            Value: '{components:{"minecraft:attribute_modifiers":[{amount:4.0d,id:"minecraft:3638592b-4fdd-4e79-a46d-b9b615f01469",operation:"add_value",slot:"offhand",type:"minecraft:attack_damage"}],"minecraft:custom_data":{PublicBukkitValues:{"executableitems:ei-id":"totemturco","score:usage":1}},"minecraft:custom_name":{extra:[{bold:0b,color:"red",italic:0b,obfuscated:0b,strikethrough:0b,text:"⛊ Escudo Atacante ⛊",underlined:0b}],text:""},"minecraft:lore":["",{extra:[{bold:0b,color:"white",italic:0b,obfuscated:0b,strikethrough:0b,text:"
+              ",underlined:0b},{color:"dark_gray",italic:0b,text:"Efectos:"}],text:""},{extra:[{bold:0b,color:"gray",italic:0b,obfuscated:0b,strikethrough:0b,text:" ",underlined:0b},{color:"green",italic:0b,text:"+4 Daño Ataque"}],text:""},{extra:[{bold:0b,color:"white",italic:0b,obfuscated:0b,strikethrough:0b,text:" ",underlined:0b},{color:"yellow",italic:0b,text:"✔ "},{color:"yellow",italic:0b,text:"Efecto Tótem"}],text:""},{extra:[{bold:0b,color:"white",italic:0b,obfuscated:0b,strikethrough:0b,text:" ",underlined:0b},{color:"gray",italic:0b,text:"(En
+              Offhand)"}],text:""},"",{extra:[{bold:0b,color:"dark_gray",italic:0b,obfuscated:0b,strikethrough:0b,text:"⁂ ",underlined:0b},{bold:1b,color:"#008DFF",italic:0b,obfuscated:0b,strikethrough:0b,text:"R",underlined:0b},{bold:1b,color:"#0AA1FF",italic:0b,obfuscated:0b,strikethrough:0b,text:"A",underlined:0b},{bold:1b,color:"#13B4FF",italic:0b,obfuscated:0b,strikethrough:0b,text:"R",underlined:0b},{bold:1b,color:"#1DC8FF",italic:0b,obfuscated:0b,strikethrough:0b,text:"A ",underlined:0b},{bold:0b,color:"yellow",italic:0b,text:"⭐⭐"},{color:"gray",italic:0b,text:"⭐⭐⭐"}],text:""}]},count:1,id:"minecraft:shield"}'
+            DataVersion: 4671
+    __prote_oro:
+      Type: ITEM
+      PreviewData:
+        Provider: vanilla
+        Data:
+          Value: '{components:{"minecraft:profile":{id:[I;-527290097,-1329448586,-1246138032,-1018989882],name:"2705fd94a0c43192",properties:[{name:"textures",value:"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMjcwNWZkOTRhMGM0MzE5MjdmYjRlNjM5YjBmY2ZiNDk3MTdlNDEyMjg1YTAyYjQzOWUwMTEyZGEyMmIyZTJlYyJ9fX0="}]},"minecraft:tooltip_display":{hidden_components:["minecraft:tropical_fish/base_color","minecraft:repair_cost","minecraft:rarity","minecraft:lodestone_tracker","minecraft:enchantment_glint_override","minecraft:attack_range","minecraft:banner_patterns","minecraft:creative_slot_lock","minecraft:cow/variant","minecraft:stored_enchantments","minecraft:tool","minecraft:repairable","minecraft:bucket_entity_data","minecraft:cat/collar","minecraft:equippable","minecraft:damage_type","minecraft:painting/variant","minecraft:max_stack_size","minecraft:mooshroom/variant","minecraft:bees","minecraft:kinetic_weapon","minecraft:bundle_contents","minecraft:sheep/color","minecraft:provides_trim_material","minecraft:wolf/sound_variant","minecraft:intangible_projectile","minecraft:written_book_content","minecraft:block_entity_data","minecraft:fireworks","minecraft:shulker/color","minecraft:provides_banner_patterns","minecraft:pot_decorations","minecraft:can_break","minecraft:frog/variant","minecraft:weapon","minecraft:base_color","minecraft:blocks_attacks","minecraft:lock","minecraft:map_decorations","minecraft:damage","minecraft:food","minecraft:trim","minecraft:use_cooldown","minecraft:tropical_fish/pattern","minecraft:horse/variant","minecraft:rabbit/variant","minecraft:potion_contents","minecraft:wolf/collar","minecraft:minimum_attack_charge","minecraft:entity_data","minecraft:jukebox_playable","minecraft:chicken/variant","minecraft:block_state","minecraft:break_sound","minecraft:zombie_nautilus/variant","minecraft:pig/variant","minecraft:container","minecraft:map_post_processing","minecraft:damage_resistant","minecraft:max_damage","minecraft:piercing_weapon","minecraft:axolotl/variant","minecraft:llama/variant","minecraft:map_id","minecraft:recipes","minecraft:death_protection","minecraft:map_color","minecraft:glider","minecraft:container_loot","minecraft:parrot/variant","minecraft:tropical_fish/pattern_color","minecraft:ominous_bottle_amplifier","minecraft:fox/variant","minecraft:instrument","minecraft:use_remainder","minecraft:note_block_sound","minecraft:enchantable","minecraft:potion_duration_scale","minecraft:enchantments","minecraft:swing_animation","minecraft:debug_stick_state","minecraft:profile","minecraft:use_effects","minecraft:villager/variant","minecraft:attribute_modifiers","minecraft:unbreakable","minecraft:salmon/size","minecraft:charged_projectiles","minecraft:firework_explosion","minecraft:writable_book_content","minecraft:wolf/variant","minecraft:dyed_color","minecraft:consumable","minecraft:cat/variant","minecraft:can_place_on","minecraft:suspicious_stew_effects","minecraft:custom_data"]}},count:1,id:"minecraft:player_head"}'
+          DataVersion: 4671
+      Weight: 10.0
+      Rarity: super
+      Broadcast: false
+      Limits:
+        Enabled: false
+        CooldownType: DAILY
+        GlobalAmount: -1
+        PlayerAmount: -1
+        GlobalCooldown: 0
+        PlayerCooldown: 0
+      Ignored_For_Permissions: []
+      Required_Permissions: []
+      Custom_Preview: false
+      Placeholder_Apply: false
+      ItemsData:
+        '0':
+          Provider: vanilla
+          Data:
+            Value: '{components:{"minecraft:custom_data":{PublicBukkitValues:{"protectionstones:ispsblock":1b}},"minecraft:custom_name":{extra:[{bold:0b,color:"#FFEE00",italic:0b,obfuscated:0b,strikethrough:0b,text:"☖ ",underlined:0b},{bold:0b,color:"dark_gray",italic:0b,obfuscated:0b,strikethrough:0b,text:"| ",underlined:0b},{bold:0b,color:"#FFEE00",italic:0b,obfuscated:0b,strikethrough:0b,text:"Prote ",underlined:0b},{bold:1b,color:"#FFEE00",italic:0b,obfuscated:0b,strikethrough:0b,text:"Oro",underlined:0b}],text:""},"minecraft:enchantments":{"minecraft:lure":1},"minecraft:lore":[{extra:[{bold:0b,color:"dark_gray",italic:0b,obfuscated:0b,strikethrough:0b,text:"Objeto
+              Útil",underlined:0b}],text:""},"",{extra:[" ",{bold:0b,color:"gray",italic:0b,obfuscated:0b,strikethrough:0b,text:"Usa este bloque para ",underlined:0b}],text:""},{extra:[" ",{bold:0b,color:"gray",italic:0b,obfuscated:0b,strikethrough:0b,text:"proteger un area",underlined:0b}],text:""},"",{extra:[" ",{bold:0b,color:"dark_gray",italic:0b,obfuscated:0b,strikethrough:0b,text:"Información:",underlined:0b}],text:""},{extra:[" ",{bold:1b,color:"dark_gray",italic:0b,obfuscated:0b,strikethrough:0b,text:"|
+              ",underlined:0b},{bold:0b,color:"gray",italic:0b,text:"Tamaño: "},{color:"gray",italic:0b,text:"32x32"}],text:""},"",{extra:[" ",{bold:0b,color:"dark_gray",italic:0b,obfuscated:0b,strikethrough:0b,text:"¿Como usar?",underlined:0b}],text:""},{extra:[" ",{bold:1b,color:"dark_gray",italic:0b,obfuscated:0b,strikethrough:0b,text:"| ",underlined:0b},{bold:0b,color:"white",italic:0b,text:"Colocala en el suelo"}],text:""},{extra:[" ",{bold:1b,color:"dark_gray",italic:0b,obfuscated:0b,strikethrough:0b,text:"|
+              ",underlined:0b},{bold:0b,color:"gray",italic:0b,text:"Configurar: /ps edit"}],text:""},"",{extra:[{bold:0b,color:"dark_gray",italic:0b,obfuscated:0b,strikethrough:0b,text:"⁂ ",underlined:0b},{bold:1b,color:"#A84EDE",italic:0b,obfuscated:0b,strikethrough:0b,text:"E",underlined:0b},{bold:1b,color:"#9B45DF",italic:0b,obfuscated:0b,strikethrough:0b,text:"P",underlined:0b},{bold:1b,color:"#8E3CE0",italic:0b,obfuscated:0b,strikethrough:0b,text:"I",underlined:0b},{bold:1b,color:"#8033E1",italic:0b,obfuscated:0b,strikethrough:0b,text:"C",underlined:0b},{bold:1b,color:"#732AE2",italic:0b,obfuscated:0b,strikethrough:0b,text:"A
+              ",underlined:0b},{bold:0b,color:"yellow",italic:0b,text:"⭐⭐⭐"},{color:"gray",italic:0b,text:"⭐⭐"}],text:""}],"minecraft:tooltip_display":{hidden_components:["minecraft:enchantments"]}},count:1,id:"minecraft:gold_ore"}'
+            DataVersion: 4671
+    _llave_gadgets_:
+      Type: ITEM
+      PreviewData:
+        Provider: vanilla
+        Data:
+          Value: '{components:{"minecraft:profile":{id:[I;-527290097,-1329448586,-1246138032,-1018989882],name:"2705fd94a0c43192",properties:[{name:"textures",value:"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMjcwNWZkOTRhMGM0MzE5MjdmYjRlNjM5YjBmY2ZiNDk3MTdlNDEyMjg1YTAyYjQzOWUwMTEyZGEyMmIyZTJlYyJ9fX0="}]},"minecraft:tooltip_display":{hidden_components:["minecraft:banner_patterns","minecraft:enchantment_glint_override","minecraft:firework_explosion","minecraft:enchantable","minecraft:tropical_fish/pattern","minecraft:weapon","minecraft:cat/collar","minecraft:rarity","minecraft:swing_animation","minecraft:suspicious_stew_effects","minecraft:debug_stick_state","minecraft:painting/variant","minecraft:wolf/variant","minecraft:map_post_processing","minecraft:fox/variant","minecraft:damage_type","minecraft:instrument","minecraft:tropical_fish/pattern_color","minecraft:lock","minecraft:base_color","minecraft:potion_contents","minecraft:trim","minecraft:zombie_nautilus/variant","minecraft:potion_duration_scale","minecraft:damage","minecraft:use_cooldown","minecraft:can_place_on","minecraft:villager/variant","minecraft:piercing_weapon","minecraft:wolf/collar","minecraft:blocks_attacks","minecraft:use_remainder","minecraft:can_break","minecraft:map_id","minecraft:lodestone_tracker","minecraft:pig/variant","minecraft:map_color","minecraft:glider","minecraft:mooshroom/variant","minecraft:block_entity_data","minecraft:cow/variant","minecraft:dyed_color","minecraft:stored_enchantments","minecraft:sheep/color","minecraft:entity_data","minecraft:writable_book_content","minecraft:unbreakable","minecraft:consumable","minecraft:note_block_sound","minecraft:provides_trim_material","minecraft:pot_decorations","minecraft:container_loot","minecraft:salmon/size","minecraft:container","minecraft:enchantments","minecraft:minimum_attack_charge","minecraft:rabbit/variant","minecraft:food","minecraft:bees","minecraft:chicken/variant","minecraft:profile","minecraft:axolotl/variant","minecraft:provides_banner_patterns","minecraft:max_damage","minecraft:bundle_contents","minecraft:horse/variant","minecraft:attack_range","minecraft:written_book_content","minecraft:kinetic_weapon","minecraft:tropical_fish/base_color","minecraft:wolf/sound_variant","minecraft:equippable","minecraft:frog/variant","minecraft:jukebox_playable","minecraft:shulker/color","minecraft:use_effects","minecraft:fireworks","minecraft:intangible_projectile","minecraft:bucket_entity_data","minecraft:block_state","minecraft:map_decorations","minecraft:recipes","minecraft:custom_data","minecraft:max_stack_size","minecraft:ominous_bottle_amplifier","minecraft:creative_slot_lock","minecraft:parrot/variant","minecraft:attribute_modifiers","minecraft:break_sound","minecraft:charged_projectiles","minecraft:damage_resistant","minecraft:repair_cost","minecraft:repairable","minecraft:death_protection","minecraft:llama/variant","minecraft:tool","minecraft:cat/variant"]}},count:1,id:"minecraft:player_head"}'
+          DataVersion: 4671
+      Weight: 2.0
+      Rarity: super
+      Broadcast: false
+      Limits:
+        Enabled: false
+        CooldownType: DAILY
+        GlobalAmount: -1
+        PlayerAmount: -1
+        GlobalCooldown: 0
+        PlayerCooldown: 0
+      Ignored_For_Permissions: []
+      Required_Permissions: []
+      Custom_Preview: false
+      Placeholder_Apply: false
+      ItemsData:
+        '0':
+          Provider: vanilla
+          Data:
+            Value: '{components:{"minecraft:custom_data":{PublicBukkitValues:{"excellentcrates:crate_key.id":"gadgets"}},"minecraft:custom_name":{extra:[{bold:0b,color:"#FFCF00",italic:0b,obfuscated:0b,strikethrough:0b,text:"🔑 Llave ",underlined:0b},{bold:1b,color:"#FFCF00",italic:0b,obfuscated:0b,strikethrough:0b,text:"G",underlined:0b},{bold:1b,color:"#FFD700",italic:0b,obfuscated:0b,strikethrough:0b,text:"A",underlined:0b},{bold:1b,color:"#FFDE00",italic:0b,obfuscated:0b,strikethrough:0b,text:"D",underlined:0b},{bold:1b,color:"#FFE600",italic:0b,obfuscated:0b,strikethrough:0b,text:"G",underlined:0b},{bold:1b,color:"#FFED00",italic:0b,obfuscated:0b,strikethrough:0b,text:"E",underlined:0b},{bold:1b,color:"#FFF500",italic:0b,obfuscated:0b,strikethrough:0b,text:"T",underlined:0b},{bold:1b,color:"#FFFC00",italic:0b,obfuscated:0b,strikethrough:0b,text:"S
+              ",underlined:0b},{bold:0b,color:"#FFFC00",italic:0b,obfuscated:0b,strikethrough:0b,text:"🔑",underlined:0b}],text:""},"minecraft:enchantments":{"minecraft:unbreaking":1},"minecraft:lore":[{extra:[{bold:0b,color:"dark_gray",italic:0b,obfuscated:0b,strikethrough:0b,text:"Llave de Caja",underlined:0b}],text:""},"",{extra:[{bold:0b,color:"dark_gray",italic:0b,obfuscated:0b,strikethrough:0b,text:"¿Qué es esto?",underlined:0b}],text:""},{extra:[{bold:0b,color:"white",italic:0b,obfuscated:0b,strikethrough:0b,text:"
+              ",underlined:0b},{color:"dark_gray",italic:0b,text:"| "},{color:"white",italic:0b,text:"Una llave de caja "},{color:"white",italic:0b,text:""}],text:""},{extra:[{bold:0b,color:"white",italic:0b,obfuscated:0b,strikethrough:0b,text:" ",underlined:0b},{color:"dark_gray",italic:0b,text:"| "},{color:"white",italic:0b,text:"llena de premios!"}],text:""},"",{extra:[{bold:0b,color:"dark_gray",italic:0b,obfuscated:0b,strikethrough:0b,text:"▶ ",underlined:0b},{color:"gray",italic:0b,text:"Uso en "},{color:"yellow",italic:0b,text:"/warp
+              cajas "},{color:"white",italic:0b,text:""}],text:""}],"minecraft:tooltip_display":{hidden_components:["minecraft:enchantments"]}},count:1,id:"minecraft:tripwire_hook"}'
+            DataVersion: 4671
+    _manzana_:
+      Type: ITEM
+      PreviewData:
+        Provider: vanilla
+        Data:
+          Value: '{components:{"minecraft:profile":{id:[I;-527290097,-1329448586,-1246138032,-1018989882],name:"2705fd94a0c43192",properties:[{name:"textures",value:"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMjcwNWZkOTRhMGM0MzE5MjdmYjRlNjM5YjBmY2ZiNDk3MTdlNDEyMjg1YTAyYjQzOWUwMTEyZGEyMmIyZTJlYyJ9fX0="}]},"minecraft:tooltip_display":{hidden_components:["minecraft:attack_range","minecraft:firework_explosion","minecraft:repairable","minecraft:note_block_sound","minecraft:debug_stick_state","minecraft:custom_data","minecraft:charged_projectiles","minecraft:banner_patterns","minecraft:entity_data","minecraft:ominous_bottle_amplifier","minecraft:piercing_weapon","minecraft:minimum_attack_charge","minecraft:pig/variant","minecraft:equippable","minecraft:provides_banner_patterns","minecraft:potion_contents","minecraft:instrument","minecraft:damage_type","minecraft:cow/variant","minecraft:axolotl/variant","minecraft:container","minecraft:tool","minecraft:cat/variant","minecraft:repair_cost","minecraft:fox/variant","minecraft:enchantable","minecraft:recipes","minecraft:tropical_fish/base_color","minecraft:potion_duration_scale","minecraft:glider","minecraft:damage","minecraft:can_break","minecraft:bees","minecraft:weapon","minecraft:dyed_color","minecraft:wolf/sound_variant","minecraft:fireworks","minecraft:map_post_processing","minecraft:food","minecraft:max_stack_size","minecraft:enchantment_glint_override","minecraft:written_book_content","minecraft:use_cooldown","minecraft:sheep/color","minecraft:use_effects","minecraft:frog/variant","minecraft:tropical_fish/pattern_color","minecraft:container_loot","minecraft:trim","minecraft:creative_slot_lock","minecraft:shulker/color","minecraft:wolf/collar","minecraft:use_remainder","minecraft:bundle_contents","minecraft:max_damage","minecraft:intangible_projectile","minecraft:writable_book_content","minecraft:can_place_on","minecraft:chicken/variant","minecraft:painting/variant","minecraft:death_protection","minecraft:map_color","minecraft:consumable","minecraft:profile","minecraft:stored_enchantments","minecraft:rabbit/variant","minecraft:llama/variant","minecraft:unbreakable","minecraft:rarity","minecraft:horse/variant","minecraft:block_state","minecraft:villager/variant","minecraft:attribute_modifiers","minecraft:map_id","minecraft:bucket_entity_data","minecraft:suspicious_stew_effects","minecraft:map_decorations","minecraft:zombie_nautilus/variant","minecraft:damage_resistant","minecraft:cat/collar","minecraft:base_color","minecraft:blocks_attacks","minecraft:jukebox_playable","minecraft:enchantments","minecraft:wolf/variant","minecraft:salmon/size","minecraft:parrot/variant","minecraft:pot_decorations","minecraft:lock","minecraft:break_sound","minecraft:provides_trim_material","minecraft:kinetic_weapon","minecraft:block_entity_data","minecraft:mooshroom/variant","minecraft:tropical_fish/pattern","minecraft:swing_animation","minecraft:lodestone_tracker"]}},count:1,id:"minecraft:player_head"}'
+          DataVersion: 4671
+      Weight: 5.0
+      Rarity: super
+      Broadcast: false
+      Limits:
+        Enabled: false
+        CooldownType: DAILY
+        GlobalAmount: -1
+        PlayerAmount: -1
+        GlobalCooldown: 0
+        PlayerCooldown: 0
+      Ignored_For_Permissions: []
+      Required_Permissions: []
+      Custom_Preview: false
+      Placeholder_Apply: false
+      ItemsData:
+        '0':
+          Provider: vanilla
+          Data:
+            Value: '{components:{"minecraft:attribute_modifiers":[],"minecraft:custom_data":{PublicBukkitValues:{"executableitems:ei-id":"manzana","score:usage":1}},"minecraft:custom_name":{extra:[{bold:0b,color:"gold",italic:0b,obfuscated:0b,strikethrough:0b,text:"🍒 ",underlined:0b},{bold:1b,color:"#FF4B4B",italic:0b,obfuscated:0b,strikethrough:0b,text:"M",underlined:0b},{bold:1b,color:"#FF3174",italic:0b,obfuscated:0b,strikethrough:0b,text:"a",underlined:0b},{bold:1b,color:"#FF3174",italic:0b,obfuscated:0b,strikethrough:0b,text:"n",underlined:0b},{bold:1b,color:"#FF3174",italic:0b,obfuscated:0b,strikethrough:0b,text:"z",underlined:0b},{bold:1b,color:"#FF3174",italic:0b,obfuscated:0b,strikethrough:0b,text:"a",underlined:0b},{bold:1b,color:"#FF3174",italic:0b,obfuscated:0b,strikethrough:0b,text:"n",underlined:0b},{bold:1b,color:"#FF3174",italic:0b,obfuscated:0b,strikethrough:0b,text:"a
+              ",underlined:0b},{bold:0b,color:"gold",italic:0b,text:"🍒"}],text:""},"minecraft:enchantment_glint_override":1b,"minecraft:lore":[{extra:[{bold:0b,color:"dark_gray",italic:0b,obfuscated:0b,strikethrough:0b,text:"Objeto Útil",underlined:0b}],text:""},{extra:[{bold:0b,color:"white",italic:0b,obfuscated:0b,strikethrough:0b,text:"",underlined:0b}],text:""},{extra:[{bold:0b,color:"white",italic:0b,obfuscated:0b,strikethrough:0b,text:" ",underlined:0b},{color:"gray",italic:0b,text:"Delicioso manjar"}],text:""},{extra:[{bold:0b,color:"white",italic:0b,obfuscated:0b,strikethrough:0b,text:"
+              ",underlined:0b},{color:"gray",italic:0b,text:"que otorga efectos "}],text:""},{extra:[{bold:0b,color:"white",italic:0b,obfuscated:0b,strikethrough:0b,text:" ",underlined:0b},{color:"gray",italic:0b,text:"especiales al comerlo."}],text:""},{extra:[{bold:0b,color:"white",italic:0b,obfuscated:0b,strikethrough:0b,text:"",underlined:0b}],text:""},{extra:[{bold:0b,color:"dark_aqua",italic:0b,obfuscated:0b,strikethrough:0b,text:" ",underlined:0b},{color:"gray",italic:0b,text:"■ Aplica "},{color:"white",italic:0b,text:"Fuerza
+              II "},{color:"gray",italic:0b,text:"por "},{color:"white",italic:0b,text:"20 "},{color:"gray",italic:0b,text:"s"}],text:""},{extra:[{bold:0b,color:"white",italic:0b,obfuscated:0b,strikethrough:0b,text:"",underlined:0b}],text:""},{extra:[{bold:1b,color:"gray",italic:0b,obfuscated:0b,strikethrough:0b,text:"➥ ",underlined:0b},{bold:0b,color:"white",italic:0b,text:"Click "},{color:"gray",italic:0b,text:"para comer"}],text:""},""],"minecraft:profile":{id:[I;-1288600659,-373273272,-1897203511,898446696],name:"",properties:[{name:"textures",value:"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMTdlYTI3OGQ2MjI1YzQ0N2M1OTQzZDY1Mjc5OGQwYmJiZDE0MTg0MzRjZThjNTRjNTRmZGFjNzk5OTRkZGQ2YyJ9fX0="}]}},count:1,id:"minecraft:player_head"}'
+            DataVersion: 4671
+    _mango_:
+      Type: ITEM
+      PreviewData:
+        Provider: vanilla
+        Data:
+          Value: '{components:{"minecraft:profile":{id:[I;-527290097,-1329448586,-1246138032,-1018989882],name:"2705fd94a0c43192",properties:[{name:"textures",value:"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMjcwNWZkOTRhMGM0MzE5MjdmYjRlNjM5YjBmY2ZiNDk3MTdlNDEyMjg1YTAyYjQzOWUwMTEyZGEyMmIyZTJlYyJ9fX0="}]},"minecraft:tooltip_display":{hidden_components:["minecraft:attack_range","minecraft:firework_explosion","minecraft:repairable","minecraft:note_block_sound","minecraft:debug_stick_state","minecraft:custom_data","minecraft:charged_projectiles","minecraft:banner_patterns","minecraft:entity_data","minecraft:ominous_bottle_amplifier","minecraft:piercing_weapon","minecraft:minimum_attack_charge","minecraft:pig/variant","minecraft:equippable","minecraft:provides_banner_patterns","minecraft:potion_contents","minecraft:instrument","minecraft:damage_type","minecraft:cow/variant","minecraft:axolotl/variant","minecraft:container","minecraft:tool","minecraft:cat/variant","minecraft:repair_cost","minecraft:fox/variant","minecraft:enchantable","minecraft:recipes","minecraft:tropical_fish/base_color","minecraft:potion_duration_scale","minecraft:glider","minecraft:damage","minecraft:can_break","minecraft:bees","minecraft:weapon","minecraft:dyed_color","minecraft:wolf/sound_variant","minecraft:fireworks","minecraft:map_post_processing","minecraft:food","minecraft:max_stack_size","minecraft:enchantment_glint_override","minecraft:written_book_content","minecraft:use_cooldown","minecraft:sheep/color","minecraft:use_effects","minecraft:frog/variant","minecraft:tropical_fish/pattern_color","minecraft:container_loot","minecraft:trim","minecraft:creative_slot_lock","minecraft:shulker/color","minecraft:wolf/collar","minecraft:use_remainder","minecraft:bundle_contents","minecraft:max_damage","minecraft:intangible_projectile","minecraft:writable_book_content","minecraft:can_place_on","minecraft:chicken/variant","minecraft:painting/variant","minecraft:death_protection","minecraft:map_color","minecraft:consumable","minecraft:profile","minecraft:stored_enchantments","minecraft:rabbit/variant","minecraft:llama/variant","minecraft:unbreakable","minecraft:rarity","minecraft:horse/variant","minecraft:block_state","minecraft:villager/variant","minecraft:attribute_modifiers","minecraft:map_id","minecraft:bucket_entity_data","minecraft:suspicious_stew_effects","minecraft:map_decorations","minecraft:zombie_nautilus/variant","minecraft:damage_resistant","minecraft:cat/collar","minecraft:base_color","minecraft:blocks_attacks","minecraft:jukebox_playable","minecraft:enchantments","minecraft:wolf/variant","minecraft:salmon/size","minecraft:parrot/variant","minecraft:pot_decorations","minecraft:lock","minecraft:break_sound","minecraft:provides_trim_material","minecraft:kinetic_weapon","minecraft:block_entity_data","minecraft:mooshroom/variant","minecraft:tropical_fish/pattern","minecraft:swing_animation","minecraft:lodestone_tracker"]}},count:1,id:"minecraft:player_head"}'
+          DataVersion: 4671
+      Weight: 10.0
+      Rarity: super
+      Broadcast: false
+      Limits:
+        Enabled: false
+        CooldownType: DAILY
+        GlobalAmount: -1
+        PlayerAmount: -1
+        GlobalCooldown: 0
+        PlayerCooldown: 0
+      Ignored_For_Permissions: []
+      Required_Permissions: []
+      Custom_Preview: false
+      Placeholder_Apply: false
+      ItemsData:
+        '0':
+          Provider: vanilla
+          Data:
+            Value: '{components:{"minecraft:attribute_modifiers":[],"minecraft:custom_data":{PublicBukkitValues:{"executableitems:ei-id":"mango","score:usage":1}},"minecraft:custom_name":{extra:[{bold:0b,color:"gold",italic:0b,obfuscated:0b,strikethrough:0b,text:"🍒 ",underlined:0b},{bold:1b,color:"#FFF01F",italic:0b,obfuscated:0b,strikethrough:0b,text:"M",underlined:0b},{bold:1b,color:"#FFC335",italic:0b,obfuscated:0b,strikethrough:0b,text:"a",underlined:0b},{bold:1b,color:"#FF954C",italic:0b,obfuscated:0b,strikethrough:0b,text:"n",underlined:0b},{bold:1b,color:"#FF6862",italic:0b,obfuscated:0b,strikethrough:0b,text:"g",underlined:0b},{bold:1b,color:"#FF6862",italic:0b,obfuscated:0b,strikethrough:0b,text:"o
+              ",underlined:0b},{bold:0b,color:"gold",italic:0b,text:"🍒"}],text:""},"minecraft:enchantment_glint_override":1b,"minecraft:lore":[{extra:[{bold:0b,color:"dark_gray",italic:0b,obfuscated:0b,strikethrough:0b,text:"Objeto Útil",underlined:0b}],text:""},{extra:[{bold:0b,color:"white",italic:0b,obfuscated:0b,strikethrough:0b,text:"",underlined:0b}],text:""},{extra:[{bold:0b,color:"white",italic:0b,obfuscated:0b,strikethrough:0b,text:" ",underlined:0b},{color:"gray",italic:0b,text:"Delicioso manjar"}],text:""},{extra:[{bold:0b,color:"white",italic:0b,obfuscated:0b,strikethrough:0b,text:"
+              ",underlined:0b},{color:"gray",italic:0b,text:"que otorga efectos "}],text:""},{extra:[{bold:0b,color:"white",italic:0b,obfuscated:0b,strikethrough:0b,text:" ",underlined:0b},{color:"gray",italic:0b,text:"especiales al comerlo."}],text:""},{extra:[{bold:0b,color:"white",italic:0b,obfuscated:0b,strikethrough:0b,text:"",underlined:0b}],text:""},{extra:[{bold:0b,color:"dark_aqua",italic:0b,obfuscated:0b,strikethrough:0b,text:" ",underlined:0b},{color:"gray",italic:0b,text:"■ Regenera "},{color:"white",italic:0b,text:"8
+              "},{color:"gray",italic:0b,text:"de salud."}],text:""},{extra:[{bold:0b,color:"dark_aqua",italic:0b,obfuscated:0b,strikethrough:0b,text:" ",underlined:0b},{color:"gray",italic:0b,text:"■ Aplica "},{color:"white",italic:0b,text:"Cuerpo ignífugo "},{color:"gray",italic:0b,text:"por "},{color:"white",italic:0b,text:"20 "},{color:"gray",italic:0b,text:"s"}],text:""},{extra:[{bold:0b,color:"white",italic:0b,obfuscated:0b,strikethrough:0b,text:"",underlined:0b}],text:""},{extra:[{bold:1b,color:"gray",italic:0b,obfuscated:0b,strikethrough:0b,text:"➥
+              ",underlined:0b},{bold:0b,color:"white",italic:0b,text:"Click "},{color:"gray",italic:0b,text:"para comer"}],text:""},""],"minecraft:profile":{id:[I;-1288600659,-373273272,-1897203511,898446696],name:"",properties:[{name:"textures",value:"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYTkyYjEzZmU2NTcxMDM2MzI5MzMyZDE4ZTNlM2RlNTg0NTdmMWYzYWFmZDg5MmZiODYwZWVhNTBiYjJmNTNmMCJ9fX0="}]}},count:1,id:"minecraft:player_head"}'
+            DataVersion: 4671
+    _pera_:
+      Type: ITEM
+      PreviewData:
+        Provider: vanilla
+        Data:
+          Value: '{components:{"minecraft:profile":{id:[I;-527290097,-1329448586,-1246138032,-1018989882],name:"2705fd94a0c43192",properties:[{name:"textures",value:"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMjcwNWZkOTRhMGM0MzE5MjdmYjRlNjM5YjBmY2ZiNDk3MTdlNDEyMjg1YTAyYjQzOWUwMTEyZGEyMmIyZTJlYyJ9fX0="}]},"minecraft:tooltip_display":{hidden_components:["minecraft:attack_range","minecraft:firework_explosion","minecraft:repairable","minecraft:note_block_sound","minecraft:debug_stick_state","minecraft:custom_data","minecraft:charged_projectiles","minecraft:banner_patterns","minecraft:entity_data","minecraft:ominous_bottle_amplifier","minecraft:piercing_weapon","minecraft:minimum_attack_charge","minecraft:pig/variant","minecraft:equippable","minecraft:provides_banner_patterns","minecraft:potion_contents","minecraft:instrument","minecraft:damage_type","minecraft:cow/variant","minecraft:axolotl/variant","minecraft:container","minecraft:tool","minecraft:cat/variant","minecraft:repair_cost","minecraft:fox/variant","minecraft:enchantable","minecraft:recipes","minecraft:tropical_fish/base_color","minecraft:potion_duration_scale","minecraft:glider","minecraft:damage","minecraft:can_break","minecraft:bees","minecraft:weapon","minecraft:dyed_color","minecraft:wolf/sound_variant","minecraft:fireworks","minecraft:map_post_processing","minecraft:food","minecraft:max_stack_size","minecraft:enchantment_glint_override","minecraft:written_book_content","minecraft:use_cooldown","minecraft:sheep/color","minecraft:use_effects","minecraft:frog/variant","minecraft:tropical_fish/pattern_color","minecraft:container_loot","minecraft:trim","minecraft:creative_slot_lock","minecraft:shulker/color","minecraft:wolf/collar","minecraft:use_remainder","minecraft:bundle_contents","minecraft:max_damage","minecraft:intangible_projectile","minecraft:writable_book_content","minecraft:can_place_on","minecraft:chicken/variant","minecraft:painting/variant","minecraft:death_protection","minecraft:map_color","minecraft:consumable","minecraft:profile","minecraft:stored_enchantments","minecraft:rabbit/variant","minecraft:llama/variant","minecraft:unbreakable","minecraft:rarity","minecraft:horse/variant","minecraft:block_state","minecraft:villager/variant","minecraft:attribute_modifiers","minecraft:map_id","minecraft:bucket_entity_data","minecraft:suspicious_stew_effects","minecraft:map_decorations","minecraft:zombie_nautilus/variant","minecraft:damage_resistant","minecraft:cat/collar","minecraft:base_color","minecraft:blocks_attacks","minecraft:jukebox_playable","minecraft:enchantments","minecraft:wolf/variant","minecraft:salmon/size","minecraft:parrot/variant","minecraft:pot_decorations","minecraft:lock","minecraft:break_sound","minecraft:provides_trim_material","minecraft:kinetic_weapon","minecraft:block_entity_data","minecraft:mooshroom/variant","minecraft:tropical_fish/pattern","minecraft:swing_animation","minecraft:lodestone_tracker"]}},count:1,id:"minecraft:player_head"}'
+          DataVersion: 4671
+      Weight: 10.0
+      Rarity: super
+      Broadcast: false
+      Limits:
+        Enabled: false
+        CooldownType: DAILY
+        GlobalAmount: -1
+        PlayerAmount: -1
+        GlobalCooldown: 0
+        PlayerCooldown: 0
+      Ignored_For_Permissions: []
+      Required_Permissions: []
+      Custom_Preview: false
+      Placeholder_Apply: false
+      ItemsData:
+        '0':
+          Provider: vanilla
+          Data:
+            Value: '{components:{"minecraft:attribute_modifiers":[],"minecraft:custom_data":{PublicBukkitValues:{"executableitems:ei-id":"pera","score:usage":1}},"minecraft:custom_name":{extra:[{bold:0b,color:"gold",italic:0b,obfuscated:0b,strikethrough:0b,text:"🍒 ",underlined:0b},{bold:1b,color:"#ACFF49",italic:0b,obfuscated:0b,strikethrough:0b,text:"P",underlined:0b},{bold:1b,color:"#ACFF49",italic:0b,obfuscated:0b,strikethrough:0b,text:"e",underlined:0b},{bold:1b,color:"#ACFF49",italic:0b,obfuscated:0b,strikethrough:0b,text:"r",underlined:0b},{bold:1b,color:"#ACFF49",italic:0b,obfuscated:0b,strikethrough:0b,text:"a
+              ",underlined:0b},{bold:0b,color:"gold",italic:0b,text:"🍒"}],text:""},"minecraft:enchantment_glint_override":1b,"minecraft:lore":[{extra:[{bold:0b,color:"dark_gray",italic:0b,obfuscated:0b,strikethrough:0b,text:"Objeto Útil",underlined:0b}],text:""},{extra:[{bold:0b,color:"white",italic:0b,obfuscated:0b,strikethrough:0b,text:"",underlined:0b}],text:""},{extra:[{bold:0b,color:"white",italic:0b,obfuscated:0b,strikethrough:0b,text:" ",underlined:0b},{color:"gray",italic:0b,text:"Delicioso manjar"}],text:""},{extra:[{bold:0b,color:"white",italic:0b,obfuscated:0b,strikethrough:0b,text:"
+              ",underlined:0b},{color:"gray",italic:0b,text:"que otorga efectos "}],text:""},{extra:[{bold:0b,color:"white",italic:0b,obfuscated:0b,strikethrough:0b,text:" ",underlined:0b},{color:"gray",italic:0b,text:"especiales al comerlo."}],text:""},{extra:[{bold:0b,color:"white",italic:0b,obfuscated:0b,strikethrough:0b,text:"",underlined:0b}],text:""},{extra:[{bold:0b,color:"dark_aqua",italic:0b,obfuscated:0b,strikethrough:0b,text:" ",underlined:0b},{color:"gray",italic:0b,text:"■ Aplica "},{color:"white",italic:0b,text:"Velocidad
+              II "},{color:"gray",italic:0b,text:"por "},{color:"white",italic:0b,text:"20 "},{color:"gray",italic:0b,text:"s"}],text:""},{extra:[{bold:0b,color:"white",italic:0b,obfuscated:0b,strikethrough:0b,text:"",underlined:0b}],text:""},{extra:[{bold:1b,color:"gray",italic:0b,obfuscated:0b,strikethrough:0b,text:"➥ ",underlined:0b},{bold:0b,color:"white",italic:0b,text:"Click "},{color:"gray",italic:0b,text:"para comer"}],text:""},""],"minecraft:profile":{id:[I;-1288600659,-373273272,-1897203511,898446696],name:"",properties:[{name:"textures",value:"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOTA4MjlkYzRlZTVkYmE2NDlkMDM3MDkyOWUxYWQwYTM0N2Y4YzQ5NjY4YWJiZWU0YmQ2MTQxNDFhMzcyYjRmNCJ9fX0="}]}},count:1,id:"minecraft:player_head"}'
+            DataVersion: 4671
+    _piña_:
+      Type: ITEM
+      PreviewData:
+        Provider: vanilla
+        Data:
+          Value: '{components:{"minecraft:profile":{id:[I;-527290097,-1329448586,-1246138032,-1018989882],name:"2705fd94a0c43192",properties:[{name:"textures",value:"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMjcwNWZkOTRhMGM0MzE5MjdmYjRlNjM5YjBmY2ZiNDk3MTdlNDEyMjg1YTAyYjQzOWUwMTEyZGEyMmIyZTJlYyJ9fX0="}]},"minecraft:tooltip_display":{hidden_components:["minecraft:attack_range","minecraft:firework_explosion","minecraft:repairable","minecraft:note_block_sound","minecraft:debug_stick_state","minecraft:custom_data","minecraft:charged_projectiles","minecraft:banner_patterns","minecraft:entity_data","minecraft:ominous_bottle_amplifier","minecraft:piercing_weapon","minecraft:minimum_attack_charge","minecraft:pig/variant","minecraft:equippable","minecraft:provides_banner_patterns","minecraft:potion_contents","minecraft:instrument","minecraft:damage_type","minecraft:cow/variant","minecraft:axolotl/variant","minecraft:container","minecraft:tool","minecraft:cat/variant","minecraft:repair_cost","minecraft:fox/variant","minecraft:enchantable","minecraft:recipes","minecraft:tropical_fish/base_color","minecraft:potion_duration_scale","minecraft:glider","minecraft:damage","minecraft:can_break","minecraft:bees","minecraft:weapon","minecraft:dyed_color","minecraft:wolf/sound_variant","minecraft:fireworks","minecraft:map_post_processing","minecraft:food","minecraft:max_stack_size","minecraft:enchantment_glint_override","minecraft:written_book_content","minecraft:use_cooldown","minecraft:sheep/color","minecraft:use_effects","minecraft:frog/variant","minecraft:tropical_fish/pattern_color","minecraft:container_loot","minecraft:trim","minecraft:creative_slot_lock","minecraft:shulker/color","minecraft:wolf/collar","minecraft:use_remainder","minecraft:bundle_contents","minecraft:max_damage","minecraft:intangible_projectile","minecraft:writable_book_content","minecraft:can_place_on","minecraft:chicken/variant","minecraft:painting/variant","minecraft:death_protection","minecraft:map_color","minecraft:consumable","minecraft:profile","minecraft:stored_enchantments","minecraft:rabbit/variant","minecraft:llama/variant","minecraft:unbreakable","minecraft:rarity","minecraft:horse/variant","minecraft:block_state","minecraft:villager/variant","minecraft:attribute_modifiers","minecraft:map_id","minecraft:bucket_entity_data","minecraft:suspicious_stew_effects","minecraft:map_decorations","minecraft:zombie_nautilus/variant","minecraft:damage_resistant","minecraft:cat/collar","minecraft:base_color","minecraft:blocks_attacks","minecraft:jukebox_playable","minecraft:enchantments","minecraft:wolf/variant","minecraft:salmon/size","minecraft:parrot/variant","minecraft:pot_decorations","minecraft:lock","minecraft:break_sound","minecraft:provides_trim_material","minecraft:kinetic_weapon","minecraft:block_entity_data","minecraft:mooshroom/variant","minecraft:tropical_fish/pattern","minecraft:swing_animation","minecraft:lodestone_tracker"]}},count:1,id:"minecraft:player_head"}'
+          DataVersion: 4671
+      Weight: 10.0
+      Rarity: super
+      Broadcast: false
+      Limits:
+        Enabled: false
+        CooldownType: DAILY
+        GlobalAmount: -1
+        PlayerAmount: -1
+        GlobalCooldown: 0
+        PlayerCooldown: 0
+      Ignored_For_Permissions: []
+      Required_Permissions: []
+      Custom_Preview: false
+      Placeholder_Apply: false
+      ItemsData:
+        '0':
+          Provider: vanilla
+          Data:
+            Value: '{components:{"minecraft:attribute_modifiers":[],"minecraft:custom_data":{PublicBukkitValues:{"executableitems:ei-id":"piña","score:usage":1}},"minecraft:custom_name":{extra:[{bold:0b,color:"gold",italic:0b,obfuscated:0b,strikethrough:0b,text:"🍒 ",underlined:0b},{bold:1b,color:"#FCFF1F",italic:0b,obfuscated:0b,strikethrough:0b,text:"P",underlined:0b},{bold:1b,color:"#FEE838",italic:0b,obfuscated:0b,strikethrough:0b,text:"i",underlined:0b},{bold:1b,color:"#FFD050",italic:0b,obfuscated:0b,strikethrough:0b,text:"ñ",underlined:0b},{bold:1b,color:"#FFD050",italic:0b,obfuscated:0b,strikethrough:0b,text:"a
+              ",underlined:0b},{bold:0b,color:"gold",italic:0b,text:"🍒"}],text:""},"minecraft:enchantment_glint_override":1b,"minecraft:lore":[{extra:[{bold:0b,color:"dark_gray",italic:0b,obfuscated:0b,strikethrough:0b,text:"Objeto Útil",underlined:0b}],text:""},{extra:[{bold:0b,color:"white",italic:0b,obfuscated:0b,strikethrough:0b,text:"",underlined:0b}],text:""},{extra:[{bold:0b,color:"white",italic:0b,obfuscated:0b,strikethrough:0b,text:" ",underlined:0b},{color:"gray",italic:0b,text:"Delicioso manjar"}],text:""},{extra:[{bold:0b,color:"white",italic:0b,obfuscated:0b,strikethrough:0b,text:"
+              ",underlined:0b},{color:"gray",italic:0b,text:"que otorga efectos "}],text:""},{extra:[{bold:0b,color:"white",italic:0b,obfuscated:0b,strikethrough:0b,text:" ",underlined:0b},{color:"gray",italic:0b,text:"especiales al comerlo."}],text:""},{extra:[{bold:0b,color:"white",italic:0b,obfuscated:0b,strikethrough:0b,text:"",underlined:0b}],text:""},{extra:[{bold:0b,color:"dark_aqua",italic:0b,obfuscated:0b,strikethrough:0b,text:" ",underlined:0b},{color:"gray",italic:0b,text:"■ Aplica "},{color:"white",italic:0b,text:"Absorción
+              III "},{color:"gray",italic:0b,text:"por "},{color:"white",italic:0b,text:"20 "},{color:"gray",italic:0b,text:"s"}],text:""},{extra:[{bold:0b,color:"white",italic:0b,obfuscated:0b,strikethrough:0b,text:"",underlined:0b}],text:""},{extra:[{bold:1b,color:"gray",italic:0b,obfuscated:0b,strikethrough:0b,text:"➥ ",underlined:0b},{bold:0b,color:"white",italic:0b,text:"Click "},{color:"gray",italic:0b,text:"para comer"}],text:""},""],"minecraft:profile":{id:[I;-1288600659,-373273272,-1897203511,898446696],name:"",properties:[{name:"textures",value:"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNTdjNWU5MjVhOTQ5ZTU1ZGIyYzI1ZWZhYWQ2NDUxMmViNmRhYjc0YWZmYjJlOWYzMDRjMzg1YjRmNGIzMGJhNSJ9fX0="}]}},count:1,id:"minecraft:player_head"}'
+            DataVersion: 4671
+    _melocotón_:
+      Type: ITEM
+      PreviewData:
+        Provider: vanilla
+        Data:
+          Value: '{components:{"minecraft:profile":{id:[I;-527290097,-1329448586,-1246138032,-1018989882],name:"2705fd94a0c43192",properties:[{name:"textures",value:"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMjcwNWZkOTRhMGM0MzE5MjdmYjRlNjM5YjBmY2ZiNDk3MTdlNDEyMjg1YTAyYjQzOWUwMTEyZGEyMmIyZTJlYyJ9fX0="}]},"minecraft:tooltip_display":{hidden_components:["minecraft:attack_range","minecraft:firework_explosion","minecraft:repairable","minecraft:note_block_sound","minecraft:debug_stick_state","minecraft:custom_data","minecraft:charged_projectiles","minecraft:banner_patterns","minecraft:entity_data","minecraft:ominous_bottle_amplifier","minecraft:piercing_weapon","minecraft:minimum_attack_charge","minecraft:pig/variant","minecraft:equippable","minecraft:provides_banner_patterns","minecraft:potion_contents","minecraft:instrument","minecraft:damage_type","minecraft:cow/variant","minecraft:axolotl/variant","minecraft:container","minecraft:tool","minecraft:cat/variant","minecraft:repair_cost","minecraft:fox/variant","minecraft:enchantable","minecraft:recipes","minecraft:tropical_fish/base_color","minecraft:potion_duration_scale","minecraft:glider","minecraft:damage","minecraft:can_break","minecraft:bees","minecraft:weapon","minecraft:dyed_color","minecraft:wolf/sound_variant","minecraft:fireworks","minecraft:map_post_processing","minecraft:food","minecraft:max_stack_size","minecraft:enchantment_glint_override","minecraft:written_book_content","minecraft:use_cooldown","minecraft:sheep/color","minecraft:use_effects","minecraft:frog/variant","minecraft:tropical_fish/pattern_color","minecraft:container_loot","minecraft:trim","minecraft:creative_slot_lock","minecraft:shulker/color","minecraft:wolf/collar","minecraft:use_remainder","minecraft:bundle_contents","minecraft:max_damage","minecraft:intangible_projectile","minecraft:writable_book_content","minecraft:can_place_on","minecraft:chicken/variant","minecraft:painting/variant","minecraft:death_protection","minecraft:map_color","minecraft:consumable","minecraft:profile","minecraft:stored_enchantments","minecraft:rabbit/variant","minecraft:llama/variant","minecraft:unbreakable","minecraft:rarity","minecraft:horse/variant","minecraft:block_state","minecraft:villager/variant","minecraft:attribute_modifiers","minecraft:map_id","minecraft:bucket_entity_data","minecraft:suspicious_stew_effects","minecraft:map_decorations","minecraft:zombie_nautilus/variant","minecraft:damage_resistant","minecraft:cat/collar","minecraft:base_color","minecraft:blocks_attacks","minecraft:jukebox_playable","minecraft:enchantments","minecraft:wolf/variant","minecraft:salmon/size","minecraft:parrot/variant","minecraft:pot_decorations","minecraft:lock","minecraft:break_sound","minecraft:provides_trim_material","minecraft:kinetic_weapon","minecraft:block_entity_data","minecraft:mooshroom/variant","minecraft:tropical_fish/pattern","minecraft:swing_animation","minecraft:lodestone_tracker"]}},count:1,id:"minecraft:player_head"}'
+          DataVersion: 4671
+      Weight: 10.0
+      Rarity: super
+      Broadcast: false
+      Limits:
+        Enabled: false
+        CooldownType: DAILY
+        GlobalAmount: -1
+        PlayerAmount: -1
+        GlobalCooldown: 0
+        PlayerCooldown: 0
+      Ignored_For_Permissions: []
+      Required_Permissions: []
+      Custom_Preview: false
+      Placeholder_Apply: false
+      ItemsData:
+        '0':
+          Provider: vanilla
+          Data:
+            Value: '{components:{"minecraft:attribute_modifiers":[],"minecraft:custom_data":{PublicBukkitValues:{"executableitems:ei-id":"melocoton","score:usage":1}},"minecraft:custom_name":{extra:[{bold:0b,color:"gold",italic:0b,obfuscated:0b,strikethrough:0b,text:"🍒 ",underlined:0b},{bold:1b,color:"#FF87FC",italic:0b,obfuscated:0b,strikethrough:0b,text:"M",underlined:0b},{bold:1b,color:"#FF8FEC",italic:0b,obfuscated:0b,strikethrough:0b,text:"e",underlined:0b},{bold:1b,color:"#FF97DC",italic:0b,obfuscated:0b,strikethrough:0b,text:"l",underlined:0b},{bold:1b,color:"#FF9FCB",italic:0b,obfuscated:0b,strikethrough:0b,text:"o",underlined:0b},{bold:1b,color:"#FFA7BB",italic:0b,obfuscated:0b,strikethrough:0b,text:"c",underlined:0b},{bold:1b,color:"#FFAFAB",italic:0b,obfuscated:0b,strikethrough:0b,text:"o",underlined:0b},{bold:1b,color:"#FFAFAB",italic:0b,obfuscated:0b,strikethrough:0b,text:"t",underlined:0b},{bold:1b,color:"#FFAFAB",italic:0b,obfuscated:0b,strikethrough:0b,text:"ó",underlined:0b},{bold:1b,color:"#FFAFAB",italic:0b,obfuscated:0b,strikethrough:0b,text:"n
+              ",underlined:0b},{bold:0b,color:"gold",italic:0b,text:"🍒"}],text:""},"minecraft:enchantment_glint_override":1b,"minecraft:lore":[{extra:[{bold:0b,color:"dark_gray",italic:0b,obfuscated:0b,strikethrough:0b,text:"Objeto Útil",underlined:0b}],text:""},{extra:[{bold:0b,color:"white",italic:0b,obfuscated:0b,strikethrough:0b,text:"",underlined:0b}],text:""},{extra:[{bold:0b,color:"white",italic:0b,obfuscated:0b,strikethrough:0b,text:" ",underlined:0b},{color:"gray",italic:0b,text:"Delicioso manjar"}],text:""},{extra:[{bold:0b,color:"white",italic:0b,obfuscated:0b,strikethrough:0b,text:"
+              ",underlined:0b},{color:"gray",italic:0b,text:"que otorga efectos "}],text:""},{extra:[{bold:0b,color:"white",italic:0b,obfuscated:0b,strikethrough:0b,text:" ",underlined:0b},{color:"gray",italic:0b,text:"especiales al comerlo."}],text:""},{extra:[{bold:0b,color:"white",italic:0b,obfuscated:0b,strikethrough:0b,text:"",underlined:0b}],text:""},{extra:[{bold:0b,color:"dark_aqua",italic:0b,obfuscated:0b,strikethrough:0b,text:" ",underlined:0b},{color:"gray",italic:0b,text:"■ Aplica "},{color:"white",italic:0b,text:"Regeneración
+              II "},{color:"gray",italic:0b,text:"por "},{color:"white",italic:0b,text:"10 "},{color:"gray",italic:0b,text:"s"}],text:""},{extra:[{bold:0b,color:"white",italic:0b,obfuscated:0b,strikethrough:0b,text:"",underlined:0b}],text:""},{extra:[{bold:1b,color:"gray",italic:0b,obfuscated:0b,strikethrough:0b,text:"➥ ",underlined:0b},{bold:0b,color:"white",italic:0b,text:"Click "},{color:"gray",italic:0b,text:"para comer"}],text:""},""],"minecraft:profile":{id:[I;-1288600659,-373273272,-1897203511,898446696],name:"",properties:[{name:"textures",value:"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZmFkYmJhYjM4ODFhYWNiYTU3N2UyN2JiZWUxZmJlNGI5YTUwZTE5ZjVhODdmOGQ0OWI2MzYwNTRmYTE3ODhmYyJ9fX0="}]}},count:1,id:"minecraft:player_head"}'
+            DataVersion: 4671
+    _llave_limited_:
+      Type: ITEM
+      PreviewData:
+        Provider: vanilla
+        Data:
+          Value: '{components:{"minecraft:profile":{id:[I;-527290097,-1329448586,-1246138032,-1018989882],name:"2705fd94a0c43192",properties:[{name:"textures",value:"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMjcwNWZkOTRhMGM0MzE5MjdmYjRlNjM5YjBmY2ZiNDk3MTdlNDEyMjg1YTAyYjQzOWUwMTEyZGEyMmIyZTJlYyJ9fX0="}]},"minecraft:tooltip_display":{hidden_components:["minecraft:cat/variant","minecraft:provides_banner_patterns","minecraft:weapon","minecraft:food","minecraft:firework_explosion","minecraft:note_block_sound","minecraft:tropical_fish/base_color","minecraft:attack_range","minecraft:llama/variant","minecraft:cow/variant","minecraft:break_sound","minecraft:piercing_weapon","minecraft:damage","minecraft:use_effects","minecraft:entity_data","minecraft:wolf/variant","minecraft:repair_cost","minecraft:pot_decorations","minecraft:painting/variant","minecraft:pig/variant","minecraft:potion_duration_scale","minecraft:enchantment_glint_override","minecraft:kinetic_weapon","minecraft:can_break","minecraft:container_loot","minecraft:map_color","minecraft:frog/variant","minecraft:intangible_projectile","minecraft:profile","minecraft:bucket_entity_data","minecraft:chicken/variant","minecraft:mooshroom/variant","minecraft:glider","minecraft:stored_enchantments","minecraft:axolotl/variant","minecraft:block_entity_data","minecraft:fireworks","minecraft:recipes","minecraft:lodestone_tracker","minecraft:use_remainder","minecraft:suspicious_stew_effects","minecraft:ominous_bottle_amplifier","minecraft:salmon/size","minecraft:max_stack_size","minecraft:block_state","minecraft:wolf/sound_variant","minecraft:enchantments","minecraft:tropical_fish/pattern","minecraft:custom_data","minecraft:debug_stick_state","minecraft:instrument","minecraft:wolf/collar","minecraft:damage_resistant","minecraft:written_book_content","minecraft:trim","minecraft:charged_projectiles","minecraft:map_post_processing","minecraft:lock","minecraft:potion_contents","minecraft:damage_type","minecraft:provides_trim_material","minecraft:use_cooldown","minecraft:writable_book_content","minecraft:swing_animation","minecraft:container","minecraft:base_color","minecraft:repairable","minecraft:map_id","minecraft:creative_slot_lock","minecraft:bees","minecraft:map_decorations","minecraft:jukebox_playable","minecraft:shulker/color","minecraft:unbreakable","minecraft:can_place_on","minecraft:death_protection","minecraft:zombie_nautilus/variant","minecraft:horse/variant","minecraft:sheep/color","minecraft:tropical_fish/pattern_color","minecraft:cat/collar","minecraft:banner_patterns","minecraft:minimum_attack_charge","minecraft:dyed_color","minecraft:max_damage","minecraft:fox/variant","minecraft:tool","minecraft:rabbit/variant","minecraft:rarity","minecraft:equippable","minecraft:blocks_attacks","minecraft:bundle_contents","minecraft:consumable","minecraft:parrot/variant","minecraft:attribute_modifiers","minecraft:enchantable","minecraft:villager/variant"]}},count:1,id:"minecraft:player_head"}'
+          DataVersion: 4671
+      Weight: 1.5
+      Rarity: super
+      Broadcast: false
+      Limits:
+        Enabled: false
+        CooldownType: DAILY
+        GlobalAmount: -1
+        PlayerAmount: -1
+        GlobalCooldown: 0
+        PlayerCooldown: 0
+      Ignored_For_Permissions: []
+      Required_Permissions: []
+      Custom_Preview: false
+      Placeholder_Apply: false
+      ItemsData:
+        '0':
+          Provider: vanilla
+          Data:
+            Value: '{components:{"minecraft:custom_data":{PublicBukkitValues:{"excellentcrates:crate_key.id":"limited"}},"minecraft:custom_name":{extra:[{bold:0b,color:"white",italic:0b,obfuscated:1b,strikethrough:0b,text:"|",underlined:0b},{bold:0b,color:"#FF4B4B",italic:0b,obfuscated:0b,strikethrough:0b,text:"🔑",underlined:0b},{color:"white",italic:0b,obfuscated:1b,text:"| "},{color:"white",italic:0b,obfuscated:0b,text:"Llave "},{bold:1b,color:"#FF4B4B",italic:0b,obfuscated:0b,strikethrough:0b,text:"¡",underlined:0b},{bold:1b,color:"#FF8B2D",italic:0b,obfuscated:0b,strikethrough:0b,text:"L",underlined:0b},{bold:1b,color:"#FFD031",italic:0b,obfuscated:0b,strikethrough:0b,text:"I",underlined:0b},{bold:1b,color:"#DCFF39",italic:0b,obfuscated:0b,strikethrough:0b,text:"M",underlined:0b},{bold:1b,color:"#A5FF3F",italic:0b,obfuscated:0b,strikethrough:0b,text:"I",underlined:0b},{bold:1b,color:"#6DFF45",italic:0b,obfuscated:0b,strikethrough:0b,text:"T",underlined:0b},{bold:1b,color:"#3BFFC7",italic:0b,obfuscated:0b,strikethrough:0b,text:"E",underlined:0b},{bold:1b,color:"#58D0FF",italic:0b,obfuscated:0b,strikethrough:0b,text:"D",underlined:0b},{bold:1b,color:"#5489FF",italic:0b,obfuscated:0b,strikethrough:0b,text:"!
+              ",underlined:0b},{bold:0b,color:"white",italic:0b,obfuscated:1b,text:"|"},{bold:0b,color:"#5489FF",italic:0b,obfuscated:0b,strikethrough:0b,text:"🔑",underlined:0b},{color:"white",italic:0b,obfuscated:1b,text:"|"}],text:""},"minecraft:enchantments":{"minecraft:unbreaking":1},"minecraft:lore":[{extra:[{bold:0b,color:"dark_gray",italic:0b,obfuscated:0b,strikethrough:0b,text:"Llave de Caja",underlined:0b}],text:""},"",{extra:[{bold:0b,color:"dark_gray",italic:0b,obfuscated:0b,strikethrough:0b,text:"¿Qué
+              es esto?",underlined:0b}],text:""},{extra:[{bold:0b,color:"white",italic:0b,obfuscated:0b,strikethrough:0b,text:" ",underlined:0b},{color:"dark_gray",italic:0b,text:"| "},{color:"white",italic:0b,text:"Una llave de caja "},{color:"white",italic:0b,text:""}],text:""},{extra:[{bold:0b,color:"white",italic:0b,obfuscated:0b,strikethrough:0b,text:" ",underlined:0b},{color:"dark_gray",italic:0b,text:"| "},{color:"white",italic:0b,text:"llena de premios!"}],text:""},"",{extra:[{bold:0b,color:"dark_gray",italic:0b,obfuscated:0b,strikethrough:0b,text:"▶
+              ",underlined:0b},{color:"gray",italic:0b,text:"Uso en "},{color:"yellow",italic:0b,text:"/warp cajas "},{color:"white",italic:0b,text:""}],text:""}],"minecraft:tooltip_display":{hidden_components:["minecraft:enchantments"]}},count:1,id:"minecraft:ominous_trial_key"}'
+            DataVersion: 4671
+    _llave_mitica_:
+      Type: ITEM
+      PreviewData:
+        Provider: vanilla
+        Data:
+          Value: '{components:{"minecraft:profile":{id:[I;-527290097,-1329448586,-1246138032,-1018989882],name:"2705fd94a0c43192",properties:[{name:"textures",value:"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMjcwNWZkOTRhMGM0MzE5MjdmYjRlNjM5YjBmY2ZiNDk3MTdlNDEyMjg1YTAyYjQzOWUwMTEyZGEyMmIyZTJlYyJ9fX0="}]},"minecraft:tooltip_display":{hidden_components:["minecraft:cat/variant","minecraft:provides_banner_patterns","minecraft:weapon","minecraft:food","minecraft:firework_explosion","minecraft:note_block_sound","minecraft:tropical_fish/base_color","minecraft:attack_range","minecraft:llama/variant","minecraft:cow/variant","minecraft:break_sound","minecraft:piercing_weapon","minecraft:damage","minecraft:use_effects","minecraft:entity_data","minecraft:wolf/variant","minecraft:repair_cost","minecraft:pot_decorations","minecraft:painting/variant","minecraft:pig/variant","minecraft:potion_duration_scale","minecraft:enchantment_glint_override","minecraft:kinetic_weapon","minecraft:can_break","minecraft:container_loot","minecraft:map_color","minecraft:frog/variant","minecraft:intangible_projectile","minecraft:profile","minecraft:bucket_entity_data","minecraft:chicken/variant","minecraft:mooshroom/variant","minecraft:glider","minecraft:stored_enchantments","minecraft:axolotl/variant","minecraft:block_entity_data","minecraft:fireworks","minecraft:recipes","minecraft:lodestone_tracker","minecraft:use_remainder","minecraft:suspicious_stew_effects","minecraft:ominous_bottle_amplifier","minecraft:salmon/size","minecraft:max_stack_size","minecraft:block_state","minecraft:wolf/sound_variant","minecraft:enchantments","minecraft:tropical_fish/pattern","minecraft:custom_data","minecraft:debug_stick_state","minecraft:instrument","minecraft:wolf/collar","minecraft:damage_resistant","minecraft:written_book_content","minecraft:trim","minecraft:charged_projectiles","minecraft:map_post_processing","minecraft:lock","minecraft:potion_contents","minecraft:damage_type","minecraft:provides_trim_material","minecraft:use_cooldown","minecraft:writable_book_content","minecraft:swing_animation","minecraft:container","minecraft:base_color","minecraft:repairable","minecraft:map_id","minecraft:creative_slot_lock","minecraft:bees","minecraft:map_decorations","minecraft:jukebox_playable","minecraft:shulker/color","minecraft:unbreakable","minecraft:can_place_on","minecraft:death_protection","minecraft:zombie_nautilus/variant","minecraft:horse/variant","minecraft:sheep/color","minecraft:tropical_fish/pattern_color","minecraft:cat/collar","minecraft:banner_patterns","minecraft:minimum_attack_charge","minecraft:dyed_color","minecraft:max_damage","minecraft:fox/variant","minecraft:tool","minecraft:rabbit/variant","minecraft:rarity","minecraft:equippable","minecraft:blocks_attacks","minecraft:bundle_contents","minecraft:consumable","minecraft:parrot/variant","minecraft:attribute_modifiers","minecraft:enchantable","minecraft:villager/variant"]}},count:1,id:"minecraft:player_head"}'
+          DataVersion: 4671
+      Weight: 1.7
+      Rarity: super
+      Broadcast: false
+      Limits:
+        Enabled: false
+        CooldownType: DAILY
+        GlobalAmount: -1
+        PlayerAmount: -1
+        GlobalCooldown: 0
+        PlayerCooldown: 0
+      Ignored_For_Permissions: []
+      Required_Permissions: []
+      Custom_Preview: false
+      Placeholder_Apply: false
+      ItemsData:
+        '0':
+          Provider: vanilla
+          Data:
+            Value: '{components:{"minecraft:custom_data":{PublicBukkitValues:{"excellentcrates:crate_key.id":"mitica"}},"minecraft:custom_name":{extra:[{bold:0b,color:"#B01111",italic:0b,obfuscated:0b,strikethrough:0b,text:"🔑 Llave ",underlined:0b},{bold:1b,color:"#B01111",italic:0b,obfuscated:0b,strikethrough:0b,text:"M",underlined:0b},{bold:1b,color:"#B61515",italic:0b,obfuscated:0b,strikethrough:0b,text:"I",underlined:0b},{bold:1b,color:"#BD1919",italic:0b,obfuscated:0b,strikethrough:0b,text:"T",underlined:0b},{bold:1b,color:"#C31E1E",italic:0b,obfuscated:0b,strikethrough:0b,text:"I",underlined:0b},{bold:1b,color:"#CA2222",italic:0b,obfuscated:0b,strikethrough:0b,text:"C",underlined:0b},{bold:1b,color:"#D02626",italic:0b,obfuscated:0b,strikethrough:0b,text:"A
+              ",underlined:0b},{bold:0b,color:"#B01111",italic:0b,obfuscated:0b,strikethrough:0b,text:"🔑",underlined:0b}],text:""},"minecraft:enchantments":{"minecraft:unbreaking":1},"minecraft:lore":[{extra:[{bold:0b,color:"dark_gray",italic:0b,obfuscated:0b,strikethrough:0b,text:"Llave de Caja",underlined:0b}],text:""},"",{extra:[{bold:0b,color:"dark_gray",italic:0b,obfuscated:0b,strikethrough:0b,text:"¿Qué es esto?",underlined:0b}],text:""},{extra:[{bold:0b,color:"white",italic:0b,obfuscated:0b,strikethrough:0b,text:"
+              ",underlined:0b},{color:"dark_gray",italic:0b,text:"| "},{color:"white",italic:0b,text:"Una llave de caja "},{color:"white",italic:0b,text:""}],text:""},{extra:[{bold:0b,color:"white",italic:0b,obfuscated:0b,strikethrough:0b,text:" ",underlined:0b},{color:"dark_gray",italic:0b,text:"| "},{color:"white",italic:0b,text:"llena de premios!"}],text:""},"",{extra:[{bold:0b,color:"dark_gray",italic:0b,obfuscated:0b,strikethrough:0b,text:"▶ ",underlined:0b},{color:"gray",italic:0b,text:"Uso en "},{color:"yellow",italic:0b,text:"/warp
+              cajas "},{color:"white",italic:0b,text:""}],text:""}],"minecraft:tooltip_display":{hidden_components:["minecraft:enchantments"]}},count:1,id:"minecraft:trial_key"}'
+            DataVersion: 4671
+    _llave_rara_:
+      Type: ITEM
+      PreviewData:
+        Provider: vanilla
+        Data:
+          Value: '{components:{"minecraft:profile":{id:[I;-527290097,-1329448586,-1246138032,-1018989882],name:"2705fd94a0c43192",properties:[{name:"textures",value:"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMjcwNWZkOTRhMGM0MzE5MjdmYjRlNjM5YjBmY2ZiNDk3MTdlNDEyMjg1YTAyYjQzOWUwMTEyZGEyMmIyZTJlYyJ9fX0="}]},"minecraft:tooltip_display":{hidden_components:["minecraft:cat/variant","minecraft:provides_banner_patterns","minecraft:weapon","minecraft:food","minecraft:firework_explosion","minecraft:note_block_sound","minecraft:tropical_fish/base_color","minecraft:attack_range","minecraft:llama/variant","minecraft:cow/variant","minecraft:break_sound","minecraft:piercing_weapon","minecraft:damage","minecraft:use_effects","minecraft:entity_data","minecraft:wolf/variant","minecraft:repair_cost","minecraft:pot_decorations","minecraft:painting/variant","minecraft:pig/variant","minecraft:potion_duration_scale","minecraft:enchantment_glint_override","minecraft:kinetic_weapon","minecraft:can_break","minecraft:container_loot","minecraft:map_color","minecraft:frog/variant","minecraft:intangible_projectile","minecraft:profile","minecraft:bucket_entity_data","minecraft:chicken/variant","minecraft:mooshroom/variant","minecraft:glider","minecraft:stored_enchantments","minecraft:axolotl/variant","minecraft:block_entity_data","minecraft:fireworks","minecraft:recipes","minecraft:lodestone_tracker","minecraft:use_remainder","minecraft:suspicious_stew_effects","minecraft:ominous_bottle_amplifier","minecraft:salmon/size","minecraft:max_stack_size","minecraft:block_state","minecraft:wolf/sound_variant","minecraft:enchantments","minecraft:tropical_fish/pattern","minecraft:custom_data","minecraft:debug_stick_state","minecraft:instrument","minecraft:wolf/collar","minecraft:damage_resistant","minecraft:written_book_content","minecraft:trim","minecraft:charged_projectiles","minecraft:map_post_processing","minecraft:lock","minecraft:potion_contents","minecraft:damage_type","minecraft:provides_trim_material","minecraft:use_cooldown","minecraft:writable_book_content","minecraft:swing_animation","minecraft:container","minecraft:base_color","minecraft:repairable","minecraft:map_id","minecraft:creative_slot_lock","minecraft:bees","minecraft:map_decorations","minecraft:jukebox_playable","minecraft:shulker/color","minecraft:unbreakable","minecraft:can_place_on","minecraft:death_protection","minecraft:zombie_nautilus/variant","minecraft:horse/variant","minecraft:sheep/color","minecraft:tropical_fish/pattern_color","minecraft:cat/collar","minecraft:banner_patterns","minecraft:minimum_attack_charge","minecraft:dyed_color","minecraft:max_damage","minecraft:fox/variant","minecraft:tool","minecraft:rabbit/variant","minecraft:rarity","minecraft:equippable","minecraft:blocks_attacks","minecraft:bundle_contents","minecraft:consumable","minecraft:parrot/variant","minecraft:attribute_modifiers","minecraft:enchantable","minecraft:villager/variant"]}},count:1,id:"minecraft:player_head"}'
+          DataVersion: 4671
+      Weight: 5.0
+      Rarity: super
+      Broadcast: false
+      Limits:
+        Enabled: false
+        CooldownType: DAILY
+        GlobalAmount: -1
+        PlayerAmount: -1
+        GlobalCooldown: 0
+        PlayerCooldown: 0
+      Ignored_For_Permissions: []
+      Required_Permissions: []
+      Custom_Preview: false
+      Placeholder_Apply: false
+      ItemsData:
+        '0':
+          Provider: vanilla
+          Data:
+            Value: '{components:{"minecraft:custom_data":{PublicBukkitValues:{"excellentcrates:crate_key.id":"rara"}},"minecraft:custom_name":{extra:[{bold:0b,color:"#008DFF",italic:0b,obfuscated:0b,strikethrough:0b,text:"🔑 Llave ",underlined:0b},{bold:1b,color:"#008DFF",italic:0b,obfuscated:0b,strikethrough:0b,text:"R",underlined:0b},{bold:1b,color:"#0AA1FF",italic:0b,obfuscated:0b,strikethrough:0b,text:"A",underlined:0b},{bold:1b,color:"#13B4FF",italic:0b,obfuscated:0b,strikethrough:0b,text:"R",underlined:0b},{bold:1b,color:"#1DC8FF",italic:0b,obfuscated:0b,strikethrough:0b,text:"A
+              ",underlined:0b},{bold:0b,color:"#008DFF",italic:0b,obfuscated:0b,strikethrough:0b,text:"🔑",underlined:0b}],text:""},"minecraft:enchantments":{"minecraft:unbreaking":1},"minecraft:lore":[{extra:[{bold:0b,color:"dark_gray",italic:0b,obfuscated:0b,strikethrough:0b,text:"Llave de Caja",underlined:0b}],text:""},"",{extra:[{bold:0b,color:"dark_gray",italic:0b,obfuscated:0b,strikethrough:0b,text:"¿Qué es esto?",underlined:0b}],text:""},{extra:[{bold:0b,color:"white",italic:0b,obfuscated:0b,strikethrough:0b,text:"
+              ",underlined:0b},{color:"dark_gray",italic:0b,text:"| "},{color:"white",italic:0b,text:"Una llave de caja "},{color:"white",italic:0b,text:""}],text:""},{extra:[{bold:0b,color:"white",italic:0b,obfuscated:0b,strikethrough:0b,text:" ",underlined:0b},{color:"dark_gray",italic:0b,text:"| "},{color:"white",italic:0b,text:"llena de premios!"}],text:""},"",{extra:[{bold:0b,color:"dark_gray",italic:0b,obfuscated:0b,strikethrough:0b,text:"▶ ",underlined:0b},{color:"gray",italic:0b,text:"Uso en "},{color:"yellow",italic:0b,text:"/warp
+              cajas "},{color:"white",italic:0b,text:""}],text:""}],"minecraft:tooltip_display":{hidden_components:["minecraft:enchantments"]}},count:2,id:"minecraft:tripwire_hook"}'
+            DataVersion: 4671
+    villager_spawn_egg:
+      Type: ITEM
+      PreviewData:
+        Provider: vanilla
+        Data:
+          Value: '{components:{"minecraft:profile":{id:[I;-527290097,-1329448586,-1246138032,-1018989882],name:"2705fd94a0c43192",properties:[{name:"textures",value:"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMjcwNWZkOTRhMGM0MzE5MjdmYjRlNjM5YjBmY2ZiNDk3MTdlNDEyMjg1YTAyYjQzOWUwMTEyZGEyMmIyZTJlYyJ9fX0="}]},"minecraft:tooltip_display":{hidden_components:["minecraft:wolf/sound_variant","minecraft:creative_slot_lock","minecraft:death_protection","minecraft:damage","minecraft:blocks_attacks","minecraft:container_loot","minecraft:tropical_fish/pattern","minecraft:rabbit/variant","minecraft:piercing_weapon","minecraft:minimum_attack_charge","minecraft:stored_enchantments","minecraft:potion_contents","minecraft:map_id","minecraft:attack_range","minecraft:fireworks","minecraft:block_state","minecraft:written_book_content","minecraft:use_cooldown","minecraft:custom_data","minecraft:instrument","minecraft:tropical_fish/pattern_color","minecraft:firework_explosion","minecraft:note_block_sound","minecraft:pot_decorations","minecraft:enchantable","minecraft:suspicious_stew_effects","minecraft:shulker/color","minecraft:debug_stick_state","minecraft:axolotl/variant","minecraft:enchantment_glint_override","minecraft:frog/variant","minecraft:dyed_color","minecraft:provides_banner_patterns","minecraft:equippable","minecraft:wolf/variant","minecraft:break_sound","minecraft:potion_duration_scale","minecraft:painting/variant","minecraft:tool","minecraft:banner_patterns","minecraft:provides_trim_material","minecraft:lock","minecraft:weapon","minecraft:damage_type","minecraft:bucket_entity_data","minecraft:villager/variant","minecraft:can_place_on","minecraft:ominous_bottle_amplifier","minecraft:kinetic_weapon","minecraft:rarity","minecraft:map_decorations","minecraft:recipes","minecraft:jukebox_playable","minecraft:use_effects","minecraft:repair_cost","minecraft:salmon/size","minecraft:chicken/variant","minecraft:consumable","minecraft:attribute_modifiers","minecraft:sheep/color","minecraft:cat/variant","minecraft:bundle_contents","minecraft:can_break","minecraft:map_post_processing","minecraft:lodestone_tracker","minecraft:fox/variant","minecraft:charged_projectiles","minecraft:base_color","minecraft:use_remainder","minecraft:food","minecraft:max_damage","minecraft:unbreakable","minecraft:cat/collar","minecraft:pig/variant","minecraft:cow/variant","minecraft:glider","minecraft:enchantments","minecraft:map_color","minecraft:intangible_projectile","minecraft:tropical_fish/base_color","minecraft:writable_book_content","minecraft:container","minecraft:wolf/collar","minecraft:block_entity_data","minecraft:bees","minecraft:horse/variant","minecraft:damage_resistant","minecraft:trim","minecraft:repairable","minecraft:llama/variant","minecraft:profile","minecraft:entity_data","minecraft:parrot/variant","minecraft:max_stack_size","minecraft:zombie_nautilus/variant","minecraft:mooshroom/variant","minecraft:swing_animation"]}},count:1,id:"minecraft:player_head"}'
+          DataVersion: 4671
+      Weight: 10.0
+      Rarity: super
+      Broadcast: false
+      Limits:
+        Enabled: false
+        CooldownType: DAILY
+        GlobalAmount: -1
+        PlayerAmount: -1
+        GlobalCooldown: 0
+        PlayerCooldown: 0
+      Ignored_For_Permissions: []
+      Required_Permissions: []
+      Custom_Preview: false
+      Placeholder_Apply: false
+      ItemsData:
+        '0':
+          Provider: vanilla
+          Data:
+            Value: '{count:1,id:"minecraft:villager_spawn_egg"}'
+            DataVersion: 4671
+CostOptions:
+  rara:
+    Enabled: true
+    Name: Rara
+    Icon:
+      Provider: vanilla
+      Data:
+        Value: '{count:1,id:"minecraft:trial_key"}'
+        DataVersion: 4671
+    Entries:
+      '0':
+        Type: key
+        Key: rara
+        Amount: 1

@@ -1,0 +1,24 @@
+settings:
+  view-distance: 24
+
+animations:
+  slimer:
+    name: "&#78CD23&lCráneo de Slimer Latiente"
+    interval-ticks: 10
+    ping-pong: true
+    lore:
+      - " &8▪ &#78CD23&lᴛᴇᴍᴘᴏʀᴀᴅᴀ ᴇᴄᴛᴏ-ᴀʟɪᴇɴ &8▪"
+      - ""
+      - " &8» &#38E5B0&lPropiedades Espectrales:"
+      - "   &#A8FF3E✔ &#E2FCEFRespiración ectoplásmica continua"
+      - "   &#A8FF3E✔ &#E2FCEFStop-Motion a 2 FPS (Ping-Pong)"
+      - "   &#A8FF3E✔ &#E2FCEFAnimación activa al equipar como casco"
+      - ""
+      - "   &#8EA89D&o«El núcleo viscoso se expande y contrae"
+      - "   &#8EA89D&o como si el ente alienígena estuviera vivo.»"
+      - ""
+      - " &8⁂ &#A84EDE&lE&#9B45DF&lP&#8E3CE0&lI&#8033E1&lC&#732AE2&lA &e⭐⭐⭐&7⭐⭐"
+    frames:
+      - "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvODk1YWVlYzZiODQyYWRhODY2OWY4NDZkNjViYzQ5NzYyNTk3ODI0YWI5NDRmMjJmNDViZjNiYmI5NDFhYmU2YyJ9fX0="
+      - "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNTllODg5MWM0YTYyYjZhYjdjM2I4YmYwMDUzNDA2YTExMzI0Zjk1NDljMjcwMzNhMzQ5MWE1MDFlOTJmYzE5NyJ9fX0="
+      - "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYTZlZTQzNDc1MTgzYzJhNjQ3MDE1NjE1Nzk4NWNiMTM3MDIwNjcwZjYxMTQ3ODZmNGQ3MjhiOWRlOGYyOTQ4MCJ9fX0="
