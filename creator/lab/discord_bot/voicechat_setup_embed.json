@@ -1,0 +1,36 @@
+{
+  "allowed_mentions": {
+    "parse": [
+      "everyone"
+    ]
+  },
+  "embeds": [
+    {
+      "title": "🎙️ Chat de Voz por Proximidad",
+      "description": "¡Habla y escucha a los jugadores cercanos dentro del juego!\n-# ᴄᴏᴍᴜɴɪ́ᴄᴀᴛᴇ ᴇɴ ᴛɪᴇᴍᴘᴏ ʀᴇᴀʟ ᴄᴏɴ ʟᴀ ᴄᴏᴍᴜɴɪᴅᴀᴅ\n\n**Instalación (Solo Java):**\n`1️⃣` Descarga **Simple Voice Chat** (Versión 1.21+) para Fabric o Forge.\n`2️⃣` Arrastra el mod a tu carpeta `.minecraft/mods`.\n`3️⃣` Entra al servidor y presiona la tecla `V` para configurar tu micrófono.\n\n**Compatibilidad:**\n`💻` **Java:** Compatible con voz por proximidad y canales de grupo.\n`📱` **Bedrock:** El mod no está disponible para Bedrock. ¡Únete a los **canales de voz de Discord** para hablar mientras juegas!\n\n> Ver tutorial recomendado: [¡Click Aquí!](https://www.youtube.com/watch?v=nEVSaJjMPKs)\n\n↓ IP del Servidor (Version 1.21.1+  ) ↓\n```text\nthundermc.es\n```\n-# 📱 Puerto Bedrock: `19132` | 🎮 Java: Puerto por defecto\n\n-# [Tienda](https://tienda.thundermc.es/) • [Tiktok](https://www.tiktok.com/@somosthundermc_?lang=es) • [YouTube](https://www.youtube.com/@somosthundermc/featured)",
+      "color": 16706304,
+      "image": {
+        "url": "attachment://campamento_dia_1138x640.jpg"
+      },
+      "thumbnail": {
+        "url": "https://discord-webhook.com/uploads/41b520d24d1e2e07d03a472e445a83ef.png"
+      }
+    }
+  ],
+  "components": [
+    {
+      "type": 1,
+      "components": [
+        {
+          "type": 2,
+          "style": 5,
+          "label": "Descargar Simple Voice Chat (Modrinth)",
+          "url": "https://modrinth.com/mod/simple-voice-chat",
+          "emoji": {
+            "name": "📥"
+          }
+        }
+      ]
+    }
+  ]
+}

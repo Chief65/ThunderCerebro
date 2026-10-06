@@ -1,0 +1,33 @@
+{
+  "allowed_mentions": {
+    "parse": [
+      "everyone"
+    ]
+  },
+  "embeds": [
+    {
+      "title": "🎉 ¡Sorteo Oficial de ThunderMC!",
+      "description": "¡Participa gratis y llévate increíbles recompensas para tu aventura!\n-# ꜱᴏʀᴛᴇᴏ ᴇxᴄʟᴜꜱɪᴠᴏ ᴘᴀʀᴀ ᴛᴏᴅᴀ ʟᴀ ᴄᴏᴍᴜɴɪᴅᴀᴅ ᴅᴇ ᴛʜᴜɴᴅᴇʀᴍᴄ\n\n**Premio del Sorteo:**\n# 🏆 `Rango Titán [Permanente]`\n\n**Estado del Sorteo:**\n# ⏳ <t:1791495355:R>\n`📅` Finaliza: <t:1791495355:F>\n`👑` Ganadores: `3 afortunados`\n`🎟️` Entradas registradas: `0 participantes`\n\n## ¿Cómo Participar?\nHaz clic en el botón verde inferior para registrar tu entrada al instante.\n\n-# [Tienda](https://tienda.thundermc.es/) • [Tiktok](https://www.tiktok.com/@somosthundermc_?lang=es) • [YouTube](https://www.youtube.com/@somosthundermc/featured)",
+      "color": 16706304,
+      "thumbnail": {
+        "url": "https://cdn.discordapp.com/attachments/1557075345906081792/1557138079020482651/458d28f617557db018b2182854821aeb57e6a0c3.png?backend=b2&ex=6ac6b558&is=6ac563d8&hm=83bb63ea523c11eb7e2b7abc53ff3b1f5cf61cbe8afa9aa074d567fa3a6d86f5&"
+      }
+    }
+  ],
+  "components": [
+    {
+      "type": 1,
+      "components": [
+        {
+          "type": 2,
+          "style": 3,
+          "custom_id": "sorteo_participar",
+          "label": "¡Participar en el Sorteo!",
+          "emoji": {
+            "name": "🎉"
+          }
+        }
+      ]
+    }
+  ]
+}

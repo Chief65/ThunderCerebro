@@ -1,0 +1,73 @@
+{
+  "allowed_mentions": {
+    "parse": [
+      "everyone"
+    ]
+  },
+  "embeds": [
+    {
+      "title": "🔔 Roles de Notificaciones | ThunderMC",
+      "description": "¡Personaliza tus menciones para enterarte únicamente de lo que te interesa!\n-# ᴘᴇʀꜱᴏɴᴀʟɪᴢᴀ ᴛᴜꜱ ᴀʟᴇʀᴛᴀꜱ ʏ ɴᴏ ᴛᴇ ᴘɪᴇʀᴅᴀꜱ ɴᴀᴅᴀ\n\n**Notificaciones Disponibles:**\n`📢` **Anuncios:** Novedades, cambios y comunicados oficiales\n`🎁` **Sorteos:** Sorteos de rangos VIP, llaves y ventajas exclusivas\n`⚡` **Eventos & Keyalls:** Alertas inmediatas de eventos y drops comunitarios\n`🛠️` **Actualizaciones:** Parches técnicos, cambios de plugins y mejoras\n`🚨` **Estado:** Avisos de mantenimiento programado y estabilidad del host\n\n## Panel de Notificaciones\nSelecciona tus roles en el menú desplegable inferior (puedes marcar varios):\n\n─────────────────────────────────\n-# [Tienda Oficial](https://tienda.thundermc.es/) • [TikTok](https://www.tiktok.com/@somosthundermc_?lang=es) • [YouTube](https://www.youtube.com/@somosthundermc/featured)",
+      "color": 16706304,
+      "image": {
+        "url": "attachment://campamento_dia_1138x640.jpg"
+      }
+    }
+  ],
+  "components": [
+    {
+      "type": 1,
+      "components": [
+        {
+          "type": 3,
+          "custom_id": "select_roles_notificaciones",
+          "placeholder": "Selecciona tus alertas favoritas...",
+          "min_values": 0,
+          "max_values": 5,
+          "options": [
+            {
+              "label": "Anuncios Oficiales",
+              "value": "rol_anuncios",
+              "description": "Novedades, reinicios y noticias de la red",
+              "emoji": {
+                "name": "📢"
+              }
+            },
+            {
+              "label": "Sorteos y Recompensas",
+              "value": "rol_sorteos",
+              "description": "Sorteos de rangos VIP, llaves y cosméticos",
+              "emoji": {
+                "name": "🎁"
+              }
+            },
+            {
+              "label": "Eventos y Keyalls",
+              "value": "rol_eventos",
+              "description": "Avisos de eventos en vivo, jefes y drops",
+              "emoji": {
+                "name": "⚡"
+              }
+            },
+            {
+              "label": "Actualizaciones de Desarrollo",
+              "value": "rol_actualizaciones",
+              "description": "Changelogs técnicos y balance de juego",
+              "emoji": {
+                "name": "🛠️"
+              }
+            },
+            {
+              "label": "Estado del Servidor",
+              "value": "rol_estado",
+              "description": "Mantenimientos programados y alertas técnicas",
+              "emoji": {
+                "name": "🚨"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

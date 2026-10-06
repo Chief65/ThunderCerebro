@@ -2,6 +2,207 @@
 
 Registro cronológico e incremental de todas las operaciones realizadas en **ThunderCerebro**.
 
+## [2026-10-06] creator & discord | Refinamiento y Simplificación del Embed de Sorteos
+- **Archivos Modificados**: [`creator/output/discord/sorteo_embed.json`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/output/discord/sorteo_embed.json), [`creator/lab/discord_bot/sorteo_embed.json`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/lab/discord_bot/sorteo_embed.json), [`creator/lab/discord_bot/sorteo_manager.js`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/lab/discord_bot/sorteo_manager.js), [`creator/lab/discord_bot/send.ps1`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/lab/discord_bot/send.ps1).
+- **Especificaciones Implementadas**:
+  1. Premio unificado en formato H1 (`# 🏆 Rango Titán [Permanente]`), eliminando tiers por puestos.
+  2. Temporizador dinámico de Discord destacado en formato H1 (`# ⏳ <t:TIMESTAMP:R>`).
+  3. Eliminación de requisitos y supresión del bloque de IP/puerto del cuerpo.
+  4. Retiro del banner inferior y del footer a solicitud del Sr Ramos para máxima compacidad visual.
+  5. Interfaz interactiva depurada a un único botón de participación (`sorteo_participar`), retirando botones secundarios de estado y tienda.
+  6. Despacho verificado al canal `1552723526996336724` (Message ID: `1557173834527023145`).
+
+## [2026-10-06] creator & discord | Módulo y Embed Interactivo de Sorteos (Giveaways)
+- **Archivos Creados**: [`creator/output/discord/sorteo_embed.json`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/output/discord/sorteo_embed.json), [`creator/lab/discord_bot/sorteo_embed.json`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/lab/discord_bot/sorteo_embed.json), [`creator/lab/discord_bot/sorteo_manager.js`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/lab/discord_bot/sorteo_manager.js).
+- **Especificaciones Implementadas**:
+  1. Contador de entradas en tiempo real reflejado directamente en el cuerpo del embed (`🎟️ Entradas registradas: X participantes`).
+  2. Temporizador relativo nativo de Discord con cuenta atrás sincronizada (`<t:TIMESTAMP:R>`) y fecha completa (`<t:TIMESTAMP:F>`).
+  3. Sistema de 3 tiers de premios (1er Lugar: Titán Permanente, 2do Lugar: Héroe, 3er Lugar: Llaves y monedas).
+  4. Fila de componentes con botón verde de participación instantánea (`sorteo_participar`), botón de consulta de estado efímero (`sorteo_ver_estado`) y botón de tienda oficial.
+  5. Módulo backend (`sorteo_manager.js`) con almacenamiento persistente de entries, control de duplicados y refresco dinámico del mensaje (`type: 7 UPDATE_MESSAGE`).
+  6. Despacho en vivo verificado al canal `1552723526996336724` (Message ID: `1557144593517121696`).
+
+## [2026-10-06] creator & discord | Embed de Instrucciones de Simple Voice Chat
+- **Archivos Creados**: [`creator/output/discord/voicechat_setup_embed.json`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/output/discord/voicechat_setup_embed.json), [`creator/lab/discord_bot/voicechat_setup_embed.json`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/lab/discord_bot/voicechat_setup_embed.json).
+- **Activo Local Respaldado**: [`creator/output/renders/voicechat_thumbnail.png`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/output/renders/voicechat_thumbnail.png).
+- **Especificaciones Implementadas**:
+  1. Título y subtítulo en Small Caps bajo el estándar oficial de ThunderMC (`16706304`).
+  2. Pasos de setup en 3 puntos (`1️⃣`, `2️⃣`, `3️⃣`) para Java 1.21+.
+  3. Aclaración de Bedrock con derivación a canales de voz de Discord y cita blockquote con enlace a tutorial de YouTube.
+  4. Thumbnail temático personalizado de micrófono y banner 16:9 (`campamento_dia_1138x640.jpg`).
+  5. Botón interactivo de enlace (`type: 2`, `style: 5`) directo a la descarga en Modrinth con icono `📥`.
+  6. Despacho verificado al canal `1552723526996336724` (Message ID: `1557143738583744552`).
+
+## [2026-10-06] creator & discord | Roles de Notificaciones con Thumbnail de Campana
+- **Archivos Modificados**: [`creator/output/discord/roles_notificaciones.json`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/output/discord/roles_notificaciones.json), [`creator/lab/discord_bot/roles_notificaciones.json`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/lab/discord_bot/roles_notificaciones.json).
+- **Activo Local Respaldado**: [`creator/output/renders/roles_bell_thumbnail.png`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/output/renders/roles_bell_thumbnail.png).
+- **Especificaciones Implementadas**:
+  1. Integración de propiedad `thumbnail` apuntando al PNG de campana transparente para el panel de roles.
+  2. Imagen 16:9 inferior (`campamento_dia_1138x640.jpg`) preservada.
+  3. Despacho verificado al canal `1552723526996336724` (Message ID: `1557138620748398612`).
+
+## [2026-10-06] creator & discord | Menú Principal con Thumbnail de Brújula Transparente
+- **Archivos Modificados**: [`creator/output/discord/menu_discord_thundermc.json`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/output/discord/menu_discord_thundermc.json), [`creator/lab/discord_bot/menu_discord_thundermc.json`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/lab/discord_bot/menu_discord_thundermc.json).
+- **Activo Local Descargado**: [`creator/output/renders/minecraft_compass_transparent.png`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/output/renders/minecraft_compass_transparent.png).
+- **Especificaciones Implementadas**:
+  1. Incorporación del campo `thumbnail` en el embed apuntando al render de brújula transparente.
+  2. Imagen principal 16:9 preservada (`campamento_dia_1138x640.jpg`).
+  3. Despacho en vivo verificado al canal `1552723526996336724` (Message ID: `1557138229407522918`).
+
+## [2026-10-06] creator & discord | Embed de Compras Tebex con Botón de Enlace a Tienda Oficial
+- **Archivo de Configuración**: [`creator/output/discord/tebex_purchase_embed.json`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/output/discord/tebex_purchase_embed.json).
+- **Servicio Receptor de Webhooks**: [`creator/lab/discord_bot/tebex_listener.js`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/lab/discord_bot/tebex_listener.js).
+- **Especificaciones Implementadas**:
+  1. **Título Personalizado**: `🛒 ¡Nueva Compra de {player}!`.
+  2. **Avatar Dinámico del Jugador (`thumbnail`)**: Integrado en la esquina superior derecha mediante CDN de cabezas de Minecraft (`https://mc-heads.net/avatar/{player}/100`), extrayendo automáticamente el render 2D con capas de la skin a partir del nickname.
+  3. **Cuerpo del Embed**: Agradecimiento conciso (`¡Agradecemos enormemente el apoyo!` / `-# ɢʀᴀᴄɪᴀꜱ ᴘᴏʀ ʜᴀᴄᴇʀ ᴄʀᴇᴄᴇʀ ᴛʜᴜɴᴅᴇʀ`), detalles (`Comprador` y `Paquete`), IP en bloque de código limpio y pseudo-footer con enlaces.
+  4. **Botón Interactivo (`type: 2`, `style: 5`)**: Botón URL en fila de componentes (`type: 1`) con etiqueta `"Click para ver la tienda oficial de ThunderMc"`, emoji `🪙` y destino `https://tienda.thundermc.es/`.
+  5. **Imagen 16:9 Adjunta**: [`creator/output/renders/campamento_dia/campamento_dia_1138x640.jpg`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/output/renders/campamento_dia/campamento_dia_1138x640.jpg).
+  6. **Despacho Verificado**: Mensajes enviados al canal `1552723526996336724` (Simulación SrRamos: `1557133459129106494`, Plantilla Literal: `1557133485595033623`).
+
+## [2026-10-06] wiki & discord | Estándar Oficial de Embeds Discord (Estilo Sr Ramos) + Selector de Roles
+- **Documento Maestro de Estilo**: [`wiki/concepts/estandar_embeds_discord.md`](file:///C:/Users/PC/Desktop/ThunderCerebro/wiki/concepts/estandar_embeds_discord.md).
+- **Nuevo Entregable de Producción**: [`creator/output/discord/roles_notificaciones.json`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/output/discord/roles_notificaciones.json).
+- **Entorno de Laboratorio**: [`creator/lab/discord_bot/roles_notificaciones.json`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/lab/discord_bot/roles_notificaciones.json).
+- **Especificaciones Implementadas**:
+  1. **Análisis Estilístico**: Compilación exhaustiva de reglas de diseño (Embeds tradicionales vs V2, paleta `16706304`, Small Caps en `-#`, viñetas con emojis en backticks, bloque de 1-click copy y menús `type: 3`).
+  2. **Selector de Roles de Notificaciones**: Embed temático con 5 categorías de alertas (`Anuncios`, `Sorteos`, `Eventos/Keyalls`, `Actualizaciones`, `Estado`) con soporte multiselección (`min_values: 0`, `max_values: 5`).
+  3. **Despacho Verificado**: Probado y validado en el canal `1552723526996336724` (Message ID: `1557117766572708013`).
+
+## [2026-10-06] creator & discord | Menú Discord ThunderMC Definitivo (Embed Compacto + Desplegable + 1-Click Copy)
+- **Entregable Oficial**: [`creator/output/discord/menu_discord_thundermc.json`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/output/discord/menu_discord_thundermc.json).
+- **Entorno de Laboratorio**: [`creator/lab/discord_bot/menu_discord_thundermc.json`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/lab/discord_bot/menu_discord_thundermc.json).
+- **Activo Multimedia Integrado**: [`creator/output/renders/campamento_dia/campamento_dia_1138x640.jpg`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/output/renders/campamento_dia/campamento_dia_1138x640.jpg) (1138×640 px, relación 16:9 optimizada para contenedor de imagen de embed de Discord).
+- **Especificaciones Implementadas**:
+  1. **Embed Estándar Bounded**: Ancho bloqueado a ~432 px, evitando el desbordamiento horizontal fluido de Components V2. Borde ámbar oficial (`16706304`).
+  2. **Bloque de Copiado Directo 1-Clic**: IP del servidor formateada como bloque de código limpio (```` ```text \n thundermc.es \n ``` ````) con soporte para el botón flotante nativo de Discord (*Copy code*). Puerto Bedrock `19132` desacoplado en subtítulo para no ensuciar el portapapeles. Etiqueta de versión fijada a `(Version 1.21.1+  )`.
+  3. **Dashboard Interactivo**: Fila de componentes con selector de cadenas (`string_select`, `menu_principal`) con 4 opciones (`Anuncios`, `Normativa`, `Soporte`, `Tienda`).
+  4. **Barra de Enlaces Oficiales**: Subtítulos de acceso rápido a Tienda Web, TikTok y YouTube reubicados al pie del Dashboard.
+  5. **Despacho Verificado**: Validado y enviado al canal de pruebas `1552723526996336724` (Message ID: `1557126084984836126`).
+
+- **Módulo**: [`creator/lab/renders/menu_principal_taberna/menu_principal_taberna_4.md`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/lab/renders/menu_principal_taberna/menu_principal_taberna_4.md).
+- **Referencia Extraída**: [`creator/lab/renders/menu_principal_taberna/crop_valyr_campamento.jpg`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/lab/renders/menu_principal_taberna/crop_valyr_campamento.jpg).
+- **Especificaciones Compiladas**:
+  1. **Alineación Visual del Casco**: Extracción técnica de la máscara del yelmo de `campamento_dia_final.jpg` (barra nasal vertical entre los ojos, visera horizontal frontal y ranuras de ventilación rectangulares).
+  2. **Inclinación de Cabeza**: Valyr con la mirada y la cabeza dirigidas en ángulo descendente hacia el mapa de campaña sobre la mesa.
+  3. **Estado Operativo**: Prompt maestro afinado y registrado en espera del restablecimiento de la ventana de cuota del motor de render (`gemini-3.1-flash-image` ~20:28 UTC).
+
+
+## [2026-10-06] creator & renders | Render Cinemático AAA: Menú Principal — Valyr Frontal en Primer Plano (4K UHD)
+- **Módulo**: [`creator/lab/renders/menu_principal_taberna/menu_principal_taberna_3.md`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/lab/renders/menu_principal_taberna/menu_principal_taberna_3.md), [`creator/output/renders/menu_principal_taberna/menu_principal_taberna_final.jpg`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/output/renders/menu_principal_taberna/menu_principal_taberna_final.jpg).
+- **Resolución**: **3840 × 2160 (4K UHD)** a calidad 100%.
+- **Propósito**: Encabezado visual definitivo para el Menú Principal de la comunidad en Discord (`discord_bot/menu_principal_v2.json`) y portales oficiales.
+- **Ajustes Críticos de la Iteración**:
+  1. **Encuadre Cercano (Zoom)**: Cámara en plano medio corto; mesa de planificación con mapa y brújula dominando el primer plano sin espacio residual vacío en el suelo.
+  2. **Valyr en Posición Rigurosamente Frontal**: Centrado exacto, mirando de frente a cámara mientras apunta al centro del mapa con su dedo.
+  3. **Corrección de Casco y Armadura Canónica**: Casco de hierro canónico abierto de Minecraft (enmarcando el rostro rosado sin bloquearlo ni deformarlo), peto de acero limpio sin tabardo ni rayo en el pecho, y capa de Thunder en la espalda.
+  4. **Compañeros y Fondo**: Arquera a la izquierda y guerrero a la derecha estrechamente integrados en la mesa; chimenea crepitante y estandarte oficial de Thunder alineado en el eje central.
+
+
+
+
+
+## [2026-10-06] creator & renders | Render Cinemático AAA: Campamento Diurno (Iluminación Cálida Dark Fantasy 4K)
+- **Módulo**: [`creator/lab/renders/campamento_dia/campamento_dia_dark_fantasy_1.md`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/lab/renders/campamento_dia/campamento_dia_dark_fantasy_1.md), [`creator/output/renders/campamento_dia/campamento_dia_dark_fantasy_1.jpg`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/output/renders/campamento_dia/campamento_dia_dark_fantasy_1.jpg).
+- **Resolución**: **3840 × 2160 (4K UHD)** a calidad 100%.
+- **Transformación Lumínica Ejecutada**:
+  1. **Supresión de Luz Plana**: Reemplazada la iluminación blanca difusa por un esquema direccional rasante cálido (*golden-amber god rays*) que corta la bruma forestal.
+  2. **Atmósfera Dark Fantasy**: Bosque de abetos profundo y sombrío con fuerte claroscuro. La fogata y farolillos cobran fuerza con brasas flotantes y resplandor anaranjado acogedor.
+  3. **Identidad y Composición Preservadas**: Estandarte oficial de Thunder con rayo dorado, cerdo caballero con casco liso y capa discreta comiendo zanahoria, arquero, cocinero y líder con mapa intactos.
+
+
+## [2026-10-06] creator & renders | Render Cinemático AAA: Campamento Diurno Final (Resolución 4K UHD — 3840×2160)
+- **Módulo**: [`creator/lab/renders/campamento_dia/campamento_dia_final.md`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/lab/renders/campamento_dia/campamento_dia_final.md), [`creator/output/renders/campamento_dia/campamento_dia_final.jpg`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/output/renders/campamento_dia/campamento_dia_final.jpg).
+- **Resolución**: **3840 × 2160 (4K UHD Nativo Remasterizado)** a calidad JPEG 100%.
+- **Optimización Crítica de Nitidez**:
+  1. **Eliminación de Degradación Iterativa**: Generación pura desde cero en un único pase para recuperar la textura microscópica de maderas, agujas de pino y metal PBR sin artefactos acumulados.
+  2. **Pipeline 4K**: Escalado de alta precisión en .NET/GDI+ con remuestreo bicúbico fino.
+  3. **Identidad**: Cerdo caballero con yelmo de hierro pulido (sin penacho), capa discreta de Thunder y estandarte del rayo dorado en el campamento.
+
+
+## [2026-10-06] creator & renders | Render Cinemático AAA: Campamento Diurno v4 & Final (Capa Discreta y Pulido Definitivo)
+- **Módulo**: [`creator/lab/renders/campamento_dia/campamento_dia_4.md`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/lab/renders/campamento_dia/campamento_dia_4.md), [`creator/output/renders/campamento_dia/campamento_dia_final.jpg`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/output/renders/campamento_dia/campamento_dia_final.jpg).
+- **Ajustes Críticos**:
+  1. **Capa Discreta**: Sustituida la capa voluminosa por una capa clásica delgada y rectangular de Minecraft en azul marino oscuro, cayendo recta ceñida a la espalda de la armadura.
+  2. **Activo Final Generado**: Consolidado como `campamento_dia_final.jpg` (9.9/10).
+
+
+## [2026-10-06] creator & renders | Render Cinemático AAA: Campamento Diurno v3 (Capa Thunder + Encuadre Limpio)
+- **Módulo**: [`creator/lab/renders/campamento_dia/campamento_dia_3.md`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/lab/renders/campamento_dia/campamento_dia_3.md), [`creator/output/renders/campamento_dia/campamento_dia_3.jpg`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/output/renders/campamento_dia/campamento_dia_3.jpg).
+- **Estándar Creado**: [`creator/lab/renders/estandar_marca_insignia_thunder.md`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/lab/renders/estandar_marca_insignia_thunder.md) y actualizado en [`creator/lab/renders/README.md`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/lab/renders/README.md).
+- **Ajustes Críticos**:
+  1. **Encuadre**: Suprimido el bloque elevado en la esquina inferior izquierda; primer plano abierto y limpio sobre césped plano natural.
+  2. **Diseño de Mascota**: Eliminado el penacho del yelmo (ahora hierro sobrio pulido) e incorporada la capa azul marino de Thunder con ribete dorado.
+  3. **Insignia Diegética**: Estandarte oficial de Thunder (`minecraft:banner`) con rayo dorado sobre fondo azul marino ondeando en el campamento.
+- **Evaluación**: Puntuación 9.8/10. Activo definitivo pulido y normalizado.
+
+
+## [2026-10-06] creator & renders | Render Cinemático AAA: Campamento Diurno v2 (Corrección Bug de Cofre + Insignia Thunder)
+- **Módulo**: [`creator/lab/renders/campamento_dia/campamento_dia_2.md`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/lab/renders/campamento_dia/campamento_dia_2.md), [`creator/output/renders/campamento_dia/campamento_dia_2.jpg`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/output/renders/campamento_dia/campamento_dia_2.jpg).
+- **Correcciones Críticas Realizadas**:
+  1. **Bug Resuelto**: Eliminado el cofre doble alargado y roto del primer plano inferior izquierdo; sustituido por césped natural con flores silvestres y cofre regular con farolillo.
+  2. **Insignia Oficial de Marca Thunder**: Introducido el estandarte canónico de Minecraft con el rayo dorado sobre fondo azul marino oscuro en el campamento, y el penacho dorado en el yelmo del cerdo caballero.
+- **Evaluación**: Puntuación 9.6/10. Activo depurado y representativo de la identidad oficial de ThunderMC.
+
+
+## [2026-10-06] creator & renders | Prueba de Render Aislado: Cerdo Caballero Desafiante & Estándar Facial
+- **Módulos**:
+  - Estándar: [`wiki/concepts/estandar_expresiones_faciales_renders.md`](file:///C:/Users/PC/Desktop/ThunderCerebro/wiki/concepts/estandar_expresiones_faciales_renders.md)
+  - Lab: [`creator/lab/renders/cerdo_caballero_desafiante/cerdo_caballero_desafiante_1.md`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/lab/renders/cerdo_caballero_desafiante/cerdo_caballero_desafiante_1.md)
+  - Activo: [`creator/output/renders/cerdo_caballero_desafiante/cerdo_caballero_desafiante_1.jpg`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/output/renders/cerdo_caballero_desafiante/cerdo_caballero_desafiante_1.jpg)
+- **Especificaciones**:
+  1. **Rig Facial**: Implementación del estándar basado en `@enderframes` (cejas extruidas asimétricas, párpados con corte diagonal, mirada lateral y hendidura de sonrisa/smirk en el hocico).
+  2. **Composición**: Render puro de personaje sobre ciclorama neutro de estudio (sin escenario de fondo), con espada al hombro y postura a 3/4.
+  3. **Evaluación y Feedback Sr Ramos**: Veredicto: No convence estéticamente. Se archiva como prueba latente en memoria para consulta bajo demanda sin aplicarlo por defecto.
+
+## [2026-10-06] creator & renders | Render Cinemático AAA: Campamento Diurno de Expedición (4 Personajes)
+- **Módulo**: [`creator/lab/renders/campamento_dia/campamento_dia_1.md`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/lab/renders/campamento_dia/campamento_dia_1.md), [`creator/output/renders/campamento_dia/campamento_dia_1.jpg`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/output/renders/campamento_dia/campamento_dia_1.jpg).
+- **Referencia Base**: Ingestada desde `C:\Users\PC\Downloads\52f679758f750330ba547c3d54a7265d.jpg` a [`creator/raw/references/referencia_campamento.jpg`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/raw/references/referencia_campamento.jpg).
+- **Especificaciones**:
+  1. **Composición y Entorno**: Campamento de expedición con 3 tiendas de campaña medievales, fogata central con caldero, cofres, farolillos y bosque de abetos bañado por rayos de sol volumétricos (*god rays*).
+  2. **Delimitación de 4 Personajes en Acción**: Cerdo caballero comiendo zanahoria en tronco, arquero con capucha ajustando arco, cocinero en fogata con cuchara y guerrero leyendo mapa en barril.
+  3. **Puntaje Estimado**: 9.2/10. Composición equilibrada, iluminación diurna cálida y limpia, sin ruido ni micro-voxels.
+
+
+## [2026-10-06] creator & renders | Render Cinemático AAA: Cerdo Caballero en Barca (Cueva Dark Fantasy)
+- **Módulo**: [`creator/lab/renders/cerdo_barca_cueva/cerdo_barca_cueva_1.md`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/lab/renders/cerdo_barca_cueva/cerdo_barca_cueva_1.md), [`creator/output/renders/cerdo_barca_cueva/cerdo_barca_cueva_1.jpg`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/output/renders/cerdo_barca_cueva/cerdo_barca_cueva_1.jpg).
+- **Referencia Base**: Ingestada desde `C:\Users\PC\Downloads\171c8ee0fa3d8631324c5441b33f1795.jpg` a [`creator/raw/references/referencia_barca_cueva.jpg`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/raw/references/referencia_barca_cueva.jpg).
+- **Especificaciones**:
+  1. **Composición 16:9**: Adaptación del plano de navegación subterránea a cueva Dark Fantasy.
+  2. **Personaje**: Bebé cerdo caballero con proporciones canónicas (cabeza cúbica grande, orejas caídas), armadura de hierro cúbica a medida y espada en el interior de la barca de roble.
+  3. **Iluminación**: Esquema de claroscuro donde la antorcha sostenida en alto actúa como key-light principal, proyectando reflejos cálidos ámbar en el agua y sombras profundas en el abismo de la caverna.
+- **Evaluación**: Puntuación preliminar 8.8/10. Activo generado sin artefactos, listo para revisión del Sr Ramos.
+
+
+## [2026-10-05] dev & packet-anim | HeadAnimator v1.2.1 — Normalización Forzada a Fotograma Base (Frame 0) en Inventario y Desequipamiento (Sandbox)
+- **Módulo**: `creator/lab/head_animator/`, `creator/output/plugins/HeadAnimator-1.0.0.jar`, Servidor Sandbox (`ymykh9qy.274758bd`).
+- **Diagnóstico de Causa Raíz**:
+  1. Al despachar `sendEquipmentChange` al propio jugador (render F5), el cliente Minecraft local actualiza su array de armadura (`inventory.armor.set(3, frame)`).
+  2. Cuando el jugador retira el casco de la ranura (mediante clic, arrastre o shift-click en Survival o Creative), el cliente enviaba el fotograma que estuviese renderizando en ese instante (Frame 1 o Frame 2), corrompiendo la textura estática en el inventario.
+  3. No existía ninguna rutina de saneamiento que forzara la restitución del ítem base al salir de la ranura de casco.
+- **Solución Técnica Implementada**:
+  1. **Método `normalizeToBase(ItemStack)` ([`HeadAnimation.java`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/lab/head_animator/src/com/thunderstudios/headanimator/HeadAnimation.java))**: Compara el UUID del perfil NBT con el UUID determinista de Frame 0. Si difiere, reescribe el `PlayerProfile` y metadatos con el fotograma base precalculado en memoria sin costo de red ni recreación de objetos.
+  2. **Invariante en Tick Loop ([`AnimationManager.java`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/lab/head_animator/src/com/thunderstudios/headanimator/AnimationManager.java))**: El ítem real almacenado en el inventario del jugador en la ranura de casco se normaliza a Frame 0 en cada ciclo; la animación es 100% virtual vía paquetes. Al desequipar, se invoca `normalizePlayerInventory`.
+  3. **Suite de Listeners Reactivos ([`HeadListener.java`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/lab/head_animator/src/com/thunderstudios/headanimator/HeadListener.java))**:
+     - `InventoryClickEvent` & `InventoryCreativeEvent`: Sanean en tiempo real el cursor y el ítem clickeado, programando un pase diferido y forzando `player.updateInventory()`.
+     - `PlayerArmorChangeEvent` & `InventoryCloseEvent`: Detección instantánea de retirada del casco para normalizar todo el inventario.
+     - `PlayerDropItemEvent`, `EntityPickupItemEvent` & `PlayerDeathEvent`: Blindaje total para que las cabezas en el suelo o tras morir siempre tengan textura Frame 0.
+     - `BlockPlaceEvent`: Cancela la colocación en suelo para evitar la destrucción del PDC NBT.
+     - `PlayerInteractEntityEvent`: Bloquea colocación en Armor Stands o Item Frames.
+- **Despliegue Remoto**:
+  - Compilado nativamente en Java 21 contra Paper 1.21.11 API.
+  - Empaquetado y subido `HeadAnimator-1.0.0.jar` vía SFTP al directorio `/plugins/` del Sandbox.
+
+
+## [2026-10-05] events & architecture | Compilación y Persistencia del Modelo de Evento de Temporada (Síntesis Wiki)
+- **Módulo**: [`wiki/synthesis/modelo-evento-temporada-thundermc.md`](file:///C:/Users/PC/Desktop/ThunderCerebro/wiki/synthesis/modelo-evento-temporada-thundermc.md), [`index.md`](file:///C:/Users/PC/Desktop/ThunderCerebro/index.md).
+- **Contenido Persistido**:
+  1. **Core Loop**: Mapeo visual y funcional del ciclo de retención (Pase de Batalla + Bosses 1h/24h + KOTH $\rightarrow$ Tokens $\rightarrow$ Cajas, Runa y Altar).
+  2. **Prompts Especializados de Agentes**: 4 directivas maestras para *Systems & Economy Designer*, *Combat & Encounter Designer*, *Minecraft Technical Lead* y *LiveOps & Monetization Lead*.
+  3. **Matriz de Red Teaming (8 Fallas Fatales)**: Diagnóstico y mitigaciones técnicas obligatorias (Soft-Cap diario de tokens, límites semanales anti-arbitraje, sustitución de adds por pilares para proteger el MSPT a < 40 ms, loot instanciado por tiers de daño, validación atómica NBT en ExecutableItems, ventanas Prime Time en KOTH, balance dual PvE/PvP y persistencia SQL).
+  4. **Blueprint del Hito Comunitario (El Altar de la Falla)**: Dinámica de donaciones con incentivo dual (recompensas personales Top 1-10 + desbloqueo progresivo en 4 fases globales).
+  5. **Modelo de Monetización Ética (Rating 8.5/10)**: Estructura de BattlePass freemium, skips de nivel, boosters globales solidarios y Pity System garantizado a 20 aperturas.
+
 ## [2026-10-03] dev & packet-anim | HeadAnimator v1.2.0 — Arquitectura Híbrida PacketEvents + Interceptor de Movimiento (Sandbox)
 - **Módulo**: `creator/lab/head_animator/`, `creator/output/plugins/HeadAnimator-1.0.0.jar`, Servidor Sandbox (`ymykh9qy.274758bd`).
 - **Diagnóstico y Corrección de Causa Raíz**:

@@ -1,0 +1,6 @@
+{
+  "already_registered": "⚠️ **¡Ya estás participando!**\nTu entrada ya está registrada en el sistema. ¡Mucha suerte!",
+  "success_registration": "🎉 **¡Registro Exitoso!**\nHas quedado inscrito en el sorteo oficial de ThunderMC.\n\n🏆 **Premios:** Rango Titán Permanente, Rangos VIP y Llaves Míticas.\n🎟️ **Tus entradas:** 1 entrada activa.\n\n¡Mucha suerte!",
+  "status_registered": "✅ **Estado Actual:** Estás participando activamente con **1 entrada**.",
+  "status_not_registered": "❌ **Estado Actual:** Aún no estás registrado en este sorteo.\n👉 Pulsa el botón verde para registrarte gratis."
+}

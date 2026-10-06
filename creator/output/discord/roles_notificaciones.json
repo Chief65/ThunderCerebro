@@ -1,0 +1,78 @@
+{
+  "allowed_mentions": {
+    "parse": [
+      "everyone"
+    ]
+  },
+  "embeds": [
+    {
+      "title": "🔔 Roles de Notificaciones ",
+      "description": "¡Pings únicamente de lo que te interesa!\n-# ᴘᴇʀꜱᴏɴᴀʟɪᴢᴀ ᴛᴜꜱ ᴀʟᴇʀᴛᴀꜱ ʏ ɴᴏ ᴛᴇ ᴘɪᴇʀᴅᴀꜱ ɴᴀᴅᴀ\n\n**Roles Disponibles:**\n`🚧` Mantenimientos @Mantenimientos\n`🔎` Postulaciones @Postulaciones\n`📊` Encuestas @Encuestas\n`📚` Cambios @Cambios\n`👀` Spoilers @Spoilers\n`🎉` Eventos @Eventos\n\n## Panel de Notificaciones\nSelecciona tus roles en el menú desplegable inferior:\n\n-# [Tienda Oficial](https://tienda.thundermc.es/) • [TikTok](https://www.tiktok.com/@somosthundermc_?lang=es) • [YouTube](https://www.youtube.com/@somosthundermc/featured)",
+      "color": 16706304,
+      "thumbnail": {
+        "url": "https://cdn.discordapp.com/attachments/1557075345906081792/1557138079020482651/458d28f617557db018b2182854821aeb57e6a0c3.png?backend=b2&ex=6ac6b558&is=6ac563d8&hm=83bb63ea523c11eb7e2b7abc53ff3b1f5cf61cbe8afa9aa074d567fa3a6d86f5&"
+      },
+      "image": {
+        "url": "attachment://campamento_dia_1138x640.jpg"
+      }
+    }
+  ],
+  "components": [
+    {
+      "type": 1,
+      "components": [
+        {
+          "type": 3,
+          "custom_id": "select_roles_notificaciones",
+          "placeholder": "Selecciona tus alertas...",
+          "min_values": 0,
+          "max_values": 6,
+          "options": [
+            {
+              "label": "Mantenimientos",
+              "value": "rol_mantenimientos",
+              "emoji": {
+                "name": "🚧"
+              }
+            },
+            {
+              "label": "Postulaciones",
+              "value": "rol_postulaciones",
+              "emoji": {
+                "name": "🔎"
+              }
+            },
+            {
+              "label": "Encuestas",
+              "value": "rol_encuestas",
+              "emoji": {
+                "name": "📊"
+              }
+            },
+            {
+              "label": "Cambios",
+              "value": "rol_cambios",
+              "emoji": {
+                "name": "📚"
+              }
+            },
+            {
+              "label": "Spoilers",
+              "value": "rol_spoilers",
+              "emoji": {
+                "name": "👀"
+              }
+            },
+            {
+              "label": "Eventos",
+              "value": "rol_eventos",
+              "emoji": {
+                "name": "🎉"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

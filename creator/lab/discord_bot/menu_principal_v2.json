@@ -1,0 +1,89 @@
+{
+  "flags": 32768,
+  "allowed_mentions": {
+    "parse": [
+      "everyone"
+    ]
+  },
+  "components": [
+    {
+      "type": 17,
+      "accent_color": 16706304,
+      "components": [
+        {
+          "type": 10,
+          "content": "👋 **¡Bienvenid@ a ThunderMC!**\n¡Hola estamos muy felices de que estés aquí!\n-# Empieza tu aventura uniendote al servidor"
+        },
+        {
+          "type": 10,
+          "content": "\n↓ IP y Puerto del Servidor ↓\n# `🎮 thundermc.es` | `📱19132` "
+        },
+        {
+          "type": 14,
+          "spacing": 2,
+          "divider": true
+        },
+        {
+          "type": 10,
+          "content": "## Menú Principal\nSelecciona una categoría:"
+        },
+        {
+          "type": 12,
+          "items": [
+            {
+              "media": {
+                "url": "attachment://campamento_dia_1138x640.jpg"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": 1,
+      "components": [
+        {
+          "type": 3,
+          "custom_id": "menu_principal",
+          "placeholder": "Elige una categoría...",
+          "min_values": 1,
+          "max_values": 1,
+          "options": [
+            {
+              "label": "Anuncios Oficiales",
+              "value": "categoria_anuncios",
+              "description": "Novedades, reinicios y comunicados oficiales",
+              "emoji": {
+                "name": "📢"
+              }
+            },
+            {
+              "label": "Normativa y Reglas",
+              "value": "categoria_reglas",
+              "description": "Reglamento y pautas de convivencia",
+              "emoji": {
+                "name": "📜"
+              }
+            },
+            {
+              "label": "Soporte y Tickets",
+              "value": "categoria_soporte",
+              "description": "Ayuda técnica, resolución de dudas y reportes",
+              "emoji": {
+                "name": "👷"
+              }
+            },
+            {
+              "label": "Tienda Oficial",
+              "value": "categoria_tienda",
+              "description": "Rangos VIP, llaves y ventajas de ThunderMC",
+              "emoji": {
+                "name": "🛒"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
