@@ -13,24 +13,20 @@ foreach ($line in $envLines) {
     }
 }
 
-$payloadJson = Get-Content "creator/lab/discord_bot/sorteo_embed.json" -Raw -Encoding utf8
-
-$headers = @{
-    "Authorization" = "Bot $token"
-    "Content-Type"  = "application/json; charset=utf-8"
-}
-
-$url = "https://discord.com/api/v10/channels/$channelId/messages"
+$jsonPath = (Resolve-Path "creator/lab/discord_bot/sorteo_embed.json").Path
 
 Write-Output "Enviando sorteo a canal $channelId..."
-try {
-    $res = Invoke-RestMethod -Uri $url -Method Post -Headers $headers -Body $payloadJson
-    Write-Output "SUCCESS: Mensaje enviado con ID: $($res.id)"
-} catch {
-    Write-Output "ERROR: $($_.Exception.Message)"
-    if ($_.Exception.Response) {
-        $stream = $_.Exception.Response.GetResponseStream()
-        $reader = New-Object System.IO.StreamReader($stream)
-        Write-Output "DETAILS: $($reader.ReadToEnd())"
-    }
+
+$res = curl.exe -s -X POST `
+    -H "Authorization: Bot $token" `
+    -H "Content-Type: application/json; charset=utf-8" `
+    -H "User-Agent: DiscordBot (ThunderMC, 1.0)" `
+    --data-binary "@$jsonPath" `
+    "https://discord.com/api/v10/channels/$channelId/messages"
+
+$resJson = $res | ConvertFrom-Json
+if ($resJson.id) {
+    Write-Output "SUCCESS: Mensaje enviado con ID: $($resJson.id)"
+} else {
+    Write-Output "ERROR: $res"
 }

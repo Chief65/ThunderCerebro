@@ -52,7 +52,6 @@ Este documento define la especificación técnica y de diseño visual para todos
 4. **Avatar Dinámico en Miniatura (`thumbnail`)**:
    - Ubicación: `"thumbnail": { "url": "https://minotar.net/bust/{player}/100" }`
    - Renderiza el busto 3D isométrico (cabeza y torso) en la esquina superior derecha del embed a partir del nickname. Tolera jugadores offline y Bedrock degradando limpiamente a Steve/Alex (HTTP 200). Alternativa para solo cabeza 2D: `https://mc-heads.net/avatar/{player}/100`.
-
 ---
 
 ## 4. Prompt Maestro Reutilizable (System Directive)
@@ -74,3 +73,80 @@ Al crear cualquier mensaje o embed de Discord, debes seguir obligatoriamente est
 6. Componentes Interactivos: Diseña siempre una Action Row (type: 1) con Select Menus (type: 3) o Botones (type: 2), proporcionando custom_id, placeholder claro, y opciones con emoji, label y description informativa.
 Entrega siempre el payload JSON completo, sintácticamente impecable y listo para producción.
 ```
+
+---
+
+## 5. Modelos Oficiales Validados
+
+### 5.1 Embed de Compras / Notificación de Tienda Oficial (Tebex)
+- **Archivo Canónico**: [`creator/output/discord/tebex_purchase_embed.json`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/output/discord/tebex_purchase_embed.json)
+- **Banner Oficial 16:9**: Render cinemático de Valyr con carrito encantado en mercado diurno (`valyr_tienda_carrito_2.jpg`).
+- **Thumbnail**: Busto 3D isométrico dinámico (`https://minotar.net/bust/{player}/100`).
+- **Botón Interactivo**: Botón URL (`style: 5`) directo a la tienda (`https://tienda.thundermc.es/`) con emoji `🪙`.
+- **Estructura**:
+  - Título: `🛒 ¡Nueva Compra de {player}!`
+  - Subtítulo: `-# ɢʀᴀᴄɪᴀꜱ ᴘᴏʀ ʜᴀᴄᴇʀ ᴄʀᴇᴄᴇʀ ᴛʜᴜɴᴅᴇʀ`
+  - Bloque de atributos: `Comprador` y `Paquete`
+  - Bloque 1-clic copy con IP limpia `thundermc.es` y subtexto de puertos.
+
+### 5.2 Embed de Sorteos Oficiales (Giveaways)
+- **Archivo Canónico**: [`creator/output/discord/sorteo_embed.json`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/output/discord/sorteo_embed.json)
+- **Thumbnail**: Sprite Minecraft 1.21 oficial de Bolsa Morada Cerrada (`purple_bundle_closed.png`).
+- **Botón Interactivo**: Botón Success verde (`style: 3`, `custom_id: "sorteo_participar"`) con emoji `🎉`.
+- **Estructura**:
+  - Título: `🎉 ¡Sorteo Oficial de ThunderMC!`
+  - Subtítulo: `-# ꜱᴏʀᴛᴇᴏ ᴇxᴄʟᴜꜱɪᴠᴏ ᴘᴀʀᴀ ᴛʜᴜɴᴅᴇʀᴍᴄ`
+  - Premio en H1 (`# 🏆 Rango Titán [Permanente]`) con instrucción de ticket (`-# Para reclamar abrir ticket en <#1374644365758169178>`).
+  - Estado con timestamp relativo nativo (`<t:TIMESTAMP:R>`), número de ganadores y contador de participantes en vivo.
+
+### 5.3 Embed de Sugerencias de Comunidad
+- **Archivo Canónico**: [`creator/output/discord/sugerencia_embed.json`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/output/discord/sugerencia_embed.json)
+- **Thumbnail**: Busto 3D isométrico dinámico (`https://minotar.net/bust/{player}/100`).
+- **Botones Interactivos**: Fila de votación con botones Success verde (`style: 3`, `sug_upvote_{id}`) y Danger rojo (`style: 4`, `sug_downvote_{id}`).
+- **Payload Canónico en Memoria**:
+
+```json
+{
+  "allowed_mentions": {
+    "parse": []
+  },
+  "embeds": [
+    {
+      "title": "💡 ¡Nueva Sugerencia de {player}!",
+      "description": "¡Una nueva propuesta ha sido enviada para la comunidad!\n-# ᴛᴜ ᴏᴘɪɴɪᴏɴ ᴄᴏɴꜱᴛʀᴜʏᴇ ᴛʜᴜɴᴅᴇʀᴍᴄ\n\n### Información:\n`👤` Autor: `{player}`\n`📊` Estado: `⏳ En Votación`\n\n### Sugerencia:\n```\n> {suggestion_text}\n```\n\n-# [Tienda](https://tienda.thundermc.es/) • [Tiktok](https://www.tiktok.com/@somosthundermc_?lang=es) • [YouTube](https://www.youtube.com/@somosthundermc/featured)",
+      "color": 16706304,
+      "thumbnail": {
+        "url": "https://minotar.net/bust/{player}/100"
+      }
+    }
+  ],
+  "components": [
+    {
+      "type": 1,
+      "components": [
+        {
+          "type": 2,
+          "style": 3,
+          "label": "A favor (0)",
+          "custom_id": "sug_upvote_{id}",
+          "emoji": {
+            "name": "👍"
+          }
+        },
+        {
+          "type": 2,
+          "style": 4,
+          "label": "En contra (0)",
+          "custom_id": "sug_downvote_{id}",
+          "emoji": {
+            "name": "👎"
+          }
+        }
+      ]
+    }
+  ]
+}
+```
+
+
+

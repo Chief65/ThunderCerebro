@@ -41,6 +41,7 @@ Catálogo unificado y centralizado de la base de conocimiento de **ThunderCerebr
 - **[[wiki/entities/thundermc/composicion-minas|Composición de Minas]]**: Distribución de minerales por rangos y porcentajes de regeneración.
 - **[[wiki/entities/thundermc/custom-plugins/plugins-custom|Plugins Custom ThunderMC]]**: Especificación técnica de EnderChestPlus, RankUp y ValyrTutorial.
 - **[[wiki/entities/catamines|Catamines]]**: Motor y plugin de minería progresiva por rangos y zona PvP.
+- **[[wiki/entities/thundermc/valyr-protagonista-canonic|Valyr (Protagonista Canónico)]]**: Ficha canónica de diseño, rig facial, armadura oficial (yelmo campamento_dia) y directrices de render 3D.
 - **[[Plan de Monetizacion/plan-monetizacion-thundermc|Plan Maestro de Monetización]]**: Documento maestro operativo de comercialización y Tebex.
 
 ## 📚 Desgloses de Fuentes
@@ -63,4 +64,5 @@ Catálogo unificado y centralizado de la base de conocimiento de **ThunderCerebr
   - [`creator/output/discord/tebex_purchase_embed.json`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/output/discord/tebex_purchase_embed.json): Anuncio de compra oficial Tebex (Embed dinámico con avatar de skin del jugador, imagen 16:9 y botón interactivo hacia la tienda).
   - [`creator/output/discord/voicechat_setup_embed.json`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/output/discord/voicechat_setup_embed.json): Guía e instrucciones de Simple Voice Chat (Setup Java en 3 pasos, tutorial en YouTube, thumbnail de micrófono, aclaración Bedrock con Discord y botón de descarga).
   - [`creator/output/discord/sorteo_embed.json`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/output/discord/sorteo_embed.json): Módulo de sorteos interactivo (Contador de entradas dinámico, temporizador nativo de Discord, botón de participación y tiers de premios).
+  - [`creator/output/renders/tienda/valyr_tienda_carrito_final.jpg`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/output/renders/tienda/valyr_tienda_carrito_final.jpg): Render Cinemático AAA Final Aprobado de Tienda Oficial (Valyr con casco canónico empujando carrito con ítems vóxel puros bajo luz solar diurna).
 

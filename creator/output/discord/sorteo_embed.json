@@ -7,7 +7,7 @@
   "embeds": [
     {
       "title": "🎉 ¡Sorteo Oficial de ThunderMC!",
-      "description": "¡Participa gratis y llévate increíbles recompensas para tu aventura!\n-# ꜱᴏʀᴛᴇᴏ ᴇxᴄʟᴜꜱɪᴠᴏ ᴘᴀʀᴀ ᴛᴏᴅᴀ ʟᴀ ᴄᴏᴍᴜɴɪᴅᴀᴅ ᴅᴇ ᴛʜᴜɴᴅᴇʀᴍᴄ\n\n**Premio del Sorteo:**\n# 🏆 `Rango Titán [Permanente]`\n\n**Estado del Sorteo:**\n# ⏳ <t:1791495355:R>\n`📅` Finaliza: <t:1791495355:F>\n`👑` Ganadores: `3 afortunados`\n`🎟️` Entradas registradas: `0 participantes`\n\n## ¿Cómo Participar?\nHaz clic en el botón verde inferior para registrar tu entrada al instante.\n\n-# [Tienda](https://tienda.thundermc.es/) • [Tiktok](https://www.tiktok.com/@somosthundermc_?lang=es) • [YouTube](https://www.youtube.com/@somosthundermc/featured)",
+      "description": "¡Participa y prueba tu suerte!\n-# ꜱᴏʀᴛᴇᴏ ᴇxᴄʟᴜꜱɪᴠᴏ ᴘᴀʀᴀ ᴛʜᴜɴᴅᴇʀᴍᴄ\n\n### Premio del Sorteo:\n# 🏆 `Rango Titán [Permanente]`\n-# Para reclamar abrir ticket en <#1374644365758169178>\n\n### Estado del Sorteo:\n`📅` Finaliza: <t:1791495355:R>\n`👑` Ganadores: `3 afortunados`\n`🎟️` Participantes: `2 participantes`\n\n## ¿Cómo Participar?\nHaz clic en el botón verde inferior para registrar tu entrada al instante.\n\n-# [Tienda](https://tienda.thundermc.es/) • [Tiktok](https://www.tiktok.com/@somosthundermc_?lang=es) • [YouTube](https://www.youtube.com/@somosthundermc/featured)",
       "color": 16706304,
       "thumbnail": {
         "url": "https://cdn.discordapp.com/attachments/1557075345906081792/1557218262607986769/purple_bundle_closed.png?backend=b2&ex=6ac70005&is=6ac5ae85&hm=68a1a7521ba0d379bfb0b9c76e7275c3a53238b255ad5e50e131ba227b649426&"
@@ -21,8 +21,8 @@
         {
           "type": 2,
           "style": 3,
-          "custom_id": "sorteo_participar",
           "label": "¡Participar en el Sorteo!",
+          "custom_id": "sorteo_participar",
           "emoji": {
             "name": "🎉"
           }

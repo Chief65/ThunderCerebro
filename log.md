@@ -2,6 +2,70 @@
 
 Registro cronológico e incremental de todas las operaciones realizadas en **ThunderCerebro**.
 
+## [2026-10-07] creator & discord | Diseño y Despacho de Embed de Sugerencias de Comunidad
+- **Archivos Guardados**:
+  - [`creator/output/discord/sugerencia_embed.json`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/output/discord/sugerencia_embed.json)
+  - [`creator/lab/discord_bot/sugerencia_embed.json`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/lab/discord_bot/sugerencia_embed.json)
+  - [`wiki/concepts/estandar_embeds_discord.md`](file:///C:/Users/PC/Desktop/ThunderCerebro/wiki/concepts/estandar_embeds_discord.md)
+- **Especificaciones Implementadas**:
+  1. Estructura adaptada al estándar oficial de ThunderMC (`16706304` / `#FEEB00`).
+  2. Encabezado con subtítulo Small Caps (`-# ᴛᴜ ᴏᴘɪɴɪᴏɴ ᴄᴏɴꜱᴛʀᴜʏᴇ ᴛʜᴜɴᴅᴇʀᴍᴄ`).
+  3. Reordenamiento visual: Bloque H3 `Información` prioritario (`👤 Autor` y `📊 Estado`), seguido de `Sugerencia` encapsulada en bloque de código (`> {suggestion_text}`).
+  4. Fila interactiva de votación con botones verde (`👍 A favor (0)`) y rojo (`👎 En contra (0)`).
+  5. Despacho verificado de prueba al canal `#embeds` (`1552723526996336724`) bajo Message ID `1557410317284151408`.
+
+## [2026-10-07] creator & discord | Integración de Imagen Oficial de Tienda (Valyr con Carrito) en Embed de Compras
+- **Archivos Modificados**:
+  - [`creator/output/discord/tebex_purchase_embed.json`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/output/discord/tebex_purchase_embed.json)
+  - [`creator/lab/discord_bot/tebex_purchase_embed.json`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/lab/discord_bot/tebex_purchase_embed.json)
+  - [`creator/lab/discord_bot/test_purchase.ps1`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/lab/discord_bot/test_purchase.ps1)
+  - [`creator/lab/discord_bot/tebex_listener.js`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/lab/discord_bot/tebex_listener.js)
+  - [`wiki/concepts/estandar_embeds_discord.md`](file:///C:/Users/PC/Desktop/ThunderCerebro/wiki/concepts/estandar_embeds_discord.md)
+- **Especificaciones Implementadas**:
+  1. Sustitución del banner temporal (`campamento_dia_1138x640.jpg`) por el render cinemático oficial de tienda: Valyr con carrito de compras encantado (`valyr_tienda_carrito_2.jpg`) alojado en CDN Discord.
+  2. Actualización de plantillas JSON en `output/` y `lab/` con el enlace CDN directo en el campo `"image": { "url": "..." }`.
+  3. Despacho verificado de prueba (simulación `SrRamos` / `Rango Titan (Permanente)`) al canal `#embeds` (`1552723526996336724`) bajo Message ID `1557401464262107207`.
+  4. Consolidación del modelo canónico en la base de conocimiento (`wiki/concepts/estandar_embeds_discord.md`) bajo la sección de Modelos Oficiales Validados.
+
+## [2026-10-07] creator & discord | Actualización y Despacho de Embed de Sorteo Oficial
+- **Archivos Modificados**:
+  - [`creator/output/discord/sorteo_embed.json`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/output/discord/sorteo_embed.json)
+  - [`creator/lab/discord_bot/sorteo_embed.json`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/lab/discord_bot/sorteo_embed.json)
+- **Especificaciones Implementadas**:
+  1. Actualización de subtítulos a H3 (`### Premio del Sorteo:` y `### Estado del Sorteo:`).
+  2. Inclusión de directriz de reclamo por ticket vinculada a `<#1374644365758169178>`.
+  3. Formateo simplificado del temporizador a fecha relativa (`<t:1791495355:R>`).
+  4. Despacho exitoso verificado a canal `#embeds` (`1552723526996336724`) bajo Message ID `1557399453957226587`.
+
+## [2026-10-07] creator & brand | Aprobación Definitiva: Render de Tienda Oficial & Ficha Canónica de Valyr
+- **Archivos Promocionados y Creados**:
+  - Activo Final 4K UHD: [`creator/output/renders/tienda/valyr_tienda_carrito_final.jpg`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/output/renders/tienda/valyr_tienda_carrito_final.jpg)
+  - Ficha Técnica de Lab: [`creator/lab/renders/tienda/valyr_tienda_carrito_final.md`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/lab/renders/tienda/valyr_tienda_carrito_final.md)
+  - Ficha Canónica en Wiki: [`wiki/entities/thundermc/valyr-protagonista-canonic.md`](file:///C:/Users/PC/Desktop/ThunderCerebro/wiki/entities/thundermc/valyr-protagonista-canonic.md)
+- **Aprobado por**: Sr Ramos.
+- **Parámetros Canónicos Fijados en Memoria**:
+  1. Modelo de yelmo oficial: barra nasal vertical, visera frontal con ranuras de ventilación rectangulares, cero penacho.
+  2. Iluminación diurna de referencia: esquema cálido matutino con rayos volumétricos dorados de `campamento_dia`.
+  3. Geometría estricta de ítems: geometría vóxel/pixel de Minecraft obligatoria sin curvas orgánicas realistas.
+
+## [2026-10-07] creator & renders | Render Cinemático AAA: Valyr con Carrito (Iteración 2 - Calibración Vóxel & Luz Campamento Día)
+- **Archivos Creados**:
+  - [`creator/output/renders/tienda/valyr_tienda_carrito_2.jpg`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/output/renders/tienda/valyr_tienda_carrito_2.jpg)
+  - [`creator/lab/renders/tienda/valyr_tienda_carrito_2.md`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/lab/renders/tienda/valyr_tienda_carrito_2.md)
+- **Especificaciones Implementadas**:
+  1. **Casco Canónico Idéntico a `campamento_dia`**: Barra nasal vertical de hierro entre los ojos, visera frontal con ranuras de ventilación rectangulares y placas laterales cúbicas.
+  2. **Iluminación Solar de Mañana (`campamento_dia`)**: Mercado medieval diurno abierto con rayos solares volumétricos cálidos dorados filtrándose por el follaje y toldo del puesto.
+  3. **Ítems Vóxel Puros de Minecraft**: Supresión total de formas orgánicas realistas; manzanas doradas facetadas, frascos de pociones cúbicos, espada de diamante escalonada en píxeles y libro encantado flotante con runas.
+
+## [2026-10-07] creator & renders | Render Cinemático AAA: Valyr con Carrito Encantado para la Tienda Oficial (Iteración 1)
+- **Archivos Creados**:
+  - [`creator/output/renders/tienda/valyr_tienda_carrito_1.jpg`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/output/renders/tienda/valyr_tienda_carrito_1.jpg)
+  - [`creator/lab/renders/tienda/valyr_tienda_carrito_1.md`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/lab/renders/tienda/valyr_tienda_carrito_1.md)
+- **Especificaciones Implementadas**:
+  1. **Personaje Principal**: Valyr (cerdo héroe canónico de Minecraft) con casco de hierro abierto, peto de hierro pulido y capa azul marino, empujando con energía un carrito de compras metálico cúbico.
+  2. **Botín Encantado**: Carrito rebosante de ítems legendarios: manzana dorada resplandeciente, espada de diamante mágica, libros encantados con runas púrpuras flotantes (*enchantment glint*) y frascos de pociones brillantes (magenta y cian).
+  3. **Atmósfera de Tienda Arcana**: Entorno de tienda/bazar medieval con estanterías de abeto, mostrador de pociones, cofre de Ender al fondo, iluminación volumétrica con faroles clásicos y de almas sobre suelo de losas de piedra pulida.
+
 ## [2026-10-06] creator & discord | Integración de Bolsa Morada (Purple Bundle) en Embed de Sorteos
 - **Archivos Modificados y Guardados**:
   - [`creator/output/discord/sorteo_embed.json`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/output/discord/sorteo_embed.json)

@@ -1,0 +1,40 @@
+{
+  "allowed_mentions": {
+    "parse": []
+  },
+  "embeds": [
+    {
+      "title": "💡 ¡Nueva Sugerencia de {player}!",
+      "description": "¡Una nueva propuesta ha sido enviada para la comunidad!\n-# ᴛᴜ ᴏᴘɪɴɪᴏɴ ᴄᴏɴꜱᴛʀᴜʏᴇ ᴛʜᴜɴᴅᴇʀᴍᴄ\n\n### Información:\n`👤` Autor: `{player}`\n`📊` Estado: `⏳ En Votación`\n\n### Sugerencia:\n```\n> {suggestion_text}\n```\n\n-# [Tienda](https://tienda.thundermc.es/) • [Tiktok](https://www.tiktok.com/@somosthundermc_?lang=es) • [YouTube](https://www.youtube.com/@somosthundermc/featured)",
+      "color": 16706304,
+      "thumbnail": {
+        "url": "https://minotar.net/bust/{player}/100"
+      }
+    }
+  ],
+  "components": [
+    {
+      "type": 1,
+      "components": [
+        {
+          "type": 2,
+          "style": 3,
+          "label": "A favor (0)",
+          "custom_id": "sug_upvote_{id}",
+          "emoji": {
+            "name": "👍"
+          }
+        },
+        {
+          "type": 2,
+          "style": 4,
+          "label": "En contra (0)",
+          "custom_id": "sug_downvote_{id}",
+          "emoji": {
+            "name": "👎"
+          }
+        }
+      ]
+    }
+  ]
+}

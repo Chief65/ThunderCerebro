@@ -33,9 +33,6 @@ const TEBEX_SECRET = process.env.TEBEX_WEBHOOK_SECRET || '';
 
 // Funcion para despachar el embed a Discord
 async function sendDiscordEmbed(purchase) {
-  const imagePath = path.resolve(__dirname, '../../output/renders/campamento_dia/campamento_dia_1138x640.jpg');
-  const tempPayloadPath = path.join(__dirname, 'temp_tebex_dispatch.json');
-  
   const payload = {
     allowed_mentions: {
       parse: ["everyone"]
@@ -49,7 +46,7 @@ async function sendDiscordEmbed(purchase) {
           url: `https://minotar.net/bust/${encodeURIComponent(purchase.player)}/100`
         },
         image: {
-          url: "attachment://campamento_dia_1138x640.jpg"
+          url: "https://cdn.discordapp.com/attachments/1557075345906081792/1557400001271832747/valyr_tienda_carrito_2.jpg?backend=b2&ex=6ac7a947&is=6ac657c7&hm=1c09a0259ab52ffe394aee07900093f730e9f8b6f58a2a114eb29ebfc08b3e4e&"
         }
       }
     ],

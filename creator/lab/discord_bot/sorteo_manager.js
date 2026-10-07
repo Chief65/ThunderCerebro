@@ -33,15 +33,17 @@ export function buildGiveawayPayload({
   winners = []
 }) {
   const statusLine = isFinished
-    ? `**Estado del Sorteo:**\n# 🏁 \`FINALIZADO\`\n\`👑\` **Ganadores:** ${winners.length > 0 ? winners.map(w => `<@${w}>`).join(', ') : 'Sin participantes suficientes'}`
-    : `**Estado del Sorteo:**\n# ⏳ <t:${endTimestamp}:R>\n\`📅\` Finaliza: <t:${endTimestamp}:F>\n\`👑\` Ganadores: \`${winnersCount} afortunados\`\n\`🎟️\` Entradas registradas: \`${entriesCount} participantes\``;
+    ? `### Estado del Sorteo:\n# 🏁 \`FINALIZADO\`\n\`👑\` **Ganadores:** ${winners.length > 0 ? winners.map(w => `<@${w}>`).join(', ') : 'Sin participantes suficientes'}`
+    : `### Estado del Sorteo:\n\`📅\` Finaliza: <t:${endTimestamp}:R>\n\`👑\` Ganadores: \`${winnersCount} afortunados\`\n\`🎟️\` Participantes: \`${entriesCount} participantes\``;
+
+  const prizeClean = prize.replace(/^🏆\s*/, '').replace(/^`|`$/g, '');
 
   return {
     allowed_mentions: { parse: ["everyone", "users"] },
     embeds: [
       {
         title,
-        description: `¡Participa gratis y llévate increíbles recompensas para tu aventura!\n-# ꜱᴏʀᴛᴇᴏ ᴇxᴄʟᴜꜱɪᴠᴏ ᴘᴀʀᴀ ᴛᴏᴅᴀ ʟᴀ ᴄᴏᴍᴜɴɪᴅᴀᴅ ᴅᴇ ᴛʜᴜɴᴅᴇʀᴍᴄ\n\n**Premio del Sorteo:**\n# ${prize.startsWith('🏆') ? prize : `🏆 \`${prize}\``}\n\n${statusLine}\n\n## ¿Cómo Participar?\n${isFinished ? 'El sorteo ha concluido.' : 'Haz clic en el botón verde inferior para registrar tu entrada al instante.'}\n\n-# [Tienda](https://tienda.thundermc.es/) • [Tiktok](https://www.tiktok.com/@somosthundermc_?lang=es) • [YouTube](https://www.youtube.com/@somosthundermc/featured)`,
+        description: `¡Participa y prueba tu suerte!\n-# ꜱᴏʀᴛᴇᴏ ᴇxᴄʟᴜꜱɪᴠᴏ ᴘᴀʀᴀ ᴛʜᴜɴᴅᴇʀᴍᴄ\n\n### Premio del Sorteo:\n# 🏆 \`${prizeClean}\`\n-# Para reclamar abrir ticket en <#1374644365758169178>\n\n${statusLine}\n\n## ¿Cómo Participar?\n${isFinished ? 'El sorteo ha concluido.' : 'Haz clic en el botón verde inferior para registrar tu entrada al instante.'}\n\n-# [Tienda](https://tienda.thundermc.es/) • [Tiktok](https://www.tiktok.com/@somosthundermc_?lang=es) • [YouTube](https://www.youtube.com/@somosthundermc/featured)`,
         color: isFinished ? 9807270 : 16706304,
         thumbnail: {
           url: "https://cdn.discordapp.com/attachments/1557075345906081792/1557218262607986769/purple_bundle_closed.png?backend=b2&ex=6ac70005&is=6ac5ae85&hm=68a1a7521ba0d379bfb0b9c76e7275c3a53238b255ad5e50e131ba227b649426&"
