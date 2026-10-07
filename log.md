@@ -2,6 +2,50 @@
 
 Registro cronológico e incremental de todas las operaciones realizadas en **ThunderCerebro**.
 
+## [2026-10-06] creator & discord | Integración de Bolsa Morada (Purple Bundle) en Embed de Sorteos
+- **Archivos Modificados y Guardados**:
+  - [`creator/output/discord/sorteo_embed.json`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/output/discord/sorteo_embed.json)
+  - [`creator/lab/discord_bot/sorteo_embed.json`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/lab/discord_bot/sorteo_embed.json)
+  - [`creator/lab/discord_bot/sorteo_manager.js`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/lab/discord_bot/sorteo_manager.js)
+- **Activos Locales Guardados**:
+  - [`raw/assets/purple_bundle_closed.png`](file:///C:/Users/PC/Desktop/ThunderCerebro/raw/assets/purple_bundle_closed.png) (Sprite oficial con canal alfa)
+  - [`raw/assets/purple_bundle_open.png`](file:///C:/Users/PC/Desktop/ThunderCerebro/raw/assets/purple_bundle_open.png) (Variante abierta)
+- **Especificaciones Implementadas**:
+  1. Adopción del sprite oficial de Minecraft 1.21 de Bolsa Morada Cerrada en el slot `thumbnail` del embed de sorteos.
+  2. Thumbnail alojado y validado en CDN Discord con fondo transparente.
+  3. Despacho verificado al canal oficial de Discord (`1552723526996336724`) con Message ID `1557219346407759953`.
+  4. Guardado consolidado en `lab/` y `output/` para producción.
+
+## [2026-10-06] creator & discord | Actualización de Avatar del Bot (Valyr sin Libro - Peto Limpio)
+- **Archivos Creados**:
+  - [`creator/output/renders/discord_avatar/valyr_bot_pfp_nobook_transparent.png`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/output/renders/discord_avatar/valyr_bot_pfp_nobook_transparent.png)
+  - [`creator/output/renders/discord_avatar/valyr_bot_pfp_nobook.jpg`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/output/renders/discord_avatar/valyr_bot_pfp_nobook.jpg)
+- **Especificaciones Implementadas**:
+  1. Supresión total del libro o elementos sostenidos a petición del Sr Ramos.
+  2. Retención del encuadre ampliado (zoom cerrado del 80%) y giro 3/4 hacia la derecha.
+  3. Expresión canónica 100% neutra de mob vanilla de Minecraft (ojos de 2 píxeles, cero boca).
+  4. Peto de hierro pulido limpio y hombreras dobles dominando el torso.
+  5. Extracción con anti-aliasing a PNG transparente RGBA 32-bit.
+  6. Despacho directo a la API de Discord (`PATCH /users/@me`) para `ValyrPruebas#2861` (Nuevo Hash CDN: `4e90c292e2951f646761282115ecee31`).
+
+## [2026-10-06] creator & discord | Actualización de Foto de Perfil del Bot de Discord (Valyr Zoom & Expresión Neutra)
+- **Archivos Creados/Actualizados**:
+  - [`creator/output/renders/discord_avatar/valyr_bot_pfp_zoom_neutral_transparent.png`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/output/renders/discord_avatar/valyr_bot_pfp_zoom_neutral_transparent.png)
+  - [`creator/output/renders/discord_avatar/valyr_bot_pfp_zoom_neutral.jpg`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/output/renders/discord_avatar/valyr_bot_pfp_zoom_neutral.jpg)
+- **Especificaciones Implementadas**:
+  1. Encuadre ampliado (zoom cerrado del 80% del plano vertical) para legibilidad en círculos pequeños de Discord.
+  2. Expresión canónica 100% neutra de mob vanilla de Minecraft (ojos de 2 píxeles sin inclinación ni expresiones humanizadas).
+  3. Perfil girado en 3/4 mirando hacia la derecha con libro "ADVENTURER" abierto.
+  4. Extracción de canal alfa a PNG transparente RGBA 32-bit con anti-aliasing de bordes limpio.
+  5. Despacho directo a la API de Discord (`PATCH /users/@me`) para el bot `ValyrPruebas#2861` (Nuevo Hash CDN: `182f876723f8252c25d611fc5bcefe1b`).
+
+## [2026-10-06] creator & discord | Adopción de Busto 3D (Cara y Torso) en Embed de Compras Tebex
+- **Archivos Modificados**: [`creator/output/discord/tebex_purchase_embed.json`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/output/discord/tebex_purchase_embed.json), [`creator/lab/discord_bot/tebex_purchase_embed.json`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/lab/discord_bot/tebex_purchase_embed.json), [`creator/lab/discord_bot/tebex_listener.js`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/lab/discord_bot/tebex_listener.js), [`wiki/concepts/estandar_embeds_discord.md`](file:///C:/Users/PC/Desktop/ThunderCerebro/wiki/concepts/estandar_embeds_discord.md).
+- **Especificaciones Implementadas**:
+  1. Sustitución del render de cabeza (`mc-heads.net/avatar/{player}/100`) por el busto 3D isométrico (`https://minotar.net/bust/{player}/100`), integrando cabeza y torso en la miniatura.
+  2. Tolerancia garantizada para jugadores offline y Bedrock (fallback automático a skins estándar Steve/Alex con código HTTP 200).
+  3. Prueba de despacho validada y aprobada por el Sr Ramos en el canal `1552723526996336724` (Message ID: `1557190333413064706`).
+
 ## [2026-10-06] creator & discord | Refinamiento y Simplificación del Embed de Sorteos
 - **Archivos Modificados**: [`creator/output/discord/sorteo_embed.json`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/output/discord/sorteo_embed.json), [`creator/lab/discord_bot/sorteo_embed.json`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/lab/discord_bot/sorteo_embed.json), [`creator/lab/discord_bot/sorteo_manager.js`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/lab/discord_bot/sorteo_manager.js), [`creator/lab/discord_bot/send.ps1`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/lab/discord_bot/send.ps1).
 - **Especificaciones Implementadas**:

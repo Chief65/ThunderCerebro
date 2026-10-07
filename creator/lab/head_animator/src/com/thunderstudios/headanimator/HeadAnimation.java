@@ -83,6 +83,29 @@ public class HeadAnimation {
         return getFrameItem(0);
     }
 
+    public boolean normalizeToBase(ItemStack item) {
+        if (item == null || item.getType() != Material.PLAYER_HEAD) return false;
+        if (!item.hasItemMeta()) return false;
+        if (!(item.getItemMeta() instanceof SkullMeta meta)) return false;
+
+        PlayerProfile currentProfile = meta.getPlayerProfile();
+        UUID baseUUID = UUID.nameUUIDFromBytes(("headanimator:" + id + ":0").getBytes(StandardCharsets.UTF_8));
+        if (currentProfile != null && baseUUID.equals(currentProfile.getId())) {
+            return false;
+        }
+
+        ItemStack base = getFrameItem(0);
+        SkullMeta baseMeta = (SkullMeta) base.getItemMeta();
+        if (baseMeta != null && baseMeta.getPlayerProfile() != null) {
+            meta.setPlayerProfile(baseMeta.getPlayerProfile());
+            meta.setDisplayName(this.displayName);
+            meta.setLore(this.lore);
+            item.setItemMeta(meta);
+            return true;
+        }
+        return false;
+    }
+
     private ItemStack createSkull(String base64, String name, List<String> lore, UUID deterministicUUID, int frameIndex) {
         ItemStack item = new ItemStack(Material.PLAYER_HEAD);
         SkullMeta meta = (SkullMeta) item.getItemMeta();

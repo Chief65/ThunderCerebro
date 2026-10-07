@@ -19,3 +19,7 @@ Desktop.ini
 # Build artifacts temporales
 creator/lab/head_animator/bin/
 
+# Dumps temporales y scratch en raíz
+/*.txt
+/scratch/
+uloader.properties

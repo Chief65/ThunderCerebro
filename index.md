@@ -10,6 +10,7 @@ Catálogo unificado y centralizado de la base de conocimiento de **ThunderCerebr
 - **[[wiki/synthesis/estudio_mercado_minecraft_multijugador|Estudio de Mercado Minecraft & Multijugador]]**: Dimensionamiento de mercado (TAM/SAM/SOM), cuotas No-Premium, viabilidad financiera y benchmarks.
 - **[[wiki/synthesis/optimizacion-granjas-survival|Optimización de Granjas Survival]]**: Diagnóstico técnico, análisis de cuellos de botella (MSPT/entidades) y plan de configs/stacking para 1.21.11.
 - **[[wiki/synthesis/sistema-habilidades-y-skills|Sistema de Habilidades y Skills]]**: Organización modular del directorio de skills y capacidades operativas.
+- **[[wiki/synthesis/modelo-evento-temporada-thundermc|Modelo de Evento de Temporada]]**: Arquitectura integral de temporadas, prompts de agentes, mitigación de riesgos fatales (Red Teaming), hito comunitario y monetización ética.
 
 ## ⚖️ Comparaciones & Matrices de Decisión
 - **[[wiki/comparisons/rag-vs-llm-wiki|RAG vs. LLM Wiki]]**: Análisis comparativo entre RAG sin estado y wikis compiladas acumulativas.
@@ -22,9 +23,11 @@ Catálogo unificado y centralizado de la base de conocimiento de **ThunderCerebr
 - **[[wiki/concepts/mercadothunder|Mercado Thunder (Lonja Bursátil)]]**: Arquitectura de bolsa diaria inspirada en Fantasy DAZN con bandas porcentuales, techos/suelos y anti-dump.
 - **[[wiki/concepts/calidades-y-lore-items|Calidades y Lore de Ítems]]**: Jerarquía de armamento desde rango Básico hasta Titán con lore personalizado.
 - **[[wiki/concepts/estandar-calidades-items|Estándar Oficial de Calidades]]**: Sistema canónico de calidades (SUPER, RARA, EPICA, MITICA, DIVINA, LIMITADA) con estrellas y gradientes.
+- **[[wiki/concepts/estandar_expresiones_faciales_renders|Estándar Expresiones Faciales Renders]]**: Sistema de rigs faciales cúbicos expresivos tipo Enderframes/Blender para personajes de Minecraft.
 - **[[wiki/concepts/dungeons-y-jefes|Dungeons y Jefes]]**: Mecánicas de combate por fases para Araña Reina, Cérbero, Jinete Helado y Rey Forja.
 - **[[wiki/concepts/monetizacion-modelo-negocio|Modelo de Negocio & Monetización]]**: Estrategia de monetización en 4 pilares (VIPs, Zafiros, Pase de Batalla, Bundles).
 - **[[wiki/concepts/deluxemenus_standards|Estándares DeluxeMenus]]**: Reglas de diseño UX/UI, slots, paletas y ergonomía en inventarios de cofres.
+- **[[wiki/concepts/estandar_embeds_discord|Estándar de Embeds Discord]]**: Especificación de diseño UI, paleta #FEEB00, tipografía Small Caps, 1-click copy y menú interactivo.
 - **[[wiki/concepts/framework-cognitivo-operativo|Framework Cognitivo Operativo]]**: Primeros principios, active recall y sesiones con cierre riguroso.
 
 ## 🏢 Entidades, Herramientas & Sistemas
@@ -54,5 +57,10 @@ Catálogo unificado y centralizado de la base de conocimiento de **ThunderCerebr
 - **`creator/README.md`**: Protocolo y reglas del entorno de experimentación e I+D.
 - **`creator/raw/`**: Ingesta aislada para experimentos (prompts, referencias).
 - **`creator/lab/`**: Espacio de trabajo iterativo (items, mecánicas, narrativa).
-- **`creator/output/`**: Entregables validados listos para producción (servidor / plugins / blueprints).
+- **`creator/output/`**: Entregables validados listos para producción (servidor / plugins / blueprints / discord).
+  - [`creator/output/discord/menu_discord_thundermc.json`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/output/discord/menu_discord_thundermc.json): Menú oficial de Discord de ThunderMC (Embed compacto, imagen 1138×640, IP en 1-clic y Dashboard interactivo).
+  - [`creator/output/discord/roles_notificaciones.json`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/output/discord/roles_notificaciones.json) / [`roles_discord_thundermc.json`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/output/discord/roles_discord_thundermc.json): Roles Discord ThunderMC (Selector de alertas y notificaciones con multiselección, thumbnail de campana e imagen 16:9).
+  - [`creator/output/discord/tebex_purchase_embed.json`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/output/discord/tebex_purchase_embed.json): Anuncio de compra oficial Tebex (Embed dinámico con avatar de skin del jugador, imagen 16:9 y botón interactivo hacia la tienda).
+  - [`creator/output/discord/voicechat_setup_embed.json`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/output/discord/voicechat_setup_embed.json): Guía e instrucciones de Simple Voice Chat (Setup Java en 3 pasos, tutorial en YouTube, thumbnail de micrófono, aclaración Bedrock con Discord y botón de descarga).
+  - [`creator/output/discord/sorteo_embed.json`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/output/discord/sorteo_embed.json): Módulo de sorteos interactivo (Contador de entradas dinámico, temporizador nativo de Discord, botón de participación y tiers de premios).
 

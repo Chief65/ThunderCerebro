@@ -50,8 +50,8 @@ Este documento define la especificación técnica y de diseño visual para todos
    - Restricción Discord: Solo `style: 5` admite campo `url` nativo (renderiza gris con icono de enlace externo).
    - Atributos requeridos: `label`, `url`, `emoji` (ej. `🪙` o `🛒`).
 4. **Avatar Dinámico en Miniatura (`thumbnail`)**:
-   - Ubicación: `"thumbnail": { "url": "https://mc-heads.net/avatar/{player}/100" }`
-   - Renderiza automáticamente la cabeza 2D con capas y sombrero en la esquina superior derecha del embed a partir del nickname. Tolera jugadores offline y Bedrock degradando a Steve/Alex sin errores.
+   - Ubicación: `"thumbnail": { "url": "https://minotar.net/bust/{player}/100" }`
+   - Renderiza el busto 3D isométrico (cabeza y torso) en la esquina superior derecha del embed a partir del nickname. Tolera jugadores offline y Bedrock degradando limpiamente a Steve/Alex (HTTP 200). Alternativa para solo cabeza 2D: `https://mc-heads.net/avatar/{player}/100`.
 
 ---
 

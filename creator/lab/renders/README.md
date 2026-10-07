@@ -83,3 +83,13 @@ Iconic macro-level Minecraft block geometry, canonical vanilla textures enhanced
 [RESTRICCIONES]:
 Strictly no text, no logos, no watermarks, no photorealistic flesh, no LEGO studs, no chaotic voxel clusters.
 ```
+
+---
+
+## 5. Marca Insignia Oficial de Thunder (Regla de Branding Diegético)
+
+Referencia técnica completa: [`creator/lab/renders/estandar_marca_insignia_thunder.md`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/lab/renders/estandar_marca_insignia_thunder.md)
+
+- **Capa Oficial del Cerdo Caballero**: Capa de Minecraft azul marino oscuro con un rayo dorado vertical reluciente en la espalda. Yelmo de hierro liso y pulido (sin penachos).
+- **Estandarte Oficial de Thunder**: Estandarte (`minecraft:banner`) azul marino oscuro con rayo dorado vertical montado en campamentos, fortalezas o barcos siempre que la capa del cerdo no sea visible por encuadre frontal.
+

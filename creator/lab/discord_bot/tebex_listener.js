@@ -46,7 +46,7 @@ async function sendDiscordEmbed(purchase) {
         description: `¡Agradecemos enormemente el apoyo!\n-# ɢʀᴀᴄɪᴀꜱ ᴘᴏʀ ʜᴀᴄᴇʀ ᴄʀᴇᴄᴇʀ ᴛʜᴜɴᴅᴇʀ\n\n**Detalles de la Adquisición:**\n\`👤\` Comprador: \`${purchase.player}\`\n\`📦\` Paquete: \`${purchase.package}\`\n\n↓ Conéctate para disfrutar de tus recompensas ↓\n\`\`\`text\nthundermc.es\n\`\`\`\n-# 📱 Puerto Bedrock: \`19132\` | 🎮 Java: Puerto por defecto\n\n-# [Tienda](https://tienda.thundermc.es/) • [Tiktok](https://www.tiktok.com/@somosthundermc_?lang=es) • [YouTube](https://www.youtube.com/@somosthundermc/featured)`,
         color: 16706304,
         thumbnail: {
-          url: `https://mc-heads.net/avatar/${encodeURIComponent(purchase.player)}/100`
+          url: `https://minotar.net/bust/${encodeURIComponent(purchase.player)}/100`
         },
         image: {
           url: "attachment://campamento_dia_1138x640.jpg"

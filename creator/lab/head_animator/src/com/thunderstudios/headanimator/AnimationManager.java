@@ -131,6 +131,7 @@ public class AnimationManager extends PacketListenerAbstract {
             HeadAnimation anim = getAnimationFromItem(helmet);
 
             if (anim != null && anim.getFrameCount() > 0) {
+                anim.normalizeToBase(helmet);
                 currentOnlineWearers.add(player.getUniqueId());
                 WearerState state = activeWearers.get(player.getUniqueId());
                 if (state == null || !state.animation.getId().equalsIgnoreCase(anim.getId())) {
@@ -152,6 +153,7 @@ public class AnimationManager extends PacketListenerAbstract {
                 entityWearers.remove(removed.player.getEntityId());
                 it.remove();
                 restoreRealHelmet(removed.player);
+                normalizePlayerInventory(removed.player);
             }
         }
 
@@ -213,5 +215,36 @@ public class AnimationManager extends PacketListenerAbstract {
         if (animId == null) return null;
 
         return animations.get(animId.toLowerCase(Locale.ROOT));
+    }
+
+    public boolean normalizeItem(ItemStack item) {
+        if (item == null) return false;
+        HeadAnimation anim = getAnimationFromItem(item);
+        if (anim != null) {
+            return anim.normalizeToBase(item);
+        }
+        return false;
+    }
+
+    public void normalizePlayerInventory(Player player) {
+        if (player == null || !player.isOnline()) return;
+        boolean updated = false;
+
+        ItemStack[] contents = player.getInventory().getContents();
+        for (ItemStack item : contents) {
+            if (normalizeItem(item)) {
+                updated = true;
+            }
+        }
+
+        ItemStack cursor = player.getItemOnCursor();
+        if (normalizeItem(cursor)) {
+            player.setItemOnCursor(cursor);
+            updated = true;
+        }
+
+        if (updated) {
+            player.updateInventory();
+        }
     }
 }

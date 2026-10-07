@@ -44,7 +44,7 @@ export function buildGiveawayPayload({
         description: `¡Participa gratis y llévate increíbles recompensas para tu aventura!\n-# ꜱᴏʀᴛᴇᴏ ᴇxᴄʟᴜꜱɪᴠᴏ ᴘᴀʀᴀ ᴛᴏᴅᴀ ʟᴀ ᴄᴏᴍᴜɴɪᴅᴀᴅ ᴅᴇ ᴛʜᴜɴᴅᴇʀᴍᴄ\n\n**Premio del Sorteo:**\n# ${prize.startsWith('🏆') ? prize : `🏆 \`${prize}\``}\n\n${statusLine}\n\n## ¿Cómo Participar?\n${isFinished ? 'El sorteo ha concluido.' : 'Haz clic en el botón verde inferior para registrar tu entrada al instante.'}\n\n-# [Tienda](https://tienda.thundermc.es/) • [Tiktok](https://www.tiktok.com/@somosthundermc_?lang=es) • [YouTube](https://www.youtube.com/@somosthundermc/featured)`,
         color: isFinished ? 9807270 : 16706304,
         thumbnail: {
-          url: "https://cdn.discordapp.com/attachments/1557075345906081792/1557138079020482651/458d28f617557db018b2182854821aeb57e6a0c3.png?backend=b2&ex=6ac6b558&is=6ac563d8&hm=83bb63ea523c11eb7e2b7abc53ff3b1f5cf61cbe8afa9aa074d567fa3a6d86f5&"
+          url: "https://cdn.discordapp.com/attachments/1557075345906081792/1557218262607986769/purple_bundle_closed.png?backend=b2&ex=6ac70005&is=6ac5ae85&hm=68a1a7521ba0d379bfb0b9c76e7275c3a53238b255ad5e50e131ba227b649426&"
         }
       }
     ],
