@@ -113,7 +113,7 @@ Entrega siempre el payload JSON completo, sintácticamente impecable y listo par
   "embeds": [
     {
       "title": "💡 ¡Nueva Sugerencia de {player}!",
-      "description": "¡Una nueva propuesta ha sido enviada para la comunidad!\n-# ᴛᴜ ᴏᴘɪɴɪᴏɴ ᴄᴏɴꜱᴛʀᴜʏᴇ ᴛʜᴜɴᴅᴇʀᴍᴄ\n\n### Información:\n`👤` Autor: `{player}`\n`📊` Estado: `⏳ En Votación`\n\n### Sugerencia:\n```\n> {suggestion_text}\n```\n\n-# [Tienda](https://tienda.thundermc.es/) • [Tiktok](https://www.tiktok.com/@somosthundermc_?lang=es) • [YouTube](https://www.youtube.com/@somosthundermc/featured)",
+      "description": "¡Una nueva propuesta ha sido enviada para la comunidad!\n-# ᴛᴜ ᴏᴘɪɴɪᴏɴ ᴄᴏɴꜱᴛʀᴜʏᴇ ᴛʜᴜɴᴅᴇʀᴍᴄ\n### Información:\n`👤` Autor: `{player}`\n`📊` Estado: `⏳ En Votación`\n### Sugerencia:\n```\n> {suggestion_text}\n```\n-# [Tienda](https://tienda.thundermc.es/) • [Tiktok](https://www.tiktok.com/@somosthundermc_?lang=es) • [YouTube](https://www.youtube.com/@somosthundermc/featured)",
       "color": 16706304,
       "thumbnail": {
         "url": "https://minotar.net/bust/{player}/100"
@@ -147,6 +147,16 @@ Entrega siempre el payload JSON completo, sintácticamente impecable y listo par
   ]
 }
 ```
+
+### 5.4 Embed de Sistema de Tickets (Soporte Flash V.1)
+- **Archivo Canónico**: [`creator/output/discord/ticket_embed.json`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/output/discord/ticket_embed.json)
+- **Botón Interactivo**: Botón Success verde (`style: 3`, `custom_id: "ticket_abrir_flash"`) con emoji `🎫`.
+- **Estructura**:
+  - Título: `🎫 Soporte Flash | ThunderMC`
+  - Subtítulo: `-# ᴀᴛᴇɴᴄɪᴏɴ ᴏꜰɪᴄɪᴀʟ ʏ ʀᴇꜱᴏʟᴜᴄɪᴏɴ ᴅᴇ ɪɴᴄɪᴅᴇɴᴄɪᴀꜱ`
+  - Flujo de uso numerado en 4 pasos (`1️⃣` a `4️⃣`).
+  - Bloque H3 de garantías Flash V.1 (`⚡`, `👷`, `⭐`).
+  - Advertencia en blockquote para evitar tickets duplicados.
 
 
 

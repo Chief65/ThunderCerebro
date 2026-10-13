@@ -23,3 +23,6 @@ creator/lab/head_animator/bin/
 /*.txt
 /scratch/
 uloader.properties
+creator/lab/libs/
+creator/lab/thunderpets/build/
+*.args

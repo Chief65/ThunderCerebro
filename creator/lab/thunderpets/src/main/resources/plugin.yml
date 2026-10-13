@@ -1,0 +1,21 @@
+name: ThunderPets
+version: 1.0.0
+main: com.thunderstudios.pets.ThunderPetsPlugin
+api-version: '1.21'
+author: ThunderStudios
+description: Sistema cosmetico de mascotas ligeras y medio personaje con GUI
+commands:
+  pets:
+    description: Abre el menu de seleccion de mascotas cosmeticas.
+    aliases: [pet, mascotas, mascota]
+    permission: thunderpets.use
+permissions:
+  thunderpets.use:
+    description: Permiso para abrir el menu de mascotas
+    default: true
+  thunderpets.pet.*:
+    description: Acceso a todas las mascotas
+    default: true
+  thunderpets.admin:
+    description: Permiso para recargar la configuracion del plugin
+    default: op

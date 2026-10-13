@@ -1,6 +1,7 @@
 param(
-    [string]$PayloadFile = "menu_principal_v2.json",
-    [string]$ImagePath = ""
+    [string]$PayloadFile = "menu_discord_thundermc.json",
+    [string]$ImagePath = "",
+    [string]$TargetChannel = ""
 )
 
 $envFile = Join-Path $PSScriptRoot ".env"
@@ -11,7 +12,8 @@ if (-not (Test-Path $envFile)) {
 
 $envLines = Get-Content $envFile
 $token = ($envLines | Where-Object { $_ -match "^DISCORD_BOT_TOKEN=(.+)" } | ForEach-Object { $matches[1] }).Trim()
-$channelId = ($envLines | Where-Object { $_ -match "^DISCORD_CHANNEL_ID=(.+)" } | ForEach-Object { $matches[1] }).Trim()
+$defaultChannelId = ($envLines | Where-Object { $_ -match "^DISCORD_CHANNEL_ID=(.+)" } | ForEach-Object { $matches[1] }).Trim()
+$channelId = if ($TargetChannel) { $TargetChannel } else { $defaultChannelId }
 
 $fullPayloadPath = if (Test-Path $PayloadFile) { $PayloadFile } else { Join-Path $PSScriptRoot $PayloadFile }
 if (-not (Test-Path $fullPayloadPath)) {

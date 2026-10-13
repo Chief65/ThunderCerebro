@@ -1,0 +1,42 @@
+{
+  "allowed_mentions": {
+    "parse": []
+  },
+  "embeds": [
+    {
+      "title": "⚔️ Reglas Generales | ThunderMC",
+      "description": "Normativa oficial para el entorno de juego en Minecraft.\n-# ᴊᴜᴇɢᴏ ʟɪᴍᴘɪᴏ, ʀᴇꜱᴘᴇᴛᴏ ʏ ᴄᴏɴᴠɪᴠᴇɴᴄɪᴀ\n\n> ⚠️ **Aviso:** Al acceder a ThunderMC aceptas cumplir estas normas. El criterio del staff prevalece ante situaciones no contempladas explícitamente.\n\n### Normas del Servidor:\n`1️⃣` **Respeto Básico:** Prohibidos insultos graves, amenazas o ataques personales. *(PvP competitivo tolerado; abusos sancionables)*\n`2️⃣` **Cero Toxicidad:** No se tolera acoso, provocaciones continuas ni conductas destinadas a arruinar la experiencia ajena.\n`3️⃣` **Chat Limpio:** Prohibido spam, flood y uso excesivo continuado de mayúsculas.\n`4️⃣` **Publicidad Externa:** Prohibida la promoción de servidores, Discords o redes externas sin autorización previa.\n`5️⃣` **Seguridad & Datos:** Prohibido doxing, divulgar datos personales, robo de cuentas o suplantación. *(Sanción permanente)*\n`6️⃣` **Juego Limpio (Multicuentas):** Prohibido evadir sanciones o usar multicuentas para ventajas injustas.\n`7️⃣` **Modificaciones Ilegales:** Prohibidos hacks, ghost clients, autoclickers o macros abusivas. *(Tener residuos cuenta)*\n`8️⃣` **Economía Segura:** Cualquier estafa o engaño económico dentro del servidor está totalmente prohibido.\n\n### 🔒 Criterio del Staff:\n-# Comportamientos que rompan la experiencia o el espíritu del servidor serán sancionados bajo criterio del staff.\n\n-# 🗓️ Actualizado: 01/07/2026 • [Tienda](https://tienda.thundermc.es/) • [Tiktok](https://www.tiktok.com/@somosthundermc_?lang=es)",
+      "color": 16706304
+    },
+    {
+      "title": "💬 Reglas de la Comunidad | Discord",
+      "description": "Normativa oficial exclusiva para el servidor de Discord.\n-# ᴄᴏᴍᴜɴɪᴅᴀᴅ ꜱᴇɢᴜʀᴀ, ʀᴇꜱᴘᴇᴛᴜᴏꜱᴀ ʏ ᴏʀᴅᴇɴᴀᴅᴀ\n\n> 📌 **Ámbito:** Estas normas aplican exclusivamente a los canales de texto y voz de este Discord.\n\n### Normas de Convivencia:\n`1️⃣` **Contenido Amigable:** Prohibido contenido NSFW, explícito o mensajes de odio.\n`2️⃣` **Respeto Mutuo:** Prohibidas actitudes tóxicas, faltas de respeto o discriminación.\n`3️⃣` **Cero Drama:** Mantén un ambiente sano; no fomentes discusiones ni altercados.\n`4️⃣` **Cero Spam:** Prohibida la promoción de servidores o contenido externo sin permiso.\n`5️⃣` **Menciones al Staff:** No etiquetes al equipo innecesariamente; utiliza los canales de soporte.\n`6️⃣` **Privacidad:** Respeta los datos personales y la privacidad de los miembros.\n`7️⃣` **Canales Temáticos:** Utiliza cada canal para su tópico correspondiente.\n`8️⃣` **Instrucciones del Staff:** Sigue las indicaciones del equipo de moderación.\n\n### 🔒 Criterio del Staff:\n-# El equipo se reserva el derecho de actuar ante cualquier conducta nociva no tipificada.\n-# 🐸 Recuerda: Cumple las normas para evitar sanciones del staff.\n\n-# 🗓️ Actualizado: 01/07/2026 • [Tienda](https://tienda.thundermc.es/) • [YouTube](https://www.youtube.com/@somosthundermc/featured)",
+      "color": 16706304
+    }
+  ],
+  "components": [
+    {
+      "type": 1,
+      "components": [
+        {
+          "type": 2,
+          "style": 5,
+          "label": "Reportar Infracción (Ticket)",
+          "url": "https://discord.com/channels/1552715004669726802/1374644365758169178",
+          "emoji": {
+            "name": "🎫"
+          }
+        },
+        {
+          "type": 2,
+          "style": 5,
+          "label": "Tienda Oficial",
+          "url": "https://tienda.thundermc.es/",
+          "emoji": {
+            "name": "🪙"
+          }
+        }
+      ]
+    }
+  ]
+}

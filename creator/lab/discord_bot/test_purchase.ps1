@@ -1,12 +1,14 @@
 param(
     [string]$Player = "SrRamos",
-    [string]$Package = "Rango Titan (Permanente)"
+    [string]$Package = "Rango Titan (Permanente)",
+    [string]$TargetChannel = ""
 )
 
 $envFile = Join-Path $PSScriptRoot ".env"
 $envLines = Get-Content $envFile
 $token = ($envLines | Where-Object { $_ -match "^DISCORD_BOT_TOKEN=(.+)" } | ForEach-Object { $matches[1] }).Trim()
-$channelId = ($envLines | Where-Object { $_ -match "^DISCORD_CHANNEL_ID=(.+)" } | ForEach-Object { $matches[1] }).Trim()
+$defaultChannelId = ($envLines | Where-Object { $_ -match "^DISCORD_CHANNEL_ID=(.+)" } | ForEach-Object { $matches[1] }).Trim()
+$channelId = if ($TargetChannel) { $TargetChannel } else { $defaultChannelId }
 
 $templateFile = Join-Path $PSScriptRoot "..\..\output\discord\tebex_purchase_embed.json"
 $utf8NoBom = New-Object System.Text.UTF8Encoding($false)

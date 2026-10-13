@@ -1,0 +1,159 @@
+# ==============================================================
+#                 THUNDERPETS - CONFIGURACIÓN
+#             ThunderStudios Network (MC 1.21.11)
+# ==============================================================
+
+settings:
+  # Intervalo de actualización de movimiento (en ticks, 1 = máxima fluidez)
+  tick-interval: 1
+  # Distancia máxima antes de teletransportar a la mascota directamente al jugador
+  max-follow-distance: 20.0
+  # Suavizado de seguimiento (lerp factor: 0.1 a 1.0, 0.25 da un follow sedoso)
+  smooth-factor: 0.25
+  # Ocultar mascota si el jugador está en modo espectador
+  hide-in-spectator: true
+
+# ==============================================================
+#                 CONFIGURACIÓN DE HUEVOS Y MISIONES
+# ==============================================================
+eggs:
+  default-kills:
+    SUPER: 10
+    RARA: 20
+    EPICA: 35
+    MITICA: 50
+    DIVINA: 75
+    LIMITED: 100
+  default-minutes:
+    SUPER: 5
+    RARA: 10
+    EPICA: 20
+    MITICA: 30
+    DIVINA: 45
+    LIMITED: 60
+
+messages:
+  prefix: "&6&lMASCOTAS &8▸ "
+  pet-summoned: "&aHas invocado a tu compañero %pet%&a."
+  pet-despawned: "&eHas guardado a tu mascota."
+  already-active: "&eYa tienes a esta mascota equipada. Guardándola..."
+  no-permission: "&cNo tienes permiso para equipar esta mascota."
+  menu-title: "&8&lCOSMÉTICOS &8▸ &eMascotas"
+  reload-success: "&aConfiguración recargada correctamente."
+
+pets:
+  # ============================================================
+  # FASE 1: BÁSICA (SUPER - Nivel 1 a 20)
+  # Cabeza flotante sin efectos ni partículas al hombro
+  # ============================================================
+  baby_yoda_phase1:
+    name: "&#3CDB10Bebé Yoda &7[Fase 1]"
+    quality: "SUPER"
+    phase: 1
+    required-level: 1
+    permission: "thunderpets.pet.super"
+    gui:
+      slot: 11
+      lore:
+        - "&7Una simpática cabeza de Baby Yoda en su cápsula"
+        - "&7que te acompaña pacíficamente a tu lado."
+        - ""
+        - "&8▸ &eFase: &f1 &8/ &73 &8(&7Cabeza Estática&8)"
+        - "&8▸ &eTecho de Nivel: &bNv. 20"
+        - "&8▸ &eEfectos: &8Ninguno &7(Rendimiento Óptimo)"
+        - ""
+        - "&a▶ Clic para invocar/desequipar"
+    type: "HEAD_ONLY"
+    head-texture: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMzdkYjk2MzJjNzQ0MDkwZWE4ODE0ZGMyNWIzNTFhNjhlNWJhODI1NWY2Mzc0NTdjY2U4ZWIyMTY1NzkyYTE5YSJ9fX0="
+    offset:
+      right: 1.1
+      behind: 0.5
+      height: 0.85
+    bobbing:
+      enabled: false
+      amplitude: 0.0
+      speed: 0.0
+    particles:
+      enabled: false
+
+  # ============================================================
+  # FASE 2: EVOLUCIONADA (ÉPICA - Nivel 21 a 60)
+  # Cabeza flotante con oscilación senoidal y partículas tenues
+  # ============================================================
+  baby_yoda_phase2:
+    name: "&#732AE2Bebé Yoda &7[Fase 2]"
+    quality: "EPICA"
+    phase: 2
+    required-level: 40
+    permission: "thunderpets.pet.epica"
+    gui:
+      slot: 13
+      lore:
+        - "&7Mascota con cápsula de propulsión gravitatoria activa."
+        - "&7Cuenta con levitación suave y aura mística de cerezo."
+        - ""
+        - "&8▸ &eFase: &f2 &8/ &73 &8(&7Cabeza Animada&8)"
+        - "&8▸ &eTecho de Nivel: &bNv. 60"
+        - "&8▸ &eEfectos: &bLevitación senoidal &7+ &dPartículas"
+        - ""
+        - "&a▶ Clic para invocar/desequipar"
+    type: "HEAD_ONLY"
+    head-texture: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMzdkYjk2MzJjNzQ0MDkwZWE4ODE0ZGMyNWIzNTFhNjhlNWJhODI1NWY2Mzc0NTdjY2U4ZWIyMTY1NzkyYTE5YSJ9fX0="
+    offset:
+      right: 1.15
+      behind: 0.5
+      height: 0.85
+    bobbing:
+      enabled: true
+      amplitude: 0.12
+      speed: 0.08
+    particles:
+      enabled: true
+      type: "CHERRY_LEAVES"
+      count: 1
+      interval-ticks: 3
+
+  # ============================================================
+  # FASE 3: GUARDIÁN (LIMITED - Nivel 61 a 120)
+  # Medio personaje: Netherite + Gold Silence Trim + Tótem
+  # ============================================================
+  baby_yoda_phase3:
+    name: "&#5489FFGuardián Bebé Yoda &7[Fase 3]"
+    quality: "LIMITED"
+    phase: 3
+    required-level: 80
+    permission: "thunderpets.pet.limited"
+    gui:
+      slot: 15
+      lore:
+        - "&7Compañero completo en miniatura: armadura de"
+        - "&7inframundita con ribete dorado (Silence Trim),"
+        - "&7cabeza en cápsula y Tótem de la Inmortalidad en mano."
+        - ""
+        - "&8▸ &eFase: &f3 &8/ &73 &8(&7Medio Personaje Completo&8)"
+        - "&8▸ &eTecho de Nivel: &bNv. 120"
+        - "&8▸ &eArmadura: &8Netherite &7+ &eSilence Trim (Oro)"
+        - "&8▸ &eObjeto: &aTótem de la Inmortalidad"
+        - "&8▸ &eEfectos: &eDestellos dorados &7+ &eOscilación"
+        - ""
+        - "&a▶ Clic para invocar/desequipar"
+    type: "HALF_BODY"
+    head-texture: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMzdkYjk2MzJjNzQ0MDkwZWE4ODE0ZGMyNWIzNTFhNjhlNWJhODI1NWY2Mzc0NTdjY2U4ZWIyMTY1NzkyYTE5YSJ9fX0="
+    chestplate:
+      material: "NETHERITE_CHESTPLATE"
+      trim-pattern: "SILENCE"
+      trim-material: "GOLD"
+    main-hand: "TOTEM_OF_UNDYING"
+    offset:
+      right: 1.25
+      behind: 0.6
+      height: 0.55
+    bobbing:
+      enabled: true
+      amplitude: 0.08
+      speed: 0.06
+    particles:
+      enabled: true
+      type: "TOTEM_OF_UNDYING"
+      count: 1
+      interval-ticks: 4

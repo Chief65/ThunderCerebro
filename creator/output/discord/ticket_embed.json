@@ -1,0 +1,28 @@
+{
+  "allowed_mentions": {
+    "parse": []
+  },
+  "embeds": [
+    {
+      "title": "🎫 Soporte Flash | ThunderMC",
+      "description": "Recibe soporte personalizado o habla directamente con el staff.\n-# ᴀᴛᴇɴᴄɪᴏɴ ᴏꜰɪᴄɪᴀʟ ʏ ʀᴇꜱᴏʟᴜᴄɪᴏɴ ᴅᴇ ɪɴᴄɪᴅᴇɴᴄɪᴀꜱ\n\n¿Tienes algún problema o duda dentro de la network?\nNo dudes en utilizar nuestro sistema de atención privada.\n\n### ¿Cómo Usar el Soporte?\n`1️⃣` **Abrir Ticket:** Haz clic en el botón inferior para crear tu canal.\n`2️⃣` **Completar Formulario:** Describe tu caso con detalles claros.\n`3️⃣` **Espera tu Turno:** El equipo te atenderá de forma personalizada.\n`4️⃣` **Caso Solucionado:** Recibe la solución y valora la atención recibida.\n\n> ⚠️ **Aviso:** Si estás en cola de espera, aguarda pacientemente. Evita crear tickets duplicados para agilizar la cola.\n\n### Sobre Flash V.1:\n`⚡` **Tiempos de Respuesta:** Promedio inferior a 6 horas.\n`👷` **Equipo Staff:** Moderación y administración a tu disposición.\n`⭐` **Transparencia:** Sistema de valoración del servicio al finalizar.\n\n-# [Tienda](https://tienda.thundermc.es/) • [Tiktok](https://www.tiktok.com/@somosthundermc_?lang=es) • [YouTube](https://www.youtube.com/@somosthundermc/featured)",
+      "color": 16706304
+    }
+  ],
+  "components": [
+    {
+      "type": 1,
+      "components": [
+        {
+          "type": 2,
+          "style": 3,
+          "label": "Abrir Ticket de Soporte",
+          "custom_id": "ticket_abrir_flash",
+          "emoji": {
+            "name": "🎫"
+          }
+        }
+      ]
+    }
+  ]
+}

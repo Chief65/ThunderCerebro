@@ -2,6 +2,156 @@
 
 Registro cronológico e incremental de todas las operaciones realizadas en **ThunderCerebro**.
 
+## [2026-10-12] creator & plugins | Implementación del Sistema de Huevos y Misiones de Cuidado en ThunderPets
+- **Archivos Modificados**:
+  - [`creator/lab/thunderpets/src/main/java/com/thunderstudios/pets/egg/PetEgg.java`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/lab/thunderpets/src/main/java/com/thunderstudios/pets/egg/PetEgg.java) (Nuevo)
+  - [`creator/lab/thunderpets/src/main/java/com/thunderstudios/pets/egg/EggManager.java`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/lab/thunderpets/src/main/java/com/thunderstudios/pets/egg/EggManager.java) (Nuevo)
+  - [`creator/lab/thunderpets/src/main/java/com/thunderstudios/pets/egg/EggIncubationTask.java`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/lab/thunderpets/src/main/java/com/thunderstudios/pets/egg/EggIncubationTask.java) (Nuevo)
+  - [`creator/lab/thunderpets/src/main/java/com/thunderstudios/pets/listener/EggListener.java`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/lab/thunderpets/src/main/java/com/thunderstudios/pets/listener/EggListener.java) (Nuevo)
+  - [`creator/lab/thunderpets/src/main/java/com/thunderstudios/pets/command/PetCommand.java`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/lab/thunderpets/src/main/java/com/thunderstudios/pets/command/PetCommand.java)
+  - [`creator/lab/thunderpets/src/main/java/com/thunderstudios/pets/ThunderPetsPlugin.java`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/lab/thunderpets/src/main/java/com/thunderstudios/pets/ThunderPetsPlugin.java)
+  - [`creator/lab/thunderpets/src/main/resources/config.yml`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/lab/thunderpets/src/main/resources/config.yml)
+  - [`creator/output/ThunderPets-1.0.0.jar`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/output/ThunderPets-1.0.0.jar)
+  - [`wiki/entities/thunderpets_plugin.md`](file:///C:/Users/PC/Desktop/ThunderCerebro/wiki/entities/thunderpets_plugin.md)
+- **Especificaciones Implementadas**:
+  1. **Consumible Huevo Persistente**: Ítems interactivos (`SNIFFER_EGG` / `DRAGON_EGG`) gobernados por `PersistentDataContainer` con calidad nativa, progreso de tareas y lore dinámico actualizado en tiempo real.
+  2. **Tres Tareas de Cuidado (Adopt Me Loop)**:
+     - *Alimentación*: Clic derecho sosteniendo cualquier comida comestible vanilla en inventario/mano secundaria (consume 1 alimento, sonido de ingesta y partículas de corazones).
+     - *Protección*: Caza de monstruos hostiles con el huevo en inventario (verificación en `EntityDeathEvent`).
+     - *Incubación por Tiempo*: Minutos de juego activo en el servidor, procesados en segundo plano cada 60 segundos por `EggIncubationTask` sin carga en tick.
+  3. **Eclosión y Revelación**: Al completar las 3 tareas, el huevo entra en estado `ready` con brillo de encantamiento; al hacer clic derecho se consume, dispara sonido de eclosión, partículas de fuegos artificiales y tótem, envía título en pantalla y auto-equipa la mascota desbloqueada según la calidad del huevo.
+  4. **Poción de Incubación Rápida**: Ítem alquímico acelerador para jugadores VIP (`/pets giveaccelerator <jugador>`) que completa el 100% de tareas al instante.
+  5. **Anti-Place Riguroso**: Cancelación de colocación física en `PlayerInteractEvent` y `BlockPlaceEvent` para proteger los huevos contra colocación en mundos.
+  6. **Redespliegue Remoto**: Binario final (40.6 KB) y `config.yml` subidos e instalados en caliente en el Servidor de Pruebas (`ymykh9qy.274758bd`).
+
+## [2026-10-12] creator & plugins | Integración de Calidades Canónicas y Optimización Dirty Checking en ThunderPets
+- **Archivos Modificados**:
+  - [`creator/lab/thunderpets/src/main/java/com/thunderstudios/pets/pet/PetQuality.java`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/lab/thunderpets/src/main/java/com/thunderstudios/pets/pet/PetQuality.java) (Nuevo)
+  - [`creator/lab/thunderpets/src/main/java/com/thunderstudios/pets/pet/PetModel.java`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/lab/thunderpets/src/main/java/com/thunderstudios/pets/pet/PetModel.java)
+  - [`creator/lab/thunderpets/src/main/java/com/thunderstudios/pets/pet/PetInstance.java`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/lab/thunderpets/src/main/java/com/thunderstudios/pets/pet/PetInstance.java)
+  - [`creator/lab/thunderpets/src/main/java/com/thunderstudios/pets/pet/PetManager.java`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/lab/thunderpets/src/main/java/com/thunderstudios/pets/pet/PetManager.java)
+  - [`creator/lab/thunderpets/src/main/java/com/thunderstudios/pets/gui/PetMenu.java`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/lab/thunderpets/src/main/java/com/thunderstudios/pets/gui/PetMenu.java)
+  - [`creator/lab/thunderpets/src/main/java/com/thunderstudios/pets/util/TextUtil.java`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/lab/thunderpets/src/main/java/com/thunderstudios/pets/util/TextUtil.java)
+  - [`creator/lab/thunderpets/src/main/resources/config.yml`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/lab/thunderpets/src/main/resources/config.yml)
+  - [`creator/output/ThunderPets-1.0.0.jar`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/output/ThunderPets-1.0.0.jar)
+- **Especificaciones Implementadas**:
+  1. **Motor Dirty Checking**: Detección de reposo del jugador (`delta < 0.02` bloques). Si el jugador está estático, se suprime por completo el envío de paquetes de teletransporte en mascotas sin oscilación, y se aplica throttling a la mitad en aquellas con levitación.
+  2. **Traducción de Gradientes Hex**: Soporte nativo de códigos `&#RRGGBB` en `TextUtil` mediante regex y Bungee ChatColor para renderizado fiel del estándar oficial de calidades.
+  3. **Escala de Calidades Canónicas (ThunderMC)**: Integración del enum `PetQuality` con tags canónicos de estrellas, color oficial de nombre de ítem y asignación de techos de nivel (SUPER: 20, RARA: 40, EPICA: 60, MITICA: 80, DIVINA: 100, LIMITED: 120).
+  4. **Redespliegue en Servidor de Pruebas**: Binario `ThunderPets-1.0.0.jar` (27.6 KB) y `config.yml` subidos e instalados vía SFTP en el Sandbox (`ymykh9qy.274758bd`).
+
+## [2026-10-12] creator & plugins | Corrección de Textura y Supresión de Tag de Nombre en ThunderPets
+- **Archivos Modificados**:
+  - [`creator/lab/thunderpets/src/main/java/com/thunderstudios/pets/util/TextUtil.java`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/lab/thunderpets/src/main/java/com/thunderstudios/pets/util/TextUtil.java)
+  - [`creator/lab/thunderpets/src/main/java/com/thunderstudios/pets/pet/PetInstance.java`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/lab/thunderpets/src/main/java/com/thunderstudios/pets/pet/PetInstance.java)
+  - [`creator/lab/thunderpets/src/main/resources/config.yml`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/lab/thunderpets/src/main/resources/config.yml)
+  - [`creator/output/ThunderPets-1.0.0.jar`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/output/ThunderPets-1.0.0.jar)
+- **Especificaciones Implementadas**:
+  1. **Diagnóstico & Corrección de Textura**: Se comprobó que el hash previo arrojaba HTTP 404 en la CDN de Mojang (`textures.minecraft.net`). Se integró el `value for developers` exacto proporcionado (`hash: 37db9632c744090ea8814dc25b351a68e5ba8255f637457cce8eb2165792a19a`), el cual responde HTTP 200 OK.
+  2. **Resolución Dual en Paper 1.21.1**: `TextUtil.createCustomHead` ahora configura tanto `PlayerTextures#setSkin(URL)` de Bukkit como `ProfileProperty("textures", base64)` de Paper sobre un UUID determinista y nombre no vacío para garantizar serialización de `ResolvableProfile`.
+  3. **Supresión del Tag de Nombre Flotante**: Se anuló completamente `entity.setCustomName(null)` y `setCustomNameVisible(false)` en `PetInstance`. El cosmético ahora flota limpio al costado del jugador sin textos superpuestos.
+  4. **Redespliegue Inmediato**: Subido e instalado en caliente al Servidor de Pruebas (`plugins/ThunderPets-1.0.0.jar` y `plugins/ThunderPets/config.yml`).
+
+## [2026-10-12] creator & plugins | Desarrollo y Despliegue de ThunderPets v1.0.0 (Mascotas Cosméticas con GUI)
+- **Archivos Desarrollados**:
+  - Código Fuente: [`creator/lab/thunderpets/`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/lab/thunderpets/)
+  - Binario Compilado: [`creator/output/ThunderPets-1.0.0.jar`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/output/ThunderPets-1.0.0.jar)
+  - Configuración Maestro: [`creator/lab/thunderpets/src/main/resources/config.yml`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/lab/thunderpets/src/main/resources/config.yml)
+  - Documentación Wiki: [`wiki/entities/thunderpets_plugin.md`](file:///C:/Users/PC/Desktop/ThunderCerebro/wiki/entities/thunderpets_plugin.md)
+- **Especificaciones Implementadas**:
+  1. **Fase 1 (Básica)**: Bebé Yoda en cápsula flotando de forma estática al costado del jugador sin efectos ni partículas adicionales.
+  2. **Fase 2 (Exclusiva)**: Bebé Yoda con movimiento de levitación senoidal suave (`sin(t)`) y partículas finas de flor de cerezo (`CHERRY_LEAVES`).
+  3. **Fase 3 (Medio Personaje / Mini Guardián)**: Medio cuerpo con peto de inframundita con Silence Trim de oro (`SILENCE` / `GOLD`), cabeza texturizada de Bebé Yoda y Tótem de la Inmortalidad sostenido en mano principal, con estela de partículas de tótem.
+  4. **GUI Interactivo**: Menú `/pets` (27 slots) con selección rápida, deselección en barrera, retroalimentación sonora y marcado de ítem activo con efecto de brillo.
+  5. **Seguridad & Rendimiento**: Entidades `ArmorStand` con `marker: true`, `invisible: true`, `gravity: false` y `persistent: false` para evitar impacto en MSPT y suprimir entidades huérfanas en reinicios/crashes.
+  6. **Despliegue Remoto**: Subido e instalado directamente en el Servidor de Pruebas (`ymykh9qy.274758bd`) bajo `/plugins/ThunderPets-1.0.0.jar` y `/plugins/ThunderPets/config.yml`.
+
+## [2026-10-12] creator & discord | Actualización y Despacho de Embed de Inicio (Menú Principal / Bienvenida)
+- **Archivos Modificados**:
+  - [`creator/output/discord/menu_discord_thundermc.json`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/output/discord/menu_discord_thundermc.json)
+  - [`creator/lab/discord_bot/menu_discord_thundermc.json`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/lab/discord_bot/menu_discord_thundermc.json)
+  - [`creator/lab/discord_bot/send.ps1`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/lab/discord_bot/send.ps1)
+- **Especificaciones Implementadas**:
+  1. Actualización de URLs CDN en `menu_discord_thundermc.json`:
+     - Thumbnail: render de brújula transparente verificado (`minecraft_compass_transparent.png`).
+     - Banner 16:9: render matutino de campamento diurno activo (`campamento_dia_1138x640.jpg` en canal `#imagenes` `1559234368449413120`).
+  2. Parámetro dinámico `-TargetChannel` integrado en `send.ps1`.
+  3. Despacho exitoso y verificado contra API de Discord al canal `#embeds-final` (`1559234333980758116`) bajo Message ID `1559322581922746390`.
+
+## [2026-10-12] creator & discord | Actualización y Despacho de Embed de Compras Tebex (Tienda Webhook)
+- **Archivos Modificados**:
+  - [`creator/output/discord/tebex_purchase_embed.json`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/output/discord/tebex_purchase_embed.json)
+  - [`creator/lab/discord_bot/tebex_purchase_embed.json`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/lab/discord_bot/tebex_purchase_embed.json)
+  - [`creator/lab/discord_bot/test_purchase.ps1`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/lab/discord_bot/test_purchase.ps1)
+  - [`creator/lab/discord_bot/tebex_listener.js`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/lab/discord_bot/tebex_listener.js)
+- **Especificaciones Implementadas**:
+  1. Detección y corrección de URL de imagen CDN caducada (`valyr_tienda_carrito_2.jpg`), migrándola a la URL activa del render oficial final subido al canal `#imagenes` (`valyr_tienda_carrito_final.jpg` en canal `1559234368449413120`).
+  2. Incorporación de parámetro dinámico `-TargetChannel` en `test_purchase.ps1` para despachos flexibles a canales específicos.
+  3. Despacho exitoso verificado al canal solicitado `#embeds-final` (`1559234333980758116`) bajo Message ID `1559239594359263273`.
+
+## [2026-10-12] creator & renders | Calibración Dark Fantasy: Gran Cerdo Rey con Corona y Mapa Pop-Up 3D (Iteración 2)
+- **Archivos Guardados**:
+  - Render 16:9: [`creator/output/renders/cerdo_rey_mapa_3d/cerdo_rey_mapa_3d_2_dark_fantasy.jpg`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/output/renders/cerdo_rey_mapa_3d/cerdo_rey_mapa_3d_2_dark_fantasy.jpg)
+  - Ficha Técnica y Prompt: [`creator/lab/renders/cerdo_rey_mapa_3d/cerdo_rey_mapa_3d_2_dark_fantasy.md`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/lab/renders/cerdo_rey_mapa_3d/cerdo_rey_mapa_3d_2_dark_fantasy.md)
+- **Especificaciones Implementadas**:
+  1. Supresión total del casco de caballero: corona dorada regia montada directamente sobre la cabeza cúbica rosada de cerdo vanilla.
+  2. Mantenimiento de armadura completa de placas de hierro pulido, capa oficial de ThunderMC en azul marino/dorado y cinturón con rayo.
+  3. Reorientación completa a Dark Fantasy: mapa pop-up 3D con cordilleras escarpadas, bosques oscuros de taiga, ciudadela gótica en ruinas, galeón sombrío y portal arcano activo con partículas flotantes púrpuras.
+  4. Atmósfera de cámara de guerra gótica con bóvedas de crucería, contraste lumínico chiaroscuro (rayos fríos por ventanales vs. fuego de chimenea, antorchas y soul lantern cian).
+
+## [2026-10-12] creator & renders | Generación Cinemática: Gran Cerdo Rey Caballero con Mapa Pop-Up 3D
+- **Archivos Guardados**:
+  - Render 16:9: [`creator/output/renders/cerdo_rey_mapa_3d/cerdo_rey_mapa_3d_1.jpg`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/output/renders/cerdo_rey_mapa_3d/cerdo_rey_mapa_3d_1.jpg)
+  - Ficha Técnica y Prompt: [`creator/lab/renders/cerdo_rey_mapa_3d/cerdo_rey_mapa_3d_1.md`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/lab/renders/cerdo_rey_mapa_3d/cerdo_rey_mapa_3d_1.md)
+- **Especificaciones Implementadas**:
+  1. Gran Cerdo Rey adulto en proporciones de líder con rostro vanilla estricto de Minecraft, yelmo de hierro pulido y corona dorada con almenas cúbicas.
+  2. Armadura completa de caballero de placas de hierro pulido y capa oficial de ThunderMC en azul marino con ribete dorado.
+  3. Mapa de navegación pirata sobre mesa de roble con efecto diorama 3D pop-up: islas de arena/hierba, palmeras cúbicas, barco pirata de bloques con velas cuadradas, torreón de vigilancia y cofre brillante sobre una "X" roja marcada hacia la que apunta el rey.
+  4. Escenario en salón de mando de castillo con ventanal arqueado, iluminación matutina cálida con haces volumétricos (*god rays*) y estandarte oficial de ThunderMC en la pared de piedra.
+
+## [2026-10-12] creator & discord | Actualización de Foto de Perfil del Bot Oficial (Valyr Avatar Transparente)
+- **Archivos Utilizados / Creados**:
+  - Activo Fuente: [`creator/output/renders/discord_avatar/valyr_bot_pfp_zoom_neutral_transparent.png`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/output/renders/discord_avatar/valyr_bot_pfp_zoom_neutral_transparent.png)
+  - Script de Despacho: [`creator/lab/discord_bot/update_avatar.ps1`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/lab/discord_bot/update_avatar.ps1)
+- **Especificaciones Implementadas**:
+  1. Conversión del render 1024×1024 con canal alfa puro a Data URI Base64 (`data:image/png;base64,...`).
+  2. Ejecución de llamada PATCH contra endpoint oficial `https://discord.com/api/v10/users/@me`.
+  3. Verificación de actualización en bot `ValyrPruebas` (`1552716487100342404`): nuevo hash `182f876723f8252c25d611fc5bcefe1b`.
+
+## [2026-10-08] creator & discord | Diseño y Despacho de Embed de Soporte Flash (Tickets)
+- **Archivos Creados**:
+  - [`creator/output/discord/ticket_embed.json`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/output/discord/ticket_embed.json)
+  - [`creator/lab/discord_bot/ticket_embed.json`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/lab/discord_bot/ticket_embed.json)
+  - [`creator/lab/discord_bot/send_ticket.ps1`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/lab/discord_bot/send_ticket.ps1)
+- **Especificaciones Implementadas**:
+  1. Adaptación del sistema Soporte Flash al estándar oficial de ThunderMC (`16706304` / `#FEEB00`).
+  2. Encabezado con subtítulo Small Caps (`-# ᴀᴛᴇɴᴄɪᴏɴ ᴏꜰɪᴄɪᴀʟ ʏ ʀᴇꜱᴏʟᴜᴄɪᴏɴ ᴅᴇ ɪɴᴄɪᴅᴇɴᴄɪᴀꜱ`).
+  3. Proceso en 4 pasos numerados (`1️⃣` a `4️⃣`), bloque H3 de garantías Flash V.1 (`⚡`, `👷`, `⭐`) y advertencia contra duplicados en blockquote.
+  4. Botón interactivo de creación de tickets (`ticket_abrir_flash` / estilo Success verde).
+  5. Despacho verificado al canal `#embeds` (`1552723526996336724`) bajo Message ID `1557864938498695169`.
+
+## [2026-10-08] creator & renders | Calibración Canónica: Cerdo Caballero Constructor (Estilo Campamento de Día)
+- **Archivos Guardados**:
+  - [`creator/output/renders/cerdo_mantenimiento/cerdo_constructor_mantenimiento_dia.jpg`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/output/renders/cerdo_mantenimiento/cerdo_constructor_mantenimiento_dia.jpg)
+  - [`creator/output/renders/cerdo_mantenimiento/cerdo_constructor_mantenimiento_2.jpg`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/output/renders/cerdo_mantenimiento/cerdo_constructor_mantenimiento_2.jpg)
+  - [`creator/lab/renders/cerdo_mantenimiento/cerdo_constructor_mantenimiento_dia.md`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/lab/renders/cerdo_mantenimiento/cerdo_constructor_mantenimiento_dia.md)
+- **Correcciones de Dirección de Arte Aplicadas**:
+  1. Sustitución de estética CGI con curvas suaves por el canon estricto de **Mojang Cinematic Trailer** de [`campamento_dia_final.jpg`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/output/renders/campamento_dia/campamento_dia_final.jpg).
+  2. Anatomía de mob vanilla con ojos de 2 píxeles planos, cabeza cúbica pura y capa oficial ceñida azul con borde dorado.
+  3. Sustitución del plano curvo de neón por un mapa de papel plano con cuadrícula de bloques de Minecraft.
+  4. Integración del estandarte oficial de ThunderMC en poste de madera y atmósfera diurna con rayos de sol volumétricos (*god rays*) cálidos y hojas de otoño flotando.
+
+## [2026-10-08] creator & discord | Despacho y Calibración Compacta de Embed de Sugerencias
+- **Archivos Modificados**:
+  - [`creator/output/discord/sugerencia_embed.json`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/output/discord/sugerencia_embed.json)
+  - [`creator/lab/discord_bot/sugerencia_embed.json`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/lab/discord_bot/sugerencia_embed.json)
+  - [`wiki/concepts/estandar_embeds_discord.md`](file:///C:/Users/PC/Desktop/ThunderCerebro/wiki/concepts/estandar_embeds_discord.md)
+- **Archivos Creados**:
+  - [`creator/lab/discord_bot/send_sugerencia.ps1`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/lab/discord_bot/send_sugerencia.ps1)
+- **Especificaciones Implementadas**:
+  1. Calibración de espaciado vertical compacto (reducción a salto simple entre subtítulo, encabezados H3 y enlaces).
+  2. Despacho verificado al canal `#embeds` (`1552723526996336724`) bajo Message ID `1557796902043652238`.
+
 ## [2026-10-07] creator & discord | Diseño y Despacho de Embed de Sugerencias de Comunidad
 - **Archivos Guardados**:
   - [`creator/output/discord/sugerencia_embed.json`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/output/discord/sugerencia_embed.json)

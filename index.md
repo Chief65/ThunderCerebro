@@ -42,6 +42,7 @@ Catálogo unificado y centralizado de la base de conocimiento de **ThunderCerebr
 - **[[wiki/entities/thundermc/custom-plugins/plugins-custom|Plugins Custom ThunderMC]]**: Especificación técnica de EnderChestPlus, RankUp y ValyrTutorial.
 - **[[wiki/entities/catamines|Catamines]]**: Motor y plugin de minería progresiva por rangos y zona PvP.
 - **[[wiki/entities/thundermc/valyr-protagonista-canonic|Valyr (Protagonista Canónico)]]**: Ficha canónica de diseño, rig facial, armadura oficial (yelmo campamento_dia) y directrices de render 3D.
+- **[[wiki/entities/thunderpets_plugin|ThunderPets (Plugin Custom de Mascotas)]]**: Sistema cosmético de acompañantes flotantes y medio personaje con GUI interactivo (MC 1.21.11).
 - **[[Plan de Monetizacion/plan-monetizacion-thundermc|Plan Maestro de Monetización]]**: Documento maestro operativo de comercialización y Tebex.
 
 ## 📚 Desgloses de Fuentes
