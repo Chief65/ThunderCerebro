@@ -1,0 +1,184 @@
+﻿menu_title: '&0&l|&r &0Economía ▶ &8Información'
+open_command:
+  - economia
+  - infoeconomia
+size: 36
+open_requirement:
+  requirements: {}
+register_command: true
+update: true
+
+items:
+  # ============================================================================
+  # FILA 2 (SLOTS 9 A 17): CONTENIDO PRINCIPAL
+  # Slot 10: Cabeza del Jugador (Explicación general)
+  # Slot 11: Margen
+  # Slots 12-15: Zafiros, Dinero, Almas, Experiencia
+  # ============================================================================
+
+  'Info_General':
+    material: head-%player_name%
+    slot: 10
+    item_flags:
+      - HIDE_ATTRIBUTES
+    display_name: '&#FFF275Sistema de Economías'
+    lore:
+      - '&8ᴛʜᴜɴᴅᴇʀᴍᴄ ᴇᴄᴏɴᴏᴍʏ'
+      - ''
+      - ' &fEn el servidor existen'
+      - ' &fdiversas economías para'
+      - ' &fun mercado real y variado.'
+      - ''
+      - ' &8▶ &7Pasa el cursor por cada'
+      - '   &7divisa para ver detalles.'
+      - ''
+
+  'Info_Zafiros':
+    material: DIAMOND
+    slot: 12
+    item_flags:
+      - HIDE_ENCHANTS
+      - HIDE_ATTRIBUTES
+    enchantments:
+      - DURABILITY;1
+    display_name: '&#1E6BFFZafiros &8(&#1E6BFF💎&8)'
+    lore:
+      - '&8ᴇᴄᴏɴᴏᴍɪᴀ ᴘʀᴇᴍɪᴜᴍ'
+      - ''
+      - ' &#1E6BFF¿Para qué sirve?'
+      - ' &8| &fAdquirir ofertas u objetos'
+      - ' &8| &fpremium de forma rápida.'
+      - ''
+      - ' &#1E6BFF¿Cómo se consigue?'
+      - ' &#1E6BFF① &fTienda Oficial &8(&e⭐⭐⭐⭐⭐&8)'
+      - '   &7ᴜɴɪᴄᴀ ᴇɴ ᴛɪᴇɴᴅᴀ ᴡᴇʙ.'
+      - ' &#1E6BFF② &fCajas Recompensa &8(&e⭐⭐⭐&8)'
+      - '   &7ᴘʀᴏʙᴀʙɪʟɪᴅᴀᴅ ᴇɴ ᴄʀᴀᴛᴇꜱ.'
+      - ''
+      - ' &8| &fTu Balance: &#1E6BFF%thundercurrencys_zafiros%💎'
+      - ''
+      - '&7▶ Click para abrir tienda web'
+    left_click_commands:
+      - '[close]'
+      - '[player] tienda'
+      - '[sound] UI_BUTTON_CLICK'
+
+  'Info_Dinero':
+    material: EMERALD
+    slot: 13
+    item_flags:
+      - HIDE_ENCHANTS
+      - HIDE_ATTRIBUTES
+    enchantments:
+      - DURABILITY;1
+    display_name: '&#59E91FDinero &8(&#59E91F$&8)'
+    lore:
+      - '&8ᴇᴄᴏɴᴏᴍɪᴀ ᴘʀɪɴᴄɪᴘᴀʟ'
+      - ''
+      - ' &#59E91F¿Para qué sirve?'
+      - ' &8| &fSubir en &#59E91F/rankup&f,'
+      - ' &8| &fcompras en &#59E91F/shop&f,'
+      - ' &8| &fcomercio en &#59E91F/ah&f.'
+      - ''
+      - ' &#59E91F¿Cómo se consigue?'
+      - ' &#59E91F① &fGranjas Spawner &8(&e⭐⭐⭐⭐⭐&8)'
+      - '   &7ᴘʀᴏᴅᴜᴄᴄɪᴏɴ ᴍᴀꜱɪᴠᴀ.'
+      - ' &#59E91F② &fSubastas /ah &8(&e⭐⭐⭐⭐&8)'
+      - '   &7ᴠᴇɴᴛᴀ ᴀ ᴊᴜɢᴀᴅᴏʀᴇꜱ.'
+      - ' &#59E91F③ &fVenta Cultivos &8(&e⭐⭐⭐&8)'
+      - '   &7ᴠᴇɴᴛᴀ ᴅᴇ ᴅʀᴏᴘꜱ ʏ ᴄᴏꜱᴇᴄʜᴀꜱ.'
+      - ' &#59E91F④ &fTrabajos /jobs &8(&e⭐⭐⭐&8)'
+      - '   &7ꜱᴀʟᴀʀɪᴏ ᴘᴏʀ ᴀᴄᴛɪᴠɪᴅᴀᴅ.'
+      - ' &#59E91F⑤ &fCajas /crates &8(&e⭐⭐⭐&8)'
+      - '   &7ᴘʀᴇᴍɪᴏꜱ ᴍᴏɴᴇᴛᴀʀɪᴏꜱ.'
+      - ' &#59E91F⑥ &fDungeons &8(&e⭐&8)'
+      - '   &7ʀᴇᴄᴏᴍᴘᴇɴꜱᴀ ᴍᴇɴᴏʀ ᴇɴ ꜱᴀʟᴀꜱ.'
+      - ''
+      - ' &8| &fTu Balance: &#59E91F&l$&r&#59E91F%vault_eco_balance_formatted%'
+      - ''
+
+  'Info_Almas':
+    material: SOUL_CAMPFIRE
+    slot: 14
+    item_flags:
+      - HIDE_ENCHANTS
+      - HIDE_ATTRIBUTES
+    enchantments:
+      - DURABILITY;1
+    display_name: '&#34B0F3Almas &8(&#34B0F3🔥&8)'
+    lore:
+      - '&8ᴇᴄᴏɴᴏᴍɪᴀ ᴅᴇ ᴍᴀᴢᴍᴏʀʀᴀꜱ'
+      - ''
+      - ' &#34B0F3¿Para qué sirve?'
+      - ' &8| &fMateriales de mazmorras,'
+      - ' &8| &fllaves de cajas de dungeon,'
+      - ' &8| &fprotecciones y equipo.'
+      - ' &8| &7Canjea en: &#34B0F3/almas'
+      - ''
+      - ' &#34B0F3¿Cómo se consigue?'
+      - ' &#34B0F3① &fJefes de Dungeon &8(&e⭐⭐⭐⭐⭐&8)'
+      - '   &7ᴅᴇʀʀᴏᴛᴀʀ ʙᴏꜱꜱᴇꜱ.'
+      - ' &#34B0F3② &fMobs de Dungeon &8(&e⭐⭐⭐⭐&8)'
+      - '   &7ᴄᴀᴢᴀ ᴇɴ ᴍᴀᴢᴍᴏʀʀᴀꜱ.'
+      - '   &8* Escala según nivel.'
+      - '   &c* No aparece en crates.'
+      - ''
+      - ' &8| &fTu Balance: &#34B0F3%thundercurrencys_almas%🔥'
+      - ''
+
+  'Info_Experiencia':
+    material: EXPERIENCE_BOTTLE
+    slot: 15
+    item_flags:
+      - HIDE_ENCHANTS
+      - HIDE_ATTRIBUTES
+    enchantments:
+      - DURABILITY;1
+    display_name: '&#D48BFFExperiencia &8(&#D48BFF✦&8)'
+    lore:
+      - '&8ᴇᴄᴏɴᴏᴍɪᴀ ᴅᴇ ᴄᴏɴᴏᴄɪᴍɪᴇɴᴛᴏ'
+      - ''
+      - ' &#D48BFF¿Para qué sirve?'
+      - ' &8| &fCompras en &#D48BFF/shop xp&f,'
+      - ' &8| &fencantamientos custom,'
+      - ' &8| &fmejoras en yunques.'
+      - ''
+      - ' &#D48BFF¿Cómo se consigue?'
+      - ' &#D48BFF① &fGranjas de XP &8(&e⭐⭐⭐⭐⭐&8)'
+      - '   &7ꜰᴀʀᴍᴇᴏ ᴍᴀꜱɪᴠᴏ.'
+      - ' &#D48BFF② &fJuego Vanilla &8(&e⭐⭐⭐⭐&8)'
+      - '   &7ᴍɪɴᴇʀɪᴀ, ᴄʀɪᴀɴᴢᴀ ʏ ʜᴏʀɴᴏꜱ.'
+      - ' &#D48BFF③ &fCajas /crates &8(&e⭐⭐⭐&8)'
+      - '   &7ʙᴏᴛᴇʟʟᴀꜱ ᴅᴇ ᴇxᴘᴇʀɪᴇɴᴄɪᴀ.'
+      - ''
+      - ' &8| &fTu Nivel: &#D48BFF%player_level% LVL'
+      - ''
+
+  # ============================================================================
+  # FILA 4: BARRA INFERIOR DE NAVEGACIÓN
+  # ============================================================================
+
+  'Boton_Volver':
+    material: DARK_OAK_DOOR
+    slot: 31
+    item_flags:
+      - HIDE_ATTRIBUTES
+    display_name: '&cVolver Atrás'
+    lore:
+      - '&7Regresar al menú principal'
+    left_click_commands:
+      - '[openguimenu] tienda_principal'
+      - '[sound] BLOCK_NOTE_BLOCK_BASS'
+
+  'Filtro_Navbar':
+    material: GRAY_STAINED_GLASS_PANE
+    display_name: ' '
+    slots:
+      - 27
+      - 28
+      - 29
+      - 30
+      - 32
+      - 33
+      - 34
+      - 35

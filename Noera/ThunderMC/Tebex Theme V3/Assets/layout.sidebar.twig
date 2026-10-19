@@ -1,0 +1,109 @@
+{% set searchWithoutLogging %}
+{% if config("searchOnStore") == "disabled" %}
+	{% if not basket.ign %}
+		data-login-category data-izimodal-open="#modal-login"
+	{% endif %}
+{% endif %}
+{% endset %}
+
+<aside class="triplezone-sidebar">
+
+	{% if config("category_navigation") == "modal" %}
+    <button data-modal-toggler="categorySelector" aria-label="Select a category">
+		<span class="mdi mdi-store-search" aria-hidden="true"></span>
+		<span class="category__selector--text" aria-hidden="true">
+			<span>{{ lang.clickHereTo }}</span>
+			{{ lang.select_category }}
+		</span>
+	</button>
+	{% endif %}
+
+
+
+	<div class="sidebar-header sidebar-round {% if config("store_theme") == "halloween" %}halloween--web{% endif %}">
+		<p>
+			<i class="mdi mdi-close mobile-icon close-mobile"></i>
+			<i class="mdi mdi-menu mobile-icon"></i>
+			{{ lang.select_category }}</p>
+	</div>
+
+	<div class="sidebar-nav" id="toggle-mobile-nav">
+		{% if config("store_theme") == "halloween" %}
+			
+		{% endif %}
+		<ul style="--sidebar-image-size: {{ config("sidebarImagesWidth") | replace("px", "") }}px;">
+			{% for category in store.categories %}
+				{% if category.subcategories|length > 0 %}
+					<li class="triplezone-toggle-dropdown {% if category.active %}active-dropdown{% endif %}">
+						<a href="javascript:void(0);" class="dropdown-toggle {% if category.active %}link__active{% endif %}" data-category-image="{{ category.id }}">{{ category.name|escape }}
+							<i class="mdi mdi-chevron-down carret"></i>
+						</a>
+						<ul class="triplezone-dropdown">
+							{% for subcategory in category.subcategories %}
+								<li>
+									<a {{ searchWithoutLogging | raw }} href="/category/{{ subcategory.id }}">{{ subcategory.name|escape }}</a>
+								</li>
+							{% endfor %}
+						</ul>
+					</li>
+				{% else %}
+					<li class="{% if category.active %}active-dropdown{% endif %}">
+						<a {{ searchWithoutLogging | raw }} href="/category/{{ category.id }}" data-category-image="{{ category.id }}" class="{% if category.active %}link__active{% endif %}">{{ category.name|escape }}</a>
+					</li>
+				{% endif %}
+			{% endfor %}
+			{% for page in store.pages %}
+				<li class="{% if page.active %}active-dropdown{% endif %}">
+					<a href="/{{ page.slug|escape }}" data-category-image="{{ page.slug|escape }}" class="{% if page.active %}link__active{% endif %}">{{ page.title|escape }}</a>
+				</li>
+			{% endfor %}
+		</ul>
+	</div>
+
+	{% if page.category == "category" and config("category_navigation") == "modal" %}
+		<div class="modal__navigation">
+			<div class="modal__navigation__header">
+				
+				<span class="mdi mdi-store"></span>
+
+				<div>
+					<span>{{ lang.currentlyBrowsing }}</span>
+					<p>{{ category.name|escape }}</p>
+				</div>
+
+			</div>
+			{% for category in store.categories %}
+
+				{% if category.active %}
+					{% if category.subcategories|length > 0 %}
+							<ul class="modal__navigation__list">
+								{% for subcategory in category.subcategories %}
+									<li>
+										<a {% if subcategory.name == page.title %}class="active"{% endif %} href="/category/{{ subcategory.id }}">{{ subcategory.name|escape }}</a>
+									</li>
+								{% endfor %}
+							</ul>
+
+					{% else %}
+						<ul class="modal__navigation__list">
+							<li>
+								<a href="/category/{{ category.id }}">{{ category.name|escape }}</a>
+							</li>
+						</ul>
+					{% endif %}
+					
+				{% endif %}
+
+			{% endfor %}
+
+		</div>		
+	{% endif %}
+
+	{% if config("category_navigation") == "topbar" or config("category_navigation") == "modal" %}
+		<div class="triplezone__modules" data-modules-type="topbar">
+			{{ modules|raw }}
+		</div>
+	{% endif %}
+	
+
+</aside>

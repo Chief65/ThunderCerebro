@@ -1,0 +1,17 @@
+{# Critical native controllers are independent of CDN libraries. #}
+{% include 'function.productModal.js' %}
+{% include 'function.checkout.js' %}
+{% include 'function.loginModal.js' %}
+{% include 'function.utils.js' %}
+if (window.jQuery) {
+    {% include 'function.initModals.js' %}
+    {% include 'function.sidebar.js' %}
+    {% include 'function.storeFunctions.js' %}
+    {% include 'function.generateIcons.js' %}
+}
+if (window.axios) {
+    {% include 'function.serverRequest.twig' %}
+    {% include 'function.giftcard.js' %}
+}
+{% include 'function.featuredProducts.js' %}
+{% if config("goalModule") == "enabled" %}{% include 'function.donationGoal.js' %}{% endif %}

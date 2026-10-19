@@ -1,0 +1,34 @@
+{
+    "taggedFolders":  {
+                          "ThunderMC/Tebex Theme V3":  {
+                                                           "update":  true,
+                                                           "taggedAt":  "2026-10-15 12:07:35",
+                                                           "history":  [
+                                                                           {
+                                                                               "id":  "20261015-123553",
+                                                                               "date":  "2026-10-15 12:35:53",
+                                                                               "zipName":  "Tebex Theme V3.zip",
+                                                                               "backupRel":  ".history/ThunderMC/Tebex Theme V3/backup_20261015-123553_Tebex Theme V3.zip",
+                                                                               "backupSize":  155030,
+                                                                               "newSize":  9729001,
+                                                                               "entries":  88
+                                                                           }
+                                                                       ]
+                                                       },
+                          "_noera":  {
+                                         "update":  true,
+                                         "taggedAt":  "2026-10-15 13:50:00",
+                                         "history":  [
+                                                         {
+                                                             "id":  "20261015-135000",
+                                                             "date":  "2026-10-15 13:50:00",
+                                                             "zipName":  "Noera-Software-Source.zip",
+                                                             "backupRel":  ".history/_noera/backup_pre_manual_update.zip",
+                                                             "backupSize":  35587,
+                                                             "newSize":  48891,
+                                                             "entries":  11
+                                                         }
+                                                     ]
+                                     }
+                      }
+}

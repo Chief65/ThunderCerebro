@@ -1,0 +1,698 @@
+{% extends "layout.html" %}
+{# Checkout no debe indexarse: URLs de sesión únicas no aportan valor SEO y diluyen crawl budget #}
+{% block content %}
+
+    {% if basket.currency == 'USD' %}
+        {% set currencySymbol = '$' %}
+        {% set currencyAfter = false %}
+    {% elseif basket.currency == 'EUR' %}
+        {% set currencySymbol = '€' %}
+        {% set currencyAfter = true %}
+    {% elseif basket.currency == 'GBP' %}
+        {% set currencySymbol = '£' %}
+        {% set currencyAfter = false %}
+    {% else %}
+        {% set currencySymbol = basket.currency %}
+        {% set currencyAfter = true %}
+    {% endif %}
+
+<style>
+  /* ══════════════════════════════════════════════════════════════════
+     THUNDERMC CHECKOUT PAGE (PREMIUM 2-COLUMN SPLIT DESKTOP)
+     ══════════════════════════════════════════════════════════════════ */
+  .tz-checkout-page-wrap {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 40px 24px 80px 24px;
+    box-sizing: border-box;
+  }
+
+  /* Breadcrumb & Encabezado */
+  .tz-checkout-top-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 32px;
+    padding-bottom: 18px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  }
+  .tz-checkout-page-title {
+    font-family: 'Plus Jakarta Sans', 'Montserrat', sans-serif;
+    font-size: 28px;
+    font-weight: 800;
+    color: #ffffff;
+    letter-spacing: -0.5px;
+    margin: 0;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .tz-checkout-back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 13.5px;
+    font-weight: 700;
+    color: #94a3b8;
+    text-decoration: none;
+    transition: color 0.15s ease;
+  }
+  .tz-checkout-back-link:hover { color: #facc15; }
+
+  /* ── 2-COLUMN GRID ── */
+  .tz-checkout-grid {
+    display: grid;
+    grid-template-columns: 1.55fr 1fr;
+    gap: 32px;
+    align-items: start;
+  }
+
+  /* ── COLUMNA IZQUIERDA: LISTA DE ARTÍCULOS Y TÉRMINOS ── */
+  .tz-checkout-left-col {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .tz-checkout-card-block {
+    background: #0d121f;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 20px;
+    padding: 28px 32px;
+    box-sizing: border-box;
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.4);
+  }
+  .tz-checkout-block-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  }
+  .tz-checkout-block-title {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 800;
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .tz-checkout-count-badge {
+    font-family: 'Be Vietnam Pro', sans-serif;
+    font-size: 12.5px;
+    font-weight: 600;
+    color: #94a3b8;
+  }
+
+  /* Items del Carrito */
+  .tz-checkout-items-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  .tz-checkout-item-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 18px;
+    background: #090d16;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 14px;
+    padding: 16px 20px;
+    box-sizing: border-box;
+    transition: border-color 0.2s ease;
+  }
+  .tz-checkout-item-row:hover {
+    border-color: rgba(250, 204, 21, 0.25);
+  }
+  .tz-checkout-item-thumb {
+    width: 60px;
+    height: 60px;
+    border-radius: 10px;
+    object-fit: contain;
+    background: rgba(255, 255, 255, 0.03);
+    padding: 6px;
+    flex-shrink: 0;
+    box-sizing: border-box;
+  }
+  .tz-checkout-item-details {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+  .tz-checkout-item-name {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 15px;
+    font-weight: 800;
+    color: #ffffff;
+    margin: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .tz-checkout-item-unit-price {
+    font-family: 'Be Vietnam Pro', sans-serif;
+    font-size: 13px;
+    color: #94a3b8;
+    margin: 0;
+  }
+  .tz-checkout-item-unit-price span {
+    color: #facc15;
+    font-weight: 700;
+  }
+
+  /* Control de Cantidad (+ / -) */
+  .tz-checkout-qty-control {
+    display: flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  .tz-checkout-qty-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 34px;
+    height: 34px;
+    color: #94a3b8;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 800;
+    cursor: pointer;
+    transition: all 0.15s ease;
+    user-select: none;
+  }
+  .tz-checkout-qty-btn:hover {
+    background: rgba(250, 204, 21, 0.15);
+    color: #facc15;
+  }
+  .tz-checkout-qty-val {
+    min-width: 32px;
+    text-align: center;
+    color: #ffffff;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 800;
+    border-left: 1px solid rgba(255, 255, 255, 0.08);
+    border-right: 1px solid rgba(255, 255, 255, 0.08);
+    line-height: 34px;
+    padding: 0 4px;
+  }
+  .tz-checkout-item-remove-btn {
+    color: #64748b;
+    font-size: 20px;
+    padding: 6px;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: all 0.15s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .tz-checkout-item-remove-btn:hover {
+    background: rgba(239, 68, 68, 0.15);
+    color: #ef4444;
+  }
+
+  /* Términos & Acuerdo */
+  .tz-terms-checkbox-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  .tz-terms-label {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    cursor: pointer;
+    font-family: 'Be Vietnam Pro', sans-serif;
+    font-size: 13px;
+    color: #94a3b8;
+    line-height: 1.5;
+  }
+  .tz-terms-label input[type="checkbox"] {
+    appearance: none;
+    width: 18px;
+    height: 18px;
+    border-radius: 5px;
+    border: 1.5px solid rgba(255, 255, 255, 0.2);
+    background: #090d16;
+    cursor: pointer;
+    position: relative;
+    flex-shrink: 0;
+    margin-top: 2px;
+    transition: all 0.15s ease;
+  }
+  .tz-terms-label input[type="checkbox"]:checked {
+    background: #facc15;
+    border-color: #facc15;
+  }
+  .tz-terms-label input[type="checkbox"]:checked::after {
+    content: '✓';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #0b0f19;
+    font-size: 12px;
+    font-weight: 900;
+  }
+
+  /* ── COLUMNA DERECHA: USUARIO, CUPÓN Y RESUMEN FINAL ── */
+  .tz-checkout-right-col {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    position: sticky;
+    top: 90px;
+  }
+
+  /* Tarjeta de Jugador con Busto 3D */
+  .tz-checkout-player-card {
+    background: #0d121f;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 20px;
+    padding: 22px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.35);
+  }
+  .tz-checkout-player-side {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+  .tz-checkout-player-bust {
+    height: 52px;
+    width: auto;
+    object-fit: contain;
+    image-rendering: pixelated;
+    filter: drop-shadow(0 4px 10px rgba(0,0,0,0.6));
+  }
+  .tz-checkout-player-details {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+  .tz-checkout-player-name {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 800;
+    color: #ffffff;
+    margin: 0;
+  }
+  .tz-checkout-player-status {
+    font-family: 'Be Vietnam Pro', sans-serif;
+    font-size: 12px;
+    color: #4ade80;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+  .tz-checkout-player-status .dot {
+    width: 6px; height: 6px; border-radius: 50%; background: #22c55e;
+  }
+  .tz-checkout-switch-user {
+    font-family: 'Be Vietnam Pro', sans-serif;
+    font-size: 12px;
+    color: #64748b;
+    text-decoration: none;
+    transition: color 0.15s ease;
+  }
+  .tz-checkout-switch-user:hover { color: #facc15; }
+
+  /* Bloque de Cupón */
+  .tz-checkout-coupon-box {
+    background: #0d121f;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 16px;
+    padding: 18px 22px;
+    box-sizing: border-box;
+  }
+  .tz-coupon-form-row {
+    display: flex;
+    gap: 8px;
+    margin-top: 10px;
+  }
+  .tz-coupon-input {
+    flex: 1;
+    background: #090d16;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 10px;
+    padding: 10px 14px;
+    color: #ffffff;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 13.5px;
+    font-weight: 700;
+    outline: none;
+    transition: border-color 0.2s ease;
+  }
+  .tz-coupon-input:focus { border-color: #facc15; }
+  .tz-coupon-btn {
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    color: #ffffff;
+    border-radius: 10px;
+    padding: 10px 18px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 12.5px;
+    font-weight: 800;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.15s ease;
+  }
+  .tz-coupon-btn:hover {
+    background: #facc15;
+    color: #0b0f19;
+    border-color: #facc15;
+  }
+
+  /* Resumen de Total & Pago Final */
+  .tz-checkout-summary-card {
+    background: #0d121f;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 20px;
+    padding: 28px 24px;
+    box-sizing: border-box;
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.4);
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+  }
+  .tz-summary-calc-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: 'Be Vietnam Pro', sans-serif;
+    font-size: 13.5px;
+    color: #94a3b8;
+  }
+  .tz-summary-calc-row.final-total {
+    padding-top: 14px;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 800;
+    color: #ffffff;
+    text-transform: uppercase;
+  }
+  .tz-summary-calc-row.final-total .total-amount {
+    font-size: 26px;
+    color: #facc15;
+    letter-spacing: -0.5px;
+  }
+
+  /* Botón de Pago Sólido */
+  .tz-checkout-pay-btn {
+    width: 100%;
+    padding: 16px 20px;
+    background: #facc15;
+    border: none;
+    border-radius: 12px;
+    color: #0b0f19;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 15px;
+    font-weight: 800;
+    letter-spacing: 0.3px;
+    text-transform: uppercase;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    cursor: pointer;
+    box-shadow: 0 6px 20px rgba(250, 204, 21, 0.3);
+    transition: all 0.15s ease;
+    box-sizing: border-box;
+  }
+  .tz-checkout-pay-btn:hover:not(:disabled) {
+    background: #fde047;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 24px rgba(250, 204, 21, 0.45);
+  }
+  .tz-checkout-pay-btn:active:not(:disabled) {
+    transform: translateY(0);
+    background: #eab308;
+  }
+  .tz-checkout-pay-btn:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+    box-shadow: none;
+  }
+
+  .tz-checkout-trust-footer {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    text-align: center;
+    font-family: 'Be Vietnam Pro', sans-serif;
+    font-size: 11.5px;
+    color: #64748b;
+    margin-top: 4px;
+  }
+  .tz-checkout-trust-footer i { color: #22c55e; margin-right: 4px; }
+
+  @media (max-width: 960px) {
+    .tz-checkout-grid {
+      grid-template-columns: 1fr;
+    }
+    .tz-checkout-right-col {
+      position: static;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .tz-checkout-page-wrap {
+      padding: 24px 16px 60px 16px;
+    }
+    .tz-checkout-card-block,
+    .tz-checkout-player-card,
+    .tz-checkout-coupon-box,
+    .tz-checkout-summary-card {
+      padding: 20px;
+    }
+    .tz-checkout-item-row {
+      flex-direction: column;
+      align-items: stretch;
+      gap: 14px;
+    }
+    .tz-checkout-item-left {
+      width: 100%;
+    }
+    .tz-checkout-item-right {
+      width: 100%;
+      justify-content: space-between;
+    }
+    .tz-checkout-top-bar {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 12px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .tz-checkout-page-wrap {
+      padding: 16px 12px 50px 12px;
+    }
+    .tz-checkout-card-block,
+    .tz-checkout-player-card,
+    .tz-checkout-coupon-box,
+    .tz-checkout-summary-card {
+      padding: 16px;
+    }
+    .tz-checkout-page-title {
+      font-size: 22px;
+    }
+    .tz-checkout-player-side {
+      flex-direction: column;
+      text-align: center;
+    }
+    .tz-coupon-form-row {
+      flex-direction: column;
+    }
+    .tz-coupon-btn {
+      width: 100%;
+    }
+  }
+</style>
+
+<div class="tz-checkout-page-wrap">
+  
+  <!-- Encabezado de Página -->
+  <div class="tz-checkout-top-bar">
+    <h1 class="tz-checkout-page-title">
+      <i class="mdi mdi-cart-check" style="color:#facc15;"></i>
+      Finalizar Compra
+    </h1>
+    <a href="/" class="tz-checkout-back-link">
+      <i class="mdi mdi-arrow-left"></i> Volver a la Tienda
+    </a>
+  </div>
+
+  <div class="tz-checkout-grid">
+    
+    <!-- COLUMNA IZQUIERDA: PRODUCTOS Y TÉRMINOS -->
+    <div class="tz-checkout-left-col">
+      
+      <!-- Resumen de Productos -->
+      <div class="tz-checkout-card-block">
+        <div class="tz-checkout-block-header">
+          <h2 class="tz-checkout-block-title"><i class="mdi mdi-package-variant"></i> Artículos en tu Pedido</h2>
+          <span class="tz-checkout-count-badge">
+            {{ basket.packages|length }} {% if basket.packages|length == 1 %}Artículo{% else %}Artículos{% endif %}
+          </span>
+        </div>
+
+        <form method="post" action="/checkout/update" class="quantity-form" id="tz-qty-form" data-tz-quantity-form>
+          <div class="tz-checkout-items-list">
+            {% for package in basket.packages %}
+            <div class="tz-checkout-item-row">
+              {% if package.image.url %}
+                <img src="{{ package.image.url }}" alt="{{ package.name|escape }}" class="tz-checkout-item-thumb">
+              {% else %}
+                <div class="tz-checkout-item-thumb" style="display:flex;align-items:center;justify-content:center;background:#1e293b;color:#facc15;font-size:24px;border-radius:10px;"><i class="mdi mdi-cube-outline"></i></div>
+              {% endif %}
+              
+              <div class="tz-checkout-item-details">
+                <h3 class="tz-checkout-item-name">{{ package.name|escape }}</h3>
+                <p class="tz-checkout-item-unit-price">
+                  Precio: <span>{{ package.price|money }} {{ basket.currency }}</span>
+                </p>
+              </div>
+
+              <!-- Selector Cantidad (F54: omitir botones si el paquete tiene disableQuantity) -->
+              <div class="tz-checkout-qty-control">
+                {% if package.disableQuantity or package.price == 0 %}
+                  <span class="tz-checkout-qty-val" style="padding: 0 10px;">{{ package.quantity }}</span>
+                  <input type="hidden" name="quantity[{{ package.id }}]" value="{{ package.quantity }}" id="tz-qty-{{ package.id }}" class="quantity__input">
+                {% else %}
+                  <button type="button" class="tz-checkout-qty-btn" data-action="minus" data-package="quantity[{{ package.id }}]" aria-label="Cambiar cantidad">−</button>
+                  <span class="tz-checkout-qty-val" id="tz-qty-display-{{ package.id }}">{{ package.quantity }}</span>
+                  <input type="number" class="quantity__input tz-qty-input-hidden" style="display:none;"
+                         name="quantity[{{ package.id }}]"
+                         id="tz-qty-{{ package.id }}"
+                         value="{{ package.quantity }}" min="1">
+                  <button type="button" class="tz-checkout-qty-btn" data-action="add" data-package="quantity[{{ package.id }}]" aria-label="Cambiar cantidad">+</button>
+                {% endif %}
+              </div>
+
+              <!-- Eliminar -->
+              <a href="/checkout/packages/remove/{{ package.id }}" class="tz-checkout-item-remove-btn" title="Eliminar artículo">
+                <i class="mdi mdi-trash-can-outline"></i>
+              </a>
+            </div>
+            {% endfor %}
+          </div>
+        </form>
+      </div>
+
+      <!-- Términos y Condiciones -->
+      <div class="tz-checkout-card-block">
+        <div class="tz-checkout-block-header">
+          <h2 class="tz-checkout-block-title"><i class="mdi mdi-shield-check-outline"></i> Términos & Condiciones</h2>
+        </div>
+
+        <div class="tz-terms-checkbox-list">
+          <label class="tz-terms-label">
+            <input type="checkbox" id="tzTermsCheckbox1">
+            <span>He leído y acepto los <a href="/terms/checkout" target="_blank" rel="noopener" style="color:#facc15;text-decoration:underline;">Términos de Servicio</a> y la <a href="/terms/privacy" target="_blank" rel="noopener" style="color:#facc15;text-decoration:underline;">Política de Privacidad</a> de ThunderMC.</span>
+          </label>
+          <label class="tz-terms-label">
+            <input type="checkbox" id="tzTermsCheckbox2">
+            <span>Entiendo que los rangos y artículos virtuales se entregan automáticamente y los reembolsos se tramitan conforme a las condiciones de Tebex.</span>
+          </label>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- COLUMNA DERECHA: JUGADOR, CUPÓN Y TOTAL -->
+    <div class="tz-checkout-right-col">
+      
+      <!-- Jugador Vinculado -->
+      <div class="tz-checkout-player-card">
+        <div class="tz-checkout-player-side">
+          {% if basket.ign %}
+            <img src="https://minotar.net/bust/{{ basket.ign|escape }}/64" alt="{{ basket.ign|escape }}" class="tz-checkout-player-bust">
+            <div class="tz-checkout-player-details">
+              <h3 class="tz-checkout-player-name">{{ basket.ign|escape }}</h3>
+              <span class="tz-checkout-player-status"><span class="dot"></span> Cuenta Vinculada</span>
+            </div>
+          {% else %}
+            <img src="https://minotar.net/avatar/MHF_Question/48" alt="Invitado" class="tz-checkout-player-bust">
+            <div class="tz-checkout-player-details">
+              <h3 class="tz-checkout-player-name">Modo Invitado</h3>
+              <span class="tz-checkout-player-status" style="color:#94a3b8;"><span class="dot" style="background:#94a3b8;"></span> Sin vincular nick</span>
+            </div>
+          {% endif %}
+        </div>
+        {% if basket.ign %}
+          <a href="/checkout/logout" class="tz-checkout-switch-user">Cambiar</a>
+        {% else %}
+          <button type="button" class="tz-checkout-switch-user" onclick="if(window.tzOpenLoginModal){window.tzOpenLoginModal();}else{window.location.href='/login';}" style="background:none;border:none;cursor:pointer;padding:0;">Vincular</button>
+        {% endif %}
+      </div>
+
+      <!-- Cupón de Descuento (F55) -->
+      <div class="tz-checkout-coupon-box">
+        <span style="font-family:'Plus Jakarta Sans',sans-serif; font-size:13px; font-weight:800; color:#cbd5e1; text-transform:uppercase;">¿Tienes un cupón?</span>
+        <form method="post" action="/checkout/coupons/add" class="tz-coupon-form-row">
+          <label for="tzCouponCode" class="tz-visually-hidden">Código de descuento</label><input type="text" name="coupon" id="tzCouponCode" placeholder="Código de descuento..." class="tz-coupon-input" required>
+          <button type="submit" class="tz-coupon-btn">Aplicar</button>
+        </form>
+
+      </div>
+
+      <!-- Resumen y Pasarela -->
+      <div class="tz-checkout-summary-card">
+        <div class="tz-summary-calc-row">
+          <span>Importe del carrito</span>
+          <span>{{ basket.price|money }} {{ basket.currency }}</span>
+        </div>
+        <div class="tz-summary-calc-row">
+          <span>Impuestos y tasas</span>
+          <span>Se confirman en Tebex Checkout</span>
+        </div>
+        <div class="tz-summary-calc-row final-total">
+          <span>Total a Pagar</span>
+          <span class="total-amount">{{ basket.price|money }} {{ basket.currency }}</span>
+        </div>
+
+        <!-- Botón de Pago Tebex -->
+        {% if basket.packages|length > 0 and basket.ident %}
+        <tebex-checkout ident="{{ basket.ident }}" theme="auto" locale="{{ config('language') }}" id="tebex-checkout">
+          <button type="button" class="tz-checkout-pay-btn" id="purchase-button" disabled aria-describedby="tzTermsError">
+            <i class="mdi mdi-lock"></i>
+            <span>Pagar {{ basket.price|money }} {{ basket.currency }}</span>
+          </button>
+        </tebex-checkout>
+        {% else %}<p role="status">{% if basket.packages|length == 0 %}Tu carrito está vacío. <a href="/">Ver catálogo</a>{% else %}Vincula tu cuenta para continuar con el pago.{% endif %}</p>
+        {% endif %}
+
+        <p id="tzTermsError" role="status" style="color:#fca5a5;">Acepta los términos para habilitar el pago.</p>
+        <div class="tz-checkout-trust-footer">
+          <span><i class="mdi mdi-shield-check"></i> Pago procesado con cifrado SSL de 256 bits</span>
+          <span>Entrega automática tras la confirmación del pago</span>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+{% endblock %}

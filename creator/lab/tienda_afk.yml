@@ -1,0 +1,678 @@
+menu_title: '&0&l|&r &0Tienda ▶ &#AE54F7Zona AFK &8(⏳)'
+open_command:
+  - tiendaafk
+  - afkshop
+  - puntosafk
+  - canjeafk
+size: 54
+open_requirement:
+  requirements: {}
+register_command: true
+update: true
+
+items:
+  # ============================================================================
+  # FILA 2 (SLOTS 9 A 17): COSMÉTICOS TEMPORALES Y PERMANENTES
+  # ============================================================================
+  'Marco_Fila2_Izq':
+    material: PURPLE_STAINED_GLASS_PANE
+    slot: 10
+    display_name: ' '
+
+  'Cosmetico_ChatColor_Morado':
+    material: PURPLE_WOOL
+    slot: 11
+    item_flags:
+      - HIDE_ATTRIBUTES
+      - HIDE_ENCHANTS
+    enchantments:
+      - DURABILITY;1
+    display_name: '&5✔ &fColor &8▶ &#AA00AAMorado &7(3d)'
+    lore:
+      - '&8ᴄᴏꜱᴍᴇᴛɪᴄᴏ'
+      - ''
+      - ' &7Cosmetico listo'
+      - ' &7para reclamar.'
+      - ''
+      - ' &8● &fChat: &#AA00AAMorado'
+      - ' &7(ᴛᴇᴍᴘᴏʀᴀʟ: 3 ᴅíᴀꜱ)'
+      - ''
+      - ' &8⁂ &#008DFF&lR&#0AA1FF&lA&#13B4FF&lR&#1DC8FF&lA &e⭐⭐&7⭐⭐⭐'
+      - ''
+      - ' &8| &fPrecio: &#AE54F7900 Shards ⏳'
+      - ''
+      - '&7▶ Click para comprar'
+    left_click_requirement:
+      requirements:
+        puntos_check:
+          type: '>='
+          input: '%thundercurrencys_afkpoints%'
+          output: '900'
+      deny_commands:
+        - '[sound] ENTITY_VILLAGER_NO 1.0 1.0'
+        - '[message] &c&lTIENDA AFK &8| &7Saldo insuficiente. Necesitas &#AE54F7900 Shards &8(&cTienes %thundercurrencys_afkpoints%&8)&7.'
+    left_click_commands:
+      - '[console] playerpoints:afk take %player_name% 900'
+      - '[console] ei give %player_name% chatcolor_morado 1'
+      - '[sound] ENTITY_EXPERIENCE_ORB_PICKUP'
+      - '[message] &a&lCOMPRA EXITOSA &8| &7Has adquirido &5Color de Chat Morado (3d) &7por &#AE54F7900 Shards&7.'
+      - '[refresh]'
+
+  'Cosmetico_Glow_Morado':
+    material: PURPLE_DYE
+    slot: 12
+    item_flags:
+      - HIDE_ATTRIBUTES
+      - HIDE_ENCHANTS
+    enchantments:
+      - DURABILITY;1
+    display_name: '&5✔ &fGlow &8▶ &#AA00AAMorado &7(3d)'
+    lore:
+      - '&8ᴄᴏꜱᴍᴇᴛɪᴄᴏ'
+      - ''
+      - ' &7Cosmetico listo'
+      - ' &7para reclamar.'
+      - ''
+      - ' &8● &fBrillo: &#AA00AAMorado'
+      - ' &7(ᴛᴇᴍᴘᴏʀᴀʟ: 3 ᴅíᴀꜱ)'
+      - ''
+      - ' &8⁂ &#008DFF&lR&#0AA1FF&lA&#13B4FF&lR&#1DC8FF&lA &e⭐⭐&7⭐⭐⭐'
+      - ''
+      - ' &8| &fPrecio: &#AE54F71,200 Shards ⏳'
+      - ''
+      - '&7▶ Click para comprar'
+    left_click_requirement:
+      requirements:
+        puntos_check:
+          type: '>='
+          input: '%thundercurrencys_afkpoints%'
+          output: '1200'
+      deny_commands:
+        - '[sound] ENTITY_VILLAGER_NO 1.0 1.0'
+        - '[message] &c&lTIENDA AFK &8| &7Saldo insuficiente. Necesitas &#AE54F71,200 Shards &8(&cTienes %thundercurrencys_afkpoints%&8)&7.'
+    left_click_commands:
+      - '[console] playerpoints:afk take %player_name% 1200'
+      - '[console] ei give %player_name% glow_morado 1'
+      - '[sound] ENTITY_EXPERIENCE_ORB_PICKUP'
+      - '[message] &a&lCOMPRA EXITOSA &8| &7Has adquirido &5Brillo Morado (3d) &7por &#AE54F71,200 Shards&7.'
+      - '[refresh]'
+
+  'Cosmetico_Etiqueta_Off':
+    material: NAME_TAG
+    slot: 13
+    item_flags:
+      - HIDE_ATTRIBUTES
+      - HIDE_ENCHANTS
+    enchantments:
+      - DURABILITY;1
+    display_name: '&d✔ &fEtiqueta &8▶ &dᴏꜰꜰ'
+    lore:
+      - '&8ᴄᴏꜱᴍᴇᴛɪᴄᴏ'
+      - ''
+      - ' &7Cosmetico listo'
+      - ' &7para reclamar.'
+      - ''
+      - ' &8● &fEtiqueta: &dᴏꜰꜰ'
+      - ' &7(ᴘᴇʀᴍᴀɴᴇɴᴛᴇ)'
+      - ''
+      - ' &8⁂ &#008DFF&lR&#0AA1FF&lA&#13B4FF&lR&#1DC8FF&lA &e⭐⭐&7⭐⭐⭐'
+      - ''
+      - ' &8| &fPrecio: &#AE54F73,000 Shards ⏳'
+      - ''
+      - '&7▶ Click para comprar'
+    left_click_requirement:
+      requirements:
+        puntos_check:
+          type: '>='
+          input: '%thundercurrencys_afkpoints%'
+          output: '3000'
+      deny_commands:
+        - '[sound] ENTITY_VILLAGER_NO 1.0 1.0'
+        - '[message] &c&lTIENDA AFK &8| &7Saldo insuficiente. Necesitas &#AE54F73,000 Shards &8(&cTienes %thundercurrencys_afkpoints%&8)&7.'
+    left_click_commands:
+      - '[console] playerpoints:afk take %player_name% 3000'
+      - '[console] ei give %player_name% etiqueta_off 1'
+      - '[sound] ENTITY_EXPERIENCE_ORB_PICKUP'
+      - '[message] &a&lCOMPRA EXITOSA &8| &7Has adquirido la Etiqueta &d[ᴏꜰꜰ] &7por &#AE54F73,000 Shards&7.'
+      - '[refresh]'
+
+  'Cosmetico_Etiqueta_Luna':
+    material: NAME_TAG
+    slot: 14
+    item_flags:
+      - HIDE_ATTRIBUTES
+      - HIDE_ENCHANTS
+    enchantments:
+      - DURABILITY;1
+    display_name: '&d✔ &fEtiqueta &8▶ &d☽'
+    lore:
+      - '&8ᴄᴏꜱᴍᴇᴛɪᴄᴏ'
+      - ''
+      - ' &7Cosmetico listo'
+      - ' &7para reclamar.'
+      - ''
+      - ' &8● &fEtiqueta: &d☽'
+      - ' &7(ᴘᴇʀᴍᴀɴᴇɴᴛᴇ)'
+      - ''
+      - ' &8⁂ &#008DFF&lR&#0AA1FF&lA&#13B4FF&lR&#1DC8FF&lA &e⭐⭐&7⭐⭐⭐'
+      - ''
+      - ' &8| &fPrecio: &#AE54F73,000 Shards ⏳'
+      - ''
+      - '&7▶ Click para comprar'
+    left_click_requirement:
+      requirements:
+        puntos_check:
+          type: '>='
+          input: '%thundercurrencys_afkpoints%'
+          output: '3000'
+      deny_commands:
+        - '[sound] ENTITY_VILLAGER_NO 1.0 1.0'
+        - '[message] &c&lTIENDA AFK &8| &7Saldo insuficiente. Necesitas &#AE54F73,000 Shards &8(&cTienes %thundercurrencys_afkpoints%&8)&7.'
+    left_click_commands:
+      - '[console] playerpoints:afk take %player_name% 3000'
+      - '[console] ei give %player_name% etiqueta_luna 1'
+      - '[sound] ENTITY_EXPERIENCE_ORB_PICKUP'
+      - '[message] &a&lCOMPRA EXITOSA &8| &7Has adquirido la Etiqueta &d[☽] &7por &#AE54F73,000 Shards&7.'
+      - '[refresh]'
+
+  'Cosmetico_Etiqueta_ZzZ':
+    material: NAME_TAG
+    slot: 15
+    item_flags:
+      - HIDE_ATTRIBUTES
+      - HIDE_ENCHANTS
+    enchantments:
+      - DURABILITY;1
+    display_name: '&d✔ &fEtiqueta &8▶ &dZzZ'
+    lore:
+      - '&8ᴄᴏꜱᴍᴇᴛɪᴄᴏ'
+      - ''
+      - ' &7Cosmetico listo'
+      - ' &7para reclamar.'
+      - ''
+      - ' &8● &fEtiqueta: &dZzZ'
+      - ' &7(ᴘᴇʀᴍᴀɴᴇɴᴛᴇ)'
+      - ''
+      - ' &8⁂ &#008DFF&lR&#0AA1FF&lA&#13B4FF&lR&#1DC8FF&lA &e⭐⭐&7⭐⭐⭐'
+      - ''
+      - ' &8| &fPrecio: &#AE54F73,000 Shards ⏳'
+      - ''
+      - '&7▶ Click para comprar'
+    left_click_requirement:
+      requirements:
+        puntos_check:
+          type: '>='
+          input: '%thundercurrencys_afkpoints%'
+          output: '3000'
+      deny_commands:
+        - '[sound] ENTITY_VILLAGER_NO 1.0 1.0'
+        - '[message] &c&lTIENDA AFK &8| &7Saldo insuficiente. Necesitas &#AE54F73,000 Shards &8(&cTienes %thundercurrencys_afkpoints%&8)&7.'
+    left_click_commands:
+      - '[console] playerpoints:afk take %player_name% 3000'
+      - '[console] ei give %player_name% etiqueta_zzz 1'
+      - '[sound] ENTITY_EXPERIENCE_ORB_PICKUP'
+      - '[message] &a&lCOMPRA EXITOSA &8| &7Has adquirido la Etiqueta &d[ZzZ] &7por &#AE54F73,000 Shards&7.'
+      - '[refresh]'
+
+  'Marco_Fila2_Der':
+    material: PURPLE_STAINED_GLASS_PANE
+    slot: 16
+    display_name: ' '
+
+  # ============================================================================
+  # FILA 3 (SLOTS 18 A 26): PLANTILLA NETHERITE Y ARMADURA MORFEO
+  # ============================================================================
+  'Marco_Fila3_Izq':
+    material: PURPLE_STAINED_GLASS_PANE
+    slot: 19
+    display_name: ' '
+
+  'Articulo_Mejora_Netherite':
+    material: NETHERITE_UPGRADE_SMITHING_TEMPLATE
+    slot: 20
+    item_flags:
+      - HIDE_ATTRIBUTES
+      - HIDE_ADDITIONAL_TOOLTIP
+    display_name: '&#FFAA00Mejora de Inframundita'
+    lore:
+      - '&8ᴍᴀᴛᴇʀɪᴀʟ ᴅᴇ ʜᴇʀʀᴇʀíᴀ'
+      - ''
+      - ' &fPlantilla requerida para forjar y'
+      - ' &fmejorar armaduras y herramientas de'
+      - ' &fdiamante al rango de inframundita.'
+      - ''
+      - ' &8| &fPrecio: &#AE54F7600 Shards ⏳'
+      - ''
+      - '&7▶ Click para comprar'
+    left_click_requirement:
+      requirements:
+        puntos_check:
+          type: '>='
+          input: '%thundercurrencys_afkpoints%'
+          output: '600'
+      deny_commands:
+        - '[sound] ENTITY_VILLAGER_NO 1.0 1.0'
+        - '[message] &c&lTIENDA AFK &8| &7Saldo insuficiente. Necesitas &#AE54F7600 Shards &8(&cTienes %thundercurrencys_afkpoints%&8)&7.'
+    left_click_commands:
+      - '[console] playerpoints:afk take %player_name% 600'
+      - '[console] si give netheriteupgrade 1 %player_name%'
+      - '[sound] ENTITY_EXPERIENCE_ORB_PICKUP'
+      - '[message] &a&lCOMPRA EXITOSA &8| &7Has adquirido &61x Mejora de Inframundita &7por &#AE54F7600 Shards&7.'
+      - '[refresh]'
+
+  'Armadura_Casco_Morfeo':
+    material: DIAMOND_HELMET
+    slot: 21
+    item_flags:
+      - HIDE_ATTRIBUTES
+    trim_material: AMETHYST
+    trim_pattern: EYE
+    enchantments:
+      - PROTECTION_ENVIRONMENTAL;4
+      - DURABILITY;3
+      - MENDING;1
+    display_name: '&#AE54F7🛡 Casco Morfeo 🛡'
+    lore:
+      - '&8ꜱᴇᴛ ᴍᴏʀꜰᴇᴏ'
+      - ''
+      - ' &8● &7Protección IV'
+      - ' &8● &7Irrompibilidad III'
+      - ' &8● &7Reparación (Mending)'
+      - ' &8● &dTrim: Ojo de Amatista'
+      - ''
+      - ' &8| &fPrecio: &#AE54F7550 Shards ⏳'
+      - ''
+      - '&7▶ Click para comprar'
+    left_click_requirement:
+      requirements:
+        puntos_check:
+          type: '>='
+          input: '%thundercurrencys_afkpoints%'
+          output: '550'
+      deny_commands:
+        - '[sound] ENTITY_VILLAGER_NO 1.0 1.0'
+        - '[message] &c&lTIENDA AFK &8| &7Saldo insuficiente. Necesitas &#AE54F7550 Shards &8(&cTienes %thundercurrencys_afkpoints%&8)&7.'
+    left_click_commands:
+      - '[console] playerpoints:afk take %player_name% 550'
+      - '[console] si give cascomorfeo 1 %player_name%'
+      - '[sound] ENTITY_EXPERIENCE_ORB_PICKUP'
+      - '[message] &a&lCOMPRA EXITOSA &8| &7Has adquirido &#AE54F7Casco Morfeo &7por &#AE54F7550 Shards&7.'
+      - '[refresh]'
+
+  'Armadura_Pechera_Morfeo':
+    material: DIAMOND_CHESTPLATE
+    slot: 22
+    item_flags:
+      - HIDE_ATTRIBUTES
+    trim_material: AMETHYST
+    trim_pattern: EYE
+    enchantments:
+      - PROTECTION_ENVIRONMENTAL;4
+      - DURABILITY;3
+      - MENDING;1
+    display_name: '&#AE54F7🛡 Pechera Morfeo 🛡'
+    lore:
+      - '&8ꜱᴇᴛ ᴍᴏʀꜰᴇᴏ'
+      - ''
+      - ' &8● &7Protección IV'
+      - ' &8● &7Irrompibilidad III'
+      - ' &8● &7Reparación (Mending)'
+      - ' &8● &dTrim: Ojo de Amatista'
+      - ''
+      - ' &8| &fPrecio: &#AE54F7850 Shards ⏳'
+      - ''
+      - '&7▶ Click para comprar'
+    left_click_requirement:
+      requirements:
+        puntos_check:
+          type: '>='
+          input: '%thundercurrencys_afkpoints%'
+          output: '850'
+      deny_commands:
+        - '[sound] ENTITY_VILLAGER_NO 1.0 1.0'
+        - '[message] &c&lTIENDA AFK &8| &7Saldo insuficiente. Necesitas &#AE54F7850 Shards &8(&cTienes %thundercurrencys_afkpoints%&8)&7.'
+    left_click_commands:
+      - '[console] playerpoints:afk take %player_name% 850'
+      - '[console] si give pecheramorfeo 1 %player_name%'
+      - '[sound] ENTITY_EXPERIENCE_ORB_PICKUP'
+      - '[message] &a&lCOMPRA EXITOSA &8| &7Has adquirido &#AE54F7Pechera Morfeo &7por &#AE54F7850 Shards&7.'
+      - '[refresh]'
+
+  'Armadura_Pantalones_Morfeo':
+    material: DIAMOND_LEGGINGS
+    slot: 23
+    item_flags:
+      - HIDE_ATTRIBUTES
+    trim_material: AMETHYST
+    trim_pattern: EYE
+    enchantments:
+      - PROTECTION_ENVIRONMENTAL;4
+      - DURABILITY;3
+      - MENDING;1
+    display_name: '&#AE54F7🛡 Pantalones Morfeo 🛡'
+    lore:
+      - '&8ꜱᴇᴛ ᴍᴏʀꜰᴇᴏ'
+      - ''
+      - ' &8● &7Protección IV'
+      - ' &8● &7Irrompibilidad III'
+      - ' &8● &7Reparación (Mending)'
+      - ' &8● &dTrim: Ojo de Amatista'
+      - ''
+      - ' &8| &fPrecio: &#AE54F7700 Shards ⏳'
+      - ''
+      - '&7▶ Click para comprar'
+    left_click_requirement:
+      requirements:
+        puntos_check:
+          type: '>='
+          input: '%thundercurrencys_afkpoints%'
+          output: '700'
+      deny_commands:
+        - '[sound] ENTITY_VILLAGER_NO 1.0 1.0'
+        - '[message] &c&lTIENDA AFK &8| &7Saldo insuficiente. Necesitas &#AE54F7700 Shards &8(&cTienes %thundercurrencys_afkpoints%&8)&7.'
+    left_click_commands:
+      - '[console] playerpoints:afk take %player_name% 700'
+      - '[console] si give pantalonesmorfeo 1 %player_name%'
+      - '[sound] ENTITY_EXPERIENCE_ORB_PICKUP'
+      - '[message] &a&lCOMPRA EXITOSA &8| &7Has adquirido &#AE54F7Pantalones Morfeo &7por &#AE54F7700 Shards&7.'
+      - '[refresh]'
+
+  'Armadura_Botas_Morfeo':
+    material: DIAMOND_BOOTS
+    slot: 24
+    item_flags:
+      - HIDE_ATTRIBUTES
+    trim_material: AMETHYST
+    trim_pattern: EYE
+    enchantments:
+      - PROTECTION_ENVIRONMENTAL;4
+      - DURABILITY;3
+      - MENDING;1
+    display_name: '&#AE54F7🛡 Botas Morfeo 🛡'
+    lore:
+      - '&8ꜱᴇᴛ ᴍᴏʀꜰᴇᴏ'
+      - ''
+      - ' &8● &7Protección IV'
+      - ' &8● &7Irrompibilidad III'
+      - ' &8● &7Reparación (Mending)'
+      - ' &8● &dTrim: Ojo de Amatista'
+      - ''
+      - ' &8| &fPrecio: &#AE54F7500 Shards ⏳'
+      - ''
+      - '&7▶ Click para comprar'
+    left_click_requirement:
+      requirements:
+        puntos_check:
+          type: '>='
+          input: '%thundercurrencys_afkpoints%'
+          output: '500'
+      deny_commands:
+        - '[sound] ENTITY_VILLAGER_NO 1.0 1.0'
+        - '[message] &c&lTIENDA AFK &8| &7Saldo insuficiente. Necesitas &#AE54F7500 Shards &8(&cTienes %thundercurrencys_afkpoints%&8)&7.'
+    left_click_commands:
+      - '[console] playerpoints:afk take %player_name% 500'
+      - '[console] si give botasmorfeo 1 %player_name%'
+      - '[sound] ENTITY_EXPERIENCE_ORB_PICKUP'
+      - '[message] &a&lCOMPRA EXITOSA &8| &7Has adquirido &#AE54F7Botas Morfeo &7por &#AE54F7500 Shards&7.'
+      - '[refresh]'
+
+  'Marco_Fila3_Der':
+    material: PURPLE_STAINED_GLASS_PANE
+    slot: 25
+    display_name: ' '
+
+  # ============================================================================
+  # FILA 4 (SLOTS 27 A 35): ARMAS Y HERRAMIENTAS MORFEO
+  # ============================================================================
+  'Marco_Fila4_Izq':
+    material: PURPLE_STAINED_GLASS_PANE
+    slot: 28
+    display_name: ' '
+
+  'Arma_Espada_Morfeo':
+    material: DIAMOND_SWORD
+    slot: 29
+    item_flags:
+      - HIDE_ATTRIBUTES
+    enchantments:
+      - DAMAGE_ALL;4
+      - FIRE_ASPECT;2
+      - LOOT_BONUS_MOBS;2
+      - DURABILITY;3
+    display_name: '&#AE54F7🗡 Espada Morfeo 🗡'
+    lore:
+      - '&8ᴀʀᴍᴀ ᴍᴏʀꜰᴇᴏ'
+      - ''
+      - ' &8● &7Filo IV'
+      - ' &8● &7Aspecto Ígneo II'
+      - ' &8● &7Saqueo II'
+      - ' &8● &7Irrompibilidad III'
+      - ''
+      - ' &8| &fPrecio: &#AE54F7900 Shards ⏳'
+      - ''
+      - '&7▶ Click para comprar'
+    left_click_requirement:
+      requirements:
+        puntos_check:
+          type: '>='
+          input: '%thundercurrencys_afkpoints%'
+          output: '900'
+      deny_commands:
+        - '[sound] ENTITY_VILLAGER_NO 1.0 1.0'
+        - '[message] &c&lTIENDA AFK &8| &7Saldo insuficiente. Necesitas &#AE54F7900 Shards &8(&cTienes %thundercurrencys_afkpoints%&8)&7.'
+    left_click_commands:
+      - '[console] playerpoints:afk take %player_name% 900'
+      - '[console] si give espadamorfeo 1 %player_name%'
+      - '[sound] ENTITY_EXPERIENCE_ORB_PICKUP'
+      - '[message] &a&lCOMPRA EXITOSA &8| &7Has adquirido &#AE54F7Espada Morfeo &7por &#AE54F7900 Shards&7.'
+      - '[refresh]'
+
+  'Arma_Arco_Morfeo':
+    material: BOW
+    slot: 30
+    item_flags:
+      - HIDE_ATTRIBUTES
+    enchantments:
+      - ARROW_DAMAGE;4
+      - ARROW_FIRE;1
+      - DURABILITY;3
+      - MENDING;1
+    display_name: '&#AE54F7🏹 Arco Morfeo 🏹'
+    lore:
+      - '&8ᴀʀᴍᴀ ᴍᴏʀꜰᴇᴏ'
+      - ''
+      - ' &8● &7Poder IV'
+      - ' &8● &7Llama I'
+      - ' &8● &7Irrompibilidad III'
+      - ' &8● &7Reparación (Mending)'
+      - ''
+      - ' &8| &fPrecio: &#AE54F7750 Shards ⏳'
+      - ''
+      - '&7▶ Click para comprar'
+    left_click_requirement:
+      requirements:
+        puntos_check:
+          type: '>='
+          input: '%thundercurrencys_afkpoints%'
+          output: '750'
+      deny_commands:
+        - '[sound] ENTITY_VILLAGER_NO 1.0 1.0'
+        - '[message] &c&lTIENDA AFK &8| &7Saldo insuficiente. Necesitas &#AE54F7750 Shards &8(&cTienes %thundercurrencys_afkpoints%&8)&7.'
+    left_click_commands:
+      - '[console] playerpoints:afk take %player_name% 750'
+      - '[console] si give arcomorfeo 1 %player_name%'
+      - '[sound] ENTITY_EXPERIENCE_ORB_PICKUP'
+      - '[message] &a&lCOMPRA EXITOSA &8| &7Has adquirido &#AE54F7Arco Morfeo &7por &#AE54F7750 Shards&7.'
+      - '[refresh]'
+
+  'Herramienta_Pico_Morfeo':
+    material: DIAMOND_PICKAXE
+    slot: 31
+    item_flags:
+      - HIDE_ATTRIBUTES
+    enchantments:
+      - DIG_SPEED;4
+      - DURABILITY;3
+      - MENDING;1
+    display_name: '&#AE54F7⛏ Pico Morfeo ⛏'
+    lore:
+      - '&8ʜᴇʀʀᴀᴍɪᴇɴᴛᴀ ᴍᴏʀꜰᴇᴏ'
+      - ''
+      - ' &8● &7Eficiencia IV'
+      - ' &8● &7Irrompibilidad III'
+      - ' &8● &7Reparación (Mending)'
+      - ''
+      - ' &8| &fPrecio: &#AE54F7550 Shards ⏳'
+      - ''
+      - '&7▶ Click para comprar'
+    left_click_requirement:
+      requirements:
+        puntos_check:
+          type: '>='
+          input: '%thundercurrencys_afkpoints%'
+          output: '550'
+      deny_commands:
+        - '[sound] ENTITY_VILLAGER_NO 1.0 1.0'
+        - '[message] &c&lTIENDA AFK &8| &7Saldo insuficiente. Necesitas &#AE54F7550 Shards &8(&cTienes %thundercurrencys_afkpoints%&8)&7.'
+    left_click_commands:
+      - '[console] playerpoints:afk take %player_name% 550'
+      - '[console] si give picomorfeo 1 %player_name%'
+      - '[sound] ENTITY_EXPERIENCE_ORB_PICKUP'
+      - '[message] &a&lCOMPRA EXITOSA &8| &7Has adquirido &#AE54F7Pico Morfeo &7por &#AE54F7550 Shards&7.'
+      - '[refresh]'
+
+  'Herramienta_Hacha_Morfeo':
+    material: DIAMOND_AXE
+    slot: 32
+    item_flags:
+      - HIDE_ATTRIBUTES
+    enchantments:
+      - DIG_SPEED;4
+      - DURABILITY;3
+      - MENDING;1
+    display_name: '&#AE54F7⛏ Hacha Morfeo ⛏'
+    lore:
+      - '&8ʜᴇʀʀᴀᴍɪᴇɴᴛᴀ ᴍᴏʀꜰᴇᴏ'
+      - ''
+      - ' &8● &7Eficiencia IV'
+      - ' &8● &7Irrompibilidad III'
+      - ' &8● &7Reparación (Mending)'
+      - ''
+      - ' &8| &fPrecio: &#AE54F7550 Shards ⏳'
+      - ''
+      - '&7▶ Click para comprar'
+    left_click_requirement:
+      requirements:
+        puntos_check:
+          type: '>='
+          input: '%thundercurrencys_afkpoints%'
+          output: '550'
+      deny_commands:
+        - '[sound] ENTITY_VILLAGER_NO 1.0 1.0'
+        - '[message] &c&lTIENDA AFK &8| &7Saldo insuficiente. Necesitas &#AE54F7550 Shards &8(&cTienes %thundercurrencys_afkpoints%&8)&7.'
+    left_click_commands:
+      - '[console] playerpoints:afk take %player_name% 550'
+      - '[console] si give hachamorfeo 1 %player_name%'
+      - '[sound] ENTITY_EXPERIENCE_ORB_PICKUP'
+      - '[message] &a&lCOMPRA EXITOSA &8| &7Has adquirido &#AE54F7Hacha Morfeo &7por &#AE54F7550 Shards&7.'
+      - '[refresh]'
+
+  'Herramienta_Pala_Morfeo':
+    material: DIAMOND_SHOVEL
+    slot: 33
+    item_flags:
+      - HIDE_ATTRIBUTES
+    enchantments:
+      - DIG_SPEED;4
+      - DURABILITY;3
+      - MENDING;1
+    display_name: '&#AE54F7⛏ Pala Morfeo ⛏'
+    lore:
+      - '&8ʜᴇʀʀᴀᴍɪᴇɴᴛᴀ ᴍᴏʀꜰᴇᴏ'
+      - ''
+      - ' &8● &7Eficiencia IV'
+      - ' &8● &7Irrompibilidad III'
+      - ' &8● &7Reparación (Mending)'
+      - ''
+      - ' &8| &fPrecio: &#AE54F7550 Shards ⏳'
+      - ''
+      - '&7▶ Click para comprar'
+    left_click_requirement:
+      requirements:
+        puntos_check:
+          type: '>='
+          input: '%thundercurrencys_afkpoints%'
+          output: '550'
+      deny_commands:
+        - '[sound] ENTITY_VILLAGER_NO 1.0 1.0'
+        - '[message] &c&lTIENDA AFK &8| &7Saldo insuficiente. Necesitas &#AE54F7550 Shards &8(&cTienes %thundercurrencys_afkpoints%&8)&7.'
+    left_click_commands:
+      - '[console] playerpoints:afk take %player_name% 550'
+      - '[console] si give palamorfeo 1 %player_name%'
+      - '[sound] ENTITY_EXPERIENCE_ORB_PICKUP'
+      - '[message] &a&lCOMPRA EXITOSA &8| &7Has adquirido &#AE54F7Pala Morfeo &7por &#AE54F7550 Shards&7.'
+      - '[refresh]'
+
+  'Marco_Fila4_Der':
+    material: PURPLE_STAINED_GLASS_PANE
+    slot: 34
+    display_name: ' '
+
+  # ============================================================================
+  # FILA 6 (SLOTS 45 A 53): BARRA DE CONTROL Y BALANCE AFK
+  # ============================================================================
+  'Info_Balance_AFK':
+    material: AMETHYST_SHARD
+    slot: 45
+    item_flags:
+      - HIDE_ATTRIBUTES
+      - HIDE_ENCHANTS
+    enchantments:
+      - DURABILITY;1
+    display_name: '&#AE54F7Tus AFK Shards'
+    lore:
+      - '&8Tu Economía AFK'
+      - ''
+      - ' &8| &fBalance: &#AE54F7%thundercurrencys_afkpoints% Shards ⏳'
+      - ''
+      - ' &7Gana Shards permaneciendo en la'
+      - ' &7zona AFK y canjéalos en esta tienda.'
+      - ''
+      - '&7▶ Moneda exclusiva de constancia'
+
+  'Filtro_Control_1':
+    material: GRAY_STAINED_GLASS_PANE
+    display_name: ' '
+    slots:
+      - 46
+      - 47
+
+  'Filtro_Puerta_Izq':
+    material: BLACK_STAINED_GLASS_PANE
+    slot: 48
+    display_name: ' '
+
+  'Boton_Cerrar':
+    material: DARK_OAK_DOOR
+    slot: 49
+    item_flags:
+      - HIDE_ATTRIBUTES
+    display_name: '&cCerrar Menú'
+    lore:
+      - '&7Click para salir de la tienda'
+    left_click_commands:
+      - '[close]'
+      - '[sound] BLOCK_NOTE_BLOCK_BASS'
+
+  'Filtro_Puerta_Der':
+    material: BLACK_STAINED_GLASS_PANE
+    slot: 50
+    display_name: ' '
+
+  'Filtro_Control_2':
+    material: GRAY_STAINED_GLASS_PANE
+    display_name: ' '
+    slots:
+      - 51
+      - 52
+      - 53

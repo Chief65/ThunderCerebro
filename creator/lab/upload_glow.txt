@@ -1,0 +1,18 @@
+put creator/lab/glow/glow_amarillo.yml plugins/ExecutableItems/items/ThunderMC/glow_amarillo.yml
+put creator/lab/glow/glow_arcoiris.yml plugins/ExecutableItems/items/ThunderMC/glow_arcoiris.yml
+put creator/lab/glow/glow_azul.yml plugins/ExecutableItems/items/ThunderMC/glow_azul.yml
+put creator/lab/glow/glow_azul_oscuro.yml plugins/ExecutableItems/items/ThunderMC/glow_azul_oscuro.yml
+put creator/lab/glow/glow_blanco.yml plugins/ExecutableItems/items/ThunderMC/glow_blanco.yml
+put creator/lab/glow/glow_celeste.yml plugins/ExecutableItems/items/ThunderMC/glow_celeste.yml
+put creator/lab/glow/glow_cian.yml plugins/ExecutableItems/items/ThunderMC/glow_cian.yml
+put creator/lab/glow/glow_dorado.yml plugins/ExecutableItems/items/ThunderMC/glow_dorado.yml
+put creator/lab/glow/glow_gris.yml plugins/ExecutableItems/items/ThunderMC/glow_gris.yml
+put creator/lab/glow/glow_gris_oscuro.yml plugins/ExecutableItems/items/ThunderMC/glow_gris_oscuro.yml
+put creator/lab/glow/glow_morado.yml plugins/ExecutableItems/items/ThunderMC/glow_morado.yml
+put creator/lab/glow/glow_negro.yml plugins/ExecutableItems/items/ThunderMC/glow_negro.yml
+put creator/lab/glow/glow_rojo.yml plugins/ExecutableItems/items/ThunderMC/glow_rojo.yml
+put creator/lab/glow/glow_rojo_oscuro.yml plugins/ExecutableItems/items/ThunderMC/glow_rojo_oscuro.yml
+put creator/lab/glow/glow_rosa.yml plugins/ExecutableItems/items/ThunderMC/glow_rosa.yml
+put creator/lab/glow/glow_verde.yml plugins/ExecutableItems/items/ThunderMC/glow_verde.yml
+put creator/lab/glow/glow_verde_oscuro.yml plugins/ExecutableItems/items/ThunderMC/glow_verde_oscuro.yml
+exit

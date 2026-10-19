@@ -1,0 +1,77 @@
+{% set redirectToLogin %}
+	{% if not basket.ign %}
+		data-izimodal-open="#modal-login"
+	{% endif %}
+{% endset %}
+
+{% if basket.currency == 'USD' %}
+    {% set currencySymbol = '$' %}
+    {% set currencyAfter = false %}
+{% elseif basket.currency == 'EUR' %}
+    {% set currencySymbol = '€' %}
+    {% set currencyAfter = true %}
+{% elseif basket.currency == 'GBP' %}
+    {% set currencySymbol = '£' %}
+    {% set currencyAfter = false %}
+{% else %}
+    {% set currencySymbol = basket.currency %}
+    {% set currencyAfter = true %}
+{% endif %}
+
+<div class="category__list--item">
+	<div class="category__list__item--title">
+		<p>{{ package.name|escape }}</p>
+		{% if package.countdownEnds %}
+			<span class="countdown__title">
+				<i class="fa fa-clock-o"></i>
+				<span class="countdown-to" data-countdown="{{ package.countdownEnds }}">{{ __("Ending Soon!") }}</span>
+			</span>
+		{% endif %}
+	</div>
+	<div class="item-flex-end">
+		<div class="category__list__item--price">
+			{% if package.customPrice == false and package.price > 0 %}
+				{% if package.discount.applied %}
+					<p>
+						<del style="color: var(--price-original);">
+							{% if not currencyAfter %}{{ currencySymbol }}{% endif %}{{ package.discount.original|money }}{% if currencyAfter %} {{ currencySymbol }}{% endif %}
+						</del>
+					</p>
+					<p style="color: var(--price-sale);">
+						{% if not currencyAfter %}{{ currencySymbol }}{% endif %}{{ package.price|money }}{% if currencyAfter %} {{ currencySymbol }}{% endif %}
+					</p>
+				{% else %}
+					<p style="color: var(--price-normal);">
+						{% if not currencyAfter %}{{ currencySymbol }}{% endif %}{{ package.price|money }}{% if currencyAfter %} {{ currencySymbol }}{% endif %}
+					</p>
+				{% endif %}
+			{% elseif package.customPrice %}
+				<p>{{ lang.choosePrice }}</p>
+			{% else %}
+				<p>{{ lang.item_is_free }}</p>
+			{% endif %}
+		</div>
+		<div class="category__list__item--buttons">
+			<a href="javascript::void(0);" data-remote="/package/{{ package.id }}" class="cta triplezone__toogle--modal" cta-type="info">
+				<i class="fa fa-info"></i>
+			</a>
+			{% if package.basket %}
+				<a href="/checkout/packages/remove/{{ package.id }}" class="cta" cta-type="remove">
+					<i class="mdi mdi-minus"></i>
+					{{ lang.remove_from_cart }}
+				</a>
+			{% else %}
+				{% if package.type != "single" %}
+					<a class="cta" cta-type="buy" href="/checkout/packages/add/{{ package.id }}/subscribe" {{ redirectToLogin }}>
+						<i class="mdi mdi-plus-thick"></i>
+						{{ __("Subscribe") }}</a>
+				{% endif %}
+				{% if package.type != "subscription" %}
+					<a href="/checkout/packages/add/{{ package.id }}/single" class="cta" cta-type="buy" {{ redirectToLogin }}>
+						<i class="mdi mdi-plus-thick"></i>
+						{{ lang.add_to_cart }}</a>
+				{% endif %}
+			{% endif %}
+		</div>
+	</div>
+</div>

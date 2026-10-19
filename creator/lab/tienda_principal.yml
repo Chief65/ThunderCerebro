@@ -1,0 +1,161 @@
+menu_title: '&0&l|&r &0Mercado ▶ &8Menú Principal'
+open_command:
+  - mercado
+size: 36
+open_requirement:
+  requirements: {}
+register_command: true
+update: true
+
+items:
+  'Boton_Zafiros':
+    material: DIAMOND
+    slot: 10
+    item_flags:
+      - HIDE_ENCHANTS
+      - HIDE_ATTRIBUTES
+    enchantments:
+      - DURABILITY;1
+    display_name: '&#1E6BFFMercado Zafiros'
+    lore:
+      - '&8Tienda Exclusiva'
+      - ''
+      - ' &fAdquiere cosméticos,'
+      - ' &fbeneficios y artículos de élite'
+      - ' &fcon tus gemas de zafiro.'
+      - ''
+      - ' &8| &fMoneda: &#1E6BFFZafiros (💎)'
+      - ''
+      - '&7▶ Click para abrir'
+    left_click_commands:
+      - '[openguimenu] mercado_zafiros'
+      - '[sound] UI_BUTTON_CLICK'
+
+  'Boton_Dinero':
+    material: EMERALD
+    slot: 12
+    item_flags:
+      - HIDE_ENCHANTS
+      - HIDE_ATTRIBUTES
+    enchantments:
+      - DURABILITY;1
+    display_name: '&#59E91FMercado Dinero'
+    lore:
+      - '&8Tienda Principal'
+      - ''
+      - ' &fAdquiere bloques,'
+      - ' &fequipo y consumibles.'
+      - ''
+      - ' &8| &fMoneda: &#59E91FDinero ($)'
+      - ''
+      - '&7▶ Click para abrir'
+    left_click_commands:
+      - '[openguimenu] mercado_comercio'
+      - '[sound] UI_BUTTON_CLICK'
+
+  'Boton_Almas':
+    material: SOUL_CAMPFIRE
+    slot: 14
+    item_flags:
+      - HIDE_ENCHANTS
+      - HIDE_ATTRIBUTES
+    enchantments:
+      - DURABILITY;1
+    display_name: '&#34B0F3Mercado Almas'
+    lore:
+      - '&8Tienda Especial'
+      - ''
+      - ' &fConsigue spawners, llaves'
+      - ' &fy protecciones para tu base'
+      - ' &fusando almas de enemigos.'
+      - ''
+      - ' &8| &fMoneda: &#34B0F3Almas (🔥)'
+      - ''
+      - '&7▶ Click para abrir'
+    left_click_commands:
+      - '[openguimenu] mercado_almas'
+      - '[sound] UI_BUTTON_CLICK'
+
+  'Boton_XP':
+    material: EXPERIENCE_BOTTLE
+    slot: 16
+    item_flags:
+      - HIDE_ENCHANTS
+      - HIDE_ATTRIBUTES
+    enchantments:
+      - DURABILITY;1
+    display_name: '&#D48BFFMercado Experiencia'
+    lore:
+      - '&8Tienda de Forja'
+      - ''
+      - ' &fCompra trims de armadura'
+      - ' &fy libros de encantamiento'
+      - ' &fcon tus niveles de XP.'
+      - ''
+      - ' &8| &fMoneda: &#D48BFFExperiencia (⭐)'
+      - ''
+      - '&7▶ Click para abrir'
+    left_click_commands:
+      - '[openguimenu] mercado_xp'
+      - '[sound] UI_BUTTON_CLICK'
+
+  # SLOT 27: SUBASTAS (Movido aquí tras quitar catálogo)
+  'Boton_Subastas':
+    material: BELL
+    slot: 27
+    item_flags:
+      - HIDE_ATTRIBUTES
+    display_name: '&#FFF275Mercado de Subastas'
+    lore:
+      - '&8Subastas'
+      - ''
+      - ' &fComercia con otros'
+      - ' &fjugadores.'
+      - ''
+      - '&7▶ Click para abrir'
+    left_click_commands:
+      - '[close]'
+      - '[player] ah'
+      - '[sound] UI_BUTTON_CLICK'
+
+  # SLOT 31: SALIR
+  'Boton_Cerrar':
+    material: DARK_OAK_DOOR
+    slot: 31
+    item_flags:
+      - HIDE_ATTRIBUTES
+    display_name: '&cSalir'
+    left_click_commands:
+      - '[close]'
+      - '[sound] BLOCK_NOTE_BLOCK_BASS'
+
+  # SLOT 35: BALANCE
+  'Info_Balance':
+    material: head-%player_name%
+    slot: 35
+    item_flags:
+      - HIDE_ATTRIBUTES
+    display_name: '&#FFF275Tu Economía'
+    lore:
+      - '&8Tu Economía'
+      - ''
+      - ' &8| &fDinero: &#59E91F&l$&r&#59E91F%vault_eco_balance_formatted%'
+      - ' &8| &fAlmas: &#34B0F3%thundercurrencys_almas%🔥'
+      - ' &8| &fZafiros: &#1E6BFF%thundercurrencys_zafiros%💎'
+      - ' &8| &fXP: &#D48BFF%player_level% LVL'
+      - ''
+      - '&7▶ Click para más información'
+    left_click_commands:
+      - '[openguimenu] info_economia'
+      - '[sound] UI_BUTTON_CLICK'
+
+  'Filtro_Navbar':
+    material: GRAY_STAINED_GLASS_PANE
+    display_name: ' '
+    slots:
+      - 28
+      - 29
+      - 30
+      - 32
+      - 33
+      - 34

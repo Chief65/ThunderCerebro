@@ -1,0 +1,7 @@
+<div class="triplezone__vote--flex">
+    {% for voteLink in voteLinks %}
+        <div class="triplezone__vote--col">
+            <a href="{{ voteLink.link }}" target="_blank" rel="noopener">{{ voteLink.name }} <i class="mdi mdi-open-in-new"></i></a>
+        </div>
+    {% endfor %} 
+</div>

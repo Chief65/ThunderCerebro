@@ -1,0 +1,33 @@
+name: ThunderCurrencys
+version: 1.0
+main: com.relevate.thundercurrencys.ThunderCurrencys
+api-version: '1.21'
+softdepend: [PlaceholderAPI, ShopGUIPlus]
+author: Relevate
+description: Sistema multi-economia configurable con placeholders y comandos estilo PlayerPoints.
+commands:
+  mieconomia:
+    description: Muestra todas tus economias.
+    permission: thundercurrencys.balance
+  tc:
+    description: Comandos de administracion de ThunderCurrencys.
+    permission: thundercurrencys.admin
+permissions:
+  thundercurrencys.balance:
+    description: Permite ver el balance propio.
+    default: true
+  thundercurrencys.admin:
+    description: Acceso administrativo completo.
+    default: op
+  thundercurrencys.economy.give:
+    description: Permite dar moneda a jugadores.
+    default: op
+  thundercurrencys.economy.take:
+    description: Permite quitar moneda a jugadores.
+    default: op
+  thundercurrencys.economy.set:
+    description: Permite setear moneda a jugadores.
+    default: op
+  thundercurrencys.economy.look:
+    description: Permite ver el balance de otros.
+    default: op

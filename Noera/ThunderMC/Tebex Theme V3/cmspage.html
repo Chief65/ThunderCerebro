@@ -1,0 +1,487 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<style>
+  /* ══════════════════════════════════════════════════════════════════
+     THUNDERMC SECONDARY PAGES (ABOUT & SUPPORT & RULES)
+     ══════════════════════════════════════════════════════════════════ */
+  .tz-cms-page-wrap {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 24px 80px 24px;
+    box-sizing: border-box;
+  }
+
+  /* Breadcrumbs & Cabecera de Página */
+  .tz-cms-header-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 32px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  }
+  .tz-cms-title-box {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+  .tz-cms-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 12px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    color: #facc15;
+  }
+  .tz-cms-page-title {
+    font-family: 'Plus Jakarta Sans', 'Montserrat', sans-serif;
+    font-size: clamp(28px, 3.5vw, 38px);
+    font-weight: 800;
+    color: #ffffff;
+    letter-spacing: -0.5px;
+    margin: 0;
+    text-transform: uppercase;
+  }
+  .tz-cms-back-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 18px;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #cbd5e1;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 13.5px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: all 0.2s ease;
+  }
+  .tz-cms-back-btn:hover {
+    background: rgba(250, 204, 21, 0.1);
+    border-color: #facc15;
+    color: #facc15;
+    transform: translateX(-2px);
+  }
+
+  /* Grid Principal de 2 Columnas */
+  .tz-cms-grid {
+    display: grid;
+    grid-template-columns: 1fr 340px;
+    gap: 32px;
+    align-items: start;
+  }
+  @media (max-width: 960px) {
+    .tz-cms-grid { grid-template-columns: 1fr; }
+  }
+
+  /* Contenido Izquierdo (Artículos y Secciones) */
+  .tz-cms-content-card {
+    background: #0d121f;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 20px;
+    padding: 36px 40px;
+    box-sizing: border-box;
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.4);
+    font-family: 'Be Vietnam Pro', sans-serif;
+    color: #cbd5e1;
+    line-height: 1.7;
+    font-size: 14.5px;
+  }
+  .tz-cms-content-card h2, .tz-cms-content-card h3 {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    color: #ffffff;
+    font-weight: 800;
+    margin-top: 28px;
+    margin-bottom: 12px;
+    letter-spacing: -0.2px;
+  }
+  .tz-cms-content-card h2:first-child, .tz-cms-content-card h3:first-child { margin-top: 0; }
+  .tz-cms-content-card p { margin-bottom: 18px; }
+
+  /* Bloque de Información / Destacado */
+  .tz-cms-highlight-box {
+    background: linear-gradient(135deg, rgba(250, 204, 21, 0.08) 0%, rgba(13, 18, 31, 0.9) 100%);
+    border: 1px solid rgba(250, 204, 21, 0.25);
+    border-radius: 14px;
+    padding: 20px 24px;
+    margin: 24px 0;
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+  }
+  .tz-cms-hl-icon {
+    font-size: 26px;
+    color: #facc15;
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+  .tz-cms-hl-text {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    font-size: 13.5px;
+  }
+  .tz-cms-hl-title {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 15px;
+    font-weight: 800;
+    color: #ffffff;
+  }
+
+  /* Acordeón FAQ para Soporte y Preguntas */
+  .tz-faq-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 20px;
+  }
+  .tz-faq-item {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: border-color 0.2s ease, background 0.2s ease;
+  }
+  .tz-faq-item.active {
+    border-color: rgba(250, 204, 21, 0.35);
+    background: rgba(250, 204, 21, 0.03);
+  }
+  .tz-faq-question {
+    padding: 16px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 14.5px;
+    font-weight: 700;
+    color: #ffffff;
+    user-select: none;
+  }
+  .tz-faq-question i {
+    font-size: 18px;
+    color: #94a3b8;
+    transition: transform 0.25s ease, color 0.2s ease;
+  }
+  .tz-faq-item.active .tz-faq-question i {
+    transform: rotate(180deg);
+    color: #facc15;
+  }
+  .tz-faq-answer {
+    padding: 0 20px 18px 20px;
+    font-size: 13.5px;
+    color: #94a3b8;
+    line-height: 1.6;
+    display: none;
+  }
+  .tz-faq-item.active .tz-faq-answer {
+    display: block;
+  }
+
+  /* Columna Derecha (Widgets de Network & Discord) */
+  .tz-cms-sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .tz-widget-card {
+    background: #0d121f;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 18px;
+    padding: 24px;
+    box-sizing: border-box;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+  }
+  .tz-widget-title {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 800;
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin: 0 0 16px 0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .tz-widget-title i { font-size: 18px; color: #facc15; }
+
+  /* IP Copy Box */
+  .tz-ip-box {
+    background: #090d16;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 12px 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  .tz-ip-box:hover {
+    border-color: rgba(250, 204, 21, 0.4);
+    background: rgba(250, 204, 21, 0.04);
+  }
+  .tz-ip-text {
+    font-family: 'Plus Jakarta Sans', monospace;
+    font-size: 14px;
+    font-weight: 800;
+    color: #facc15;
+    letter-spacing: 0.5px;
+  }
+  .tz-ip-btn {
+    background: rgba(250, 204, 21, 0.15);
+    border: 1px solid rgba(250, 204, 21, 0.3);
+    color: #facc15;
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 11px;
+    font-weight: 800;
+    text-transform: uppercase;
+  }
+
+  /* Stats de Network */
+  .tz-network-stats-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  .tz-net-stat-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 13px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  }
+  .tz-net-stat-row:last-child { border-bottom: none; padding-bottom: 0; }
+  .tz-net-label { color: #94a3b8; font-weight: 500; }
+  .tz-net-val { color: #ffffff; font-weight: 700; }
+
+  /* Discord Widget Button */
+  .tz-discord-widget-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    padding: 14px 20px;
+    background: #5865F2;
+    border-radius: 12px;
+    color: #ffffff;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 800;
+    text-decoration: none;
+    box-sizing: border-box;
+    transition: all 0.2s ease;
+    box-shadow: 0 6px 20px rgba(88, 101, 242, 0.35);
+  }
+  .tz-discord-widget-btn:hover {
+    background: #4752c4;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(88, 101, 242, 0.5);
+  }
+  .tz-discord-widget-btn i { font-size: 20px; }
+
+  @media (max-width: 960px) {
+    .tz-cms-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .tz-cms-page-wrap {
+      padding: 24px 16px 60px 16px;
+    }
+    .tz-cms-header-row {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 14px;
+    }
+    .tz-cms-content-card {
+      padding: 24px 20px;
+    }
+    .tz-cms-highlight-box {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .tz-cms-page-wrap {
+      padding: 16px 12px 50px 12px;
+    }
+    .tz-cms-content-card {
+      padding: 20px 16px;
+    }
+    .tz-cms-page-title {
+      font-size: 24px;
+    }
+    .tz-faq-question {
+      padding: 14px 16px;
+      font-size: 13.5px;
+    }
+    .tz-faq-answer {
+      padding: 0 16px 16px 16px;
+    }
+    .tz-widget-card {
+      padding: 16px;
+    }
+    .tz-server-ip-box {
+      flex-direction: column;
+      align-items: stretch;
+      gap: 8px;
+    }
+    .tz-server-ip-btn {
+      width: 100%;
+      text-align: center;
+    }
+  }
+</style>
+
+<div class="tz-cms-page-wrap">
+  
+  <!-- Encabezado de Página -->
+  <div class="tz-cms-header-row">
+    <div class="tz-cms-title-box">
+      <span class="tz-cms-badge"><i class="mdi mdi-information-variant"></i> Información Oficial</span>
+      <h1 class="tz-cms-page-title">{{ page.title|escape }}</h1>
+    </div>
+    <a href="/" class="tz-cms-back-btn"><i class="mdi mdi-arrow-left"></i> Volver a la Tienda</a>
+  </div>
+
+  <div class="tz-cms-grid">
+    
+    <!-- Columna Izquierda: Contenido Principal -->
+    <div class="tz-cms-content-card">
+      
+      {% if page.content %}
+        {{ page.content|raw }}
+      {% else %}
+        <h2>Información pendiente de publicar</h2>
+        <p>Esta página todavía no tiene contenido publicado. Si necesitas ayuda con una compra, consulta las <a href="/terms/checkout">condiciones de Tebex</a> o contacta con nuestro soporte en Discord.</p>
+      {% endif %}
+
+    </div>
+
+    <!-- Columna Derecha: Sidebar Informativo -->
+    <aside class="tz-cms-sidebar">
+      
+      <!-- Widget IP -->
+      <div class="tz-widget-card">
+        <h3 class="tz-widget-title"><i class="mdi mdi-server-network"></i> Servidor de Juego</h3>
+        <p style="font-size: 13px; color: #94a3b8; margin: 0 0 14px 0; line-height: 1.5;">Haz click para copiar la dirección IP y unirte a jugar:</p>
+        
+        <button type="button" class="tz-ip-box" id="tzCmsCopyIp" title="Copiar dirección del servidor">
+          <span class="tz-ip-text">thundermc.es</span>
+          <span class="tz-ip-btn" id="tzCmsIpBtn">Copiar</span>
+        </button>
+      </div>
+
+      <!-- Widget Datos del Servidor -->
+      <div class="tz-widget-card">
+        <h3 class="tz-widget-title"><i class="mdi mdi-chart-box-outline"></i> Estado Network</h3>
+        <div class="tz-network-stats-list">
+          <div class="tz-net-stat-row">
+            <span class="tz-net-label">Versión</span>
+            <span class="tz-net-val" style="color: #4ade80;">Java 1.21.x</span>
+          </div>
+          <div class="tz-net-stat-row">
+            <span class="tz-net-label">Compatibilidad</span>
+            <span class="tz-net-val">Java &amp; Bedrock</span>
+          </div>
+          <div class="tz-net-stat-row">
+            <span class="tz-net-label">Jugadores Conectados</span>
+            <span class="tz-net-val" style="color: #facc15;">Consulta en el servidor</span>
+          </div>
+          <div class="tz-net-stat-row">
+            <span class="tz-net-label">Seguridad</span>
+            <span class="tz-net-val">SSL 256-bit</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Widget Comunidad Discord -->
+      <div class="tz-widget-card" style="text-align: center;">
+        <h3 class="tz-widget-title" style="justify-content: center;"><i class="mdi mdi-account-group"></i> Comunidad Oficial</h3>
+        <p style="font-size: 13px; color: #94a3b8; margin: 0 0 16px 0; line-height: 1.5;">¿Necesitas ayuda personalizada o abrir un ticket de soporte? Únete a nuestro Discord:</p>
+        <a href="https://discord.gg/thundermc" target="_blank" rel="noopener" class="tz-discord-widget-btn">
+          <i class="mdi mdi-discord"></i>
+          <span>Unirse a Discord</span>
+        </a>
+      </div>
+
+    </aside>
+
+  </div>
+</div>
+
+<script>
+(function() {
+  // FAQ Toggle Interactivo — con soporte de teclado para accesibilidad
+  var faqQuestions = document.querySelectorAll('.tz-faq-question');
+  faqQuestions.forEach(function(q) {
+    q.setAttribute('tabindex', '0');
+    q.setAttribute('role', 'button');
+    function toggle() {
+      var item = q.closest('.tz-faq-item');
+      if (item) item.classList.toggle('active');
+    }
+    q.addEventListener('click', toggle);
+    q.addEventListener('keydown', function(e) {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); toggle(); }
+    });
+  });
+
+  // Copiar IP con fallback robusto para contextos sin HTTPS o in-app browsers
+  var copyBox = document.getElementById('tzCmsCopyIp');
+  var copyBtn = document.getElementById('tzCmsIpBtn');
+  if (copyBox) {
+    copyBox.addEventListener('click', function() {
+      var textToCopy = 'thundermc.es';
+      function onSuccess() {
+        if (copyBtn) copyBtn.innerText = '¡Copiada!';
+        setTimeout(function() { if (copyBtn) copyBtn.innerText = 'Copiar'; }, 2000);
+      }
+      // Intentar API moderna primero
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(textToCopy).then(onSuccess).catch(function() {
+          fallbackCopy(textToCopy, onSuccess);
+        });
+      } else {
+        fallbackCopy(textToCopy, onSuccess);
+      }
+    });
+  }
+
+  function fallbackCopy(text, cb) {
+    try {
+      var ta = document.createElement('textarea');
+      ta.value = text;
+      ta.style.cssText = 'position:fixed;top:-9999px;left:-9999px;opacity:0;';
+      document.body.appendChild(ta);
+      ta.focus();
+      ta.select();
+      var ok = document.execCommand('copy');
+      document.body.removeChild(ta);
+      if (ok && cb) cb();
+    } catch (e) {
+      console.warn('No se pudo copiar la IP:', e);
+    }
+  }
+})();
+</script>
+
+{# FAQPage JSON-LD Schema — permite a Google mostrar las FAQ directamente en los resultados de búsqueda #}
+{% if page.content %}
+
+{% endif %}
+
+{% endblock %}

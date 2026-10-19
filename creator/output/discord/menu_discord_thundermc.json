@@ -10,10 +10,10 @@
       "description": "¡Estamos muy felices de que estés aquí!\n-# ᴇᴍᴘɪᴇᴢᴀ ᴛᴜ ᴀᴠᴇɴᴛᴜʀᴀ ᴜɴɪᴇɴᴅᴏᴛᴇ ᴀʟ ꜱᴇʀᴠɪᴅᴏʀ\n\n**Encontraras:**\n`🏰` Dungeons Unicas\n`🐉` Jefes Custom\n`🔮` Objetos Magicos\n`🎍` Y mucho más\n\n↓ IP del Servidor (Version 1.21.1+  ) ↓\n```text\nthundermc.es\n```\n-# 📱 Puerto Bedrock: `19132` | 🎮 Java: Puerto por defecto\n\n## Dashboard (Menu Interactivo)\nSelecciona una categoría en el menú desplegable inferior:\n\n**Links Interesantes:**\n-# [Tienda](https://tienda.thundermc.es/) • [Tiktok](https://www.tiktok.com/@somosthundermc_?lang=es) • [YouTube](https://www.youtube.com/@somosthundermc/featured)",
       "color": 16706304,
       "thumbnail": {
-        "url": "https://cdn.discordapp.com/attachments/1557075345906081792/1557137643345805392/minecraft_compass_transparent.png?backend=b2&ex=6acdf530&is=6acca3b0&hm=ef70a906a34683cf19a1cb0b86e368c252172795c7e13a9f63234763aeae077b&"
+        "url": "https://cdn.discordapp.com/attachments/1552723526996336724/1560474539547299901/minecraft_compass_transparent.png?ex=6ad3816a&is=6ad22fea&hm=8031cfdeb7fcd30e81c573f86d0012dadc942246c6cf7a9d7349314c19cc1ef0&"
       },
       "image": {
-        "url": "https://cdn.discordapp.com/attachments/1559234368449413120/1559234467057631243/campamento_dia_1138x640.jpg?ex=6ace55c2&is=6acd0442&hm=78ec223f8763b65a246745810dec8fc923f076c847112f50f32a2e55794cc4c0&"
+        "url": "https://cdn.discordapp.com/attachments/1559234368449413120/1560687419609583696/Mojang_GIF_by_Minecraft_1.gif?ex=6ad39eed&is=6ad24d6d&hm=0c36b9292f5470d7f9c96c82fa5f2be44d8da9e77257d184e4775db279092787&"
       }
     }
   ],
@@ -58,6 +58,22 @@
               "description": "Rangos VIP, llaves y ventajas de ThunderMC",
               "emoji": {
                 "name": "🛒"
+              }
+            },
+            {
+              "label": "Chat de Voz (Proximidad)",
+              "value": "categoria_voicechat",
+              "description": "Guía y mod de voz por proximidad en el juego",
+              "emoji": {
+                "name": "🎙️"
+              }
+            },
+            {
+              "label": "Roles de Notificaciones",
+              "value": "categoria_roles",
+              "description": "Personaliza tus alertas y pings del servidor",
+              "emoji": {
+                "name": "🔔"
               }
             }
           ]

@@ -2,6 +2,475 @@
 
 Registro cronológico e incremental de todas las operaciones realizadas en **ThunderCerebro**.
 
+## [2026-10-19] dev & thundershields & prompts | Desarrollo de ThunderShields v1.1.0, Testing Sandbox y Neutralización EI
+- **Plugin Desarrollado y Compilado**:
+  - `ThunderShields-1.1.0-PAPER.jar` compilado con JDK 21 LTS (`javac 21.0.2`), enlazado contra Paper API 1.21.11, WorldGuard 7.0.15 y FAWE 2.15.0.
+  - Implementación de `WorldGuardHook.java` desacoplado para respetar flags de `keep-inventory` e `invincibility`.
+  - Diagnóstico avanzado `/thundershields inspect` y `/thundershields status`.
+  - Optimización de rendimiento a cero E/S sincrónica (`log-resurrections: false`) previniendo spikes de MSPT en combate masivo.
+- **Pruebas y Despliegue en Sandbox (`ymykh9qy.274758bd`)**:
+  - Desplegado JAR `ThunderShields-1.1.0-PAPER.jar` y `plugins/ThunderShields/config.yml`.
+  - Neutralizados activadores de muerte en 4 configs de ExecutableItems (`totemturco.yml`, `escudoigneo.yml`, `escudoreyvital.yml`, `escudoviviente.yml`) configurando `activators: {}`.
+  - Verificación in-game por el Sr Ramos confirmando resolución del bug de carrera `EntityDamageEvent` vs `EntityResurrectEvent` y funcionamiento correcto al 100%.
+- **Documentación y Prompts Maestros Generados**:
+  - `creator/output/ExecutableItems_Compendio_Completo_ThunderMC.md`: Auditoría de 14 variantes de escudos ItemEdit censadas en `server-database.yml`.
+  - `creator/output/Prompt_Desarrollador_Plugins_Minecraft_ThunderMC.md`: Prompt Maestro Nivel 4 de ingeniería de plugins Paper.
+  - `creator/output/Prompt_Maestro_ThunderShields_Compilado.md`: Especificación técnica y arquitectura del sistema de resurrección de escudos.
+- **Pendiente para Próxima Sesión**:
+  - Despliegue en Servidor Survival de Producción (`ymykh9qy.575c7473`) bajo confirmación explícita del Sr Ramos (Backup EI -> Subir JAR y config -> Subir 4 YAMLs neutralizados -> `/ei reload` y `/thundershields reload`).
+
+## [2026-10-16] survival & deluxemenus & executableitems | Despliegue Autorizado en Producción (Tienda AFK y Cosméticos)
+- **Servidor Destino**: Survival (`ymykh9qy.575c7473`, producción) con confirmación explícita previa del Sr Ramos.
+- **Archivos Desplegados y Registrados**:
+  1. **DeluxeMenus**:
+     - `plugins/DeluxeMenus/gui_menus/menusIA/tienda_afk.yml` (creada la carpeta `menusIA` e instalado el menú de 54 slots con Armor Trims y cobro `playerpoints:afk`).
+     - `plugins/DeluxeMenus/config.yml` (registrado el acceso `tienda_afk` apuntando a `menusIA/tienda_afk.yml`).
+  2. **ExecutableItems (37 Ítems Cosméticos en `plugins/ExecutableItems/items/ThunderMC/`)**:
+     - 17 Lanas Encantadas ChatColor (3d): `chatcolor_amarillo.yml`, `chatcolor_azul.yml`, `chatcolor_azul_oscuro.yml`, `chatcolor_blanco.yml`, `chatcolor_celeste.yml`, `chatcolor_cian.yml`, `chatcolor_dorado.yml`, `chatcolor_gris.yml`, `chatcolor_gris_oscuro.yml`, `chatcolor_magenta.yml`, `chatcolor_morado.yml`, `chatcolor_negro.yml`, `chatcolor_rojo.yml`, `chatcolor_rojo_oscuro.yml`, `chatcolor_rosa.yml`, `chatcolor_verde.yml`, `chatcolor_verde_oscuro.yml`.
+     - 17 Tintes Encantados Glow (3d): `glow_amarillo.yml`, `glow_arcoiris.yml`, `glow_azul.yml`, `glow_azul_oscuro.yml`, `glow_blanco.yml`, `glow_celeste.yml`, `glow_cian.yml`, `glow_dorado.yml`, `glow_gris.yml`, `glow_gris_oscuro.yml`, `glow_morado.yml`, `glow_negro.yml`, `glow_rojo.yml`, `glow_rojo_oscuro.yml`, `glow_rosa.yml`, `glow_verde.yml`, `glow_verde_oscuro.yml`.
+     - 3 Etiquetas de Chat Permanentes: `etiqueta_off.yml`, `etiqueta_luna.yml`, `etiqueta_zzz.yml`.
+- **Verificación**: Transferencia validada vía SFTP con código de salida 0 e integridad de archivos comprobada.
+
+## [2026-10-16] creator & deluxemenus | Actualización de Comandos /si give e Integración de NetheriteUpgrade
+- **Archivos Modificados**:
+  - `creator/lab/tienda_afk.yml` ([`creator/lab/tienda_afk.yml`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/lab/tienda_afk.yml))
+  - `creator/output/tienda_afk.yml` ([`creator/output/tienda_afk.yml`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/output/tienda_afk.yml))
+  - `plugins/DeluxeMenus/gui_menus/menusIA/tienda_afk.yml` (Sandbox `ymykh9qy.274758bd`)
+  - `plugins/ItemEdit/database/server-database.yml` (Sandbox `ymykh9qy.274758bd`)
+- **Especificaciones Implementadas**:
+  1. **Sintaxis Canónica de Consola en ItemEdit**: Corrección del orden de argumentos a `si give <id> 1 %player_name%` para ejecución desde consola en DeluxeMenus sin requerir permisos OP del jugador:
+     - `cascomorfeo`, `pecheramorfeo`, `pantalonesmorfeo`, `botasmorfeo`
+     - `espadamorfeo`, `arcomorfeo`, `picomorfeo`, `hachamorfeo`, `palamorfeo`
+  2. **Netherite Upgrade en Server Database**: Sincronización del nuevo ítem `netheriteupgrade` desde Survival hacia el Sandbox (150 ítems totales en `server-database.yml`) y sustitución del comando vanilla por `[console] si give netheriteupgrade 1 %player_name%`.
+
+## [2026-10-16] creator & docs | Documentación Integral del Sistema de Bundles de Recompensas Test
+- **Archivos Creados / Modificados**:
+  - `creator/lab/bundles_recompensas_test_contexto.md` ([`creator/lab/bundles_recompensas_test_contexto.md`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/lab/bundles_recompensas_test_contexto.md))
+  - Artefacto de contexto: `bundles_recompensas_test_contexto.md`
+  - [`log.md`](file:///C:/Users/PC/Desktop/ThunderCerebro/log.md)
+- **Especificaciones Documentadas**:
+  1. **Filosofía y Arquitectura en Mano**: Mecánica cinemática de 50 ticks (ceguera, sonido progresivo de bundle/nota de 1.0 a 1.4, fanfarria de victoria y 4 tipos de partículas) que elimina la dependencia de crates o menús invasivos para aperturas de loot.
+  2. **Motor MEGA-RANDOM de 1.000 Pesos**: Lógica de mutación de calidades dinámicas (de Súper a Divina sin quemar recompensas inferiores), doble fase de recompensa (Fase I: Efectivo líquido; Fase II: Recursos/Consumibles clave) y roll independiente desacoplado de Jackpot para llaves de Crates (2% a 7%).
+  3. **Jerarquía y Tablas Completas**: Desglose pormenorizado de los 5 tiers (Súper, Rara, Épica, Mítica, Divina), sus materiales vanilla `*_BUNDLE`, identificadores de ítems, tablas de premios y comandos de ejecución.
+  4. **Estado de Desarrollo y Red Teaming**: Análisis exhaustivo de los 7 archivos desarrollados en `creator/lab/`, reutilización transversal en cosméticos y matriz de mitigación de riesgos fatales (bucles de dupes, inflación económica, cancel-item-place y falta de GUIs de preview para tiers 2 al 5).
+
+## [2026-10-16] creator & deluxemenus | Construcción y Despliegue de Tienda AFK (DeluxeMenus) desde Maqueta CommandPanels
+- **Archivos Generados / Desplegados**:
+  - `creator/lab/tienda_afk.yml` ([`creator/lab/tienda_afk.yml`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/lab/tienda_afk.yml))
+  - `creator/output/tienda_afk.yml` ([`creator/output/tienda_afk.yml`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/output/tienda_afk.yml))
+  - Desplegado en Sandbox (`ymykh9qy.274758bd`): `plugins/DeluxeMenus/gui_menus/menusIA/tienda_afk.yml`
+  - Origen de Maqueta: `plugins/CommandPanels/panels/panel_1.yml` (scraped de cofre in-game por el Sr Ramos)
+- **Especificaciones Implementadas**:
+  1. **Tamaño e Interfaz**: Menú de 54 slots (6 filas) con título canónico `&0&l|&r &0Tienda ▶ &#AE54F7Zona AFK &8(⏳)` y comandos `/tiendaafk`, `/afkshop`, `/puntosafk`, `/canjeafk`.
+  2. **Economía y Moneda**: Moneda Shards AFK (`playerpoints:afk`, placeholder `%thundercurrencys_afkpoints%`). Comandos de cobro automatizados con verificación previa (`puntos_check` `>=`), mensaje de saldo insuficiente con sonido `ENTITY_VILLAGER_NO` y mensaje de éxito con sonido `ENTITY_EXPERIENCE_ORB_PICKUP`.
+  3. **Catálogo y Precios Configurados**:
+     - Slot 11: `PURPLE_WOOL` (ChatColor Morado 3d vía ExecutableItems `chatcolor_morado`): **900 Shards**
+     - Slot 12: `PURPLE_DYE` (Glow Morado 3d vía ExecutableItems `glow_morado`): **1,200 Shards**
+     - Slot 13: `NAME_TAG` (Etiqueta Permanente `ᴏꜰꜰ` vía ExecutableItems `etiqueta_off`): **3,000 Shards**
+     - Slot 14: `NAME_TAG` (Etiqueta Permanente `☽` vía ExecutableItems `etiqueta_luna`): **3,000 Shards**
+     - Slot 15: `NAME_TAG` (Etiqueta Permanente `ZzZ` vía ExecutableItems `etiqueta_zzz`): **3,000 Shards**
+     - Slot 20: `NETHERITE_UPGRADE_SMITHING_TEMPLATE` (Mejora de Inframundita): **600 Shards**
+     - Slot 21: `DIAMOND_HELMET` (Casco Morfeo vía ItemEdit `cascomorfeo`): **550 Shards**
+     - Slot 22: `DIAMOND_CHESTPLATE` (Pechera Morfeo vía ItemEdit `pecheramorfeo`): **850 Shards**
+     - Slot 23: `DIAMOND_LEGGINGS` (Pantalones Morfeo vía ItemEdit `pantalonesmorfeo`): **700 Shards**
+     - Slot 24: `DIAMOND_BOOTS` (Botas Morfeo vía ItemEdit `botasmorfeo`): **500 Shards**
+     - Slot 29: `DIAMOND_SWORD` (Espada Morfeo vía ItemEdit `espadamorfeo`): **900 Shards**
+     - Slot 30: `BOW` (Arco Morfeo vía ItemEdit `arcomorfeo`): **750 Shards**
+     - Slot 31: `DIAMOND_PICKAXE` (Pico Morfeo vía ItemEdit `picomorfeo`): **550 Shards**
+     - Slot 32: `DIAMOND_AXE` (Hacha Morfeo vía ItemEdit `hachamorfeo`): **550 Shards**
+     - Slot 33: `DIAMOND_SHOVEL` (Pala Morfeo vía ItemEdit `palamorfeo`): **550 Shards**
+  4. **Controles y Paneles Decorativos**:
+     - Laterales de filas activas con `PURPLE_STAINED_GLASS_PANE` (slots 10, 16, 19, 25, 28, 34).
+     - Slot 45: `AMETHYST_SHARD` con lectura en tiempo real del saldo `%thundercurrencys_afkpoints%`.
+     - Slot 49: `DARK_OAK_DOOR` de salida y cristales `GRAY` / `BLACK` según el diseño original.
+
+## [2026-10-16] sandbox & itemedit | Re-sincronización y Fusión de Server Item Database (Survival -> Sandbox)
+- **Servidores Involucrados**:
+  - Origen: Servidor Survival (`ymykh9qy.575c7473`, solo lectura)
+  - Destino: Servidor Sandbox / Pruebas (`ymykh9qy.274758bd`)
+- **Modificaciones Detectadas en Survival**:
+  - Ajuste de código de color hex en los 9 ítems del **Set Morfeo** (`#9D00FD` $\rightarrow$ `#AE54F7`).
+  - Re-serialización de componentes en ítems existentes.
+- **Despliegue**:
+  - Fusión aplicada con los 121 ítems experimentales de Sandbox preservados (total 149 ítems).
+  - Archivo actualizado en Sandbox: `plugins/ItemEdit/database/server-database.yml` (388 KB).
+
+## [2026-10-16] sandbox & itemedit | Fusión y Sincronización de Server Item Database (Survival -> Sandbox)
+- **Servidores Involucrados**:
+  - Origen: Servidor Survival (`ymykh9qy.575c7473`, solo lectura)
+  - Destino: Servidor Sandbox / Pruebas (`ymykh9qy.274758bd`)
+- **Archivos Descargados / Respaldados / Desplegados**:
+  - Respaldo previo Sandbox: `sandbox-server-database-backup.yml` (140 ítems, 381 KB)
+  - Copia Survival: `survival-server-database.yml` (28 ítems, 48 KB)
+  - Desplegado en Sandbox: `plugins/ItemEdit/database/server-database.yml` (149 ítems, 388 KB)
+- **Detalle Técnico**:
+  1. **Auditoría de Diferencias**: Survival contenía 28 ítems (19 compartidos con Sandbox + 9 ítems nuevos del **Set Morfeo**: `espadamorfeo`, `arcomorfeo`, `picomorfeo`, `hachamorfeo`, `palamorfeo`, `cascomorfeo`, `pecheramorfeo`, `pantalonesmorfeo`, `botasmorfeo`). Sandbox albergaba 121 ítems RPG experimentales previos.
+  2. **Estrategia Elegida por el Sr Ramos**: Fusión aditiva (Merge). Se mantuvieron intactos los 121 ítems previos de Sandbox y se incorporaron los 9 ítems nuevos del Set Morfeo y las versiones canónicas de Survival.
+  3. **Verificación**: Total de 149 ítems verificados y cargados en `plugins/ItemEdit/database/server-database.yml` del servidor de pruebas.
+
+## [2026-10-16] creator & executableitems | Creación y Despliegue de 17 Lanas Encantadas para Desbloqueo Temporal de ChatColor (3d)
+- **Archivos Creados / Modificados**:
+  - `creator/lab/chatcolor/*.yml` (17 archivos de configuración local en [`creator/lab/chatcolor/`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/lab/chatcolor/))
+  - `creator/lab/generate_chatcolor.py` ([`creator/lab/generate_chatcolor.py`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/lab/generate_chatcolor.py))
+  - `plugins/ExecutableItems/items/ThunderMC/chatcolor_*.yml` (17 ítems desplegados en el Sandbox `ymykh9qy.274758bd`)
+  - `plugins/ChatColor2-1.15.1.jar` & `plugins/ChatColor2/*` (Instalado y sincronizado en Sandbox `ymykh9qy.274758bd` con configs de Survival)
+  - [`log.md`](file:///C:/Users/PC/Desktop/ThunderCerebro/log.md)
+- **Especificaciones Implementadas**:
+  1. **Motor de Cosmético Identificado**: `ChatColor2` versión 1.15.1 (permisos canónicos `chatcolor.color.<0-f>`, comandos `/chatcolor <player> <code>`).
+  2. **17 Lanas Encantadas Generadas (16 Códigos Base Minecraft + Magenta)**:
+     - `chatcolor_negro.yml` (`BLACK_WOOL` - &0 / `&#333333`)
+     - `chatcolor_azul_oscuro.yml` (`BLUE_WOOL` - &1 / `&#0000AA`)
+     - `chatcolor_verde_oscuro.yml` (`GREEN_WOOL` - &2 / `&#00AA00`)
+     - `chatcolor_cian.yml` (`CYAN_WOOL` - &3 / `&#00AAAA`)
+     - `chatcolor_rojo_oscuro.yml` (`RED_WOOL` - &4 / `&#AA0000`)
+     - `chatcolor_morado.yml` (`PURPLE_WOOL` - &5 / `&#AA00AA`)
+     - `chatcolor_dorado.yml` (`ORANGE_WOOL` - &6 / `&#FFAA00`)
+     - `chatcolor_gris.yml` (`LIGHT_GRAY_WOOL` - &7 / `&#AAAAAA`)
+     - `chatcolor_gris_oscuro.yml` (`GRAY_WOOL` - &8 / `&#555555`)
+     - `chatcolor_azul.yml` (`BLUE_WOOL` - &9 / `&#5555FF`)
+     - `chatcolor_verde.yml` (`LIME_WOOL` - &a / `&#55FF55`)
+     - `chatcolor_celeste.yml` (`LIGHT_BLUE_WOOL` - &b / `&#55FFFF`)
+     - `chatcolor_rojo.yml` (`RED_WOOL` - &c / `&#FF5555`)
+     - `chatcolor_rosa.yml` (`PINK_WOOL` - &d / `&#FF55FF`)
+     - `chatcolor_magenta.yml` (`MAGENTA_WOOL` - &d / `&#FF55FF`)
+     - `chatcolor_amarillo.yml` (`YELLOW_WOOL` - &e / `&#FFFF55`)
+     - `chatcolor_blanco.yml` (`WHITE_WOOL` - &f / `&#FFFFFF`)
+  3. **Desbloqueo Temporal (3 Días)**: Integración directa con LuckPerms mediante `/lp user %player% permission settemp chatcolor.color.<code> true 3d` y auto-activación instantánea del color en el chat con `/chatcolor %player% <code>`.
+  4. **Protecciones de Bloque / Lana**: Al ser bloques de lana (`*_WOOL`), se configuraron protecciones estrictas contra colocación accidental (`cancel-item-place: true`), crafteo derivado (`cancel-item-craft: true`), manipulación en yunque (`cancel-anvil: true`), consumo unitario (`usageModification: -1`) y cooldown de 6 segundos.
+  5. **Lore y Animación Bundle con Partículas**: Adaptado al estilo canónico del Sr Ramos (`<PREFIX>✔ &fColor &8▶ <COLOR> &7(3d)`, `ᴄᴏꜱᴍᴇᴛɪᴄᴏ`, `&8● &fChat: <COLOR>`, `&7(ᴛᴇᴍᴘᴏʀᴀʟ: 3 ᴅíᴀꜱ)`), cuenta regresiva de 5 segundos con ceguera, clics de bundle y percusión de nota con tono ascendente, culminando en fanfarria de victoria (`minecraft:ui.toast.challenge_complete`, `player.levelup`, fuegos artificiales) y ráfaga de 4 tipos de partículas (`FIREWORK`, `TOTEM`, `END_ROD`, `VILLAGER_HAPPY`).
+
+## [2026-10-16] creator & executableitems | Creación y Despliegue de 17 Tintes Encantados para Desbloqueo Temporal de Glow (3d)
+- **Archivos Creados / Modificados**:
+  - `creator/lab/glow/*.yml` (17 archivos de configuración local en [`creator/lab/glow/`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/lab/glow/))
+  - `plugins/ExecutableItems/items/ThunderMC/glow_*.yml` (17 archivos desplegados en el Sandbox `ymykh9qy.274758bd`)
+  - `plugins/FancyGlow-2.10.3.jar` & `plugins/FancyGlow/config.yml` (Instalado y sincronizado en Sandbox `ymykh9qy.274758bd`)
+  - [`log.md`](file:///C:/Users/PC/Desktop/ThunderCerebro/log.md)
+- **Especificaciones Implementadas**:
+  1. **Motor de Cosmético Identificado**: `FancyGlow` (permisos `fancyglow.<color>`, comandos `/glow set <player> <color>`).
+  2. **17 Colores Canónicos Generados**: Morado (`PURPLE_DYE`), Rosa (`PINK_DYE`), Rojo (`RED_DYE`), Rojo Oscuro (`NETHER_WART`), Dorado (`ORANGE_DYE`), Amarillo (`YELLOW_DYE`), Verde Lima (`LIME_DYE`), Verde Oscuro (`GREEN_DYE`), Celeste (`LIGHT_BLUE_DYE`), Cian (`CYAN_DYE`), Azul (`BLUE_DYE`), Azul Oscuro (`LAPIS_LAZULI`), Blanco (`WHITE_DYE`), Gris (`LIGHT_GRAY_DYE`), Gris Oscuro (`GRAY_DYE`), Negro (`BLACK_DYE`) y Arcoíris (`GLOWSTONE_DUST`).
+  3. **Desbloqueo Temporal (3 Días)**: Integración con LuckPerms mediante `/lp user %player% permission settemp fancyglow.<color> true 3d` y auto-equipado instantáneo con `/glow set %player% <color>`.
+  4. **Lore y Secuencia Visual**: Adaptado al estilo canónico de etiquetas del Sr Ramos (`&5✔ &fGlow &8▶ <COLOR> &7(3d)`, `ᴄᴏꜱᴍᴇᴛɪᴄᴏ`, `&8● &fBrillo: <COLOR>`, `&7(ᴛᴇᴍᴘᴏʀᴀʟ: 3 ᴅíᴀꜱ)`), con animación de bundle progresiva de 5 segundos, efectos de ceguera momentánea, fanfarria victoriosa (`minecraft:ui.toast.challenge_complete`, `player.levelup`, `firework_rocket.blast/twinkle`) y 4 tipos de partículas (`FIREWORK`, `TOTEM`, `END_ROD`, `VILLAGER_HAPPY`).
+
+## [2026-10-16] creator & executableitems | Unificación de Lore y Animación Bundle con Partículas/Victoria
+- **Archivos Modificados**:
+  - [`creator/lab/etiqueta_zzz.yml`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/lab/etiqueta_zzz.yml)
+  - [`creator/lab/etiqueta_luna.yml`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/lab/etiqueta_luna.yml)
+  - [`creator/lab/etiqueta_off.yml`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/lab/etiqueta_off.yml)
+  - `plugins/ExecutableItems/items/ThunderMC/etiqueta_zzz.yml` (Servidor Sandbox `ymykh9qy.274758bd`)
+  - `plugins/ExecutableItems/items/ThunderMC/etiqueta_luna.yml` (Servidor Sandbox `ymykh9qy.274758bd`)
+  - `plugins/ExecutableItems/items/ThunderMC/etiqueta_off.yml` (Servidor Sandbox `ymykh9qy.274758bd`)
+  - [`log.md`](file:///C:/Users/PC/Desktop/ThunderCerebro/log.md)
+- **Especificaciones Implementadas**:
+  1. **Unificación de Lore (Estilo ZzZ del Sr Ramos)**: Replicado el formato canónico `&d✔ &fEtiqueta &8▶ &d<TAG>`, sección `ᴄᴏꜱᴍᴇᴛɪᴄᴏ`, `&8● &fEtiqueta: &d<TAG>`, `&7(ᴘᴇʀᴍᴀɴᴇɴᴛᴇ)`, banner `&#008DFFRARA ⭐⭐` y footer `▶ ᴄʟɪᴄᴋ ᴅᴇʀ - ʀᴇᴄʟᴀᴍᴀʀ` en `etiqueta_luna` y `etiqueta_off`.
+  2. **Animación de Apertura Estilo Bundle**: Trasladada la secuencia progresiva de 5 etapas (`5s` a `1s`) de `bundle_recompensas_test` con efecto `minecraft:darkness`, barra de progreso tachada `[&d&m ... &r&8]`, sonidos de bundle `minecraft:item.bundle.drop_contents` y percusión `minecraft:block.note_block.hat` con pitch gradual (1.0 $\rightarrow$ 1.4).
+  3. **Efectos de Victoria**: Al completar los 50 ticks, se detona fanfarria victoriosa (`minecraft:ui.toast.challenge_complete`, `minecraft:entity.player.levelup`, `minecraft:entity.firework_rocket.blast` y `twinkle`) acompañada de ráfaga de partículas (`FIREWORK`, `TOTEM`, `END_ROD`, `VILLAGER_HAPPY`).
+  4. **Seguridad y Cooldown**: Ajustado `cooldown: 6` y `cancelEvent: true` para sincronizar con la duración de la apertura y evitar renombrados accidentales de mobs o entidades con el `NAME_TAG`.
+
+## [2026-10-16] creator & executableitems | Creación y Despliegue de 3 Etiquetas Encantadas Cosméticas (Tags)
+- **Archivos Creados / Modificados**:
+  - [`creator/lab/etiqueta_zzz.yml`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/lab/etiqueta_zzz.yml)
+  - [`creator/lab/etiqueta_luna.yml`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/lab/etiqueta_luna.yml)
+  - [`creator/lab/etiqueta_off.yml`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/lab/etiqueta_off.yml)
+  - [`creator/lab/alonsotags_tags.yml`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/lab/alonsotags_tags.yml)
+  - `plugins/ExecutableItems/items/ThunderMC/etiqueta_zzz.yml` (Servidor Sandbox `ymykh9qy.274758bd`)
+  - `plugins/ExecutableItems/items/ThunderMC/etiqueta_luna.yml` (Servidor Sandbox `ymykh9qy.274758bd`)
+  - `plugins/ExecutableItems/items/ThunderMC/etiqueta_off.yml` (Servidor Sandbox `ymykh9qy.274758bd`)
+  - `plugins/AlonsoTags/tags.yml` (Servidor Sandbox `ymykh9qy.274758bd`)
+  - [`log.md`](file:///C:/Users/PC/Desktop/ThunderCerebro/log.md)
+- **Especificaciones Implementadas**:
+  1. **Tres Objetos ExecutableItems**: Configurados con base `NAME_TAG`, efecto `glow: true`, protección anti-craft / anti-place / anti-yunque (`cancel-anvil: true`, `cancel-item-craft: true`), consumo unitario (`usageModification: -1`) y cooldown de 2 segundos.
+  2. **Tags Vinculados en AlonsoTags**: Creadas las entradas `zzz` (`&dZzZ`), `luna` (`&d☽`) y `off` (`&dᴏꜰꜰ`) con permisos `alonsotags.tag.<id>`.
+  3. **Mecánica de Desbloqueo y Animación**: Activador `PLAYER_RIGHT_CLICK` con secuencia progresiva de sonido de amatistas (`minecraft:block.amethyst_block.hit`), titles de descifrado, sonido `ui.toast.challenge_complete` + `entity.player.levelup`, partículas `END_ROD` + `TOTEM`, desbloqueo persistente vía LuckPerms (`lp user %player% permission set alonsotags.tag.<id> true`) y auto-equipado inmediato (`alonsotags set %player% <id> &d`).
+  4. **Protección Anti-Desperdicio**: Condición `ifNotHasPermission` en `playerConditions` que aborta la apertura sin consumir el ítem si el jugador ya posee la etiqueta desbloqueada.
+
+## [2026-10-16] creator & deluxemenus | Creación y Despliegue de Tienda de Puntos AFK en Servidor de Pruebas
+- **Archivos Creados / Modificados**:
+  - [`creator/lab/tienda_afk.yml`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/lab/tienda_afk.yml)
+  - [`creator/lab/deluxemenus_config.yml`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/lab/deluxemenus_config.yml)
+  - `plugins/DeluxeMenus/gui_menus/menusIA/tienda_afk.yml` (Servidor Sandbox `ymykh9qy.274758bd`)
+  - `plugins/DeluxeMenus/config.yml` (Servidor Sandbox `ymykh9qy.274758bd`)
+  - [`log.md`](file:///C:/Users/PC/Desktop/ThunderCerebro/log.md)
+- **Especificaciones Implementadas**:
+  1. **Moneda y Deducción**: Integración directa con `ThunderCurrencys` mediante deducción por consola de `/playerpoints:afk take %player_name% <costo>` y validación previa estricta con `left_click_requirement` evaluando `%thundercurrencys_afkpoints% >= <costo>`.
+  2. **Catálogo de Canje (5 filas / size: 45)**: 7 artículos balanceados de progresión y QoL (Botellas de XP x32, Bolsa de $15,000 Dinero, Manzanas Doradas x4, Llave Super x1 de ExcellentCrates, Alijo de 250 Almas, Caja Shulker Naranja x1 y Tótem de la Inmortalidad x1).
+  3. **Estándares Visuales ThunderMC**: Título canónico `&0&l|&r &0Tienda ▶ &#FFAA00Zona AFK &8(⏳)`, Header central informativo con balance del jugador, fila 4 vacía como respirador visual, botón volver con sonido `BLOCK_NOTE_BLOCK_BASS` y botón `Info_Balance` (`head-%player_name%`) con la barra multimoneda unificada completa.
+  4. **Comandos de Apertura**: Registrado bajo `/tiendaafk`, `/afkshop`, `/puntosafk` y `/canjeafk` (excluyendo intencionalmente `/afk` para evitar interceptar el comando esencial de EssentialsX).
+
+## [2026-10-16] creator & discord | Reordenamiento de Categorías en Menú Desplegable de Inicio
+- **Archivos Modificados**:
+  - [`creator/output/discord/menu_discord_thundermc.json`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/output/discord/menu_discord_thundermc.json)
+  - [`creator/lab/discord_bot/menu_discord_thundermc.json`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/lab/discord_bot/menu_discord_thundermc.json)
+  - [`log.md`](file:///C:/Users/PC/Desktop/ThunderCerebro/log.md)
+- **Especificaciones Implementadas**:
+  1. **Reubicación de Voicechat**: Ajustada la jerarquía del droplist `menu_principal` para posicionar `🎙️ Chat de Voz (Proximidad)` (posición 5) inmediatamente por encima de `🔔 Roles de Notificaciones` (posición 6).
+  2. **Despacho Verificado a Discord**: Mensaje con el nuevo orden visual enviado con éxito al canal `#embeds` (`1552723526996336724`) con ID `1560704080815460516`.
+
+## [2026-10-16] creator & discord | Incorporación de Voicechat al Menú Desplegable de Inicio
+- **Archivos Modificados**:
+  - [`creator/output/discord/menu_discord_thundermc.json`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/output/discord/menu_discord_thundermc.json)
+  - [`creator/lab/discord_bot/menu_discord_thundermc.json`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/lab/discord_bot/menu_discord_thundermc.json)
+  - [`log.md`](file:///C:/Users/PC/Desktop/ThunderCerebro/log.md)
+- **Especificaciones Implementadas**:
+  1. **Expansión a 6 Categorías**: Incorporación de la opción de Voicechat en el selector `menu_principal`:
+     - **Etiqueta**: `Chat de Voz (Proximidad)` (`value: categoria_voicechat`)
+     - **Emoji**: `🎙️`
+     - **Descripción**: `Guía y mod de voz por proximidad en el juego` (44 chars)
+  2. **Despacho Verificado a Discord**: Mensaje enviado con éxito al canal `#embeds` (`1552723526996336724`) con ID `1560703763193397300`, verificado con 6 opciones en el desplegable.
+
+## [2026-10-16] creator & discord | Incorporación de Roles de Notificaciones al Menú Desplegable de Inicio
+- **Archivos Modificados**:
+  - [`creator/output/discord/menu_discord_thundermc.json`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/output/discord/menu_discord_thundermc.json)
+  - [`creator/lab/discord_bot/menu_discord_thundermc.json`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/lab/discord_bot/menu_discord_thundermc.json)
+  - [`log.md`](file:///C:/Users/PC/Desktop/ThunderCerebro/log.md)
+- **Especificaciones Implementadas**:
+  1. **Expansión del Selector Interactivo**: Incorporación de la quinta opción en el droplist `menu_principal`:
+     - **Etiqueta**: `Roles de Notificaciones` (`value: categoria_roles`)
+     - **Emoji**: `🔔`
+     - **Descripción**: `Personaliza tus alertas y pings del servidor` (45 chars)
+  2. **Despacho Verificado a Discord**: Mensaje enviado con éxito al canal `#embeds` (`1552723526996336724`) con ID `1560703310082744455`, verificado con 5 opciones en el desplegable.
+
+## [2026-10-16] creator & discord | Remoción de Botón de Hilo y Restauración de Menú Limpio
+- **Archivos Modificados**:
+  - [`creator/output/discord/menu_discord_thundermc.json`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/output/discord/menu_discord_thundermc.json)
+  - [`creator/lab/discord_bot/menu_discord_thundermc.json`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/lab/discord_bot/menu_discord_thundermc.json)
+  - [`log.md`](file:///C:/Users/PC/Desktop/ThunderCerebro/log.md)
+- **Especificaciones Implementadas**:
+  1. **Remoción de Botón**: Eliminación de la fila de componentes con el botón de hilo temporal de normativa, restaurando la estructura de Action Row única con el selector interactivo `menu_principal`.
+  2. **Limpieza en Servidor Discord**: Eliminación del hilo temporal `📜・normativa-y-reglas` (`1560701647523553462`) vía API.
+  3. **Despacho Verificado a Discord**: Mensaje con diseño depurado enviado con éxito al canal `#embeds` (`1552723526996336724`) con ID `1560702585286172925`.
+
+## [2026-10-16] creator & discord | Botón de Enlace Directo a Hilo de Reglas en Embed de Inicio
+- **Archivos Modificados**:
+  - [`creator/output/discord/menu_discord_thundermc.json`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/output/discord/menu_discord_thundermc.json)
+  - [`creator/lab/discord_bot/menu_discord_thundermc.json`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/lab/discord_bot/menu_discord_thundermc.json)
+  - [`log.md`](file:///C:/Users/PC/Desktop/ThunderCerebro/log.md)
+- **Especificaciones Implementadas**:
+  1. **Creación y Publicación del Hilo de Normativa**: Creación del hilo público `📜・normativa-y-reglas` (ID `1560701647523553462`) en `#embeds` con publicación del embed oficial de reglas generales de Minecraft y Discord (`1560701684986945678`).
+  2. **Integración de Botón de Enlace Directo**: Inserción de una segunda Action Row (`type: 1`) en el embed de inicio con un botón URL nativo (`type: 2, style: 5`) apuntando directamente a `https://discord.com/channels/1552715004669726802/1560701647523553462` para transporte inmediato del usuario en 1 clic.
+  3. **Despacho Verificado a Discord**: Mensaje con Select Menu + Botón de Hilo enviado con éxito al canal `#embeds` (`1552723526996336724`) con ID `1560701857591075050`.
+
+## [2026-10-16] creator & discord | Despacho de Embed de Inicio (Menú Principal) a #embeds-final
+- **Archivos Modificados**:
+  - [`creator/output/discord/menu_discord_thundermc.json`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/output/discord/menu_discord_thundermc.json)
+  - [`log.md`](file:///C:/Users/PC/Desktop/ThunderCerebro/log.md)
+- **Especificaciones Implementadas**:
+  1. **Despacho a Canal Definitivo**: Envío del Embed de Inicio (Menú Principal de Bienvenida con GIF animado de Mojang `Mojang_GIF_by_Minecraft_1.gif`, bloque 1-click copy IP `thundermc.es` y selector desplegable interactivo `menu_principal` de 4 categorías) directamente al canal `#embeds-final` (`1559234333980758116`).
+  2. **Verificación de Entrega**: Mensaje entregado y verificado en la API de Discord con ID `1560691930264903792`.
+
+## [2026-10-16] creator & discord | Actualización de Roles con GIF Chicken Pig (Xbox)
+- **Archivos Modificados**:
+  - [`creator/output/discord/roles_discord_thundermc.json`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/output/discord/roles_discord_thundermc.json)
+  - [`creator/output/discord/roles_notificaciones.json`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/output/discord/roles_notificaciones.json)
+  - [`creator/lab/discord_bot/roles_discord_thundermc.json`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/lab/discord_bot/roles_discord_thundermc.json)
+  - [`creator/lab/discord_bot/roles_notificaciones.json`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/lab/discord_bot/roles_notificaciones.json)
+  - [`creator/output/renders/Chicken_Pig_GIF_by_Xbox.gif`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/output/renders/Chicken_Pig_GIF_by_Xbox.gif)
+  - [`log.md`](file:///C:/Users/PC/Desktop/ThunderCerebro/log.md)
+- **Especificaciones Implementadas**:
+  1. **Actualización Visual de Roles**: Sustitución del GIF anterior por la animación oficial `Chicken_Pig_GIF_by_Xbox.gif` (533x300 px), conservando el thumbnail de campana dorada y el menú desplegable multiselección con los 6 roles.
+  2. **Persistencia Local**: Descarga y preservación local del GIF en [`creator/output/renders/Chicken_Pig_GIF_by_Xbox.gif`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/output/renders/Chicken_Pig_GIF_by_Xbox.gif) (1.18 MB).
+  3. **Despacho Verificado a Discord**: Mensaje enviado con éxito al canal `#embeds` (`1552723526996336724`) con ID `1560689785914265692`.
+
+## [2026-10-16] creator & discord | Integración de GIF Animado en Embed de Tienda (Tebex)
+- **Archivos Modificados**:
+  - [`creator/output/discord/tebex_purchase_embed.json`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/output/discord/tebex_purchase_embed.json)
+  - [`creator/lab/discord_bot/tebex_purchase_embed.json`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/lab/discord_bot/tebex_purchase_embed.json)
+  - [`creator/output/renders/Under_Attack_Supplies_GIF_by_Xbox.gif`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/output/renders/Under_Attack_Supplies_GIF_by_Xbox.gif)
+  - [`log.md`](file:///C:/Users/PC/Desktop/ThunderCerebro/log.md)
+- **Especificaciones Implementadas**:
+  1. **Actualización Visual del Embed de Tienda**: Sustitución del banner por el GIF animado de suministros de Xbox (`Under_Attack_Supplies_GIF_by_Xbox.gif`, 480x270 px) manteniendo el thumbnail dinámico de Minotar (`https://minotar.net/bust/{player}/100`) y el botón URL directo a la tienda oficial (`https://tienda.thundermc.es/`).
+  2. **Persistencia Local**: Descarga y preservación local del GIF en [`creator/output/renders/Under_Attack_Supplies_GIF_by_Xbox.gif`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/output/renders/Under_Attack_Supplies_GIF_by_Xbox.gif) (6.64 MB).
+  3. **Despacho Verificado a Discord**: Mensaje enviado con éxito al canal `#embeds` (`1552723526996336724`) con ID `1560689057414250540`.
+
+## [2026-10-16] creator & discord | Integración de GIF Animado en Menú Principal
+- **Archivos Modificados**:
+  - [`creator/output/discord/menu_discord_thundermc.json`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/output/discord/menu_discord_thundermc.json)
+  - [`creator/lab/discord_bot/menu_discord_thundermc.json`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/lab/discord_bot/menu_discord_thundermc.json)
+  - [`creator/output/renders/Mojang_GIF_by_Minecraft_1.gif`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/output/renders/Mojang_GIF_by_Minecraft_1.gif)
+  - [`creator/output/renders/minecraft_compass_transparent.png`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/output/renders/minecraft_compass_transparent.png)
+  - [`log.md`](file:///C:/Users/PC/Desktop/ThunderCerebro/log.md)
+- **Especificaciones Implementadas**:
+  1. **Actualización Visual del Menú Principal**: Reemplazo de la imagen estática de campamento por el GIF animado de Mojang (`Mojang_GIF_by_Minecraft_1.gif`, 480x270 px) preservando el bloque 1-click copy de IP `thundermc.es` y el selector interactivo de 4 categorías.
+  2. **Persistencia Local**: Descarga y preservación del GIF en [`creator/output/renders/Mojang_GIF_by_Minecraft_1.gif`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/output/renders/Mojang_GIF_by_Minecraft_1.gif) (2.12 MB) y del thumbnail de la brújula en [`creator/output/renders/minecraft_compass_transparent.png`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/output/renders/minecraft_compass_transparent.png).
+  3. **Despacho Verificado a Discord**: Mensaje enviado con éxito al canal `#embeds` (`1552723526996336724`) con ID `1560688057487982624`.
+
+## [2026-10-16] creator & discord | Integración de GIF Animado en Embed de Voicechat
+- **Archivos Modificados**:
+  - [`creator/output/discord/voicechat_setup_embed.json`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/output/discord/voicechat_setup_embed.json)
+  - [`creator/lab/discord_bot/voicechat_setup_embed.json`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/lab/discord_bot/voicechat_setup_embed.json)
+  - [`creator/output/renders/Scared_No_Way_GIF_by_Minecraft.gif`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/output/renders/Scared_No_Way_GIF_by_Minecraft.gif)
+  - [`log.md`](file:///C:/Users/PC/Desktop/ThunderCerebro/log.md)
+- **Especificaciones Implementadas**:
+  1. **Actualización Visual de Voicechat**: Reemplazo del banner estático por el GIF animado de Minecraft (`Scared_No_Way_GIF_by_Minecraft.gif`, 480x270 px) manteniendo el thumbnail de micrófono y el botón de enlace de descarga para Simple Voice Chat en Modrinth.
+  2. **Persistencia Local**: Descarga y preservación del GIF en [`creator/output/renders/Scared_No_Way_GIF_by_Minecraft.gif`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/output/renders/Scared_No_Way_GIF_by_Minecraft.gif) (1.60 MB).
+  3. **Despacho Verificado a Discord**: Mensaje enviado con éxito al canal `#embeds` (`1552723526996336724`) con ID `1560687552225214487`.
+
+## [2026-10-16] creator & discord | Despacho de Embeds Canónicos y Actualización de Roles con GIF Animado
+- **Archivos Modificados**:
+  - [`creator/output/discord/roles_discord_thundermc.json`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/output/discord/roles_discord_thundermc.json)
+  - [`creator/output/discord/roles_notificaciones.json`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/output/discord/roles_notificaciones.json)
+  - [`creator/lab/discord_bot/roles_discord_thundermc.json`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/lab/discord_bot/roles_discord_thundermc.json)
+  - [`creator/lab/discord_bot/roles_notificaciones.json`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/lab/discord_bot/roles_notificaciones.json)
+  - [`creator/output/renders/Whats_Up_Waiting_GIF_by_Minecraft.gif`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/output/renders/Whats_Up_Waiting_GIF_by_Minecraft.gif)
+  - [`log.md`](file:///C:/Users/PC/Desktop/ThunderCerebro/log.md)
+- **Especificaciones Implementadas**:
+  1. **Despacho Inicial de la Suite Canónica**: Envío secuencial y verificación en canal `#embeds` (`1552723526996336724`) de los 5 embeds principales: Voicechat (`1560677750468116614`), Tienda Tebex (`1560677761205669938`), Sorteos (`1560677766595088425`), Sugerencias (`1560677769250340925`) y Roles (`1560677773570342982`).
+  2. **Integración de GIF en Embed de Roles**: Sustitución del banner estático de campamento por el GIF oficial animado de Minecraft (`Whats_Up_Waiting_GIF_by_Minecraft.gif`, 480x270 px) preservando el thumbnail de campana dorada y el selector desplegable multiselección.
+  3. **Persistencia Local**: Descarga y preservación local del GIF en [`creator/output/renders/Whats_Up_Waiting_GIF_by_Minecraft.gif`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/output/renders/Whats_Up_Waiting_GIF_by_Minecraft.gif) (1.54 MB).
+  4. **Despacho Verificado a Discord**: Mensaje enviado con éxito al canal `#embeds` con ID `1560684674819563662`.
+
+## [2026-10-15] noera & tools | Implementación de Auto-Actualización de Noera vía ZIP (v1.3.0)
+- **Archivos Modificados**:
+  - [`Noera/_app/server.ps1`](file:///C:/Users/PC/Desktop/ThunderCerebro/Noera/_app/server.ps1)
+  - [`Noera/_app/app.js`](file:///C:/Users/PC/Desktop/ThunderCerebro/Noera/_app/app.js)
+  - [`Noera/_app/changelog.json`](file:///C:/Users/PC/Desktop/ThunderCerebro/Noera/_app/changelog.json)
+  - [`log.md`](file:///C:/Users/PC/Desktop/ThunderCerebro/log.md)
+- **Especificaciones Implementadas**:
+  1. **Botón "Actualizar Noera con ZIP"**:
+     - Integración del botón `🚀 Actualizar Noera con ZIP` en la cabecera del visor de código de Noera (`renderNoeraCodeView` en `app.js`).
+     - Activación directa del modal unificado de sustitución rápida de ZIP adaptado al core (`target: '__noera__'`).
+  2. **Validación Estricta de Nombre**:
+     - Validación en cliente y servidor para admitir exclusivamente `Noera-Software-Source.zip` (o `Noera.zip`). Cualquier otro archivo es rechazado de inmediato.
+  3. **Respaldo Automático Previo al Despliegue**:
+     - Antes de alterar o sobrescribir archivos del software operativo, `server.ps1` empaqueta en memoria el estado actual de `_app/` y `iniciar-noera.bat` y lo guarda en `.history/_noera/backup_<timestamp>_Noera-Software-Source.zip`.
+  4. **Sustitución en Caliente y Recarga Segura**:
+     - Descompresión en directorio temporal aislado con detección inteligente de estructura (soporta ZIPs con carpeta `_app/` directa o con carpeta contenedora raíz).
+     - Sobrescritura atómica de los archivos de `_app/` y `iniciar-noera.bat`, preservando la persistencia de `metadata.json`.
+     - Registro cronológico en `metadata.json` bajo la categoría especial `_noera`.
+     - Pestaña interactiva **"🛡️ Historial de Backups"** en el panel de Noera con descarga directa de respaldos anteriores.
+     - Recarga automática de la aplicación en el navegador al completar la sustitución.
+  5. **Despliegue Manual y Reinicio de Proceso (v1.3.0 Completo)**:
+     - Ingesta directa del ZIP `C:\Users\PC\OneDrive\Escritorio\descargas\Noera-Software-Source.zip`.
+     - Respaldo preventivo guardado en `Noera/.history/_noera/backup_pre_manual_update.zip`.
+     - Sustitución de `app.js`, `app.css`, `index.html`, `server.ps1`, `changelog.json`, `iniciar-noera.bat`, `_LEEME.md`, `_REVISION.md` y suite `_tests/`.
+     - Reinicio del proceso PowerShell del servidor HTTP para cargar en memoria la nueva lógica y el endpoint `POST /api/noera/update-zip`.
+     - Verificación de respuesta HTTP 200 en `http://127.0.0.1:7710/` y validación del endpoint de auto-actualización.
+
+## [2026-10-15] noera & tools | Módulo "Código de Noera" y Despliegue por ZIP con Etiqueta "Update" (v1.2.0)
+- **Archivos Modificados**:
+  - [`Noera/_app/server.ps1`](file:///C:/Users/PC/Desktop/ThunderCerebro/Noera/_app/server.ps1)
+  - [`Noera/_app/app.js`](file:///C:/Users/PC/Desktop/ThunderCerebro/Noera/_app/app.js)
+  - [`Noera/_app/app.css`](file:///C:/Users/PC/Desktop/ThunderCerebro/Noera/_app/app.css)
+  - [`Noera/_app/index.html`](file:///C:/Users/PC/Desktop/ThunderCerebro/Noera/_app/index.html)
+  - [`Noera/_app/metadata.json`](file:///C:/Users/PC/Desktop/ThunderCerebro/Noera/_app/metadata.json) (Nuevo)
+  - [`Noera/_app/changelog.json`](file:///C:/Users/PC/Desktop/ThunderCerebro/Noera/_app/changelog.json) (Nuevo)
+  - [`log.md`](file:///C:/Users/PC/Desktop/ThunderCerebro/log.md)
+- **Especificaciones Implementadas**:
+  1. **Apartado "Código de Noera" en Barra Lateral**:
+     - Botón dedicado en la barra de herramientas lateral con icono representativo para acceder en cualquier momento al panel del software Noera.
+     - Botón permanente y prioritario **"Descargar ZIP del Código"** que empaqueta todo el software (`_app/` y script de arranque) en memoria y entrega `Noera-Software-Source.zip`.
+     - Pestaña **"Archivos en Tiempo Real"**: Visor reactivo e interactivo que inspecciona los 5 archivos del core (`server.ps1`, `app.js`, `app.css`, `index.html`, `iniciar-noera.bat`), con conteo de líneas, peso, fecha de modificación y botón para copiar código al portapapeles.
+     - Pestaña **"Cambios Realizados (Estilo GitHub)"**: Registro cronológico estructurado de versiones y commits (hashes `#c4d7e9b`, `#8f3b2a1`, `#1a09d4e`), autoría (Sr Ramos & Beacon), badges clasificatorios (`feat`, `security`, `fix`) y desglose de cada mejora técnica.
+  2. **Sistema de Etiquetado "Update" para Carpetas**:
+     - Botón y opción en menú contextual para alternar la etiqueta **"Update"** en cualquier carpeta de Noera.
+     - Badges visuales distintivos (`[Update]`) visibles en el árbol lateral, tarjetas del panel de inicio y cabeceras de navegación.
+     - Persistencia de metadatos de configuración en `Noera/_app/metadata.json`.
+  3. **Despliegue Rápido en Caliente por ZIP ("Actualizar ZIP")**:
+     - Disponibilidad permanente del ZIP completo actualizado de la carpeta para descarga directa antes de editar en programas externos.
+     - Modal de actualización rápida con drag-and-drop o selector de archivos.
+     - **Validación Estricta Anti-Error**: Validación rigurosa de formato (`.zip`) y coincidencia exacta del nombre con la carpeta de destino (`<nombre_carpeta>.zip`). Si el archivo no es un ZIP o tiene otro nombre, el sistema rechaza la subida inmediatamente impidiendo corrupciones.
+     - **Backup Automático y Versionado Estilo GitHub**: Antes de tocar o sustituir los archivos en producción, el backend crea un respaldo del estado actual en `Noera/.history/<carpeta>/backup_<timestamp>_<nombre>.zip`.
+     - **Sustitución en Vivo**: Extracción del nuevo ZIP y sustitución inmediata de los archivos en funcionamiento, permitiendo actualizar proyectos externos al instante ("d1 con un zip").
+     - **Historial de Despliegues en la Carpeta**: Panel interactivo con cada actualización realizada, peso de archivos subidos, fecha y botón para descargar cualquier respaldo histórico en caso de rollback.
+
+## [2026-10-15] noera & tools | Implementación de Descarga de Carpetas en ZIP en Noera
+- **Archivos Modificados**:
+  - [`Noera/_app/server.ps1`](file:///C:/Users/PC/Desktop/ThunderCerebro/Noera/_app/server.ps1)
+  - [`Noera/_app/app.js`](file:///C:/Users/PC/Desktop/ThunderCerebro/Noera/_app/app.js)
+  - [`log.md`](file:///C:/Users/PC/Desktop/ThunderCerebro/log.md)
+- **Especificaciones Implementadas**:
+  1. **Motor de Compresión Asíncrono en Backend**: Integración de ensamblados `.NET` (`System.IO.Compression` y `System.IO.Compression.FileSystem`) en `server.ps1`. Creación de la rutina recursiva `Write-FolderToZip`, la cual empaqueta en memoria (`MemoryStream`) todas las subcarpetas y archivos permitidos, filtrando automáticamente elementos ocultos (`Test-Hidden`, `.papelera`, `_app`, etc.).
+  2. **Endpoint Seguro `GET /api/zip`**: Implementación del endpoint con soporte de autenticación vía cabecera `X-Noera-Token` y query param `token`. Entrega de cabecera `Content-Disposition: attachment; filename="<nombre>.zip"` con tipo MIME `application/zip`.
+  3. **Integración en Interfaz de Usuario (UI)**:
+     - **Barra Superior**: Botón "Descargar ZIP" dinámico en la barra de acciones superior tanto al navegar dentro de cualquier carpeta como en la vista raíz de Noera.
+     - **Visor de Carpeta y Resumen**: Botón de descarga en las acciones principales (`hero-actions`) del visor de carpeta y del panel principal.
+     - **Menú Contextual**: Opción "Descargar como ZIP" al hacer clic derecho sobre cualquier carpeta en el árbol lateral.
+  4. **Gestión de Descargas en Cliente**: Función `downloadZip(dirPath)` que solicita la compresión al servidor, muestra toasts de progreso, genera un Blob URL temporal y dispara la descarga en el navegador sin recargar la página.
+
+## [2026-10-15] tebex & noera | Reanudación de Correcciones Tebex Theme V3 y Migración a Noera/ThunderMC
+- **Archivos Modificados**:
+  - [`Noera/ThunderMC/Tebex Theme V3/`](file:///C:/Users/PC/Desktop/ThunderCerebro/Noera/ThunderMC/Tebex%20Theme%20V3/) (Carpeta migrada)
+  - [`Noera/ThunderMC/Tebex Theme V3/package.html`](file:///C:/Users/PC/Desktop/ThunderCerebro/Noera/ThunderMC/Tebex%20Theme%20V3/package.html)
+  - [`Noera/ThunderMC/Tebex Theme V3/Assets/function.productModal.js`](file:///C:/Users/PC/Desktop/ThunderCerebro/Noera/ThunderMC/Tebex%20Theme%20V3/Assets/function.productModal.js)
+  - [`Noera/ThunderMC/Tebex Theme V3/checkout.html`](file:///C:/Users/PC/Desktop/ThunderCerebro/Noera/ThunderMC/Tebex%20Theme%20V3/checkout.html)
+  - [`Noera/ThunderMC/Tebex Theme V3/Assets/style.css`](file:///C:/Users/PC/Desktop/ThunderCerebro/Noera/ThunderMC/Tebex%20Theme%20V3/Assets/style.css)
+  - [`Noera/ThunderMC/Tebex Theme V3/index.html`](file:///C:/Users/PC/Desktop/ThunderCerebro/Noera/ThunderMC/Tebex%20Theme%20V3/index.html)
+  - [`Noera/ThunderMC/Tebex Theme V3/preview_server.js`](file:///C:/Users/PC/Desktop/ThunderCerebro/Noera/ThunderMC/Tebex%20Theme%20V3/preview_server.js) (Nuevo)
+  - [`Noera/ThunderMC/Tebex Theme V3/start-preview.bat`](file:///C:/Users/PC/Desktop/ThunderCerebro/Noera/ThunderMC/Tebex%20Theme%20V3/start-preview.bat) (Nuevo)
+  - [`log.md`](file:///C:/Users/PC/Desktop/ThunderCerebro/log.md)
+- **Especificaciones Implementadas**:
+  1. **Migración de Carpeta de Tema**: Traslado de `Tebex Theme V3` a la categoría `Noera/ThunderMC/` conforme a la directiva del Sr Ramos.
+  2. **Resolución Deficiencia F07 (Autenticación en Modal de Paquete)**:
+     - Extracción de `data-cart-modal-login="true"` fuera del atributo `class` en los botones de checkout directo y añadir al carrito en `package.html`.
+     - Actualización de los manejadores de eventos en `package.html` y `Assets/function.productModal.js` para cerrar el diálogo del paquete e invocar directamente el modal reactivo moderno `window.tzOpenLoginModal()`, eliminando el selector inerte hacia `#modal-login`.
+  3. **Resolución Deficiencia F08 (Mitigación de Fraude en Gifting Inerte)**: Desactivación preventiva del toggle de regalo a amigos en `package.html`, el cual inyectaba un parámetro `?username=` ignorado por el backend de Tebex y causaba que las compras se adjudicaran erróneamente a la cuenta compradora.
+  4. **Resolución Deficiencia F03 (Doble Listener de Cantidad en Checkout)**: Eliminación de la clase `qty-count` en `checkout.html`, suprimiendo la colisión entre el script general de checkout y el controlador especializado que provocaba saltos de cantidad de 1 a 3 en un solo clic.
+  5. **Resolución Deficiencia F38 (Cumplimiento Legal de Checkout Tebex)**: Reemplazo de la regla supresora `display: none !important` sobre `tebex-footer` en `Assets/style.css` por `display: block !important`, garantizando visibilidad de los avisos legales y de facturación exigidos por los Términos de Servicio de Tebex.
+  6. **Resolución Deficiencia F34 (Metadatos Open Graph)**: Inclusión de la etiqueta canónica `<meta property="og:url" content="{{ store.webstore_url }}">` en `layout.html`.
+  7. **Resolución Deficiencia F56 (Anidación HTML en Hero Slider)**: Cierre explícito del contenedor `tzHeroSlider` antes de finalizar la sección de viewport en `index.html`.
+  8. **Resolución Deficiencias F54 & F55 (Selector de Cantidad Condicional y Cupones en Checkout)**:
+     - Ocultación de controles `+`/`-` cuando el paquete tiene `disableQuantity: true` en `checkout.html`.
+     - Soporte interactivo y visualización con opción de remoción para cupones de descuento aplicados.
+  9. **Servidor de Preview Autónomo**: Creación de `preview_server.js` (cero dependencias de npm) y `start-preview.bat`, arrancando el entorno en vivo en `http://localhost:3000` con despacho de modales AJAX (`/package/:id`), carrito interactivo y assets completos.
+
+## [2026-10-15] wiki & proxy | Ingesta de Documentación Oficial de nLogin y Análisis Forense de IPs/Cuentas
+- **Archivos Modificados**:
+  - [`raw/nlogin_docs_wiki.md`](file:///C:/Users/PC/Desktop/ThunderCerebro/raw/nlogin_docs_wiki.md) (Nuevo)
+  - [`wiki/sources/nlogin-official-docs.md`](file:///C:/Users/PC/Desktop/ThunderCerebro/wiki/sources/nlogin-official-docs.md) (Nuevo)
+  - [`wiki/entities/thundermc/core-infrastructure/nlogin.md`](file:///C:/Users/PC/Desktop/ThunderCerebro/wiki/entities/thundermc/core-infrastructure/nlogin.md) (Nuevo)
+  - [`index.md`](file:///C:/Users/PC/Desktop/ThunderCerebro/index.md)
+  - [`log.md`](file:///C:/Users/PC/Desktop/ThunderCerebro/log.md)
+- **Especificaciones Implementadas**:
+  1. **Ingesta de Documentación Oficial**: Procesamiento exhaustivo de `https://docs.nickuc.com/` cubriendo arquitectura multi-plataforma (Velocity/Bungee/Paper), comandos administrativos, control de sesiones y esquema relacional en MariaDB/MySQL.
+  2. **Resolución de IP por Nick**: Identificación de los mecanismos nativos `/nlogin verify <jugador>`, `/nlogin dupeip <jugador>` y consulta directa SQL a la columna `last_ip` de la tabla `nlogin`.
+  3. **Protocolo de Purga por IP**: Determinación de ausencia de comando nativo `deleteip`. Definición del flujo operativo en 2 vías: (a) `/nlogin dupeip <IP>` + `/nlogin delete <jugador>` o `/nlogin unregister <jugador>`, y (b) borrado transaccional SQL en cascada (`nlogin_data` + `nlogin`) seguido de `/nlogin reload`.
+  4. **Red Teaming & Riesgos Fatales**: Análisis de impacto por colisiones en CGNAT/redes compartidas, pérdida permanente de UUID con `/nlogin delete`, y desincronización de memoria por sesiones activas en caché.
+
+## [2026-10-14] skills & prompting | Creación de la Skill Maestra "Maestro de Prompts" (maestro-prompts)
+- **Archivos Modificados**:
+  - [`.agents/skills/maestro-prompts/SKILL.md`](file:///C:/Users/PC/Desktop/ThunderCerebro/.agents/skills/maestro-prompts/SKILL.md) (Nuevo)
+  - [`.agents/skills/maestro-prompts/references/matriz-tecnicas.md`](file:///C:/Users/PC/Desktop/ThunderCerebro/.agents/skills/maestro-prompts/references/matriz-tecnicas.md) (Nuevo)
+  - [`.agents/skills/maestro-prompts/examples/plantillas-maestras.md`](file:///C:/Users/PC/Desktop/ThunderCerebro/.agents/skills/maestro-prompts/examples/plantillas-maestras.md) (Nuevo)
+  - [`skills/maestro-prompts/SKILL.md`](file:///C:/Users/PC/Desktop/ThunderCerebro/skills/maestro-prompts/SKILL.md) (Nuevo)
+  - [`skills/maestro-prompts/references/matriz-tecnicas.md`](file:///C:/Users/PC/Desktop/ThunderCerebro/skills/maestro-prompts/references/matriz-tecnicas.md) (Nuevo)
+  - [`skills/maestro-prompts/examples/plantillas-maestras.md`](file:///C:/Users/PC/Desktop/ThunderCerebro/skills/maestro-prompts/examples/plantillas-maestras.md) (Nuevo)
+  - [`skills/README.md`](file:///C:/Users/PC/Desktop/ThunderCerebro/skills/README.md)
+  - [`index.md`](file:///C:/Users/PC/Desktop/ThunderCerebro/index.md)
+  - [`log.md`](file:///C:/Users/PC/Desktop/ThunderCerebro/log.md)
+- **Especificaciones Implementadas**:
+  1. **Síntesis Integral de 10 Fuentes Canónicas**: Consolidación técnica de Chip Huyen (AI Engineering), The Prompt Report (Schulhoff et al.), Chain-of-Thought (Wei et al.), Self-Consistency (Wang et al.), Tree-of-Thoughts y ReAct (Yao et al.), APE (Zhou et al.), Berryman & Ziegler (Prompt Engineering for LLMs), Phoenix & Taylor (Five Principles) y Guías Oficiales de Anthropic, OpenAI y Google Gemini.
+  2. **Protocolo Hexagonal de Forja (6 Fases)**: Metodología estricta de producción que abarca Triaje de Labor (Divide Labor), Partición de Dominios (XML canónico), Motor Cognitivo (CoT/ToT/ReAct/Directo), In-Context Learning (Few-Shot/Negative Examples), Answer Engineering (Anti-chatter, JSON/Prefill) y Red Teaming con Evaluación SOMA.
+  3. **Módulos de Referencia y Ejemplos de Grado Producción**: Adición de matriz de trade-offs por tipo de tarea (`references/matriz-tecnicas.md`) y 4 plantillas listas para producción (`examples/plantillas-maestras.md`: RAG Anti-Alucinación, Agente ReAct, Razonamiento CoT con Scratchpad y Clasificador de Ultra-Baja Latencia).
+
+## [2026-10-14] creator & prompts | Incorporación de Síntesis Cruzada de Prompting y Evals a Maestro de Prompts
+- **Archivos Modificados**:
+  - [`creator/lab/Maestro de prompts/principios-clave-prompting-wikis-google-learnprompting-promptingguide-anthropic-openai.md`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/lab/Maestro%20de%20prompts/principios-clave-prompting-wikis-google-learnprompting-promptingguide-anthropic-openai.md) (Nuevo)
+  - [`log.md`](file:///C:/Users/PC/Desktop/ThunderCerebro/log.md)
+- **Especificaciones Implementadas**:
+  1. **Transferencia de Fuente Técnica**: Integración de la síntesis unificada de 6 fuentes canónicas (Google Gemini, Learn Prompting, DAIR.AI Prompt Engineering Guide, Anthropic Claude, OpenAI Prompt Engineering y OpenAI Evals) en `creator/lab/Maestro de prompts/`.
+  2. **Contenido Clave Catalogado**: Principios transversales de prompting, técnicas avanzadas de razonamiento (CoT, Least-to-Most, ReAct, Self-Consistency), estructuración por etiquetas XML/Markdown, directrices de evaluación sistemática (Evals) y mitigación de fallos en producción.
+
+## [2026-10-14] creator & prompts | Incorporación de "Prompt Engineering for Generative AI" (Phoenix & Taylor) a Maestro de Prompts
+- **Archivos Modificados**:
+  - [`creator/lab/Maestro de prompts/principios-clave-prompt-engineering-for-generative-ai-phoenix-taylor.md`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/lab/Maestro%20de%20prompts/principios-clave-prompt-engineering-for-generative-ai-phoenix-taylor.md) (Nuevo)
+  - [`log.md`](file:///C:/Users/PC/Desktop/ThunderCerebro/log.md)
+- **Especificaciones Implementadas**:
+  1. **Transferencia de Fuente Técnica**: Integración directa del documento condensado de James Phoenix y Mike Taylor (*Prompt Engineering for Generative AI*, O'Reilly, 2024) en el repositorio de trabajo `creator/lab/Maestro de prompts/`.
+  2. **Contenido Clave Catalogado**: Principios rectores del marco ("Five Principles of Prompting": Direction, Format, Examples, Evaluate Quality, Divide Labor), reducción de modos de fallo, pipelines de prompting por etapas y taxonomía de técnicas de inferencia y evaluación.
+
+## [2026-10-14] wiki & sources | Ingesta y Desglose de "Prompt Engineering for LLMs" (Berryman & Ziegler)
+- **Archivos Modificados**:
+  - [`wiki/sources/prompt-engineering-for-llms-berryman-ziegler.md`](file:///C:/Users/PC/Desktop/ThunderCerebro/wiki/sources/prompt-engineering-for-llms-berryman-ziegler.md) (Nuevo)
+  - [`index.md`](file:///C:/Users/PC/Desktop/ThunderCerebro/index.md)
+  - [`log.md`](file:///C:/Users/PC/Desktop/ThunderCerebro/log.md)
+- **Especificaciones Implementadas**:
+  1. **Ingesta y Extracción de Núcleo Técnico**: Procesamiento del libro *Prompt Engineering for LLMs: The Art and Science of Building* (O'Reilly, 2023/2024) escrito por John Berryman y Albert Ziegler (ingenieros fundacionales de GitHub Copilot).
+  2. **Modelos Mentales Formalizados**: Desglose del Principio de Caperucita Roja (Little Red Riding Hood), Prompting como Dramaturgia (Playwriting/Inception), Inercia de Tokens y no aditividad en BPE.
+  3. **Arquitectura del Loop y Feedforward Pass**: Separación estricta entre dominio de usuario y dominio de modelo, pipeline de fragmentación en snippets, discriminación de Priorities (enteros discretos) vs. Scores (flotantes continuos).
+  4. **Algoritmos de Triaje y Ensamblaje**: Modelado de optimización de mochila (Knapsack) en ensamblaje de prompts con enfoques Greedy Aditivo y Greedy Sustractivo, manejo de dependencias de código y snippets elásticos.
+  5. **Doma de Completado y Logprobs**: Taxonomía de preámbulos (estructural, CoT, fluff), técnicas de parada determinista por subcadena, clasificación ultra-barata en 1 token y detección de puntos críticos con `echo=True`.
+  6. **Agencia y Flujos Multi-Agente**: Principio de partición del dominio para tools, herramienta finish en ReAct, workflows deterministas vs dirigidos por LLMs y agentes de tareas con estado permanente.
+  7. **Framework de Evaluación SOMA**: Adopción de la lección fundacional de GitHub Copilot ("evaluar antes de construir") y formalización del estándar SOMA (Specific, Ordinal, Multi-Aspect, Aligned).
+
 ## [2026-10-12] creator & plugins | Implementación del Sistema de Huevos y Misiones de Cuidado en ThunderPets
 - **Archivos Modificados**:
   - [`creator/lab/thunderpets/src/main/java/com/thunderstudios/pets/egg/PetEgg.java`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/lab/thunderpets/src/main/java/com/thunderstudios/pets/egg/PetEgg.java) (Nuevo)
@@ -3134,4 +3603,89 @@ Registro cronológico e incremental de todas las operaciones realizadas en **Thu
   - **Plugins Custom (1 guía)**: `EnderChestPlus`, `RankUp`, `ValyrTutorial`, `ThunderMines`.
 - **Actualizados**: `index.md`, `log.md`.
 - **Métricas Clave**: 74 JARs activos analizados, 16 `.dis` auditados, 41 documentos técnicos compilados con diagramas Mermaid, sintaxis de comandos, permisos, variables PAPI, optimizaciones Paper 1.21.11 y mitigación de vulnerabilidades/exploits.
+
+---
+
+## [2026-10-19] synthesis & creator | Compendio Maestro de ExecutableItems (EI) y Resolución de Bugs
+- **Módulo**: `ExecutableItems` (Premium v7.26.5.17), `SCore` (v5.26.5.17), `ThunderCerebro/creator/output/ExecutableItems_Compendio_Completo_ThunderMC.md`
+- **Trabajo Realizado**:
+  1. **Compilación de Conocimiento**: Extracción y estructuración integral de la arquitectura declarativa de ExecutableItems sobre el PersistentDataContainer (PDC) de Paper/Purpur 1.21.11.
+  2. **Registro de Pruebas Realizadas**: Consolidación técnica de las bundles interactivas en mano (v5.1, 5 calidades, MEGA-RANDOM de 1.000 pesos, cinemática de 50 ticks, preview en DeluxeMenus y pity system), viales de almas (`vialdealmas`), bolsas de dinero (`bolsadedinero`), cosméticos (`etiqueta_*`, tintes y lanas) y frutas de mazmorras.
+  3. **Documentación del Bug del Escudo / Tótem**: Análisis y registro forense de los 4 problemas tratados en `escudoigneo.yml`, `escudoreyvital.yml`, `escudoviviente.yml` y `totemturco.yml`:
+     - *Bug 1 (Muerte residual instantánea)*: Mitigado con `SET_HEALTH 6` y `minecraft:resistance 5 4` durante 5s.
+     - *Bug 2 (Consumo en safezones/WorldGuard)*: Mitigado con `noActivatorRunIfTheEventIsCancelled: true`.
+     - *Bug 3 (Desync Offhand)*: Resuelto mediante `detailedSlots: [-1, 40]`.
+     - *Bug 4 (Conflicto de bloqueo vanilla)*: Deshabilitación de `blockAttacksFeatures` y `weaponFeatures`.
+  4. **Matriz de Decisión Operativa**: Criterios de evaluación para determinar el momento óptimo de migración desde ExecutableItems hacia un plugin custom propio (`ThunderBundles.jar`).
+
+---
+
+## [2026-10-19] creator & prompt-engineering | Compilación de System Prompt: Senior Minecraft Plugin Developer (ThunderMC)
+- **Módulo**: `skills/maestro-prompts`, `ThunderCerebro/creator/output/Prompt_Desarrollador_Plugins_Minecraft_ThunderMC.md`
+- **Trabajo Realizado**:
+  1. **Compilación de Sistema de Instrucciones**: Compilado un system prompt de nivel 4 (Producción y Resiliencia) para forzar al modelo destino a operar como Ingeniero Senior de Software especializado en Bukkit/Paper 1.21.11 con Java 21 LTS.
+  2. **Anclaje al Ecosistema ThunderMC**: Integración de directivas estrictas para Paper API, Adventure Component API (MiniMessage), PersistentDataContainer (PDC), Vault, PlayerPoints, PlaceholderAPI, WorldGuard y compatibilidad con configs de DeluxeMenus.
+  3. **Control de Concurrencia y Fallos**: Reglas innegociables contra saturación de MSPT (prohibición de I/O síncrono en el Main Thread), prevención de fugas de memoria (prohibición de referencias `Player` retenidas en colecciones), y mitigación de dupes en inventarios y race conditions en transacciones de economía.
+  4. **Entregables**: Estructura canónica A (Prompt compilado), B (Arquitectura), C (Evaluación en rúbrica), D (Red Teaming de riesgos residuales) y E (Recomendación de uso).
+
+---
+
+## [2026-10-19] creator & prompt-engineering | Compilación Maestra: ThunderShields (Prompt Maestro v2.0)
+- **Módulo**: `skills/maestro-prompts`, `creator/output/Prompt_Maestro_ThunderShields_Compilado.md`, `C:\Users\PC\OneDrive\Escritorio\descargas\Prompt_Maestro_ThunderShields_Compilado.md`
+- **Fuentes Auditadas e Integradas**:
+  - `ThunderShields-0.1.0-PILOT.jar` y `ThunderShields-proyecto-fuente.zip` (Código fuente y limitaciones de compilación con dev-stubs).
+  - `Fix Esudos/server-database.yml` (Censo exhaustivo de las 14 variantes de escudos de ItemEdit).
+  - Los 4 archivos YAML canónicos (`escudoigneo.yml`, `escudoreyvital.yml`, `escudoviviente.yml`, `totemturco.yml`).
+  - `Prompt_Maestro_ThunderShields (1).md` (Borrador original).
+- **Trabajo Realizado**:
+  1. **Censo y Mapeo Completo**: Identificadas las 14 variantes exactas en circulación (11 derivadas de `totemturco`, 1 de `escudoreyvital`, 1 de `escudoviviente`, 1 de `escudoigneo`), explicitando cuáles poseen atributos y encantamientos de ItemEdit que deben preservarse.
+  2. **Resolución Atómica del Bug de Resurrección**: Formalizado el contrato de dos pasos en Paper 1.21.11 (`HIGHEST` para validación y snapshot $\rightarrow$ `MONITOR` para consumo con `isSimilar()`), eliminando el fallo histórico de ExecutableItems ante combos rápidos + crítico letal.
+  3. **Dualidad Operativa (Compatibilidad vs Conversión)**: Definido el modo de lectura directa del PDC legacy (`executableitems:ei-id`) y el esquema de migración idempotente a PDC propio (`thundershields:shield_id`).
+  4. **Auditoría de Red Team**: Alerta sobre la inviabilidad de subir el JAR PILOT a producción por estar enlazado contra dev-stubs, necesidad de recompilación con Gradle contra repo oficial de Paper, y protocolo de neutralización de `PLAYER_BEFORE_DEATH` en ExecutableItems.
+
+---
+
+## [2026-10-19] deploy & sandbox | Despliegue de ThunderShields-1.0.0-PAPER.jar en Servidor de Pruebas
+- **Módulo**: `plugins/ThunderShields-1.0.0-PAPER.jar`, Servidor Sandbox (`ymykh9qy.274758bd`)
+- **Trabajo Realizado**:
+  1. **Compilación Limpia**: Recompilado el proyecto fuente contra `paper-api.jar` (Paper 1.21.11) y JDK 21 LTS local (`javac 21.0.2`), eliminando cualquier traza de dev-stubs simulados.
+  2. **Transferencia SFTP**: Subido `ThunderShields-1.0.0-PAPER.jar` (7.330 bytes) al directorio `plugins/` de Sandbox con éxito.
+  3. **Configuración de Seguridad**: Por defecto el plugin se inicializa con `resurrection.enabled: false` y `legacy-resurrection.enabled: false` hasta que se verifique la neutralización de los activadores `PLAYER_BEFORE_DEATH` en ExecutableItems.
+
+---
+
+## [2026-10-19] config & fix | Neutralización de Activadores EI y Activación de ThunderShields (Sandbox)
+- **Módulo**: `plugins/ThunderShields/config.yml`, `plugins/ExecutableItems/items/ThunderMC/{totemturco,escudoigneo,escudoreyvital,escudoviviente}.yml`, Servidor Sandbox (`ymykh9qy.274758bd`)
+- **Trabajo Realizado**:
+  1. **Activación de ThunderShields**: Configurado `resurrection.enabled: true`, `legacy-resurrection.enabled: true` y `diagnostics.log-resurrections: true` en `plugins/ThunderShields/config.yml`.
+  2. **Neutralización Quirúrgica en ExecutableItems**: Vaciado el bloque de activadores (`activators: {}`) en las 4 familias canónicas de escudos (`totemturco.yml`, `escudoigneo.yml`, `escudoreyvital.yml`, `escudoviviente.yml`). Se preservan íntegros todos los metadatos PDC (`executableitems:ei-id`), materiales, nombres y lore.
+  3. **Despliegue SFTP**: Subidos los 5 archivos modificados al servidor Sandbox con éxito.
+
+---
+
+## [2026-10-19] feat & deploy | ThunderShields v1.1.0 con Hook a WorldGuard y Diagnóstico Forense
+- **Módulo**: `plugins/ThunderShields-1.1.0-PAPER.jar`, Servidor Sandbox (`ymykh9qy.274758bd`)
+- **Trabajo Realizado**:
+  1. **Hook Desacoplado a WorldGuard 7.x**: Desarrollada la clase `WorldGuardHook` consultando `RegionContainer`, `RegionQuery` y `LocalPlayer` para flags `keep-inventory` (WorldGuardExtraFlags/custom) e `invincibility`. Previene el consumo innecesario de escudos en zonas protegidas o safezones de PvP.
+  2. **Mejora Forense de UX en Comandos**:
+     - `/thundershields inspect`: Diagnóstico integral detallando mano (`OFF_HAND`/`MAIN_HAND`), nombre, estado de familia, ID crudo de PDC, modificadores de atributos de ItemEdit (`AttributeModifier` de vida/armadura), encantamientos, mundo/región actual y veredicto formal de resurrección (`AUTORIZADA` vs `BLOQUEADA POR POLÍTICA`).
+     - `/thundershields status`: Banner con estado de servicios, hook de WorldGuard y familias soportadas.
+  3. **Compilación y Despliegue**: Compilado limpiamente con Java 21 LTS y Paper API 1.21.11, empaquetado como `ThunderShields-1.1.0-PAPER.jar` (11.922 bytes) y desplegado en Sandbox sustituyendo a la versión 1.0.0.
+
+---
+
+## [2026-10-19] perf & opt | Eliminación de I/O Síncrono en Consola para Alta Concurrencia
+- **Módulo**: `plugins/ThunderShields/config.yml`, `ThunderShields.java`, Servidor Sandbox (`ymykh9qy.274758bd`)
+- **Trabajo Realizado**:
+  1. **Análisis de Rendimiento (Red Team)**: Cada llamada a `getLogger().info()` en el hilo principal (`Server Thread`) invoca el pipeline síncrono de Log4j2, escritura en `latest.log` y retransmisión de websockets en paneles de hosting, degradando el MSPT ante muertes simultáneas en PvP/Mazmorras.
+  2. **Desactivación Incondicional por Defecto**: Cambiado el valor por defecto de `diagnostics.log-resurrections` a `false` tanto en el código fuente de `ThunderShields.java` como en `config.yml`.
+  3. **Compilación y Despliegue**: Recompilado y resubido el JAR y la config a Sandbox, garantizando cero llamadas de I/O en consola durante las resurrecciones normales.
+
+
+
+
+
+
+
+
 

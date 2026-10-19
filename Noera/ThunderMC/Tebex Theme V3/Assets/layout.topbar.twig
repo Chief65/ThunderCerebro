@@ -1,0 +1,151 @@
+﻿{% if config("category_navigation") == "topbar" or not config("category_navigation") %}
+{% set searchWithoutLogging %}
+    {% if config("searchOnStore") == "disabled" %}
+        {% if not basket.ign %}
+            data-login-category data-izimodal-open="#modal-login"
+        {% endif %}
+    {% endif %}
+{% endset %}
+
+<style>
+  /* ══════════════════════════════════════════════════════════════════
+     TOPBAR NAVIGATION CATEGORY PILLS (Clean / Anti-Slop)
+     ══════════════════════════════════════════════════════════════════ */
+  .triplezone__second--nav {
+    position: relative;
+    max-width: 1360px;
+    margin: 0 auto;
+    padding: 14px 28px 24px 28px;
+    z-index: 10;
+  }
+
+  .second__nav--list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    flex-wrap: wrap;
+  }
+
+  .list__second--nav {
+    position: relative;
+  }
+
+  .list__second__category--link {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    padding: 9px 18px;
+    background: rgba(15, 23, 42, 0.65);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 10px;
+    color: #94a3b8;
+    font-size: 13.5px;
+    font-weight: 600;
+    text-decoration: none;
+    letter-spacing: 0.2px;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .list__second__category--link:hover {
+    color: #f8fafc;
+    background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(250, 204, 21, 0.3);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
+  }
+
+  .list__second--nav.active-dropdown .list__second__category--link,
+  .list__second--nav.active .list__second__category--link {
+    background: linear-gradient(135deg, rgba(250, 204, 21, 0.16) 0%, rgba(250, 204, 21, 0.04) 100%);
+    border-color: rgba(250, 204, 21, 0.55);
+    color: #facc15;
+    box-shadow: 0 4px 16px rgba(250, 204, 21, 0.15), inset 0 1px 1px rgba(255, 255, 255, 0.2);
+  }
+
+  .list__second__category--link .carret {
+    font-size: 14px;
+    transition: transform 0.2s ease;
+  }
+
+  .triplezone__second--toggle-dropdown:hover .carret {
+    transform: rotate(180deg);
+  }
+
+  /* Subdropdown */
+  .triplezone__second--dropdown {
+    position: absolute;
+    top: calc(100% + 6px);
+    left: 0;
+    min-width: 180px;
+    background: #0f172a;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 6px;
+    list-style: none;
+    display: none;
+    flex-direction: column;
+    gap: 4px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6);
+    z-index: 100;
+  }
+
+  .triplezone__second--toggle-dropdown:hover .triplezone__second--dropdown {
+    display: flex;
+    animation: tzDropdownFade 0.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  }
+
+  @keyframes tzDropdownFade {
+    from { opacity: 0; transform: translateY(-4px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .triplezone__second--dropdown a {
+    display: block;
+    padding: 8px 12px;
+    color: #94a3b8;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 500;
+    border-radius: 6px;
+    transition: all 0.15s ease;
+  }
+
+  .triplezone__second--dropdown a:hover {
+    color: #facc15;
+    background: rgba(250, 204, 21, 0.08);
+  }
+</style>
+
+<div class="triplezone__second--nav">
+    <ul class="second__nav--list">
+        {% for category in store.categories %}
+        {% if category.subcategories|length > 0 %}
+        <li class="triplezone__second--toggle-dropdown list__second--nav {% if category.active %}active-dropdown{% endif %}">
+            <a href="javascript:void(0);" class="dropdown-toggle__second list__second__category--link" data-category-image="{{ category.id }}">{{ category.name|escape }} <i
+                    class="mdi mdi-chevron-down carret"></i></a>
+            <ul class="triplezone__second--dropdown">
+                {% for subcategory in category.subcategories %}
+                <li {{ searchWithoutLogging | raw }}><a href="/category/{{ subcategory.id }}">{{ subcategory.name|escape }}</a></li>
+                {% endfor %}
+            </ul>
+        </li>
+        {% else %}
+        <li class="list__second--nav {% if category.active %}active-dropdown{% endif %}" {{ searchWithoutLogging| raw }}>
+            <a href="/category/{{ category.id }}" class="list__second__category--link" data-category-image="{{ category.id }}">{{ category.name|escape }}</a>
+        </li>
+        {% endif %}
+        {% endfor %}
+        {% for page in store.pages %}
+        <li class="list__second--nav {% if page.active %}active-dropdown{% endif %}">
+            <a href="/{{ page.slug|escape }}" class="list__second__category--link" data-category-image="{{ page.slug|escape }}"> {{ page.title|escape }}</a>
+        </li>
+        {% endfor %}
+    </ul>
+</div>
+{% endif %}

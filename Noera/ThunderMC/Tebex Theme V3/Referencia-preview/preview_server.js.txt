@@ -1,0 +1,345 @@
+const http = require('http');
+const fs = require('fs');
+const path = require('path');
+const url = require('url');
+
+const PORT = 3000;
+const THEME_DIR = __dirname;
+const ASSETS_DIR = path.join(THEME_DIR, 'Assets');
+
+// Estado interactivo en memoria
+let sessionUser = 'Jordan'; // Usuario por defecto autenticado en preview
+let basketItems = [
+    { id: 1, name: 'RANGO LITE', price: 4.99, quantity: 1, disableQuantity: true },
+    { id: 4, name: 'PASE DE TEMPORADA MITICO', price: 9.99, quantity: 1, disableQuantity: true }
+];
+
+const mockPackages = {
+    '1': {
+        id: 1,
+        name: 'Rango LITE',
+        price: 4.99,
+        type: 'single',
+        image: { url: '/Assets/lite.png' },
+        description: `
+            <div class="tz-modal-perks">
+                <h4 style="color:#facc15;font-family:'Plus Jakarta Sans',sans-serif;margin-top:0;font-size:18px;">⚡ BENEFICIOS DEL RANGO LITE</h4>
+                <ul style="list-style:none;padding:0;margin:0 0 20px 0;display:flex;flex-direction:column;gap:10px;">
+                    <li style="display:flex;align-items:center;gap:8px;color:#f1f5f9;font-weight:600;"><span style="color:#4ade80;">✓</span> <strong>Prefijo [LITE]</strong> en el chat y tabulador.</li>
+                    <li style="display:flex;align-items:center;gap:8px;color:#f1f5f9;font-weight:600;"><span style="color:#4ade80;">✓</span> <strong>Kit LITE Mensual:</strong> Armadura y herramientas básicas de diamante reforzado.</li>
+                    <li style="display:flex;align-items:center;gap:8px;color:#f1f5f9;font-weight:600;"><span style="color:#4ade80;">✓</span> <strong>+2 Homes</strong> adicionales (/sethome).</li>
+                    <li style="display:flex;align-items:center;gap:8px;color:#f1f5f9;font-weight:600;"><span style="color:#4ade80;">✓</span> Prioridad media al entrar al servidor en horas pico.</li>
+                </ul>
+            </div>
+        `
+    },
+    '2': {
+        id: 2,
+        name: 'Rango STAR',
+        price: 9.99,
+        type: 'single',
+        image: { url: '/Assets/star.png' },
+        description: `
+            <div class="tz-modal-perks">
+                <h4 style="color:#facc15;font-family:'Plus Jakarta Sans',sans-serif;margin-top:0;font-size:18px;">⭐ BENEFICIOS DEL RANGO STAR</h4>
+                <ul style="list-style:none;padding:0;margin:0 0 20px 0;display:flex;flex-direction:column;gap:10px;">
+                    <li style="display:flex;align-items:center;gap:8px;color:#f1f5f9;font-weight:600;"><span style="color:#4ade80;">✓</span> <strong>Todos los beneficios LITE</strong> incluidos.</li>
+                    <li style="display:flex;align-items:center;gap:8px;color:#f1f5f9;font-weight:600;"><span style="color:#4ade80;">✓</span> <strong>Comando /fly</strong> en parcelas de construcción y granjas protegidas.</li>
+                    <li style="display:flex;align-items:center;gap:8px;color:#f1f5f9;font-weight:600;"><span style="color:#4ade80;">✓</span> <strong>+5 Homes</strong> adicionales.</li>
+                    <li style="display:flex;align-items:center;gap:8px;color:#f1f5f9;font-weight:600;"><span style="color:#4ade80;">✓</span> <strong>Acceso a Minas Especiales</strong> de minerales densos.</li>
+                </ul>
+            </div>
+        `
+    },
+    '3': {
+        id: 3,
+        name: 'Rango MEGA',
+        price: 19.99,
+        type: 'single',
+        image: { url: '/Assets/mega.png' },
+        description: `
+            <div class="tz-modal-perks">
+                <h4 style="color:#facc15;font-family:'Plus Jakarta Sans',sans-serif;margin-top:0;font-size:18px;">👑 BENEFICIOS DEL RANGO MEGA</h4>
+                <ul style="list-style:none;padding:0;margin:0 0 20px 0;display:flex;flex-direction:column;gap:10px;">
+                    <li style="display:flex;align-items:center;gap:8px;color:#f1f5f9;font-weight:600;"><span style="color:#4ade80;">✓</span> <strong>Todos los beneficios STAR</strong> incluidos.</li>
+                    <li style="display:flex;align-items:center;gap:8px;color:#f1f5f9;font-weight:600;"><span style="color:#4ade80;">✓</span> <strong>Kit MEGA Quincenal:</strong> Armadura Netherite Encantada y manzanas de oro.</li>
+                    <li style="display:flex;align-items:center;gap:8px;color:#f1f5f9;font-weight:600;"><span style="color:#4ade80;">✓</span> <strong>Acceso VIP a Dungeons Tier 3</strong> con multiplicador de almas.</li>
+                    <li style="display:flex;align-items:center;gap:8px;color:#f1f5f9;font-weight:600;"><span style="color:#4ade80;">✓</span> <strong>Slots ilimitados</strong> en subastas de jugadores (/ah).</li>
+                </ul>
+            </div>
+        `
+    },
+    '4': {
+        id: 4,
+        name: 'Pase de Temporada Mítico',
+        price: 9.99,
+        type: 'single',
+        image: { url: '/Assets/pase_temporada.webp' },
+        description: `
+            <div class="tz-modal-perks">
+                <h4 style="color:#facc15;font-family:'Plus Jakarta Sans',sans-serif;margin-top:0;font-size:18px;">⚔️ PASE DE BATALLA TEMPORADA 1</h4>
+                <p style="color:#cbd5e1;font-size:14px;">Desbloquea 100 niveles de recompensas cosméticas exclusivas, llaves míticas y potenciadores de XP.</p>
+            </div>
+        `
+    }
+};
+
+const mimeTypes = {
+    '.html': 'text/html; charset=utf-8',
+    '.css': 'text/css; charset=utf-8',
+    '.js': 'application/javascript; charset=utf-8',
+    '.png': 'image/png',
+    '.jpg': 'image/jpeg',
+    '.jpeg': 'image/jpeg',
+    '.webp': 'image/webp',
+    '.svg': 'image/svg+xml',
+    '.ico': 'image/x-icon',
+    '.woff2': 'font/woff2',
+    '.woff': 'font/woff',
+    '.ttf': 'font/ttf'
+};
+
+function readFileSafe(filePath) {
+    try {
+        if (fs.existsSync(filePath)) {
+            return fs.readFileSync(filePath, 'utf8');
+        }
+    } catch (e) {}
+    return '';
+}
+
+function renderTemplate(templatePath, context) {
+    let raw = readFileSafe(templatePath);
+    if (!raw) return '';
+
+    // Manejar extends
+    const extendsMatch = raw.match(/\{%\s*extends\s*["']([^"']+)["']\s*%\}/);
+    if (extendsMatch) {
+        const parentName = extendsMatch[1];
+        let parentContent = '';
+        if (parentName === 'layout.html') {
+            parentContent = readFileSafe(path.join(THEME_DIR, 'layout.html'));
+        } else if (parentName === 'config.twig') {
+            parentContent = raw.replace(extendsMatch[0], '');
+        }
+
+        if (parentContent) {
+            // Extraer block content
+            const childBlockMatch = raw.match(/\{%\s*block\s+content\s*%\}([\s\S]*?)\{%\s*endblock\s*%\}/);
+            const childContent = childBlockMatch ? childBlockMatch[1] : '';
+
+            raw = parentContent.replace(/\{%\s*block\s+content\s*%\}(?:[\s\S]*?)\{%\s*endblock\s*%\}/, childContent);
+            raw = raw.replace(/\{%\s*extends\s*["'][^"']+["']\s*%\}/g, '');
+            raw = raw.replace(/\{%\s*block\s+layout\s*%\}/g, '').replace(/\{%\s*endblock\s*%\}/g, '');
+        }
+    }
+
+    // Resolver includes recursivos de partials en Assets/
+    let maxIncludePasses = 5;
+    while (maxIncludePasses > 0 && /\{%\s*include\s+['"]([^'"]+)['"](?:\s+ignore\s+missing)?\s*%\}/.test(raw)) {
+        raw = raw.replace(/\{%\s*include\s+['"]([^'"]+)['"](?:\s+ignore\s+missing)?\s*%\}/g, (match, incPath) => {
+            const possiblePaths = [
+                path.join(ASSETS_DIR, incPath),
+                path.join(THEME_DIR, incPath),
+                path.join(ASSETS_DIR, incPath.replace(/\.twig$/, '') + '.twig')
+            ];
+            for (let p of possiblePaths) {
+                if (fs.existsSync(p)) return fs.readFileSync(p, 'utf8');
+            }
+            return '';
+        });
+        maxIncludePasses--;
+    }
+
+    // Config helpers
+    raw = raw.replace(/\{\{\s*config\((['"])(.*?)\1\)\s*\}\}/g, (m, q, key) => {
+        const configs = {
+            'theme-color': '#facc15',
+            'site-description': 'Tienda Oficial de ThunderMC - Minecraft 1.21.11 RPG & Network',
+            'og-image': '/Assets/spawn_bg.png',
+            'serverType': 'Minecraft',
+            'server-ip': 'thundermc.es',
+            'server-port': '25565',
+            'discord_id': '1171683',
+            'discord_invite': 'https://discord.gg/thundermc',
+            'language': 'es'
+        };
+        return configs[key] !== undefined ? configs[key] : '';
+    });
+
+    // Asset helper
+    raw = raw.replace(/\{\{\s*asset\((['"])(.*?)\1\)\s*\}\}/g, '/Assets/$2');
+
+    // Store variables
+    raw = raw.replace(/\{\{\s*store\.name\s*\}\}/g, 'ThunderMC');
+    raw = raw.replace(/\{\{\s*store\.webstore_url\s*\}\}/g, 'http://localhost:' + PORT);
+    raw = raw.replace(/\{\{\s*store\.favicon\s*\}\}/g, '/Assets/favicon.png');
+    raw = raw.replace(/\{\{\s*store\.logo\s*\}\}/g, '/Assets/thunder_logo.png');
+    raw = raw.replace(/\{\{\s*store\.useCheckout\s*\}\}/g, 'true');
+
+    // Basket variables
+    const totalPrice = basketItems.reduce((sum, item) => sum + (item.price * item.quantity), 0).toFixed(2);
+    raw = raw.replace(/\{\{\s*basket\.price\|money\s*\}\}/g, totalPrice);
+    raw = raw.replace(/\{\{\s*basket\.currency\s*\}\}/g, 'EUR');
+    raw = raw.replace(/\{\{\s*basket\.packages\|length\s*\}\}/g, String(basketItems.length));
+    raw = raw.replace(/\{\{\s*basket\.ident\s*\}\}/g, 'preview-session-ident');
+
+    // Basket IGN handling
+    if (sessionUser) {
+        raw = raw.replace(/\{%\s*if\s+basket\.ign\s*%\}([\s\S]*?)(?:\{%\s*else\s*%\}([\s\S]*?))?\{%\s*endif\s*%\}/g, '$1');
+        raw = raw.replace(/\{%\s*if\s+not\s+basket\.ign\s*%\}([\s\S]*?)(?:\{%\s*else\s*%\}([\s\S]*?))?\{%\s*endif\s*%\}/g, '$2');
+        raw = raw.replace(/\{\{\s*basket\.ign\s*\}\}/g, sessionUser);
+    } else {
+        raw = raw.replace(/\{%\s*if\s+basket\.ign\s*%\}([\s\S]*?)(?:\{%\s*else\s*%\}([\s\S]*?))?\{%\s*endif\s*%\}/g, '$2');
+        raw = raw.replace(/\{%\s*if\s+not\s+basket\.ign\s*%\}([\s\S]*?)(?:\{%\s*else\s*%\}([\s\S]*?))?\{%\s*endif\s*%\}/g, '$1');
+        raw = raw.replace(/\{\{\s*basket\.ign\s*\}\}/g, '');
+    }
+
+    // Limpiar comentarios Twig y tags residuales
+    raw = raw.replace(/\{#[\s\S]*?#\}/g, '');
+    raw = raw.replace(/\{%[\s\S]*?%\}/g, '');
+    raw = raw.replace(/\{\{[\s\S]*?\}\}/g, '');
+
+    return raw;
+}
+
+const server = http.createServer((req, res) => {
+    const parsedUrl = url.parse(req.url, true);
+    const pathname = parsedUrl.pathname;
+
+    // Servir Assets estáticos
+    if (pathname.startsWith('/Assets/')) {
+        const relativeAsset = pathname.replace(/^\/Assets\//, '');
+        const assetPath = path.join(ASSETS_DIR, decodeURIComponent(relativeAsset));
+        if (fs.existsSync(assetPath) && fs.statSync(assetPath).isFile()) {
+            const ext = path.extname(assetPath).toLowerCase();
+            const ctype = mimeTypes[ext] || 'application/octet-stream';
+            res.writeHead(200, { 'Content-Type': ctype, 'Cache-Control': 'no-cache' });
+            fs.createReadStream(assetPath).pipe(res);
+            return;
+        } else {
+            res.writeHead(404, { 'Content-Type': 'text/plain' });
+            res.end('Asset not found: ' + relativeAsset);
+            return;
+        }
+    }
+
+    // Ruta de modal de paquete AJAX: /package/:id
+    const packageMatch = pathname.match(/^\/package\/(\d+)/);
+    if (packageMatch) {
+        const pkgId = packageMatch[1];
+        const pkg = mockPackages[pkgId] || {
+            id: pkgId,
+            name: 'Paquete #' + pkgId,
+            price: 7.49,
+            type: 'single',
+            image: { url: '/Assets/cat_icon_bag.png' },
+            description: '<p>Paquete oficial de ThunderMC activado de inmediato.</p>'
+        };
+
+        let pkgHtml = readFileSafe(path.join(THEME_DIR, 'package.html'));
+        pkgHtml = pkgHtml.replace(/\{\{\s*package\.name\s*\}\}/g, pkg.name);
+        pkgHtml = pkgHtml.replace(/\{\{\s*package\.price\|money\s*\}\}/g, Number(pkg.price).toFixed(2));
+        pkgHtml = pkgHtml.replace(/\{\{\s*package\.price\s*\}\}/g, Number(pkg.price).toFixed(2));
+        pkgHtml = pkgHtml.replace(/\{\{\s*package\.id\s*\}\}/g, String(pkg.id));
+        pkgHtml = pkgHtml.replace(/\{\{\s*package\.type\s*\}\}/g, pkg.type);
+        pkgHtml = pkgHtml.replace(/\{\{\s*package\.image\.url\s*\}\}/g, pkg.image.url);
+        pkgHtml = pkgHtml.replace(/\{\{\s*package\.description\|raw\s*\}\}/g, pkg.description);
+        pkgHtml = pkgHtml.replace(/\{\{\s*basket\.currency\s*\}\}/g, 'EUR');
+        pkgHtml = pkgHtml.replace(/\{\{\s*currencySymbol\s*\}\}/g, '€');
+        
+        if (sessionUser) {
+            pkgHtml = pkgHtml.replace(/\{%\s*if\s+not\s+basket\.ign\s*%\}.*?\{%\s*endif\s*%\}/gs, '');
+            pkgHtml = pkgHtml.replace(/\{\{\s*ignName\s*\}\}/g, sessionUser);
+        } else {
+            pkgHtml = pkgHtml.replace(/\{%\s*if\s+not\s+basket\.ign\s*%\}/g, '').replace(/\{%\s*endif\s*%\}/g, '');
+            pkgHtml = pkgHtml.replace(/\{\{\s*ignName\s*\}\}/g, 'Invitado');
+        }
+
+        pkgHtml = pkgHtml.replace(/\{#[\s\S]*?#\}/g, '');
+        pkgHtml = pkgHtml.replace(/\{%[\s\S]*?%\}/g, '');
+        pkgHtml = pkgHtml.replace(/\{\{[\s\S]*?\}\}/g, '');
+
+        res.writeHead(200, { 'Content-Type': 'text/html; charset=utf-8' });
+        res.end(pkgHtml);
+        return;
+    }
+
+    // Ruta de agregar al carrito: /checkout/packages/add/:id/:action
+    const addMatch = pathname.match(/^\/checkout\/packages\/add\/(\d+)/);
+    if (addMatch) {
+        const id = parseInt(addMatch[1], 10);
+        const pkg = mockPackages[String(id)] || { id: id, name: 'Paquete #' + id, price: 9.99 };
+        const existing = basketItems.find(i => i.id === id);
+        if (existing) {
+            existing.quantity++;
+        } else {
+            basketItems.push({ id: id, name: pkg.name, price: pkg.price, quantity: 1, disableQuantity: true });
+        }
+        res.writeHead(302, { 'Location': '/checkout' });
+        res.end();
+        return;
+    }
+
+    // Ruta de eliminar del carrito
+    const removeMatch = pathname.match(/^\/checkout\/packages\/remove\/(\d+)/);
+    if (removeMatch) {
+        const id = parseInt(removeMatch[1], 10);
+        basketItems = basketItems.filter(i => i.id !== id);
+        res.writeHead(302, { 'Location': '/checkout' });
+        res.end();
+        return;
+    }
+
+    // Login interactivo
+    if (pathname === '/login' && req.method === 'POST') {
+        let body = '';
+        req.on('data', chunk => { body += chunk; });
+        req.on('end', () => {
+            const params = new URLSearchParams(body);
+            sessionUser = params.get('ign') || params.get('username') || 'Jordan';
+            res.writeHead(302, { 'Location': '/' });
+            res.end();
+        });
+        return;
+    }
+
+    if (pathname === '/login/logout') {
+        sessionUser = null;
+        res.writeHead(302, { 'Location': '/' });
+        res.end();
+        return;
+    }
+
+    // Ruta Checkout
+    if (pathname === '/checkout') {
+        const html = renderTemplate(path.join(THEME_DIR, 'checkout.html'), {});
+        res.writeHead(200, { 'Content-Type': 'text/html; charset=utf-8' });
+        res.end(html);
+        return;
+    }
+
+    // Ruta Portada /
+    if (pathname === '/' || pathname === '/index.html') {
+        const html = renderTemplate(path.join(THEME_DIR, 'index.html'), {});
+        res.writeHead(200, { 'Content-Type': 'text/html; charset=utf-8' });
+        res.end(html);
+        return;
+    }
+
+    // Páginas CMS
+    if (pathname === '/terms' || pathname === '/privacy' || pathname === '/help' || pathname === '/about') {
+        const html = renderTemplate(path.join(THEME_DIR, 'cmspage.html'), {});
+        res.writeHead(200, { 'Content-Type': 'text/html; charset=utf-8' });
+        res.end(html);
+        return;
+    }
+
+    // 404
+    res.writeHead(404, { 'Content-Type': 'text/plain; charset=utf-8' });
+    res.end('Página no encontrada en el preview de ThunderMC');
+});
+
+server.listen(PORT, '127.0.0.1', () => {
+    console.log(`[ThunderMC Tebex Preview] Servidor activo en http://localhost:${PORT}`);
+});

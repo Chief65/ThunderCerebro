@@ -1,0 +1,488 @@
+{% set loadingAnimation %}<div class="login-loader" style="display:none"><div class="loader"></div></div>{% endset %}
+
+{% if config("serverType") == "Minecraft" %}
+<style>
+  /* ══════════════════════════════════════════════════════════════════
+     THUNDERMC LOGIN MODAL (PREMIUM NICKNAME & PLATFORM SELECTOR)
+     ══════════════════════════════════════════════════════════════════ */
+  .tz-login-modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(4, 7, 13, 0.85);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    z-index: 99999;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    box-sizing: border-box;
+    animation: tzFadeInModal 0.2s ease-out;
+  }
+  .tz-login-modal-overlay.is-active {
+    display: flex !important;
+  }
+  @keyframes tzFadeInModal {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+  .tz-login-modal-box {
+    background: #090d16 !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    border-radius: 24px !important;
+    padding: 36px 32px !important;
+    text-align: center !important;
+    box-sizing: border-box !important;
+    box-shadow: 0 24px 70px rgba(0, 0, 0, 0.85) !important;
+    position: relative !important;
+    max-width: 440px !important;
+    width: 100% !important;
+    animation: tzPopModal 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  @keyframes tzPopModal {
+    from { transform: scale(0.95) translateY(10px); opacity: 0; }
+    to { transform: scale(1) translateY(0); opacity: 1; }
+  }
+
+  .tz-login-close-btn {
+    position: absolute;
+    top: 18px;
+    right: 18px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #94a3b8;
+    cursor: pointer;
+    font-size: 18px;
+    transition: all 0.15s ease;
+  }
+  .tz-login-close-btn:hover {
+    background: rgba(239, 68, 68, 0.2);
+    color: #ef4444;
+    border-color: rgba(239, 68, 68, 0.4);
+    transform: rotate(90deg);
+  }
+
+  .tz-login-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    margin-bottom: 20px;
+  }
+  .tz-login-logo {
+    height: 48px;
+    width: auto;
+    object-fit: contain;
+    margin-bottom: 2px;
+  }
+  .tz-login-title {
+    font-family: 'Plus Jakarta Sans', 'Montserrat', sans-serif;
+    font-size: 22px;
+    font-weight: 800;
+    color: #ffffff;
+    letter-spacing: -0.3px;
+    margin: 0;
+    text-transform: uppercase;
+  }
+  .tz-login-subtitle {
+    font-family: 'Be Vietnam Pro', sans-serif;
+    font-size: 13px;
+    color: #94a3b8;
+    margin: 0;
+    line-height: 1.5;
+  }
+
+  /* Pestañas de Plataforma (Java Edition / Bedrock) */
+  .tz-platform-tabs {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 14px;
+    padding: 5px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+  }
+  .tz-tab-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 10px 12px;
+    background: transparent;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    color: #94a3b8;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  .tz-tab-btn i { font-size: 16px; }
+  .tz-tab-btn.is-active {
+    background: #0d121f;
+    border-color: rgba(250, 204, 21, 0.4);
+    color: #facc15;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.4);
+  }
+
+  /* Render Busto 3D en Vivo */
+  .tz-login-avatar-preview {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 95px;
+    margin-bottom: 18px;
+    position: relative;
+  }
+  .tz-login-avatar-img {
+    height: 90px;
+    width: auto;
+    object-fit: contain;
+    image-rendering: pixelated;
+    filter: drop-shadow(0 8px 18px rgba(0, 0, 0, 0.7));
+    transition: transform 0.2s ease;
+  }
+
+  /* Campo de Texto con Prefijo Bedrock dinámico */
+  .tz-login-input-group {
+    position: relative;
+    width: 100%;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+  }
+  .tz-login-bedrock-prefix {
+    display: none;
+    position: absolute;
+    left: 44px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 14.5px;
+    font-weight: 800;
+    color: #38bdf8;
+    pointer-events: none;
+    z-index: 2;
+  }
+  .tz-login-bedrock-prefix.is-visible {
+    display: block;
+  }
+  .tz-login-input {
+    width: 100%;
+    background: #0d121f;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 12px;
+    padding: 14px 16px 14px 44px;
+    color: #ffffff;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 14.5px;
+    font-weight: 700;
+    outline: none;
+    box-sizing: border-box;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease, padding-left 0.2s ease;
+  }
+  .tz-login-input.has-prefix {
+    padding-left: 58px;
+  }
+  .tz-login-input:focus {
+    border-color: #facc15;
+    box-shadow: 0 0 0 3px rgba(250, 204, 21, 0.15);
+  }
+  .tz-login-input-icon {
+    position: absolute;
+    left: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #64748b;
+    font-size: 20px;
+    pointer-events: none;
+    transition: color 0.2s ease;
+    z-index: 2;
+  }
+  .tz-login-input:focus ~ .tz-login-input-icon {
+    color: #facc15;
+  }
+
+  /* Botón Continuar */
+  .tz-login-submit-btn {
+    width: 100%;
+    padding: 15px 20px;
+    background: #facc15;
+    border: none;
+    border-radius: 12px;
+    color: #0b0f19;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 14.5px;
+    font-weight: 800;
+    letter-spacing: 0.3px;
+    text-transform: uppercase;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    cursor: pointer;
+    box-shadow: 0 4px 14px rgba(250, 204, 21, 0.25);
+    transition: all 0.15s ease;
+    box-sizing: border-box;
+  }
+  .tz-login-submit-btn:hover {
+    background: #fde047;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(250, 204, 21, 0.4);
+  }
+  .tz-login-submit-btn:active {
+    transform: translateY(0);
+    background: #eab308;
+  }
+</style>
+
+<!-- MODAL DE INICIO DE SESIÓN FLOTANTE -->
+<div class="tz-login-modal-overlay" id="tzLoginModalOverlay" role="dialog" aria-modal="true" aria-labelledby="tzLoginTitle">
+    <div class="tz-login-modal-box">
+        
+        <button type="button" class="tz-login-close-btn" id="tzCloseLoginModalBtn" aria-label="Cerrar">
+            <i class="mdi mdi-close"></i>
+        </button>
+
+        <div class="tz-login-header">
+            <img src="{{ asset('thunder_logo.png') }}" alt="ThunderMC" class="tz-login-logo">
+            <h2 class="tz-login-title" id="tzLoginTitle">Ingresa tu Nickname</h2>
+            <p class="tz-login-subtitle">Introduce tu usuario exacto de Minecraft para vincular tus compras.</p>
+        </div>
+
+        <!-- Pestañas Java Edition vs Bedrock -->
+        <div class="tz-platform-tabs">
+            <button type="button" class="tz-tab-btn is-active" id="tzTabJava">
+                <i class="mdi mdi-coffee"></i>
+                <span>Java Edition</span>
+            </button>
+            <button type="button" class="tz-tab-btn" id="tzTabBedrock">
+                <i class="mdi mdi-cellphone"></i>
+                <span>Bedrock / Móvil</span>
+            </button>
+        </div>
+
+        <!-- Render Busto 3D en Vivo -->
+        <div class="tz-login-avatar-preview">
+            <img src="https://minotar.net/bust/MHF_Question/85" alt="Skin Preview" class="tz-login-avatar-img" id="tzLoginSkinPreview">
+        </div>
+
+        <form method="post" action="/login" id="tzLoginForm">
+            <input type="hidden" name="is_bedrock" id="tzIsBedrockInput" value="0">
+
+            <div class="tz-login-input-group">
+                <span class="tz-login-bedrock-prefix" id="tzBedrockPrefix">{{ config("bedrockPrefix") }}</span>
+                <label for="mc_IGN_INPUT" class="tz-visually-hidden">Nombre de usuario de Minecraft</label><input type="text" name="ign" id="mc_IGN_INPUT" class="tz-login-input" placeholder="Ejemplo: Jordan" autocomplete="off" required>
+                <i class="mdi mdi-account-circle-outline tz-login-input-icon"></i>
+            </div>
+
+            <button class="tz-login-submit-btn" type="submit" id="tzLoginSubmitBtn">
+                <span>Continuar a la Tienda</span>
+                <i class="mdi mdi-arrow-right"></i>
+            </button>
+        </form>
+    </div>
+</div>
+
+<script>
+(function() {
+    var overlay = document.getElementById('tzLoginModalOverlay');
+    var closeBtn = document.getElementById('tzCloseLoginModalBtn');
+    var openBtn = document.getElementById('tzOpenLoginBtn');
+    var input = document.getElementById('mc_IGN_INPUT');
+    var preview = document.getElementById('tzLoginSkinPreview');
+    var tabJava = document.getElementById('tzTabJava');
+    var tabBedrock = document.getElementById('tzTabBedrock');
+    var bedrockPrefix = document.getElementById('tzBedrockPrefix');
+    var isBedrockInput = document.getElementById('tzIsBedrockInput');
+    var timeout = null;
+    var previousFocus = null;
+    var previousOverflow = '';
+    var prefix = "{{ config('bedrockPrefix')|escape('js') }}";
+
+    function openModal() {
+        if (overlay) {
+            if (overlay.classList.contains('is-active')) return;
+            previousFocus = document.activeElement;
+            previousOverflow = document.body.style.overflow;
+            overlay.classList.add('is-active');
+            document.body.style.overflow = 'hidden';
+            if (input) setTimeout(function() { input.focus(); }, 100);
+        }
+    }
+
+    function closeModal() {
+        if (overlay) {
+            if (!overlay.classList.contains('is-active')) return;
+            overlay.classList.remove('is-active');
+            document.body.style.overflow = previousOverflow;
+            if (previousFocus && previousFocus.isConnected) previousFocus.focus();
+        }
+    }
+
+    // Delegación de eventos en documento para que funcione 100% garantizado
+    document.addEventListener('click', function(e) {
+        var trigger = e.target.closest('#tzOpenLoginBtn, .tz-nav-login-btn, .tz-nav-user-logged, [data-open-login]');
+        if (trigger) {
+            e.preventDefault();
+            openModal();
+        }
+    });
+
+    if (closeBtn) closeBtn.addEventListener('click', closeModal);
+    if (overlay) {
+        overlay.addEventListener('click', function(e) {
+            if (e.target === overlay) closeModal();
+        });
+    }
+
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && overlay && overlay.classList.contains('is-active')) {
+            closeModal();
+        }
+        if (e.key === 'Tab' && overlay && overlay.classList.contains('is-active')) {
+            var controls = Array.from(overlay.querySelectorAll('button, input:not([type=hidden]), a[href]')).filter(function(el) { return !el.disabled && el.getClientRects().length; });
+            if (!controls.length) return;
+            if (e.shiftKey && document.activeElement === controls[0]) { e.preventDefault(); controls[controls.length - 1].focus(); }
+            else if (!e.shiftKey && document.activeElement === controls[controls.length - 1]) { e.preventDefault(); controls[0].focus(); }
+        }
+    });
+
+    // Pestañas Java / Bedrock
+    if (tabJava && tabBedrock) {
+        tabJava.addEventListener('click', function() {
+            tabJava.classList.add('is-active');
+            tabBedrock.classList.remove('is-active');
+            if (bedrockPrefix) bedrockPrefix.classList.remove('is-visible');
+            if (input) {
+                input.classList.remove('has-prefix');
+                input.placeholder = "Ejemplo: Jordan";
+            }
+            if (isBedrockInput) isBedrockInput.value = "0";
+            updateSkinPreview();
+        });
+
+        tabBedrock.addEventListener('click', function() {
+            tabBedrock.classList.add('is-active');
+            tabJava.classList.remove('is-active');
+            if (bedrockPrefix) bedrockPrefix.classList.add('is-visible');
+            if (input) {
+                input.classList.add('has-prefix');
+                input.placeholder = "Nombre en Bedrock";
+            }
+            if (isBedrockInput) isBedrockInput.value = "1";
+            updateSkinPreview();
+        });
+    }
+
+    // Actualización de Skin 3D Reactiva
+    function updateSkinPreview() {
+        if (!input || !preview) return;
+        var val = input.value.trim();
+        if (val.length >= 3) {
+            // Minotar render
+            var cleanNick = prefix && val.startsWith(prefix) ? val.slice(prefix.length) : val;
+            preview.src = 'https://minotar.net/bust/' + encodeURIComponent(cleanNick) + '/85';
+        } else {
+            preview.src = 'https://minotar.net/bust/MHF_Question/85';
+        }
+    }
+
+    if (input) {
+        input.addEventListener('input', function() {
+            clearTimeout(timeout);
+            timeout = setTimeout(updateSkinPreview, 250);
+        });
+    }
+
+    // Native POST lets Tebex display validation errors and confirm the real session.
+    var form = document.getElementById('tzLoginForm');
+    if (form) form.addEventListener('submit', function(e) {
+        var nick = input.value.trim();
+        var bedrock = isBedrockInput && isBedrockInput.value === '1';
+        input.setCustomValidity('');
+        if (!nick || (!bedrock && !/^[A-Za-z0-9_]{3,16}$/.test(nick))) {
+            e.preventDefault(); input.setCustomValidity(bedrock ? 'Introduce tu nombre de usuario.' : 'Java: entre 3 y 16 letras, números o guiones bajos.'); input.reportValidity(); return;
+        }
+        if (bedrock && prefix && !nick.startsWith(prefix)) nick = prefix + nick;
+        input.value = nick;
+    });
+    if (input) input.addEventListener('input', function() { input.setCustomValidity(''); });
+
+    window.tzOpenLoginModal = openModal;
+    window.tzCloseLoginModal = closeModal;
+})();
+</script>
+{% endif %}
+
+{% if config("serverType") == "Rust" or config("serverType") == "Unturned" %}
+<div id="modal-login" style="display: none;">
+    {{ loadingAnimation }}
+    <div class="login-panel">
+        <p class="login-title">{{ lang.steam_login }}</p>
+        <p class="login-description">{{ lang.steam_aff }}</p>
+        <form method="post" action="/login">
+            <div class="username">
+                <div class="triplezone-login">
+                    <div id="IGN_MC" style="display: none;">
+                        <img src="https://minotar.net/avatar/MHF_Question/32" alt="" id="avatar_MC">
+                        <input type="text" name="ign" id="mc_IGN_INPUT" autocomplete="off">
+                    </div>
+                    <a href="https://ident.tebex.io/steam?return={{ url() }}?ign=" class="steam__login">{{ lang.steam_click_to_login_in }}</a>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+{% endif %}
+
+{% if config("serverType") == "FiveM" %}
+<div id="modal-login" style="display: none;">
+    {{ loadingAnimation }}
+    <div class="login-panel">
+        <p class="login-title">Please login using your CFX.re account so we can identify you in game</p>
+        <p class="login-description">{{ lang.steam_aff }}</p>
+        <form method="post" action="/login">
+            <div class="username">
+                <div class="triplezone-login">
+                    <div id="IGN_MC" style="display: none;">
+                        <img src="https://minotar.net/avatar/MHF_Question/32" alt="" id="avatar_MC">
+                        <input type="text" name="ign" id="mc_IGN_INPUT" autocomplete="off">
+                    </div>
+                    <a href="https://ident.tebex.io/fivem?return={{ url() }}%2Flogin%3Fign%3D" class="steam__login">{{ lang.steam_click_to_login_in }}</a>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+{% endif %}
+
+{% if config("serverType") == "Discord" %}
+<div id="modal-login" style="display: none;">
+    {{ loadingAnimation }}
+    <div class="login-panel">
+        <p class="login-title">Please login using your Discord account so we can identify you</p>
+        <p class="login-description"></p>
+        <form method="post" action="/login">
+            <div class="username">
+                <div class="triplezone-login">
+                    <div id="IGN_MC" style="display: none;">
+                        <img src="https://minotar.net/avatar/MHF_Question/32" alt="" id="avatar_MC">
+                        <input type="text" name="ign" id="mc_IGN_INPUT" autocomplete="off">
+                    </div>
+                    <a href="https://ident.tebex.io/discord?return={{ url() }}%2Flogin%3Fign%3D" class="steam__login">Login with Discord</a>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+{% endif %}

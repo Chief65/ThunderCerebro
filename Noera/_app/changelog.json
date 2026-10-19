@@ -1,0 +1,146 @@
+[
+  {
+    "version": "v1.3.0",
+    "date": "2026-10-15",
+    "commit": "local-v1.3.0",
+    "title": "Restauración del editor, descargas contextuales y protección de datos",
+    "author": "Revisión de código Noera",
+    "tag": "Release",
+    "changes": [
+      {
+        "type": "fix",
+        "text": "Restaurados fileView y el editor; corregidas llamadas el con atributos null."
+      },
+      {
+        "type": "feat",
+        "text": "Descarga individual y carpetas ZIP mediante clic derecho en árbol, tarjetas y listas; acceso con teclado."
+      },
+      {
+        "type": "fix",
+        "text": "Guardado conserva cambios nuevos pendientes y saltos CRLF; el servidor conserva BOM UTF-8."
+      },
+      {
+        "type": "security",
+        "text": "Comprobación de rutas contra uniones y enlaces; validación de entradas y límites de ZIP."
+      },
+      {
+        "type": "fix",
+        "text": "Actualización ZIP preparada en staging, backup completo y recuperación del original ante excepciones previas al commit."
+      },
+      {
+        "type": "fix",
+        "text": "Exportaciones completas con binarios y archivos ocultos dentro de los proyectos; transferencia por streams."
+      },
+      {
+        "type": "fix",
+        "text": "Metadatos con escritura atómica y remapeo al mover o renombrar carpetas."
+      },
+      {
+        "type": "fix",
+        "text": "Corregidos respuestas de selección fuera de orden, almacenamiento inválido y bucles de recarga del código."
+      },
+      {
+        "type": "security",
+        "text": "Markdown mantiene los enlaces aislados del formato; HTML de usuario se escapa."
+      },
+      {
+        "type": "core",
+        "text": "Pruebas de interfaz ejecutadas con API simulada y comprobación sintáctica. Ejecución del servidor Windows pendiente; ver _REVISION.md. El identificador local-v1.3.0 no es un commit Git."
+      }
+    ]
+  },
+  {
+    "version": "v1.2.0",
+    "date": "2026-10-15",
+    "commit": "c4d7e9b",
+    "title": "Apartado Código de Noera y Sistema de Despliegue 'Update' por ZIP",
+    "author": "Sr Ramos & Beacon",
+    "tag": "Release",
+    "changes": [
+      {
+        "type": "feat",
+        "text": "Apartado 'Código de Noera' con visualización de archivos del core en tiempo real (server.ps1, app.js, app.css, index.html, iniciar-noera.bat)."
+      },
+      {
+        "type": "feat",
+        "text": "Descarga directa e instantánea de todo el código fuente del software Noera en archivo comprimido ZIP."
+      },
+      {
+        "type": "feat",
+        "text": "Historial de versiones y cambios estilo GitHub Commits con trazabilidad de mejoras, fixes y autoría."
+      },
+      {
+        "type": "feat",
+        "text": "Sistema de etiqueta 'Update' para cualquier carpeta, con indicador visual distintivo en árbol y cabecera."
+      },
+      {
+        "type": "feat",
+        "text": "Disponibilidad permanente del ZIP actualizado de todo el contenido de las carpetas con etiqueta 'Update'."
+      },
+      {
+        "type": "feat",
+        "text": "Despliegue rápido en caliente ('Actualizar ZIP') con validación estricta de formato y nombre idéntico (<nombre_carpeta>.zip)."
+      },
+      {
+        "type": "security",
+        "text": "Versionado y guardado automático de backups de los ZIPs anteriores en .history/ antes de sustituir archivos en producción."
+      },
+      {
+        "type": "feat",
+        "text": "Apartado estilo GitHub dentro de la carpeta con el historial de despliegues y descarga de versiones antiguas por seguridad."
+      }
+    ]
+  },
+  {
+    "version": "v1.1.0",
+    "date": "2026-10-15",
+    "commit": "8f3b2a1",
+    "title": "Motor de Compresión y Descarga de Carpetas en ZIP",
+    "author": "Sr Ramos & Beacon",
+    "tag": "Feature",
+    "changes": [
+      {
+        "type": "feat",
+        "text": "Implementación del endpoint GET /api/zip con empaquetado asíncrono en memoria usando System.IO.Compression.ZipArchive."
+      },
+      {
+        "type": "feat",
+        "text": "Botón 'Descargar ZIP' en la barra de herramientas superior, tarjetas del panel y menú contextual."
+      },
+      {
+        "type": "security",
+        "text": "Filtro de exclusión automática para carpetas de sistema (_app, .papelera) y archivos ocultos en archivos comprimidos."
+      }
+    ]
+  },
+  {
+    "version": "v1.0.0",
+    "date": "2026-10-14",
+    "commit": "1a09d4e",
+    "title": "Lanzamiento Inicial de Noera · Central de Archivos",
+    "author": "Sr Ramos & Beacon",
+    "tag": "Initial",
+    "changes": [
+      {
+        "type": "core",
+        "text": "Servidor local monoproceso en PowerShell con protección CSRF por tokens de sesión únicos."
+      },
+      {
+        "type": "ui",
+        "text": "Interfaz inspirada en el sistema de diseño Notion con tipografía limpia, paleta cálida y navegación jerárquica."
+      },
+      {
+        "type": "feat",
+        "text": "Visor de Markdown con soporte completo de tablas, listas de verificación, callouts y bloques de código."
+      },
+      {
+        "type": "feat",
+        "text": "Editor seguro UTF-8 con detección de colisiones de fecha de modificación y prevención de sobreescritura accidental."
+      },
+      {
+        "type": "feat",
+        "text": "Papelera de reciclaje local (.papelera), subida por lotes y drag & drop de archivos."
+      }
+    ]
+  }
+]

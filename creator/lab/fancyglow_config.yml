@@ -1,0 +1,130 @@
+#  ______                        _____ _
+# |  ____|                      / ____| |
+# | |__ __ _ _ __   ___ _   _  | |  __| | _____      __
+# |  __/ _` | '_ \ / __| | | | | | |_ | |/ _ \ \ /\ / /
+# | | | (_| | | | | (__| |_| | | |__| | | (_) \ V  V /
+# |_|  \__,_|_| |_|\___|\__, |  \_____|_|\___/ \_/\_/
+#                        __/ |
+#                        |___/
+
+# Useful links:
+# Documentation: https://hhitt-1.gitbook.io/fancy-glow-documentation
+# Discord for support, suggestions & more: https://discord.com/invite/6SgzfJFVwq
+# MiniMessage tool to preview changes: https://webui.advntr.dev/
+
+# DO NOT CHANGE THIS.
+config-version: 6
+
+# Should selected glow mode persist when a player leaves the server?
+Persistent_Mode: true
+
+# Rainbow mode update interval
+# 1 second = 20 ticks, Keep in mind when using low values it might affect performance.
+Rainbow_Update_Interval: 10
+
+# Flashing mode update interval
+# 1 second = 20 ticks, Keep in mind when using low values it might affect performance.
+Flashing_Update_Interval: 6
+
+# Change to false if you want to use a menu plugin to handle your glow.
+Open_Glow_Menu: true
+
+# Use flash mode when player is also using rainbow mode.
+# If you experience problems when using this option please notify plugin developers.
+Flash_Rainbow: false
+
+# Notify players with permission and the server if player has an available update.
+Notify_Updates: true
+
+# This option only works if TAB v5.0.4 by NEZNAMY is on the server.
+# This will automatically set the player tag prefix to use the glow placeholder.
+Auto_Tag: false
+
+Messages:
+  # All translations for plugin messages
+  No_Permission: <red>You do not have permission to perform this!
+  Reload_Message: <blue>Plugin configuration file reloaded successfully!
+  Enable_Glow: <green>Glow successfully enabled!
+  Disable_Glow: <red>Glow successfully disabled!
+  Enable_Flashing: <green>Flashing mode has been enabled!
+  Disable_Flashing: <red>Flashing has been disabled!
+  Enable_Rainbow: <green>Rainbow mode has been enabled!
+  Disable_Rainbow: <red>Rainbow mode has been disabled!
+  Disable_Usage: <red>Incorrect command usage! Use /glow disable <player>.
+  Disable_Glow_Others: <red>Disabled glow of %player_name%!
+  Disable_Glow_Everyone: <red>Disabled glow of everyone online!
+  Not_Glowing: <red>You are not currently glowing!
+  Not_Valid_Color: <red>Not a valid glow color!
+  Color_Command_Usage: <red>Incorrect command usage! Use /glow color <color>.
+  Color_Set_Command_Usage: <red>Incorrect command usage! Use /glow set <player> <color>.
+  Unknown_Target: <red>Player %player_name% is not online!
+  Target_Not_Glowing: <red>Target is not glowing!
+  Invalid_Sub_Command: <red>Unknown sub-command "%sub_command%".
+  Color_Already_Selected: <red>You already have selected that color.
+  Flashing_With_Rainbow: <red>Rainbow and Flashing combined is disabled.
+  # Message that player gets when entering a world where glow is disabled
+  Disabled_World_Message: <red>Glow is disabled in this world!
+  # Translations for status placeholder. (%fancyglow_status_formatted%)
+  Glow_Status_False: <red>Not glowing! ❌
+  Glow_Status_True: <green>Glowing! ✔</green>
+  Glow_Status_None: NONE
+  # Internal usage.
+  Message_Not_Found: Message not found a messages enum.
+
+# List of worlds where glow cannot be enabled
+Disabled_Worlds:
+- Example
+- DisabledGlowWorld
+
+Inventory:
+  # For translate the gui
+  Title: <dark_red>Select a glow color!
+  Items:
+    Red_Glow_Name: <red>Red</red>
+    Gold_Glow_Name: <gold>Gold</gold>
+    Blue_Glow_Name: <blue>Blue</blue>
+    Aqua_Glow_Name: <aqua>Aqua</aqua>
+    Green_Glow_Name: <green>Green</green>
+    White_Glow_Name: <white>White</white>
+    Yellow_Glow_Name: <yellow>Yellow</yellow>
+    Gray_Glow_Name: <color:#bdbdbd>Gray</color>
+    Black_Glow_Name: <color:#454545>Black</color>
+    Dark_Red_Glow_Name: <dark_red>Dark Red</dark_red>
+    Pink_Glow_Name: <light_purple>Pink</light_purple>
+    Purple_Glow_Name: <dark_purple>Purple</dark_purple>
+    Dark_Aqua_Glow_Name: <dark_aqua>Dark Aqua</dark_aqua>
+    Dark_Blue_Glow_Name: <dark_blue>Dark Blue</dark_blue>
+    Dark_Gray_Glow_Name: <color:#919191>Dark Gray</color>
+    Dark_Green_Glow_Name: <dark_green>Dark Green</dark_green>
+    Color_Lore: <color:#737373>Click to select!</color>
+  Filler:
+    Enabled: true
+    Material: GRAY_STAINED_GLASS_PANE
+    Name: <rainbow>Click on a color!</rainbow>
+  Status:
+    Slot: 41
+    Name: <color:#6effa3>Your glowing status:</color>
+    Lore:
+      Selected:
+      - <white>You are currently have selected %mode% <white>glow.
+      - <gray>Click to disable!
+      Click:
+      - <white>Select a glow color!
+  Rainbow:
+    Slot: 39
+    Name: <rainbow>Rainbow Mode!</rainbow>
+    Lore:
+    - <#9e8fff>Click to enable rainbow mode!</#9e8fff>
+    Texture: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMTI0OTMyYmI5NDlkMGM2NTcxN2IxMjFjOGNkOWEyMWI2OWU4NmMwZjdlMzQyMWFlOWI4YzY0ZDhiOTkwZWI2MCJ9fX0
+  Flashing:
+    Slot: 40
+    Name: <gradient:#d6d6d6:#b6b6b6:#9f9f9f:#ececec>Flashing Mode!</gradient>
+    Lore:
+    - <#9e8fff>Click to enable flashing mode!</#9e8fff>
+    Texture: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOTFjNTgxYThiNTk3NjkyYjViOTRkM2I4YmViOWM1MmY1Njk5OWQ2MmY3Mzk1NjY4ZmFjNTdhYzk1MmZlNGRjNCJ9fX0=
+
+COMMAND_MANAGER:
+  USAGE:
+    HEADER: <color:#9042f5> <bold>FancyGlow</bold> <gray>‣ <white><required> [optional]
+    MESSAGE: <red>Invalid usage of command!
+    PREFIX: '<red> '

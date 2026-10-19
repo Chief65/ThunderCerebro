@@ -1,0 +1,594 @@
+{% extends "config.twig" %}
+
+{% block layout %}
+
+    {% set redirectToLogin %}
+        {% if not basket.ign %}
+            data-cart-modal-login
+        {% endif %}
+    {% endset %}
+
+    {% if basket.currency == 'USD' %}
+        {% set currencySymbol = '$' %}
+        {% set currencyAfter = false %}
+    {% elseif basket.currency == 'EUR' %}
+        {% set currencySymbol = '€' %}
+        {% set currencyAfter = true %}
+    {% elseif basket.currency == 'GBP' %}
+        {% set currencySymbol = '£' %}
+        {% set currencyAfter = false %}
+    {% else %}
+        {% set currencySymbol = basket.currency %}
+        {% set currencyAfter = true %}
+    {% endif %}
+
+    <style data-tz-package-style>
+        /* ══════════════════════════════════════════════════════════════════
+           THUNDERMC MODAL DE PAQUETE (PREMIUM DARK & CLEAN MINIMAL)
+           ══════════════════════════════════════════════════════════════════ */
+        .package__modal {
+            display: grid !important;
+            grid-template-columns: 1.4fr 340px !important;
+            height: 100% !important;
+            max-height: 85vh !important;
+            background: #090d16 !important;
+            border-radius: 20px !important;
+            overflow: hidden !important;
+            border: 1px solid rgba(255, 255, 255, 0.08) !important;
+            outline: none !important;
+            box-shadow: 0 24px 64px rgba(0, 0, 0, 0.9) !important;
+            box-sizing: border-box !important;
+        }
+
+        /* ── IZQUIERDA: CONTENIDO Y BENEFICIOS RPG (SCROLLABLE) ── */
+        .package__modal__content {
+            order: 1 !important;
+            display: flex !important;
+            flex-direction: column !important;
+            padding: 32px !important;
+            height: 100% !important;
+            max-height: 85vh !important;
+            overflow-y: auto !important;
+            background: #090d16 !important;
+            border-right: 1px solid rgba(255, 255, 255, 0.08) !important;
+            box-sizing: border-box !important;
+            gap: 20px !important;
+        }
+        .package__modal__content::-webkit-scrollbar { width: 6px; }
+        .package__modal__content::-webkit-scrollbar-thumb { background: #1e293b; border-radius: 4px; }
+        .package__modal__content::-webkit-scrollbar-track { background: transparent; }
+
+        .tz-modal-header-meta {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 12px;
+        }
+        .tz-modal-category-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 4px 12px;
+            background: rgba(250, 204, 21, 0.1);
+            border: 1px solid rgba(250, 204, 21, 0.25);
+            border-radius: 8px;
+            color: #facc15;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: 11.5px;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.6px;
+        }
+        .tz-modal-pkg-name {
+            font-family: 'Plus Jakarta Sans', 'Montserrat', sans-serif;
+            font-size: 26px;
+            font-weight: 800;
+            color: #ffffff;
+            letter-spacing: -0.4px;
+            margin: 4px 0 0 0;
+            text-transform: uppercase;
+        }
+
+        .tz-contenido-box {
+            background: #0d121f;
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            border-radius: 14px;
+            padding: 22px;
+            font-family: 'Be Vietnam Pro', sans-serif;
+            font-size: 13.5px;
+            color: #cbd5e1;
+            line-height: 1.6;
+        }
+        .tz-contenido-box h4 {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            color: #facc15;
+            font-size: 14px;
+            font-weight: 800;
+            margin: 18px 0 10px 0;
+            text-transform: uppercase;
+            letter-spacing: 0.4px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .tz-contenido-box h4:first-child { margin-top: 0; }
+        .tz-contenido-box ul {
+            padding: 0;
+            margin: 0 0 16px 0;
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+        .tz-contenido-box li {
+            position: relative;
+            padding-left: 22px;
+            color: #94a3b8;
+            font-size: 13px;
+        }
+        .tz-contenido-box li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            top: 0;
+            color: #4ade80;
+            font-weight: 900;
+        }
+        .tz-contenido-box strong {
+            color: #ffffff;
+            font-weight: 700;
+        }
+
+        /* ── DERECHA: SIDEBAR DE COMPRA ── */
+        .package__modal__side {
+            order: 2 !important;
+            display: flex !important;
+            flex-direction: column !important;
+            justify-content: space-between !important;
+            padding: 28px !important;
+            background: #0d121f !important;
+            overflow-y: auto !important;
+            box-sizing: border-box !important;
+        }
+
+        .tz-side-top {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            gap: 14px;
+            width: 100%;
+        }
+
+        .tz-modal-close-row {
+            display: flex;
+            justify-content: flex-end;
+            width: 100%;
+        }
+        .tz-close-btn {
+            width: 34px !important;
+            height: 34px !important;
+            background: rgba(255, 255, 255, 0.04) !important;
+            border: 1px solid rgba(255, 255, 255, 0.08) !important;
+            border-radius: 9px !important;
+            display: flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+            color: #94a3b8 !important;
+            font-size: 18px !important;
+            cursor: pointer !important;
+            transition: all 0.15s ease !important;
+        }
+        .tz-close-btn:hover {
+            background: rgba(239, 68, 68, 0.15) !important;
+            color: #ef4444 !important;
+            border-color: rgba(239, 68, 68, 0.3) !important;
+            transform: rotate(90deg) !important;
+        }
+
+        .tz-modal-img-wrap {
+            height: 140px;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+        .tz-modal-img-wrap img {
+            max-height: 130px;
+            max-width: 100%;
+            object-fit: contain;
+            filter: drop-shadow(0 12px 24px rgba(0,0,0,0.6));
+            transition: transform 0.3s ease;
+        }
+        .tz-modal-img-wrap:hover img {
+            transform: scale(1.06);
+        }
+
+        .tz-modal-price-box {
+            display: flex;
+            align-items: baseline;
+            gap: 10px;
+        }
+        .tz-modal-price-val {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: 28px;
+            font-weight: 800;
+            color: #facc15;
+            letter-spacing: -0.5px;
+        }
+        .tz-modal-price-pill {
+            background: rgba(34, 197, 94, 0.12);
+            border: 1px solid rgba(34, 197, 94, 0.3);
+            color: #4ade80;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: 11px;
+            font-weight: 800;
+            padding: 3px 8px;
+            border-radius: 6px;
+            text-transform: uppercase;
+        }
+
+        /* Usuario Destino / Recipiente */
+        .tz-user-target-box {
+            width: 100%;
+            background: #090d16;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 12px;
+            padding: 10px 14px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            box-sizing: border-box;
+        }
+        .tz-user-target-left {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .tz-user-target-avatar {
+            height: 38px;
+            width: auto;
+            object-fit: contain;
+            image-rendering: pixelated;
+        }
+        .tz-user-target-info {
+            display: flex;
+            flex-direction: column;
+            text-align: left;
+            gap: 2px;
+        }
+        .tz-user-target-name {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: 13px;
+            font-weight: 800;
+            color: #ffffff;
+        }
+        .tz-user-target-badge {
+            font-family: 'Be Vietnam Pro', sans-serif;
+            font-size: 11px;
+            color: #4ade80;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        /* Switch para Regalar a un amigo */
+        .tz-gift-toggle-wrap {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            margin-top: 4px;
+        }
+        .tz-gift-toggle-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+            background: transparent;
+            border: none;
+            color: #94a3b8;
+            font-family: 'Be Vietnam Pro', sans-serif;
+            font-size: 12px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: color 0.15s ease;
+            padding: 4px;
+        }
+        .tz-gift-toggle-btn:hover {
+            color: #facc15;
+        }
+        .tz-gift-input-box {
+            display: none;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        .tz-gift-input-box.is-open {
+            display: block;
+        }
+        .tz-gift-input {
+            width: 100%;
+            background: #090d16;
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            border-radius: 10px;
+            padding: 10px 14px;
+            color: #ffffff;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: 13px;
+            font-weight: 700;
+            outline: none;
+            box-sizing: border-box;
+            transition: border-color 0.2s ease;
+        }
+        .tz-gift-input:focus {
+            border-color: #facc15;
+        }
+
+        /* Botón de Compra Directo Sólido y Limpio (Sin brillo ni glow) */
+        .tz-btn-checkout {
+            position: relative;
+            width: 100%;
+            padding: 13px 20px;
+            background: #facc15;
+            border: none;
+            border-radius: 12px;
+            color: #0b0f19;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: 14px;
+            font-weight: 800;
+            letter-spacing: 0.2px;
+            text-transform: uppercase;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            cursor: pointer;
+            text-decoration: none !important;
+            box-shadow: none !important;
+            transition: all 0.15s ease;
+            box-sizing: border-box;
+        }
+        .tz-btn-checkout:hover {
+            background: #fde047;
+            transform: translateY(-1px);
+            box-shadow: none !important;
+        }
+        .tz-btn-checkout:active {
+            transform: translateY(0);
+            background: #eab308;
+            box-shadow: none !important;
+        }
+
+        /* Botón Añadir al Carrito (Tono Gris Tenue Sofisticado) */
+        .tz-btn-add-cart {
+            width: 100%;
+            padding: 13px 20px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            border-radius: 12px;
+            color: #cbd5e1;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 0.2px;
+            text-transform: uppercase;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            box-shadow: none !important;
+            transition: all 0.15s ease;
+            box-sizing: border-box;
+        }
+        .tz-btn-add-cart:hover {
+            background: rgba(255, 255, 255, 0.09);
+            border-color: rgba(255, 255, 255, 0.22);
+            color: #ffffff;
+            transform: translateY(-1px);
+        }
+        .tz-btn-add-cart:active {
+            transform: translateY(0);
+            background: rgba(255, 255, 255, 0.04);
+        }
+        .tz-btn-add-cart i {
+            font-size: 16px;
+            color: #94a3b8;
+        }
+        .tz-btn-add-cart:hover i {
+            color: #facc15;
+        }
+
+        /* Sellos de Confianza */
+        .tz-modal-trust {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            width: 100%;
+            margin-top: 14px;
+            padding-top: 14px;
+            border-top: 1px solid rgba(255, 255, 255, 0.06);
+        }
+        .tz-trust-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-family: 'Be Vietnam Pro', sans-serif;
+            font-size: 11.5px;
+            color: #94a3b8;
+            text-align: left;
+        }
+        .tz-trust-item i {
+            color: #facc15;
+            font-size: 15px;
+        }
+
+        @media (max-width: 800px) {
+            .package__modal {
+                display: flex !important;
+                flex-direction: column !important;
+                max-height: 88vh !important;
+                overflow-y: auto !important;
+                border-radius: 16px !important;
+            }
+            .package__modal__content, .package__modal__side {
+                width: 100% !important;
+                box-sizing: border-box !important;
+            }
+            .package__modal__content {
+                order: 2 !important;
+                border-right: none !important;
+                padding: 20px !important;
+            }
+            .package__modal__side {
+                order: 1 !important;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
+                padding: 20px !important;
+            }
+            .tz-modal-pkg-name {
+                font-size: 22px !important;
+            }
+            .tz-modal-img-wrap img {
+                max-height: 100px !important;
+            }
+        }
+        @media (max-width: 480px) {
+            .package__modal__content, .package__modal__side {
+                padding: 16px !important;
+            }
+            .tz-user-target-box {
+                flex-direction: column;
+                align-items: stretch;
+                gap: 10px;
+            }
+            .tz-user-target-left {
+                justify-content: center;
+            }
+        }
+    </style>
+
+    <div class="package__modal" data-package-id="{{ package.id }}">
+        
+        <!-- LEFT: DETALLE Y BENEFICIOS RPG -->
+        <div class="package__modal__content">
+            <div class="tz-modal-header-meta">
+                <span class="tz-modal-category-badge"><i class="mdi mdi-shield-crown"></i> Categoría Oficial</span>
+            </div>
+            <h1 class="tz-modal-pkg-name">{% if package.name %}{{ package.name|escape }}{% else %}Paquete{% endif %}</h1>
+
+            <div class="tz-contenido-box">
+                {% if package.description %}
+                    {{ package.description|raw }}
+                {% else %}
+                    <div style="padding: 24px; text-align: center; background: rgba(255, 255, 255, 0.02); border: 1px dashed rgba(255, 255, 255, 0.1); border-radius: 12px;">
+                        <i class="mdi mdi-information-outline" style="font-size: 32px; color: #facc15; margin-bottom: 8px; display: inline-block;"></i>
+                        <h4 style="margin: 0 0 6px 0; color: #ffffff;">Detalles de Entrega</h4>
+                        <p style="color: #94a3b8; font-size: 13px; margin: 0; line-height: 1.6;">
+                            La entrega se procesa automáticamente después de que Tebex confirme el pago.<br>
+                            Si tienes dudas sobre los comandos o ventajas incluidas, consulta con nuestro equipo en Discord.
+                        </p>
+                    </div>
+                {% endif %}
+            </div>
+        </div>
+
+        <!-- RIGHT: SIDEBAR DE COMPRA -->
+        <div class="package__modal__side">
+            
+            <div class="tz-side-top">
+                <div class="tz-modal-close-row">
+                    <a href="/" class="tz-close-btn tz-close-modal-btn modal__content--close" aria-label="Cerrar modal"><i class="mdi mdi-close"></i></a>
+                </div>
+
+                <div class="tz-modal-img-wrap">
+                    {% if package.image.url %}
+                        <img src="{{ package.image.url }}" alt="{{ package.name|escape }}">
+                    {% else %}
+                        <div style="font-size:48px;color:#facc15;display:flex;align-items:center;justify-content:center;height:100%;"><i class="mdi mdi-cube-outline"></i></div>
+                    {% endif %}
+                </div>
+
+                <div class="tz-modal-price-box">
+                    <span class="tz-modal-price-val">
+                        {% if package.customPrice %}Elige el importe{% elseif package.price is not defined or package.price is null %}Precio no disponible{% elseif package.price == 0 %}Gratis{% else %}
+                        {% if currencyAfter %}
+                            {{ package.price|money }} {{ currencySymbol }}
+                        {% else %}
+                            {{ currencySymbol }}{{ package.price|money }}
+                        {% endif %}
+                        {% endif %}
+                    </span>
+                    {% if package.type == "subscription" %}
+                        <span class="tz-modal-price-pill" style="background: rgba(56, 189, 248, 0.2); color: #38bdf8; border: 1px solid rgba(56, 189, 248, 0.4);">Suscripción</span>
+                    {% elseif package.type == "both" %}<span class="tz-modal-price-pill">Compra única o suscripción</span>
+                    {% elseif package.customPrice %}
+                        <span class="tz-modal-price-pill" style="background: rgba(168, 85, 247, 0.2); color: #c084fc; border: 1px solid rgba(168, 85, 247, 0.4);">Personalizado</span>
+                    {% elseif package.price == 0 %}
+                        <span class="tz-modal-price-pill" style="background: rgba(74, 222, 128, 0.2); color: #4ade80; border: 1px solid rgba(74, 222, 128, 0.4);">Gratis</span>
+                    {% else %}
+                        <span class="tz-modal-price-pill">Compra única</span>
+                    {% endif %}
+                </div>
+
+                <!-- Usuario Destino (Busto 3D) -->
+                <div class="tz-user-target-box">
+                    <div class="tz-user-target-left">
+                        {% if basket.ign %}
+                            {% set ignName = basket.ign %}
+                        {% else %}
+                            {% set ignName = "Invitado" %}
+                        {% endif %}
+                        <img class="tz-user-target-avatar" src="https://minotar.net/bust/{{ ignName|escape('url') }}/48" alt="{{ ignName|escape }}">
+                        <div class="tz-user-target-info">
+                            <span class="tz-user-target-name">{{ ignName|escape }}</span>
+                            {% if basket.ign %}
+                                <span class="tz-user-target-badge"><i class="mdi mdi-check-circle"></i> Destinatario</span>
+                            {% else %}
+                                <span class="tz-user-target-badge" style="color: #94a3b8;"><i class="mdi mdi-account-question"></i> Sin Vincular</span>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+
+                {% if package.id and (package.customPrice or (package.price is defined and package.price is not null)) and (not basket.ign or package.purchasable != false) %}
+                <div class="tz-modal-action-buttons" style="display:flex;flex-direction:column;gap:10px;width:100%;margin-top:8px;">
+                    {% if package.type != "subscription" %}
+                    <a href="/checkout/packages/add/{{ package.id }}/single" class="tz-btn-checkout" {% if not basket.ign %}data-cart-modal-login{% endif %} target="_top">{% if package.customPrice or package.has_options %}Elegir opciones{% else %}Comprar ahora{% endif %}</a>
+                    <a href="/checkout/packages/add/{{ package.id }}/single" class="tz-btn-add-cart" {% if not basket.ign %}data-cart-modal-login{% endif %} data-add-url="/checkout/packages/add/{{ package.id }}/single" {% if package.has_options or package.customPrice %}data-native-options="true"{% endif %}><i class="mdi mdi-cart-plus"></i> Añadir al carrito</a>
+                    {% endif %}
+                    {% if package.type == "subscription" or package.type == "both" %}
+                    <a href="/checkout/packages/add/{{ package.id }}/subscribe" class="tz-btn-checkout" {% if not basket.ign %}data-cart-modal-login{% endif %} target="_top">Suscribirme</a>
+                    {% endif %}
+                </div>
+                {% else %}<p role="status">Este paquete no está disponible para esta cuenta.</p>{% endif %}
+
+                <!-- Switch para Regalar a un Amigo: desactivado por seguridad hasta conectar flujo oficial nativo de Tebex (F08) -->
+                {#
+                <div class="tz-gift-toggle-wrap" style="display:none;">
+                    <button type="button" class="tz-gift-toggle-btn" id="tzGiftToggle"
+                            aria-expanded="false" aria-controls="tzGiftInputBox">
+                        <i class="mdi mdi-gift-outline"></i> ¿Quieres regalarlo a un amigo?
+                    </button>
+                    <div class="tz-gift-input-box" id="tzGiftInputBox" style="display:none;">
+                        <label for="tzGiftIgn" style="display:block;font-size:12px;color:#94a3b8;margin-bottom:6px;">Nick del destinatario en Minecraft</label>
+                        <input type="text" class="tz-gift-input" placeholder="Nick de tu amigo en Minecraft..." id="tzGiftIgn" autocomplete="off">
+                    </div>
+                </div>
+                #}
+
+                <!-- Sellos de Confianza -->
+                <div class="tz-modal-trust">
+                    <div class="tz-trust-item"><i class="mdi mdi-lightning-bolt"></i> Entrega automática tras confirmar el pago</div>
+                    <div class="tz-trust-item"><i class="mdi mdi-shield-lock-outline"></i> Pago gestionado por Tebex Checkout</div>
+                    <div class="tz-trust-item"><i class="mdi mdi-headphones"></i> Soporte en Discord</div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+
+{% endblock %}

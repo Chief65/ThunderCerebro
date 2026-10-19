@@ -1,0 +1,158 @@
+name: '&8✔ &fGlow &8▶ &#555555Gris Oscuro &7(3d)'
+lore:
+- '&8ᴄᴏꜱᴍᴇᴛɪᴄᴏ'
+- ''
+- ' &7Cosmetico listo'
+- ' &7para reclamar.'
+- ''
+- ' &8● &fBrillo: &#555555Gris Oscuro'
+- ' &7(ᴛᴇᴍᴘᴏʀᴀʟ: 3 ᴅíᴀꜱ)'
+- ''
+- ' &8⁂ &#008DFF&lR&#0AA1FF&lA&#13B4FF&lR&#1DC8FF&lA &e⭐⭐&7⭐⭐⭐'
+- ''
+- '&7▶ ᴄʟɪᴄᴋ ᴅᴇʀ - ʀᴇᴄʟᴀᴍᴀʀ'
+material: GRAY_DYE
+glow: true
+disableStack: false
+keepItemOnDeath: false
+canBeUsedOnlyByTheOwner: false
+storeItemInfo: false
+unbreakable: false
+usage: 0
+usageLimit: -1
+cancelEventIfNoPerm: false
+cancelEventIfNotOwner: false
+disabledWorlds: []
+config_5: true
+disableEnchantGlide: false
+onlyOwnerBlackListedActivators: []
+isDurabilityBasedOnUsage: false
+cancelEventIfNoPermission: false
+whitelistedWorlds: []
+glider: false
+keepDefaultAttributes: false
+hiders:
+  hideEnchantments: true
+  hideUnbreakable: true
+  hideAttributes: true
+  hidePotionEffects: true
+  hideAdditionalTooltip: true
+  hideTooltip: false
+  hideToolTip: false
+  hideUsage: true
+  hideDestroys: false
+  hidePlacedOn: false
+  hideDye: false
+  hideArmorTrim: false
+giveFirstJoinFeatures:
+  giveFirstJoin: false
+  giveFirstJoinAmount: 1
+  giveFirstJoinSlot: 0
+restrictions:
+  cancel-item-place: true
+  cancel-item-craft: true
+  cancel-anvil: true
+  locked-in-inventory: false
+variables: {}
+activators:
+  activator1:
+    name: '&eReclamar Glow'
+    option: PLAYER_RIGHT_CLICK
+    typeTarget: NO_TYPE_TARGET
+    usageModification: -1
+    cancelEvent: true
+    noActivatorRunIfTheEventIsCancelled: false
+    autoUpdateItem: false
+    cooldownFeatures:
+      cooldown: 6
+      cooldownMsg: '&cEspera &f%time_S%s &cpara activar otro cosmético.'
+      cancelEventIfInCooldown: true
+      pausePlaceholdersConditions: {}
+    globalCooldownFeatures:
+      cooldown: 0
+      displayCooldownMessage: false
+    otherEICooldowns: {}
+    requiredItems: {}
+    requiredExecutableItems: {}
+    requiredMagics: {}
+    detailedSlots:
+    - -1
+    - 40
+    playerCommands:
+    - 'effect give %player% minecraft:darkness 4 0 true'
+    - 'title %player% times 0 20 5'
+    - 'title %player% title "&#555555Gris Oscuro"'
+    - 'title %player% subtitle "&8▪ &fᴀᴄᴛɪᴠᴀɴᴅᴏ &8[&#555555&m &8&m &8&m &8&m &8&m &r&8] &75s"'
+    - 'execute at %player% run playsound minecraft:item.bundle.drop_contents master %player% ~ ~ ~ 0.8 1.0'
+    - 'execute at %player% run playsound minecraft:block.note_block.hat master %player% ~ ~ ~ 0.8 1.0'
+    - 'DELAY_TICK 10'
+    - 'title %player% title "&#555555Gris Oscuro"'
+    - 'title %player% subtitle "&8▪ &fᴀᴄᴛɪᴠᴀɴᴅᴏ &8[&#555555&m &#555555&m &8&m &8&m &8&m &r&8] &74s"'
+    - 'execute at %player% run playsound minecraft:item.bundle.drop_contents master %player% ~ ~ ~ 0.8 1.1'
+    - 'execute at %player% run playsound minecraft:block.note_block.hat master %player% ~ ~ ~ 0.8 1.1'
+    - 'DELAY_TICK 10'
+    - 'title %player% title "&#555555Gris Oscuro"'
+    - 'title %player% subtitle "&8▪ &fᴀᴄᴛɪᴠᴀɴᴅᴏ &8[&#555555&m &#555555&m &#555555&m &8&m &8&m &r&8] &73s"'
+    - 'execute at %player% run playsound minecraft:item.bundle.drop_contents master %player% ~ ~ ~ 0.8 1.2'
+    - 'execute at %player% run playsound minecraft:block.note_block.hat master %player% ~ ~ ~ 0.8 1.2'
+    - 'DELAY_TICK 10'
+    - 'title %player% title "&#555555Gris Oscuro"'
+    - 'title %player% subtitle "&8▪ &fᴀᴄᴛɪᴠᴀɴᴅᴏ &8[&#555555&m &#555555&m &#555555&m &#555555&m &8&m &r&8] &72s"'
+    - 'execute at %player% run playsound minecraft:item.bundle.drop_contents master %player% ~ ~ ~ 0.8 1.3'
+    - 'execute at %player% run playsound minecraft:block.note_block.hat master %player% ~ ~ ~ 0.8 1.3'
+    - 'DELAY_TICK 10'
+    - 'title %player% title "&#555555Gris Oscuro"'
+    - 'title %player% subtitle "&8▪ &fᴀᴄᴛɪᴠᴀɴᴅᴏ &8[&#555555&m &#555555&m &#555555&m &#555555&m &#555555&m &r&8] &71s"'
+    - 'execute at %player% run playsound minecraft:item.bundle.drop_contents master %player% ~ ~ ~ 0.8 1.4'
+    - 'execute at %player% run playsound minecraft:block.note_block.hat master %player% ~ ~ ~ 0.8 1.4'
+    - 'DELAY_TICK 10'
+    - 'execute at %player% run playsound minecraft:ui.toast.challenge_complete master %player% ~ ~ ~ 1 1.0'
+    - 'execute at %player% run playsound minecraft:entity.player.levelup master %player% ~ ~ ~ 1 1.4'
+    - 'execute at %player% run playsound minecraft:entity.firework_rocket.blast master %player% ~ ~ ~ 1 1.1'
+    - 'execute at %player% run playsound minecraft:entity.firework_rocket.twinkle master %player% ~ ~ ~ 1 1.0'
+    - 'PARTICLE FIREWORK 40 0.5 0.5'
+    - 'PARTICLE TOTEM 35 0.4 0.4'
+    - 'PARTICLE END_ROD 30 0.4 0.4'
+    - 'PARTICLE VILLAGER_HAPPY 25 0.3 0.3'
+    - 'title %player% times 0 35 10'
+    - 'title %player% title "&#555555Gris Oscuro"'
+    - 'title %player% subtitle "&f¡ɢʟᴏᴡ ᴀᴄᴛɪᴠᴀᴅᴏ! &7(3 días)"'
+    - 'lp user %player% permission settemp fancyglow.dark_gray true 3d'
+    - 'glow set %player% dark_gray'
+    - 'title %player% actionbar "&a✔ &fɢʟᴏᴡ ᴀᴄᴛɪᴠᴀᴅᴏ: &#555555Gris Oscuro &7(3d)"'
+    - 'SEND_MESSAGE &r'
+    - 'SEND_MESSAGE &8[&#FEEB00ThunderMc&8] &#008DFF⭐ &lCOSMÉTICO GLOW ACTIVADO &8| &fBrillo &#555555Gris Oscuro&f.'
+    - 'SEND_MESSAGE &r  &8• &fDuración: &e3 Días &7(expira automáticamente)'
+    - 'SEND_MESSAGE &r  &8• &fMenú: &7Usa &#008DFF/glow &7para cambiarlo o desactivarlo.'
+    - 'SEND_MESSAGE &r'
+    playerConditions: {}
+    worldConditions: {}
+    itemConditions: {}
+    customConditions: {}
+    placeholdersConditions: {}
+    variablesModification: {}
+displayConditions:
+  playerConditions: {}
+  worldConditions: {}
+  itemConditions: {}
+  placeholdersConditions: {}
+  enableFeature: false
+foodFeatures:
+  isMeat: false
+  nutrition: 1
+  saturation: 0.5
+  canAlwaysEat: false
+consumableFeatures:
+  isConsumable: false
+  animation: EAT
+  hasConsumableParticles: true
+  consumeSeconds: 3
+weaponFeatures:
+  cancelDefaultDamage: false
+  damagePerHit: 1
+  canUseOnlyDuringBlocking: false
+  cancelSwordBlockingDamage: false
+  swordBlockingDamageMultiplier: 1.0
+  customSwordBlockingTime: 0
+whitelistedWorlds: []
+recognitions: []

@@ -1,0 +1,24 @@
+put creator/lab/ChatColor2-1.15.1.jar plugins/ChatColor2-1.15.1.jar
+-mkdir plugins/ChatColor2
+put creator/lab/chatcolor_config.yml plugins/ChatColor2/config.yml
+put creator/lab/chatcolor_gui.yml plugins/ChatColor2/gui.yml
+put creator/lab/chatcolor_folder/custom-colors.yml plugins/ChatColor2/custom-colors.yml
+put creator/lab/chatcolor_folder/groups.yml plugins/ChatColor2/groups.yml
+put creator/lab/chatcolor_folder/messages.yml plugins/ChatColor2/messages.yml
+put creator/lab/chatcolor/chatcolor_amarillo.yml plugins/ExecutableItems/items/ThunderMC/chatcolor_amarillo.yml
+put creator/lab/chatcolor/chatcolor_azul.yml plugins/ExecutableItems/items/ThunderMC/chatcolor_azul.yml
+put creator/lab/chatcolor/chatcolor_azul_oscuro.yml plugins/ExecutableItems/items/ThunderMC/chatcolor_azul_oscuro.yml
+put creator/lab/chatcolor/chatcolor_blanco.yml plugins/ExecutableItems/items/ThunderMC/chatcolor_blanco.yml
+put creator/lab/chatcolor/chatcolor_celeste.yml plugins/ExecutableItems/items/ThunderMC/chatcolor_celeste.yml
+put creator/lab/chatcolor/chatcolor_cian.yml plugins/ExecutableItems/items/ThunderMC/chatcolor_cian.yml
+put creator/lab/chatcolor/chatcolor_dorado.yml plugins/ExecutableItems/items/ThunderMC/chatcolor_dorado.yml
+put creator/lab/chatcolor/chatcolor_gris.yml plugins/ExecutableItems/items/ThunderMC/chatcolor_gris.yml
+put creator/lab/chatcolor/chatcolor_gris_oscuro.yml plugins/ExecutableItems/items/ThunderMC/chatcolor_gris_oscuro.yml
+put creator/lab/chatcolor/chatcolor_magenta.yml plugins/ExecutableItems/items/ThunderMC/chatcolor_magenta.yml
+put creator/lab/chatcolor/chatcolor_morado.yml plugins/ExecutableItems/items/ThunderMC/chatcolor_morado.yml
+put creator/lab/chatcolor/chatcolor_negro.yml plugins/ExecutableItems/items/ThunderMC/chatcolor_negro.yml
+put creator/lab/chatcolor/chatcolor_rojo.yml plugins/ExecutableItems/items/ThunderMC/chatcolor_rojo.yml
+put creator/lab/chatcolor/chatcolor_rojo_oscuro.yml plugins/ExecutableItems/items/ThunderMC/chatcolor_rojo_oscuro.yml
+put creator/lab/chatcolor/chatcolor_rosa.yml plugins/ExecutableItems/items/ThunderMC/chatcolor_rosa.yml
+put creator/lab/chatcolor/chatcolor_verde.yml plugins/ExecutableItems/items/ThunderMC/chatcolor_verde.yml
+put creator/lab/chatcolor/chatcolor_verde_oscuro.yml plugins/ExecutableItems/items/ThunderMC/chatcolor_verde_oscuro.yml

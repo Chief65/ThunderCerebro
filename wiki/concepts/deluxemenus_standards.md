@@ -1,4 +1,4 @@
-﻿# Estándares y Sintaxis de DeluxeMenus (1.14.x+)
+# Estándares y Sintaxis de DeluxeMenus (1.14.x+)
 
 **Ámbito**: Servidor de Pruebas y Survival — Servidores Minecraft 1.21.11  
 **Objetivo**: Evitar advertencias (*deprecation warnings*) y garantizar compatibilidad futura.
@@ -98,6 +98,16 @@ Queda estrictamente prohibido el uso de claves booleanas obsoletas directas en i
 - **Error previo**: Usar materiales aislados según la moneda de la subtienda en lugar de una interfaz consistente para el jugador.
 - **Corrección aplicada**: Homogeneizar todos los menús (principales, categorías de compra, intermediarios, lonja y pity) con el ícono unificado de la cabeza del jugador (`head-%player_name%`) y el lore multimoneda canónico completo (Dinero, Almas, Zafiros, XP), enlazado a `[openguimenu] info_economia`.
 - **Regla derivada**: En todos los menús del sistema de economía de ThunderMC, el botón `Info_Balance` SIEMPRE debe ser `head-%player_name%` con el bloque multimoneda completo, permitiendo consultar el balance global y acceder a `info_economia` desde cualquier pantalla.
+
+### [2026-10-16] Lección 10: Soporte y Visualización de Armor Trims en DeluxeMenus
+- **Contexto**: Armaduras con patrones y materiales de herrería (trims de 1.20+) mostradas en inventarios GUI (ej. Set Morfeo con Eye Trim de Amatista).
+- **Error previo**: Omitir las claves de trim en DeluxeMenus, lo que hace que el cliente renderice la armadura lisa por defecto.
+- **Corrección aplicada**: Configurar explícitamente ambas directivas en el ítem de la armadura:
+  ```yaml
+  trim_material: AMETHYST
+  trim_pattern: EYE
+  ```
+- **Regla derivada**: DeluxeMenus soporta nativamente la renderización visual de Armor Trims en el GUI siempre que se declaren **ambas** claves simultáneamente: `trim_material` (ej. `AMETHYST`, `NETHERITE`, `DIAMOND`, `GOLD`, etc.) y `trim_pattern` (ej. `EYE`, `VEX`, `SILENCE`, `SENTRY`, `WARD`, etc.). Si se omite alguna de las dos, el trim no se renderizará.
 
 ---
 

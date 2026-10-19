@@ -10,6 +10,7 @@ Catálogo unificado y centralizado de la base de conocimiento de **ThunderCerebr
 - **[[wiki/synthesis/estudio_mercado_minecraft_multijugador|Estudio de Mercado Minecraft & Multijugador]]**: Dimensionamiento de mercado (TAM/SAM/SOM), cuotas No-Premium, viabilidad financiera y benchmarks.
 - **[[wiki/synthesis/optimizacion-granjas-survival|Optimización de Granjas Survival]]**: Diagnóstico técnico, análisis de cuellos de botella (MSPT/entidades) y plan de configs/stacking para 1.21.11.
 - **[[wiki/synthesis/sistema-habilidades-y-skills|Sistema de Habilidades y Skills]]**: Organización modular del directorio de skills y capacidades operativas.
+- **[`skills/maestro-prompts/`](file:///C:/Users/PC/Desktop/ThunderCerebro/skills/maestro-prompts/SKILL.md) (Maestro de Prompts)**: Arquitecto supremo de ingeniería de prompts de grado industrial. Síntesis operativa de las 10 fuentes canónicas de `creator/lab/Maestro de prompts/`.
 - **[[wiki/synthesis/modelo-evento-temporada-thundermc|Modelo de Evento de Temporada]]**: Arquitectura integral de temporadas, prompts de agentes, mitigación de riesgos fatales (Red Teaming), hito comunitario y monetización ética.
 
 ## ⚖️ Comparaciones & Matrices de Decisión
@@ -43,15 +44,18 @@ Catálogo unificado y centralizado de la base de conocimiento de **ThunderCerebr
 - **[[wiki/entities/catamines|Catamines]]**: Motor y plugin de minería progresiva por rangos y zona PvP.
 - **[[wiki/entities/thundermc/valyr-protagonista-canonic|Valyr (Protagonista Canónico)]]**: Ficha canónica de diseño, rig facial, armadura oficial (yelmo campamento_dia) y directrices de render 3D.
 - **[[wiki/entities/thunderpets_plugin|ThunderPets (Plugin Custom de Mascotas)]]**: Sistema cosmético de acompañantes flotantes y medio personaje con GUI interactivo (MC 1.21.11).
+- **[[wiki/entities/thundermc/core-infrastructure/nlogin|nLogin (Autenticación Proxy & Core)]]**: Motor de autenticación, comandos de auditoría IP y persistencia en MariaDB/MySQL.
 - **[[Plan de Monetizacion/plan-monetizacion-thundermc|Plan Maestro de Monetización]]**: Documento maestro operativo de comercialización y Tebex.
 
 ## 📚 Desgloses de Fuentes
+- **[[wiki/sources/nlogin-official-docs|Documentación Oficial nLogin]]**: Especificación técnica de comandos, esquema de base de datos, 2FA y seguridad.
 - **[[wiki/sources/shopguiplus-official-docs|Documentación Oficial ShopGUIPlus]]**: Especificación técnica de tiendas, ítems, metadatos, formatos y hooks de comandos.
 - **[[wiki/sources/llm-wiki-idea|Manifiesto LLM Wiki]]**: Documento fundacional del patrón de wiki persistente.
 - **[[wiki/sources/thunderia-overview|Resumen Maestro ThunderIA]]**: Extracción global del repositorio ThunderIA y sus departamentos.
 - **[[wiki/sources/thundermc-economia-minas-dungeons|Economía Minas y Dungeons]]**: Extracción técnica de configuraciones de tiendas, minas y jefes.
 - **[[wiki/sources/smartspawner/desglose_smartspawner_v1_6_6|Desglose SmartSpawner v1.6.6]]**: Arquitectura de spawner virtual, mitigación de entity lag, apilado y tablas de drops.
 - **[[wiki/sources/hanush-marco-cognitivo-jordan|Marco Cognitivo y Perfil de Jordan]]**: Extracción de modelos mentales, hábitos y principios de trabajo.
+- **[[wiki/sources/prompt-engineering-for-llms-berryman-ziegler|Prompt Engineering for LLMs (Berryman & Ziegler)]]**: Síntesis e ingeniería de sistemas para LLMs: Loop, Feedforward pass, Knapsack voraz de ensamblaje, SOMA y lecciones de GitHub Copilot.
 
 ---
 
@@ -59,6 +63,7 @@ Catálogo unificado y centralizado de la base de conocimiento de **ThunderCerebr
 - **`creator/README.md`**: Protocolo y reglas del entorno de experimentación e I+D.
 - **`creator/raw/`**: Ingesta aislada para experimentos (prompts, referencias).
 - **`creator/lab/`**: Espacio de trabajo iterativo (items, mecánicas, narrativa).
+  - [`creator/lab/bundles_recompensas_test_contexto.md`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/lab/bundles_recompensas_test_contexto.md): Especificación técnica, matriz de probabilidades MEGA-RANDOM, análisis Red Teaming y estado de desarrollo de las Bolsitas de Recompensa (Bundles 1.21.11).
 - **`creator/output/`**: Entregables validados listos para producción (servidor / plugins / blueprints / discord).
   - [`creator/output/discord/menu_discord_thundermc.json`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/output/discord/menu_discord_thundermc.json): Menú oficial de Discord de ThunderMC (Embed compacto, imagen 1138×640, IP en 1-clic y Dashboard interactivo).
   - [`creator/output/discord/roles_notificaciones.json`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/output/discord/roles_notificaciones.json) / [`roles_discord_thundermc.json`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/output/discord/roles_discord_thundermc.json): Roles Discord ThunderMC (Selector de alertas y notificaciones con multiselección, thumbnail de campana e imagen 16:9).

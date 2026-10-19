@@ -33,6 +33,7 @@ Este directorio centraliza todas las habilidades y capacidades operativas del ec
 - **`instalar-mcps/`**: Guía y catálogo para configuración de servidores Model Context Protocol (MCP).
 - **`investigacion-problemas/`**: Diagnóstico estructurado de bugs y análisis de causa raíz.
 - **`lanzamiento-producto/`**: Framework integral de lanzamiento y go-to-market.
+- **`maestro-prompts/`**: Arquitecto supremo de ingeniería de prompts de alta precisión, razonamiento LLM y evaluación SOMA sintetizando 10 fuentes canónicas.
 - **`scaffolding-proyecto/`**: Generación de plantillas y estructura inicial de repositorios.
 - **`startupsurvival/`**: Estrategias de supervivencia, agilidad y optimización para startups y proyectos lean.
 

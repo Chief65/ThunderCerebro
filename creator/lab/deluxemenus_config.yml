@@ -240,3 +240,7 @@ gui_menus:
     file: menusIA/lootpool_calidad_2.yml
   lootpool_calidad_3:
     file: menusIA/lootpool_calidad_3.yml
+  preview_bolsa_super:
+    file: menusIA/preview_bolsa_super.yml
+  tienda_afk:
+    file: menusIA/tienda_afk.yml

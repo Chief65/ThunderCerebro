@@ -1,0 +1,657 @@
+{% extends "config.twig" %}
+
+{% block layout %}
+
+    {# Theme Version: 5.4.1  #}
+
+    <!DOCTYPE html>
+    <html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>{{ store.name|escape }} | {{ page.title|escape }}</title>
+
+        {# SEO #}
+        {% if page.category == "checkout" %}
+        <meta name="robots" content="noindex, nofollow">
+        {% else %}<meta name="robots" content="index, follow, max-image-preview:large">{% endif %}
+        {% block head_extra %}{% endblock %}
+        {# Open Graph: usa property= (estándar) en lugar de name= #}
+        <meta property="og:type" content="website">
+        <meta property="og:locale" content="es_ES">
+        <meta property="og:image:width" content="1200">
+        <meta property="og:image:height" content="630">
+        <meta name="twitter:card" content="summary_large_image">
+
+        <meta property="og:site_name" content="{{ store.name|escape }}">
+        {% set tzCanonicalParts = path()|split('?') %}
+        <meta property="og:url" content="{{ tzCanonicalParts[0]|escape }}">
+        <meta property="og:title" content="{{ store.name|escape }} | {{ __(page.title) }}">
+        <meta property="og:image" content="{{ config("og-image") }}">
+        <meta property="og:image:alt" content="{{ store.name|escape }} | {{ __(page.title) }}">
+        <meta property="og:description" content="{{ config("site-description") }}">
+        <meta name="description" content="{{ config("site-description") }}">
+
+        {# Twitter / X Card Tags Completos #}
+        <meta name="twitter:title" content="{{ store.name|escape }} | {{ __(page.title) }}">
+        <meta name="twitter:description" content="{{ config("site-description") }}">
+        <meta name="twitter:image" content="{{ config("og-image") }}">
+        <meta name="twitter:site" content="@ThunderMC_es">
+
+        {# Canonical Tag — evita penalización por contenido duplicado en variantes de URL #}
+        <link rel="canonical" href="{{ tzCanonicalParts[0]|escape }}">
+
+        <link rel="shortcut icon" href="{{ store.favicon }}">
+        <link rel="icon" type="image/png" href="{{ store.favicon }}">
+        <meta name="theme-color" content="{{ config("theme-color") }}">
+        {# SEO end #}
+
+        {# Preconnect a dominios críticos — reduce latencia DNS en primera carga #}
+        <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="preconnect" href="https://dunb17ur4ymx4.cloudfront.net" crossorigin>
+        <link rel="preconnect" href="https://minotar.net" crossorigin>
+        <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+
+{# Colors from config.php #}
+        {{ colors }}
+
+        {% include 'externals_assets.twig' %}
+
+        <script type="text/javascript">
+            const featuredProducts = new Map()
+        </script>
+
+{% if page.category == "checkout" and config("cordarium") == "enabled" %}
+            <script src="https://app.cordarium.com/cdn/tebex-widget/index.js" crossorigin type="module" defer></script>
+            <link href="https://app.cordarium.com/cdn/tebex-widget/style.css" rel="stylesheet">
+        {% endif %}
+
+        <style>
+            {{ store.css|raw }}
+            #particles-js {
+                position: absolute;
+                width: 100%;
+                margin: 0 auto;
+                left: 0;
+                right: 0;
+                margin-left: auto;
+                margin-right: auto;
+                pointer-events: none;
+            {% if config("background-size") == "height" %}
+                height: var(--height-image);
+            {% else %}
+                position: fixed;
+            {% endif %}
+            }
+            .rank__table__grid__col img {
+                max-width: clamp(5.813rem,-4.28rem + 14.81vw,8.313rem);
+                margin-bottom: 10px;
+                height: 100px;
+                object-fit: contain;
+            }
+            .rank__table__grid__col--title {
+                text-align: center;
+            }
+            button#pay-with-cordarium {
+                border-radius: 5px;
+                font-weight: 700;
+                width: 100%;
+                text-decoration: none;
+                text-shadow: 0 2px 2px rgba(0,0,0,.1);
+                padding: 24px 20px;
+                font-size: 1rem;
+                background: var(--green-button);
+                box-shadow: none;
+            }
+            .modal__content__box .package__modal__side__header__content__description img {
+                max-height: 164px;
+                object-fit: contain;
+            }
+            .checkout__page .cryptoButton, .checkout__page button#pay-with-cordarium {
+                display: none;
+            }
+            {% if config("trademark") == "disabled" %}
+            .footer-triplezone {
+                justify-content: center;
+            }
+            .footer-copyright {
+                text-align: center;
+            }
+            {% endif %}
+            body {
+                background-color: #090d16 !important;
+                color: var(--primary-text-color);
+                font-family: 'Be Vietnam Pro', var(--font-family), sans-serif;
+                margin: 0;
+                padding: 0;
+                overflow-x: hidden;
+            }
+            .triplezone-wrapper {
+                max-width: 100% !important;
+                margin: 0 auto;
+                padding: 0;
+                position: relative;
+                overflow-x: clip;
+            }
+
+            /* Reseteo Completo del Modal de Paquete ThunderMC */
+            dialog.modal[data-modal-type="package"] {
+                padding: 0 !important;
+                margin: auto !important;
+                border: 0 !important;
+                outline: none !important;
+                background: transparent !important;
+                color: inherit !important;
+                max-width: 960px !important;
+                width: 90vw !important;
+                max-height: 85vh !important;
+                height: auto !important;
+                border-radius: 20px !important;
+                box-shadow: 0 25px 60px -10px rgba(0, 0, 0, 0.9) !important;
+                overflow: hidden !important;
+                inset: 0 !important;
+                position: fixed !important;
+            }
+            dialog.modal[data-modal-type="package"]:focus-visible {
+                outline: none !important;
+                border: 0 !important;
+            }
+            dialog.modal[data-modal-type="package"]::backdrop {
+                background: rgba(4, 7, 13, 0.82) !important;
+                backdrop-filter: blur(8px) !important;
+                -webkit-backdrop-filter: blur(8px) !important;
+            }
+            dialog.modal[data-modal-type="package"] .modal__content__box {
+                padding: 0 !important;
+                margin: 0 !important;
+                background: transparent !important;
+                border: 0 !important;
+                outline: none !important;
+                width: 100% !important;
+                height: 100% !important;
+                max-width: 100% !important;
+                border-radius: 20px !important;
+            /* Toast Popup de Producto Añadido (ThunderMC) */
+            .tz-added-popup-toast {
+                position: fixed;
+                bottom: 28px;
+                right: 28px;
+                z-index: 100000;
+                background: #0d121f;
+                border: 1px solid rgba(250, 204, 21, 0.4);
+                border-radius: 16px;
+                padding: 16px 20px;
+                box-shadow: 0 20px 40px rgba(0, 0, 0, 0.7), 0 0 20px rgba(250, 204, 21, 0.15);
+                display: flex;
+                align-items: center;
+                gap: 16px;
+                max-width: 400px;
+                transform: translateY(120%);
+                opacity: 0;
+                transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+                box-sizing: border-box;
+                font-family: 'Plus Jakarta Sans', sans-serif;
+            }
+            .tz-added-popup-toast.is-show {
+                transform: translateY(0);
+                opacity: 1;
+            }
+            .tz-added-popup-thumb {
+                width: 48px;
+                height: 48px;
+                object-fit: contain;
+                filter: drop-shadow(0 4px 8px rgba(0,0,0,0.5));
+                flex-shrink: 0;
+            }
+            .tz-added-popup-body {
+                display: flex;
+                flex-direction: column;
+                gap: 2px;
+                flex: 1;
+            }
+            .tz-added-popup-status {
+                display: flex;
+                align-items: center;
+                gap: 6px;
+                color: #4ade80;
+                font-size: 11px;
+                font-weight: 800;
+                text-transform: uppercase;
+                letter-spacing: 0.5px;
+            }
+            .tz-added-popup-title {
+                color: #ffffff;
+                font-size: 14px;
+                font-weight: 800;
+                margin: 0;
+                line-height: 1.2;
+            }
+            .tz-added-popup-price {
+                color: #facc15;
+                font-size: 12px;
+                font-weight: 700;
+            }
+            .tz-added-popup-close {
+                background: none;
+                border: none;
+                color: #94a3b8;
+                font-size: 18px;
+                cursor: pointer;
+                padding: 4px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                transition: color 0.15s ease;
+            }
+            .tz-added-popup-close:hover {
+                color: #f87171;
+            }
+            @media (max-width: 600px) {
+                .tz-added-popup-toast {
+                    left: 14px;
+                    right: 14px;
+                    bottom: 16px;
+                    max-width: none;
+                }
+            }
+        </style>
+
+        <script defer src="https://js.tebex.io/v/1.js"></script>
+        
+        <script>
+            window.tzShowAddedPopup = function(title, imgSrc, price) {
+                var existing = document.getElementById('tzAddedToastPopup');
+                if (existing) existing.remove();
+
+                var toast = document.createElement('div');
+                toast.className = 'tz-added-popup-toast';
+                toast.id = 'tzAddedToastPopup';
+                toast.setAttribute('role', 'status');
+                if (imgSrc) {
+                    try {
+                        var imageURL = new URL(imgSrc, window.location.href);
+                        if (imageURL.protocol === 'https:' || imageURL.origin === window.location.origin) {
+                            var image = document.createElement('img');
+                            image.className = 'tz-added-popup-thumb'; image.alt = ''; image.src = imageURL.href;
+                            toast.appendChild(image);
+                        }
+                    } catch (error) { /* Text notification remains available. */ }
+                }
+                var body = document.createElement('div'); body.className = 'tz-added-popup-body';
+                var status = document.createElement('span'); status.className = 'tz-added-popup-status';
+                status.textContent = 'Carrito actualizado'; body.appendChild(status);
+                var heading = document.createElement('h4'); heading.className = 'tz-added-popup-title';
+                heading.textContent = title || 'Paquete'; body.appendChild(heading);
+                if (price) { var amount = document.createElement('span'); amount.className = 'tz-added-popup-price'; amount.textContent = price; body.appendChild(amount); }
+                toast.appendChild(body);
+                var dismiss = document.createElement('button'); dismiss.type = 'button';
+                dismiss.className = 'tz-added-popup-close'; dismiss.setAttribute('aria-label', 'Cerrar'); dismiss.textContent = '×';
+                toast.appendChild(dismiss);
+
+                document.body.appendChild(toast);
+
+                setTimeout(function() { toast.classList.add('is-show'); }, 20);
+
+                var closeBtn = toast.querySelector('.tz-added-popup-close');
+                if (closeBtn) {
+                    closeBtn.addEventListener('click', function() {
+                        toast.classList.remove('is-show');
+                        setTimeout(function() { toast.remove(); }, 350);
+                    });
+                }
+
+                setTimeout(function() {
+                    if (toast && toast.parentNode) {
+                        toast.classList.remove('is-show');
+                        setTimeout(function() { toast.remove(); }, 350);
+                    }
+                }, 4500);
+            };
+
+            window.tzUpdateCartCount = function(newCount) {
+                var badges = document.querySelectorAll('.tz-nav-cart-badge, #tzCartBadgeCount');
+                badges.forEach(function(badge) {
+                    badge.innerText = newCount;
+                    badge.style.display = newCount > 0 ? 'flex' : 'none';
+                });
+            };
+        </script>
+
+    </head>
+
+    <body>
+
+    {% if config("particles") == "enabled" and config("background-size") == "fullscreen" %}
+        <div id="particles-js"></div>
+    {% endif %}
+
+    {% if config("store_theme") == "christmas" %}
+        <ul class="lightrope"><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li></ul>
+    {% endif %}
+
+    {% include 'layout.header.twig' %}
+    {% include 'layout.login_modal.twig' %}
+    {% include 'layout.basket.twig' %}
+
+    <div class="triplezone-wrapper">
+
+        <div class="notification">
+
+            {% if page.message.display %}<p class="tz-platform-message" data-tz-message role="alert">{{ page.message.text|escape }}</p>{% endif %}
+
+        </div>
+
+        {% block content %}{% endblock %}
+
+    </div>
+
+    {% if store.googleAnalytics %}
+    <section id="tzAnalyticsConsent" hidden data-analytics-id="{{ store.googleAnalytics|escape }}" aria-label="Preferencias de privacidad" class="tz-consent-banner">
+      <p>¿Permites cookies de analítica para ayudarnos a mejorar la tienda? Puedes rechazar sin afectar a tu compra. <a href="/terms/privacy">Privacidad</a></p>
+      <button type="button" data-consent="no">Rechazar analítica</button>
+      <button type="button" data-consent="yes">Aceptar analítica</button>
+    </section>
+    <script defer src="{{ asset('privacy.js') }}"></script>
+    {% endif %}
+    {% include 'layout.footer.twig' %}
+
+    <dialog class="modal" data-modal-type="package" aria-label="Detalles del paquete">
+        <div class="modal__content__box" style="width: 100%; height: 100%;">
+        </div>
+    </dialog>
+
+    <dialog class="modal" data-loading-modal data-modal-type="crypto" style="--max-width: 33rem;">
+        <div class="modal__loading">
+            <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M2 25C2 37.7026 12.2974 48 25 48C37.7026 48 48 37.7026 48 25C48 12.2974 37.7026 2 25 2"
+                      stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+        </div>
+        <div class="modal__content">
+            <button class="modal__content--close" aria-label="Cerrar Modal">
+                <i aria-hidden="true" class="mdi mdi-window-close"></i>
+            </button>
+            <div class="modal__content__box">
+                <div class="modal__content__box__steps">
+
+                    <div class="modal__content__box__steps__title">
+                        <h2>Cómo pagar con Criptomonedas</h2>
+                    </div>
+
+                    <div class="modal__content__box__steps__step">
+                        <p class="step__title">Paso 1.</p>
+                        <p><span>Visita</span> el Exchange de Criptomonedas de {{ store.name|escape }}</p>
+                    </div>
+
+                    <div class="modal__content__box__steps__step">
+                        <p class="step__title">Paso 2.</p>
+                        <p>Elige tu criptomoneda y compra <span>{{basket.price|money }} {{ basket.currency }}</span> de crédito en la tienda</p>
+                    </div>
+
+                    <div class="modal__content__box__steps__step">
+                        <p class="step__title">Paso 3.</p>
+                        <p>Canjea tu código de crédito al pagar</p>
+                    </div>
+
+                    <a href="{{ config("cryptoWidgetURL") }}" target="_blank" rel="noopener">Visitar Exchange <span class="mdi mdi-arrow-right-thin" aria-hidden="true"></span></a>
+
+                </div>
+            </div>
+        </div>
+    </dialog>
+
+    {% if config("category_navigation") == "modal" %}
+
+        {% set searchWithoutLogging %}
+            {% if config("searchOnStore") == "disabled" %}
+                {% if not basket.ign %}
+                    data-login-category data-izimodal-open="#modal-login"
+                {% endif %}
+            {% endif %}
+        {% endset %}
+
+        <dialog class="modal" data-loading-modal data-modal-type="categorySelector">
+            <div class="modal__loading">
+                <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M2 25C2 37.7026 12.2974 48 25 48C37.7026 48 48 37.7026 48 25C48 12.2974 37.7026 2 25 2" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </div>
+            <div class="modal__content">
+                <button class="modal__content--close" aria-label="Cerrar Modal">
+                    <i aria-hidden="true" class="mdi mdi-window-close"></i>
+                </button>
+                <div class="modal__content__box">
+
+                    <div class="modal__content__box__categoryModal">
+                        <h3>{{ lang.select_category }}</h3>
+                        <ul>
+                            {% for category in store.categories %}
+
+                                {# Get first subcategory URL #}
+
+                                {% set categoryURL = '' %}
+
+                                {% for subcategory in category.subcategories %}
+                                    {% if categoryURL == '' %}
+                                        {% set categoryURL = '/category/' ~ subcategory.id %}
+                                    {% endif %}
+                                {% endfor %}
+
+                                {% if not categoryURL %}
+                                    {% set categoryURL = '/category/' ~ category.id %}
+                                {% endif %}
+
+                                <li class="{% if category.active %}active-dropdown{% endif %}">
+
+                                    <a {{ searchWithoutLogging | raw }} href="{{ categoryURL }}" class="{% if category.active %}link__active{% endif %}">
+                                        {% set hasIcon = config("icon-#{category.id}") != "" %}
+                                        {% if hasIcon %}
+                                            <img src="{{ config("icon-#{category.id}") }}" />
+                                        {% endif %}
+                                        {{ category.name|escape }}
+                                    </a>
+                                </li>
+
+
+
+                            {% endfor %}
+
+                            {% for page in store.pages %}
+                                <li class="{% if page.active %}active-dropdown{% endif %}">
+                                    <a href="/{{ page.slug|escape }}" class="{% if page.active %}link__active{% endif %}">
+
+                                        {% set hasIcon = config("icon-#{page.slug}") != "" %}
+                                        {% if hasIcon %}
+                                            <img src="{{ config("icon-#{page.slug}") }}" />
+                                        {% endif %}
+
+                                        {{ page.title|escape }}
+                                    </a>
+                                </li>
+                            {% endfor %}
+
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </dialog>
+    {% endif %}
+
+    {% include 'externals_scripts.twig' %}
+    {% include 'app.twig' %}
+
+    {# Server-rendered display values; no monetary arithmetic or hand-written JSON. #}
+    <div id="tz-basket-state" hidden data-user="{{ basket.ign|escape }}"
+         data-total-display="{{ basket.price|money }} {{ basket.currency }}" data-ident="{{ basket.ident }}">
+      {% for package in basket.packages %}
+        <span data-basket-package="{{ package.id }}" data-quantity="{{ package.quantity }}"></span>
+      {% endfor %}
+    </div>
+
+
+<tebex-footer>
+    <template shadowrootmode="open">
+        <div class="tebex-footer-wrapper tebex-footer-wrapper-dark">
+            <div class="tebex-footer-inner">
+                <div class="tebex-footer-image">
+                    <a href="https://www.tebex.io" target="_blank" rel="noopener">
+                        <svg width="61" height="29" viewBox="0 0 61 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M7.22379 7.36903C8.42455 5.55275 10.5991 5.02655 10.5991 5.02655C10.5991 5.02655 6.44895 4.02049 6.44895 0C6.44895 4.02049 2.29644 5.02655 2.29644 5.02655C2.29644 5.02655 4.47176 5.55275 5.67331 7.36903H0V14.3322L1.28979 12.1758H3.86857V24.1932L9.02693 29V14.2859C7.71147 13.7208 5.8217 12.2842 5.14472 11.1885C6.30056 11.5136 7.85104 11.9411 9.05821 12.1766H12.8963V7.36903H7.22379Z" />
+                            <g clip-path="url(#clip0_995_406)">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M35.9134 14.0983C36.5813 13.2542 37.62 12.7915 38.8665 12.7915H38.868C41.2702 12.7915 42.9475 14.4698 42.9475 16.8028C42.9475 19.1358 41.2194 20.8283 38.8357 20.8283C37.5616 20.8283 36.5474 20.3884 35.8888 19.5529L35.8457 20.6418H34.0253V9.87207H35.9134V14.0983ZM38.7342 19.3536C40.1961 19.3536 41.2163 18.3259 41.2163 16.8555C41.2163 15.3509 40.3084 14.3417 38.828 14.3417C37.3477 14.3417 36.3135 15.3381 36.3135 16.8555C36.3135 18.3728 37.2722 19.3536 38.7342 19.3536ZM22.7747 19.1045C22.3069 19.4347 21.9345 19.5628 21.4436 19.5628C20.7204 19.5628 20.3049 19.1557 20.3049 18.444V14.4271H23.3395V12.8812H20.3049V10.8742H18.4167V12.8798H17.1041L16.6763 14.4257H18.4167V18.4583C18.4167 20.2162 19.4277 21.1841 21.2651 21.1841C22.1038 21.1841 22.8517 20.945 23.5488 20.4525L23.5996 20.4169L22.8486 19.0518L22.7747 19.1031V19.1045ZM28.2885 12.7303C25.874 12.7303 24.1228 14.4242 24.1228 16.7572C24.1228 19.2127 25.7894 20.7984 28.367 20.7984C29.8396 20.7984 30.9399 20.3827 31.8263 19.4902L31.8725 19.4447L30.8707 18.3273L30.8107 18.3814C30.1197 19.0063 29.4057 19.2853 28.4916 19.2853C27.0574 19.2853 26.1756 18.5579 26.0017 17.2327H32.2049V17.1615C32.2049 17.0903 32.2079 17.0234 32.2125 16.9565C32.2172 16.8868 32.2202 16.817 32.2202 16.743C32.2202 14.3061 30.6768 12.7303 28.2885 12.7303ZM26.0402 16.0882C26.2803 14.9794 27.1482 14.2677 28.2731 14.2677C29.398 14.2677 30.1582 14.9295 30.3244 16.0882H26.0402ZM48.0719 12.7303C45.6575 12.7303 43.9062 14.4242 43.9062 16.7572C43.9062 19.2127 45.5728 20.7984 48.1504 20.7984C49.6231 20.7984 50.7234 20.3827 51.6097 19.4902L51.6559 19.4447L50.6541 18.3273L50.5941 18.3814C49.9032 19.0063 49.1891 19.2853 48.275 19.2853C46.8408 19.2853 45.9591 18.5579 45.7852 17.2327H51.9883V17.1615C51.9883 17.0903 51.9914 17.0234 51.996 16.9565C52.0006 16.8868 52.0037 16.817 52.0037 16.743C52.0037 14.3061 50.4602 12.7303 48.0719 12.7303ZM48.0565 14.2662C49.1984 14.2662 49.9416 14.9281 50.1078 16.0868H45.8237C46.0637 14.9779 46.9316 14.2662 48.0565 14.2662ZM60.2258 12.8798L57.2973 16.5708L60.5566 20.6418H58.313L56.2078 17.8633L54.1488 20.6418H52.016L55.1645 16.6733L52.1576 12.8798H54.4012L56.254 15.4078L58.0914 12.8798H60.2258Z" />
+                            </g>
+                            <defs>
+                                <clipPath id="clip0_995_406">
+                                    <rect width="43.8803" height="11.3121" fill="white" transform="translate(16.6763 9.87207)" />
+                                </clipPath>
+                            </defs>
+                        </svg>
+                    </a>
+                </div>
+
+                <div class="tebex-footer-text">
+                    This website and its checkout process is owned &amp; operated by Tebex Limited, who handle product fulfilment, billing support and refunds.
+                </div>
+
+                <div class="tebex-footer-links">
+                    <a href="/terms/impressum">Impressum</a>
+                    <a href="/terms/checkout">Terms & Conditions</a>
+                    <a href="/terms/privacy">Privacy Policy</a>
+                </div>
+            </div>
+        </div>
+        <style>
+            :host {
+                all: unset !important;
+                zoom: 1 !important;
+                width: 100% !important;
+                min-height: 35px !important;
+                box-sizing: border-box !important;
+                z-index: 9999999999 !important;
+            }
+
+            :host([absolute]) {
+                position: absolute !important;
+                bottom: 0 !important;
+            }
+
+            * {
+                box-sizing: border-box !important;
+            }
+
+            .tebex-footer-wrapper {
+                all: unset !important;
+                display: flex !important;
+                width: 100% !important;
+                min-height: 35px !important;
+                padding: 4px 32px !important;
+                font-size: 11px !important;
+                font-weight: 400 !important;
+                font-family: Arial, sans-serif !important;
+                box-sizing: border-box !important;
+                --text: var(--tebex-legal-footer-text-color, #94a3b8) !important;
+                --bg: var(--tebex-legal-footer-background-color, #05080e) !important;
+                color: var(--text) !important;
+                background-color: var(--bg) !important;
+                border-top: 1px solid var(--tebex-legal-footer-border-color, rgba(255,255,255,0.06)) !important;
+            }
+
+            .tebex-footer-wrapper-dark {
+                --text: var(--tebex-legal-footer-text-color, #94a3b8) !important;
+                --bg: var(--tebex-legal-footer-background-color, #05080e) !important;
+                border-color: var(--tebex-legal-footer-border-color, rgba(255,255,255,0.06)) !important;
+            }
+
+            .tebex-footer-inner {
+                width: 100% !important;
+                height: 100% !important;
+                max-width: 1380px !important;
+                margin: 0 auto !important;
+                display: flex !important;
+                flex-wrap: wrap !important;
+                align-items: center !important;
+                container-type: inline-size !important;
+            }
+
+            .tebex-footer-image {
+                padding-right: 24px !important;
+                display: flex !important;
+                align-items: center !important;
+            }
+            .tebex-footer-image svg path {
+                fill: #94a3b8 !important; 
+            }
+
+            .tebex-footer-text {
+                flex-grow: 1 !important;
+                padding-right: 24px !important;
+                color: #64748b !important;
+                font-size: 11.5px !important;
+            }
+
+            .tebex-footer-links {
+                display: flex !important;
+                align-items: center !important;
+                gap: 14px !important;
+            }
+
+            .tebex-footer-links a {
+                color: #94a3b8 !important;
+                text-decoration: underline !important;
+                font-size: 11.5px !important;
+                transition: color 0.15s ease !important;
+            }
+            .tebex-footer-links a:hover {
+                color: #facc15 !important;
+            }
+
+            @media screen and (max-width: 900px) {
+                .tebex-footer-wrapper {
+                    min-height: 60px !important;
+                    padding: 8px 16px !important;
+                }
+                .tebex-footer-image {
+                    display: none !important;
+                }
+            }
+        </style>
+    </template>
+</tebex-footer>
+
+<script type="text/javascript">
+    (() => {
+        const SHADOW_ROOT = Symbol();
+        const ATTACH_SHADOW = Symbol();
+        const QUERY_SELECTOR = Symbol();
+
+        class TebexFooter extends HTMLElement {
+            constructor() {
+                super();
+                this[SHADOW_ROOT] = this.shadowRoot;
+                this[ATTACH_SHADOW] = this.attachShadow;
+                this[QUERY_SELECTOR] = this.querySelector;
+
+                if (!this[SHADOW_ROOT]) {
+                    const template = this[QUERY_SELECTOR]('template[shadowrootmode]');
+                    if (template) {
+                        const mode = template.getAttribute('shadowrootmode') || 'open';
+                        const shadowRoot = this[ATTACH_SHADOW]({ mode });
+                        shadowRoot.appendChild(template.content.cloneNode(true));
+                        this[SHADOW_ROOT] = shadowRoot;
+                    }
+                }
+            }
+        }
+        if (!customElements.get('tebex-footer')) {
+            customElements.define('tebex-footer', TebexFooter);
+        }
+    })();
+</script>
+
+    </body>
+
+    </html>
+{% endblock %}
