@@ -1,6 +1,33 @@
-# Registro de Auditoría y Crónica (log.md)
+﻿# Registro de Auditoría y Crónica (log.md)
 
 Registro cronológico e incremental de todas las operaciones realizadas en **ThunderCerebro**.
+
+## [2026-10-21] proxy & geyser & floodgate | Auditoría y Diseño de Vinculación Java-Bedrock (Local Linking)
+- **Diagnóstico Técnico de Proxy en Producción (ymykh9qy.5db0bd79)**:
+  - Auditoría directa vía SFTP de elocity.toml, Geyser-Velocity/config.yml, loodgate/config.yml y 
+login/premium/config.yml.
+  - Confirmación de inviabilidad técnica para juego concurrente simultáneo (bloqueo por protocolo e identidad UUID).
+  - Identificación de 3 bloqueos críticos para juego alternado unificado en red cracked:
+    1. Geyser con uth-type: online forzando autenticación con Microsoft Java.
+    2. Floodgate con enable-global-linking: true inoperante para cuentas No-Premium / UUIDs offline (v3).
+    3. Ausencia del driver de base de datos local en plugins/floodgate/ impidiendo encender enable-own-linking.
+- **Arquitectura y Documentación Maestro**:
+  - Creado wiki/entities/thundermc/core-infrastructure/geyser-floodgate-linking.md con el plan de configuración detallado, flujo de comando /linkaccount, mitigación de riesgos de suplantación de cuenta y matriz de Red Teaming.
+  - Actualizado index.md con el nuevo registro de infraestructura.
+- **Acciones Pendientes para Despliegue**:
+  - Descargar y subir loodgate-sqlite-database.jar a plugins/floodgate/ en el split Proxy.
+  - Ajustar Geyser-Velocity/config.yml a uth-type: floodgate.
+  - Activar enable-own-linking: true, enable-global-linking: false, 	ype: sqlite en loodgate/config.yml.
+  - Asignar permiso loodgate.command.linkaccount en LuckPerms y reiniciar Proxy.
+
+## [2026-10-20] creator & web & prompts & renders | Prompts Maestros de Diseño Web y Renders Isométricos
+- **Prompts Maestros Compilados (Maestro de Prompts)**:
+  - creator/output/sistema_tipografico_prompt.md: Prompt técnico compilado para diseño de sistemas tipográficos modulares (escalas armónicas, fallbacks CSS, WCAG 2.1).
+  - creator/output/prompt_maestro_sistema_color_ui.md: Prompt compilado integrando la triada de roles (Design System Lead, Senior UI Designer y Design Engineer) para paletas semánticas, coherencia de temas oscuro/claro y tokens de diseño.
+  - creator/output/prompt_maestro_assets_graficos_tienda.md: Prompt maestro para dirección técnica y producción de renders 3D, texturas repetibles y assets de e-commerce gaming con estricto límite de rendimiento (<120 KB).
+- **Assets Gráficos Generados y Depurados**:
+  - creator/output/renders/grass_block.png: Render isométrico 3D de bloque de hierba de Minecraft (1024x1024 px, PNG RGBA transparente, filtro de nitidez y anti-halación).
+  - creator/output/renders/bedrock_block.png: Render isométrico 3D de bloque de bedrock (1024x1024 px, idéntica perspectiva isométrica y dimensiones exactas para composición en tienda).
 
 ## [2026-10-19] dev & thundershields & prompts | Desarrollo de ThunderShields v1.1.0, Testing Sandbox y Neutralización EI
 - **Plugin Desarrollado y Compilado**:
