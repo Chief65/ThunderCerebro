@@ -1,0 +1,95 @@
+# ==============================================================================
+# PROYECTO: ThunderMC 1.21.11 - Mob MythicMobs: Minion Calabaza (Vuelo Allay)
+# ARCHIVO: plugins/MythicMobs/mobs/minion_calabaza.yml
+# MOTOR: MythicMobs (Paper/Purpur)
+# ==============================================================================
+
+# ------------------------------------------------------------------------------
+# 1. ENTIDAD PRINCIPAL: Minion Calabaza (Bebé Zombie sin Torso sobre Allay)
+# ------------------------------------------------------------------------------
+MinionCalabaza:
+  Type: ZOMBIE
+  Display: '<#FFA726>🎃 <#FFB74D>&lMinion Calabaza'
+  Health: 45
+  Damage: 6
+  Armor: 2
+  Options:
+    Baby: true                  # Base de bebé zombie
+    Scale: 1.40                 # Agrandado un poco para resaltar como cabeza viviente
+    PreventSunburn: true        # Inmune a la luz solar
+    PreventOtherDrops: true
+    AlwaysShowName: false
+    Silent: true                # Silencia gruñidos de zombie
+    MovementSpeed: 0.26
+    KnockbackResistance: 0.8
+    Despawn: true
+    FollowRange: 24
+  Equipment:
+    # Cabeza personalizada #120021
+    - PLAYER_HEAD{skullTexture=eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNDNjMDAxNTRjNTYxZjNkNjZhYzY5YjM3ZDA1NmE2MTBmMzcwMGY0MWVhOTMyM2NkZDQwZWViYTVlNmYzZGY5MSJ9fX0=} HEAD
+    # Sin torso ni armadura (solo la cabeza flota y revolotea con el Allay)
+    - AIR CHEST
+    - AIR LEGS
+    - AIR FEET
+    - AIR HAND
+    - AIR OFFHAND
+  AIGoalSelectors:
+    - 0 clear
+    - 1 meleeattack
+  AITargetSelectors:
+    - 0 clear
+    - 1 players
+  Skills:
+    # 1. Montar inmediatamente el motor de vuelo Allay (misma arquitectura de Fantasma)
+    - mount{type=MinionCalabaza_Vuelo} @self ~onSpawn
+
+    # 2. Forzar NBT nativo de bebé zombie
+    - command{c="data merge entity <caster.uuid> {IsBaby:1b}";sender=console} @self ~onSpawn
+
+    # 3. Invisibilidad permanente sin partículas del cuerpo zombie
+    - potion{type=INVISIBILITY;duration=999999;level=1;ambient=true;hasParticles=false} @self ~onSpawn
+
+    # 4. Eliminar el Allay al morir la calabaza (vía @Children y orden de consola directa)
+    - remove @Children ~onDeath
+    - command{c="execute at <caster.uuid> run kill @e[type=allay,distance=..3,limit=1]";sender=console} @self ~onDeath
+
+    # 5. Audio temático de calabaza
+    - playsound{s=block.pumpkin.carve;p=1.6;v=0.7} @self ~onTimer:45 0.6
+    - playsound{s=block.stem.step;p=1.4;v=0.6} @self ~onTimer:25 0.7
+    - playsound{s=block.pumpkin.carve;p=1.8;v=1.0} @target ~onAttack
+    - playsound{s=block.wood.place;p=1.6;v=0.8} @target ~onAttack
+    - playsound{s=block.wood.hit;p=1.4;v=1.0} @self ~onDamaged
+    - playsound{s=block.pumpkin.carve;p=0.9;v=0.8} @self ~onDamaged
+    - playsound{s=block.wood.break;p=1.2;v=1.1} @self ~onDeath
+    - playsound{s=block.pumpkin.carve;p=0.7;v=1.2} @self ~onDeath
+    - playsound{s=entity.slime.squish_small;p=1.4;v=0.9} @self ~onDeath
+
+    # 6. Partículas Dust de color naranja bajo la cabeza (simulando resina en suspensión)
+    - particles{particle=REDSTONE;color=#FF6600;size=1.0;amount=3;hSpread=0.15;vSpread=0.12;yOffset=0.65;speed=0.01} @self ~onTimer:6
+    - particles{particle=REDSTONE;color=#FF8C00;size=0.8;amount=2;hSpread=0.12;vSpread=0.10;yOffset=0.55;speed=0.01} @self ~onTimer:10
+    # Estallido de polvo naranja y pulpa al morir
+    - particles{particle=REDSTONE;color=#FF6600;size=1.2;amount=30;hSpread=0.35;vSpread=0.35;speed=0.08} @self ~onDeath
+
+# ------------------------------------------------------------------------------
+# 2. MOTOR DE VUELO: Allay Invisible e Invulnerable (Genera el balanceo y vuelo suave)
+# ------------------------------------------------------------------------------
+MinionCalabaza_Vuelo:
+  Type: ALLAY
+  Options:
+    Silent: true
+    Collidable: false
+    Invulnerable: true
+    Despawn: true
+    PreventOtherDrops: true
+    MovementSpeed: 0.28
+  AIGoalSelectors:
+    - 0 clear
+    - 1 movetowardstarget
+    - 2 meleeattack
+    - 3 randomfly
+    - 4 lookatplayers
+  AITargetSelectors:
+    - 0 clear
+    - 1 players
+  Skills:
+    - potion{type=INVISIBILITY;duration=999999;level=1;ambient=true;hasParticles=false} @self ~onSpawn

@@ -2,6 +2,15 @@
 
 Registro cronológico e incremental de todas las operaciones realizadas en **ThunderCerebro**.
 
+## [2026-10-24] mythicmobs & sandbox & conditionalevents | Instalación de CE y Creación de Jinete Calabaza y Minion Calabaza
+- **Migración de Plugin a Sandbox (ymykh9qy.274758bd)**:
+  - Migrado e instalado ConditionalEvents-4.77.1.jar y configuración base (config.yml, saved_items.yml, events/more_events.yml) desde el servidor Survival (ymykh9qy.575c7473).
+- **Diseño y Despliegue de Mobs MythicMobs en Servidor de Pruebas**:
+  - creator/output/jinete_sin_cabeza.yml -> Desplegado en plugins/MythicMobs/mobs/jinete_sin_cabeza.yml:
+    - JineteCalabaza: Zombie invisible (cuerpo decapitado) con armadura de cuero negro ceniza, hacha de Netherite (Sharpness IV), cabeza de calabaza (#40578) en HEAD, montado sobre Jinete_Corcel (caballo esqueleto a Scale: 1.5) y diseño sonoro espectral/fúnebre (block.bell.resonate, entity.warden.heartbeat, entity.skeleton_horse.gallop). Alias retrocompatible JineteSinCabeza.
+  - creator/output/minion_calabaza.yml -> Desplegado en plugins/MythicMobs/mobs/minion_calabaza.yml:
+    - MinionCalabaza: Replicada la estrategia de vuelo y balanceo del mob Fantasma (bebé zombie invisible escalado a 1.40 montado sobre un Allay invisible MinionCalabaza_Vuelo). Torso removido (AIR CHEST) para simular una cabeza viviente (#120021) levitando con balanceo 3D orgánico, partículas dust de redstone naranja (#FF6600 y #FF8C00) emulando resina goteando y efectos de sonido de calabaza/tallo.
+
 ## [2026-10-24] creator & prompts & monetizacion | Compilación de Prompts Maestros para Tienda Web y Monetización
 - **Prompts Maestros Compilados (Maestro de Prompts)**:
   - creator/output/prompt_matriz_rangos_vip_mvp.md: Sistema de instrucciones para diseño de la Pricing Matrix de rangos (VIP, VIP+, MVP), integrando Game Economy Designer, CRO Specialist y UI/UX Frontend Designer con soporte responsive para móvil.

@@ -1,0 +1,148 @@
+# ==============================================================================
+# PROYECTO: ThunderMC 1.21.11 - Mob MythicMobs: El Jinete Calabaza
+# ARCHIVO: plugins/MythicMobs/mobs/jinete_sin_cabeza.yml
+# ==============================================================================
+
+# ------------------------------------------------------------------------------
+# 1. ENTIDAD JINETE: Guerrero con Cabeza de Calabaza (#40578) y Hacha de Netherite
+# ------------------------------------------------------------------------------
+JineteCalabaza:
+  Type: ZOMBIE
+  Display: '<#E67E22>🎃 <#D35400>&lJinete Calabaza'
+  Health: 350
+  Damage: 16
+  Armor: 10
+  Options:
+    Baby: false
+    Scale: 1.15
+    PreventSunburn: true        # Protege al mob de quemaduras diurnas
+    PreventOtherDrops: true
+    AlwaysShowName: true
+    Silent: true                # Silencia gruñidos genéricos de zombie
+    MovementSpeed: 0.32
+    KnockbackResistance: 0.7
+    Despawn: true
+    FollowRange: 32
+  Equipment:
+    # Cabeza personalizada #40578 equipada en la cabeza
+    - PLAYER_HEAD{skullTexture=eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMzk1YWZkMDE5OGJjM2ExODNlYzlkYjZmOGRjODY1Y2RkNDExMDQ5MmM3NGY4OWU1OWQ1MGIxMTA4YzhmYTBlYSJ9fX0=} HEAD
+    # Armadura de cuero oscuro gótico
+    - LEATHER_CHESTPLATE{color=28,25,23;unbreakable=true} CHEST
+    - LEATHER_LEGGINGS{color=32,28,25;unbreakable=true} LEGS
+    - LEATHER_BOOTS{color=20,18,16;unbreakable=true} FEET
+    # Hacha de batalla de Netherite
+    - NETHERITE_AXE{unbreakable=true;enchantments=SHARPNESS:4} HAND
+    - AIR OFFHAND
+  AIGoalSelectors:
+    - 0 clear
+    - 1 meleeattack
+    - 2 randomstroll
+    - 3 lookatplayers
+    - 4 float
+  AITargetSelectors:
+    - 0 clear
+    - 1 players
+  BossBar:
+    Enabled: true
+    Title: '&8[ &6🎃 &e&lEl Jinete Calabaza &8]'
+    Color: RED
+    Style: NOTCHED_10
+    CreateFog: false
+  Skills:
+    # 1. Montar su corcel esquelético al aparecer
+    - mount{type=Jinete_Corcel} @self ~onSpawn
+
+    # 2. Invisibilidad permanente sin partículas (oculta la piel verde de zombie para que solo resalten armadura y calabaza)
+    - potion{type=INVISIBILITY;duration=999999;level=1;ambient=true;hasParticles=false} @self ~onSpawn
+
+    # 3. Sonidos atmosféricos acordes al Jinete
+    - playsound{s=block.bell.resonate;p=0.5;v=1.0} @self ~onTimer:200 0.6
+    - playsound{s=entity.warden.heartbeat;p=0.8;v=0.8} @self ~onTimer:80 0.5
+    - playsound{s=entity.phantom.bite;p=0.6;v=1.2} @target ~onAttack 0.4
+    - playsound{s=entity.player.attack.sweep;p=0.6;v=1.2} @target ~onAttack
+    - playsound{s=entity.player.attack.crit;p=0.7;v=1.0} @target ~onAttack
+    - playsound{s=item.mace.smash_air;p=0.7;v=1.0} @target ~onAttack 0.5
+    - playsound{s=entity.skeleton.hurt;p=0.6;v=0.9} @self ~onDamaged
+
+    # 4. Muerte: alarido fúnebre y desvanecimiento de montura
+    - remove @Children ~onDeath
+    - playsound{s=entity.wither.death;p=0.5;v=0.9} @self ~onDeath
+    - playsound{s=entity.skeleton_horse.death;p=0.6;v=1.0} @self ~onDeath
+
+# ------------------------------------------------------------------------------
+# 2. MONTURA: Corcel de Huesos Agrandado (Scale 1.5)
+# ------------------------------------------------------------------------------
+Jinete_Corcel:
+  Type: SKELETON_HORSE
+  Display: '<#BDC3C7>☠ <#ECEFF1>&lCorcel Esquelético'
+  Health: 200
+  Options:
+    Scale: 1.5                  # Montura imponente de 1.5 bloques de escala
+    Tamed: true
+    Saddle: true
+    MovementSpeed: 0.36
+    PreventOtherDrops: true
+    Despawn: true
+    FollowRange: 32
+    Silent: false
+  Skills:
+    # Galope de huesos mientras patrulla / persigue
+    - playsound{s=entity.skeleton_horse.gallop;p=0.8;v=0.9} @self ~onTimer:30 0.8
+    # Relincho agresivo espectral
+    - playsound{s=entity.skeleton_horse.ambient;p=0.6;v=1.0} @self ~onTimer:140 0.4
+
+# ------------------------------------------------------------------------------
+# 3. ALIAS RETROCOMPATIBLE (para /mm m spawn JineteSinCabeza)
+# ------------------------------------------------------------------------------
+JineteSinCabeza:
+  Type: ZOMBIE
+  Display: '<#E67E22>🎃 <#D35400>&lJinete Calabaza'
+  Health: 350
+  Damage: 16
+  Armor: 10
+  Options:
+    Baby: false
+    Scale: 1.15
+    PreventSunburn: true
+    PreventOtherDrops: true
+    AlwaysShowName: true
+    Silent: true
+    MovementSpeed: 0.32
+    KnockbackResistance: 0.7
+    Despawn: true
+    FollowRange: 32
+  Equipment:
+    - PLAYER_HEAD{skullTexture=eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMzk1YWZkMDE5OGJjM2ExODNlYzlkYjZmOGRjODY1Y2RkNDExMDQ5MmM3NGY4OWU1OWQ1MGIxMTA4YzhmYTBlYSJ9fX0=} HEAD
+    - LEATHER_CHESTPLATE{color=28,25,23;unbreakable=true} CHEST
+    - LEATHER_LEGGINGS{color=32,28,25;unbreakable=true} LEGS
+    - LEATHER_BOOTS{color=20,18,16;unbreakable=true} FEET
+    - NETHERITE_AXE{unbreakable=true;enchantments=SHARPNESS:4} HAND
+    - AIR OFFHAND
+  AIGoalSelectors:
+    - 0 clear
+    - 1 meleeattack
+    - 2 randomstroll
+    - 3 lookatplayers
+    - 4 float
+  AITargetSelectors:
+    - 0 clear
+    - 1 players
+  BossBar:
+    Enabled: true
+    Title: '&8[ &6🎃 &e&lEl Jinete Calabaza &8]'
+    Color: RED
+    Style: NOTCHED_10
+    CreateFog: false
+  Skills:
+    - mount{type=Jinete_Corcel} @self ~onSpawn
+    - potion{type=INVISIBILITY;duration=999999;level=1;ambient=true;hasParticles=false} @self ~onSpawn
+    - playsound{s=block.bell.resonate;p=0.5;v=1.0} @self ~onTimer:200 0.6
+    - playsound{s=entity.warden.heartbeat;p=0.8;v=0.8} @self ~onTimer:80 0.5
+    - playsound{s=entity.phantom.bite;p=0.6;v=1.2} @target ~onAttack 0.4
+    - playsound{s=entity.player.attack.sweep;p=0.6;v=1.2} @target ~onAttack
+    - playsound{s=entity.player.attack.crit;p=0.7;v=1.0} @target ~onAttack
+    - playsound{s=item.mace.smash_air;p=0.7;v=1.0} @target ~onAttack 0.5
+    - playsound{s=entity.skeleton.hurt;p=0.6;v=0.9} @self ~onDamaged
+    - remove @Children ~onDeath
+    - playsound{s=entity.wither.death;p=0.5;v=0.9} @self ~onDeath
+    - playsound{s=entity.skeleton_horse.death;p=0.6;v=1.0} @self ~onDeath
