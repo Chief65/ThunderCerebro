@@ -2,6 +2,11 @@
 
 Registro cronológico e incremental de todas las operaciones realizadas en **ThunderCerebro**.
 
+## [2026-10-24] creator & prompts & monetizacion | Compilación de Prompts Maestros para Tienda Web y Monetización
+- **Prompts Maestros Compilados (Maestro de Prompts)**:
+  - creator/output/prompt_matriz_rangos_vip_mvp.md: Sistema de instrucciones para diseño de la Pricing Matrix de rangos (VIP, VIP+, MVP), integrando Game Economy Designer, CRO Specialist y UI/UX Frontend Designer con soporte responsive para móvil.
+  - creator/output/prompt_maestro_estrategia_monetizacion_thundermc.md: Sistema estratégico integral de monetización, catálogo (rangos, pase de batalla de 60 días, 4 packs de Zafiros, dictamen de desbaneos) y pricing regional (España vs LATAM), integrando Game Monetization Lead, Pricing & Regional Revenue Strategist, LiveOps & Retention Manager y Player Governance Officer.
+
 ## [2026-10-21] proxy & geyser & floodgate | Auditoría y Diseño de Vinculación Java-Bedrock (Local Linking)
 - **Diagnóstico Técnico de Proxy en Producción (ymykh9qy.5db0bd79)**:
   - Auditoría directa vía SFTP de elocity.toml, Geyser-Velocity/config.yml, loodgate/config.yml y 
