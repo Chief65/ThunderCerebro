@@ -1,6 +1,6 @@
-﻿# El nombre o nombre mostrado
+# El nombre o nombre mostrado
 name: '&eDefault name'
-# La descripciÃ³n del objeto
+# La descripción del objeto
 lore:
 - '&b&oDefault lore'
 # El material
@@ -9,38 +9,38 @@ material: SHIELD
 glow: false
 # Desactivar el efecto de brillo de encantamiento
 disableEnchantGlide: false
-# Â¿Desactivar el apilado de objetos?
+# ¿Desactivar el apilado de objetos?
 disableStack: false
-# Â¿Mantener el objeto al morir?
+# ¿Mantener el objeto al morir?
 keepItemOnDeath: false
 # Solo puede ser usado por el propietario
-# âš  Requiere Almacenar informaciÃ³n del objeto en true
+# ⚠ Requiere Almacenar información del objeto en true
 canBeUsedOnlyByTheOwner: false
 # Cancelar evento si no es propietario
 cancelEventIfNotOwner: false
 # Activadores en Lista Negra
 # (pueden ser usados por todos incluso si
-# la caracterÃ­stica de solo propietario estÃ¡ activada)
+# la característica de solo propietario está activada)
 onlyOwnerBlackListedActivators: []
-# Â¿Almacenar informaciÃ³n del objeto?
-# Almacenar la informaciÃ³n del objeto como el propietario
+# ¿Almacenar información del objeto?
+# Almacenar la información del objeto como el propietario
 storeItemInfo: false
-# Â¿Objeto irrompible?
+# ¿Objeto irrompible?
 unbreakable: false
-# La caracterÃ­stica de durabilidad
-# serÃ¡ ignorada, y el uso
-# serÃ¡ usado como durabilidad
+# La característica de durabilidad
+# será ignorada, y el uso
+# será usado como durabilidad
 isDurabilityBasedOnUsage: false
 # Cancelar el evento si el jugador no tiene permiso
 cancelEventIfNoPermission: false
-# Las caracterÃ­sticas de mundos en lista blanca
+# Las características de mundos en lista blanca
 whitelistedWorlds: []
 # El planeador
 glider: false
 # Mantener los atributos predeterminados
 # Solo para 1.19+
 keepDefaultAttributes: false
-# Para nuevo objeto DÃ‰JALO FALSO POR FAVOR
+# Para nuevo objeto DÉJALO FALSO POR FAVOR
 # De lo contrario puedes dejarlo verdadero
 # si quieres actualizar tus objetos antiguos ponlo en FALSO
 # Pero ten cuidado, las etiquetas del objeto pueden cambiar
@@ -49,7 +49,7 @@ keepDefaultAttributes: false
 ignoreKeepDefaultAttributesFeature: true
 config_5: true
 config_update: true
-# Las caracterÃ­sticas de uso
+# Las características de uso
 # Incrementar o Disminuir este uso con
 # UsageModification en tus activadores
 usageFeatures:
@@ -60,10 +60,10 @@ usageFeatures:
   usage: 1
   # Es limpieza actualizable
   isRefreshableClean: true
-  # El lÃ­mite de uso del objeto
+  # El límite de uso del objeto
   # El uso no puede incrementarse por encima de este valor
   usageLimit: -1
-# Las caracterÃ­sticas de drop
+# Las características de drop
 dropFeatures:
   # Brillo al soltar
   glowDrop: false
@@ -73,7 +73,7 @@ dropFeatures:
   displayNameDrop: false
 # Los encantamientos del objeto
 enchantments: {}
-# Las caracterÃ­sticas de ocultaciÃ³n
+# Las características de ocultación
 # Ocultadores para ocultar:
 # Atributos, Encantamientos, ...
 hiders:
@@ -91,21 +91,21 @@ hiders:
   hidePlacedOn: false
   # Ocultar tinte
   hideDye: false
-  # Ocultar decoraciÃ³n de armadura
+  # Ocultar decoración de armadura
   hideArmorTrim: false
-  # Ocultar informaciÃ³n adicional
+  # Ocultar información adicional
   hideAdditionalTooltip: false
-  # Ocultar informaciÃ³n emergente
+  # Ocultar información emergente
   hideToolTip: false
-# Las caracterÃ­sticas de dar al primer ingreso
+# Las características de dar al primer ingreso
 giveFirstJoinFeatures:
-  # Activar la caracterÃ­stica
+  # Activar la característica
   giveFirstJoin: false
   # La cantidad a dar
   giveFirstJoinAmount: 1
   # Ranura entre 0 y 8 inclusive
   giveFirstJoinSlot: 0
-# Las caracterÃ­sticas de restricciones
+# Las características de restricciones
 restrictions:
   # El objeto no puede ser
   # movido del inventario
@@ -125,36 +125,36 @@ displayConditions:
   itemConditions: {}
   # Las condiciones de placeholders
   placeholdersConditions: {}
-  # Activar o desactivar esta caracterÃ­stica
+  # Activar o desactivar esta característica
   enableFeature: false
-# CaracterÃ­sticas de comida
+# Características de comida
 foodFeatures:
-  # Â¿Es el alimento carne?
+  # ¿Es el alimento carne?
   isMeat: false
-  # La nutriciÃ³n del alimento
+  # La nutrición del alimento
   nutrition: 1
-  # La saturaciÃ³n del alimento
+  # La saturación del alimento
   saturation: 1
-  # Â¿Puede el jugador comer siempre este alimento?
+  # ¿Puede el jugador comer siempre este alimento?
   canAlwaysEat: false
-# CaracterÃ­sticas Consumibles
+# Características Consumibles
 consumableFeatures:
   # Enable this features
   enable: false
-  # La animaciÃ³n
+  # La animación
   animation: EAT
-  # Tiene partÃ­culas de consumo
+  # Tiene partículas de consumo
   hasConsumeParticles: false
   # Los segundos de consumo
   consumeSeconds: 3
-# Las caracterÃ­sticas del arma
+# Las características del arma
 weaponFeatures:
   # Enable this features
   enable: false
   # El tiempo para desactivar el bloqueo
   # en ticks
   disableBlockingTime: 0
-  # El daÃ±o por ataque
+  # El daño por ataque
   damagePerAttack: 5
 # The block attacks features
 blockAttacksFeatures:
@@ -165,22 +165,22 @@ blockAttacksFeatures:
   disableCooldownScale: 1.0
   # The damage reductions
   damageReductions: {}
-# Las caracterÃ­sticas de reparaciÃ³n
+# Las características de reparación
 repairableFeatures:
   # Enable this features
   enable: false
-  # El costo de reparaciÃ³n
+  # El costo de reparación
   repairCost: 2
-  # Ãtems que pueden reparar este Ã­tem en un yunque
+  # Ítems que pueden reparar este ítem en un yunque
   # (Solo Paper 1.21.4+)
   repairableItems: []
 # La rareza del objeto
 itemRarity:
-  # Activar o desactivar la caracterÃ­stica de rareza
+  # Activar o desactivar la característica de rareza
   enableRarity: false
   # La rareza del objeto
   rarity: COMMON
-# Las caracterÃ­sticas equipables
+# Las características equipables
 equippableFeatures:
   # Enable this features
   enable: false
@@ -190,7 +190,7 @@ equippableFeatures:
   enableSound: false
   # El sonido
   sound: ITEM.ARMOR.EQUIP_DIAMOND
-  # El objeto tomarÃ¡ daÃ±o cuando el jugador sea herido
+  # El objeto tomará daño cuando el jugador sea herido
   damageableOnHurt: false
   # El objeto puede ser dispensado
   dispensable: true
