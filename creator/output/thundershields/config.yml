@@ -1,0 +1,12 @@
+﻿# ThunderShields configuration (Production High-Performance)
+resurrection:
+  enabled: true
+  disable-on-keep-inventory-gamerule: true
+  blocked-worlds: []
+
+legacy-resurrection:
+  enabled: true
+
+diagnostics:
+  # Desactivado para maximo rendimiento y cero I/O en Server Thread
+  log-resurrections: false

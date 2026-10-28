@@ -1,0 +1,205 @@
+﻿# El nombre o nombre mostrado
+name: '&9Escudo Rey Vital'
+# La descripciÃ³n del objeto
+lore:
+- '&b&oDefault lore'
+# El material
+material: SHIELD
+# Efecto de brillo del objeto
+glow: false
+# Desactivar el efecto de brillo de encantamiento
+disableEnchantGlide: false
+# Â¿Desactivar el apilado de objetos?
+disableStack: false
+# Â¿Mantener el objeto al morir?
+keepItemOnDeath: false
+# Solo puede ser usado por el propietario
+# âš  Requiere Almacenar informaciÃ³n del objeto en true
+canBeUsedOnlyByTheOwner: false
+# Cancelar evento si no es propietario
+cancelEventIfNotOwner: false
+# Activadores en Lista Negra
+# (pueden ser usados por todos incluso si
+# la caracterÃ­stica de solo propietario estÃ¡ activada)
+onlyOwnerBlackListedActivators: []
+# Â¿Almacenar informaciÃ³n del objeto?
+# Almacenar la informaciÃ³n del objeto como el propietario
+storeItemInfo: false
+# Â¿Objeto irrompible?
+unbreakable: false
+# La caracterÃ­stica de durabilidad
+# serÃ¡ ignorada, y el uso
+# serÃ¡ usado como durabilidad
+isDurabilityBasedOnUsage: false
+# Cancelar el evento si el jugador no tiene permiso
+cancelEventIfNoPermission: false
+# Las caracterÃ­sticas de mundos en lista blanca
+whitelistedWorlds: []
+# El planeador
+glider: false
+# Mantener los atributos predeterminados
+# Solo para 1.19+
+keepDefaultAttributes: false
+# Para nuevo objeto DÃ‰JALO FALSO POR FAVOR
+# De lo contrario puedes dejarlo verdadero
+# si quieres actualizar tus objetos antiguos ponlo en FALSO
+# Pero ten cuidado, las etiquetas del objeto pueden cambiar
+# puede afectar a shopkeeper o recetas de crafteo personalizadas
+# Solo para 1.19+
+ignoreKeepDefaultAttributesFeature: true
+config_5: true
+config_update: true
+# Las caracterÃ­sticas de uso
+# Incrementar o Disminuir este uso con
+# UsageModification en tus activadores
+usageFeatures:
+  # El uso del objeto
+  # -1 = Infinito
+  # Incrementar o Disminuir este uso con
+  # UsageModification en tus activadores
+  usage: 1
+  # Es limpieza actualizable
+  isRefreshableClean: true
+  # El lÃ­mite de uso del objeto
+  # El uso no puede incrementarse por encima de este valor
+  usageLimit: -1
+# Las caracterÃ­sticas de drop
+dropFeatures:
+  # Brillo al soltar
+  glowDrop: false
+  # El color del brillo
+  glowDropColor: WHITE
+  # Mostrar nombre personalizado sobre el objeto
+  displayNameDrop: false
+# Los encantamientos del objeto
+enchantments: {}
+# Las caracterÃ­sticas de ocultaciÃ³n
+# Ocultadores para ocultar:
+# Atributos, Encantamientos, ...
+hiders:
+  # Ocultar encantamientos
+  hideEnchantments: false
+  # Ocultar irrompible
+  hideUnbreakable: false
+  # Ocultar atributos
+  hideAttributes: false
+  # Ocultar uso
+  hideUsage: false
+  # Ocultar destruye
+  hideDestroys: false
+  # Ocultar colocado en
+  hidePlacedOn: false
+  # Ocultar tinte
+  hideDye: false
+  # Ocultar decoraciÃ³n de armadura
+  hideArmorTrim: false
+  # Ocultar informaciÃ³n adicional
+  hideAdditionalTooltip: false
+  # Ocultar informaciÃ³n emergente
+  hideToolTip: false
+# Las caracterÃ­sticas de dar al primer ingreso
+giveFirstJoinFeatures:
+  # Activar la caracterÃ­stica
+  giveFirstJoin: false
+  # La cantidad a dar
+  giveFirstJoinAmount: 1
+  # Ranura entre 0 y 8 inclusive
+  giveFirstJoinSlot: 0
+# Las caracterÃ­sticas de restricciones
+restrictions:
+  # El objeto no puede ser
+  # movido del inventario
+  locked-in-inventory: false
+# Las variables
+# Las variables se usan para almacenar datos como muertes/asesinatos...
+variables: {}
+# Los activadores / disparadores
+activators: {}
+
+displayConditions:
+  #
+  playerConditions: {}
+  #
+  worldConditions: {}
+  #
+  itemConditions: {}
+  # Las condiciones de placeholders
+  placeholdersConditions: {}
+  # Activar o desactivar esta caracterÃ­stica
+  enableFeature: false
+# CaracterÃ­sticas de comida
+foodFeatures:
+  # Â¿Es el alimento carne?
+  isMeat: false
+  # La nutriciÃ³n del alimento
+  nutrition: 1
+  # La saturaciÃ³n del alimento
+  saturation: 1
+  # Â¿Puede el jugador comer siempre este alimento?
+  canAlwaysEat: false
+# CaracterÃ­sticas Consumibles
+consumableFeatures:
+  # Enable this features
+  enable: false
+  # La animaciÃ³n
+  animation: EAT
+  # Tiene partÃ­culas de consumo
+  hasConsumeParticles: false
+  # Los segundos de consumo
+  consumeSeconds: 3
+# Las caracterÃ­sticas del arma
+weaponFeatures:
+  # Enable this features
+  enable: false
+  # El tiempo para desactivar el bloqueo
+  # en ticks
+  disableBlockingTime: 0
+  # El daÃ±o por ataque
+  damagePerAttack: 5
+# The block attacks features
+blockAttacksFeatures:
+  # Enable this features
+  enable: false
+  # The block delay in seconds
+  blockDelay: 0
+  disableCooldownScale: 1.0
+  # The damage reductions
+  damageReductions: {}
+# Las caracterÃ­sticas de reparaciÃ³n
+repairableFeatures:
+  # Enable this features
+  enable: false
+  # El costo de reparaciÃ³n
+  repairCost: 2
+  # Ãtems que pueden reparar este Ã­tem en un yunque
+  # (Solo Paper 1.21.4+)
+  repairableItems: []
+# La rareza del objeto
+itemRarity:
+  # Activar o desactivar la caracterÃ­stica de rareza
+  enableRarity: false
+  # La rareza del objeto
+  rarity: COMMON
+# Las caracterÃ­sticas equipables
+equippableFeatures:
+  # Enable this features
+  enable: false
+  # La ranura
+  slot: BODY
+  # Activar el sonido
+  enableSound: false
+  # El sonido
+  sound: ITEM.ARMOR.EQUIP_DIAMOND
+  # El objeto tomarÃ¡ daÃ±o cuando el jugador sea herido
+  damageableOnHurt: false
+  # El objeto puede ser dispensado
+  dispensable: true
+  # El objeto puede ser intercambiado
+  swappable: true
+  # Las entidades permitidas
+  allowedEntities:
+  - PLAYER
+bannerSettings:
+  patterns: {}
+# Los atributos
+attributes: {}

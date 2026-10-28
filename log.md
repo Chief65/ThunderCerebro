@@ -2,6 +2,22 @@
 
 Registro cronológico e incremental de todas las operaciones realizadas en **ThunderCerebro**.
 
+## [2026-10-28] deploy & survival & thundershields | Despliegue de ThunderShields v1.1.0 y Neutralización de Escudos en Survival de Producción
+- **Autorización**: Aprobado explícitamente por el Sr Ramos para servidor Survival (ymykh9qy.575c7473).
+- **Backup Preventivo Realizado**:
+  - Descargado plugins/ExecutableItems/items/ThunderMC/totemturco.yml a creator/lab/backups_survival_20261028/ThunderMC/totemturco.yml.
+- **Despliegue de Motor ThunderShields**:
+  - Subido ThunderShields-1.1.0-PAPER.jar (11.920 bytes) al directorio plugins/ de Survival vía SFTP.
+  - Creado directorio plugins/ThunderShields/ e instalado config.yml con resurrection.enabled: true, legacy-resurrection.enabled: true y log-resurrections: false (cero overhead de I/O en Server Thread).
+- **Neutralización de Colisión en ExecutableItems**:
+  - Instalados los 4 archivos de escudos con activators: {} en plugins/ExecutableItems/items/ThunderMC/:
+    - totemturco.yml (5.622 bytes)
+    - escudoigneo.yml (5.622 bytes)
+    - escudoreyvital.yml (5.626 bytes)
+    - escudoviviente.yml (5.625 bytes)
+  - Eliminado el riesgo de doble activación / desync de muerte de ExecutableItems (PLAYER_BEFORE_DEATH) al transferir la responsabilidad total del evento a Paper 1.21.11 (EntityResurrectEvent).
+- **Verificación**: Transferencia validada vía SFTP con código de salida 0 y comprobación de pesos e integridad remota.
+
 ## [2026-10-24] mythicmobs & sandbox & conditionalevents | Instalación de CE y Creación de Jinete Calabaza y Minion Calabaza
 - **Migración de Plugin a Sandbox (ymykh9qy.274758bd)**:
   - Migrado e instalado ConditionalEvents-4.77.1.jar y configuración base (config.yml, saved_items.yml, events/more_events.yml) desde el servidor Survival (ymykh9qy.575c7473).
@@ -31,7 +47,7 @@ login/premium/config.yml.
 - **Acciones Pendientes para Despliegue**:
   - Descargar y subir loodgate-sqlite-database.jar a plugins/floodgate/ en el split Proxy.
   - Ajustar Geyser-Velocity/config.yml a uth-type: floodgate.
-  - Activar enable-own-linking: true, enable-global-linking: false, 	ype: sqlite en loodgate/config.yml.
+  - Activar enable-own-linking: true, enable-global-linking: false, ype: sqlite en loodgate/config.yml.
   - Asignar permiso loodgate.command.linkaccount en LuckPerms y reiniciar Proxy.
 
 ## [2026-10-20] creator & web & prompts & renders | Prompts Maestros de Diseño Web y Renders Isométricos
@@ -51,7 +67,7 @@ login/premium/config.yml.
   - Optimización de rendimiento a cero E/S sincrónica (`log-resurrections: false`) previniendo spikes de MSPT en combate masivo.
 - **Pruebas y Despliegue en Sandbox (`ymykh9qy.274758bd`)**:
   - Desplegado JAR `ThunderShields-1.1.0-PAPER.jar` y `plugins/ThunderShields/config.yml`.
-  - Neutralizados activadores de muerte en 4 configs de ExecutableItems (`totemturco.yml`, `escudoigneo.yml`, `escudoreyvital.yml`, `escudoviviente.yml`) configurando `activators: {}`.
+  - Neutralizados activadores de muerte en 4 configs de ExecutableItems (`totemturco.yml`, `escudoigneo.yml`, `escudoreyvital.yml`, `escudoviviente.yml`) configurando `aactivators: {}`.
   - Verificación in-game por el Sr Ramos confirmando resolución del bug de carrera `EntityDamageEvent` vs `EntityResurrectEvent` y funcionamiento correcto al 100%.
 - **Documentación y Prompts Maestros Generados**:
   - `creator/output/ExecutableItems_Compendio_Completo_ThunderMC.md`: Auditoría de 14 variantes de escudos ItemEdit censadas en `server-database.yml`.
@@ -3698,8 +3714,8 @@ login/premium/config.yml.
 ## [2026-10-19] config & fix | Neutralización de Activadores EI y Activación de ThunderShields (Sandbox)
 - **Módulo**: `plugins/ThunderShields/config.yml`, `plugins/ExecutableItems/items/ThunderMC/{totemturco,escudoigneo,escudoreyvital,escudoviviente}.yml`, Servidor Sandbox (`ymykh9qy.274758bd`)
 - **Trabajo Realizado**:
-  1. **Activación de ThunderShields**: Configurado `resurrection.enabled: true`, `legacy-resurrection.enabled: true` y `diagnostics.log-resurrections: true` en `plugins/ThunderShields/config.yml`.
-  2. **Neutralización Quirúrgica en ExecutableItems**: Vaciado el bloque de activadores (`activators: {}`) en las 4 familias canónicas de escudos (`totemturco.yml`, `escudoigneo.yml`, `escudoreyvital.yml`, `escudoviviente.yml`). Se preservan íntegros todos los metadatos PDC (`executableitems:ei-id`), materiales, nombres y lore.
+  1. **Activación de ThunderShields**: Configurado `rresurrection.enabled: true`, `legacy-resurrection.enabled: true` y `diagnostics.log-resurrections: true` en `plugins/ThunderShields/config.yml`.
+  2. **Neutralización Quirúrgica en ExecutableItems**: Vaciado el bloque de activadores (`aactivators: {}`) en las 4 familias canónicas de escudos (`totemturco.yml`, `escudoigneo.yml`, `escudoreyvital.yml`, `escudoviviente.yml`). Se preservan íntegros todos los metadatos PDC (`executableitems:ei-id`), materiales, nombres y lore.
   3. **Despliegue SFTP**: Subidos los 5 archivos modificados al servidor Sandbox con éxito.
 
 ---
