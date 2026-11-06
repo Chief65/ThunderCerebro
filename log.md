@@ -3770,3 +3770,19 @@ login/premium/config.yml.
 
 
 
+
+
+---
+
+## [2026-11-06] feat & ui | Despliegue de Components V2 para Postulaciones y Gateway de Gestión Automatizada
+- **Módulo**: `creator/output/discord/menu_postulaciones_v2.json`, `creator/lab/discord_bot/gateway_bot.py`, `creator/lab/discord_bot/send_postulaciones_v2.py`
+- **Trabajo Realizado**:
+  1. **Interfaz Components V2 en Discord**: Diseñado y desplegado el menú de postulaciones en el hilo `1568202156090073101` (`🔎・postulaciones`) con estética Components V2 idéntica a la normativa (Container tipo 17, Sección tipo 9 con accessory bell y Select Menu tipo 3 con opciones: Staff, Media y Contribuidor).
+  2. **Flujo de Seguridad y Términos Efímeros**: Implementado paso intermedio efímero con aviso de confidencialidad, veracidad de datos, requisitos (edad mínima 16) y botón con tick (✅) que detona la apertura del Modal correspondiente.
+  3. **Formularios Modales Optimizados (Límite 5 Rows)**: Creados los modales para Staff, Media y Contribuidor respetando estrictamente el límite de 5 Action Rows de Discord API v10 para evitar rechazos HTTP 400.
+  4. **Panel de Gestión de Administradores en Canal Privado (`1568307337859436716`)**:
+     - Notificación inmediata con ficha detallada y 3 botones: `[ Aceptar ]`, `[ Rechazar ]`, `[ Poner en Revisión ]`.
+     - Notificación DM inmediata al usuario con estado `🟡 En revisión (puede tardar hasta 3d en responder)`.
+  5. **Ciclo de Contrato y Aceptación**:
+     - Al aceptar: Envío de contrato interactivo por DM con cláusulas de compromiso y recompensas. Al firmar, felicitación, link de invitación de 1 uso y asignación de rol.
+     - Al rechazar: Modal administrativo para redactar el motivo específico; envío de DM con agradecimiento sincero y motivo detallado.
