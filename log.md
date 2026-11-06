@@ -1,6 +1,30 @@
-﻿# Registro de Auditoría y Crónica (log.md)
+# Registro de Auditoría y Crónica (log.md)
 
 Registro cronológico e incremental de todas las operaciones realizadas en **ThunderCerebro**.
+
+## [2026-11-06] creator & discord | Emojis 10 Partes, Rich Presence de Fabio, Armonización de Iconos y Rediseño de Joystick
+- **Archivos Guardados / Modificados**:
+  - [`creator/lab/discord_bot/gateway_bot.ps1`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/lab/discord_bot/gateway_bot.ps1)
+  - [`creator/lab/discord_bot/deploy_sanwa_joystick.py`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/lab/discord_bot/deploy_sanwa_joystick.py)
+  - [`creator/lab/discord_bot/restore_and_harmonize_icons.py`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/lab/discord_bot/restore_and_harmonize_icons.py)
+  - [`creator/lab/generate_thunder_10_partes.py`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/lab/generate_thunder_10_partes.py)
+  - [`creator/output/emojis_thunder/10_partes_5x2/`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/output/emojis_thunder/10_partes_5x2/)
+  - [`creator/output/renders/discord_icons/`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/output/renders/discord_icons/)
+- **Especificaciones Implementadas**:
+  1. **Segmentación de Banner de Logo Thunder (10 piezas 5x2)**: Generadas y exportadas las 10 piezas de `256×256 px` con padding perimetral de 2 px e interpolación Lanczos para eliminar el gap visual entre líneas en Discord.
+  2. **Rich Presence y Estado de Fabio en Gateway**: Configurado en `gateway_bot.ps1` con Custom Status (`thundermc.es`) y actividad "Jugando a Minecraft" (`state: thundermc.es`, `details: thundermc.es`, con icono de Thunder logo inyectado vía Discord Media Proxy).
+  3. **Armonización de Iconografía 2x2**: Recuperados y unificados todos los iconos temáticos (`voz`, `reglas`, `postulaciones`, `tienda`, `soporte`) bajo la paleta oficial `#FFC800` (`255, 200, 0`), ajustando el ancho del carrito de tienda a `191 px` para paridad visual.
+  4. **Rediseño de Joystick Arcade**: Creado y desplegado el joystick Arcade Sanwa (proporción limpia de recreativa con 2 botones y bola superior simétrica) para el menú `#embeds` y el hilo `#empezar-a-jugar`.
+
+## [2026-11-04] creator & discord | Actualización de Foto de Perfil Animada del Bot de Discord (Lobo Woods Thunder GIF)
+- **Archivos Guardados / Modificados**:
+  - [`creator/output/renders/discord_avatar/lobo-woods-thunder.gif`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/output/renders/discord_avatar/lobo-woods-thunder.gif)
+  - [`creator/output/renders/discord_avatar/lobo-woods-thunder-zoom.gif`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/output/renders/discord_avatar/lobo-woods-thunder-zoom.gif)
+  - [`creator/lab/discord_bot/update_avatar.ps1`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/lab/discord_bot/update_avatar.ps1)
+- **Especificaciones Implementadas**:
+  1. Localización y preservación del archivo animado original (`lobo-woods-thunder.gif`, `1024×683 px`, 6,80 MB) y generación de recorte centrado con zoom (`lobo-woods-thunder-zoom.gif`, `456×456 px`, 32 frames sin pérdida de paleta, 182 KB, ocupando el 98% del círculo de Discord).
+  2. Soporte de MIME dinámico (`data:image/gif;base64,...`) en `update_avatar.ps1` y despacho vía `PATCH https://discord.com/api/v10/users/@me`.
+  3. Confirmación en API de Discord para el bot `ValyrPruebas` (`1552716487100342404`) con nuevo hash animado `a_b6fc537451b5dc9a645477d5bf5b5392`.
 
 ## [2026-10-28] deploy & survival & thundershields | Despliegue de ThunderShields v1.1.0 y Neutralización de Escudos en Survival de Producción
 - **Autorización**: Aprobado explícitamente por el Sr Ramos para servidor Survival (ymykh9qy.575c7473).

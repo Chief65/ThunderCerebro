@@ -1,0 +1,142 @@
+{
+  "flags": 32768,
+  "allowed_mentions": {
+    "parse": [
+      "everyone"
+    ]
+  },
+  "components": [
+    {
+      "type": 17,
+      "components": [
+        {
+          "type": 12,
+          "items": [
+            {
+              "media": {
+                "url": "attachment://stampede_wide.gif"
+              }
+            }
+          ]
+        },
+        {
+          "type": 10,
+          "content": "## <:th_cartel_w:1568175356861743235> ThunderMC ⸻\n**¡Juega a lo Grande!**\nSumérgete en un mundo donde las mazmorras y los jefes son la mecánica principal.\n\n> `🏰` **Dungeons Únicas:** Explora mazmorras inmersivas diseñadas al detalle con desafíos y recompensas exclusivas.\n> `🐉` **Jefes Custom:** Enfréntate a criaturas colosales con mecánicas, fases de combate y ataques propios.\n> `🔮` **Objetos Mágicos:** Forja y colecciona armas, armaduras y reliquias con habilidades especiales.\n> `🎍` **Y mucho más:** Economía balanceada, eventos dinámicos y actualizaciones constantes junto a la comunidad.\n\n**Juega donde quieras**\nEntra desde Java 1.21.1+ (IP: `thundermc.es`) o Bedrock (Puerto: `19132`)"
+        }
+      ]
+    },
+    {
+      "type": 17,
+      "components": [
+        {
+          "type": 10,
+          "content": "## <:th_libro_w:1568199274808737935> Información ⸻\n-# Todo lo que necesitas tener a tu alcance aquí:"
+        },
+        {
+          "type": 9,
+          "components": [
+            {
+              "type": 10,
+              "content": "<:qo_jugar_tl:1568191054514094093><:qo_jugar_tr:1568191056904720414> **¿Cómo jugar?**\n<:qo_jugar_bl:1568191058792284212><:qo_jugar_br:1568191061296287804> Entra a jugar rápidamente."
+            }
+          ],
+          "accessory": {
+            "type": 2,
+            "style": 5,
+            "url": "https://discord.com/channels/1552715004669726802/1568202142278352989",
+            "emoji": {
+              "id": "1568181296654590023",
+              "name": "th_ir_w"
+            }
+          }
+        },
+        {
+          "type": 9,
+          "components": [
+            {
+              "type": 10,
+              "content": "<:qo_voz_tl:1568191063586508870><:qo_voz_tr:1568191065695985696> **Chat de Voz**\n<:qo_voz_bl:1568191068498042910><:qo_voz_br:1568191070687199272> Instala y configura Simple Voice Chat. "
+            }
+          ],
+          "accessory": {
+            "type": 2,
+            "style": 5,
+            "url": "https://discord.com/channels/1552715004669726802/1568202146611204137",
+            "emoji": {
+              "id": "1568181296654590023",
+              "name": "th_ir_w"
+            }
+          }
+        },
+        {
+          "type": 9,
+          "components": [
+            {
+              "type": 10,
+              "content": "<:qo_reglas_tl:1568191072834691193><:qo_reglas_tr:1568191074823049301> **Normativa Oficial**\n<:qo_reglas_bl:1568191077079449692><:qo_reglas_br:1568191079646367814> Conoce el reglamento."
+            }
+          ],
+          "accessory": {
+            "type": 2,
+            "style": 5,
+            "url": "https://discord.com/channels/1552715004669726802/1568202151186927646",
+            "emoji": {
+              "id": "1568181296654590023",
+              "name": "th_ir_w"
+            }
+          }
+        },
+        {
+          "type": 9,
+          "components": [
+            {
+              "type": 10,
+              "content": "<:qo_post_tl:1568191081873539200><:qo_post_tr:1568191083903459338> **Postulaciones**\n<:qo_post_bl:1568191085950410752><:qo_post_br:1568191087703629876> Postúlate para entrar a nuestro equipo"
+            }
+          ],
+          "accessory": {
+            "type": 2,
+            "style": 5,
+            "url": "https://discord.com/channels/1552715004669726802/1568202156090073101",
+            "emoji": {
+              "id": "1568181296654590023",
+              "name": "th_ir_w"
+            }
+          }
+        },
+        {
+          "type": 9,
+          "components": [
+            {
+              "type": 10,
+              "content": "<:qo_soporte_tl:1568191090354552832><:qo_soporte_tr:1568191092367827076> **Soporte Flash**\n<:qo_soporte_bl:1568191094506786849><:qo_soporte_br:1568191096507596820> Abre un ticket para recibir soporte"
+            }
+          ],
+          "accessory": {
+            "type": 2,
+            "style": 5,
+            "url": "https://discord.com/channels/1552715004669726802/1374644365758169178",
+            "emoji": {
+              "id": "1568181296654590023",
+              "name": "th_ir_w"
+            }
+          }
+        },
+        {
+          "type": 14,
+          "spacing": 1,
+          "divider": false
+        },
+        {
+          "type": 14,
+          "spacing": 2,
+          "divider": true
+        },
+        {
+          "type": 10,
+          "content": "<:th52_1:1568184263633805392><:th52_2:1568184265739604088><:th52_3:1568184268025241611><:th52_4:1568184270152015893><:th52_5:1568184272651550780>⠀ **Links Interesantes:**\n<:th52_6:1568184274748837928><:th52_7:1568184276766429234><:th52_8:1568184278720970815><:th52_9:1568184281203871754><:th52_10:1568184283087241218>⠀ [Tienda](https://tienda.thundermc.es/) • [Tiktok](https://www.tiktok.com/@somosthundermc_?lang=es) • [YouTube](https://www.youtube.com/@somosthundermc/featured)"
+        }
+      ]
+    }
+  ]
+}

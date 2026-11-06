@@ -6,6 +6,7 @@ $envFile = Join-Path $PSScriptRoot ".env"
 $envLines = Get-Content $envFile
 $token = ($envLines | Where-Object { $_ -match "^DISCORD_BOT_TOKEN=(.+)" } | ForEach-Object { $matches[1] }).Trim()
 $channelId = ($envLines | Where-Object { $_ -match "^DISCORD_CHANNEL_ID=(.+)" } | ForEach-Object { $matches[1] }).Trim()
+$appId = "1552716487100342404"
 
 $dbFile = Join-Path $PSScriptRoot "sorteos_db.json"
 if (-not (Test-Path $dbFile)) {
@@ -13,8 +14,16 @@ if (-not (Test-Path $dbFile)) {
 }
 
 $cfgFile = Join-Path $PSScriptRoot "sorteo_config.json"
-$cfgJson = [System.IO.File]::ReadAllText($cfgFile, [System.Text.Encoding]::UTF8)
-$cfg = $cfgJson | ConvertFrom-Json
+if (Test-Path $cfgFile) {
+    $cfgJson = [System.IO.File]::ReadAllText($cfgFile, [System.Text.Encoding]::UTF8)
+    $cfg = $cfgJson | ConvertFrom-Json
+} else {
+    $cfg = $null
+}
+
+# Cargar embeds de reglas para respuestas efímeras rápidas
+$rgFile = "C:\Users\PC\OneDrive\Escritorio\descargas\reglas\reglas generales.json"
+$rdFile = "C:\Users\PC\OneDrive\Escritorio\descargas\reglas\reglas discord.json"
 
 function Get-Entries {
     $raw = [System.IO.File]::ReadAllText($dbFile, [System.Text.Encoding]::UTF8)
@@ -73,7 +82,7 @@ function Update-GiveawayMessage($targetMsgId, $newCount) {
 }
 
 Write-Host "==========================================================" -ForegroundColor Cyan
-Write-Host "  THUNDERMC - GATEWAY BOT EN TIEMPO REAL (SORTEOS)" -ForegroundColor Cyan
+Write-Host "  THUNDERMC - GATEWAY BOT EN TIEMPO REAL (INTERACCIONES)" -ForegroundColor Cyan
 Write-Host "==========================================================" -ForegroundColor Cyan
 Write-Host ("Canal: " + $channelId)
 
@@ -169,8 +178,30 @@ while ($true) {
                             browser = "thundermc_bot"
                             device = "thundermc_bot"
                         }
+                        presence = @{
+                            since = $null
+                            activities = @(
+                                @{
+                                    name = "Custom Status"
+                                    type = 4
+                                    state = "thundermc.es"
+                                },
+                                @{
+                                    name = "Minecraft"
+                                    type = 0
+                                    state = "thundermc.es"
+                                    details = "thundermc.es"
+                                    assets = @{
+                                        large_image = "mp:attachments/1552723526996336724/1568234943522279504/thunder_logo.png"
+                                        large_text = "ThunderMC"
+                                    }
+                                }
+                            )
+                            status = "online"
+                            afk = $false
+                        }
                     }
-                } | ConvertTo-Json -Depth 5 -Compress
+                } | ConvertTo-Json -Depth 6 -Compress
                 $idBytes = [System.Text.Encoding]::UTF8.GetBytes($idJson)
                 $idSeg = New-Object System.ArraySegment[Byte] -ArgumentList @(,$idBytes)
                 $ws.SendAsync($idSeg, [System.Net.WebSockets.WebSocketMessageType]::Text, $true, [System.Threading.CancellationToken]::None).Wait()
@@ -187,7 +218,7 @@ while ($true) {
             if ($payload.op -eq 0) {
                 if ($payload.t -eq "READY") {
                     Write-Host ("Bot activo: " + $payload.d.user.username) -ForegroundColor Green
-                    Write-Host "Esperando clicks en Discord en tiempo real..." -ForegroundColor Yellow
+                    Write-Host "Esperando interacciones en Discord en tiempo real..." -ForegroundColor Yellow
                 }
 
                 if ($payload.t -eq "INTERACTION_CREATE") {
@@ -205,7 +236,48 @@ while ($true) {
 
                     Write-Host ("INTERACCION: [" + $userName + "] (" + $userId + ") -> " + $customId) -ForegroundColor Magenta
 
-                    if ($customId -eq "sorteo_participar") {
+                    # 1. Menú Dropdown de Selección de Reglas
+                    if ($customId -eq "select_reglas_normativa") {
+                        $selectedVal = $interaction.data.values[0]
+                        Write-Host ("   Seleccion de reglas: " + $selectedVal) -ForegroundColor Cyan
+
+                        $targetEmbed = $null
+                        if ($selectedVal -eq "reglas_generales") {
+                            if (Test-Path $rgFile) {
+                                $targetEmbed = (Get-Content $rgFile -Raw -Encoding UTF8 | ConvertFrom-Json).embeds[0]
+                            }
+                        } elseif ($selectedVal -eq "reglas_discord") {
+                            if (Test-Path $rdFile) {
+                                $targetEmbed = (Get-Content $rdFile -Raw -Encoding UTF8 | ConvertFrom-Json).embeds[0]
+                            }
+                        }
+
+                        if ($targetEmbed) {
+                            # Responder efímeramente (flags = 64: solo visible para el usuario)
+                            $resp = @{
+                                type = 4
+                                data = @{
+                                    flags = 64
+                                    embeds = @($targetEmbed)
+                                }
+                            }
+                            Send-InteractionResponse $interId $interToken $resp
+                            Write-Host ("   Respuesta efimera enviada a " + $userName) -ForegroundColor Green
+
+                            # Auto-eliminar el mensaje efímero después de 45 segundos de forma asíncrona y segura
+                            $delUrl = "https://discord.com/api/v10/webhooks/$appId/$interToken/messages/@original"
+                            Start-Job -ScriptBlock {
+                                param($u)
+                                Start-Sleep -Seconds 45
+                                try {
+                                    & curl.exe -s -X DELETE $u | Out-Null
+                                } catch {}
+                            } -ArgumentList $delUrl | Out-Null
+                        }
+                    }
+
+                    # 2. Sorteos
+                    elseif ($customId -eq "sorteo_participar") {
                         $entries = Get-Entries
                         $already = $entries | Where-Object { $_.userId -eq $userId }
 

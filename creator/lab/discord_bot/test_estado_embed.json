@@ -1,0 +1,20 @@
+{
+  "allowed_mentions": {
+    "parse": [
+      "everyone"
+    ]
+  },
+  "embeds": [
+    {
+      "title": "👋 ¡Bienvenid@ a ThunderMC!",
+      "description": "¡Estamos muy felices de que estés aquí!\n-# ᴇᴍᴘɪᴇᴢᴀ ᴛᴜ ᴀᴠᴇɴᴛᴜʀᴀ ᴜɴɪᴇɴᴅᴏᴛᴇ ᴀʟ ꜱᴇʀᴠɪᴅᴏʀ\n\n**Encontraras:**\n`🏰` Dungeons Unicas\n`🐉` Jefes Custom\n`🔮` Objetos Magicos\n`🎍` Y mucho más\n\n↓ IP del Servidor (Version 1.21.1+  ) ↓\n```text\nthundermc.es\n```\n-# 📱 Puerto Bedrock: `19132` | 🎮 Java: Puerto por defecto\n\n**Links Interesantes:**\n-# [Tienda](https://tienda.thundermc.es/) • [Tiktok](https://www.tiktok.com/@somosthundermc_?lang=es) • [YouTube](https://www.youtube.com/@somosthundermc/featured)",
+      "color": 16706304,
+      "image": {
+        "url": "https://cdn.discordapp.com/attachments/1434159277118853326/1567241776014561351/cartel-thundermc-degradado-tag-v5_1.gif?ex=6aeb7725&is=6aea25a5&hm=acdfb9d52b9201474e5d21f30f06363fd856f9ab20e718ef7c7ad45918cb0160&"
+      },
+      "thumbnail": {
+        "url": "https://cdn.discordapp.com/attachments/1552723526996336724/1560474539547299901/minecraft_compass_transparent.png?ex=6aeb3c6a&is=6ae9eaea&hm=57e1a9fdebb9905d533a2f88c889c2ac4854c7c797fbecb86b06288c9bf736b9&"
+      }
+    }
+  ]
+}

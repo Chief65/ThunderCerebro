@@ -9,7 +9,7 @@ if (-not (Test-Path $envFile)) {
 $envLines = Get-Content $envFile
 $token = ($envLines | Where-Object { $_ -match "^DISCORD_BOT_TOKEN=(.+)" } | ForEach-Object { $matches[1] }).Trim()
 
-$imagePath = "C:\Users\PC\Desktop\ThunderCerebro\creator\output\renders\discord_avatar\valyr_bot_pfp_zoom_neutral_transparent.png"
+$imagePath = "C:\Users\PC\Desktop\ThunderCerebro\creator\output\renders\discord_avatar\fabio_frog_thunder_gradient.gif"
 if (-not (Test-Path $imagePath)) {
     Write-Error "No se encontro la imagen en $imagePath"
     exit 1
@@ -18,10 +18,13 @@ if (-not (Test-Path $imagePath)) {
 Write-Host "Cargando imagen: $imagePath"
 $bytes = [System.IO.File]::ReadAllBytes($imagePath)
 $base64 = [System.Convert]::ToBase64String($bytes)
-$dataUri = "data:image/png;base64,$base64"
+$ext = [System.IO.Path]::GetExtension($imagePath).ToLower()
+$mime = if ($ext -eq ".gif") { "image/gif" } elseif ($ext -eq ".jpg" -or $ext -eq ".jpeg") { "image/jpeg" } else { "image/png" }
+$dataUri = "data:$mime;base64,$base64"
 
 $payload = @{
-    avatar = $dataUri
+    username = "Fabio"
+    avatar   = $dataUri
 } | ConvertTo-Json -Compress
 
 $url = "https://discord.com/api/v10/users/@me"

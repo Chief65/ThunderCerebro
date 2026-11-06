@@ -1,0 +1,42 @@
+{
+  "allowed_mentions": {
+    "parse": []
+  },
+  "embeds": [
+    {
+      "title": "<:MensajeOficial:1434962106570117262> Regla Generales | ThunderMC",
+      "description": "`🗓` Última actualización: 11/02/2026\n\n##  Aviso Importante\nAl acceder a ThunderMC, aceptas cumplir estas normas.\nLas reglas pueden modificarse en cualquier momento y el criterio del staff prevalece ante situaciones no contempladas explícitamente en este documento.\n\nNuestro objetivo es mantener un ambiente competitivo, divertido y justo, no limitar la experiencia del jugador.\n\n## Lista de Reglas\n`1️⃣` **Respeto básico:**\n`✔️` Se entiende que en PvP pueda haber exaltación puntual.\n`❌` Insultos reiterados, ataques personales, amenazas o faltas graves sí serán sancionados.\n-# No está permitido faltar gravemente al respeto a otros jugadores o al staff.\n\n`2️⃣` **Toxicidad y acoso:**\nNo se tolerará el acoso continuo, provocaciones constantes o conductas destinadas a arruinar la experiencia de otros jugadores, ya sea por chat público o mensajes privados.\n\n`3️⃣` **Spam, flood y mayúsculas:**\nNo hagas spam ni flood intencional en el chat.\n-# El uso excesivo de mayúsculas de forma continuada puede ser sancionado.\n-# Un mensaje puntual exaltado no es sancionable, el abuso sí.\n\n`4️⃣` **Publicidad externa:**\nEstá prohibido promocionar, sin permiso del staff:\n• Otros servidores\n• Discords externos\n• Redes sociales ajenas a ThunderMC\n\n`5️⃣` **Seguridad y datos personales:**\nQueda totalmente prohibido:\n• Amenazar con doxear\n• Divulgar información personal\n• Hacerse pasar por otra persona\n• Intentar robar cuentas\n-# Estas acciones conllevan sanciones graves o permanentes.\n\n`6️⃣` **Multicuentas y evasión de sanciones:**\nEntrar con otra cuenta para evadir un baneo o mute está prohibido.\nEl uso de multicuentas para obtener ventajas injustas será sancionado.\n\n`7️⃣` **Uso de hacks, clientes o ventajas ilegales:**\nNo está permitido el uso de:\n• Hack clients\n• Ghost clients\n• Autoclickers o macros abusivas\n• Programas o modificaciones que otorguen ventaja injusta\n-# Tener residuos o clientes instalados también cuenta.\n\n`8️⃣` **Estafas:**\nCualquier tipo de estafa dentro del servidor está prohibida y será sancionada.\n\n\n`🔒` Clausula de criterio del staff\n-# Cualquier comportamiento que:\n-# • Rompa la experiencia de juego\n-# • Sea considerado injusto\n-# • Vaya contra el espíritu del servidor\n\n-# Puede ser sancionado aunque no esté escrito explícitamente en estas normas, siempre bajo el criterio del staff.",
+      "color": 3092790
+    },
+    {
+      "title": "<:MensajeOficial:1434962106570117262> Reglas Discord | ThunderMC",
+      "description": "`🗓` Última actualización: 11/02/2026\n-# 📌 Estas normas aplican exclusivamente al Discord.\n\n##  Aviso Importante\nAl acceder a ThunderMC, aceptas cumplir estas normas.\nLas reglas pueden modificarse en cualquier momento y el criterio del staff prevalece ante situaciones no contempladas explícitamente en este documento.\n\nNuestro objetivo es mantener un ambiente competitivo, divertido y justo, no limitar la experiencia del jugador.\n\n## Lista de Reglas\n`1️⃣` **Mantenlo Amigable**\n-# Nada de contenido NSFW u odio.\n\n`2️⃣` **Se respetuoso** \n-# Nada de comportamientos toxicos.\n\n`3️⃣` **Evita el drama**\n-# Trata de ser amigable.\n`4️⃣` **Nada de Spam**\n-# No promociones otros servidores o contenido.\n\n`5️⃣` **No menciones al staff si no es necesario.**\n\n`6️⃣` **Respeta la privacidad** \n-# o.\n`7️⃣` **Usa los canales correctos para cada tópico.**\n`8️⃣` **Sigue las instrucciones de los staff.**\n\n¡Ahora ya sois unos miembros educados!\n(No os saltéis las normas o el gran Sapo del Ban os comerá)\n\n`🔒` Clausula de criterio del staff\n-# Cualquier comportamiento que:\n-# • Rompa la experiencia de juego\n-# • Sea considerado injusto\n-# • Vaya contra el espíritu del servidor\n\n-# Puede ser sancionado aunque no esté escrito explícitamente en estas normas, siempre bajo el criterio del staff.",
+      "color": 3092790
+    }
+  ],
+  "components": [
+    {
+      "type": 1,
+      "components": [
+        {
+          "type": 2,
+          "style": 5,
+          "label": "Volver al Inicio",
+          "emoji": {
+            "name": "⬅️"
+          },
+          "url": "https://discord.com/channels/1552715004669726802/1552723526996336724/1568202169633603704"
+        },
+        {
+          "type": 2,
+          "style": 5,
+          "label": "Reportar Infracción (Ticket)",
+          "emoji": {
+            "name": "🎫"
+          },
+          "url": "https://discord.com/channels/1552715004669726802/1374644365758169178"
+        }
+      ]
+    }
+  ]
+}
