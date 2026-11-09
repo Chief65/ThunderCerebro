@@ -1,0 +1,17 @@
+name: ThunderMounts
+version: 1.0.0
+main: com.thundermc.mounts.ThunderMounts
+api-version: '1.21'
+author: ThunderStudios
+description: Sistema integral de corceles con 23 estilos de pelaje, variantes Zombie y Esqueleto, armaduras, estamina y proteccion total anti-robo.
+commands:
+  mount:
+    description: Abre el catalogo de corceles o gestiona tu caballo activo
+    aliases: [mounts, montura, monturas, caballo, caballos, horse, horses]
+permissions:
+  thundermounts.use:
+    description: Permite usar e invocar monturas
+    default: true
+  thundermounts.admin:
+    description: Administracion de monturas
+    default: op

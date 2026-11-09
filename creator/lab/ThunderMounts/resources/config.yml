@@ -1,0 +1,17 @@
+# ========================================================
+# ThunderMounts - Configuración de Corceles y Monturas
+# Servidor: ThunderMC (1.21.11)
+# ========================================================
+
+settings:
+  max-stamina-seconds: 3600  # 1 hora de estamina
+  cooldown-seconds: 3600     # 1 hora de descanso tras agotarse
+  stamina-actionbar: true
+
+messages:
+  prefix: "&8[&6&lMonturas&8] &r"
+  spawned: "&aHas montado a tu &f%mount%&a."
+  despawned: "&eHas guardado a tu corcel."
+  exhausted: "&c&l¡Tu corcel se ha agotado! &7Necesita descansar 1 hora antes de volver a ser invocado."
+  in-cooldown: "&cTus corceles están descansando. Podrás usarlos en &e%time%&c."
+  already-active: "&cYa tienes un corcel activo."

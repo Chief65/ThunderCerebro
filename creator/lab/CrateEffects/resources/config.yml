@@ -1,0 +1,69 @@
+# ==============================================================================
+#                      CrateEffects - ThunderMC Addon
+#    Efectos cosméticos celebratorios y desacoplados para ExcellentCrates
+# ==============================================================================
+
+# Modo depuración
+debug: false
+
+# Configuración de fuegos artificiales (ajuste sutil y no saturado)
+fireworks:
+  enabled: true
+  prevent_damage: true
+  # Reducido a 1 cohete para un clímax limpio y sin saturar
+  amount: 1
+  height_offset: 2.2
+  spread: 0.3
+
+# Efectos de partículas (estilo leve y elegante)
+particles:
+  enabled: true
+  initial_flash: true
+  spiral_helix: true
+  totem_confetti: true
+  # Densidad reducida para máxima claridad visual
+  firework_burst_count: 16
+
+# Sonidos de celebración
+sounds:
+  enabled: true
+  volume: 0.85
+  start_sound: "UI_TOAST_CHALLENGE_COMPLETE"
+  start_pitch: 1.25
+  launch_sound: "ENTITY_FIREWORK_ROCKET_LAUNCH"
+  launch_pitch: 1.15
+  climax_sound: "ENTITY_FIREWORK_ROCKET_LARGE_BLAST"
+  climax_pitch: 1.05
+
+# Paletas de color por rareza
+rarity_palettes:
+  mitica:
+    colors: ["#A335EE", "#FF007F"]
+    fade: ["#4B0082"]
+    shape: "STAR"
+    flicker: true
+    trail: false
+  epica:
+    colors: ["#9B30FF", "#00F5FF"]
+    fade: ["#5D26C1"]
+    shape: "BALL_LARGE"
+    flicker: true
+    trail: false
+  rara:
+    colors: ["#00BFFF", "#FFFFFF"]
+    fade: ["#1E90FF"]
+    shape: "BALL"
+    flicker: false
+    trail: false
+  comun:
+    colors: ["#32CD32", "#FFFFFF"]
+    fade: ["#228B22"]
+    shape: "BURST"
+    flicker: false
+    trail: false
+  default:
+    colors: ["#FFD700", "#FFFFFF"]
+    fade: ["#FFA500"]
+    shape: "BALL"
+    flicker: true
+    trail: false

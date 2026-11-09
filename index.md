@@ -44,6 +44,9 @@ Catálogo unificado y centralizado de la base de conocimiento de **ThunderCerebr
 - **[[wiki/entities/catamines|Catamines]]**: Motor y plugin de minería progresiva por rangos y zona PvP.
 - **[[wiki/entities/thundermc/valyr-protagonista-canonic|Valyr (Protagonista Canónico)]]**: Ficha canónica de diseño, rig facial, armadura oficial (yelmo campamento_dia) y directrices de render 3D.
 - **[[wiki/entities/thunderpets_plugin|ThunderPets (Plugin Custom de Mascotas)]]**: Sistema cosmético de acompañantes flotantes y medio personaje con GUI interactivo (MC 1.21.11).
+- **[[wiki/entities/thundermc/core-infrastructure/fancynpcs|FancyNpcs]]**: Motor de NPCs por paquetes client-side de alto rendimiento.
+- **[[wiki/entities/thundermc/core-infrastructure/fancyanimations|FancyAnimations (Addon Oficial)]]**: Motor cinemático propio open-source para dar vida a los NPCs con conjunto ambiental (respiración, ladeo, balanceo, cabeceo) en Java y Bedrock.
+- **[[wiki/entities/thundermc/core-infrastructure/crateeffects|CrateEffects (Addon Desacoplado)]]**: Motor cosmético y celebratorio desacoplado para ExcellentCrates (fuegos artificiales sin daño, espirales de partículas y fanfarria al recibir recompensas).
 - **[[wiki/entities/thundermc/core-infrastructure/nlogin|nLogin (Autenticación Proxy & Core)]]**: Motor de autenticación, comandos de auditoría IP y persistencia en MariaDB/MySQL.
 - **[[wiki/entities/thundermc/core-infrastructure/geyser-floodgate-linking|Vinculación Java-Bedrock (Floodgate & Geyser)]]**: Arquitectura de Local Linking para unificar cuentas, contraseñas e inventarios en red cracked.
 - **[[Plan de Monetizacion/plan-monetizacion-thundermc|Plan Maestro de Monetización]]**: Documento maestro operativo de comercialización y Tebex.

@@ -1,0 +1,112 @@
+# ========================================================
+#   FancyAnimations — Configuración Maestra (ThunderMC)
+#   Addon oficial open-source para FancyNpcs 1.21.11
+# ========================================================
+
+# Perfil por defecto asignado a los NPCs existentes no configurados y a los que se creen nuevos:
+# - "ambient": Aplica automáticamente el conjunto de animación ambiental vivo.
+# - "none": Los NPCs se mantienen estáticos a menos que se les active manualmente con /fanim.
+default-profile: "ambient"
+
+# Intervalo de actualización cinemática en ticks (1 tick = 20 FPS, 2 ticks = 10 FPS).
+update-interval: 1
+
+# ========================================================
+#   Conjunto Ambiental (Preset Base)
+#   Define qué animaciones componen el perfil "ambient".
+# ========================================================
+ambient-preset:
+  # Respiración: micro-oscilación vertical senoidal en eje Y
+  breathing: true
+  # Balanceo: desplazamiento horizontal sutil de peso corporal en hombros y torso
+  swaying: true
+  # Ladeo de cabeza: oscilación angular suave que emula inclinación de cuello
+  head-tilt: true
+  # Cabeceo / Asentimiento: inclinación sutil periódica hacia abajo/arriba de forma viva
+  nodding: true
+  # Micro-rotación: pequeños cambios orgánicos de mirada hacia el entorno cuando no hay nadie
+  micro-rotation: true
+  # Seguimiento suave custom de mirada (desacoplado del motor interno de FancyNpcs)
+  look-at-player: true
+  # Cursor Glow: El NPC se ilumina con contorno verde EXCLUSIVAMENTE para el jugador que le apunta con la mira
+  cursor-glow: true
+  # Gestos aleatorios: movimientos de saludo con brazo periódicos
+  random-gestures: false
+
+# ========================================================
+#   Calibración Cinemática (Física y Amplitudes)
+# ========================================================
+kinematics:
+  breathing-speed: 0.08
+  breathing-amplitude: 0.05
+  swaying-speed: 0.04
+  swaying-amplitude: 3.5
+  head-tilt-speed: 0.05
+  head-tilt-amplitude: 5.0
+  nod-amplitude: 12.0
+  micro-rotation-max-angle: 20.0
+  # Distancia máxima en bloques para que el NPC siga con la mirada al jugador
+  track-player-distance: 8.0
+  # Velocidad de seguimiento suave (interpolación Lerp angular: 0.15 - 0.25)
+  track-player-speed: 0.18
+  # Distancia máxima en bloques para activar el resplandor de selección al apuntar con la mira
+  cursor-glow-distance: 6.0
+
+# ========================================================
+#   Display Names Dinámicos (Arquitectura Bicapa Virtual)
+# ========================================================
+display-names:
+  enabled: true
+
+  # --- Capa 1: Título / Nombre (Con fondo negro translúcido, tamaño grande) ---
+  title-normal-format: "&f%name%"
+  title-hover-format: "&a&l%name%"
+  # Formato exclusivo para Bedrock al apuntar (compensa la falta de escala 3D con marcadores elegantes):
+  bedrock-title-hover-format: "&a▶ &a&l%name% &a◀"
+  title-height-offset: 2.32
+  title-normal-scale: 1.40
+  title-hover-scale: 1.65
+  title-interpolation-ticks: 3
+
+  # --- Capa 2: Subtítulo (Background 100% transparente, escala estándar 1.0 en ambas situaciones) ---
+  subtitle-format: "&7ᴄʟɪᴄᴋ ᴘᴀʀᴀ ᴠᴇʀ"
+  subtitle-height-offset: 2.02
+  subtitle-scale: 1.0
+
+  # --- Adaptación Bedrock (Paridad Visual y de Selección) ---
+  bedrock-adaptation:
+    enabled: true
+    particles: false
+    # Sonido sutil de entrada en mira
+    hover-sound: true
+
+# ========================================================
+#   Action Bar al Apuntar (Cursor Hover)
+# ========================================================
+hover-action-bar:
+  enabled: true
+  # Texto por defecto desplegado en el action bar si el NPC no tiene descripción personalizada:
+  default-description: "&fNpc clickeable"
+  # Formato clásico de fallback
+  text: "&fNpc clickeable"
+
+# ========================================================
+#   Efectos de Sonido (Inmersión Auditiva)
+# ========================================================
+sounds:
+  ambient:
+    enabled: true
+    sound: "ENTITY_VILLAGER_AMBIENT"
+    volume: 0.5
+    min-interval-ticks: 200 # 10 segundos
+    max-interval-ticks: 500 # 25 segundos
+  click:
+    enabled: true
+    sound: "ENTITY_VILLAGER_YES"
+    volume: 1.0
+    pitch: 1.0
+
+# ========================================================
+#   Configuración Específica por NPC (Auto-guardado)
+# ========================================================
+npcs: {}

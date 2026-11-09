@@ -1,0 +1,421 @@
+# =========================================================================
+# ThunderRanks - Sistema de Rangos y Ascensiones por Etapas
+# Progresión: 7 Rangos x 5 Sub-etapas (Tiers I-V) x 5 Recompensas por etapa
+# =========================================================================
+
+settings:
+  bossbar-duration-seconds: 6
+  playtime-interval-seconds: 60
+  playtime-xp: 25
+
+messages:
+  prefix: "&8[&e&lRangos&8] &r"
+  xp-gain: "&7+%amount% XP de Rango &8(&f%total%/%max% XP&8)"
+  milestone-complete: "&a&l¡RECOMPENSA DESBLOQUEADA! &7Hito &e%milestone%/5 &7en &r%rank% %tier%&7."
+  tierup-ready: "&6&l¡SUB-ETAPA COMPLETADA! &aHas dominado &r%rank% %tier%&a. Usa &e/rankup &apara ascender a &e%next_tier%&a."
+  tierup-success: "&a❖ &fHas ascendido a &r%rank% %tier%&f! &a❖"
+  rankup-ready: "&6&l¡GRAN ASCENSIÓN DISPONIBLE! &aHas completado todas las etapas de &r%rank%&a. Usa &e/rankup &apara ascender a &r%next_rank%&a."
+  rankup-success: "&6❖ &f%player% ha ascendido al rango &r%rank%&f! &6❖"
+  not-enough-money: "&cNo tienes suficiente dinero. Necesitas &e$%cost% &cy tienes &e$%balance%&c."
+  not-ready-rankup: "&cAún no has completado los 5 hitos de tu etapa actual (%current%/%max% XP)."
+  max-rank: "&d&l¡Ya te encuentras en el rango supremo COSMOS V!"
+
+# Fuentes de ganancia de XP
+xp-sources:
+  custom-crops: 35 # XP por cada cultivo cosechado en ThunderCrops
+  mining:
+    COAL_ORE: 15
+    DEEPSLATE_COAL_ORE: 15
+    COPPER_ORE: 15
+    DEEPSLATE_COPPER_ORE: 15
+    IRON_ORE: 25
+    DEEPSLATE_IRON_ORE: 25
+    GOLD_ORE: 35
+    DEEPSLATE_GOLD_ORE: 35
+    REDSTONE_ORE: 25
+    DEEPSLATE_REDSTONE_ORE: 25
+    LAPIS_ORE: 25
+    DEEPSLATE_LAPIS_ORE: 25
+    DIAMOND_ORE: 75
+    DEEPSLATE_DIAMOND_ORE: 75
+    EMERALD_ORE: 100
+    DEEPSLATE_EMERALD_ORE: 100
+    ANCIENT_DEBRIS: 200
+    WHEAT: 10
+    CARROTS: 10
+    POTATOES: 10
+    STONE: 2
+    DEEPSLATE: 2
+  mobs:
+    ZOMBIE: 20
+    SKELETON: 20
+    SPIDER: 20
+    CAVE_SPIDER: 25
+    CREEPER: 30
+    ENDERMAN: 50
+    BLAZE: 40
+    WITHER_SKELETON: 60
+    WITHER: 500
+    ENDER_DRAGON: 1000
+
+# -------------------------------------------------------------------------
+# RANGOS Y SUS 5 SUB-ETAPAS (I, II, III, IV, V)
+# Cada etapa dividida exactamente en 5 hitos (20%, 40%, 60%, 80%, 100%)
+# -------------------------------------------------------------------------
+ranks:
+
+  # -------------------- RANGO 1: USER --------------------
+  user:
+    display-name: "&f&lUSER"
+    bar-color: "WHITE"
+    icon: "LEATHER_HELMET"
+    next-rank: "knight"
+    major-rankup-cost: 3000.0
+    rankup-commands:
+      - "lp user %player% parent add knight"
+    tiers:
+      1:
+        cost: 0.0
+        milestones:
+          1: { xp: 60, money: 100.0, reward: "+$100", commands: ["eco give %player% 100"] }
+          2: { xp: 120, money: 200.0, reward: "+$200 & 1x Llave Super", commands: ["eco give %player% 200", "excellentcrates key give %player% vote 1"] }
+          3: { xp: 180, money: 300.0, reward: "+$300", commands: ["eco give %player% 300"] }
+          4: { xp: 240, money: 400.0, reward: "+$400 & 25 Almas", commands: ["eco give %player% 400"] }
+          5: { xp: 300, money: 600.0, reward: "+$600 & Ascenso a User II", commands: ["eco give %player% 600"] }
+      2:
+        cost: 250.0
+        milestones:
+          1: { xp: 120, money: 250.0, reward: "+$250", commands: ["eco give %player% 250"] }
+          2: { xp: 240, money: 400.0, reward: "+$400", commands: ["eco give %player% 400"] }
+          3: { xp: 360, money: 600.0, reward: "+$600 & 1x Llave Super", commands: ["eco give %player% 600", "excellentcrates key give %player% vote 1"] }
+          4: { xp: 480, money: 800.0, reward: "+$800", commands: ["eco give %player% 800"] }
+          5: { xp: 600, money: 1200.0, reward: "+$1,200 & Ascenso a User III", commands: ["eco give %player% 1200"] }
+      3:
+        cost: 500.0
+        milestones:
+          1: { xp: 180, money: 400.0, reward: "+$400", commands: ["eco give %player% 400"] }
+          2: { xp: 360, money: 700.0, reward: "+$700 & 50 Almas", commands: ["eco give %player% 700"] }
+          3: { xp: 540, money: 1000.0, reward: "+$1,000", commands: ["eco give %player% 1000"] }
+          4: { xp: 720, money: 1400.0, reward: "+$1,400 & 1x Llave Super", commands: ["eco give %player% 1400", "excellentcrates key give %player% vote 1"] }
+          5: { xp: 900, money: 2000.0, reward: "+$2,000 & Ascenso a User IV", commands: ["eco give %player% 2000"] }
+      4:
+        cost: 750.0
+        milestones:
+          1: { xp: 240, money: 600.0, reward: "+$600", commands: ["eco give %player% 600"] }
+          2: { xp: 480, money: 1000.0, reward: "+$1,000 & 1x Llave Rara", commands: ["eco give %player% 1000", "excellentcrates key give %player% rara 1"] }
+          3: { xp: 720, money: 1500.0, reward: "+$1,500", commands: ["eco give %player% 1500"] }
+          4: { xp: 960, money: 2000.0, reward: "+$2,000 & 100 Almas", commands: ["eco give %player% 2000"] }
+          5: { xp: 1200, money: 2800.0, reward: "+$2,800 & Ascenso a User V", commands: ["eco give %player% 2800"] }
+      5:
+        cost: 1000.0
+        milestones:
+          1: { xp: 300, money: 800.0, reward: "+$800", commands: ["eco give %player% 800"] }
+          2: { xp: 600, money: 1400.0, reward: "+$1,400 & 2x Llave Super", commands: ["eco give %player% 1400", "excellentcrates key give %player% vote 2"] }
+          3: { xp: 900, money: 2000.0, reward: "+$2,000", commands: ["eco give %player% 2000"] }
+          4: { xp: 1200, money: 2800.0, reward: "+$2,800 & 1x Llave Rara", commands: ["eco give %player% 2800", "excellentcrates key give %player% rara 1"] }
+          5: { xp: 1500, money: 4000.0, reward: "+$4,000 & ¡Ascensión Mayor a KNIGHT!", commands: ["eco give %player% 4000"] }
+
+  # -------------------- RANGO 2: KNIGHT --------------------
+  knight:
+    display-name: "&b&lKNIGHT"
+    bar-color: "BLUE"
+    icon: "IRON_HELMET"
+    next-rank: "heroe"
+    major-rankup-cost: 10000.0
+    rankup-commands:
+      - "lp user %player% parent add heroe"
+    tiers:
+      1:
+        cost: 1500.0
+        milestones:
+          1: { xp: 150, money: 500.0, reward: "+$500", commands: ["eco give %player% 500"] }
+          2: { xp: 300, money: 900.0, reward: "+$900 & 1x Llave Super", commands: ["eco give %player% 900", "excellentcrates key give %player% vote 1"] }
+          3: { xp: 450, money: 1400.0, reward: "+$1,400 & 50 Almas", commands: ["eco give %player% 1400"] }
+          4: { xp: 600, money: 2000.0, reward: "+$2,000", commands: ["eco give %player% 2000"] }
+          5: { xp: 750, money: 3000.0, reward: "+$3,000 & Ascenso a Knight II", commands: ["eco give %player% 3000"] }
+      2:
+        cost: 2000.0
+        milestones:
+          1: { xp: 200, money: 800.0, reward: "+$800", commands: ["eco give %player% 800"] }
+          2: { xp: 400, money: 1400.0, reward: "+$1,400 & 1x Llave Rara", commands: ["eco give %player% 1400", "excellentcrates key give %player% rara 1"] }
+          3: { xp: 600, money: 2200.0, reward: "+$2,200", commands: ["eco give %player% 2200"] }
+          4: { xp: 800, money: 3000.0, reward: "+$3,000 & 100 Almas", commands: ["eco give %player% 3000"] }
+          5: { xp: 1000, money: 4500.0, reward: "+$4,500 & Ascenso a Knight III", commands: ["eco give %player% 4500"] }
+      3:
+        cost: 2500.0
+        milestones:
+          1: { xp: 300, money: 1200.0, reward: "+$1,200", commands: ["eco give %player% 1200"] }
+          2: { xp: 600, money: 2000.0, reward: "+$2,000 & 2x Llave Super", commands: ["eco give %player% 2000", "excellentcrates key give %player% vote 2"] }
+          3: { xp: 900, money: 3000.0, reward: "+$3,000", commands: ["eco give %player% 3000"] }
+          4: { xp: 1200, money: 4200.0, reward: "+$4,200 & 1x Llave Rara", commands: ["eco give %player% 4200", "excellentcrates key give %player% rara 1"] }
+          5: { xp: 1500, money: 6000.0, reward: "+$6,000 & Ascenso a Knight IV", commands: ["eco give %player% 6000"] }
+      4:
+        cost: 3000.0
+        milestones:
+          1: { xp: 400, money: 1600.0, reward: "+$1,600", commands: ["eco give %player% 1600"] }
+          2: { xp: 800, money: 2800.0, reward: "+$2,800 & 150 Almas", commands: ["eco give %player% 2800"] }
+          3: { xp: 1200, money: 4200.0, reward: "+$4,200", commands: ["eco give %player% 4200"] }
+          4: { xp: 1600, money: 6000.0, reward: "+$6,000 & 2x Llave Rara", commands: ["eco give %player% 6000", "excellentcrates key give %player% rara 2"] }
+          5: { xp: 2000, money: 8000.0, reward: "+$8,000 & Ascenso a Knight V", commands: ["eco give %player% 8000"] }
+      5:
+        cost: 4000.0
+        milestones:
+          1: { xp: 500, money: 2000.0, reward: "+$2,000", commands: ["eco give %player% 2000"] }
+          2: { xp: 1000, money: 3800.0, reward: "+$3,800 & 1x Llave Mítica", commands: ["eco give %player% 3800", "excellentcrates key give %player% mitica 1"] }
+          3: { xp: 1500, money: 5800.0, reward: "+$5,800 & 200 Almas", commands: ["eco give %player% 5800"] }
+          4: { xp: 2000, money: 8000.0, reward: "+$8,000 & 2x Llave Rara", commands: ["eco give %player% 8000", "excellentcrates key give %player% rara 2"] }
+          5: { xp: 2500, money: 12000.0, reward: "+$12,000 & ¡Ascensión Mayor a HEROE!", commands: ["eco give %player% 12000"] }
+
+  # -------------------- RANGO 3: HEROE --------------------
+  heroe:
+    display-name: "&a&lHEROE"
+    bar-color: "GREEN"
+    icon: "GOLDEN_HELMET"
+    next-rank: "legend"
+    major-rankup-cost: 25000.0
+    rankup-commands:
+      - "lp user %player% parent add legend"
+    tiers:
+      1:
+        cost: 5000.0
+        milestones:
+          1: { xp: 300, money: 1500.0, reward: "+$1,500", commands: ["eco give %player% 1500"] }
+          2: { xp: 600, money: 2800.0, reward: "+$2,800 & 2x Llave Super", commands: ["eco give %player% 2800", "excellentcrates key give %player% vote 2"] }
+          3: { xp: 900, money: 4500.0, reward: "+$4,500 & 100 Almas", commands: ["eco give %player% 4500"] }
+          4: { xp: 1200, money: 6500.0, reward: "+$6,500 & 1x Llave Rara", commands: ["eco give %player% 6500", "excellentcrates key give %player% rara 1"] }
+          5: { xp: 1500, money: 10000.0, reward: "+$10,000 & Ascenso a Heroe II", commands: ["eco give %player% 10000"] }
+      2:
+        cost: 6500.0
+        milestones:
+          1: { xp: 400, money: 2000.0, reward: "+$2,000", commands: ["eco give %player% 2000"] }
+          2: { xp: 800, money: 3800.0, reward: "+$3,800", commands: ["eco give %player% 3800"] }
+          3: { xp: 1200, money: 6000.0, reward: "+$6,000 & 1x Llave Mítica", commands: ["eco give %player% 6000", "excellentcrates key give %player% mitica 1"] }
+          4: { xp: 1600, money: 8500.0, reward: "+$8,500", commands: ["eco give %player% 8500"] }
+          5: { xp: 2000, money: 12500.0, reward: "+$12,500 & Ascenso a Heroe III", commands: ["eco give %player% 12500"] }
+      3:
+        cost: 8000.0
+        milestones:
+          1: { xp: 500, money: 2500.0, reward: "+$2,500", commands: ["eco give %player% 2500"] }
+          2: { xp: 1000, money: 4800.0, reward: "+$4,800 & 2x Llave Rara", commands: ["eco give %player% 4800", "excellentcrates key give %player% rara 2"] }
+          3: { xp: 1500, money: 7500.0, reward: "+$7,500 & 200 Almas", commands: ["eco give %player% 7500"] }
+          4: { xp: 2000, money: 11000.0, reward: "+$11,000 & 1x Llave Mítica", commands: ["eco give %player% 11000", "excellentcrates key give %player% mitica 1"] }
+          5: { xp: 2500, money: 16000.0, reward: "+$16,000 & Ascenso a Heroe IV", commands: ["eco give %player% 16000"] }
+      4:
+        cost: 10000.0
+        milestones:
+          1: { xp: 600, money: 3200.0, reward: "+$3,200", commands: ["eco give %player% 3200"] }
+          2: { xp: 1200, money: 6000.0, reward: "+$6,000 & 250 Almas", commands: ["eco give %player% 6000"] }
+          3: { xp: 1800, money: 9500.0, reward: "+$9,500 & 2x Llave Mítica", commands: ["eco give %player% 9500", "excellentcrates key give %player% mitica 2"] }
+          4: { xp: 2400, money: 13500.0, reward: "+$13,500", commands: ["eco give %player% 13500"] }
+          5: { xp: 3000, money: 20000.0, reward: "+$20,000 & Ascenso a Heroe V", commands: ["eco give %player% 20000"] }
+      5:
+        cost: 12000.0
+        milestones:
+          1: { xp: 700, money: 4000.0, reward: "+$4,000", commands: ["eco give %player% 4000"] }
+          2: { xp: 1400, money: 8000.0, reward: "+$8,000 & 1x Llave Limited", commands: ["eco give %player% 8000", "excellentcrates key give %player% limited 1"] }
+          3: { xp: 2100, money: 12500.0, reward: "+$12,500 & 400 Almas", commands: ["eco give %player% 12500"] }
+          4: { xp: 2800, money: 18000.0, reward: "+$18,000 & 2x Llave Mítica", commands: ["eco give %player% 18000", "excellentcrates key give %player% mitica 2"] }
+          5: { xp: 3500, money: 28000.0, reward: "+$28,000 & ¡Ascensión Mayor a LEGEND!", commands: ["eco give %player% 28000"] }
+
+  # -------------------- RANGO 4: LEGEND --------------------
+  legend:
+    display-name: "&e&lLEGEND"
+    bar-color: "YELLOW"
+    icon: "DIAMOND_HELMET"
+    next-rank: "mythic"
+    major-rankup-cost: 50000.0
+    rankup-commands:
+      - "lp user %player% parent add mythic"
+    tiers:
+      1:
+        cost: 12000.0
+        milestones:
+          1: { xp: 500, money: 3000.0, reward: "+$3,000", commands: ["eco give %player% 3000"] }
+          2: { xp: 1000, money: 6000.0, reward: "+$6,000 & 2x Llave Rara", commands: ["eco give %player% 6000", "excellentcrates key give %player% rara 2"] }
+          3: { xp: 1500, money: 9500.0, reward: "+$9,500 & 200 Almas", commands: ["eco give %player% 9500"] }
+          4: { xp: 2000, money: 14000.0, reward: "+$14,000 & 1x Llave Mítica", commands: ["eco give %player% 14000", "excellentcrates key give %player% mitica 1"] }
+          5: { xp: 2500, money: 20000.0, reward: "+$20,000 & Ascenso a Legend II", commands: ["eco give %player% 20000"] }
+      2:
+        cost: 15000.0
+        milestones:
+          1: { xp: 600, money: 4000.0, reward: "+$4,000", commands: ["eco give %player% 4000"] }
+          2: { xp: 1200, money: 8000.0, reward: "+$8,000 & 2x Llave Mítica", commands: ["eco give %player% 8000", "excellentcrates key give %player% mitica 2"] }
+          3: { xp: 1800, money: 13000.0, reward: "+$13,000 & 300 Almas", commands: ["eco give %player% 13000"] }
+          4: { xp: 2400, money: 19000.0, reward: "+$19,000", commands: ["eco give %player% 19000"] }
+          5: { xp: 3000, money: 27000.0, reward: "+$27,000 & Ascenso a Legend III", commands: ["eco give %player% 27000"] }
+      3:
+        cost: 18000.0
+        milestones:
+          1: { xp: 700, money: 5500.0, reward: "+$5,500", commands: ["eco give %player% 5500"] }
+          2: { xp: 1400, money: 11000.0, reward: "+$11,000 & 1x Llave Limited", commands: ["eco give %player% 11000", "excellentcrates key give %player% limited 1"] }
+          3: { xp: 2100, money: 18000.0, reward: "+$18,000 & 450 Almas", commands: ["eco give %player% 18000"] }
+          4: { xp: 2800, money: 26000.0, reward: "+$26,000 & 2x Llave Mítica", commands: ["eco give %player% 26000", "excellentcrates key give %player% mitica 2"] }
+          5: { xp: 3500, money: 36000.0, reward: "+$36,000 & Ascenso a Legend IV", commands: ["eco give %player% 36000"] }
+      4:
+        cost: 22000.0
+        milestones:
+          1: { xp: 900, money: 7500.0, reward: "+$7,500", commands: ["eco give %player% 7500"] }
+          2: { xp: 1800, money: 15000.0, reward: "+$15,000 & 500 Almas", commands: ["eco give %player% 1500"] }
+          3: { xp: 2700, money: 24000.0, reward: "+$24,000 & 1x Llave Limited", commands: ["eco give %player% 24000", "excellentcrates key give %player% limited 1"] }
+          4: { xp: 3600, money: 35000.0, reward: "+$35,000 & 3x Llave Mítica", commands: ["eco give %player% 35000", "excellentcrates key give %player% mitica 3"] }
+          5: { xp: 4500, money: 48000.0, reward: "+$48,000 & Ascenso a Legend V", commands: ["eco give %player% 48000"] }
+      5:
+        cost: 26000.0
+        milestones:
+          1: { xp: 1200, money: 10000.0, reward: "+$10,000", commands: ["eco give %player% 10000"] }
+          2: { xp: 2400, money: 20000.0, reward: "+$20,000 & 2x Llave Limited", commands: ["eco give %player% 20000", "excellentcrates key give %player% limited 2"] }
+          3: { xp: 3600, money: 33000.0, reward: "+$33,000 & 750 Almas", commands: ["eco give %player% 33000"] }
+          4: { xp: 4800, money: 48000.0, reward: "+$48,000 & 3x Llave Mítica", commands: ["eco give %player% 48000", "excellentcrates key give %player% mitica 3"] }
+          5: { xp: 6000, money: 70000.0, reward: "+$70,000 & ¡Ascensión Mayor a MYTHIC!", commands: ["eco give %player% 70000"] }
+
+  # -------------------- RANGO 5: MYTHIC --------------------
+  mythic:
+    display-name: "&5&lMYTHIC"
+    bar-color: "PURPLE"
+    icon: "NETHERITE_HELMET"
+    next-rank: "titan"
+    major-rankup-cost: 100000.0
+    rankup-commands:
+      - "lp user %player% parent add titan"
+    tiers:
+      1:
+        cost: 25000.0
+        milestones:
+          1: { xp: 700, money: 6000.0, reward: "+$6,000", commands: ["eco give %player% 6000"] }
+          2: { xp: 1400, money: 12000.0, reward: "+$12,000 & 2x Llave Mítica", commands: ["eco give %player% 12000", "excellentcrates key give %player% mitica 2"] }
+          3: { xp: 2100, money: 20000.0, reward: "+$20,000 & 400 Almas", commands: ["eco give %player% 20000"] }
+          4: { xp: 2800, money: 30000.0, reward: "+$30,000 & 1x Llave Limited", commands: ["eco give %player% 30000", "excellentcrates key give %player% limited 1"] }
+          5: { xp: 3500, money: 45000.0, reward: "+$45,000 & Ascenso a Mythic II", commands: ["eco give %player% 45000"] }
+      2:
+        cost: 30000.0
+        milestones:
+          1: { xp: 1000, money: 8500.0, reward: "+$8,500", commands: ["eco give %player% 8500"] }
+          2: { xp: 2000, money: 17500.0, reward: "+$17,500 & 1x Llave Limited", commands: ["eco give %player% 17500", "excellentcrates key give %player% limited 1"] }
+          3: { xp: 3000, money: 28000.0, reward: "+$28,000 & 600 Almas", commands: ["eco give %player% 28000"] }
+          4: { xp: 4000, money: 42000.0, reward: "+$42,000 & 2x Llave Mítica", commands: ["eco give %player% 42000", "excellentcrates key give %player% mitica 2"] }
+          5: { xp: 5000, money: 60000.0, reward: "+$60,000 & Ascenso a Mythic III", commands: ["eco give %player% 60000"] }
+      3:
+        cost: 38000.0
+        milestones:
+          1: { xp: 1300, money: 11000.0, reward: "+$11,000", commands: ["eco give %player% 11000"] }
+          2: { xp: 2600, money: 24000.0, reward: "+$24,000 & 2x Llave Limited", commands: ["eco give %player% 24000", "excellentcrates key give %player% limited 2"] }
+          3: { xp: 3900, money: 39000.0, reward: "+$39,000 & 800 Almas", commands: ["eco give %player% 39000"] }
+          4: { xp: 5200, money: 58000.0, reward: "+$58,000 & 3x Llave Mítica", commands: ["eco give %player% 58000", "excellentcrates key give %player% mitica 3"] }
+          5: { xp: 6500, money: 85000.0, reward: "+$85,000 & Ascenso a Mythic IV", commands: ["eco give %player% 85000"] }
+      4:
+        cost: 45000.0
+        milestones:
+          1: { xp: 1600, money: 15000.0, reward: "+$15,000", commands: ["eco give %player% 15000"] }
+          2: { xp: 3200, money: 32000.0, reward: "+$32,000 & 2x Llave Limited", commands: ["eco give %player% 32000", "excellentcrates key give %player% limited 2"] }
+          3: { xp: 4800, money: 52000.0, reward: "+$52,000 & 1000 Almas", commands: ["eco give %player% 52000"] }
+          4: { xp: 6400, money: 78000.0, reward: "+$78,000", commands: ["eco give %player% 78000"] }
+          5: { xp: 8000, money: 110000.0, reward: "+$110,000 & Ascenso a Mythic V", commands: ["eco give %player% 110000"] }
+      5:
+        cost: 55000.0
+        milestones:
+          1: { xp: 2000, money: 20000.0, reward: "+$20,000", commands: ["eco give %player% 20000"] }
+          2: { xp: 4000, money: 44000.0, reward: "+$44,000 & 3x Llave Limited", commands: ["eco give %player% 44000", "excellentcrates key give %player% limited 3"] }
+          3: { xp: 6000, money: 72000.0, reward: "+$72,000 & 1500 Almas", commands: ["eco give %player% 72000"] }
+          4: { xp: 8000, money: 105000.0, reward: "+$105,000", commands: ["eco give %player% 105000"] }
+          5: { xp: 10000, money: 150000.0, reward: "+$150,000 & ¡Ascensión Mayor a TITAN!", commands: ["eco give %player% 150000"] }
+
+  # -------------------- RANGO 6: TITAN --------------------
+  titan:
+    display-name: "&c&lTITAN"
+    bar-color: "RED"
+    icon: "NETHER_STAR"
+    next-rank: "cosmos"
+    major-rankup-cost: 250000.0
+    rankup-commands:
+      - "lp user %player% parent add cosmos"
+    tiers:
+      1:
+        cost: 50000.0
+        milestones:
+          1: { xp: 1200, money: 12000.0, reward: "+$12,000", commands: ["eco give %player% 12000"] }
+          2: { xp: 2400, money: 26000.0, reward: "+$26,000 & 2x Llave Limited", commands: ["eco give %player% 26000", "excellentcrates key give %player% limited 2"] }
+          3: { xp: 3600, money: 44000.0, reward: "+$44,000 & 800 Almas", commands: ["eco give %player% 44000"] }
+          4: { xp: 4800, money: 68000.0, reward: "+$68,000", commands: ["eco give %player% 68000"] }
+          5: { xp: 6000, money: 100000.0, reward: "+$100,000 & Ascenso a Titan II", commands: ["eco give %player% 100000"] }
+      2:
+        cost: 65000.0
+        milestones:
+          1: { xp: 1600, money: 18000.0, reward: "+$18,000", commands: ["eco give %player% 18000"] }
+          2: { xp: 3200, money: 38000.0, reward: "+$38,000 & 3x Llave Limited", commands: ["eco give %player% 38000", "excellentcrates key give %player% limited 3"] }
+          3: { xp: 4800, money: 64000.0, reward: "+$64,000 & 1200 Almas", commands: ["eco give %player% 64000"] }
+          4: { xp: 6400, money: 96000.0, reward: "+$96,000", commands: ["eco give %player% 96000"] }
+          5: { xp: 8000, money: 140000.0, reward: "+$140,000 & Ascenso a Titan III", commands: ["eco give %player% 140000"] }
+      3:
+        cost: 80000.0
+        milestones:
+          1: { xp: 2000, money: 25000.0, reward: "+$25,000", commands: ["eco give %player% 25000"] }
+          2: { xp: 4000, money: 54000.0, reward: "+$54,000 & 3x Llave Limited", commands: ["eco give %player% 54000", "excellentcrates key give %player% limited 3"] }
+          3: { xp: 6000, money: 90000.0, reward: "+$90,000 & 1800 Almas", commands: ["eco give %player% 90000"] }
+          4: { xp: 8000, money: 135000.0, reward: "+$135,000", commands: ["eco give %player% 135000"] }
+          5: { xp: 10000, money: 195000.0, reward: "+$195,000 & Ascenso a Titan IV", commands: ["eco give %player% 195000"] }
+      4:
+        cost: 100000.0
+        milestones:
+          1: { xp: 2600, money: 35000.0, reward: "+$35,000", commands: ["eco give %player% 35000"] }
+          2: { xp: 5200, money: 75000.0, reward: "+$75,000 & 4x Llave Limited", commands: ["eco give %player% 75000", "excellentcrates key give %player% limited 4"] }
+          3: { xp: 7800, money: 125000.0, reward: "+$125,000 & 2500 Almas", commands: ["eco give %player% 125000"] }
+          4: { xp: 10400, money: 185000.0, reward: "+$185,000", commands: ["eco give %player% 185000"] }
+          5: { xp: 13000, money: 260000.0, reward: "+$260,000 & Ascenso a Titan V", commands: ["eco give %player% 260000"] }
+      5:
+        cost: 130000.0
+        milestones:
+          1: { xp: 3300, money: 50000.0, reward: "+$50,000", commands: ["eco give %player% 50000"] }
+          2: { xp: 6600, money: 110000.0, reward: "+$110,000 & 5x Llave Limited", commands: ["eco give %player% 110000", "excellentcrates key give %player% limited 5"] }
+          3: { xp: 9900, money: 180000.0, reward: "+$180,000 & 4000 Almas", commands: ["eco give %player% 180000"] }
+          4: { xp: 13200, money: 270000.0, reward: "+$270,000", commands: ["eco give %player% 270000"] }
+          5: { xp: 16500, money: 400000.0, reward: "+$400,000 & ¡Gran Ascensión a COSMOS!", commands: ["eco give %player% 400000"] }
+
+  # -------------------- RANGO 7: COSMOS (FINAL SUPREMO) --------------------
+  cosmos:
+    display-name: "&d&lCOSMOS"
+    bar-color: "PINK"
+    icon: "END_CRYSTAL"
+    next-rank: ""
+    major-rankup-cost: 0.0
+    rankup-commands: []
+    tiers:
+      1:
+        cost: 150000.0
+        milestones:
+          1: { xp: 2500, money: 50000.0, reward: "+$50,000", commands: ["eco give %player% 50000"] }
+          2: { xp: 5000, money: 100000.0, reward: "+$100,000 & 3x Llave Limited", commands: ["eco give %player% 100000", "excellentcrates key give %player% limited 3"] }
+          3: { xp: 7500, money: 160000.0, reward: "+$160,000 & 2000 Almas", commands: ["eco give %player% 160000"] }
+          4: { xp: 10000, money: 240000.0, reward: "+$240,000", commands: ["eco give %player% 240000"] }
+          5: { xp: 12500, money: 350000.0, reward: "+$350,000 & Ascenso a Cosmos II", commands: ["eco give %player% 350000"] }
+      2:
+        cost: 200000.0
+        milestones:
+          1: { xp: 3300, money: 75000.0, reward: "+$75,000", commands: ["eco give %player% 75000"] }
+          2: { xp: 6600, money: 150000.0, reward: "+$150,000 & 4x Llave Limited", commands: ["eco give %player% 150000", "excellentcrates key give %player% limited 4"] }
+          3: { xp: 9900, money: 240000.0, reward: "+$240,000 & 3000 Almas", commands: ["eco give %player% 240000"] }
+          4: { xp: 13200, money: 350000.0, reward: "+$350,000", commands: ["eco give %player% 350000"] }
+          5: { xp: 16500, money: 500000.0, reward: "+$500,000 & Ascenso a Cosmos III", commands: ["eco give %player% 500000"] }
+      3:
+        cost: 275000.0
+        milestones:
+          1: { xp: 4200, money: 100000.0, reward: "+$100,000", commands: ["eco give %player% 100000"] }
+          2: { xp: 8400, money: 210000.0, reward: "+$210,000 & 5x Llave Limited", commands: ["eco give %player% 210000", "excellentcrates key give %player% limited 5"] }
+          3: { xp: 12600, money: 340000.0, reward: "+$340,000 & 4500 Almas", commands: ["eco give %player% 340000"] }
+          4: { xp: 16800, money: 500000.0, reward: "+$500,000", commands: ["eco give %player% 500000"] }
+          5: { xp: 21000, money: 750000.0, reward: "+$750,000 & Ascenso a Cosmos IV", commands: ["eco give %player% 750000"] }
+      4:
+        cost: 350000.0
+        milestones:
+          1: { xp: 5300, money: 150000.0, reward: "+$150,000", commands: ["eco give %player% 150000"] }
+          2: { xp: 10600, money: 300000.0, reward: "+$300,000 & 6x Llave Limited", commands: ["eco give %player% 300000", "excellentcrates key give %player% limited 6"] }
+          3: { xp: 15900, money: 480000.0, reward: "+$480,000 & 6000 Almas", commands: ["eco give %player% 480000"] }
+          4: { xp: 21200, money: 700000.0, reward: "+$700,000", commands: ["eco give %player% 700000"] }
+          5: { xp: 26500, money: 1000000.0, reward: "+$1,000,000 & Ascenso a Cosmos V", commands: ["eco give %player% 1000000"] }
+      5:
+        cost: 500000.0
+        milestones:
+          1: { xp: 6600, money: 250000.0, reward: "+$250,000", commands: ["eco give %player% 250000"] }
+          2: { xp: 13200, money: 500000.0, reward: "+$500,000 & 8x Llave Limited", commands: ["eco give %player% 500000", "excellentcrates key give %player% limited 8"] }
+          3: { xp: 19800, money: 800000.0, reward: "+$800,000 & 10000 Almas", commands: ["eco give %player% 800000"] }
+          4: { xp: 26400, money: 1200000.0, reward: "+$1,200,000 & 10x Llave Limited", commands: ["eco give %player% 1200000", "excellentcrates key give %player% limited 10"] }
+          5: { xp: 33000, money: 2000000.0, reward: "+$2,000,000 & ¡CIMA ABSOLUTA DE THUNDERMC!", commands: ["eco give %player% 2000000"] }

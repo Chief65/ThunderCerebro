@@ -30,6 +30,18 @@ Documento maestro de especificaciones de hardware, asignación de recursos y top
 
 ---
 
+## 🐸 3. Servicios Externos — Bot de Discord Fabio
+
+| Servicio | Proveedor | Nodo | Acceso | Runtime |
+|---|---|---|---|---|
+| **Fabio** (Gateway bot: postulaciones, sorteos, reglas, rich presence) | Vultam (Pterodactyl) | Miami (`mia43.vultam.net`) | SFTP `:2022`, usuario `3ag1zpt6.22e65b5a`, clave `id_rsa` | Python 3.12 + `websockets`, entrypoint `gateway_bot.py` |
+
+- Desplegado el 2026-11-08. Fuera del plan de Bloom (no consume RAM de los splits).
+- Datos vivos en remoto: `postulaciones_db.json`, `sorteos_db.json` (fuente de verdad = Vultam).
+- Operación: skill `startupfabio`.
+
+---
+
 ## Referencias Cruzadas
 - [[wiki/synthesis/thundermc-master-synthesis|SÃ­ntesis Maestra ThunderMC]]
 - [[wiki/synthesis/optimizacion-granjas-survival|OptimizaciÃ³n Granjas Survival]]

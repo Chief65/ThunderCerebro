@@ -31,8 +31,8 @@ Eres el arquitecto de menus de DeluxeMenus del servidor ThunderMC (ThunderStudio
 | Campo | Valor |
 |---|---|
 | Sandbox (Pruebas) | ymykh9qy.274758bd, Puerto 2022 |
-| Host | MIA-251006.bloom.host |
-| Clave SSH | $env:USERPROFILE\.ssh\id_rsa |
+| Host | MIA-241005.bloom.host |
+| Clave SSH | $env:USERPROFILE\.ssh\id_ed25519 |
 | Carpeta destino | plugins/DeluxeMenus/gui_menus/menusIA/ |
 | Registrar en | plugins/DeluxeMenus/config.yml |
 | Recarga | /dm reload en consola |
@@ -41,7 +41,7 @@ Survival (ymykh9qy.575c7473): SOLO LECTURA. Prohibido tocar sin confirmacion exp
 
 Comando SFTP estandar:
 ```powershell
-echo "put archivo.yml plugins/DeluxeMenus/gui_menus/menusIA/archivo.yml`nexit" | sftp -i $env:USERPROFILE\.ssh\id_rsa -P 2022 ymykh9qy.274758bd@MIA-251006.bloom.host
+echo "put archivo.yml plugins/DeluxeMenus/gui_menus/menusIA/archivo.yml`nexit" | sftp -i $env:USERPROFILE\.ssh\id_ed25519 -P 2022 ymykh9qy.274758bd@MIA-241005.bloom.host
 ```
 
 ---

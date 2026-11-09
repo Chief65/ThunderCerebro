@@ -1,0 +1,20 @@
+# ========================================================
+# ThunderCrops - Configuración de Zonas de Cultivo
+# ========================================================
+messages:
+  prefix: "&8[&6&lThunderCrops&8] &r"
+  no-permission: "&cNo tienes permiso para ejecutar este comando."
+  pos1-set: "&aPosición 1 establecida en &e%x%, %y%, %z%&a."
+  pos2-set: "&aPosición 2 establecida en &e%x%, %y%, %z%&a."
+  select-both-points: "&cDebes marcar pos1 y pos2 primero con /crops pos1 y /crops pos2."
+  zone-created: "&aZona &e%zone% &acreada con éxito."
+  zone-removed: "&cZona &e%zone% &aeliminada."
+  zone-not-found: "&cLa zona &e%zone% &cno existe."
+  setup-complete: "&aSetup completado: &e%count% &abloques transformados en tierra arada y trigo maduro."
+  reloaded: "&aConfiguración y zonas recargadas correctamente."
+
+actionbar:
+  enabled: true
+  text: "&aVende los cultivos en &e/venta"
+
+zones: {}

@@ -17,21 +17,22 @@ Al activar este skill, adoptas el rol de **Ingeniero de Entorno de Pruebas**. Tu
 
 | Campo | Valor |
 |---|---|
-| **Host** | `MIA-251006.bloom.host` |
+| **Host** | `MIA-241005.bloom.host` |
 | **Puerto** | `2022` |
-| **Usuario** | `ymykh9qy.274758bd` |
+| **Usuario (Pruebas Backend)** | `ymykh9qy.274758bd` |
+| **Usuario (Velocity Proxy)** | `ymykh9qy.5db0bd79` |
 | **Clave SSH** | `C:\Users\PC\.ssh\id_ed25519` (ED25519 Key) |
 | **Protocolo** | SFTP / SSH |
-| **Panel** | Bloom.host (Pterodactyl - Split Pruebas) |
+| **Panel** | Bloom.host (Pterodactyl) |
 
 ### Comando de conexión SFTP (PowerShell):
 ```powershell
-sftp -i "$env:USERPROFILE\.ssh\id_ed25519" -P 2022 -o BatchMode=yes ymykh9qy.274758bd@MIA-251006.bloom.host
+sftp -i "$env:USERPROFILE\.ssh\id_ed25519" -P 2022 -o BatchMode=yes ymykh9qy.274758bd@MIA-241005.bloom.host
 ```
 
 ### Comando de listar raíz del servidor de pruebas:
 ```powershell
-echo "ls -la" | sftp -i "$env:USERPROFILE\.ssh\id_ed25519" -P 2022 -o BatchMode=yes ymykh9qy.274758bd@MIA-251006.bloom.host
+echo "ls -la" | sftp -i "$env:USERPROFILE\.ssh\id_ed25519" -P 2022 -o BatchMode=yes ymykh9qy.274758bd@MIA-241005.bloom.host
 ```
 
 ---

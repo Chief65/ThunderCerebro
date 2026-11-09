@@ -1,0 +1,17 @@
+name: CrateEffects
+version: 1.0.0
+main: com.thundermc.crateeffects.CrateEffects
+api-version: '1.21'
+author: ThunderStudios
+description: Decoupled celebratory fireworks and visual effects addon for ExcellentCrates.
+depend:
+  - ExcellentCrates
+commands:
+  crateeffects:
+    description: Comandos de administracion y testeo de efectos de cajas
+    permission: crateeffects.admin
+    aliases: [ceffects]
+permissions:
+  crateeffects.admin:
+    description: Permiso para gestionar y testear CrateEffects
+    default: op

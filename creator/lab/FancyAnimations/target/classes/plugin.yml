@@ -1,0 +1,31 @@
+name: FancyAnimations
+version: '1.0.0'
+main: com.thundermc.fancyanimations.FancyAnimationsPlugin
+api-version: '1.21'
+author: ThunderStudios
+description: Addon oficial de cinemática procedural y conjunto ambiental para FancyNpcs.
+depend:
+  - FancyNpcs
+softdepend:
+  - packetevents
+  - floodgate
+
+commands:
+  fanim:
+    description: Comando principal de control de animaciones de FancyAnimations
+    aliases:
+      - fancyanimations
+      - ambient
+    permission: fancyanimations.admin
+    usage: /<command> [ambient|animate|play|preset|default|list|info|reload|desc]
+  npcs:
+    description: Control y gestión de descripciones y animaciones de NPCs
+    aliases:
+      - npcdesc
+    permission: fancyanimations.admin
+    usage: /<command> desc <add|remove|list|default> ...
+
+permissions:
+  fancyanimations.admin:
+    description: Permite administrar y configurar las animaciones de los NPCs
+    default: op

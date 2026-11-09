@@ -26,3 +26,30 @@ uloader.properties
 creator/lab/libs/
 creator/lab/thunderpets/build/
 *.args
+**/bin/
+*.class
+__pycache__/
+*.gz
+
+# Descargas temporales de configs de servidor en raíz
+/*.yml
+/*.toml
+
+# Python & Java artifacts
+__pycache__/
+*.pyc
+*.class
+*.bak
+*.tmp
+creator/lab/discord_bot/backups/
+creator/lib/
+creator/output/fabio_*.zip
+*.zip
+*.jar
+creator/output/renders/
+creator/scratch/
+local_messages_en.yml
+local_npcs.yml
+messages_en.yml
+animated_config.yml
+velocity.toml

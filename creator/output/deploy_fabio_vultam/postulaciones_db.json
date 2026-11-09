@@ -1,0 +1,117 @@
+{
+  "counter": 104,
+  "applications": {
+    "TH-101": {
+      "id": "TH-101",
+      "user_id": "1384535041765543998",
+      "username": "relevategroup",
+      "tipo": "Staff / Moderación",
+      "submitted_at": 1793985057,
+      "status": "Aceptado y Firmado",
+      "values": {
+        "field_nombre_real": "Jordan",
+        "field_nick_edad": "Pepito",
+        "field_pais": "Spain",
+        "field_horas_exp": "qwsdadadsadsadsada",
+        "field_motivo": "sadadasdsadsadasdasdas"
+      },
+      "resumen_fields": [
+        {
+          "name": "👤 Nombre Real",
+          "value": "Jordan",
+          "inline": true
+        },
+        {
+          "name": "🎮 Nick & Edad",
+          "value": "Pepito",
+          "inline": true
+        },
+        {
+          "name": "🌎 País",
+          "value": "Spain",
+          "inline": true
+        },
+        {
+          "name": "⏱️ Horas Jugadas & Experiencia",
+          "value": "qwsdadadsadsadsada",
+          "inline": false
+        },
+        {
+          "name": "💡 ¿Por qué quiere ser Staff?",
+          "value": "sadadasdsadsadasdasdas",
+          "inline": false
+        }
+      ],
+      "admin_msg_id": "1568311747306201230"
+    },
+    "TH-102": {
+      "id": "TH-102",
+      "user_id": "1339648422650839146",
+      "username": "soyyormos",
+      "tipo": "Media / Creador",
+      "submitted_at": 1793985217,
+      "status": "En revision",
+      "values": {
+        "field_nombre_nick": "dsdsasdad",
+        "field_pais_edad": "adadad",
+        "field_twitch": "",
+        "field_youtube": "",
+        "field_tiktok": ""
+      },
+      "resumen_fields": [
+        {
+          "name": "👤 Nombre & Nick",
+          "value": "dsdsasdad",
+          "inline": true
+        },
+        {
+          "name": "🌎 País & Edad",
+          "value": "adadad",
+          "inline": true
+        },
+        {
+          "name": "🟣 Twitch",
+          "value": "No indicado",
+          "inline": true
+        },
+        {
+          "name": "🔴 YouTube",
+          "value": "No indicado",
+          "inline": true
+        },
+        {
+          "name": "⚫ TikTok",
+          "value": "No indicado",
+          "inline": true
+        }
+      ],
+      "admin_msg_id": "1568312415924523120"
+    },
+    "TH-103": {
+      "id": "TH-103",
+      "user_id": "1384535041765543998",
+      "username": "relevategroup",
+      "tipo": "Desconocido",
+      "submitted_at": 1793985239,
+      "status": "En revision",
+      "values": {
+        "field_reject_reason": "Eres un inutil cabron"
+      },
+      "resumen_fields": [],
+      "admin_msg_id": "1568312502784106542"
+    },
+    "TH-104": {
+      "id": "TH-104",
+      "user_id": "1384535041765543998",
+      "username": "relevategroup",
+      "tipo": "Desconocido",
+      "submitted_at": 1793985270,
+      "status": "En revision",
+      "values": {
+        "field_reject_reason": "ytrtrtrtrtrtrtrtrtrtrt"
+      },
+      "resumen_fields": [],
+      "admin_msg_id": "1568312633180823586"
+    }
+  }
+}

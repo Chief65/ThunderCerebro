@@ -2,6 +2,112 @@
 
 Registro cronológico e incremental de todas las operaciones realizadas en **ThunderCerebro**.
 
+## [2026-11-09] thundermounts & sandbox | Refactor a Sistema Exclusivo de Corceles con 23 Estilos, Zombie/Esqueleto y Despawn Automático
+- **Archivos Modificados**:
+  - [`creator/lab/ThunderMounts/src/com/thundermc/mounts/model/HorseStyle.java`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/lab/ThunderMounts/src/com/thundermc/mounts/model/HorseStyle.java)
+  - [`creator/lab/ThunderMounts/src/com/thundermc/mounts/model/HorseArmor.java`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/lab/ThunderMounts/src/com/thundermc/mounts/model/HorseArmor.java)
+  - [`creator/lab/ThunderMounts/src/com/thundermc/mounts/model/ActiveMount.java`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/lab/ThunderMounts/src/com/thundermc/mounts/model/ActiveMount.java)
+  - [`creator/lab/ThunderMounts/src/com/thundermc/mounts/model/MountData.java`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/lab/ThunderMounts/src/com/thundermc/mounts/model/MountData.java)
+  - [`creator/lab/ThunderMounts/src/com/thundermc/mounts/gui/MountGui.java`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/lab/ThunderMounts/src/com/thundermc/mounts/gui/MountGui.java)
+  - [`creator/lab/ThunderMounts/src/com/thundermc/mounts/manager/MountManager.java`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/lab/ThunderMounts/src/com/thundermc/mounts/manager/MountManager.java)
+  - [`creator/lab/ThunderMounts/src/com/thundermc/mounts/listener/MountListener.java`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/lab/ThunderMounts/src/com/thundermc/mounts/listener/MountListener.java)
+  - [`creator/lab/ThunderMounts/src/com/thundermc/mounts/command/MountCommand.java`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/lab/ThunderMounts/src/com/thundermc/mounts/command/MountCommand.java)
+  - [`creator/lab/ThunderMounts/resources/config.yml`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/lab/ThunderMounts/resources/config.yml)
+  - [`creator/lab/ThunderMounts/resources/plugin.yml`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/lab/ThunderMounts/resources/plugin.yml)
+  - [`creator/output/plugins/ThunderMounts-1.0.0.jar`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/output/plugins/ThunderMounts-1.0.0.jar)
+- **Implementaciones Específicas**:
+  1. **Enfoque Exclusivo en Caballos**:
+     - Eliminadas monturas accesorias (burro, llama, rana, phantom).
+     - Catálogo estructurado en 23 estilos directos abarcando todos los colores vainilla (`WHITE`, `BLACK`, `CHESTNUT`, `GRAY`, `CREAMY`, `BROWN`, `DARK_BROWN`) y patrones (`NONE`, `WHITE`, `WHITEFIELD`, `WHITE_DOTS`, `BLACK_DOTS`).
+     - Incorporadas variantes no-muertas: `SKELETON_HORSE` y `ZOMBIE_HORSE`.
+  2. **Selector de Armadura Integrado**:
+     - Ciclo rápido de armaduras (Sin Armadura, Cuero, Hierro, Oro, Diamante) con actualización inmediata en tiempo real si el corcel está invocado.
+  3. **Despawn Inmediato al Desmontar**:
+     - Handler `EntityDismountEvent`: Al desmontar o presionar Shift, el caballo es removido de inmediato con partículas `POOF`, sonido de armadura y aviso de re-invocación.
+  4. **Protección Anti-Robo de Monturas**:
+     - Bloqueo en `EntityMountEvent`, `VehicleEnterEvent` y `PlayerInteractEntityEvent` para evitar que cualquier jugador no propietario suba o abra el inventario de la montura ajena.
+  5. **Estamina y Cooldown**:
+     - Barra de estamina en ActionBar con línea delgada (`&a&m   &7   `), duración de 1 hora activa y 1 hora de descanso tras agotarse.
+- **Despliegue**: Compilado con JDK 21 y desplegado vía SFTP en el servidor de pruebas (`plugins/ThunderMounts-1.0.0.jar`, 28.869 bytes).
+
+## [2026-11-09] crateeffects & sandbox | Eliminación de Glow Durante la Ruleta de Selección
+- **Archivos Modificados**:
+  - [`creator/lab/CrateEffects/src/com/thundermc/crateeffects/opening/ShulkerOpening.java`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/lab/CrateEffects/src/com/thundermc/crateeffects/opening/ShulkerOpening.java)
+  - [`creator/output/plugins/CrateEffects-1.0.0.jar`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/output/plugins/CrateEffects-1.0.0.jar)
+  - [`wiki/entities/thundermc/core-infrastructure/crateeffects.md`](file:///C:/Users/PC/Desktop/ThunderCerebro/wiki/entities/thundermc/core-infrastructure/crateeffects.md)
+- **Implementaciones Específicas**:
+  1. **Supresión del Glow en Selección Activa**:
+     - Eliminadas las llamadas a `setGlowing(true)` y `setGlowColorOverride` en `setupEntities()` y `updateDisplays()`.
+     - El ítem central rueda completamente limpio durante todos los giros de la ruleta sin silueta luminosa.
+  2. **Glow Exclusivo para el Ganador**:
+     - Se mantiene la activación del glow únicamente en `displayWinner()`, cuando la ruleta se frena en seco sobre el objeto premiado final.
+- **Despliegue**: Compilado con JDK 21 y desplegado vía SFTP en el servidor de pruebas (`plugins/CrateEffects-1.0.0.jar`, 32.634 bytes).
+
+## [2026-11-09] crateeffects & sandbox | Ajustes Visuales Finales: Glow en Ítem Central, Reducción de Laterales y Cohete Blanco Minimalista
+- **Archivos Modificados**:
+  - [`creator/lab/CrateEffects/src/com/thundermc/crateeffects/opening/ShulkerOpening.java`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/lab/CrateEffects/src/com/thundermc/crateeffects/opening/ShulkerOpening.java)
+  - [`creator/lab/CrateEffects/src/com/thundermc/crateeffects/AnimationRunner.java`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/lab/CrateEffects/src/com/thundermc/crateeffects/AnimationRunner.java)
+  - [`creator/output/plugins/CrateEffects-1.0.0.jar`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/output/plugins/CrateEffects-1.0.0.jar)
+  - [`wiki/entities/thundermc/core-infrastructure/crateeffects.md`](file:///C:/Users/PC/Desktop/ThunderCerebro/wiki/entities/thundermc/core-infrastructure/crateeffects.md)
+- **Implementaciones Específicas**:
+  1. **Laterales Reducidos en CS:GO Strip**:
+     - Escala de `leftDisplay` y `rightDisplay` reducida de `0.52f` a `0.38f`, acentuando la jerarquía de profundidad visual y la atención sobre el centro.
+  2. **Glow Activo en Ítem Central**:
+     - `rewardDisplay` configurado con `setGlowing(true)` persistente durante todos los ticks de la ruleta.
+     - En cada cambio de ítem dentro de `updateDisplays`, se recalcula y aplica dinámicamente `setGlowColorOverride` con el color de la rareza correspondiente al objeto que pasa por el visor.
+  3. **Fuegos Artificiales Minimalistas (Exclusivamente Blanco y Menos Partículas)**:
+     - Cohete configurado exclusivamente en blanco puro (`Color.WHITE`, tipo `BALL`, sin estela ni parpadeo).
+     - Partículas de estallido reducidas drásticamente a 6 chispas (`Particle.FIREWORK`, eliminando saturación visual previa).
+- **Despliegue**: Compilado con JDK 21 y desplegado vía SFTP en el servidor de pruebas (`plugins/CrateEffects-1.0.0.jar`, 32.760 bytes).
+
+## [2026-11-09] crateeffects & sandbox | Tira CS:GO Lateral de 3 Ítems, Elevación de Textos y Subtítulo Exclusivo de Probabilidad
+- **Archivos Modificados**:
+  - [`creator/lab/CrateEffects/src/com/thundermc/crateeffects/opening/ShulkerOpening.java`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/lab/CrateEffects/src/com/thundermc/crateeffects/opening/ShulkerOpening.java)
+  - [`creator/output/plugins/CrateEffects-1.0.0.jar`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/output/plugins/CrateEffects-1.0.0.jar)
+  - [`wiki/entities/thundermc/core-infrastructure/crateeffects.md`](file:///C:/Users/PC/Desktop/ThunderCerebro/wiki/entities/thundermc/core-infrastructure/crateeffects.md)
+- **Implementaciones Específicas**:
+  1. **Tira Lateral de Ruleta CS:GO (Efecto Tira Cinemática)**:
+     - Implementado sistema de 3 `ItemDisplay` simultáneos calculados mediante producto cruz ortogonal respecto a la mirada del jugador:
+       - `leftDisplay`: Objeto recién pasado, situado a $-0.55\,\text{m}$ lateral y $+0.12\,\text{m}$ al fondo, escala $0.52$ y luz atenuada (`Brightness(4,4)`).
+       - `rewardDisplay`: Objeto central activo, escala $0.85$ (escala $1.18$ al proclamarse ganador).
+       - `rightDisplay`: Próximo objeto entrante, situado a $+0.55\,\text{m}$ lateral y $+0.12\,\text{m}$ al fondo, escala $0.52$ y luz atenuada (`Brightness(4,4)`).
+     - Al concluir la ruleta, los objetos laterales se contraen suavemente a escala $0.0$ en 6 ticks.
+  2. **Elevación y Desahogo de Textos**:
+     - `nameDisplay` elevado a $Y+2.75$ con escala ampliada a $1.30$, sin background (`ARGB 0,0,0,0`), brindando mayor jerarquía visual y visibilidad.
+     - `subtitleDisplay` elevado a $Y+2.38$ con escala $0.85$, fondo negro traslúcido (`ARGB 140, 20, 20, 25`), asegurando amplia separación física respecto a la tapa del shulker ($Y=2.10$) y respecto al título.
+  3. **Subtítulo Limpio de Probabilidad**:
+     - Se eliminó la mención de calidad y estrellas por instrucción directa, mostrando exclusivamente `&7Probabilidad: &e[Prob]%`.
+- **Despliegue**: Compilado con JDK 21 y desplegado vía SFTP en el servidor de pruebas (`plugins/CrateEffects-1.0.0.jar`, 32.641 bytes).
+- **Archivos Modificados**:
+  - [`creator/lab/CrateEffects/src/com/thundermc/crateeffects/opening/ShulkerOpening.java`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/lab/CrateEffects/src/com/thundermc/crateeffects/opening/ShulkerOpening.java)
+  - [`creator/lab/CrateEffects/src/com/thundermc/crateeffects/RewardEffectListener.java`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/lab/CrateEffects/src/com/thundermc/crateeffects/RewardEffectListener.java)
+  - [`creator/output/plugins/CrateEffects-1.0.0.jar`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/output/plugins/CrateEffects-1.0.0.jar)
+  - [`wiki/entities/thundermc/core-infrastructure/crateeffects.md`](file:///C:/Users/PC/Desktop/ThunderCerebro/wiki/entities/thundermc/core-infrastructure/crateeffects.md)
+- **Implementaciones Específicas**:
+  1. **Material Dinámico según Crate Item**: `resolveShulkerMaterial()` consulta prioritariamente `crate.getRawItemStack()` y `crate.getItemStack()`. En la caja Mítica (`minecraft:red_shulker_box`), el shulker animado se despliega en color rojo fiel a su configuración.
+  2. **Eliminación de Celebración Duplicada**: `RewardEffectListener` descarta eventos de recompensas cuyo crate tenga `openingId: shulker_box`. La animación de fuegos artificiales y sonidos se ejecuta exactamente una vez durante el aterrizaje del ganador en `ShulkerOpening.displayWinner()`.
+  3. **Textos Flotantes de Doble Nivel**:
+     - Posicionados por encima de la tapa superior abierta ($Y > 2.10$).
+     - **Línea 1 (Nombre)**: TextDisplay a $Y + 2.50$, escala 1.0, fondo transparente (`ARGB 0,0,0,0`), con los colores nativos degradados del ítem sin prefijo de corchetes.
+     - **Línea 2 (Subtítulo)**: TextDisplay a $Y + 2.22$, escala 0.80, fondo negro traslúcido (`ARGB 140, 20, 20, 25`), con formato `&fCalidad: [Calidad con color] [Estrellas] &8| &7Probs: &e[Prob]%` extrayendo las estrellas del lore del ítem o mapeando la rareza de la crate.
+- **Despliegue**: Compilado con JDK 21 y desplegado vía SFTP en el servidor de pruebas (`plugins/CrateEffects-1.0.0.jar`, 33.023 bytes).
+- **Archivos Guardados / Modificados**:
+  - [`creator/lab/CrateEffects/src/com/thundermc/crateeffects/opening/ShulkerOpening.java`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/lab/CrateEffects/src/com/thundermc/crateeffects/opening/ShulkerOpening.java)
+  - [`creator/lab/CrateEffects/src/com/thundermc/crateeffects/CrateEffectsCommand.java`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/lab/CrateEffects/src/com/thundermc/crateeffects/CrateEffectsCommand.java)
+  - [`creator/output/plugins/CrateEffects-1.0.0.jar`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/output/plugins/CrateEffects-1.0.0.jar)
+  - [`wiki/entities/thundermc/core-infrastructure/crateeffects.md`](file:///C:/Users/PC/Desktop/ThunderCerebro/wiki/entities/thundermc/core-infrastructure/crateeffects.md)
+- **Causas Raíz Diagnosticadas**:
+  1. **Persistencia del Bloque Físico**: Paper re-sincroniza el bloque clickeado enviando un paquete `ClientboundBlockUpdatePacket` inmediatamente al término de la interacción (PlayerInteractEvent). El envío síncrono previo en tick 0 era sobrescrito milisegundos después.
+  2. **Tags MiniMessage sin Parsear**: NightCore serializa los nombres de ítems a MiniMessage (`<#hex>`). El deserializador legacy no interpretaba estos tags y los mostraba como texto literal. Además, si la recompensa utilizaba una cabeza o bloque genérico como icono de previsualización sin metadatos, no se extraían los componentes NBT del ítem real de la recompensa.
+- **Solución Técnica Desplegada**:
+  1. **Protocolo de Ocultación de Bloque**: Envío de `AIR` en tick 0, programado con Bukkit scheduler en ticks 1 y 2, y sostenido durante los giros cada 5 ticks. En `onStop()`, se envía el `BlockData` original para restaurar el bloque con su orientación intacta.
+  2. **Pipeline de Nombres en 3 Capas**:
+     - Extracción directa del Component de Adventure desde el ítem real de la recompensa (`displayName()` / `itemName()`).
+     - Normalización de códigos legacy (`&` y `§`) a MiniMessage y deserialización mediante `MiniMessage.miniMessage()`.
+     - Fallback infalible con regex hex (`<#RRGGBB>` a `§x§R§R...`) y eliminación garantizada de tags de cierre `</...>`.
+  3. **Comando de Test Mejorado**: `/crateeffects testshulker` asocia automáticamente el bloque físico al que mira el jugador o el más cercano configurado.
+- **Despliegue**: Compilado con JDK 21 y desplegado en el servidor de pruebas (`MIA-241005.bloom.host:2022`, JAR de 31.203 bytes).
+
 ## [2026-11-06] creator & discord | Emojis 10 Partes, Rich Presence de Fabio, Armonización de Iconos y Rediseño de Joystick
 - **Archivos Guardados / Modificados**:
   - [`creator/lab/discord_bot/gateway_bot.ps1`](file:///C:/Users/PC/Desktop/ThunderCerebro/creator/lab/discord_bot/gateway_bot.ps1)
@@ -3786,3 +3892,76 @@ login/premium/config.yml.
   5. **Ciclo de Contrato y Aceptación**:
      - Al aceptar: Envío de contrato interactivo por DM con cláusulas de compromiso y recompensas. Al firmar, felicitación, link de invitación de 1 uso y asignación de rol.
      - Al rechazar: Modal administrativo para redactar el motivo específico; envío de DM con agradecimiento sincero y motivo detallado.
+
+---
+
+## [2026-11-09] feat | CrateEffects: Addon Desacoplado de Animación y Fuegos Artificiales para ExcellentCrates
+- **Módulo**: creator/lab/CrateEffects/ -> creator/output/plugins/CrateEffects-1.0.0.jar
+- **Trabajo Realizado**:
+  1. **Arquitectura Totalmente Desacoplada (Fail-Safe)**: Creado plugin Bukkit/Paper independiente que escucha CrateObtainRewardEvent (EventPriority.MONITOR, ignoreCancelled = true) con try-catch defensivo. Si el motor visual tiene algún percance, la entrega de premios de ExcellentCrates jamás se interrumpe ni bloquea.
+  2. **Mitigación de Daño de Fuegos Artificiales (Red Teaming)**: Implementado FireworkDamageListener (EventPriority.LOWEST) que identifica la metadata crate_effects_safe en los cohetes detonados para cancelar el 100% del daño a entidades y jugadores.
+  3. **Coreografía Visual de 4 Fases**:
+     - *Tick 0*: Destello instantáneo con Particle.FLASH, Particle.END_ROD, anillo de chispas y fanfarria UI_TOAST_CHALLENGE_COMPLETE.
+     - *Ticks 1..8*: Doble hélice ascendente en espiral (Particle.FIREWORK + Particle.ELECTRIC_SPARK).
+     - *Tick 10 (Clímax)*: Spawneo y detonación simultánea de fuegos artificiales seguros adaptados por rareza (STAR, BALL_LARGE, etc.), explosión densa de chispas y cascada de confeti con Particle.TOTEM_OF_UNDYING.
+     - *Ticks 14..22*: Lluvia residual suave de ascuas.
+  4. **Compilación y Despliegue en Sandbox**: Compilado con JDK 21 contra Paper 1.21.1, ExcellentCrates 6.6.1 y nightcore 2.14.0. Subido exitosamente por SFTP a plugins/CrateEffects-1.0.0.jar en el servidor de pruebas (MIA-241005.bloom.host:2022).
+  5. **Comandos de Administración**: Integrado /crateeffects reload y /crateeffects test [rareza] para previsualizar animaciones sin consumir llaves de cajas.
+
+---
+
+## [2026-11-09] fix | CrateEffects: Corrección de Particle.FLASH con Color en Paper 1.21.11
+- **Módulo**: creator/lab/CrateEffects/ -> creator/output/plugins/CrateEffects-1.0.0.jar
+- **Diagnóstico de Causa Raíz**:
+  En Minecraft 1.20.5+ / 1.21.11, Particle.FLASH (minecraft:flash) dejó de ser un SimpleParticleType y pasó a ser un ParticleType<ColorParticleOption>. La llamada de Bukkit sin el argumento org.bukkit.Color lanzaba una IllegalArgumentException: missing required data class org.bukkit.Color en CraftParticle.createParticleParam(), lo que cancelaba prematuramente la tarea en el Tick 0 antes de poder mostrar el resto de partículas y los fuegos artificiales.
+- **Solución Aplicada**:
+  1. Inyección de org.bukkit.Color a Particle.FLASH vinculada al color principal de la rareza de la recompensa (palette.getColors().get(0) o fallback Color.WHITE).
+  2. Implementación de aislamiento individual por etapa (	ry/catch defensivo en cada bloque de partículas y detonación) para garantizar que si un cliente o fork tuviera alguna divergencia en una partícula, las demás fases (cohetes, confeti y sonido) se sigan ejecutando al 100%.
+  3. Recompilación con JDK 21 y subida por SFTP a plugins/CrateEffects-1.0.0.jar en el servidor de pruebas.
+
+---
+
+## [2026-11-09] feat | CrateEffects: Animación Shulker Box CS:GO Roll con Display Entities y Reducción de Partículas
+- **Módulo**: creator/lab/CrateEffects/ -> creator/output/plugins/CrateEffects-1.0.0.jar
+- **Trabajo Realizado**:
+  1. **Reducción y Suavizado de Partículas**:
+     - Reducido el conteo de cohetes a 1 unidad y las partículas de explosión de 45 a 16.
+     - Reducido el confeti de tótem de 28 a 8 partículas doradas sutiles.
+     - Atenuado el volumen general a 0.85 y aligerado el anillo y flash inicial para eliminar la saturación visual en pantalla.
+  2. **Animación Custom Shulker Box Roll (Display Entities)**:
+     - Implementado ShulkerOpeningProvider y ShulkerOpening extendiendo WorldOpening de ExcellentCrates (registrado como shulker_box).
+     - **Base y Tapa de Shulker**: Dos BlockDisplay con textura shulker coordinada por color de rareza. La tapa superior asciende 1.05m con interpolación nativa a 60 FPS cliente al abrir (BLOCK_SHULKER_BOX_OPEN).
+     - **Ruleta CS:GO en el Hueco**: Un ItemDisplay y un TextDisplay en el hueco interior que ciclan 24 recompensas con curva de desaceleración gradual y sonido dinámico (UI_BUTTON_CLICK con pitch creciente).
+     - **Clímax y Cierre**: Pop de escala a 1.15x en el ítem ganador, brillo con el color de la rareza (setGlowing(true)), fanfarria de amatista y fuegos artificiales suaves. Al finalizar la exhibición (35 ticks), la tapa superior desciende y sella el Shulker (BLOCK_SHULKER_BOX_CLOSE) antes de despawnear las entidades y entregar el premio.
+  3. **Comandos de Prueba In-Game**: Integrado /crateeffects testshulker [crate_id] con tab-completion para validar la cinemática en cualquier momento sin consumir llaves.
+  4. **Despliegue**: Compilado con JDK 21 y JOML 1.10.8 y subido por SFTP a plugins/CrateEffects-1.0.0.jar en Sandbox.
+
+---
+
+## [2026-11-09] fix | CrateEffects: Corrección de Insta-Roll en testshulker y Vinculación en mitica.yml
+- **Módulo**: creator/lab/CrateEffects/ -> creator/output/plugins/CrateEffects-1.0.0.jar, plugins/ExcellentCrates/crates/mitica.yml
+- **Diagnóstico de Causa Raíz**:
+  1. En CrateEffectsCommand.java, la llamada startOpening(player, opening, true) enviaba el flag isInstaRoll = true a ExcellentCrates, lo que forzaba la finalización instantánea (instaRoll()) en 0 ticks, saltándose la cinemática de los displays e yendo directo al cobro del premio y a los fuegos artificiales.
+  2. En mitica.yml, la configuración de la caja continuaba apuntando a Animation.Id: csgo (menú de inventario), por lo que las aperturas normales en el bloque de spawn no detonaban la animación del Shulker.
+  3. En ShulkerOpening.java, la inicialización se trasladó a onStart() para spawnear los displays de forma inmediata en el instante del comando o apertura, resolviendo la posición automáticamente en el bloque de la crate si el jugador está en un radio de 7 bloques.
+- **Acciones Realizadas**:
+  - Corregido startOpening pasando alse (ejecución tick a tick).
+  - Inicialización inmediata de entidades y preview de ítem en onStart().
+  - Actualizado Animation.Id: shulker_box en plugins/ExcellentCrates/crates/mitica.yml.
+  - Recompilado y subido por SFTP al servidor de pruebas.
+
+---
+
+## [2026-11-09] fix | CrateEffects: Soporte Completo MiniMessage & Integración Limpia con el Bloque Físico
+- **Módulo**: creator/lab/CrateEffects/ -> creator/output/plugins/CrateEffects-1.0.0.jar
+- **Diagnóstico y Mejoras Realizadas**:
+  1. **Corrección de MiniMessage en TextDisplay**:
+     - Las recompensas de ExcellentCrates (serializadas con ItemUtil.getNameSerialized() de NightCore) contienen etiquetas MiniMessage como <#A335EE>, <gradient>, etc. Al usar antes LegacyComponentSerializer se mostraban como texto literal.
+     - Implementado ormatRewardTitle() con triple capa: (1) rescate del Component nativo de item.getItemMeta().displayName(), (2) procesamiento de etiquetas <#hex> y <gradient> con Colorizer.apply() a section codes y deserialización Adventure, y (3) formateo de insignias de rareza ([MÍTICA], [ÉPICA]).
+  2. **Integración Limpia con el Bloque Físico (Client-Side Swap)**:
+     - Para evitar que la animación del Shulker se solape o colisione con el bloque físico de la crate (cofre o shulker estático):
+       - Al iniciar la animación, se envía un paquete de bloque falso player.sendBlockChange(blockLoc, Material.AIR) a los jugadores cercanos en 16 bloques, desvaneciendo el bloque físico temporalmente sin tocar el mundo real.
+       - La base inferior y la tapa del Shulker se alinean al volumen exacto 1×1×1 del bloque original (displayLocation = blockLoc.add(0.5, 0.0, 0.5) con escala 1.0x0.5x1.0).
+       - Visualmente parece que el propio cofre/bloque del servidor se transforma en un Shulker y su tapa se abre en el aire.
+       - Al terminar y cerrar la tapa, se envía player.sendBlockChange(blockLoc, block.getBlockData()) restaurando el bloque original intacto junto con el holograma.
+  3. **Despliegue**: Subido a plugins/CrateEffects-1.0.0.jar en Pruebas.

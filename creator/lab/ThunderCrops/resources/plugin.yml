@@ -1,0 +1,15 @@
+name: ThunderCrops
+version: 1.0.0
+main: com.thundermc.crops.ThunderCrops
+api-version: '1.21'
+author: ThunderStudios
+description: Micro-plugin ultra-optimizado para zonas de cultivo regenerativo con bypass de WorldGuard.
+commands:
+  crops:
+    description: Comandos de administracion de ThunderCrops
+    permission: thundercrops.admin
+    aliases: [thundercrops, tcrops]
+permissions:
+  thundercrops.admin:
+    description: Permiso de administracion de zonas de cultivo
+    default: op

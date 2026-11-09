@@ -1,0 +1,24 @@
+name: ThunderRanks
+version: 1.0.0
+main: com.thundermc.ranks.ThunderRanks
+api-version: '1.21'
+author: ThunderStudios
+description: Prototipo funcional de nuevo sistema de rangos por etapas con BossBar y GUI dinamica.
+softdepend: [Vault, ThunderCrops]
+commands:
+  rangos:
+    description: Abre el menu interactivo de rangos y etapas
+    aliases: [rank, ranks, rankmenu]
+  rankup:
+    description: Asciende al siguiente rango si cumples los requisitos
+  thunderranks:
+    description: Comandos de administracion y testeo de ThunderRanks
+    aliases: [tranks]
+    permission: thunderranks.admin
+permissions:
+  thunderranks.use:
+    description: Permite usar comandos de rangos
+    default: true
+  thunderranks.admin:
+    description: Permite administrar y testear rangos
+    default: op
