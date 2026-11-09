@@ -53,3 +53,4 @@ local_npcs.yml
 messages_en.yml
 animated_config.yml
 velocity.toml
+*_db.json
